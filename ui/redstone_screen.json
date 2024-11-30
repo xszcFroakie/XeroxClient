@@ -1,0 +1,72 @@
+// 由@XSzC.制作的文件.
+// 未经允许不要使用任何文件. 请阅读LICENSE.txt
+
+// File made by @XSzC.
+// Don't use any file without permission. Read LICENSE.txt
+
+{
+  "namespace": "redstone",
+
+  "hopper_screen": {
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_label": "redstone.hopper_label",
+        "$top_half_size": ["100%sm", "27.2727272727%x"],
+        "$title_text_anchor": "top_left",
+        "$title_text_offset": ["3.9772727273%", "10.4166666667%"],
+        "$grid_offset": [0, "8.3333333333%"],
+        "$screen_content": "xc_modern_redstone_screen.main_content"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$use_custom_pocket_toast": true,
+        "$screen_content": "pocket_containers.hopper_panel"
+      }
+    ]
+  },
+
+  "dispenser_screen@common.inventory_screen_common": {
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_label": "redstone.dispenser_label",
+        "$screen_content": "xc_modern_redstone_screen.main_content"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$use_custom_pocket_toast": true,
+        "$screen_content": "pocket_containers.dispenser_panel"
+      }
+    ]
+  },
+
+  "crafter_screen@common.inventory_screen_common": {
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_label": "redstone.crafter_label",
+        "$screen_content": "xc_modern_redstone_screen.main_content"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$screen_content": "pocket_containers.dispenser_panel"
+      }
+    ]
+  },
+
+  "dropper_screen@common.inventory_screen_common": {
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_label": "redstone.dropper_label",
+        "$screen_content": "xc_modern_redstone_screen.main_content"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$use_custom_pocket_toast": true,
+        "$screen_content": "pocket_containers.dropper_panel"
+      }
+    ]
+  }
+}

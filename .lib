@@ -1,0 +1,110 @@
+{
+  "namespace": "xerox_lib",
+
+  /*///// ui elements basic /////*/
+
+  "hud_l@xerox_lib.l":{
+    "font_type": "$hud_font_type_overlay",
+    "backup_font_type": "$global_font_type_backup"
+  },
+
+  "p": {
+    "type": "panel"
+  },
+
+  "vsp": {
+    "type": "stack_panel",
+    "orientation": "vertical"
+  },
+
+  "hsp": {
+    "type": "stack_panel",
+    "orientation": "horizontal"
+  },
+
+  "cp": {
+    "type": "collection_panel"
+  },
+
+  "ip": {
+    "type": "input_panel"
+  },
+
+  "l": {
+    "type": "label"
+  },
+
+  "i": {
+    "type": "image"
+  },
+
+  "cr": {
+    "type": "custom"
+  },
+
+  "g": {
+    "type": "grid"
+  },
+
+  "f": {
+    "type": "factory"
+  },
+
+  "b": {
+    "type": "button"
+  },
+
+  "t": {
+    "type": "toggle"
+  },
+
+  "sl": {
+    "type": "slider"
+  },
+
+  "slb": {
+    "type": "slider_box"
+  },
+
+  "s": {
+    "type": "screen"
+  },
+
+  /*///// anim basic /////*/
+
+  "aa": {
+    "anim_type": "alpha"
+  },
+
+  "ao": {
+    "anim_type": "offset"
+  },
+
+  "acl": {
+    "anim_type": "clip"
+  },
+
+  "ac": {
+    "anim_type": "color"
+  },
+
+  "afb": {
+    "anim_type": "flip_book"
+  },
+
+  "as": {
+    "anim_type": "size"
+  },
+
+  "au": {
+    "anim_type": "uv"
+  },
+
+  "w": {
+    "anim_type": "wait"
+  },
+
+  "aafb": {
+    "anim_type": "aseprite_flip_book"
+  }
+}

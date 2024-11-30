@@ -1,0 +1,1067 @@
+// 由@XSzC.制作的文件.
+// 未经允许不要使用任何文件. 请阅读LICENSE.txt
+
+// File made by @XSzC.
+// Don't use any file without permission. Read LICENSE.txt
+
+{
+  "namespace": "xc_modern_hotbar:zeroday",
+
+  "anim_item_name_text_alpha_in@hud.anim_item_name_text_alpha_in": {
+    "easing": "out_cric",
+    "duration": 0.2
+  },
+
+  "anim_item_name_text_offset_in@xerox_lib.ao": {
+    "easing": "out_expo",
+    "from": [45, 0],
+    "to": [0, 0],
+    "duration": 0.2
+  },
+
+  "item_name_text@xerox_lib.p": {
+    "size": ["100%cm", 12.5],
+    "clips_children": true,
+    "anchor_from": "top_left",
+    "anchor_to": "bottom_left",
+    "animation_reset_name": "button.hotbar_slot_select",
+    "offset": "@xc_modern_hotbar:zeroday.anim_item_name_text_offset_in",
+    "controls": [
+      {
+        "item_text_label@xerox_lib.l": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "size": ["default", "default"],
+          "max_size": [200, "default"],
+          "text_alignment": "center",
+          "layer": 31,
+          "text": "#text",
+          "animation_reset_name": "button.hotbar_slot_select",
+          "alpha": "@xc_modern_hotbar:zeroday.anim_item_name_text_alpha_in",
+          "$wait_duration": "($wait_duration - 0.2)",
+          "shadow": true,
+          "font_type": "$global_font_type",
+          "backup_font_type": "$global_font_type_backup",
+          "font_scale_factor": 1.25,
+          "bindings": [
+            {
+              "binding_name": "#item_text",
+              "binding_name_override": "#text"
+            }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "slot_background",
+        "source_property_name": "#visible",
+        "target_property_name": "#visible",
+        "resolve_sibling_scope": true
+      }
+    ]
+  },
+
+  "item_count@container:classic_common.stack_count_label": {
+    "layer": 4,
+    "$stack_count_collection_name": "$hotbar_collection_name",
+    "offset": [0, "16.6666666667%"],
+    "anchor_to": "bottom_middle",
+    "anchor_from": "bottom_middle",
+    "font_type": "$zeroday_hotbar_font_type_overlay",
+    "bindings": [
+      {
+        "binding_name": "#inventory_stack_count",
+        "binding_type": "collection",
+        "binding_collection_name": "$stack_count_collection_name"
+      },
+      {
+        "binding_name": "#stack_count_visible",
+        "binding_name_override": "#visible",
+        "binding_type": "collection",
+        "binding_collection_name": "$stack_count_collection_name"
+      }
+    ]
+  },
+
+  "gui_hotbar_grid_item@xerox_lib.p": {
+    "size": ["100%c", 30],
+    "$hotbar_content_size|default": [24, 24],
+    "$hotbar_parent_size|default": [12, 12],
+    "$slot_count_alpha|default": 0.6,
+    "$item_count_scale_factor|default": 0.75,
+    "controls": [
+      {
+        "hotbar_content@xerox_lib.i": {
+          "size": "$hotbar_content_size",
+          "offset": [0, -3],
+          "anchor_to": "bottom_middle",
+          "anchor_from": "bottom_middle",
+          "$stack_count_required": true,
+          "$durability_bar_required": true,
+          "$storage_bar_required": true,
+          "$item_name_text_required|default": false,
+          "controls": [
+            {
+              "item_text_factory@xerox_lib.f": {
+                "ignored": "(not $item_name_text_required)",
+                "control_ids": {
+                  "item_text": "@xc_modern_hotbar:zeroday.item_name_text",
+                  "jukebox_text": "@common.empty_panel"
+                }
+              }
+            },
+            {
+              "slot_background@xerox_lib.i": {
+                "size": ["150%", "100%x"],
+                "layer": 1,
+                "$stack_count_required": true,
+                "$durability_bar_required": true,
+                "$storage_bar_required": true,
+                "texture": "textures/XeroxClient/diffusion2",
+                "color": "black",
+                "alpha": 0.3,
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "ok,i'm_item_icon",
+                    "source_property_name": "#item_id_aux",
+                    "target_property_name": "#slot_item",
+                    "resolve_sibling_scope": true
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(not (#slot_item = -1))",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "empty_slot_count@xerox_lib.l": {
+                "text": "$slot_number",
+                "shadow": true,
+                "font_type": "$zeroday_hotbar_font_type_overlay",
+                "backup_font_type": "$global_font_type_backup",
+                "layer": 2,
+                "offset": [0, -1],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "slot_background",
+                    "source_property_name": "(not #visible)",
+                    "target_property_name": "#visible",
+                    "resolve_sibling_scope": true
+                  }
+                ],
+                "alpha": "$slot_count_alpha",
+                "controls": [
+                  {
+                    "slot_background@xerox_lib.i": {
+                      "size": ["110%", "110%"],
+                      "layer": -1,
+                      "texture": "textures/XeroxClient/diffusion2",
+                      "color": "black",
+                      "offset": [0, 1],
+                      "alpha": 0.3
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "hotbar_parent@xerox_lib.p": {
+                "size": "$hotbar_parent_size",
+                "controls": [
+                  {
+                    "ok,i'm_item_icon@hud.hotbar_hud_item_icon": {
+                      "layer": 3,
+                      "size": ["100%", "100%"]
+                    }
+                  },
+                  {
+                    "item_count_0@xc_modern_hotbar:zeroday.item_count": {
+                      "layer": 4,
+                      "font_scale_factor": "$item_count_scale_factor"
+                    }
+                  },
+                  {
+                    "item_dura@container:classic_common.durability_bar": {
+                      "$item_collection_name": "$hotbar_collection_name",
+                      "offset": [0, "41.6666666667%"],
+                      "size": ["108.3333333333%", "8.3333333333%"],
+                      "layer": 4,
+                      "anims": []
+                    }
+                  },
+                  {
+                    "item_store@container:classic_common.storage_bar": {
+                      "$item_collection_name": "$hotbar_collection_name",
+                      "offset": [0, "41.6666666667%"],
+                      "size": ["108.3333333333%", "8.3333333333%"],
+                      "layer": 4,
+                      "anims": []
+                    }
+                  },
+                  {
+                    "container_item_lock_overlay@hud.container_item_lock_overlay": {
+                      "layer": 5,
+                      "size": ["100%", "100%"]
+                    }
+                  },
+                  {
+                    "cooldown_rend@xc_modern_hotbar:vanilla.cooldown_rend": {
+                      "size": ["100%", "100%"],
+                      "layer": 6
+                    }
+                  }
+                ]
+              }
+            },
+            { "hotbar_slot_button@hud.gui_hotbar_slot_button_prototype": {} }
+          ]
+        }
+      }
+    ]
+  },
+
+  "hotbar_content_base@xerox_lib.hsp": {
+    "size": ["100%c", 30],
+    "layer": 1,
+    "collection_name": "$hotbar_collection_name",
+    "bindings": [
+      {
+        "binding_name": "#slot_selected",
+        //"binding_name_override": "#alpha",
+        "binding_name_override": "#visible",
+        "binding_type": "collection",
+        "binding_collection_name": "$hotbar_collection_name"
+      }
+    ]
+    //"propagate_alpha": true
+    // i'm idiot.
+  },
+
+  "if_slot_0@xc_modern_hotbar:zeroday.hotbar_content_base": {
+    "controls": [
+      {
+        "if_slot_0,i'm_slot_0@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "$item_name_text_required": true,
+          "collection_index": 0,
+          "$slot_number": "1",
+          "$hotbar_content_size": [30, 30],
+          "$hotbar_parent_size": [20, 20],
+          "$slot_count_alpha": 1.0,
+          "$item_count_scale_factor": 1.0
+        }
+      },
+      {
+        "if_slot_0,i'm_slot_1@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 1,
+          "$slot_number": "2",
+          "$hotbar_content_size": [28, 28],
+          "$hotbar_parent_size": [16, 16],
+          "$slot_count_alpha": 0.85,
+          "$item_count_scale_factor": 0.9
+        }
+      },
+      {
+        "if_slot_0,i'm_slot_2@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 2,
+          "$slot_number": "3",
+          "$hotbar_content_size": [26.5, 26.5],
+          "$hotbar_parent_size": [14, 14],
+          "$slot_count_alpha": 0.8,
+          "$item_count_scale_factor": 0.85
+        }
+      },
+      {
+        "if_slot_0,i'm_slot_3@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 3,
+          "$slot_number": "4",
+          "$hotbar_content_size": [25, 25],
+          "$hotbar_parent_size": [13.5, 13.5],
+          "$slot_count_alpha": 0.7,
+          "$item_count_scale_factor": 0.8
+        }
+      },
+      {
+        "if_slot_0,i'm_slot_4@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 4,
+          "$slot_number": "5"
+        }
+      },
+      {
+        "if_slot_0,i'm_slot_5@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 5,
+          "$slot_number": "6"
+        }
+      },
+      {
+        "if_slot_0,i'm_slot_6@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 6,
+          "$slot_number": "7"
+        }
+      },
+      {
+        "if_slot_0,i'm_slot_7@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 7,
+          "$slot_number": "8"
+        }
+      },
+      {
+        "if_slot_0,i'm_slot_8@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 8,
+          "$slot_number": "9"
+        }
+      }
+    ]
+  },
+
+  "if_slot_1@xc_modern_hotbar:zeroday.hotbar_content_base": {
+    "controls": [
+      {
+        "if_slot_1,i'm_slot_0@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 0,
+          "$slot_number": "1",
+          "$hotbar_content_size": [28, 28],
+          "$hotbar_parent_size": [16, 16],
+          "$slot_count_alpha": 0.85,
+          "$item_count_scale_factor": 0.9
+        }
+      },
+      {
+        "if_slot_1,i'm_slot_1@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "$item_name_text_required": true,
+          "collection_index": 1,
+          "$slot_number": "2",
+          "$hotbar_content_size": [30, 30],
+          "$hotbar_parent_size": [20, 20],
+          "$slot_count_alpha": 1.0,
+          "$item_count_scale_factor": 1.0
+        }
+      },
+      {
+        "if_slot_1,i'm_slot_2@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 2,
+          "$slot_number": "3",
+          "$hotbar_content_size": [28, 28],
+          "$hotbar_parent_size": [16, 16],
+          "$slot_count_alpha": 0.85,
+          "$item_count_scale_factor": 0.9
+        }
+      },
+      {
+        "if_slot_1,i'm_slot_3@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 3,
+          "$slot_number": "4",
+          "$hotbar_content_size": [26.5, 26.5],
+          "$hotbar_parent_size": [14, 14],
+          "$slot_count_alpha": 0.8,
+          "$item_count_scale_factor": 0.85
+        }
+      },
+      {
+        "if_slot_1,i'm_slot_4@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 4,
+          "$slot_number": "5",
+          "$hotbar_content_size": [25, 25],
+          "$hotbar_parent_size": [13.5, 13.5],
+          "$slot_count_alpha": 0.7,
+          "$item_count_scale_factor": 0.8
+        }
+      },
+      {
+        "if_slot_1,i'm_slot_5@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 5,
+          "$slot_number": "6"
+        }
+      },
+      {
+        "if_slot_1,i'm_slot_6@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 6,
+          "$slot_number": "7"
+        }
+      },
+      {
+        "if_slot_1,i'm_slot_7@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 7,
+          "$slot_number": "8"
+        }
+      },
+      {
+        "if_slot_1,i'm_slot_8@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 8,
+          "$slot_number": "9"
+        }
+      }
+    ]
+  },
+
+  "if_slot_2@xc_modern_hotbar:zeroday.hotbar_content_base": {
+    "controls": [
+      {
+        "if_slot_2,i'm_slot_0@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 0,
+          "$slot_number": "1",
+          "$hotbar_content_size": [26.5, 26.5],
+          "$hotbar_parent_size": [14, 14],
+          "$slot_count_alpha": 0.8,
+          "$item_count_scale_factor": 0.85
+        }
+      },
+      {
+        "if_slot_2,i'm_slot_1@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 1,
+          "$slot_number": "2",
+          "$hotbar_content_size": [28, 28],
+          "$hotbar_parent_size": [16, 16],
+          "$slot_count_alpha": 0.85,
+          "$item_count_scale_factor": 0.9
+        }
+      },
+      {
+        "if_slot_2,i'm_slot_2@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "$item_name_text_required": true,
+          "collection_index": 2,
+          "$slot_number": "3",
+          "$hotbar_content_size": [30, 30],
+          "$hotbar_parent_size": [20, 20],
+          "$slot_count_alpha": 1.0,
+          "$item_count_scale_factor": 1.0
+        }
+      },
+      {
+        "if_slot_2,i'm_slot_3@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 3,
+          "$slot_number": "4",
+          "$hotbar_content_size": [28, 28],
+          "$hotbar_parent_size": [16, 16],
+          "$slot_count_alpha": 0.85,
+          "$item_count_scale_factor": 0.9
+        }
+      },
+      {
+        "if_slot_2,i'm_slot_4@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 4,
+          "$slot_number": "5",
+          "$hotbar_content_size": [26.5, 26.5],
+          "$hotbar_parent_size": [14, 14],
+          "$slot_count_alpha": 0.8,
+          "$item_count_scale_factor": 0.85
+        }
+      },
+      {
+        "if_slot_2,i'm_slot_5@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 5,
+          "$slot_number": "6",
+          "$hotbar_content_size": [25, 25],
+          "$hotbar_parent_size": [13.5, 13.5],
+          "$slot_count_alpha": 0.7,
+          "$item_count_scale_factor": 0.8
+        }
+      },
+      {
+        "if_slot_2,i'm_slot_6@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 6,
+          "$slot_number": "7"
+        }
+      },
+      {
+        "if_slot_2,i'm_slot_7@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 7,
+          "$slot_number": "8"
+        }
+      },
+      {
+        "if_slot_2,i'm_slot_8@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 8,
+          "$slot_number": "9"
+        }
+      }
+    ]
+  },
+
+  "if_slot_3@xc_modern_hotbar:zeroday.hotbar_content_base": {
+    "controls": [
+      {
+        "if_slot_3,i'm_slot_0@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 0,
+          "$slot_number": "1",
+          "$hotbar_content_size": [25, 25],
+          "$hotbar_parent_size": [13.5, 13.5],
+          "$slot_count_alpha": 0.7,
+          "$item_count_scale_factor": 0.8
+        }
+      },
+      {
+        "if_slot_3,i'm_slot_1@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 1,
+          "$slot_number": "2",
+          "$hotbar_content_size": [26.5, 26.5],
+          "$hotbar_parent_size": [14, 14],
+          "$slot_count_alpha": 0.8,
+          "$item_count_scale_factor": 0.85
+        }
+      },
+      {
+        "if_slot_3,i'm_slot_2@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 2,
+          "$slot_number": "3",
+          "$hotbar_content_size": [28, 28],
+          "$hotbar_parent_size": [16, 16],
+          "$slot_count_alpha": 0.85,
+          "$item_count_scale_factor": 0.9
+        }
+      },
+      {
+        "if_slot_3,i'm_slot_3@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "$item_name_text_required": true,
+          "collection_index": 3,
+          "$slot_number": "4",
+          "$hotbar_content_size": [30, 30],
+          "$hotbar_parent_size": [20, 20],
+          "$slot_count_alpha": 1.0,
+          "$item_count_scale_factor": 1.0
+        }
+      },
+      {
+        "if_slot_3,i'm_slot_4@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 4,
+          "$slot_number": "5",
+          "$hotbar_content_size": [28, 28],
+          "$hotbar_parent_size": [16, 16],
+          "$slot_count_alpha": 0.85,
+          "$item_count_scale_factor": 0.9
+        }
+      },
+      {
+        "if_slot_3,i'm_slot_5@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 5,
+          "$slot_number": "6",
+          "$hotbar_content_size": [26.5, 26.5],
+          "$hotbar_parent_size": [14, 14],
+          "$slot_count_alpha": 0.8,
+          "$item_count_scale_factor": 0.85
+        }
+      },
+      {
+        "if_slot_3,i'm_slot_6@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 6,
+          "$slot_number": "7",
+          "$hotbar_content_size": [25, 25],
+          "$hotbar_parent_size": [13.5, 13.5],
+          "$slot_count_alpha": 0.7,
+          "$item_count_scale_factor": 0.8
+        }
+      },
+      {
+        "if_slot_3,i'm_slot_7@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 7,
+          "$slot_number": "8"
+        }
+      },
+      {
+        "if_slot_3,i'm_slot_8@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 8,
+          "$slot_number": "9"
+        }
+      }
+    ]
+  },
+
+  "if_slot_4@xc_modern_hotbar:zeroday.hotbar_content_base": {
+    "controls": [
+      {
+        "if_slot_4,i'm_slot_0@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 0,
+          "$slot_number": "1"
+        }
+      },
+      {
+        "if_slot_4,i'm_slot_1@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 1,
+          "$slot_number": "2",
+          "$hotbar_content_size": [25, 25],
+          "$hotbar_parent_size": [13.5, 13.5],
+          "$slot_count_alpha": 0.7,
+          "$item_count_scale_factor": 0.8
+        }
+      },
+      {
+        "if_slot_4,i'm_slot_2@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 2,
+          "$slot_number": "3",
+          "$hotbar_content_size": [26.5, 26.5],
+          "$hotbar_parent_size": [14, 14],
+          "$slot_count_alpha": 0.8,
+          "$item_count_scale_factor": 0.85
+        }
+      },
+      {
+        "if_slot_4,i'm_slot_3@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 3,
+          "$slot_number": "4",
+          "$hotbar_content_size": [28, 28],
+          "$hotbar_parent_size": [16, 16],
+          "$slot_count_alpha": 0.85,
+          "$item_count_scale_factor": 0.9
+        }
+      },
+      {
+        "if_slot_4,i'm_slot_4@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "$item_name_text_required": true,
+          "collection_index": 4,
+          "$slot_number": "5",
+          "$hotbar_content_size": [30, 30],
+          "$hotbar_parent_size": [20, 20],
+          "$slot_count_alpha": 1.0,
+          "$item_count_scale_factor": 1.0
+        }
+      },
+      {
+        "if_slot_4,i'm_slot_5@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 5,
+          "$slot_number": "6",
+          "$hotbar_content_size": [28, 28],
+          "$hotbar_parent_size": [16, 16],
+          "$slot_count_alpha": 0.85,
+          "$item_count_scale_factor": 0.9
+        }
+      },
+      {
+        "if_slot_4,i'm_slot_6@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 6,
+          "$slot_number": "7",
+          "$hotbar_content_size": [26.5, 26.5],
+          "$hotbar_parent_size": [14, 14],
+          "$slot_count_alpha": 0.8,
+          "$item_count_scale_factor": 0.85
+        }
+      },
+      {
+        "if_slot_4,i'm_slot_7@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 7,
+          "$slot_number": "8",
+          "$hotbar_content_size": [25, 25],
+          "$hotbar_parent_size": [13.5, 13.5],
+          "$slot_count_alpha": 0.7,
+          "$item_count_scale_factor": 0.8
+        }
+      },
+      {
+        "if_slot_4,i'm_slot_8@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 8,
+          "$slot_number": "9"
+        }
+      }
+    ]
+  },
+
+  "if_slot_5@xc_modern_hotbar:zeroday.hotbar_content_base": {
+    "controls": [
+      {
+        "if_slot_5,i'm_slot_0@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 0,
+          "$slot_number": "1"
+        }
+      },
+      {
+        "if_slot_5,i'm_slot_1@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 1,
+          "$slot_number": "2"
+        }
+      },
+      {
+        "if_slot_5,i'm_slot_2@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 2,
+          "$slot_number": "3",
+          "$hotbar_content_size": [25, 25],
+          "$hotbar_parent_size": [13.5, 13.5],
+          "$slot_count_alpha": 0.7,
+          "$item_count_scale_factor": 0.8
+        }
+      },
+      {
+        "if_slot_5,i'm_slot_3@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 3,
+          "$slot_number": "4",
+          "$hotbar_content_size": [26.5, 26.5],
+          "$hotbar_parent_size": [14, 14],
+          "$slot_count_alpha": 0.8,
+          "$item_count_scale_factor": 0.85
+        }
+      },
+      {
+        "if_slot_5,i'm_slot_4@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 4,
+          "$slot_number": "5",
+          "$hotbar_content_size": [28, 28],
+          "$hotbar_parent_size": [16, 16],
+          "$slot_count_alpha": 0.85,
+          "$item_count_scale_factor": 0.9
+        }
+      },
+      {
+        "if_slot_5,i'm_slot_5@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "$item_name_text_required": true,
+          "collection_index": 5,
+          "$slot_number": "6",
+          "$hotbar_content_size": [30, 30],
+          "$hotbar_parent_size": [20, 20],
+          "$slot_count_alpha": 1.0,
+          "$item_count_scale_factor": 1.0
+        }
+      },
+      {
+        "if_slot_5,i'm_slot_6@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 6,
+          "$slot_number": "7",
+          "$hotbar_content_size": [28, 28],
+          "$hotbar_parent_size": [16, 16],
+          "$slot_count_alpha": 0.85,
+          "$item_count_scale_factor": 0.9
+        }
+      },
+      {
+        "if_slot_5,i'm_slot_7@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 7,
+          "$slot_number": "8",
+          "$hotbar_content_size": [26.5, 26.5],
+          "$hotbar_parent_size": [14, 14],
+          "$slot_count_alpha": 0.8,
+          "$item_count_scale_factor": 0.85
+        }
+      },
+      {
+        "if_slot_5,i'm_slot_8@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 8,
+          "$slot_number": "9",
+          "$hotbar_content_size": [25, 25],
+          "$hotbar_parent_size": [13.5, 13.5],
+          "$slot_count_alpha": 0.7,
+          "$item_count_scale_factor": 0.8
+        }
+      }
+    ]
+  },
+
+  "if_slot_6@xc_modern_hotbar:zeroday.hotbar_content_base": {
+    "controls": [
+      {
+        "if_slot_6,i'm_slot_0@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 0,
+          "$slot_number": "1"
+        }
+      },
+      {
+        "if_slot_6,i'm_slot_1@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 1,
+          "$slot_number": "2"
+        }
+      },
+      {
+        "if_slot_6,i'm_slot_2@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 2,
+          "$slot_number": "3"
+        }
+      },
+      {
+        "if_slot_6,i'm_slot_3@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 3,
+          "$slot_number": "4",
+          "$hotbar_content_size": [25, 25],
+          "$hotbar_parent_size": [13.5, 13.5],
+          "$slot_count_alpha": 0.7,
+          "$item_count_scale_factor": 0.8
+        }
+      },
+      {
+        "if_slot_6,i'm_slot_4@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 4,
+          "$slot_number": "5",
+          "$hotbar_content_size": [26.5, 26.5],
+          "$hotbar_parent_size": [14, 14],
+          "$slot_count_alpha": 0.8,
+          "$item_count_scale_factor": 0.85
+        }
+      },
+      {
+        "if_slot_6,i'm_slot_5@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 5,
+          "$slot_number": "6",
+          "$hotbar_content_size": [28, 28],
+          "$hotbar_parent_size": [16, 16],
+          "$slot_count_alpha": 0.85,
+          "$item_count_scale_factor": 0.9
+        }
+      },
+      {
+        "if_slot_6,i'm_slot_6@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "$item_name_text_required": true,
+          "collection_index": 6,
+          "$slot_number": "7",
+          "$hotbar_content_size": [30, 30],
+          "$hotbar_parent_size": [20, 20],
+          "$slot_count_alpha": 1.0,
+          "$item_count_scale_factor": 1.0
+        }
+      },
+      {
+        "if_slot_6,i'm_slot_7@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 7,
+          "$slot_number": "8",
+          "$hotbar_content_size": [28, 28],
+          "$hotbar_parent_size": [16, 16],
+          "$slot_count_alpha": 0.85,
+          "$item_count_scale_factor": 0.9
+        }
+      },
+      {
+        "if_slot_6,i'm_slot_8@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 8,
+          "$slot_number": "9",
+          "$hotbar_content_size": [26.5, 26.5],
+          "$hotbar_parent_size": [14, 14],
+          "$slot_count_alpha": 0.8,
+          "$item_count_scale_factor": 0.85
+        }
+      }
+    ]
+  },
+
+  "if_slot_7@xc_modern_hotbar:zeroday.hotbar_content_base": {
+    "controls": [
+      {
+        "if_slot_7,i'm_slot_0@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 0,
+          "$slot_number": "1"
+        }
+      },
+      {
+        "if_slot_7,i'm_slot_1@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 1,
+          "$slot_number": "2"
+        }
+      },
+      {
+        "if_slot_7,i'm_slot_2@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 2,
+          "$slot_number": "3"
+        }
+      },
+      {
+        "if_slot_7,i'm_slot_3@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 3,
+          "$slot_number": "4"
+        }
+      },
+      {
+        "if_slot_7,i'm_slot_4@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 4,
+          "$slot_number": "5",
+          "$hotbar_content_size": [25, 25],
+          "$hotbar_parent_size": [13.5, 13.5],
+          "$slot_count_alpha": 0.7,
+          "$item_count_scale_factor": 0.8
+        }
+      },
+      {
+        "if_slot_7,i'm_slot_5@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 5,
+          "$slot_number": "6",
+          "$hotbar_content_size": [26.5, 26.5],
+          "$hotbar_parent_size": [14, 14],
+          "$slot_count_alpha": 0.8,
+          "$item_count_scale_factor": 0.85
+        }
+      },
+      {
+        "if_slot_7,i'm_slot_6@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 6,
+          "$slot_number": "7",
+          "$hotbar_content_size": [28, 28],
+          "$hotbar_parent_size": [16, 16],
+          "$slot_count_alpha": 0.85,
+          "$item_count_scale_factor": 0.9
+        }
+      },
+      {
+        "if_slot_7,i'm_slot_7@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "$item_name_text_required": true,
+          "collection_index": 7,
+          "$slot_number": "8",
+          "$hotbar_content_size": [30, 30],
+          "$hotbar_parent_size": [20, 20],
+          "$slot_count_alpha": 1.0,
+          "$item_count_scale_factor": 1.0
+        }
+      },
+      {
+        "if_slot_7,i'm_slot_8@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 8,
+          "$slot_number": "9",
+          "$hotbar_content_size": [28, 28],
+          "$hotbar_parent_size": [16, 16],
+          "$slot_count_alpha": 0.85,
+          "$item_count_scale_factor": 0.9
+        }
+      }
+    ]
+  },
+
+  "if_slot_8@xc_modern_hotbar:zeroday.hotbar_content_base": {
+    "controls": [
+      {
+        "if_slot_8,i'm_slot_0@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 0,
+          "$slot_number": "1"
+        }
+      },
+      {
+        "if_slot_8,i'm_slot_1@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 1,
+          "$slot_number": "2"
+        }
+      },
+      {
+        "if_slot_8,i'm_slot_2@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 2,
+          "$slot_number": "3"
+        }
+      },
+      {
+        "if_slot_8,i'm_slot_3@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 3,
+          "$slot_number": "4"
+        }
+      },
+      {
+        "if_slot_8,i'm_slot_4@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 4,
+          "$slot_number": "5"
+        }
+      },
+      {
+        "if_slot_8,i'm_slot_5@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 5,
+          "$slot_number": "6",
+          "$hotbar_content_size": [25, 25],
+          "$hotbar_parent_size": [13.5, 13.5],
+          "$slot_count_alpha": 0.7,
+          "$item_count_scale_factor": 0.8
+        }
+      },
+      {
+        "if_slot_8,i'm_slot_6@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 6,
+          "$slot_number": "7",
+          "$hotbar_content_size": [26.5, 26.5],
+          "$hotbar_parent_size": [14, 14],
+          "$slot_count_alpha": 0.8,
+          "$item_count_scale_factor": 0.85
+        }
+      },
+      {
+        "if_slot_8,i'm_slot_7@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "collection_index": 7,
+          "$slot_number": "8",
+          "$hotbar_content_size": [28, 28],
+          "$hotbar_parent_size": [16, 16],
+          "$slot_count_alpha": 0.85,
+          "$item_count_scale_factor": 0.9
+        }
+      },
+      {
+        "if_slot_8,i'm_slot_8@xc_modern_hotbar:zeroday.gui_hotbar_grid_item": {
+          "$item_name_text_required": true,
+          "collection_index": 8,
+          "$slot_number": "9",
+          "$hotbar_content_size": [30, 30],
+          "$hotbar_parent_size": [20, 20],
+          "$slot_count_alpha": 1.0,
+          "$item_count_scale_factor": 1.0
+        }
+      }
+    ]
+  },
+
+  "hotbar_panel@xerox_lib.cp": {
+    "size": ["100%cm", 30],
+    "layer": 1,
+    "collection_name": "$hotbar_collection_name",
+    "controls": [
+      { "0@xc_modern_hotbar:zeroday.if_slot_0": { "collection_index": 0 } },
+      { "1@xc_modern_hotbar:zeroday.if_slot_1": { "collection_index": 1 } },
+      { "2@xc_modern_hotbar:zeroday.if_slot_2": { "collection_index": 2 } },
+      { "3@xc_modern_hotbar:zeroday.if_slot_3": { "collection_index": 3 } },
+      { "4@xc_modern_hotbar:zeroday.if_slot_4": { "collection_index": 4 } },
+      { "5@xc_modern_hotbar:zeroday.if_slot_5": { "collection_index": 5 } },
+      { "6@xc_modern_hotbar:zeroday.if_slot_6": { "collection_index": 6 } },
+      { "7@xc_modern_hotbar:zeroday.if_slot_7": { "collection_index": 7 } },
+      { "8@xc_modern_hotbar:zeroday.if_slot_8": { "collection_index": 8 } }
+    ]
+  },
+
+  "hotbar_content@xerox_lib.vsp": {
+    "anchor_to": "bottom_middle",
+    "anchor_from": "bottom_middle",
+    "size": [0, "100%c"],
+    "$hotbar_collection_name": "hotbar_items",
+    "controls": [
+      {
+        "0size_panel_1@xerox_lib.p": {
+          "size": [0, "100%c"],
+          "controls": [
+            { "yes,hotbar_panel@xc_modern_hotbar:zeroday.hotbar_panel": {} }
+          ]
+        }
+      },
+      {
+        "padding0@xerox_lib.p": {
+          "size": [0, 5]
+        }
+      },
+      {
+        "padding1@xerox_lib.p": {
+          "size": [0, 10],
+          "bindings": [
+            {
+              "binding_name": "#is_armor_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "padding2@xerox_lib.p": {
+          "size": [0, 15],
+          "bindings": [
+            {
+              "binding_name": "#show_survival_ui",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "0size_panel_2@xerox_lib.p": {
+          "size": [0, "100%c"],
+          "controls": [
+            {
+              "centered_elements@xc_modern_hotbar:vanilla.centered_elements": {
+                "offset": [0, 0]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "padding3@xerox_lib.p": {
+          "size": [0, 5]
+        }
+      }
+    ]
+  }
+}

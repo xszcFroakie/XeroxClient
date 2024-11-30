@@ -1,0 +1,241 @@
+// 由@XSzC.制作的文件.
+// 未经允许不要使用任何文件. 请阅读LICENSE.txt
+
+// File made by @XSzC.
+// Don't use any file without permission. Read LICENSE.txt
+
+{
+  "namespace": "play_animation",
+
+  //--------------------------
+
+  "tab_out_alpha_animation@play_animation.tab_enter_alpha_animation": {
+    "duration": 0.6,
+    "from": 1.0,
+    "to": -0.25,
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+
+  "tab_out_alpha_animation_pop@play_animation.tab_enter_alpha_animation": {
+    "duration": 0.6,
+    "from": 1.0,
+    "to": -0.25,
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+
+  "tab_enter_alpha_wait@xerox_lib.aa": {
+    "duration": "$wait_dura",
+    "from": -0.25,
+    "to": -0.25,
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end",
+    "next": "@play_animation.tab_enter_alpha_animation"
+  },
+
+  "tab_enter_alpha_animation@xerox_lib.aa": {
+    "easing": "out_cubic",
+    "duration": 0.6,
+    "from": -0.25,
+    "to": 1.0
+  },
+
+  "tab_enter_alpha_animation_pop@play_animation.tab_enter_alpha_animation": {
+    "duration": 0.6,
+    "from": -0.25,
+    "to": 1.0,
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
+  },
+
+  "tab_out_offset_animation@play_animation.tab_enter_offset_animation": {
+    "duration": 0.6,
+    "from": "$offset_1",
+    "to": "$offset_2",
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+
+  "tab_out_offset_animation_pop@play_animation.tab_enter_offset_animation": {
+    "duration": 0.6,
+    "from": "$offset_1",
+    "to": "$offset_2",
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+
+  "tab_enter_offset_wait@xerox_lib.ao": {
+    "duration": "$wait_dura",
+    "from": "$offset_2",
+    "to": "$offset_2",
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end",
+    "next": "@play_animation.tab_enter_offset_animation"
+  },
+
+  "tab_enter_offset_animation@xerox_lib.ao": {
+    "easing": "out_cubic",
+    "duration": 0.6,
+    "from": "$offset_2",
+    "to": "$offset_1"
+  },
+
+  "tab_enter_offset_animation_pop@play_animation.tab_enter_offset_animation": {
+    "duration": 0.6,
+    "from": "$offset_2",
+    "to": "$offset_1",
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
+  },
+
+  //--------------------------
+
+  "gradient_bg_out_animation@xerox_lib.aa": {
+    "easing": "out_cubic",
+    "duration": 0.6,
+    "to": -0.25,
+    "from": 1.0,
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+
+  "gradient_bg_out_animation_pop@xerox_lib.aa": {
+    "easing": "out_cubic",
+    "duration": 0.6,
+    "to": -0.25,
+    "from": 1.0,
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+
+  "gradient_bg_enter_animation@xerox_lib.aa": {
+    "easing": "out_cubic",
+    "duration": 0.4,
+    "from": -0.25,
+    "to": 1.0,
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+
+  "gradient_bg_enter_animation_pop@xerox_lib.aa": {
+    "easing": "out_cubic",
+    "duration": 0.4,
+    "from": -0.25,
+    "to": 1.0,
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
+  },
+
+  //--------------------------
+
+  "tab_content_out_offset_animation@xerox_lib.ao": {
+    "easing": "out_cubic",
+    "duration": 0.3,
+    "to": [100, 0],
+    "from": [-10, 0],
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+
+  "tab_content_out_offset_animation_pop@xerox_lib.ao": {
+    "easing": "out_cubic",
+    "duration": 0.3,
+    "to": [100, 0],
+    "from": [-10, 0],
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+
+  "tab_content_enter_offset_animation@xerox_lib.ao": {
+    "easing": "out_cubic",
+    "duration": 0.4,
+    "from": [100, 0],
+    "to": [-10, 0],
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+
+  "tab_content_enter_offset_animation_pop@xerox_lib.ao": {
+    "easing": "out_cubic",
+    "duration": 0.4,
+    "from": [100, 0],
+    "to": [-10, 0],
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
+  },
+
+  "tab_content_out_alpha_animation@xerox_lib.aa": {
+    "easing": "out_cubic",
+    "duration": 0.3,
+    "to": -0.25,
+    "from": 1.0,
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+
+  "tab_content_out_alpha_animation_pop@xerox_lib.aa": {
+    "easing": "out_cubic",
+    "duration": 0.3,
+    "to": -0.25,
+    "from": 1.0,
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+
+  "tab_content_enter_alpha_animation@xerox_lib.aa": {
+    "easing": "out_cubic",
+    "duration": 0.6,
+    "from": -0.25,
+    "to": 1.0,
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+
+  "tab_content_enter_alpha_animation_pop@xerox_lib.aa": {
+    "easing": "out_cubic",
+    "duration": 0.6,
+    "from": -0.25,
+    "to": 1.0,
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
+  },
+
+  //--------------------------
+
+  "bg_out_animation@xerox_lib.aa": {
+    "easing": "out_cubic",
+    "duration": 0.3,
+    "to": 0.0,
+    "from": 1.0,
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+
+  "bg_out_animation_pop@xerox_lib.aa": {
+    "easing": "out_cubic",
+    "duration": 0.3,
+    "to": 0.0,
+    "from": 1.0,
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+
+  "bg_enter_animation@xerox_lib.aa": {
+    "easing": "out_cubic",
+    "duration": 0.3,
+    "from": 0.0,
+    "to": 1.0,
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+
+  "bg_enter_animation_pop@xerox_lib.aa": {
+    "easing": "out_cubic",
+    "duration": 0.3,
+    "from": 0.0,
+    "to": 1.0,
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
+  },
+}

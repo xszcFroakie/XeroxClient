@@ -1,0 +1,193 @@
+// 由@XSzC.制作的文件.
+// 未经允许不要使用任何文件. 请阅读LICENSE.txt
+
+// File made by @XSzC.
+// Don't use any file without permission. Read LICENSE.txt
+
+{
+  "namespace": "xc_modern_hud_texts",
+
+  "hud_title_text@xerox_lib.vsp": {
+    "anchor_to": "bottom_middle",
+    "layer": 1,
+    "alpha": "@hud.anim_title_text_alpha_in",
+    "propagate_alpha": true,
+    "offset": [0, -15],
+    "controls": [
+      {
+        "title_frame@xerox_lib.p": {
+          "size": ["100%", "100%cm + 6px"],
+          "controls": [
+            {
+              "title@xerox_lib.hud_l": {
+                "color": "$title_command_text_color",
+                "text": "#text",
+                "layer": 31,
+                "localize": false,
+                "font_scale_factor": 2.0,
+                "shadow": true,
+                "text_alignment": "center",
+                "bindings": [
+                  {
+                    "binding_name": "#hud_title_text_string",
+                    "binding_name_override": "#text",
+                    "binding_type": "global"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "subtitle_frame@xerox_lib.p": {
+          "size": ["100%", "100%cm + 5px"],
+          "controls": [
+            {
+              "subtitle@xerox_lib.hud_l": {
+                "color": "$title_command_text_color",
+                "text": "#text",
+                "layer": 31,
+                "localize": false,
+                "shadow": true,
+                "variables": [
+                  {
+                    "requires": "$subtitle_initially_visible",
+                    "$anim_type": 1.0
+                  },
+                  {
+                    "requires": "(not $subtitle_initially_visible)",
+                    "$anim_type": "@hud.anim_subtitle_text_alpha_in"
+                  }
+                ],
+                "alpha": "$anim_type",
+                "text_alignment": "center",
+                "bindings": [
+                  {
+                    "binding_name": "#hud_subtitle_text_string",
+                    "binding_name_override": "#text",
+                    "binding_type": "global"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "item_name_text_root@xerox_lib.p": {
+    "size": ["100%cm", "100%cm"],
+    "$show_survival_padding|default": false,
+    "$text_color|default": "$tool_tip_text",
+    "$text_binding|default": "#item_text",
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "$wait_duration|default": 1,
+    "$destroy_id|default": "item_name_text",
+    "controls": [
+      {
+        "item_text_aligner@xerox_lib.vsp": {
+          "size": ["100%cm", "100%c"],
+          "controls": [
+            {
+              "item_text_control@xerox_lib.p": {
+                "size": ["100%cm", 10],
+                "clips_children": true,
+                "controls": [
+                  {
+                    "item_text_label@xerox_lib.hud_l": {
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "size": ["default", "default"],
+                      "max_size": [200, "default"],
+                      "text_alignment": "center",
+                      "layer": 31,
+                      "color": "$text_color",
+                      "text": "#text",
+                      "alpha": "@hud.anim_item_name_text_alpha_in",
+                      "shadow": true,
+                      "bindings": [
+                        {
+                          "binding_name": "$text_binding",
+                          "binding_name_override": "#text"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "survival_buffer@common.empty_panel": {
+                "visible": "$show_survival_padding",
+                "size": ["100%sm", 17],
+                "bindings": [
+                  {
+                    "binding_name": "#show_survival_ui",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "item_name_text@xc_modern_hud_texts.item_name_text_root": {
+    "visible": "((not $zeroday_style_hotbar) or ($zeroday_style_hotbar and $touch))",
+    "offset": [0, -36]
+  },
+
+  "jukebox_popup_text@xc_modern_hud_texts.item_name_text_root": {
+    "$text_color": "$jukebox_text_color",
+    "$text_binding": "#jukebox_text",
+    "offset": [0, -63]
+  },
+
+  "hud_actionbar_text@xerox_lib.p": {
+    "size": ["100%c + 12px", "100%c + 5px"],
+    "offset": [0, "50%-68px"],
+    "controls": [
+      {
+        "actionbar_message@xerox_lib.hud_l": {
+          "color": "$tool_tip_text",
+          "layer": 31,
+          "text": "$actionbar_text",
+          "localize": false,
+          "alpha": "@hud.anim_actionbar_text_alpha_out",
+          "shadow": true
+        }
+      }
+    ]
+  },
+
+  "hud_tip_text@xerox_lib.p": {
+    "size": ["100%c + 12px", "100%c + 5px"],
+    "offset": [0, -42],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "$wait_duration|default": 1,
+    "$destroy_id|default": "popup_tip_text",
+    "controls": [
+      {
+        "item_text_label@xerox_lib.hud_l": {
+          "layer": 31,
+          "color": "$tool_tip_text",
+          "text": "#text",
+          "alpha": "@hud.anim_item_name_text_alpha_out",
+          "shadow": true,
+          "bindings": [
+            {
+              "binding_name": "#tip_text",
+              "binding_name_override": "#text"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

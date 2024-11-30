@@ -1,0 +1,144 @@
+{
+  "namespace": "play",
+
+  "play_screen": {
+    "$screen_animations": [],
+    "$background_animations": [],
+    "$screen_content": "xc_modern_play.main_content",
+    "$screen_bg_content": "xc_modern_play.background",
+    "$screen_transition_dura_push": 0.4,
+    "$screen_transition_dura_pop": 0.4
+  },
+  
+  "label_background": {
+    "texture": "textures/XeroxClient/rounded_corner/all8x",
+    "color": "$xeroxclient_ui_theme_menu_background_color",
+    "alpha": 0.3
+  },
+
+  "dark_label_background": {
+    "texture": "textures/XeroxClient/rounded_corner/all8x",
+    "color": "$xeroxclient_ui_theme_menu_background_color",
+    "alpha": 0.3
+  },
+
+  "crossplatform_disabled_panel/disable_text": {
+    "color": [],
+    "font_type": "$global_font_type",
+    "backup_font_type": "$global_font_type_backup"
+  },
+
+  "world_list_label_panel/list_label": {
+    "layer": 3,
+    "color": [],
+    "font_type": "$global_font_type",
+    "backup_font_type": "$global_font_type_backup"
+  },
+
+  "realms_list_text": {
+    "color": [],
+    "font_type": "$global_font_type",
+    "backup_font_type": "$global_font_type_backup"
+  },
+
+  "information_panel/background/label_panel_layout/label": {
+    "color": [],
+    "font_type": "$global_font_type",
+    "backup_font_type": "$global_font_type_backup"
+  },
+
+  "information_panel/focus_button": {
+    "ignored": true
+  },
+
+  "label_content_template/label_panel/label_panel_layout/label": {
+    "color": [],
+    "font_type": "$global_font_type",
+    "backup_font_type": "$global_font_type_backup"
+  },
+
+  "world_list_text": {
+    "color": [],
+    "font_type": "$global_font_type",
+    "backup_font_type": "$global_font_type_backup"
+  },
+
+  "network_world_item/network_world_item_button": {
+    "size": ["100%", "100%"],
+    "$default_button_texture": "textures/XeroxClient/rounded_corner/all8x",
+    "$hover_button_texture": "textures/XeroxClient/rounded_corner/all8x",
+    "$pressed_button_texture": "textures/XeroxClient/rounded_corner/all8x",
+    "$locked_button_texture": "textures/XeroxClient/rounded_corner/all8x"
+  },
+
+  "open_account_setting_button_gamecore": {
+    "$default_button_texture": "textures/XeroxClient/rounded_corner/all8x",
+    "$hover_button_texture": "textures/XeroxClient/rounded_corner/all8x",
+    "$pressed_button_texture": "textures/XeroxClient/rounded_corner/all8x",
+    "$locked_button_texture": "textures/XeroxClient/rounded_corner/all8x"
+  },
+
+  "game_online_icon": {
+    "texture": "textures/XeroxClient/rounded_corner/all8x",
+    "color": [0.333, 1.0, 0.333]
+  },
+
+  "game_offline_icon": {
+    "texture": "textures/XeroxClient/rounded_corner/all8x",
+    "color": [0.6, 0.6, 0.6]
+  },
+
+  "game_unavailable_icon": {
+    "texture": "textures/XeroxClient/rounded_corner/all8x",
+    "color": [1.0, 0.333, 0.333]
+  },
+
+  "network_world_header/header_panel/network_world_header_text": {
+    "offset": []
+  },
+
+  "ping_rate_panel/concurrency_stack/player_count": {
+    "color": [],
+    "font_type": "$global_font_type",
+    "backup_font_type": "$global_font_type_backup"
+  },
+
+  "ping_rate_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "loading@progress.progress_loading_spinner": {
+              "size": [10, 10],
+              "offset": [],
+              "bindings": [
+                {
+                  "binding_type": "collection",
+                  "binding_name": "(not #is_network_available_and_ping_not_loading)",
+                  "binding_name_override": "#visible",
+                  "binding_collection_name": "third_party_server_network_worlds"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "high_ping_popup_content_stack_panel": {
+    "size": ["100%", "100%c"]
+  },
+
+  "high_ping_popup_content_stack_panel/text_line_1": {
+    "font_type": "$global_font_type",
+    "backup_font_type": "$global_font_type_backup"
+  },
+
+  "high_ping_popup_content_stack_panel/text_line_2": {
+    "font_type": "$global_font_type",
+    "backup_font_type": "$global_font_type_backup"
+  }
+}

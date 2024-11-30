@@ -1,0 +1,364 @@
+// 由@XSzC.制作的文件.
+// 未经允许不要使用任何文件. 请阅读LICENSE.txt
+
+// File made by @XSzC.
+// Don't use any file without permission. Read LICENSE.txt
+
+{
+  "namespace": "xc_modern_enchanting_screen",
+
+  "base_button@common_buttons.a_rc_8x_content": {
+    "size": ["100%sm", "100%sm"],
+    "$button_image_size": ["98.1481481481%", "89.4736842105%"],
+    "$xeroxclient_button_alpha_default": 0.0,
+    "clips_children": true,
+    "bindings": [
+      {
+        "binding_name": "$visibility_binding_name",
+        "binding_name_override": "#visible",
+        "binding_collection_name": "#enchant_buttons",
+        "binding_type": "collection"
+      },
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "#enchant_buttons"
+      }
+    ],
+    "$button_content": "xc_modern_enchanting_screen.button_content"
+  },
+
+  "button_content@xerox_lib.p": {
+    "controls": [
+      {
+        "hover_text@container:classic_common.custom_hover_text": {
+          "$hover_text_bindings": [
+            {
+              "binding_name": "#hover_text",
+              "binding_collection_name": "#enchant_buttons",
+              "binding_type": "collection"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "('§r' + (#hover_text) - '§o')",
+              "target_property_name": "#hover_text"
+            }
+          ]
+        }
+      },
+      {
+        "rune_1@enchanting.fail_runes": {
+          "ignored": "($visibility_binding_name = '#selectable_button_visibility')",
+          "offset": [0, 0],
+          "size": ["100%", 16],
+          "line_padding": -1,
+          "alpha": 0.5,
+          "layer": 3,
+          "color": "$xeroxclient_ui_theme_button_hover_color"
+        }
+      },
+      {
+        "rune_2@enchanting.fail_runes": {
+          "ignored": "($visibility_binding_name = '#unselectable_button_visibility')",
+          "offset": [0, 0],
+          "size": ["100%", 16],
+          "line_padding": -1,
+          "alpha": 0.8,
+          "layer": 3,
+          "color": "$xeroxclient_ui_theme_button_hover_color"
+        }
+      },
+      {
+        "cost_1@enchanting.fail_cost": {
+          "offset": ["-1.8867924528%", "-10.5263157895%"],
+          "color": "$xeroxclient_ui_theme_button_text_locked_color",
+          "ignored": "($visibility_binding_name = '#selectable_button_visibility')",
+          "font_type": "$global_font_type",
+          "backup_font_type": "$global_font_type_backup"
+        }
+      },
+      {
+        "cost_2@enchanting.success_cost": {
+          "offset": ["-1.8867924528%", "-10.5263157895%"],
+          "color": "$xeroxclient_ui_theme_button_hover_color",
+          "ignored": "($visibility_binding_name = '#unselectable_button_visibility')",
+          "font_type": "$global_font_type",
+          "backup_font_type": "$global_font_type_backup"
+        }
+      }
+    ]
+  },
+
+  "enchant_button_panel@xerox_lib.p": {
+    "size": ["100%cm", "100%cm"],
+    "layer": 1,
+    "controls": [
+      {
+        "filling@xerox_lib.p": {
+          "$default_size": [108, 19],
+          "size": "$default_size",
+          "animation_reset_name": "screen_animation_reset",
+          "anims": [
+            "@container:classic_animation.size_enter",
+            "@container:classic_animation.size_out"
+          ]
+        }
+      },
+      {
+        "unselectable_button@xc_modern_enchanting_screen.base_button": {
+          "$visibility_binding_name": "#unselectable_button_visibility",
+          "sound_volume": 0.0,
+          "button_mappings": []
+        }
+      },
+      {
+        "selectable_button@xc_modern_enchanting_screen.base_button": {
+          "$visibility_binding_name": "#selectable_button_visibility",
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.menu_ok",
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.menu_ok",
+              "to_button_id": "button.menu_ok",
+              "mapping_type": "focused"
+            },
+            {
+              "from_button_id": "button.controller_back",
+              "to_button_id": "button.menu_ok",
+              "mapping_type": "focused",
+              "ignored": "(not $is_ps4)"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "enchanting_panel@xerox_lib.i": {
+    "texture": "textures/XeroxClient/rounded_corner/all8x",
+    "color": "$xeroxclient_ui_theme_menu_background_color",
+    "alpha": 0.3,
+    "layer": 0,
+    "size": ["100%cm", "100%c"],
+    "clips_children": true,
+    "controls": [
+      {
+        "top_half@xerox_lib.p": {
+          "size": ["100%sm", "46.0227272727%x"],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "controls": [
+            {
+              "0size_panel_1@xerox_lib.p": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": ["3.9772727273%", "3.7037037037%"],
+                "size": [0, 0],
+                "controls": [
+                  {
+                    "container_title@xerox_lib.l": {
+                      "text": "$container_title",
+                      "size": ["default", "default"],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "text_alignment": "left",
+                      "font_type": "$global_font_type",
+                      "backup_font_type": "$global_font_type_backup",
+                      "layer": 3
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "0size_panel_2@xerox_lib.p": {
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "offset": ["-3.9772727273%", "2.5974025974%"],
+                "size": [0, 0],
+                "ignored": "(not $touch)",
+                "controls": [
+                  {
+                    "close_button@common_buttons.a_rc_8x_text": {
+                      "$default_size": [12, 12],
+                      "size": "$default_size",
+                      "animation_reset_name": "screen_animation_reset",
+                      "anims": [
+                        "@container:classic_animation.size_enter",
+                        "@container:classic_animation.size_out"
+                      ],
+                      "anchor_from": "top_right",
+                      "anchor_to": "top_right",
+                      "$button_text": "×",
+                      "$button_image_size": ["100%", "100%"],
+                      "$pressed_button_name": "button.menu_exit",
+                      "$xeroxclient_button_alpha_default": 0.0,
+                      "$xeroxclient_button_alpha_hover": 0.9,
+                      "$xeroxclient_button_alpha_pressed": 0.9,
+                      "$xeroxclient_button_color_hover": [1.0, 0.333, 0.333],
+                      "$xeroxclient_button_color_pressed": [1.0, 0.333, 0.333],
+                      "$xeroxclient_button_content_offset_default": [0, -3],
+                      "$xeroxclient_button_content_offset_hover": [0, -3],
+                      "$xeroxclient_button_content_offset_pressed": [0, -3],
+                      "$button_font_type": "HarmonyOS-Regular"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "enchanting_book_panel@xerox_lib.p": {
+                "offset": ["7.3863636364%", "12.3456790123%"],
+                "$default_size": [40, 40],
+                "size": "$default_size",
+                "animation_reset_name": "screen_animation_reset",
+                "anims": [
+                  "@container:classic_animation.size_enter",
+                  "@container:classic_animation.size_out"
+                ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "controls": [
+                  {
+                    "enchanting_book": {
+                      "type": "custom",
+                      "renderer": "enchanting_book_renderer",
+                      "layer": 3,
+                      "bindings": [
+                        {
+                          "binding_name": "#open",
+                          "binding_type": "global"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "input_slots@xerox_lib.i": {
+                "texture": "textures/XeroxClient/rounded_corner/all8x",
+                "color": "$xeroxclient_ui_theme_menu_background_color",
+                "alpha": 0.3,
+                "layer": 1,
+                "size": ["100%c", "50%c"],
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "offset": ["7.3863636364%", "-19.7530864198%"],
+                "controls": [
+                  {
+                    "item_slot@xerox_lib.cp": {
+                      "collection_name": "$item_collection_name",
+                      "$item_collection_name": "enchanting_input_items",
+                      "size": ["111.1111111111%c", "100%x"],
+                      "anchor_to": "right_middle",
+                      "controls": [
+                        {
+                          "0@container:classic_common.container_item": {
+                            "collection_index": 0
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "lapis_slot@xerox_lib.cp": {
+                      "collection_name": "$item_collection_name",
+                      "$item_collection_name": "enchanting_lapis_items",
+                      "size": ["100%sm", "100%x"],
+                      "anchor_to": "left_middle",
+                      "controls": [
+                        {
+                          "0@container:classic_common.container_item": {
+                            "collection_index": 0
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "enchantments_panel@xerox_lib.i": {
+                "texture": "textures/XeroxClient/rounded_corner/all8x",
+                "color": "$xeroxclient_ui_theme_menu_background_color",
+                "alpha": 0.3,
+                "layer": 1,
+                "size": ["100.9259259259%c", "105.2631578947%c"],
+                "anchor_from": "bottom_right",
+                "anchor_to": "bottom_right",
+                "offset": ["-3.9772727273%", "-11.1111111111%"],
+                "controls": [
+                  {
+                    "enchantments@xerox_lib.vsp": {
+                      "size": ["100%cm", "100%c"],
+                      "collection_name": "#enchant_buttons",
+                      "controls": [
+                        {
+                          "0@xc_modern_enchanting_screen.enchant_button_panel": {
+                            "collection_index": 0
+                          }
+                        },
+                        {
+                          "1@xc_modern_enchanting_screen.enchant_button_panel": {
+                            "collection_index": 1
+                          }
+                        },
+                        {
+                          "2@xc_modern_enchanting_screen.enchant_button_panel": {
+                            "collection_index": 2
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bottom_half@xerox_lib.p": {
+          "size": ["107.3170731707%c", "108.9743589744%c"],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "controls": [
+            {
+              "inv_and_hotbar@container:classic_common.inventory_and_hotbar": {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "offset": [0, "1.1764705882%"]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "main_content@xerox_lib.b": {
+    "default_focus_precedence": 0,
+    "focus_enabled": true,
+    "focus_wrap_enabled": false,
+    "focus_magnet_enabled": true,
+    "consume_hover_events": false,
+    "controls": [
+      { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
+      {
+        "enchanting_panel@xc_modern_enchanting_screen.enchanting_panel": {}
+      },
+      {
+        "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}
+      },
+      {
+        "inventory_selected_icon_button@container:classic_common.inventory_selected_icon_button": {}
+      },
+      { "flying_item_renderer@common.flying_item_renderer": { "layer": 8 } },
+      { "gamepad_cursor@common.gamepad_cursor_button": {} }
+    ]
+  }
+}

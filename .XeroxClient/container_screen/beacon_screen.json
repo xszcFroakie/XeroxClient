@@ -1,0 +1,516 @@
+// 由@XSzC.制作的文件.
+// 未经允许不要使用任何文件. 请阅读LICENSE.txt
+
+// File made by @XSzC.
+// Don't use any file without permission. Read LICENSE.txt
+
+{
+  "namespace": "xc_modern_beacon_screen",
+
+  "image_atlas@xerox_lib.i": {
+    "size": "$default_size",
+    "anims": [
+      "@container:classic_animation.size_enter",
+      "@container:classic_animation.size_out"
+    ],
+    "animation_reset_name": "screen_animation_reset"
+  },
+
+  "button_unchecked_default@xerox_lib.i": {
+    "texture": "textures/XeroxClient/rounded_corner/all8x",
+    "alpha": "$xeroxclient_ui_theme_button_default_alpha",
+    "color": "$xeroxclient_ui_theme_button_default_color"
+  },
+
+  "button_unchecked_hover@xc_modern_beacon_screen.button_unchecked_default": {
+    "alpha": "$xeroxclient_ui_theme_button_hover_alpha",
+    "color": "$xeroxclient_ui_theme_button_hover_color",
+    "controls": [
+      {
+        "hover_text@container:classic_common.custom_hover_text": {
+          "$hover_text_bindings": [
+            {
+              "binding_name": "#button_hover",
+              "binding_name_override": "#hover_text",
+              "binding_collection_name": "$button_name",
+              "binding_type": "collection"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_checked_hover@xc_modern_beacon_screen.button_unchecked_default": {
+    "alpha": "$xeroxclient_ui_theme_button_hover_alpha",
+    "color": "$xeroxclient_ui_theme_button_hover_color",
+    "controls": [
+      {
+        "hover_text@container:classic_common.custom_hover_text": {
+          "$hover_text_bindings": [
+            {
+              "binding_name": "#button_hover",
+              "binding_name_override": "#hover_text",
+              "binding_collection_name": "$button_name",
+              "binding_type": "collection"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_locked@xc_modern_beacon_screen.button_unchecked_default": {
+    "alpha": "$xeroxclient_ui_theme_button_default_alpha",
+    "color": "$xeroxclient_ui_theme_button_default_color"
+  },
+
+  "button_locked_hover@xc_modern_beacon_screen.button_unchecked_default": {
+    "alpha": "$xeroxclient_ui_theme_button_default_alpha",
+    "color": "$xeroxclient_ui_theme_button_default_color",
+    "controls": [
+      {
+        "hover_text@container:classic_common.custom_hover_text": {
+          "$hover_text_bindings": [
+            {
+              "binding_name": "#button_hover",
+              "binding_name_override": "#hover_text",
+              "binding_collection_name": "$button_name",
+              "binding_type": "collection"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_checked@xc_modern_beacon_screen.button_unchecked_default": {
+    "alpha": "$xeroxclient_ui_theme_button_pressed_alpha",
+    "color": "$xeroxclient_ui_theme_button_pressed_color"
+  },
+
+  "toggle_template@xerox_lib.p": {
+    "$image_control|default": "beacon.image_template",
+    "controls": [
+      {
+        "toggle_button@beacon.toggle_button": {
+          "size": ["100%", "100%"],
+          "$unchecked_control": "xc_modern_beacon_screen.button_unchecked_default",
+          "$checked_control": "xc_modern_beacon_screen.button_checked",
+          "$unchecked_hover_control": "xc_modern_beacon_screen.button_unchecked_hover",
+          "$checked_hover_control": "xc_modern_beacon_screen.button_checked_hover",
+          "$unchecked_locked_control": "xc_modern_beacon_screen.button_locked",
+          "$checked_locked_control": "xc_modern_beacon_screen.button_locked",
+          "$unchecked_locked_hover_control": "xc_modern_beacon_screen.button_locked_hover",
+          "$checked_locked_hover_control": "xc_modern_beacon_screen.button_locked_hover"
+        }
+      },
+      { "$image_control@$image_control": { "size": ["100%", "100%"] } }
+    ]
+  },
+
+  "button_template@xc_modern_beacon_screen.toggle_template": {
+    "controls": [
+      {
+        "active_button@beacon.active_button": {
+          "size": ["100%", "100%"],
+          "controls": [
+            { "default@xc_modern_beacon_screen.button_unchecked_default": {} },
+            { "hover@xc_modern_beacon_screen.button_unchecked_hover": {} },
+            { "pressed@xc_modern_beacon_screen.button_checked": {} }
+          ]
+        }
+      },
+      {
+        "inactive_button@beacon.inactive_button": {
+          "size": ["100%", "100%"],
+          "controls": [
+            { "default@xc_modern_beacon_screen.button_unchecked_default": {} },
+            { "hover@xc_modern_beacon_screen.button_unchecked_hover": {} }
+          ]
+        }
+      },
+      {
+        "image_template@xerox_lib.i": {
+          "$image_size|default": [18, 18],
+          "size": "$default_size",
+          "$default_size": "$image_size",
+          "anims": [
+            "@container:classic_animation.size_enter",
+            "@container:classic_animation.size_out"
+          ],
+          "animation_reset_name": "screen_animation_reset",
+          "texture": "$image_texture",
+          "bindings": [
+            {
+              "binding_name": "#button_visible",
+              "binding_name_override": "#visible",
+              "binding_collection_name": "$button_name",
+              "binding_type": "collection"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "panel_template@xerox_lib.p": {
+    "size": "$default_size",
+    "$default_size": [22, 22],
+    "anims": [
+      "@container:classic_animation.size_enter",
+      "@container:classic_animation.size_out"
+    ],
+    "animation_reset_name": "screen_animation_reset",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "layer": 4,
+    "$button_control|default": "xc_modern_beacon_screen.toggle_template",
+    "bindings": [
+      {
+        "binding_type": "collection",
+        "binding_name": "#active",
+        "binding_collection_name": "$button_name",
+        "binding_name_override": "#enabled"
+      }
+    ],
+    "controls": [{ "$button_control@$button_control": {} }]
+  },
+
+  "beacon_panel@xerox_lib.i": {
+    "texture": "textures/XeroxClient/rounded_corner/all8x",
+    "color": "$xeroxclient_ui_theme_menu_background_color",
+    "alpha": 0.3,
+    "layer": 0,
+    "size": ["100%cm", "100%c"],
+    "clips_children": true,
+    "controls": [
+      {
+        "top_half@xerox_lib.p": {
+          "size": ["100%sm", "56.0869565217%x"],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "controls": [
+            {
+              "beacon_inner_panel@xerox_lib.i": {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "offset": [0, "4.1237113402%"],
+                "texture": "textures/XeroxClient/rounded_corner/all8x",
+                "color": "$xeroxclient_ui_theme_menu_background_color",
+                "alpha": 0.3,
+                "layer": 0,
+                "size": "$default_size",
+                "$default_size": [216, 97],
+                "anims": [
+                  "@container:classic_animation.size_enter",
+                  "@container:classic_animation.size_out"
+                ],
+                "animation_reset_name": "screen_animation_reset",
+                "controls": [
+                  {
+                    "speed_panel@xc_modern_beacon_screen.panel_template": {
+                      "offset": ["-24.0740740741%", "18.5567010309%"],
+                      "$button_name": "speed",
+                      "$image_texture": "textures/ui/speed_effect"
+                    }
+                  },
+                  {
+                    "haste_panel@xc_modern_beacon_screen.panel_template": {
+                      "offset": ["-12.9629629630%", "18.5567010309%"],
+                      "$button_name": "haste",
+                      "$image_texture": "textures/ui/haste_effect"
+                    }
+                  },
+                  {
+                    "resist_panel@xc_modern_beacon_screen.panel_template": {
+                      "offset": ["-24.0740740741%", "44.3298969072%"],
+                      "$button_name": "resist",
+                      "$image_texture": "textures/ui/resistance_effect"
+                    }
+                  },
+                  {
+                    "jump_panel@xc_modern_beacon_screen.panel_template": {
+                      "offset": ["-12.9629629630%", "44.3298969072%"],
+                      "$button_name": "jump",
+                      "$image_texture": "textures/ui/jump_boost_effect"
+                    }
+                  },
+                  {
+                    "strength_panel@xc_modern_beacon_screen.panel_template": {
+                      "offset": ["-18.5185185185%", "70.1030927835%"],
+                      "$button_name": "strength",
+                      "$image_texture": "textures/ui/strength_effect"
+                    }
+                  },
+                  {
+                    "regen_panel@xc_modern_beacon_screen.panel_template": {
+                      "offset": ["18.0555555555%", "44.3298969072%"],
+                      "$button_name": "regen",
+                      "$image_texture": "textures/ui/regeneration_effect"
+                    }
+                  },
+                  {
+                    "extra_panel@xc_modern_beacon_screen.panel_template": {
+                      "offset": ["29.1666666667%", "44.3298969072%"],
+                      "$image_size": ["72.7272727273%", "100%x"],
+                      "$button_name": "extra",
+                      "$image_control": "beacon.secondary_effect_images"
+                    }
+                  },
+                  {
+                    "level1@xc_modern_beacon_screen.image_atlas": {
+                      "$default_size": [19, 20],
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "layer": 1,
+                      "texture": "textures/ui/pyramid_level_1",
+                      "offset": ["-40.9722222222%", "18.5567010309%"]
+                    }
+                  },
+                  {
+                    "level2@xc_modern_beacon_screen.image_atlas": {
+                      "$default_size": [19, 20],
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "layer": 1,
+                      "texture": "textures/ui/pyramid_level_2",
+                      "offset": ["-40.9722222222%", "44.3298969072%"]
+                    }
+                  },
+                  {
+                    "level3@xc_modern_beacon_screen.image_atlas": {
+                      "$default_size": [19, 20],
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "layer": 1,
+                      "texture": "textures/ui/pyramid_level_3",
+                      "offset": ["-40.9722222222%", "70.1030927835%"]
+                    }
+                  },
+                  {
+                    "level4@xc_modern_beacon_screen.image_atlas": {
+                      "$default_size": [19, 20],
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "layer": 1,
+                      "texture": "textures/ui/pyramid_level_4",
+                      "offset": ["23.8425925926%", "18.5567010309%"]
+                    }
+                  },
+                  {
+                    "primary_power_label@xerox_lib.l": {
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "font_type": "$global_font_type",
+                      "backup_font_type": "$global_font_type_backup",
+                      "size": ["default", "default"],
+                      "shadow": true,
+                      "text": "tile.beacon.primary",
+                      "offset": ["-24.5370370370%", "5.1546391753%"]
+                    }
+                  },
+                  {
+                    "secondary_power_label@xerox_lib.l": {
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "font_type": "$global_font_type",
+                      "backup_font_type": "$global_font_type_backup",
+                      "size": ["default", "default"],
+                      "shadow": true,
+                      "text": "tile.beacon.secondary",
+                      "offset": ["24.0740740741%", "5.1546391753%"]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "usable_item_and_payment_panel@xerox_lib.p": {
+                "size": ["89.8148148148%sm", "11.3402061856%x"],
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "controls": [
+                  {
+                    "usable_items_panel@xerox_lib.p": {
+                      "anchor_from": "center",
+                      "anchor_to": "right_middle",
+                      "offset": ["4.1237113402%", 0],
+                      "size": ["577.777777778%y", "30%c"],
+                      "controls": [
+                        {
+                          "netherite@xc_common.item_renderer": {
+                            "anchor_from": "left_middle",
+                            "anchor_to": "left_middle",
+                            "offset": ["1.9230769231%", 0],
+                            "size": "$default_size",
+                            "$default_size": [12, 12],
+                            "anims": [
+                              "@container:classic_animation.size_enter",
+                              "@container:classic_animation.size_out"
+                            ],
+                            "animation_reset_name": "screen_animation_reset",
+                            "property_bag": {
+                              "#item_id_aux": 48627712
+                            },
+                            "bindings": [
+                              {
+                                "binding_name": "#supports_netherite",
+                                "binding_name_override": "#visible"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "emerald@xc_common.item_renderer": {
+                            "anchor_from": "left_middle",
+                            "anchor_to": "left_middle",
+                            "offset": ["23.0769230769%", 0],
+                            "size": "$default_size",
+                            "$default_size": [12, 12],
+                            "anims": [
+                              "@container:classic_animation.size_enter",
+                              "@container:classic_animation.size_out"
+                            ],
+                            "animation_reset_name": "screen_animation_reset",
+                            "property_bag": {
+                              "#item_id_aux": 25427968
+                            }
+                          }
+                        },
+                        {
+                          "diamond@xc_common.item_renderer": {
+                            "anchor_from": "left_middle",
+                            "anchor_to": "left_middle",
+                            "offset": ["44.2307692308%", 0],
+                            "size": "$default_size",
+                            "$default_size": [12, 12],
+                            "anims": [
+                              "@container:classic_animation.size_enter",
+                              "@container:classic_animation.size_out"
+                            ],
+                            "animation_reset_name": "screen_animation_reset",
+                            "property_bag": {
+                              "#item_id_aux": 17301504
+                            }
+                          }
+                        },
+                        {
+                          "gold@xc_common.item_renderer": {
+                            "anchor_from": "left_middle",
+                            "anchor_to": "left_middle",
+                            "offset": ["65.3846153846%", 0],
+                            "size": "$default_size",
+                            "$default_size": [12, 12],
+                            "anims": [
+                              "@container:classic_animation.size_enter",
+                              "@container:classic_animation.size_out"
+                            ],
+                            "animation_reset_name": "screen_animation_reset",
+                            "property_bag": {
+                              "#item_id_aux": 17432576
+                            }
+                          }
+                        },
+                        {
+                          "iron@xc_common.item_renderer": {
+                            "anchor_from": "left_middle",
+                            "anchor_to": "left_middle",
+                            "offset": ["86.5384615385%", 0],
+                            "size": "$default_size",
+                            "$default_size": [12, 12],
+                            "anims": [
+                              "@container:classic_animation.size_enter",
+                              "@container:classic_animation.size_out"
+                            ],
+                            "animation_reset_name": "screen_animation_reset",
+                            "property_bag": {
+                              "#item_id_aux": 17367040
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "ingredient_item@xerox_lib.i": {
+                      "texture": "textures/XeroxClient/rounded_corner/all8x",
+                      "color": "$xeroxclient_ui_theme_menu_background_color",
+                      "alpha": 0.3,
+                      "layer": 0,
+                      "anchor_from": "center",
+                      "anchor_to": "left_middle",
+                      "offset": ["9.2783505155%", 0],
+                      "size": ["111.1111111111%c", "100%x"],
+                      "controls": [
+                        {
+                          "0@container:classic_common.container_item": {
+                            "$item_collection_name": "beacon_payment_items"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "confirm_panel@xc_modern_beacon_screen.panel_template": {
+                      "anchor_from": "center",
+                      "anchor_to": "left_middle",
+                      "offset": ["24.7422680412%", 0],
+                      "$button_name": "confirm",
+                      "$image_texture": "textures/XeroxClient/icon/check",
+                      "$image_size": [16, 16],
+                      "$button_control": "xc_modern_beacon_screen.button_template"
+                    }
+                  },
+                  {
+                    "cancel_panel@xc_modern_beacon_screen.panel_template": {
+                      "anchor_from": "center",
+                      "anchor_to": "left_middle",
+                      "offset": ["38.1443298969%", 0],
+                      "$button_name": "cancel",
+                      "$image_texture": "textures/XeroxClient/icon/crossout",
+                      "$image_size": [12, 12],
+                      "$button_control": "xc_modern_beacon_screen.button_template"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bottom_half@xerox_lib.p": {
+          "size": ["140.2439024390%c", "115.3846153846%c"],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "controls": [
+            {
+              "inv_and_hotbar@container:classic_common.inventory_and_hotbar": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "main_content@xerox_lib.b": {
+    "default_focus_precedence": 0,
+    "focus_enabled": true,
+    "focus_wrap_enabled": false,
+    "focus_magnet_enabled": true,
+    "consume_hover_events": false,
+    "controls": [
+      { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
+      { "beacon_panel@xc_modern_beacon_screen.beacon_panel": {} },
+      {
+        "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}
+      },
+      {
+        "inventory_selected_icon_button@container:classic_common.inventory_selected_icon_button": {}
+      },
+      { "flying_item_renderer@common.flying_item_renderer": { "layer": 8 } },
+      { "gamepad_cursor@common.gamepad_cursor_button": {} }
+    ]
+  }
+}

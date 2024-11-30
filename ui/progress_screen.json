@@ -1,0 +1,163 @@
+// 由@XSzC.制作的文件. 
+// 未经允许不要使用任何文件. 请阅读LICENSE.txt
+
+// File made by @XSzC.
+// Don't use any file without permission. Read LICENSE.txt
+
+// 所有字体类型中只有default, unicode, OldSmoothFont, smooth不会闪动, 为了保证界面有良好的视觉效果全部使用OldSmoothFont
+{
+  "namespace": "progress",
+
+  "modal_progress_panel_no_cancel/common_panel": {
+    "ignored": true
+  },
+
+  "modal_progress_panel_with_cancel/common_panel": {
+    "ignored": true
+  },
+
+  "world_modal_progress_panel/inside_content/loading_bar_panel/progress_loading_bars": {
+    "bindings": [
+      {
+        "binding_name": "(not #loading_bar_visible)",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "world_convert_modal_progress_screen_content/title_panel_content": {
+    "ignored": true
+  },
+
+  "world_save_modal_progress_screen_content/title_panel_content": {
+    "ignored": true
+  },
+
+  "world_modal_progress_panel/common_panel": {
+    "ignored": true
+  },
+
+  "fancy_progress_loading_bars/progress_bar_nub": {
+    "ignored": true
+  },
+
+  "progress_loading_bars": {
+    "color": [0.99, 0.99, 1.0],
+    "alpha": 0.9
+  },
+
+  "progress_screen_text": {
+    "font_type": "$global_font_type",
+    "backup_font_type": "$global_font_type_backup",
+    "text_alignment": "center"/*,
+    "controls": [
+      {
+        "background": {
+          "type": "image",
+          "size": ["100%+3px", "90%-0.5px"],
+          "offset": [0, -3],
+          "texture": "textures/ui/progress/progress_bar",
+          "color": [0.05, 0.0, 0.05, 11.45],
+          "alpha": 0.10,
+          "layer": -1,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "$visible_expression",
+              "target_property_name": "#visible"
+            },
+            { "binding_name": "#progress_text" },
+            { "binding_name": "#title_text" }
+          ]
+        }
+      }
+    ]*/
+  },
+
+  "progress_title_text": {
+    "$visible_expression": "(not (#title_text = ''))"
+    //"font_type": "Roboto-Bold"
+  },
+
+  "progress_bar_text": {
+    "$visible_expression": "(not (#progress_text = ''))"
+    //"font_type": "Roboto-Regular"
+  },
+
+  "modal_button_panel_with_retry": {
+    "controls": [
+      {
+        "stack_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": ["240px", 23],
+          "controls": [
+            { "abort_button@progress.abort_button": {} },
+            { "cancel_button@progress.cancel_button": {} },
+            { "retry_button@progress.retry_button": {} }
+          ]
+        }
+      }
+    ]
+  },
+
+  "modal_progress_screen": {
+    "$screen_animations": [
+      "@common.screen_entrance_animation_push_fade",
+      "@common.screen_entrance_animation_pop_fade",
+      "@common.screen_exit_animation_push_fade",
+      "@common.screen_exit_animation_pop_fade"
+    ],
+    "$screen_bg_content": "xc_common.background_for_pregame_only",
+    "$screen_content": "xc_modern_progress.main_content",
+    "$dynamic_bar": true
+  },
+
+  "realms_loading_progress_screen": {
+    "$screen_bg_content": "xc_common.background",
+    "$screen_content": "xc_modern_progress.main_content",
+    "$dynamic_bar": true
+  },
+
+  "realms_stories_enabled_loading_progress_screen": {
+    "$screen_bg_content": "xc_common.background",
+    "$screen_content": "xc_modern_progress.main_content"
+  },
+
+  "overworld_loading_progress_screen": {
+    "$screen_bg_content": "xc_common.background"
+  },
+
+  "nether_loading_progress_screen": {
+    "$screen_bg_content": "xc_common.background"
+  },
+
+  "theend_loading_progress_screen": {
+    "$screen_bg_content": "xc_common.background"
+  },
+
+  "world_saving_progress_screen": {
+    "$screen_content": "xc_modern_progress.main_content",
+    "$dynamic_bar": true
+  },
+
+
+  "world_convert_modal_progress_screen": {
+    "$screen_content": "xc_modern_progress.main_content"
+  },
+
+  "world_loading_progress_screen": {
+    "$screen_content": "xc_modern_progress.main_content"
+  },
+
+  "progress_screen": {
+    "$screen_animations": [
+      "@common.screen_entrance_animation_push_fade",
+      "@common.screen_entrance_animation_pop_fade",
+      "@common.screen_exit_animation_push_fade",
+      "@common.screen_exit_animation_pop_fade"
+    ],
+    //"force_render_below": "$is_pregame",
+    "$screen_bg_content": "xc_common.background"
+  }
+}

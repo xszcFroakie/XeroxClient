@@ -1,0 +1,9 @@
+xc.container.hoverText.itemDura=Durability:
+
+xc.unsupportVersion.warning=Unsupported Minecraft Version!
+xc.unsupportVersion.suggestVersion=Suggested version:
+xc.unsupportVersion.description=Using an unsupported version may cause some errors.
+
+xc.tip.press2x=Press 2x
+
+map.position=§§%s/%s/%s

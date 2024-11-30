@@ -1,0 +1,838 @@
+// 由@XSzC.制作的文件.
+// 未经允许不要使用任何文件. 请阅读LICENSE.txt
+
+// File made by @XSzC.
+// Don't use any file without permission. Read LICENSE.txt
+
+{
+  "namespace": "xc_modern_progress:progress_bar",
+
+  "text@xerox_lib.l": {
+    "ignored": false,
+    "size": ["default", "default"],
+    "font_type": "Bahnschrift-SemiBold",
+    "backup_font_type": "$global_font_type_backup",
+    "anchor_from": "top_middle",
+    "anchor_to": "bottom_middle",
+    "font_scale_factor": 1.2,
+    "offset": [0, -3],
+    "bindings": [
+      { "binding_name": "#loading_bar_total_amount" },
+      { "binding_name": "#loading_bar_current_amount" },
+      {
+        "binding_type": "view",
+        "source_property_name": "(((#loading_bar_current_amount / #loading_bar_total_amount) > $min_value) and ((#loading_bar_current_amount / #loading_bar_total_amount) < $max_value))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "empty@xerox_lib.i": {
+    "max_size": [175, 8],
+    "texture": "textures/XeroxClient/rounded_corner/all8x",
+    "layer": 11,
+    "alpha": 0.4,
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle"
+  },
+
+  "full@xerox_lib.i": {
+    "size": ["100%", 8],
+    "min_size": [8, 8],
+    "texture": "textures/XeroxClient/rounded_corner/all8x",
+    "clip_direction": "left",
+    "clip_pixelperfect": false,
+    "layer": 12,
+    "bindings": [
+      { "binding_name": "#loading_bar_total_amount" },
+      { "binding_name": "#loading_bar_current_amount" } /*
+      {
+        "binding_type": "view",
+        "source_property_name": "(#loading_bar_current_amount / #loading_bar_total_amount)",
+        "target_property_name": "#size_binding_x"
+      }*/,
+      {
+        "binding_type": "view",
+        "source_property_name": "(1-(#loading_bar_current_amount / #loading_bar_total_amount))",
+        "target_property_name": "#clip_ratio"
+      }
+    ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle"
+  },
+
+  "dynamic_bar@xc_modern_progress:progress_bar.empty": {
+    "color": "$xeroxclient_ui_theme_menu_background_color",
+    "controls": [
+      {
+        "dot@xerox_lib.p": {
+          "anchor_from": "left_middle",
+          "anchor_to": "center",
+          "size": ["100%sm", "100%sm"],
+          "anims": ["@progress_animation.dot_left_to_right"],
+          "controls": [
+            {
+              "dot@xc_modern_progress:progress_bar.empty": {
+                "size": [8, 8],
+                "alpha": 1.0,
+                "anims": ["@progress_animation.dot_draw_to_line"]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "dot1@xc_modern_progress:progress_bar.empty": {
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "size": [8, 8],
+          "alpha": 0.0,
+          "anims": [
+            "@progress_animation.dot_expand_size",
+            "@progress_animation.dot_expand_alpha"
+          ],
+          "color": "$xeroxclient_ui_theme_button_pressed_color"
+        }
+      },
+      {
+        "dot2@xc_modern_progress:progress_bar.empty": {
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "size": [8, 8],
+          "alpha": 0.0,
+          "anims": [
+            "@progress_animation.dot_expand_size_w",
+            "@progress_animation.dot_expand_alpha_w"
+          ],
+          "color": "$xeroxclient_ui_theme_button_pressed_color"
+        }
+      }
+    ]
+  },
+
+  "static_bar@xerox_lib.p": {
+    "size": [175, 8],
+    "controls": [
+      {
+        "empty@xc_modern_progress:progress_bar.empty": {
+          "color": "$xeroxclient_ui_theme_menu_background_color"
+        }
+      },
+      { "full@xc_modern_progress:progress_bar.full": {} },
+      {
+        "0@xc_modern_progress:progress_bar.text": {
+          "$min_value": -1,
+          "$max_value": 0.01,
+          "text": "0%%"
+        }
+      },
+      {
+        "1@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.01,
+          "$max_value": 0.02,
+          "text": "1%%"
+        }
+      },
+      {
+        "2@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.02,
+          "$max_value": 0.03,
+          "text": "2%%"
+        }
+      },
+      {
+        "3@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.03,
+          "$max_value": 0.04,
+          "text": "3%%"
+        }
+      },
+      {
+        "4@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.04,
+          "$max_value": 0.05,
+          "text": "4%%"
+        }
+      },
+      {
+        "5@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.05,
+          "$max_value": 0.06,
+          "text": "5%%"
+        }
+      },
+      {
+        "6@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.06,
+          "$max_value": 0.07,
+          "text": "6%%"
+        }
+      },
+      {
+        "7@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.07,
+          "$max_value": 0.08,
+          "text": "7%%"
+        }
+      },
+      {
+        "8@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.08,
+          "$max_value": 0.09,
+          "text": "8%%"
+        }
+      },
+      {
+        "9@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.09,
+          "$max_value": 0.1,
+          "text": "9%%"
+        }
+      },
+      {
+        "10@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.1,
+          "$max_value": 0.11,
+          "text": "10%%"
+        }
+      },
+      {
+        "11@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.11,
+          "$max_value": 0.12,
+          "text": "11%%"
+        }
+      },
+      {
+        "12@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.12,
+          "$max_value": 0.13,
+          "text": "12%%"
+        }
+      },
+      {
+        "13@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.13,
+          "$max_value": 0.14,
+          "text": "13%%"
+        }
+      },
+      {
+        "14@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.14,
+          "$max_value": 0.15,
+          "text": "14%%"
+        }
+      },
+      {
+        "15@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.15,
+          "$max_value": 0.16,
+          "text": "15%%"
+        }
+      },
+      {
+        "16@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.16,
+          "$max_value": 0.17,
+          "text": "16%%"
+        }
+      },
+      {
+        "17@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.17,
+          "$max_value": 0.18,
+          "text": "17%%"
+        }
+      },
+      {
+        "18@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.18,
+          "$max_value": 0.19,
+          "text": "18%%"
+        }
+      },
+      {
+        "19@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.19,
+          "$max_value": 0.2,
+          "text": "19%%"
+        }
+      },
+      {
+        "20@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.2,
+          "$max_value": 0.21,
+          "text": "20%%"
+        }
+      },
+      {
+        "21@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.21,
+          "$max_value": 0.22,
+          "text": "21%%"
+        }
+      },
+      {
+        "22@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.22,
+          "$max_value": 0.23,
+          "text": "22%%"
+        }
+      },
+      {
+        "23@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.23,
+          "$max_value": 0.24,
+          "text": "23%%"
+        }
+      },
+      {
+        "24@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.24,
+          "$max_value": 0.25,
+          "text": "24%%"
+        }
+      },
+      {
+        "25@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.25,
+          "$max_value": 0.26,
+          "text": "25%%"
+        }
+      },
+      {
+        "26@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.26,
+          "$max_value": 0.27,
+          "text": "26%%"
+        }
+      },
+      {
+        "27@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.27,
+          "$max_value": 0.28,
+          "text": "27%%"
+        }
+      },
+      {
+        "28@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.28,
+          "$max_value": 0.29,
+          "text": "28%%"
+        }
+      },
+      {
+        "29@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.29,
+          "$max_value": 0.3,
+          "text": "29%%"
+        }
+      },
+      {
+        "30@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.3,
+          "$max_value": 0.31,
+          "text": "30%%"
+        }
+      },
+      {
+        "31@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.31,
+          "$max_value": 0.32,
+          "text": "31%%"
+        }
+      },
+      {
+        "32@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.32,
+          "$max_value": 0.33,
+          "text": "32%%"
+        }
+      },
+      {
+        "33@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.33,
+          "$max_value": 0.34,
+          "text": "33%%"
+        }
+      },
+      {
+        "34@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.34,
+          "$max_value": 0.35,
+          "text": "34%%"
+        }
+      },
+      {
+        "35@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.35,
+          "$max_value": 0.36,
+          "text": "35%%"
+        }
+      },
+      {
+        "36@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.36,
+          "$max_value": 0.37,
+          "text": "36%%"
+        }
+      },
+      {
+        "37@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.37,
+          "$max_value": 0.38,
+          "text": "37%%"
+        }
+      },
+      {
+        "38@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.38,
+          "$max_value": 0.39,
+          "text": "38%%"
+        }
+      },
+      {
+        "39@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.39,
+          "$max_value": 0.4,
+          "text": "39%%"
+        }
+      },
+      {
+        "40@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.4,
+          "$max_value": 0.41,
+          "text": "40%%"
+        }
+      },
+      {
+        "41@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.41,
+          "$max_value": 0.42,
+          "text": "41%%"
+        }
+      },
+      {
+        "42@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.42,
+          "$max_value": 0.43,
+          "text": "42%%"
+        }
+      },
+      {
+        "43@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.43,
+          "$max_value": 0.44,
+          "text": "43%%"
+        }
+      },
+      {
+        "44@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.44,
+          "$max_value": 0.45,
+          "text": "44%%"
+        }
+      },
+      {
+        "45@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.45,
+          "$max_value": 0.46,
+          "text": "45%%"
+        }
+      },
+      {
+        "46@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.46,
+          "$max_value": 0.47,
+          "text": "46%%"
+        }
+      },
+      {
+        "47@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.47,
+          "$max_value": 0.48,
+          "text": "47%%"
+        }
+      },
+      {
+        "48@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.48,
+          "$max_value": 0.49,
+          "text": "48%%"
+        }
+      },
+      {
+        "49@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.49,
+          "$max_value": 0.5,
+          "text": "49%%"
+        }
+      },
+      {
+        "50@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.5,
+          "$max_value": 0.51,
+          "text": "50%%"
+        }
+      },
+      {
+        "51@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.51,
+          "$max_value": 0.52,
+          "text": "51%%"
+        }
+      },
+      {
+        "52@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.52,
+          "$max_value": 0.53,
+          "text": "52%%"
+        }
+      },
+      {
+        "53@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.53,
+          "$max_value": 0.54,
+          "text": "53%%"
+        }
+      },
+      {
+        "54@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.54,
+          "$max_value": 0.55,
+          "text": "54%%"
+        }
+      },
+      {
+        "55@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.55,
+          "$max_value": 0.56,
+          "text": "55%%"
+        }
+      },
+      {
+        "56@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.56,
+          "$max_value": 0.57,
+          "text": "56%%"
+        }
+      },
+      {
+        "57@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.57,
+          "$max_value": 0.58,
+          "text": "57%%"
+        }
+      },
+      {
+        "58@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.58,
+          "$max_value": 0.59,
+          "text": "58%%"
+        }
+      },
+      {
+        "59@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.59,
+          "$max_value": 0.6,
+          "text": "59%%"
+        }
+      },
+      {
+        "60@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.6,
+          "$max_value": 0.61,
+          "text": "60%%"
+        }
+      },
+      {
+        "61@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.61,
+          "$max_value": 0.62,
+          "text": "61%%"
+        }
+      },
+      {
+        "62@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.62,
+          "$max_value": 0.63,
+          "text": "62%%"
+        }
+      },
+      {
+        "63@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.63,
+          "$max_value": 0.64,
+          "text": "63%%"
+        }
+      },
+      {
+        "64@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.64,
+          "$max_value": 0.65,
+          "text": "64%%"
+        }
+      },
+      {
+        "65@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.65,
+          "$max_value": 0.66,
+          "text": "65%%"
+        }
+      },
+      {
+        "66@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.66,
+          "$max_value": 0.67,
+          "text": "66%%"
+        }
+      },
+      {
+        "67@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.67,
+          "$max_value": 0.68,
+          "text": "67%%"
+        }
+      },
+      {
+        "68@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.68,
+          "$max_value": 0.69,
+          "text": "68%%"
+        }
+      },
+      {
+        "69@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.69,
+          "$max_value": 0.7,
+          "text": "69%%"
+        }
+      },
+      {
+        "70@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.7,
+          "$max_value": 0.71,
+          "text": "70%%"
+        }
+      },
+      {
+        "71@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.71,
+          "$max_value": 0.72,
+          "text": "71%%"
+        }
+      },
+      {
+        "72@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.72,
+          "$max_value": 0.73,
+          "text": "72%%"
+        }
+      },
+      {
+        "73@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.73,
+          "$max_value": 0.74,
+          "text": "73%%"
+        }
+      },
+      {
+        "74@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.74,
+          "$max_value": 0.75,
+          "text": "74%%"
+        }
+      },
+      {
+        "75@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.75,
+          "$max_value": 0.76,
+          "text": "75%%"
+        }
+      },
+      {
+        "76@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.76,
+          "$max_value": 0.77,
+          "text": "76%%"
+        }
+      },
+      {
+        "77@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.77,
+          "$max_value": 0.78,
+          "text": "77%%"
+        }
+      },
+      {
+        "78@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.78,
+          "$max_value": 0.79,
+          "text": "78%%"
+        }
+      },
+      {
+        "79@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.79,
+          "$max_value": 0.8,
+          "text": "79%%"
+        }
+      },
+      {
+        "80@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.8,
+          "$max_value": 0.81,
+          "text": "80%%"
+        }
+      },
+      {
+        "81@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.81,
+          "$max_value": 0.82,
+          "text": "81%%"
+        }
+      },
+      {
+        "82@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.82,
+          "$max_value": 0.83,
+          "text": "82%%"
+        }
+      },
+      {
+        "83@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.83,
+          "$max_value": 0.84,
+          "text": "83%%"
+        }
+      },
+      {
+        "84@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.84,
+          "$max_value": 0.85,
+          "text": "84%%"
+        }
+      },
+      {
+        "85@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.85,
+          "$max_value": 0.86,
+          "text": "85%%"
+        }
+      },
+      {
+        "86@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.86,
+          "$max_value": 0.87,
+          "text": "86%%"
+        }
+      },
+      {
+        "87@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.87,
+          "$max_value": 0.88,
+          "text": "87%%"
+        }
+      },
+      {
+        "88@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.88,
+          "$max_value": 0.89,
+          "text": "88%%"
+        }
+      },
+      {
+        "89@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.89,
+          "$max_value": 0.9,
+          "text": "89%%"
+        }
+      },
+      {
+        "90@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.9,
+          "$max_value": 0.91,
+          "text": "90%%"
+        }
+      },
+      {
+        "91@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.91,
+          "$max_value": 0.92,
+          "text": "91%%"
+        }
+      },
+      {
+        "92@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.92,
+          "$max_value": 0.93,
+          "text": "92%%"
+        }
+      },
+      {
+        "93@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.93,
+          "$max_value": 0.94,
+          "text": "93%%"
+        }
+      },
+      {
+        "94@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.94,
+          "$max_value": 0.95,
+          "text": "94%%"
+        }
+      },
+      {
+        "95@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.95,
+          "$max_value": 0.96,
+          "text": "95%%"
+        }
+      },
+      {
+        "96@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.96,
+          "$max_value": 0.97,
+          "text": "96%%"
+        }
+      },
+      {
+        "97@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.97,
+          "$max_value": 0.98,
+          "text": "97%%"
+        }
+      },
+      {
+        "98@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.98,
+          "$max_value": 0.99,
+          "text": "98%%"
+        }
+      },
+      {
+        "99@xc_modern_progress:progress_bar.text": {
+          "$min_value": 0.99,
+          "$max_value": 1,
+          "text": "99%%"
+        }
+      },
+      {
+        "100@xc_modern_progress:progress_bar.text": {
+          "text": "100%%",
+          "bindings": [
+            { "binding_name": "#loading_bar_total_amount" },
+            { "binding_name": "#loading_bar_current_amount" },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#loading_bar_current_amount / #loading_bar_total_amount) = 1)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

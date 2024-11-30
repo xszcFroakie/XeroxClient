@@ -1,0 +1,75 @@
+// 由@XSzC.制作的文件.
+// 未经允许不要使用任何文件. 请阅读LICENSE.txt
+
+// File made by @XSzC.
+// Don't use any file without permission. Read LICENSE.txt
+
+{
+  "namespace": "progress_animation",
+  "dot_draw_to_line@xerox_lib.as": {
+    "easing": "in_cubic",
+    "duration": 0.5,
+    "to": [40, 8],
+    "from": [8, 8],
+    "next": "@progress_animation.line_draw_to_dot"
+  },
+  "line_draw_to_dot@xerox_lib.as": {
+    "easing": "out_cubic",
+    "duration": 0.5,
+    "from": [40, 8],
+    "to": [8, 8],
+    "next": "@progress_animation.dot_draw_to_line"
+  },
+
+  "dot_left_to_right@xerox_lib.ao": {
+    "easing": "in_out_cubic",
+    "duration": 1.0,
+    "to": ["100%-4px", 0],
+    "from": [4, 0],
+    "next": "@progress_animation.dot_right_to_left"
+  },
+
+  "dot_right_to_left@xerox_lib.ao": {
+    "easing": "in_out_cubic",
+    "duration": 1.0,
+    "from": ["100%-4px", 0],
+    "to": [4, 0],
+    "next": "@progress_animation.dot_left_to_right"
+  },
+
+  "dot_expand_size@xerox_lib.as": {
+    "easing": "out_quad",
+    "duration": 1.0,
+    "from": [10, 8],
+    "to": ["90%", 8],
+    "next": "@progress_animation.dot_expand_size_w0"
+  },
+
+  "dot_expand_size_w0@xerox_lib.w": {
+    "duration": 0.0,
+    "next": "@progress_animation.dot_expand_size_w"
+  },
+
+  "dot_expand_size_w@xerox_lib.w": {
+    "duration": 1.0,
+    "next": "@progress_animation.dot_expand_size"
+  },
+
+  "dot_expand_alpha@xerox_lib.aa": {
+    "easing": "out_quad",
+    "duration": 0.8,
+    "from": 1.0,
+    "to": 0.0,
+    "next": "@progress_animation.dot_expand_alpha_w0"
+  },
+
+  "dot_expand_alpha_w0@xerox_lib.w": {
+    "duration": 0.2,
+    "next": "@progress_animation.dot_expand_alpha_w"
+  },
+
+  "dot_expand_alpha_w@xerox_lib.w": {
+    "duration": 1.0,
+    "next": "@progress_animation.dot_expand_alpha"
+  }
+}

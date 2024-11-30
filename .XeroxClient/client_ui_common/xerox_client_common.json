@@ -1,0 +1,151 @@
+// 由@XSzC.制作的文件.
+// 未经允许不要使用任何文件. 请阅读LICENSE.txt
+
+// File made by @XSzC.
+// Don't use any file without permission. Read LICENSE.txt
+
+{
+  "namespace": "xc_common",
+
+  "watermark": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": ["100%c", 10],
+    "$rgb_text_layer": -999,
+    "$rgb_text_shadow": true,
+    "controls": [
+      { "1@startup.rgbt": { "$rgb_text": "X", "$rgb_delay": "0" } },
+      { "2@startup.rgbt": { "$rgb_text": "S", "$rgb_delay": "1" } },
+      { "3@startup.rgbt": { "$rgb_text": "z", "$rgb_delay": "2" } },
+      { "4@startup.rgbt": { "$rgb_text": "C", "$rgb_delay": "3" } }
+    ]
+  },
+
+  "version_check_in": {
+    "anim_type": "offset",
+    "duration": 0.6,
+    "easing": "out_cubic",
+    "from": ["-30%", 45],
+    "to": [7.5, 45]
+  },
+
+  "version_check@xerox_lib.i": {
+    "size": [140, "100%c+10px"],
+    "texture": "textures/XeroxClient/rounded_corner/all8x",
+    "color": "$xeroxclient_ui_theme_menu_background_color",
+    "alpha": 0.3,
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [7.5, 45],
+    "layer": 10,
+    "anims": ["@xc_common.version_check_in"],
+    "controls": [
+      {
+        "stack@xerox_lib.vsp": {
+          "size": [120, "100%c"],
+          "controls": [
+            {
+              "text1@xerox_lib.l": {
+                "color": [1.0, 0.333, 0.333],
+                "size": ["100%", "default"],
+                "layer": 11,
+                "text": "xc.unsupportVersion.warning",
+                "font_type": "$global_font_type",
+                "backup_font_type": "$global_font_type_backup"
+              }
+            },
+            {
+              "text2@xerox_lib.l": {
+                "size": ["100%", "default"],
+                "layer": 11,
+                "text": "xc.unsupportVersion.suggestVersion",
+                "font_type": "$global_font_type",
+                "backup_font_type": "$global_font_type_backup"
+              }
+            },
+            {
+              "text3@xerox_lib.l": {
+                "size": ["100%", "default"],
+                "color": [0.333, 1.0, 0.333],
+                "layer": 11,
+                "text": "$support_mc_version",
+                "font_type": "$global_font_type",
+                "backup_font_type": "$global_font_type_backup"
+              }
+            },
+            {
+              "text4@xerox_lib.l": {
+                "size": ["100%", "default"],
+                "color": [1.0, 1.0, 0.333],
+                "layer": 11,
+                "text": "xc.unsupportVersion.description",
+                "font_type": "$global_font_type",
+                "backup_font_type": "$global_font_type_backup"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      { "binding_name": "#version" }, // current mc version
+      {
+        "binding_type": "view",
+        "source_property_name": "(($support_mc_version - #version) = $support_mc_version)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "item_renderer@xerox_lib.cr": {
+    "renderer": "inventory_item_renderer",
+    "$item_id_aux|default": -1,
+    "property_bag": {
+      "#item_id_aux": "$item_id_aux"
+    }
+  },
+
+  "background@xc_backgrounds.background_base": {
+    "$background_texture_path": "textures/XeroxClient/background/background",
+    "layer": -49
+  },
+
+  "background_blur@xc_backgrounds.background_base": {
+    "layer": -50,
+    "$background_texture_path": "textures/XeroxClient/background_blur/background_blur"
+  },
+
+  "background_for_pregame_only@xc_backgrounds.background_base": {
+    "$background_texture_path": "textures/XeroxClient/background/background",
+    "layer": -49,
+    "ignored": "(not $is_pregame)"
+  },
+
+  "background_blur_for_pregame_only@xc_backgrounds.background_base": {
+    "layer": -50,
+    "$background_texture_path": "textures/XeroxClient/background_blur/background_blur",
+    "ignored": "(not $is_pregame)"
+  } /*,
+
+  "background@xc_backgrounds.animated_background": {
+    "$background_texture_path": "textures/XeroxClient/background/bg_",
+    "layer": -49
+  },
+
+  "background_blur@xc_backgrounds.animated_background": {
+    "layer": -50,
+    "$background_texture_path": "textures/XeroxClient/background_blur/bg_blur_"
+  },
+
+  "background_for_pregame_only@xc_backgrounds.animated_background": {
+    "$background_texture_path": "textures/XeroxClient/background/bg_",
+    "layer": -49,
+    "ignored": "(not $is_pregame)"
+  },
+
+  "background_blur_for_pregame_only@xc_backgrounds.animated_background": {
+    "layer": -50,
+    "$background_texture_path": "textures/XeroxClient/background_blur/bg_blur_",
+    "ignored": "(not $is_pregame)"
+  }*/
+}

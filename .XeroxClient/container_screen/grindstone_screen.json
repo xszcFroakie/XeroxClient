@@ -1,0 +1,224 @@
+// 由@XSzC.制作的文件.
+// 未经允许不要使用任何文件. 请阅读LICENSE.txt
+
+// File made by @XSzC.
+// Don't use any file without permission. Read LICENSE.txt
+
+{
+  "namespace": "xc_modern_grindstone_screen",
+
+  "grindstone_panel@xerox_lib.i": {
+    "texture": "textures/XeroxClient/rounded_corner/all8x",
+    "color": "$xeroxclient_ui_theme_menu_background_color",
+    "alpha": 0.3,
+    "layer": 0,
+    "size": ["100%cm", "100%c"],
+    "clips_children": true,
+    "controls": [
+      {
+        "top_half@xerox_lib.p": {
+          "size": ["100%sm", "46.0227272727%x"],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "controls": [
+            {
+              "0size_panel_1@xerox_lib.p": {
+                "size": [0, 0],
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "ignored": "(not $touch)",
+                "offset": ["-3.9772727273%", "2.4691358025%"],
+                "controls": [
+                  {
+                    "close_button@common_buttons.a_rc_8x_text": {
+                      "$default_size": [12, 12],
+                      "size": "$default_size",
+                      "animation_reset_name": "screen_animation_reset",
+                      "anims": [
+                        "@container:classic_animation.size_enter",
+                        "@container:classic_animation.size_out"
+                      ],
+                      "anchor_from": "top_right",
+                      "anchor_to": "top_right",
+                      "$button_text": "×",
+                      "$button_image_size": ["100%", "100%"],
+                      "$pressed_button_name": "button.menu_exit",
+                      "$xeroxclient_button_alpha_default": 0.0,
+                      "$xeroxclient_button_alpha_hover": 0.9,
+                      "$xeroxclient_button_alpha_pressed": 0.9,
+                      "$xeroxclient_button_color_hover": [1.0, 0.333, 0.333],
+                      "$xeroxclient_button_color_pressed": [1.0, 0.333, 0.333],
+                      "$xeroxclient_button_content_offset_default": [0, -3],
+                      "$xeroxclient_button_content_offset_hover": [0, -3],
+                      "$xeroxclient_button_content_offset_pressed": [0, -3],
+                      "$button_font_type": "HarmonyOS-Regular"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "0size_panel_2@xerox_lib.p": {
+                "size": [0, 0],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": ["4.5454545455%", "6.1728395062%"],
+                "controls": [
+                  {
+                    "container_title@xerox_lib.l": {
+                      "text": "container.repairAndDisenchant",
+                      "size": ["default", "default"],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "text_alignment": "left",
+                      "font_type": "$global_font_type",
+                      "backup_font_type": "$global_font_type_backup",
+                      "layer": 3
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "grindstone_middle_panel@xerox_lib.p": {
+                "size": ["100%cm", "205%x"],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_right",
+                "offset": ["-11.9318181818%", "20.9876543210%"],
+                "controls": [
+                  {
+                    "input@xerox_lib.i": {
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "texture": "textures/XeroxClient/rounded_corner/all8x",
+                      "color": "$xeroxclient_ui_theme_menu_background_color",
+                      "alpha": 0.3,
+                      "layer": 1,
+                      "size": ["111.1111111111%c", "100%x"],
+                      "controls": [
+                        {
+                          "input_grid@container:classic_common.container_item": {
+                            "$item_collection_name": "grindstone_input_items"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "additional@xerox_lib.i": {
+                      "anchor_from": "bottom_middle",
+                      "anchor_to": "bottom_middle",
+                      "texture": "textures/XeroxClient/rounded_corner/all8x",
+                      "color": "$xeroxclient_ui_theme_menu_background_color",
+                      "alpha": 0.3,
+                      "layer": 1,
+                      "size": ["111.1111111111%c", "100%x"],
+                      "controls": [
+                        {
+                          "additional_grid@container:classic_common.container_item": {
+                            "$item_collection_name": "grindstone_additional_items"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "yields@xerox_lib.p": {
+                "size": "$default_size",
+                "$default_size": [22, 15],
+                "animation_reset_name": "screen_animation_reset",
+                "anims": [
+                  "@container:classic_animation.size_enter",
+                  "@container:classic_animation.size_out"
+                ],
+                "offset": ["10.2272727273%", "0.6172839506%"],
+                "controls": [
+                  {
+                    "arrow@xerox_lib.i": {
+                      "texture": "textures/XeroxClient/arrow/l_right",
+                      "layer": 3,
+                      "color": "$xeroxclient_ui_theme_menu_background_color",
+                      "alpha": 0.3
+                    }
+                  },
+                  {
+                    "cross_out@xerox_lib.i": {
+                      "texture": "textures/XeroxClient/icon/crossout",
+                      "color": [1.0, 0.333, 0.333],
+                      "alpha": 0.7,
+                      "layer": 4,
+                      "bindings": [
+                        {
+                          "binding_name": "#cross_out_icon",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "result@xerox_lib.i": {
+                "anchor_to": "left_middle",
+                "texture": "textures/XeroxClient/rounded_corner/all8x",
+                "color": "$xeroxclient_ui_theme_menu_background_color",
+                "alpha": 0.3,
+                "layer": 1,
+                "size": ["111.1111111111%c", "100%x"],
+                "offset":["22.1590909091%", "1.2345679012%"],
+                "controls": [
+                  {
+                    "result_grid@container:classic_common.container_item": {
+                      "$item_collection_name": "grindstone_result_items",
+                      "$button_ref": "grindstone.grindstone_output_slot_button"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bottom_half@xerox_lib.p": {
+          "size": ["107.3170731707%c", "108.9743589744%c"],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "controls": [
+            {
+              "inv_and_hotbar@container:classic_common.inventory_and_hotbar": {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "offset": [0, "1.1764705882%"]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "main_content@xerox_lib.b": {
+    "default_focus_precedence": 0,
+    "focus_enabled": true,
+    "focus_wrap_enabled": false,
+    "focus_magnet_enabled": true,
+    "consume_hover_events": false,
+    "controls": [
+      { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
+      { "grindstone_panel@xc_modern_grindstone_screen.grindstone_panel": {} },
+      {
+        "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}
+      },
+      {
+        "inventory_selected_icon_button@container:classic_common.inventory_selected_icon_button": {}
+      },
+      { "flying_item_renderer@common.flying_item_renderer": { "layer": 8 } },
+      { "gamepad_cursor@common.gamepad_cursor_button": {} }
+    ]
+  }
+}

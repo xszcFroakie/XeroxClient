@@ -1,0 +1,33 @@
+// 由@XSzC.制作的文件. 
+// 未经允许不要使用任何文件. 请阅读LICENSE.txt
+
+// File made by @XSzC.
+// Don't use any file without permission. Read LICENSE.txt
+
+{
+  "format_version": [ 1, 1, 0 ],
+  "glass_pane": {
+    "textures": {
+      "up": "glass",
+      "down": "glass",
+      "north": "glass",
+      "south": "glass",
+      "west": "glass",
+      "east": "glass_pane_top"
+    },
+    "sound": "glass",
+    "blockshape": "double_side_fence"
+  },
+  "stained_glass_pane": {
+    "textures": {
+      "up": "stained_glass",
+      "down": "stained_glass",
+      "north": "stained_glass",
+      "south": "stained_glass",
+      "west": "stained_glass",
+      "east": "stained_glass_pane_top"
+    },
+    "sound": "glass",
+    "blockshape": "double_side_fence"
+  },
+}

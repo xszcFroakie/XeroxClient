@@ -1,0 +1,11 @@
+{
+  "namespace": "pause",
+
+  "pause_screen": {
+    "cache_screen": true,
+    "$screen_animations": [],
+    "variables": [],
+    "$screen_content": "xc_modern_pause.main_content",
+    "$screen_bg_content": "xc_backgrounds.menu_background"
+  }
+}

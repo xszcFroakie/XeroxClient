@@ -1,0 +1,24 @@
+// 由@XSzC.制作的文件. 
+// 未经允许不要使用任何文件. 请阅读LICENSE.txt
+
+// File made by @XSzC.
+// Don't use any file without permission. Read LICENSE.txt
+
+{
+
+  "random.click": {
+    "category": "ui",
+    "sounds": [
+      {
+        "name": "sounds/ui_sounds/disable",
+        "volume": 0.5,
+        "load_on_low_memory": true
+      },
+      {
+        "name": "sounds/ui_sounds/enable",
+        "volume": 0.5,
+        "load_on_low_memory": true
+      }
+    ]
+  }
+}

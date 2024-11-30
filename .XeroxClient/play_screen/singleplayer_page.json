@@ -1,0 +1,242 @@
+// 由@XSzC.制作的文件.
+// 未经允许不要使用任何文件. 请阅读LICENSE.txt
+
+// File made by @XSzC.
+// Don't use any file without permission. Read LICENSE.txt
+
+{
+  "namespace": "xc_modern_play:singleplayer",
+
+  "local_world_content_panel@xerox_lib.hsp": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": ["100%", "100%"],
+    "controls": [
+      {
+        "screenshot@xerox_lib.p": {
+          "clips_children": true,
+          "size": ["100%c + 8px", "100%"],
+          "controls": [
+            {
+              "screenshot_pic@xerox_lib.i": {
+                "layer": 5,
+                "size": ["173.91%y", "100% - 8px"],
+                "force_texture_reload": true,
+                "fill": true,
+                "bindings": [
+                  {
+                    "binding_name": "#local_world_image",
+                    "binding_name_override": "#texture",
+                    "binding_type": "collection",
+                    "binding_collection_name": "local_worlds"
+                  },
+                  {
+                    "binding_name": "#local_world_texture_source",
+                    "binding_name_override": "#texture_file_system",
+                    "binding_type": "collection",
+                    "binding_collection_name": "local_worlds"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "text_panel@xerox_lib.p": {
+          "size": ["fill", "100%"],
+          "controls": [
+            {
+              "top_side@xerox_lib.hsp": {
+                "size": ["100%", 10],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [0, 4],
+                "controls": [
+                  {
+                    "local_world_name@play.local_world_name": {
+                      "color": [],
+                      "size": ["fill", 10],
+                      "layer": 5,
+                      "font_type": "$global_font_type",
+                      "backup_font_type": "$global_font_type_backup"
+                    }
+                  },
+                  {
+                    "lock@play.local_world_lock_panel": {}
+                  },
+                  {
+                    "local_world_date@play.local_world_date": {
+                      "color": [],
+                      "size": ["default", 10],
+                      "layer": 5,
+                      "font_type": "$global_font_type",
+                      "backup_font_type": "$global_font_type_backup"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "bottom_side@xerox_lib.hsp": {
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "size": ["100%", 10],
+                "offset": [0, -4],
+                "controls": [
+                  {
+                    "local_world_game_mode@play.local_world_game_mode": {
+                      "color": [],
+                      "size": ["fill", 10],
+                      "layer": 5,
+                      "font_type": "$global_font_type",
+                      "backup_font_type": "$global_font_type_backup"
+                    }
+                  },
+                  {
+                    "local_world_filesize@play.local_world_filesize": {
+                      "color": [],
+                      "size": ["default", 10],
+                      "layer": 5,
+                      "font_type": "$global_font_type",
+                      "backup_font_type": "$global_font_type_backup"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "padding@xerox_lib.p": {
+          "size": [2, 0]
+        }
+      }
+    ]
+  },
+
+  "local_world_item_button@common_buttons.la_rc_8x_content": {
+    "size": ["fill", 44],
+    "$pressed_button_name": "button.menu_start_local_world",
+    "$button_content": "xc_modern_play:singleplayer.local_world_content_panel",
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "local_worlds"
+      },
+      {
+        "binding_type": "collection",
+        "binding_name": "#world_button_focus_identifier",
+        "binding_name_override": "#focus_identifier",
+        "binding_collection_name": "local_worlds"
+      }
+    ]
+  },
+
+  "edit_icon@xerox_lib.i": {
+    "texture": "textures/XeroxClient/icon/edit",
+    "bilinear": true,
+    "size": [25, 25]
+  },
+
+  "local_world_edit_button@common_buttons.ra_rc_8x_content": {
+    "size": [40, 44],
+    "$pressed_button_name": "button.menu_local_world_item_edit",
+    "$button_content": "xc_modern_play:singleplayer.edit_icon",
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "local_worlds"
+      }
+    ]
+  },
+
+  "local_world_item@xerox_lib.hsp": {
+    "size": ["100%", 44],
+    "controls": [
+      { "item_button@xc_modern_play:singleplayer.local_world_item_button": {} },
+      { "edit_button@xc_modern_play:singleplayer.local_world_edit_button": {} }
+    ]
+  },
+
+  "worlds_scrolling_content@xerox_lib.vsp": {
+    "size": ["100%", "100%c"],
+    "$button_image_size": ["100%", "100% - 4px"],
+    "controls": [
+      {
+        "local_world_item_grid@play.local_world_item_grid": {
+          "size": ["100%", "default"],
+          "grid_item_template": "xc_modern_play:singleplayer.local_world_item"
+        }
+      }
+    ]
+  },
+
+  "singleplayer_page_content@xerox_lib.vsp": {
+    "size": ["100% - 10px", "100% - 10px"],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "world_navigation_tab_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "top_button_panel@xerox_lib.hsp": {
+          "size": ["100%", 30],
+          "controls": [
+            {
+              "create_new_world@common_buttons.a_rc_8x_text": {
+                "$pressed_button_name": "button.menu_local_world_create",
+                "$button_text": "selectWorld.createNew",
+                "size": ["fill", 30]
+              }
+            },
+            {
+              "import_world@common_buttons.a_rc_8x_text": {
+                "variables": [
+                  {
+                    "requires": "($local_world_upload)",
+                    "$pressed_button_name": "button.archived_world_upload"
+                  },
+                  {
+                    "requires": "(not $local_world_upload)",
+                    "$pressed_button_name": "button.menu_import_level"
+                  }
+                ],
+                "enabled": "$win10_edition",
+                "$button_text": "gui.importWorld",
+                "size": ["fill", 30]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "divide@xerox_lib.p": {
+          "size": ["100%", 6],
+          "controls": [
+            {
+              "divide@xerox_lib.i": {
+                "texture": "textures/XeroxClient/diffusion",
+                "alpha": 0.65,
+                "layer": 1,
+                "size": ["100%", 3],
+                "offset": [0, 1]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "worlds_scrolling_panel@xc_modern_scrolling_panel.scrolling_panel": {
+          "size": ["100%", "fill"],
+          "$scrolling_content": "xc_modern_play:singleplayer.worlds_scrolling_content"
+        }
+      }
+    ]
+  }
+}

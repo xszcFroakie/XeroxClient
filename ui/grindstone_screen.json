@@ -1,0 +1,23 @@
+// 由@XSzC.制作的文件.
+// 未经允许不要使用任何文件. 请阅读LICENSE.txt
+
+// File made by @XSzC.
+// Don't use any file without permission. Read LICENSE.txt
+
+{
+  "namespace": "grindstone",
+
+  "grindstone_screen": {
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_content": "xc_modern_grindstone_screen.main_content",
+        "$screen_bg_content": "xc_backgrounds.menu_background"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$screen_content": "grindstone_pocket.grindstone_panel"
+      }
+    ]
+  }
+}

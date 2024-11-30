@@ -1,0 +1,9 @@
+xc.container.hoverText.itemDura=耐久度：
+
+xc.unsupportVersion.warning=不支持的Minecraft版本!
+xc.unsupportVersion.suggestVersion=建議的遊戲版本:
+xc.unsupportVersion.description=使用不支持的遊戲版本可能會導致一些錯誤.
+
+xc.tip.press2x=雙擊
+
+map.position=§§%s/%s/%s

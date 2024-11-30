@@ -1,0 +1,29 @@
+// 由@XSzC.制作的文件. 
+// 未经允许不要使用任何文件. 请阅读LICENSE.txt
+
+// File made by @XSzC.
+// Don't use any file without permission. Read LICENSE.txt
+
+{
+  "format_version": 2,
+  "header": {
+    "description": "Made By XSzC.\n§cOnly published on chinese website.§r\nDont distribute!!",
+    "name": "§l§dXerox§rClient - §5Neo§r",
+    "uuid": "20064BD5-4EE7-46B5-A12D-F2314A6777E8",
+    "version": [1, 1, 0],
+    "min_engine_version": [1, 13, 0]
+  },
+  "modules": [
+    {
+      "description": "",
+      "type": "resources",
+      "uuid": "2BADD5A3-3796-4383-BBC9-96CF1756C1D8",
+      "version": [1, 1, 0]
+    }
+  ],
+  "metadata": {
+    "authors": [ "XSzC. / Greninja." ],
+    "license": "玩家可以修改本包内容个人使用, 但禁止在网络上发布其修改过的资源包.你不可以私自将它整合到其他资源包并发布, 更不可以用来盈利.未经作者同意禁止私自修改进行第二次发布, 转载, 或用于商业用途.",
+    "url": "https://space.bilibili.com/687032519"
+  }
+}

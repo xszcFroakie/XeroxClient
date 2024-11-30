@@ -1,0 +1,280 @@
+{
+  "namespace": "xc_backgrounds",
+
+  "diffusion_background@xerox_lib.i": {
+    "texture": "textures/XeroxClient/diffusion",
+    "alpha": 0.5,
+    "color": "$xeroxclient_ui_theme_menu_background_color",
+    "size": ["100%c", "100%c"],
+    "layer": 0,
+    "controls": [{ "$main_control@$main_control": {} }]
+  },
+
+  "particle_motion@xerox_lib.ao": {
+    "duration": "$falling_speed",
+    "from": [0, 0],
+    "to": [0, "100%"],
+    "next": "@xc_backgrounds.particle_motion"
+  },
+
+  "particle_alpha_1@xerox_lib.aa": {
+    "duration": "($falling_speed / 12)",
+    "from": 0.3,
+    "to": 1.0,
+    "next": "@xc_backgrounds.particle_alpha_2"
+  },
+
+  "particle_alpha_2@xerox_lib.aa": {
+    "duration": "($falling_speed / 12)",
+    "to": 0.3,
+    "from": 1.0,
+    "next": "@xc_backgrounds.particle_alpha_1"
+  },
+
+  "particle_image_base@xerox_lib.i": {
+    "bilinear": true,
+    "size": "$img_size",
+    "$img_size|default": ["100%", "100%"],
+    "fill": true,
+    "texture": "($texture_path + 'big_' + $texture_number)",
+    "$show_thr_pa_img|default": false,
+    "controls": [
+      {
+        "sec_imge@xerox_lib.i": {
+          "bilinear": true,
+          "size": ["70%", "70%"],
+          "fill": true,
+          "texture": "($texture_path + 'small_' + $texture_number)",
+          "offset": "@xc_backgrounds.particle_motion",
+          "$falling_speed": 60,
+          "alpha": "@xc_backgrounds.particle_alpha_1"
+        }
+      },
+      {
+        "thr_img@xerox_lib.p": {
+          "offset": [0, "-100%"],
+          "controls": [
+            {
+              "thr_imge@xerox_lib.i": {
+                "bilinear": true,
+                "size": ["70%", "70%"],
+                "ignored": "(not $show_thr_pa_img)",
+                "fill": true,
+                "texture": "($texture_path + 'small_' + $texture_number)",
+                "offset": "@xc_backgrounds.particle_motion",
+                "$falling_speed": 60,
+                "alpha": "@xc_backgrounds.particle_alpha_1"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "falling_dusts@xerox_lib.p": {
+    "$img_size": ["100%", "100%x"],
+    "$texture_path": "textures/XeroxClient/background/particles/particle_",
+    "controls": [
+      {
+        "p1@xerox_lib.p": {
+          "offset": "@xc_backgrounds.particle_motion",
+          "alpha": "@xc_backgrounds.particle_alpha_1",
+          "$falling_speed": 25,
+          "$texture_number": 1,
+          "layer": -9,
+          "controls": [
+            {
+              "1@xc_backgrounds.particle_image_base": {}
+            },
+            {
+              "2@xc_backgrounds.particle_image_base": {
+                "offset": [0, "-100%"]
+              }
+            },
+            {
+              "3@xc_backgrounds.particle_image_base": {
+                "$show_thr_pa_img": true,
+                "offset": [0, "-200%"]
+              }
+            },
+            {
+              "4@xc_backgrounds.particle_image_base": {
+                "offset": [0, "100%"]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "p2@xerox_lib.p": {
+          "offset": "@xc_backgrounds.particle_motion",
+          "$falling_speed": 10,
+          "$texture_number": 2,
+          "layer": -8,
+          "controls": [
+            {
+              "1@xc_backgrounds.particle_image_base": {}
+            },
+            {
+              "2@xc_backgrounds.particle_image_base": {
+                "offset": [0, "-100%"]
+              }
+            },
+            {
+              "3@xc_backgrounds.particle_image_base": {
+                "$show_thr_pa_img": true,
+                "offset": [0, "-200%"]
+              }
+            },
+            {
+              "4@xc_backgrounds.particle_image_base": {
+                "offset": [0, "100%"]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "menu_background@xerox_lib.cr": {
+    "renderer": "gradient_renderer",
+    "color1": [0.0039215686, 0.0549019608, 0.0549019607, 0.4352941176],
+    "color2": [0.1960784314, 0.7450980392, 0.7450980392, 0.0],
+    //"color2": [0.0, 0.0, 0.0, 0.0],
+    "$show_dusts|default": false,
+    "layer": -15,
+    "controls": [
+      {
+        "falling_dusts@xc_backgrounds.falling_dusts": {
+          "ignored": "(not $show_dusts)",
+          "propagate_alpha": true,
+          "animation_reset_name": "screen_animation_reset",
+          "layer": -10,
+          "anims": [
+            "@common.screen_exit_animation_push_alpha",
+            "@common.screen_exit_animation_pop_alpha",
+            "@common.screen_entrance_animation_push_alpha",
+            "@common.screen_entrance_animation_pop_alpha"
+          ]
+        }
+      }
+    ]
+  },
+  
+  "background_base@xerox_lib.i":{
+    "fill": true,
+    "texture": "$background_texture_path"
+  }/*,
+
+  "animated_image_base@xerox_lib.p": {
+    "size": ["100%", "6.25%"],
+    "clips_children": true,
+    "controls": [
+      {
+        "image@xerox_lib.i": {
+          "fill": true,
+          "texture": "($background_texture_path + $frame_count)",
+          "layer": -10
+        }
+      }
+    ]
+  },
+
+  "anim_base@xerox_lib.ao": {
+    "duration": "$frame_per_duration",
+    "from": "$o",
+    "to": "$o",
+    "next": "('@xc_backgrounds.' + $n)"
+  },
+
+  "0@xc_backgrounds.anim_base": { "$o": [0, "750%"], "$n": 1 },
+  "1@xc_backgrounds.anim_base": { "$o": [0, "650%"], "$n": 2 },
+  "2@xc_backgrounds.anim_base": { "$o": [0, "550%"], "$n": 3 },
+  "3@xc_backgrounds.anim_base": { "$o": [0, "450%"], "$n": 4 },
+  "4@xc_backgrounds.anim_base": { "$o": [0, "350%"], "$n": 5 },
+  "5@xc_backgrounds.anim_base": { "$o": [0, "250%"], "$n": 6 },
+  "6@xc_backgrounds.anim_base": { "$o": [0, "150%"], "$n": 7 },
+  "7@xc_backgrounds.anim_base": { "$o": [0, "50%"], "$n": 8 },
+  "8@xc_backgrounds.anim_base": { "$o": [0, "-50%"], "$n": 9 },
+  "9@xc_backgrounds.anim_base": { "$o": [0, "-150%"], "$n": 10 },
+  "10@xc_backgrounds.anim_base": { "$o": [0, "-250%"], "$n": 11 },
+  "11@xc_backgrounds.anim_base": { "$o": [0, "-350%"], "$n": 12 },
+  "12@xc_backgrounds.anim_base": { "$o": [0, "-450%"], "$n": 13 },
+  "13@xc_backgrounds.anim_base": { "$o": [0, "-550%"], "$n": 14 },
+  "14@xc_backgrounds.anim_base": { "$o": [0, "-650%"], "$n": 15 },
+  "15@xc_backgrounds.anim_base": { "$o": [0, "-750%"], "$n": 0 },
+
+  "background_content@xerox_lib.vsp": {
+    "size": ["100%", "1600%"],
+    "offset": "@xc_backgrounds.0",
+    "$frame_per_duration|default": 0.1,
+    "controls": [
+      { "奶油脏脏@xc_backgrounds.animated_image_base": { "$frame_count": 0 } },
+      { "超级凶鸭@xc_backgrounds.animated_image_base": { "$frame_count": 1 } },
+      {
+        "天使小恶魔@xc_backgrounds.animated_image_base": { "$frame_count": 2 }
+      },
+      {
+        "幼稚园新同学εïз@xc_backgrounds.animated_image_base": {
+          "$frame_count": 3
+        }
+      },
+      {
+        "奶油收藏家@xc_backgrounds.animated_image_base": { "$frame_count": 4 }
+      },
+      {
+        "土豆不吐皮@xc_backgrounds.animated_image_base": { "$frame_count": 5 }
+      },
+      {
+        "是只困屁熊●‿●@xc_backgrounds.animated_image_base": {
+          "$frame_count": 6
+        }
+      },
+      {
+        "酸奶不吃鱼@xc_backgrounds.animated_image_base": { "$frame_count": 7 }
+      },
+      { "困成憨包@xc_backgrounds.animated_image_base": { "$frame_count": 8 } },
+      {
+        "炸毛可乐ᜊ ᜊ@xc_backgrounds.animated_image_base": { "$frame_count": 9 }
+      },
+      {
+        "短腿小柯基@xc_backgrounds.animated_image_base": { "$frame_count": 10 }
+      },
+      {
+        "一只绿色小恐龙☄@xc_backgrounds.animated_image_base": {
+          "$frame_count": 11
+        }
+      },
+      {
+        "我是一朵西蓝花@xc_backgrounds.animated_image_base": {
+          "$frame_count": 12
+        }
+      },
+      {
+        "无趣的养乐多@xc_backgrounds.animated_image_base": {
+          "$frame_count": 13
+        }
+      },
+      {
+        "幼儿园老大@xc_backgrounds.animated_image_base": { "$frame_count": 14 }
+      },
+      {
+        "奥特mua Ⱄⱄ...@xc_backgrounds.animated_image_base": {
+          "$frame_count": 15
+        }
+      }
+    ]
+  },
+
+  "animated_background@xerox_lib.p": {
+    "propagate_alpha": true,
+    "clips_children": true,
+    "controls": [
+      {
+        "某些人别盗了你妈死了恶不恶心啊 盗没盗自己心里没点b数吗@xc_backgrounds.background_content": {}
+      }
+    ]
+  }*/
+}

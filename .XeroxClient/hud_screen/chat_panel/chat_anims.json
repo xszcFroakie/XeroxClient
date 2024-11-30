@@ -1,0 +1,89 @@
+// 由@XSzC.制作的文件.
+// 未经允许不要使用任何文件. 请阅读LICENSE.txt
+
+// File made by @XSzC.
+// Don't use any file without permission. Read LICENSE.txt
+
+{
+  "namespace": "xc_modern_chat",
+
+  "chat_offset_start_anim@xerox_lib.ao": {
+    "ignored": true,
+    "easing": "out_expo",
+    "duration": 0.4,
+    "from": ["-70%", 0],
+    "to": [0, 0],
+    "next": "@xc_modern_chat.chat_offset_wait_anim"
+  },
+  "chat_offset_wait_anim@xerox_lib.w": {
+    "duration": "($chat_item_lifetime - 0.6)",
+    "next": "@xc_modern_chat.chat_offset_end_anim"
+  },
+  "chat_offset_end_anim@xerox_lib.ao": {
+    "easing": "out_cubic",
+    "duration": 0.3,
+    "to": ["-50%", 0],
+    "from": [0, 0]
+  },
+
+  "chat_start_anim@xerox_lib.as": {
+    "easing": "out_cubic",
+    "duration": 0.5,
+    "from": ["100%", "0%c"],
+    "to": ["100%", "100%c"]
+  },
+  "chat_wait_anim_1@xerox_lib.as": {
+    "easing": "out_cubic",
+    "duration": 0.4,
+    "from": ["100%", "100%c"],
+    "to": ["100%", "100%c"],
+    "next": "@xc_modern_chat.chat_wait_anim_2"
+  },
+  "chat_wait_anim_2@xerox_lib.w": {
+    "duration": "($chat_item_lifetime - 0.6)",
+    "next": "@xc_modern_chat.chat_end_anim"
+  },
+  "chat_end_anim@xerox_lib.as": {
+    "easing": "out_quart",
+    "duration": 0.3,
+    "destroy_at_end": "xc_modern_chat.chat_grid_item",
+    "to": ["100%", "0%c"],
+    "from": ["100%", "100%c"]
+  },
+
+  "chat_bg_start_anim@xerox_lib.aa": {
+    "duration": 0.4,
+    "from": 0,
+    "to": 1.0,
+    "easing": "out_cubic",
+    "next": "@xc_modern_chat.chat_bg_wait_anim"
+  },
+  "chat_bg_wait_anim@xerox_lib.w": {
+    "duration": "($chat_item_lifetime - 0.6)",
+    "next": "@xc_modern_chat.chat_bg_end_anim"
+  },
+  "chat_bg_end_anim@xerox_lib.aa": {
+    "easing": "out_cubic",
+    "duration": 0.2,
+    "from": 1.0,
+    "to": 0
+  },
+
+  "chat_text_start_anim@xerox_lib.aa": {
+    "easing": "out_cubic",
+    "from": -0.025,
+    "to": 1.0,
+    "duration": 0.4,
+    "next": "@xc_modern_chat.chat_text_wait_anim"
+  },
+  "chat_text_wait_anim@xerox_lib.w": {
+    "duration": "($chat_item_lifetime - 0.6)",
+    "next": "@xc_modern_chat.chat_text_end_anim"
+  },
+  "chat_text_end_anim@xerox_lib.aa": {
+    "easing": "out_cubic",
+    "duration": 0.2,
+    "from": 1.0,
+    "to": -0.5
+  }
+}

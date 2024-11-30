@@ -1,0 +1,82 @@
+// 由@XSzC.制作的文件.
+// 未经允许不要使用任何文件. 请阅读LICENSE.txt
+
+// File made by @XSzC.
+// Don't use any file without permission. Read LICENSE.txt
+
+{
+  "namespace": "xc_modern_progress",
+
+  "main_content@xerox_lib.p": {
+    "size": ["100%", "100%"],
+    "$dynamic_bar|default": false,
+    "controls": [
+      { "popup_dialog_factory@progress.popup_dialog_factory": {} },
+      {
+        "client_name_text": {
+          "type": "label",
+          "size": ["default", "default"],
+          "anchor_from": "center",
+          "anchor_to": "bottom_middle",
+          "font_type": "HarmonyOS-Bold",
+          "backup_font_type": "$global_font_type_backup",
+          "text": "($ClientName - '§b' - '§7')",
+          "offset": [0, "-16%"],
+          "layer": 10,
+          "font_scale_factor": 2.65,
+          "alpha": 0.9
+        }
+      },
+      {
+        "sta_bar@xc_modern_progress:progress_bar.static_bar": {
+          "anchor_from": "center",
+          "anchor_to": "bottom_middle",
+          "offset": [0, "5%"],
+          "ignored": "$dynamic_bar",
+          "layer": 11
+        }
+      },
+      {
+        "dyn_bar@xc_modern_progress:progress_bar.dynamic_bar": {
+          "anchor_from": "center",
+          "anchor_to": "bottom_middle",
+          "offset": [0, "5%"],
+          "ignored": "(not $dynamic_bar)",
+          "layer": 11
+        }
+      },
+      {
+        "title_text@progress.progress_title_text": {
+          "anchor_from": "center",
+          "anchor_to": "top_middle",
+          "offset": [0, "15%"],
+          "font_scale_factor": 1.5
+        }
+      },
+      {
+        "bar_text@progress.progress_bar_text": {
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [0, "16%+30px"],
+          "font_scale_factor": 1.35
+        }
+      },
+      {
+        "button@common_buttons.a_rc_8x_text": {
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [0, "-10%"],
+          "$button_text": "gui.cancel",
+          "$pressed_button_name": "button.menu_exit",
+          "size": [120, 20],
+          "bindings": [
+            {
+              "binding_name": "#cancel_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

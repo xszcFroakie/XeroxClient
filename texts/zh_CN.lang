@@ -1,0 +1,9 @@
+xc.container.hoverText.itemDura=耐久度：
+
+xc.unsupportVersion.warning=不支持的《我的世界》版本!
+xc.unsupportVersion.suggestVersion=建议的游戏版本:
+xc.unsupportVersion.description=使用不支持的游戏版本可能会导致一些错误.
+
+xc.tip.press2x=双击
+
+map.position=§§%s/%s/%s

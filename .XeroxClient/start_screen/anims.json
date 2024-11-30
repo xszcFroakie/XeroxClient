@@ -1,0 +1,381 @@
+// 由@XSzC.制作的文件.
+// 未经允许不要使用任何文件. 请阅读LICENSE.txt
+
+// File made by @XSzC.
+// Don't use any file without permission. Read LICENSE.txt
+
+{
+  "namespace": "start_animation",
+
+  //--------------------------
+
+  "logo_out_animation@start_animation.logo_enter_animation": {
+    "duration": 0.6,
+    "from": 1.0,
+    "to": 0.0,
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+
+  "logo_out_animation_pop@start_animation.logo_enter_animation": {
+    "duration": 0.6,
+    "from": 1.0,
+    "to": 0.0,
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+
+  "logo_enter_animation_wait@xerox_lib.aa": {
+    "duration": 1.0,
+    "from": 0.0,
+    "to": 0.0,
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end",
+    "next": "@start_animation.logo_enter_animation"
+  },
+
+  "logo_enter_animation@xerox_lib.aa": {
+    "easing": "out_cubic",
+    "duration": 1.33,
+    "from": 0.0,
+    "to": 1.0
+  },
+
+  "logo_enter_animation_pop@start_animation.logo_enter_animation": {
+    "duration": 0.6,
+    "from": 0.0,
+    "to": 1.0,
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
+  },
+
+  //--------------------------
+
+  "bg_enter@xerox_lib.as": {
+    "easing": "out_cubic",
+    "duration": 0.77,
+    "from": ["250%", "250%"],
+    "to": ["100%", "100%"],
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+
+  "bg_enter_pop@xerox_lib.as": {
+    "duration": 0.0,
+    "from": ["100%", "100%"],
+    "to": ["100%", "100%"],
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
+  },
+
+  "bg_blur_hide@xerox_lib.aa": {
+    "easing": "in_expo",
+    "duration": 0.8,
+    "from": 1.0,
+    "to": 0.0,
+    "destroy_at_end": "bg_blur",
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+
+  "bg_blur_hide_pop@start_animation.bg_blur_hide": {
+    "duration": 1.0,
+    "from": 0.0,
+    "to": 0.0,
+    "destroy_at_end": "bg_blur",
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
+  },
+
+  "bg_blur_hide2@start_animation.bg_blur_hide": {
+    "duration": 0.0,
+    "from": 0.0,
+    "to": 0.0,
+    "destroy_at_end": "bg_blur",
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+
+  "bg_blur_hide_pop2@start_animation.bg_blur_hide": {
+    "duration": 0.0,
+    "from": 0.0,
+    "to": 0.0,
+    "destroy_at_end": "bg_blur",
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+
+  //--------------------------
+
+  "main_content_out_animation@xerox_lib.as": {
+    "easing": "out_cubic",
+    "duration": 0.9,
+    "to": ["125%", "100%"],
+    "from": ["100%", "100%"],
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+
+  "main_content_out_animation_pop@xerox_lib.as": {
+    "easing": "out_cubic",
+    "duration": 0.9,
+    "to": ["125%", "100%"],
+    "from": ["100%", "100%"],
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+
+  "main_content_enter_animation@xerox_lib.as": {
+    "easing": "out_cubic",
+    "duration": 0.7,
+    "from": ["120%", "100%"],
+    "to": ["100%", "100%"],
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+
+  "main_content_enter_animation_pop@xerox_lib.as": {
+    "easing": "out_cubic",
+    "duration": 0.7,
+    "from": ["120%", "100%"],
+    "to": ["100%", "100%"],
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
+  },
+
+  //--------------------------
+
+  "main_panel_out_animation2@start_animation.main_panel_enter_animation2": {
+    "duration": 0.0,
+    "to": ["100%cm", "100%c"],
+    "from": ["100%cm", "100%c"],
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+
+  "main_panel_out_animation2_pop@start_animation.main_panel_enter_animation2": {
+    "duration": 0.0,
+    "to": ["100%cm", "100%c"],
+    "from": ["100%cm", "100%c"],
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+
+  "main_panel_enter_animation2_wait@xerox_lib.as": {
+    "duration": 2.0,
+    "to": ["100%cm", 90],
+    "from": ["100%cm", 90],
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end",
+    "next": "@start_animation.main_panel_enter_animation2"
+  },
+
+  "main_panel_enter_animation2@xerox_lib.as": {
+    "easing": "out_quart",
+    "duration": 1.5,
+    "to": ["100%cm", "100%c"],
+    "from": ["100%cm", 90]
+  },
+
+  "main_panel_enter_animation2_pop@start_animation.main_panel_enter_animation2": {
+    "duration": 0.0,
+    "to": ["100%cm", "100%c"],
+    "from": ["100%cm", "100%c"],
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
+  },
+
+  "main_panel_out_animation@xerox_lib.ao": {
+    "easing": "out_cubic",
+    "duration": 0.7,
+    "from": [0, -10],
+    "to": [0, 20],
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+
+  "main_panel_out_animation_pop@xerox_lib.ao": {
+    "easing": "out_cubic",
+    "duration": 0.7,
+    "from": [0, -10],
+    "to": [0, 20],
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+
+  "main_panel_enter_animation@xerox_lib.ao": {
+    "duration": 0.0,
+    "to": [0, -10],
+    "from": [0, -10],
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+
+  "main_panel_enter_animation_pop@xerox_lib.ao": {
+    "easing": "out_cubic",
+    "duration": 0.6,
+    "to": [0, -10],
+    "from": [0, 20],
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
+  },
+
+  //--------------------------
+
+  "main_content_panel_out_animation@xerox_lib.aa": {
+    "easing": "out_cubic",
+    "duration": 0.6,
+    "from": 1.0,
+    "to": 0.0,
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+
+  "main_content_panel_out_animation_pop@xerox_lib.aa": {
+    "easing": "out_cubic",
+    "duration": 0.6,
+    "from": 1.0,
+    "to": 0.0,
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+
+  "main_content_panel_enter_animation_wait@xerox_lib.aa": {
+    "duration": 2.7,
+    "to": 0.0,
+    "from": 0.0,
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end",
+    "next": "@start_animation.main_content_panel_enter_animation"
+  },
+
+  "main_content_panel_enter_animation@xerox_lib.aa": {
+    "easing": "out_quint",
+    "duration": 2.25,
+    "from": 0.0,
+    "to": 1.0
+  },
+
+  "main_content_panel_enter_animation_pop@xerox_lib.aa": {
+    "easing": "out_cubic",
+    "duration": 0.6,
+    "from": 0.0,
+    "to": 1.0,
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
+  },
+
+  //--------------------------
+
+  "bottom_text_out_animation@xerox_lib.ao": {
+    "easing": "out_cubic",
+    "duration": 0.6,
+    "from": [0, 0],
+    "to": [0, 24],
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+
+  "bottom_text_out_animation_pop@xerox_lib.ao": {
+    "easing": "out_cubic",
+    "duration": 0.6,
+    "from": [0, 0],
+    "to": [0, 24],
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+
+  "bottom_text_enter_animation@xerox_lib.ao": {
+    "easing": "out_cubic",
+    "duration": 0.6,
+    "to": [0, 0],
+    "from": [0, 24],
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+
+  "bottom_text_enter_animation_pop@xerox_lib.ao": {
+    "easing": "out_cubic",
+    "duration": 0.6,
+    "to": [0, 0],
+    "from": [0, 23],
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
+  },
+
+  //--------------------------
+
+  "bottom_button_out_animation@xerox_lib.ao": {
+    "easing": "in_cubic",
+    "duration": 0.4,
+    "from": [0, -20],
+    "to": [0, 50],
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+
+  "bottom_button_out_animation_pop@xerox_lib.ao": {
+    "easing": "in_cubic",
+    "duration": 0.4,
+    "from": [0, -20],
+    "to": [0, 50],
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+
+  "bottom_button_enter_animation@xerox_lib.ao": {
+    "easing": "in_cubic",
+    "duration": 0.4,
+    "to": [0, -20],
+    "from": [0, 50],
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+
+  "bottom_button_enter_animation_pop@xerox_lib.ao": {
+    "easing": "in_cubic",
+    "duration": 0.4,
+    "to": [0, -20],
+    "from": [0, 50],
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
+  },
+
+  //--------------------------
+
+  "top_content_out_animation@xerox_lib.ao": {
+    "easing": "out_cubic",
+    "duration": 0.3,
+    "from": [0, 0],
+    "to": [0, -35],
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+
+  "top_content_out_animation_pop@xerox_lib.ao": {
+    "easing": "out_cubic",
+    "duration": 0.3,
+    "from": [0, 0],
+    "to": [0, -35],
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+
+  "top_content_enter_animation@xerox_lib.ao": {
+    "easing": "out_cubic",
+    "duration": 0.6,
+    "to": [0, 0],
+    "from": [0, -35],
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+
+  "top_content_enter_animation_pop@xerox_lib.ao": {
+    "easing": "out_cubic",
+    "duration": 0.6,
+    "to": [0, 0],
+    "from": [0, -35],
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
+  }
+}

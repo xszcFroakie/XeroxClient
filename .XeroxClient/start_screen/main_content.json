@@ -1,0 +1,544 @@
+// 由@XSzC.制作的文件.
+// 未经允许不要使用任何文件. 请阅读LICENSE.txt
+
+// File made by @XSzC.
+// Don't use any file without permission. Read LICENSE.txt
+
+{
+  "namespace": "xc_modern_start",
+
+  "clo_icon@xerox_lib.i": {
+    "bilinear": true,
+    "texture": "textures/XeroxClient/icon/crossout"
+  },
+
+  "ach_icon@xerox_lib.i": {
+    "bilinear": true,
+    "texture": "textures/XeroxClient/icon/achievement"
+  },
+
+  "pro_icon@xerox_lib.i": {
+    "bilinear": true,
+    "texture": "textures/XeroxClient/icon/profile"
+  },
+
+  "set_icon@xerox_lib.i": {
+    "bilinear": true,
+    "texture": "textures/XeroxClient/icon/settings"
+  },
+
+  "sto_icon@xerox_lib.i": {
+    "bilinear": true,
+    "texture": "textures/XeroxClient/icon/store"
+  },
+
+  "not_icon@xerox_lib.i": {
+    "bilinear": true,
+    "texture": "textures/XeroxClient/icon/notification"
+  },
+
+  "gat_icon@xerox_lib.i": {
+    "bilinear": true,
+    "texture": "textures/XeroxClient/icon/gather"
+  },
+
+  "fee_icon@xerox_lib.i": {
+    "bilinear": true,
+    "texture": "textures/XeroxClient/icon/feedback"
+  },
+
+  "quit_game@common_buttons.a_rc_8x_content": {
+    "size": [20, 20],
+    "$pressed_button_name": "button.menu_exit",
+    "$button_image_size": ["100%", "100%"],
+    "$button_content": "xc_modern_start.clo_icon"
+  },
+
+  "to_singleplayer_screen@common_buttons.ta_rc_8x_text": {
+    "size": [120, 24],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "$pressed_button_name": "$play_button_target",
+    "$button_text": "menu.singleplayer"
+  },
+
+  "to_profile_screen@common_buttons.a_rc_8x_content": {
+    "size": [20, 20],
+    "$pressed_button_name": "button.to_profile_screen",
+    "$button_content": "xc_modern_start.pro_icon"
+  },
+
+  "to_multiplayer_screen@common_buttons.ba_rc_8x_text": {
+    "size": [120, 24],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "$pressed_button_name": "button.menu_servers",
+    "$button_text": "menu.multiplayer"
+  },
+
+  "to_achievements_screen@common_buttons.a_rc_8x_content": {
+    "size": [20, 20],
+    "$pressed_button_name": "button.menu_achievements",
+    "$button_content": "xc_modern_start.ach_icon"
+  },
+
+  "to_store_screen@common_buttons.a_rc_8x_content": {
+    "size": [30, 30],
+    "$pressed_button_name": "button.menu_store",
+    "$button_content": "xc_modern_start.sto_icon",
+    "anchor_from": "bottom_right",
+    "anchor_to": "bottom_right",
+    "offset": [-7.5, -7.5],
+    "$button_content_size": [18, 18]
+  },
+
+  "to_settings_screen@common_buttons.a_rc_8x_content": {
+    "size": [30, 30],
+    "$pressed_button_name": "button.menu_settings",
+    "$button_content": "xc_modern_start.set_icon",
+    "anchor_from": "bottom_right",
+    "anchor_to": "bottom_right",
+    "offset": [-47.5, -7.5],
+    "$button_content_size": [18, 18]
+  },
+
+  "realms_pending_invite@xerox_lib.p": {
+    "size": [20, 20],
+    "bindings": [
+      {
+        "binding_name": "#realms_notification_visible",
+        "binding_name_override": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "button@common_buttons.a_rc_8x_content": {
+          "size": [20, 20],
+          "$pressed_button_name": "button.menu_invite_notification",
+          "$button_content": "xc_modern_start.not_icon"
+        }
+      },
+      {
+        "count@xerox_lib.p": {
+          "offset": [-2.5, 2],
+          "anchor_from": "top_right",
+          "anchor_to": "center",
+          "bindings": [
+            { "binding_name": "#realms_notification_count" },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not (#realms_notification_count = 0))",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "text@xerox_lib.l": {
+                "layer": 9,
+                "font_scale_factor": 0.8,
+                "text": "#realms_notification_count",
+                "font_type": "$global_font_type",
+                "backup_font_type": "$global_font_type_backup",
+                "bindings": [{ "binding_name": "#realms_notification_count" }],
+                "controls": [
+                  {
+                    "background@start.notification_button_text_background": {
+                      "layer": -1,
+                      "size": ["100%+4px", "100%"],
+                      "offset": [-0.5, 0]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "notification@xerox_lib.p": {
+    "size": [20, 20],
+    "bindings": [
+      {
+        "binding_name": "#notificationcenter_enabled",
+        "binding_name_override": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "button@common_buttons.a_rc_8x_content": {
+          "size": [20, 20],
+          "$pressed_button_name": "button.menu_notificationcenter",
+          "$button_content": "xc_modern_start.not_icon"
+        }
+      },
+      {
+        "notificationcenter_button_unread_panel@xerox_lib.p": {
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "size": [8, 4],
+          "offset": [2, 3],
+          "controls": [
+            {
+              "background@start.unread_notification_icon": {
+                "layer": 8,
+                "offset": [6, -5],
+                "size": ["100%sm+4px", "100%sm"]
+              }
+            },
+            {
+              "text@xerox_lib.l": {
+                "layer": 9,
+                "font_scale_factor": 0.8,
+                "text": "#notificationcenter_unread_count",
+                "font_type": "$global_font_type",
+                "backup_font_type": "$global_font_type_backup",
+                "bindings": [
+                  { "binding_name": "#notificationcenter_unread_count" }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "gathering_button@xerox_lib.p": {
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [30, 30],
+    "offset": [7.5, 7.5],
+    "bindings": [
+      {
+        "binding_name": "#gathering_enabled",
+        "binding_name_override": "#enabled"
+      },
+      {
+        "binding_name": "(not #sign_in_visible)",
+        "binding_name_override": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "badge_panel@xerox_lib.p": {
+          "size": [120, 20],
+          "anchor_from": "right_middle",
+          "anchor_to": "left_middle",
+          "bindings": [
+            {
+              "binding_name": "#gathering_enabled",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "badge@xerox_lib.i": {
+                "size": ["100%", 20],
+                "layer": 4,
+                "texture": "textures/XeroxClient/rounded_corner/all8x",
+                "alpha": 0.4,
+                "color": "$xeroxclient_ui_theme_menu_background_color"
+              }
+            },
+            {
+              "count@xerox_lib.l": {
+                "text": "#text",
+                "offset": [-2, 0],
+                "size": [100, 10],
+                "text_alignment": "center",
+                "font_type": "$global_font_type",
+                "backup_font_type": "$global_font_type_backup",
+                "layer": 5,
+                "bindings": [
+                  {
+                    "binding_name": "#gathering_countdown_text",
+                    "binding_name_override": "#text"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "gathering@common_buttons.a_rc_8x_content": {
+          "$pressed_button_name": "button.gathering",
+          "$button_content": "xc_modern_start.gat_icon",
+          "size": [30, 30],
+          "$button_content_size": [18, 18]
+        }
+      }
+    ]
+  },
+
+  "feedback@xerox_lib.p": {
+    "size": [20, 20],
+    "$button_content": "xc_modern_start.fee_icon",
+    "bindings": [
+      {
+        "binding_name": "#feedback_visible",
+        "binding_name_override": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "rel_fb@common_buttons.a_rc_8x_content": {
+          "size": [20, 20],
+          "$pressed_button_name": "button.feedback_button_pressed",
+          "ignored": "($pre_release or $education_edition)"
+        }
+      },
+      {
+        "edu_fb@common_buttons.a_rc_8x_content": {
+          "size": [20, 20],
+          "$pressed_button_name": "button.edu_feedback",
+          "ignored": "$edu_feedback_ignored"
+        }
+      },
+      {
+        "prerel_fb@common_buttons.a_rc_8x_content": {
+          "size": [20, 20],
+          "$pressed_button_name": "button.feedback_button_pressed",
+          "ignored": "(not $pre_release or $education_edition)",
+          "property_bag": {
+            "#hyperlink": "https://aka.ms/minecraftfbbeta"
+          }
+        }
+      }
+    ]
+  },
+
+  "xbl_signin_button@common_buttons.a_rc_8x_text": {
+    "size": [90, 20],
+    "$button_image_size": ["100%", "100%"],
+    "$pressed_button_name": "button.signin",
+    "$button_text": "xbox.signin",
+    "bindings": [
+      {
+        "binding_name": "#sign_in_visible",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "main_buttons_panel@xerox_lib.vsp": {
+    "size": ["100%cm", "100%c"],
+    "layer": 1,
+    "offset": [0, -10],
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@start_animation.main_panel_out_animation",
+      "@start_animation.main_panel_out_animation_pop",
+      "@start_animation.main_panel_enter_animation",
+      "@start_animation.main_panel_enter_animation_pop",
+      "@start_animation.main_panel_out_animation2",
+      "@start_animation.main_panel_out_animation2_pop",
+      "@start_animation.main_panel_enter_animation2_wait",
+      "@start_animation.main_panel_enter_animation2_pop"
+    ],
+    "controls": [
+      {
+        "logo@xerox_lib.i": {
+          "size": [130, 90],
+          "layer": 5,
+          "bilinear": true,
+          "texture": "textures/XeroxClient/client_icon/client_icon",
+          "animation_reset_name": "screen_animation_reset",
+          "anims": [
+            "@start_animation.logo_out_animation",
+            "@start_animation.logo_out_animation_pop",
+            "@start_animation.logo_enter_animation_wait",
+            "@start_animation.logo_enter_animation_pop"
+          ]
+        }
+      },
+      {
+        "padding1@xerox_lib.p": {
+          "size": [0, 7]
+        }
+      },
+      {
+        "main_panel@xerox_lib.p": {
+          "size": ["100%cm", "100%cm"],
+          "layer": 1,
+          "propagate_alpha": true,
+          "animation_reset_name": "screen_animation_reset",
+          "anims": [
+            "@start_animation.main_content_panel_out_animation",
+            "@start_animation.main_content_panel_out_animation_pop",
+            "@start_animation.main_content_panel_enter_animation_wait",
+            "@start_animation.main_content_panel_enter_animation_pop"
+          ],
+          "controls": [
+            {
+              "background@xerox_lib.i": {
+                "size": [130, "100%sm+22px"],
+                "texture": "textures/XeroxClient/rounded_corner/all16x",
+                "color": "$xeroxclient_ui_theme_menu_background_color",
+                "layer": -1,
+                "alpha": 0.4,
+                "controls": [
+                  { "1@xc_modern_start:device_detail.version": {} },
+                  {
+                    "small_buttons@xerox_lib.i": {
+                      "size": ["100%c+4px", "100%c+4px"],
+                      "texture": "textures/XeroxClient/rounded_corner/all8x",
+                      "color": "$xeroxclient_ui_theme_menu_background_color",
+                      "alpha": 0.4,
+                      "layer": -1,
+                      "anchor_from": "bottom_middle",
+                      "anchor_to": "top_middle",
+                      "offset": [0, 5],
+                      "controls": [
+                        {
+                          "stack@xerox_lib.hsp": {
+                            "size": ["100%c", 20],
+                            "controls": [
+                              { "0@xc_modern_start.feedback": {} },
+                              { "1@xc_modern_start.to_profile_screen": {} },
+                              {
+                                "2@xc_modern_start.to_achievements_screen": {}
+                              },
+                              {
+                                "3@xc_modern_start.realms_pending_invite": {}
+                              },
+                              { "4@xc_modern_start.notification": {} }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "main_panel@xerox_lib.vsp": {
+                "size": [120, 48],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "offset": [0, 5],
+                "layer": 5,
+                "$button_image_size": ["100%", "100%"],
+                "controls": [
+                  { "singleplayer@xc_modern_start.to_singleplayer_screen": {} },
+                  { "multiplayer@xc_modern_start.to_multiplayer_screen": {} }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "main_menu@xerox_lib.p": {
+    "controls": [
+      { "main_buttons_panel@xc_modern_start.main_buttons_panel": {} },
+      { "main_content@xc_modern_start.main_content": {} }
+    ]
+  },
+
+  "background@xerox_lib.p": {
+    "controls": [
+      {
+        "bg@xc_common.background": {
+          "layer": -10,
+          "animation_reset_name": "screen_animation_reset",
+          "anims": [
+            "@start_animation.bg_enter",
+            "@start_animation.bg_enter_pop"
+          ]
+        }
+      },
+      {
+        "bg_blur@xc_common.background_blur": {
+          "layer": 200,
+          "animation_reset_name": "screen_animation_reset",
+          "alpha": 0.0,
+          "anims": [
+            "@start_animation.bg_enter",
+            "@start_animation.bg_enter_pop",
+            "@start_animation.bg_blur_hide",
+            "@start_animation.bg_blur_hide_pop",
+            "@start_animation.bg_blur_hide2",
+            "@start_animation.bg_blur_hide_pop2"
+          ]
+        }
+      }
+    ]
+  },
+
+  "offline_account@xerox_lib.i": {
+    "size": ["100%c+12px", 30],
+    "texture": "textures/XeroxClient/rounded_corner/all8x",
+    "alpha": 0.4,
+    "layer": 10,
+    "color": "$xeroxclient_ui_theme_menu_background_color",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [7.5, 7.5],
+    "bindings": [
+      {
+        "binding_name": "#sign_in_visible",
+        "binding_name_override": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "offline_acc_text@xerox_lib.l": {
+          "size": ["default", 10],
+          "font_type": "$global_font_type",
+          "backup_font_type": "$global_font_type_backup",
+          "text": "Offline Account",
+          "layer": 11
+        }
+      }
+    ]
+  },
+  
+  "main_content@xerox_lib.p": {
+    "propagate_alpha": true,
+    "size": ["100%", "100%"],
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      //"@start_animation.main_content_enter_animation",
+      "@start_animation.main_content_enter_animation_pop",
+      "@start_animation.main_content_out_animation",
+      "@start_animation.main_content_out_animation_pop",
+      "@start_animation.main_content_panel_out_animation",
+      "@start_animation.main_content_panel_out_animation_pop",
+      "@start_animation.main_content_panel_enter_animation_wait",
+      "@start_animation.main_content_panel_enter_animation_pop"
+    ],
+    "controls": [
+      {
+        "top_right_button_panel@xerox_lib.hsp": {
+          "size": ["100%c", 20],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [-7.5, 7.5],
+          "controls": [
+            { "1@xc_modern_start:top.player_info": {} },
+            { "2@xc_modern_start.xbl_signin_button": {} },
+            {
+              "padding@xerox_lib.p": {
+                "size": [2, 0]
+              }
+            },
+            { "3@xc_modern_start.quit_game": {} }
+          ]
+        }
+      },
+      {
+        "client_detail_content@xc_modern_start:device_detail.client_detail_content": {}
+      },
+      { "store@xc_modern_start.to_store_screen": {} },
+      { "settings@xc_modern_start.to_settings_screen": {} },
+      { "gather@xc_modern_start.gathering_button": {} },
+      { "offline_acc@xc_modern_start.offline_account": {} }
+    ]
+  }
+}

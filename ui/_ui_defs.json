@@ -1,0 +1,73 @@
+// 由@XSzC.制作的文件.
+// 未经允许不要使用任何文件. 请阅读LICENSE.txt
+
+// File made by @XSzC.
+// Don't use any file without permission. Read LICENSE.txt
+
+{
+  "ui_defs": [
+    //XeroxClient
+    ".XeroxClient/client_ui_common/xerox_backgrounds.json",
+    ".XeroxClient/client_ui_common/xerox_buttons.json",
+    ".XeroxClient/client_ui_common/xerox_client_common.json",
+    ".XeroxClient/client_ui_common/xerox_edit_box.json",
+    ".XeroxClient/client_ui_common/xerox_scrolling_panel.json",
+    ".XeroxClient/client_ui_common/xerox_tabs.json",
+    ".XeroxClient/client_ui_common/xerox_toggles.json",
+
+    ".XeroxClient/debug_feature.json",
+
+    ".XeroxClient/container_screen/anvil_screen.json",
+    ".XeroxClient/container_screen/beacon_screen.json",
+    ".XeroxClient/container_screen/brewing_stand_screen.json",
+    ".XeroxClient/container_screen/cartography_screen.json",
+    ".XeroxClient/container_screen/chest_screen.json",
+    ".XeroxClient/container_screen/classic/anims.json",
+    ".XeroxClient/container_screen/classic/common.json",
+    ".XeroxClient/container_screen/crafting_screen.json",
+    ".XeroxClient/container_screen/enchanting_screen.json",
+    ".XeroxClient/container_screen/furnace_screen.json",
+    ".XeroxClient/container_screen/grindstone_screen.json",
+    ".XeroxClient/container_screen/horse_screen.json",
+    ".XeroxClient/container_screen/inventory_screen.json",
+    ".XeroxClient/container_screen/loom_screen.json",
+    ".XeroxClient/container_screen/redstone_screen.json",
+    ".XeroxClient/container_screen/smithing_table_screen.json",
+    ".XeroxClient/container_screen/stonecutter_screen.json",
+    ".XeroxClient/container_screen/trade_screen.json",
+
+    ".XeroxClient/hud_screen/chat_panel/chat_anims.json",
+    ".XeroxClient/hud_screen/chat_panel/main_content.json",
+    ".XeroxClient/hud_screen/coordinate.json",
+    ".XeroxClient/hud_screen/hotbar/button_mappings.json",
+    ".XeroxClient/hud_screen/hotbar/vanilla.json",
+    ".XeroxClient/hud_screen/hotbar/zeroday.json",
+    ".XeroxClient/hud_screen/item_counter/handhold_base.json",
+    ".XeroxClient/hud_screen/item_counter/item_detected.json",
+    ".XeroxClient/hud_screen/scoreboard.json",
+    ".XeroxClient/hud_screen/tab_list.json",
+    ".XeroxClient/hud_screen/text_panel.json",
+
+    ".XeroxClient/pause_screen/anims.json",
+    ".XeroxClient/pause_screen/main_content.json",
+    ".XeroxClient/pause_screen/player_list.json",
+
+    ".XeroxClient/play_screen/anims.json",
+    ".XeroxClient/play_screen/friends_page.json",
+    ".XeroxClient/play_screen/main_content.json",
+    ".XeroxClient/play_screen/multiplayer_page.json",
+    ".XeroxClient/play_screen/popup_dialog.json",
+    ".XeroxClient/play_screen/singleplayer_page.json",
+
+    ".XeroxClient/progress_screen/anims.json",
+    ".XeroxClient/progress_screen/main_content.json",
+    ".XeroxClient/progress_screen/progress_bar.json",
+
+    ".XeroxClient/start_screen/anims.json",
+    ".XeroxClient/start_screen/device_detail.json",
+    ".XeroxClient/start_screen/main_content.json",
+    ".XeroxClient/start_screen/top.json",
+
+    ".lib"
+  ]
+}

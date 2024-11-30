@@ -1,0 +1,73 @@
+// 由@XSzC.制作的文件.
+// 未经允许不要使用任何文件. 请阅读LICENSE.txt
+
+// File made by @XSzC.
+// Don't use any file without permission. Read LICENSE.txt
+
+{
+  "namespace": "xc_modern_start:top",
+
+  "player_info@xerox_lib.i": {
+    "size": ["100%c+4px", 20],
+    "color": "$xeroxclient_ui_theme_menu_background_color",
+    "texture": "textures/XeroxClient/rounded_corner/all8x",
+    "alpha": 0.4,
+    "controls": [{ "@xc_modern_start:top.player_info_content": {} }],
+    "bindings": [
+      {
+        "binding_name": "(not #sign_in_visible)",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "player_info_content@xerox_lib.hsp": {
+    "layer": 12,
+    "size": ["100%c", 16],
+    "controls": [
+      {
+        "player_head_portrait@xerox_lib.i": {
+          "size": [20, 16],
+          "layer": 12,
+          "bilinear": true,
+          "bindings": [
+            {
+              "binding_name": "#gamerpic_texture_path",
+              "binding_name_override": "#texture"
+            },
+            {
+              "binding_name": "#gamerpic_texture_location_type",
+              "binding_name_override": "#texture_file_system"
+            }
+          ]
+        }
+      },
+      {
+        "welcome@xerox_lib.p": {
+          "size": ["100%c", 16],
+          "controls": [{ "welcome_text@xc_modern_start:top.player_name_text": {} }]
+        }
+      }
+    ]
+  },
+
+  "player_name_text@xerox_lib.l": {
+    "layer": 12,
+    "text": "#text",
+    "size": ["default", "default"],
+    "max_size": ["default", "default"],
+    //"offset": [0, -1],
+    "font_type": "$global_font_type",
+    "backup_font_type": "$global_font_type_backup",
+    "bindings": [
+      {
+        "binding_name": "#playername"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "('Hello, ' + #playername)",
+        "target_property_name": "#text"
+      }
+    ]
+  }
+}

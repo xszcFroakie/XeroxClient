@@ -1,0 +1,147 @@
+// 由@XSzC.修改的文件. 
+// 未经允许不要使用任何文件. 请阅读LICENSE.txt
+
+// File modified by @XSzC.
+// Don't use any file without permission. Read LICENSE.txt
+
+//Made by @衡川（Crosmover）
+//Thanks for @XSzC.
+//某些人别盗了你妈死了恶不恶心啊 盗没盗自己心里没点b数吗
+{
+  "namespace": "item_detected",
+
+  "item_selected_detection@xerox_lib.p": {
+    "bindings": [
+      {
+        "binding_name": "#slot_selected",
+        "binding_type": "collection",
+        "binding_collection_name": "$helper_collection_name"
+      },
+      {
+        "binding_type": "collection",
+        "binding_name": "#item_id_aux",
+        "binding_collection_name": "$helper_collection_name"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#item_id_aux * #slot_selected)",
+        "target_property_name": "#is_right_aux"
+      }
+    ]
+  },
+
+  "slot_selected_detection_content@xerox_lib.vsp": {
+    "size": [0, 0],
+    "visible": false,
+    "collection_name": "$helper_collection_name",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "detected_item_0",
+        "source_property_name": "#is_right_aux",
+        "target_property_name": "#slot_0_counter"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "detected_item_1",
+        "source_property_name": "#is_right_aux",
+        "target_property_name": "#slot_1_counter"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "detected_item_2",
+        "source_property_name": "#is_right_aux",
+        "target_property_name": "#slot_2_counter"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "detected_item_3",
+        "source_property_name": "#is_right_aux",
+        "target_property_name": "#slot_3_counter"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "detected_item_4",
+        "source_property_name": "#is_right_aux",
+        "target_property_name": "#slot_4_counter"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "detected_item_5",
+        "source_property_name": "#is_right_aux",
+        "target_property_name": "#slot_5_counter"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "detected_item_6",
+        "source_property_name": "#is_right_aux",
+        "target_property_name": "#slot_6_counter"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "detected_item_7",
+        "source_property_name": "#is_right_aux",
+        "target_property_name": "#slot_7_counter"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "detected_item_8",
+        "source_property_name": "#is_right_aux",
+        "target_property_name": "#slot_8_counter"
+      },
+
+      {
+        "binding_type": "view",
+        "source_property_name": "(#slot_0_counter + #slot_1_counter + #slot_2_counter + #slot_3_counter + #slot_4_counter + #slot_5_counter + #slot_6_counter + #slot_7_counter + #slot_8_counter)",
+        "target_property_name": "#selected_item_aux"
+      }
+    ],
+    "controls": [
+      {
+        "detected_item_0@item_detected.item_selected_detection": {
+          "collection_index": 0
+        }
+      },
+      {
+        "detected_item_1@item_detected.item_selected_detection": {
+          "collection_index": 1
+        }
+      },
+      {
+        "detected_item_2@item_detected.item_selected_detection": {
+          "collection_index": 2
+        }
+      },
+      {
+        "detected_item_3@item_detected.item_selected_detection": {
+          "collection_index": 3
+        }
+      },
+      {
+        "detected_item_4@item_detected.item_selected_detection": {
+          "collection_index": 4
+        }
+      },
+      {
+        "detected_item_5@item_detected.item_selected_detection": {
+          "collection_index": 5
+        }
+      },
+      {
+        "detected_item_6@item_detected.item_selected_detection": {
+          "collection_index": 6
+        }
+      },
+      {
+        "detected_item_7@item_detected.item_selected_detection": {
+          "collection_index": 7
+        }
+      },
+      {
+        "detected_item_8@item_detected.item_selected_detection": {
+          "collection_index": 8
+        }
+      }
+    ]
+  }
+}

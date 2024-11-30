@@ -1,0 +1,369 @@
+// 由@XSzC.制作的文件.
+// 未经允许不要使用任何文件. 请阅读LICENSE.txt
+
+// File made by @XSzC.
+// Don't use any file without permission. Read LICENSE.txt
+
+{
+  "namespace": "xc_modern_play",
+
+  "nav_tab_content@xerox_lib.hsp": {
+    "size": ["100%", "100%"],
+    "controls": [
+      {
+        "icon@xerox_lib.p": {
+          "size": ["100%y", "100%"],
+          "controls": [
+            {
+              "icon@xerox_lib.i": {
+                "texture": "('textures/XeroxClient/icon/' + $icon_name)",
+                "layer": 5,
+                "bilinear": true,
+                "size": ["75%", "100%x"]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "text_section@xerox_lib.p": {
+          "size": ["100%c + 4px", "100%"],
+          "controls": [
+            {
+              "text@xerox_lib.l": {
+                "layer": 5,
+                "text": "$tab_text_name",
+                "font_type": "$global_font_type",
+                "backup_font_type": "$global_font_type_backup"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "count_section@xerox_lib.p": {
+          "size": ["100%c + 2px", "100%"],
+          "controls": [
+            {
+              "count@xerox_lib.l": {
+                "layer": 5,
+                "text": "#madebyxszc",
+                "font_type": "$global_font_type",
+                "backup_font_type": "$global_font_type_backup",
+                "bindings": [
+                  {
+                    "binding_name": "$count_text_name"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "('[' + $count_text_name + ']')",
+                    "target_property_name": "#madebyxszc"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "tab_selector_base@common_tabs.a_rc_8x": {
+    "size": [104, 24],
+    "$tab_content_size": ["100%", "100%"],
+    "$xeroxclient_button_alpha_default": 0,
+    "$radio_toggle_group": true,
+    "$toggle_name": "navigation_tab",
+    "$toggle_group_default_selected": "$default_tab",
+    "$tab_content": "xc_modern_play.nav_tab_content",
+    "propagate_alpha": true,
+    "animation_reset_name": "screen_animation_reset"
+    //"$unchecked_hover_image": "textures/XeroxClient/diffusion",
+    //"$checked_default_image": "textures/XeroxClient/diffusion",
+    //"$checked_hover_image": "textures/XeroxClient/diffusion"
+  },
+
+  "world_nav_tab@xc_modern_play.tab_selector_base": {
+    "$icon_name": "world",
+    "$tab_view_binding_name": "world_navigation_tab_toggle",
+    "$count_text_name": "#world_item_count",
+    "$tab_text_name": "selectWorld.tab.worlds",
+    "$toggle_group_forced_index": 0,
+    "$offset_1": [0, 0],
+    "$offset_2": [-80, 0],
+    "$wait_dura": 0.0,
+    "anims": [
+      "@play_animation.tab_out_alpha_animation",
+      "@play_animation.tab_out_alpha_animation_pop",
+      "@play_animation.tab_enter_alpha_wait",
+      "@play_animation.tab_enter_alpha_animation_pop",
+      "@play_animation.tab_out_offset_animation",
+      "@play_animation.tab_out_offset_animation_pop",
+      "@play_animation.tab_enter_offset_wait",
+      "@play_animation.tab_enter_offset_animation_pop"
+    ]
+  },
+
+  "friends_nav_tab@xc_modern_play.tab_selector_base": {
+    "$icon_name": "gather",
+    "$tab_view_binding_name": "friends_navigation_tab_toggle",
+    "$count_text_name": "#friend_world_item_count",
+    "$tab_text_name": "selectWorld.tab.friends",
+    "$toggle_group_forced_index": 1,
+    "$offset_1": [0, 13],
+    "$offset_2": [-80, 13],
+    "$wait_dura": 0.1,
+    "anims": [
+      "@play_animation.tab_out_alpha_animation",
+      "@play_animation.tab_out_alpha_animation_pop",
+      "@play_animation.tab_enter_alpha_wait",
+      "@play_animation.tab_enter_alpha_animation_pop",
+      "@play_animation.tab_out_offset_animation",
+      "@play_animation.tab_out_offset_animation_pop",
+      "@play_animation.tab_enter_offset_wait",
+      "@play_animation.tab_enter_offset_animation_pop"
+    ]
+  },
+
+  "server_nav_tab@xc_modern_play.tab_selector_base": {
+    "$icon_name": "server",
+    "$tab_view_binding_name": "server_navigation_tab_toggle",
+    "$count_text_name": "#server_world_item_count",
+    "$tab_text_name": "selectWorld.tab.thirdParty",
+    "$toggle_group_forced_index": 2,
+    "$offset_1": [0, -13],
+    "$offset_2": [-80, -13],
+    "$wait_dura": 0.0,
+    "anims": [
+      "@play_animation.tab_out_alpha_animation",
+      "@play_animation.tab_out_alpha_animation_pop",
+      "@play_animation.tab_enter_alpha_wait",
+      "@play_animation.tab_enter_alpha_animation_pop",
+      "@play_animation.tab_out_offset_animation",
+      "@play_animation.tab_out_offset_animation_pop",
+      "@play_animation.tab_enter_offset_wait",
+      "@play_animation.tab_enter_offset_animation_pop"
+    ]
+  },
+
+  "tab_stack@xerox_lib.p": {
+    "size": ["100%cm + 4px", "100%c + (100%c / 24px) * 2px"],
+    "controls": [
+      {
+        "world@xc_modern_play.world_nav_tab": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "world_navigation_tab_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "friends@xc_modern_play.friends_nav_tab": {
+          "offset": [0, 13],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "world_navigation_tab_toggle",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "server@xc_modern_play.server_nav_tab": {
+          "offset": [0, -13],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "world_navigation_tab_toggle",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [11, 30]
+  },
+
+  "button_stack@xerox_lib.p": {
+    "size": ["100%cm + 4px", "100%c + 6px"],
+    "$button_image_size": ["100%", "100%"],
+    "$xeroxclient_button_alpha_default": 0.0,
+    "$xeroxclient_button_alpha_hover": 0.0,
+    "$xeroxclient_button_alpha_pressed": 0.0,
+    "$xeroxclient_button_alpha_locked": 0.0,
+    "controls": [
+      {
+        "quick_play@common_buttons.a_rc_8x_text": {
+          "size": [104, 24],
+          "$pressed_button_name": "button.menu_quick_play",
+          "$button_text": "menu.quickplay",
+          "anchor_to": "bottom_middle",
+          "offset": [0, -1],
+          "$offset_1": [0, -1],
+          "$offset_2": [-80, -1],
+          "propagate_alpha": true,
+          "$wait_dura": 0.15,
+          "anims": [
+            "@play_animation.tab_out_alpha_animation",
+            "@play_animation.tab_out_alpha_animation_pop",
+            "@play_animation.tab_enter_alpha_wait",
+            "@play_animation.tab_enter_alpha_animation_pop",
+            "@play_animation.tab_out_offset_animation",
+            "@play_animation.tab_out_offset_animation_pop",
+            "@play_animation.tab_enter_offset_wait",
+            "@play_animation.tab_enter_offset_animation_pop"
+          ],
+          "$xeroxclient_button_text_color_hover": [0.7, 1.0, 1.0],
+          "$xeroxclient_button_text_color_pressed": [0.7, 1.0, 1.0]
+        }
+      },
+      {
+        "back@common_buttons.a_rc_8x_text": {
+          "size": [104, 24],
+          "$pressed_button_name": "button.menu_exit",
+          "$button_text": "gui.back",
+          "anchor_to": "top_middle",
+          "offset": [0, 1],
+          "$offset_1": [0, 1],
+          "$offset_2": [-80, 1],
+          "propagate_alpha": true,
+          "$wait_dura": 0.25,
+          "anims": [
+            "@play_animation.tab_out_alpha_animation",
+            "@play_animation.tab_out_alpha_animation_pop",
+            "@play_animation.tab_enter_alpha_wait",
+            "@play_animation.tab_enter_alpha_animation_pop",
+            "@play_animation.tab_out_offset_animation",
+            "@play_animation.tab_out_offset_animation_pop",
+            "@play_animation.tab_enter_offset_wait",
+            "@play_animation.tab_enter_offset_animation_pop"
+          ],
+          "$xeroxclient_button_text_color_default": [1.0, 0.333, 0.333],
+          "$xeroxclient_button_text_color_hover": [0.7, 1.0, 1.0],
+          "$xeroxclient_button_text_color_pressed": [0.7, 1.0, 1.0]
+        }
+      }
+    ],
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "offset": [11, -10]
+  },
+
+  "left_content@xerox_lib.p": {
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": ["43.52941176%", "100%"],
+    "anims": [
+      "@play_animation.gradient_bg_out_animation",
+      "@play_animation.gradient_bg_out_animation_pop",
+      "@play_animation.gradient_bg_enter_animation",
+      "@play_animation.gradient_bg_enter_animation_pop"
+    ],
+    "animation_reset_name": "screen_animation_reset",
+    "controls": [
+      { "tab_stack@xc_modern_play.tab_stack": {} },
+      { "button_stack@xc_modern_play.button_stack": {} }
+    ]
+  },
+
+  "right_content@xerox_lib.p": {
+    "size": ["100% - 210px", "100% - 20px"],
+    "anchor_from": "right_middle",
+    "anchor_to": "right_middle",
+    "offset": [-10, 0],
+    "anims": [
+      "@play_animation.tab_content_out_alpha_animation",
+      "@play_animation.tab_content_out_alpha_animation_pop",
+      "@play_animation.tab_content_enter_alpha_animation",
+      "@play_animation.tab_content_enter_alpha_animation_pop",
+      "@play_animation.tab_content_out_offset_animation",
+      "@play_animation.tab_content_out_offset_animation_pop",
+      "@play_animation.tab_content_enter_offset_animation",
+      "@play_animation.tab_content_enter_offset_animation_pop"
+    ],
+    "animation_reset_name": "screen_animation_reset",
+    "propagate_alpha": true,
+    "controls": [
+      {
+        "bg@xerox_lib.i": {
+          "texture": "textures/XeroxClient/rounded_corner/all8x",
+          "color": "$xeroxclient_ui_theme_menu_background_color",
+          "alpha": 0.3,
+          "layer": 0,
+          "controls": [
+            {
+              "singleplayer@xc_modern_play:singleplayer.singleplayer_page_content": {}
+            },
+            {
+              "friends@xc_modern_play:friends.friends_page_content": {}
+            },
+            {
+              "multiplayer@xc_modern_play:multiplayer.multiplayer_page_content": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "background@xerox_lib.p": {
+    "controls": [
+      {
+        "gradient@xerox_lib.cr": {
+          "renderer": "gradient_renderer",
+          "color1": [0.0, 0.0, 0.0, 0.4352941176],
+          "color2": [0.0, 0.0, 0.0, 0.0],
+          "layer": 1,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "size": ["43.52941176%", "100%"],
+          "gradient_direction": "horizontal",
+          "offset": [-1, 0], // 精度问题...
+          "anims": [
+            "@play_animation.gradient_bg_out_animation",
+            "@play_animation.gradient_bg_out_animation_pop",
+            "@play_animation.gradient_bg_enter_animation",
+            "@play_animation.gradient_bg_enter_animation_pop"
+          ],
+          "animation_reset_name": "screen_animation_reset"
+        }
+      },
+      {
+        "background@xc_common.background": {
+          "layer": -10,
+          "anims": [
+            "@play_animation.bg_out_animation",
+            "@play_animation.bg_out_animation_pop",
+            "@play_animation.bg_enter_animation",
+            "@play_animation.bg_enter_animation_pop"
+          ]
+        }
+      }
+    ]
+  },
+
+  "main_content@xerox_lib.p": {
+    "controls": [
+      { "left_content@xc_modern_play.left_content": {} },
+      { "right_content@xc_modern_play.right_content": {} },
+      {
+        "popup_dialog_factory@xerox_lib.f": {
+          "control_ids": {
+            "join_by_code": "@xc_modern_play:popup_dialog.popup_dialog_join_by_code",
+            "high_ping_warning": "@xc_modern_play:popup_dialog.popup_dialog_high_ping"
+          }
+        }
+      }
+      //{ "realm_warning_tip@play.realm_warning_tip": {} }
+    ]
+  }
+}

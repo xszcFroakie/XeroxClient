@@ -1,0 +1,318 @@
+// 由@XSzC.制作的文件.
+// 未经允许不要使用任何文件. 请阅读LICENSE.txt
+
+// File made by @XSzC.
+// Don't use any file without permission. Read LICENSE.txt
+
+{
+  "namespace": "xc_modern_play:popup_dialog",
+
+  "popup_dialog_join_by_code@popup_dialog.modal_input_panel": {
+    "size": ["100%", "100%"],
+    "controls": [
+      {
+        "join_by_code_popup_content@xc_modern_play:popup_dialog.join_by_code_popup_content": {
+          "layer": 1
+        }
+      },
+      {
+        "gamepad_helpers@common.gamepad_helpers_a_and_b": {
+          "layer": 1,
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [0, "31px"]
+        }
+      }
+    ]
+  },
+
+  "join_by_code_popup_content@xerox_lib.i": {
+    "texture": "textures/XeroxClient/rounded_corner/all8x",
+    "color": "$xeroxclient_ui_theme_menu_background_color",
+    "alpha": 0.7,
+    "size": [200, 100],
+    "controls": [
+      {
+        "background_outline@xerox_lib.i": {
+          "texture": "textures/XeroxClient/rounded_corner_border/all8x",
+          "color": "$xeroxclient_ui_theme_button_pressed_color",
+          "alpha": 0.8,
+          "layer": 2,
+          "size": ["100% + 1px", "100% + 1px"]
+        }
+      },
+      {
+        "popup_stack_panel@xerox_lib.vsp": {
+          "size": ["100%", "100%"],
+          "controls": [
+            {
+              "header@xerox_lib.p": {
+                "size": ["100%", 20],
+                "layer": 1,
+                "controls": [
+                  {
+                    "header_text@xerox_lib.l": {
+                      "text": "networkWorld.joinByCode",
+                      "font_type": "$global_font_type",
+                      "backup_font_type": "$global_font_type_backup"
+                    }
+                  },
+                  {
+                    "close_button@common_buttons.a_rc_8x_text": {
+                      "size": ["100%y", "100% - 4px"],
+                      "anchor_from": "right_middle",
+                      "anchor_to": "right_middle",
+                      "offset": [-2, 0],
+                      "$button_text": "×",
+                      "$button_image_size": ["100%", "100%"],
+                      "$pressed_button_name": "button.menu_exit",
+                      "$xeroxclient_button_alpha_default": 0.0,
+                      "$xeroxclient_button_alpha_hover": 0.9,
+                      "$xeroxclient_button_alpha_pressed": 0.9,
+                      "$xeroxclient_button_color_hover": [1.0, 0.333, 0.333],
+                      "$xeroxclient_button_color_pressed": [1.0, 0.333, 0.333],
+                      "$xeroxclient_button_content_offset_default": [0, -3],
+                      "$xeroxclient_button_content_offset_hover": [0, -3],
+                      "$xeroxclient_button_content_offset_pressed": [0, -3],
+                      "$button_font_type": "HarmonyOS-Regular",
+                      "button_mappings": [
+                        {
+                          "from_button_id": "button.menu_select",
+                          "to_button_id": "button.menu_network_join_by_code_close",
+                          "mapping_type": "pressed"
+                        },
+                        {
+                          "from_button_id": "button.menu_ok",
+                          "to_button_id": "button.menu_network_join_by_code_close",
+                          "mapping_type": "focused"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "spacing_1@xerox_lib.p": {
+                "size": [0, 1]
+              }
+            },
+            {
+              "upper_body@xerox_lib.hsp": {
+                "size": ["100%", 22],
+                "layer": 1,
+                "controls": [
+                  {
+                    "margin1@xerox_lib.p": {
+                      "size": [3, 0]
+                    }
+                  },
+                  {
+                    "code_text_field@xc_modern_edit_box.text_edit_box": {
+                      "$text_box_name": "#join_by_code_text_edit",
+                      "max_length": 32767,
+                      "$place_holder_text": "networkWorld.realmsHashPlaceholder",
+                      "size": ["65%", "100%"]
+                    }
+                  },
+                  {
+                    "spacing@xerox_lib.p": {
+                      "size": [1, 0]
+                    }
+                  },
+                  {
+                    "join_button@common_buttons.a_rc_8x_text": {
+                      "$button_image_size": ["100%", "100%"],
+                      "$button_text": "networkWorld.join",
+                      "$pressed_button_name": "button.menu_network_join_by_code_popup_join",
+                      "size": ["fill", "100%"]
+                    }
+                  },
+                  {
+                    "margin2@xerox_lib.p": {
+                      "size": [3, 0]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "spacing_2@xerox_lib.p": {
+                "size": [0, 10]
+              }
+            },
+            {
+              "lower_body@xerox_lib.p": {
+                "size": ["100%", "fill"],
+                "layer": 1,
+                "controls": [
+                  {
+                    "lower_body_content@xerox_lib.p": {
+                      "size": ["100%", "100%"],
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "controls": [
+                        {
+                          "help_text@xerox_lib.l": {
+                            "size": ["95%", "100%"],
+                            "text": "networkWold.joinByCodeHelpText",
+                            "text_alignment": "center",
+                            "font_type": "$global_font_type",
+                            "backup_font_type": "$global_font_type_backup"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "popup_dialog_high_ping@popup_dialog.modal_input_panel": {
+    "size": ["100%", "100%"],
+    "controls": [
+      {
+        "high_ping_popup_content@xc_modern_play:popup_dialog.popup_two_buttons": {
+          "layer": 1
+        }
+      },
+      {
+        "gamepad_helpers@common.gamepad_helpers_a_and_b": {
+          "layer": 1,
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [0, "31px"]
+        }
+      }
+    ]
+  },
+
+  "popup_two_buttons@xerox_lib.i": {
+    "texture": "textures/XeroxClient/rounded_corner/all8x",
+    "color": "$xeroxclient_ui_theme_menu_background_color",
+    "alpha": 0.7,
+    "size": [200, 120],
+    "$child_control": "play.high_ping_popup_content_stack_panel",
+    "controls": [
+      {
+        "background_outline@xerox_lib.i": {
+          "texture": "textures/XeroxClient/rounded_corner_border/all8x",
+          "color": "$xeroxclient_ui_theme_button_pressed_color",
+          "alpha": 0.8,
+          "layer": 2,
+          "size": ["100% + 1px", "100% + 1px"]
+        }
+      },
+      {
+        "popup_stack_panel@xerox_lib.p": {
+          "size": ["100%", "100%"],
+          "controls": [
+            {
+              "header@xerox_lib.p": {
+                "size": ["100%", 20],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "layer": 1,
+                "controls": [
+                  {
+                    "header_text@xerox_lib.l": {
+                      "text": "networkWorld.highPingWarning.title",
+                      "font_type": "$global_font_type",
+                      "backup_font_type": "$global_font_type_backup"
+                    }
+                  },
+                  {
+                    "close_button@common_buttons.a_rc_8x_text": {
+                      "size": ["100%y", "100% - 4px"],
+                      "anchor_from": "right_middle",
+                      "anchor_to": "right_middle",
+                      "offset": [-2, 0],
+                      "$button_text": "×",
+                      "$button_image_size": ["100%", "100%"],
+                      "$pressed_button_name": "button.menu_exit",
+                      "$xeroxclient_button_alpha_default": 0.0,
+                      "$xeroxclient_button_alpha_hover": 0.9,
+                      "$xeroxclient_button_alpha_pressed": 0.9,
+                      "$xeroxclient_button_color_hover": [1.0, 0.333, 0.333],
+                      "$xeroxclient_button_color_pressed": [1.0, 0.333, 0.333],
+                      "$xeroxclient_button_content_offset_default": [0, -3],
+                      "$xeroxclient_button_content_offset_hover": [0, -3],
+                      "$xeroxclient_button_content_offset_pressed": [0, -3],
+                      "$button_font_type": "HarmonyOS-Regular",
+                      "button_mappings": [
+                        {
+                          "from_button_id": "button.menu_select",
+                          "to_button_id": "button.menu_network_join_by_code_close",
+                          "mapping_type": "pressed"
+                        },
+                        {
+                          "from_button_id": "button.menu_ok",
+                          "to_button_id": "button.menu_network_join_by_code_close",
+                          "mapping_type": "focused"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "upper_body@xerox_lib.p": {
+                "size": ["100% - 8px", "100% - 47px"],
+                "layer": 1,
+                "offset": [0, 21],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "controls": [
+                  {
+                    "high_ping_popup_content_scrolling_panel@xc_modern_scrolling_panel.scrolling_panel": {
+                      "$scrolling_content": "play.high_ping_popup_content_stack_panel"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "lower_body@xerox_lib.p": {
+                "size": ["100%", 25],
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "layer": 1,
+                "controls": [
+                  {
+                    "button_panel@xerox_lib.hsp": {
+                      "size": ["100% - 6px", 22],
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "controls": [
+                        {
+                          "left_button_panel@common_buttons.a_rc_8x_text": {
+                            "$pressed_button_name": "button.join_server_anyway",
+                            "$button_text": "networkWorld.join",
+                            "size": ["fill", "100%"]
+                          }
+                        },
+                        {
+                          "right_button_panel@common_buttons.a_rc_8x_text": {
+                            "$pressed_button_name": "button.cancel_join_server",
+                            "$button_text": "gui.cancel",
+                            "size": ["fill", "100%"]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

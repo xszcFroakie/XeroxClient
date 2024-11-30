@@ -1,0 +1,139 @@
+// 由@XSzC.制作的文件.
+// 未经允许不要使用任何文件. 请阅读LICENSE.txt
+
+// File made by @XSzC.
+// Don't use any file without permission. Read LICENSE.txt
+
+{
+  "version": 1,
+  "fonts": [
+    {
+      "font_format": "ttf",
+      "font_name": "MinecraftTen",
+      "version": 1,
+      "font_file": "font/minecraft/minecraft-ten",
+      "lowPerformanceCompatible": true,
+      "font_scale_factor": 1
+    },
+    {
+      "font_format": "msdf",
+      "font_name": "OldSmoothFont",
+      "font_file": "font/smooth/smooth_"
+    },
+    {
+      "font_format": "ttf",
+      "font_name": "HarmonyOS-Bold",
+      "font_file": "font/HarmonyOS_Sans_Bold",
+      "lowPerformanceCompatible": true,
+      "font_scale_factor": 1
+    },
+    {
+      "font_format": "ttf",
+      "font_name": "HarmonyOS-Regular",
+      "font_file": "font/HarmonyOS_Sans_Regular",
+      "lowPerformanceCompatible": true,
+      "font_scale_factor": 1
+    },
+    {
+      "font_format": "ttf",
+      "font_name": "Bahnschrift-Light",
+      "font_file": "font/Bahnschrift-Light",
+      "lowPerformanceCompatible": true,
+      "font_scale_factor": 1
+    },
+    {
+      "font_format": "ttf",
+      "font_name": "Bahnschrift-Bold",
+      "font_file": "font/Bahnschrift-Bold",
+      "lowPerformanceCompatible": true,
+      "font_scale_factor": 1
+    },
+    {
+      "font_format": "ttf",
+      "font_name": "Bahnschrift-SemiBold",
+      "font_file": "font/Bahnschrift-SemiBold",
+      "lowPerformanceCompatible": true,
+      "font_scale_factor": 1
+    },
+    {
+      "font_format": "otf",
+      "font_name": "MinecraftSeven",
+      "font_file": "font/minecraft/minecraft-seven",
+      "lowPerformanceCompatible": true,
+      "font_scale_factor": 1
+    },
+    {
+      "font_format": "otf",
+      "font_name": "MinecraftFive",
+      "font_file": "font/minecraft/minecraft-five",
+      "lowPerformanceCompatible": true,
+      "font_scale_factor": 1
+    },
+    {
+      "font_format": "otf",
+      "font_name": "MinecraftFiveBold",
+      "font_file": "font/minecraft/minecraft-five-bold",
+      "lowPerformanceCompatible": true,
+      "font_scale_factor": 1
+    }
+  ],
+  "font_aliases": [
+    {
+      "alias": "SmoothFontLatin",
+
+      "fonts": [
+        {
+          "font_reference": "OldSmoothFont"
+        },
+        {
+          "font_reference": "UnicodeFont",
+          "font_ranges": [
+            { "first": 54620, "last": 54620 },
+            { "first": 44397, "last": 44397 },
+            { "first": 50612, "last": 50612 },
+            { "first": 45824, "last": 45824 },
+            { "first": 48124, "last": 48124 },
+            { "first": 57344, "last": 63743 }
+          ]
+        }
+      ]
+    },
+    {
+      "alias": "MinecraftTenEmoticon",
+      "fonts": [
+        {
+          "font_reference": "MinecraftTen"
+        },
+        {
+          "font_reference": "OldSmoothFont",
+          "font_ranges": [
+            {
+              "first": 57344,
+              "last": 63743
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "alias": "SmoothSmall",
+      "font_scale_factor": 1,
+      "fonts": [
+        {
+          "font_reference": "OldSmoothFont"
+        },
+        {
+          "font_reference": "UnicodeFont",
+          "font_ranges": [
+            { "first": 54620, "last": 54620 },
+            { "first": 44397, "last": 44397 },
+            { "first": 50612, "last": 50612 },
+            { "first": 45824, "last": 45824 },
+            { "first": 48124, "last": 48124 },
+            { "first": 57344, "last": 63743 }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,216 @@
+// 由@XSzC.制作的文件.
+// 未经允许不要使用任何文件. 请阅读LICENSE.txt
+
+// File made by @XSzC.
+// Don't use any file without permission. Read LICENSE.txt
+
+{
+  "namespace": "xc_modern_tab_list",
+
+  "tab_list@xerox_lib.b": {
+    "pressed_control": "tab_list_content",
+    "button_mappings": [
+      {
+        "from_button_id": "button.scoreboard",
+        "to_button_id": "button.scoreboard",
+        "mapping_type": "global",
+        "consume_event": false
+      }
+    ],
+    "controls": [
+      {
+        "tab_list_content@xerox_lib.i": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [0, 10],
+          "alpha": 0.3,
+          "layer": 10,
+          "texture": "textures/XeroxClient/rounded_corner/all8x",
+          "color": "$xeroxclient_ui_theme_menu_background_color",
+          "size": ["100%c + 8px", "100%c + 6px"],
+          "controls": [
+            {
+              "tab_list_grid@xerox_lib.cp": {
+                "size": ["100%c", "100%c"],
+                "collection_name": "players_collection",
+                "controls": [{ "list@xc_modern_tab_list.tab_list_stack": {} }]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "tab_list_stack@xerox_lib.hsp": {
+    "size": ["100%c", "100%cm"],
+    "controls": [
+      {
+        "stack_0@xerox_lib.p": {
+          "size": ["100%cm", "100%c"],
+          "max_size": ["100%cm", 216],
+          "$min_index": 0,
+          "$max_index": 17,
+          "controls": [{ "0-17@xc_modern_tab_list.tab_list_grid": {} }]
+        }
+      },
+      {
+        "stack_1@xerox_lib.p": {
+          "size": ["100%cm", "100%c"],
+          "max_size": ["100%cm", 216],
+          "$min_index": 18,
+          "$max_index": 35,
+          "controls": [
+            {
+              "18-35@xc_modern_tab_list.tab_list_grid": {
+                "offset": [0, -216]
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#collection_index",
+              "binding_type": "collection",
+              "binding_collection_name": "players_collection"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#collection_index > 17)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "stack_2@xerox_lib.p": {
+          "size": ["100%cm", "100%c"],
+          "max_size": ["100%cm", 216],
+          "$min_index": 36,
+          "$max_index": 53,
+          "controls": [
+            {
+              "36-53@xc_modern_tab_list.tab_list_grid": {
+                "offset": [0, -432]
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#collection_index",
+              "binding_type": "collection",
+              "binding_collection_name": "players_collection"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#collection_index > 35)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "stack_3@xerox_lib.p": {
+          "size": ["100%cm", "100%c"],
+          "max_size": ["100%cm", 216],
+          "$min_index": 54,
+          "$max_index": 71,
+          "controls": [
+            {
+              "54-71@xc_modern_tab_list.tab_list_grid": {
+                "offset": [0, -648]
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#collection_index",
+              "binding_type": "collection",
+              "binding_collection_name": "players_collection"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#collection_index > 53)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "tab_list_grid@xerox_lib.g": {
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "size": [140, "100%c"],
+    "grid_item_template": "xc_modern_tab_list.tab_list_grid_item",
+    "collection_name": "players_collection",
+    "grid_dimension_binding": "#players_grid_dimension",
+    "bindings": [
+      {
+        "binding_name": "#players_grid_dimension"
+      }
+    ]
+  },
+
+  "tab_list_grid_item@xerox_lib.hsp": {
+    "size": [140, 12],
+    "layer": 3,
+    "bindings": [
+      {
+        "binding_name": "#collection_index",
+        "binding_type": "collection",
+        "binding_collection_name": "players_collection"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(((#collection_index > $min_index) or (#collection_index = $min_index)) and ((#collection_index < $max_index) or (#collection_index = $max_index)))",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "player_picture@xerox_lib.p": {
+          "layer": 11,
+          "size": [10, 10],
+          "controls": [
+            {
+              "player_gamer_pic@pause.player_gamer_pic": {
+                "size": [10, 10],
+                "controls": []
+              }
+            },
+            {
+              "player_local_icon@pause.player_local_icon": { "size": [10, 10] }
+            }
+          ]
+        }
+      },
+      {
+        "player_gamertag@xerox_lib.p": {
+          "size": ["fill", 12],
+          "controls": [
+            {
+              "gamertag_text@xerox_lib.l": {
+                "text": "#gamertag",
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "size": ["default", "default"],
+                "font_type": "$global_font_type",
+                "backup_font_type": "$global_font_type_backup",
+                "offset": [1, 0],
+                "layer": 11,
+                "bindings": [
+                  {
+                    "binding_name": "#gamertag",
+                    "binding_type": "collection",
+                    "binding_collection_name": "players_collection"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

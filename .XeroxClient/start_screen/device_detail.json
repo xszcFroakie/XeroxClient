@@ -1,0 +1,152 @@
+// 由@XSzC.制作的文件.
+// 未经允许不要使用任何文件. 请阅读LICENSE.txt
+
+// File made by @XSzC.
+// Don't use any file without permission. Read LICENSE.txt
+
+{
+  "namespace": "xc_modern_start:device_detail",
+
+  "copyright@xerox_lib.l": {
+    "layer": 6,
+    "text": "Copyright Mojang AB. Don't distribute!",
+    "font_type": "$global_font_type",
+    "backup_font_type": "$global_font_type_backup",
+    "size": ["default", "default"],
+    "offset": [8, 8],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "font_scale_factor": 0.8
+  },
+
+  "version@xerox_lib.l": {
+    "layer": 6,
+    "font_type": "HarmonyOS-Bold",
+    "text": "#text",
+    "size": ["default", "default"],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": [0, -4],
+    "bindings": [
+      {
+        "binding_name": "#version"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "('Minecraft - ' + #version)",
+        "target_property_name": "#text"
+      }
+    ],
+    "font_scale_factor": 0.8
+  },
+
+  "Client_info@xerox_lib.l": {
+    "text": "($ClientName + ' ' + $ClientVersion + ' | '+ $ClientAuthor)",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [8, -8],
+    "size": ["default", "default"],
+    "font_type": "$global_font_type",
+    "backup_font_type": "$global_font_type_backup",
+    "layer": 6,
+    "font_scale_factor": 0.8
+  },
+
+  "Client_info_2@xerox_lib.l": {
+    "text": "( $system + ' - ' + $version + ' | ' + $input )",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": ["default", "default"],
+    "font_type": "$global_font_type",
+    "backup_font_type": "$global_font_type_backup",
+    "offset": [8, 0],
+    "layer": 6,
+    "variables": [
+      {
+        "requires": "$is_win10_arm",
+        "$version": "Windows 10 ARM"
+      },
+      {
+        "requires": "$is_windows_10_mobile",
+        "$version": "Windows 10 Mobile"
+      },
+      {
+        "requires": "$win10_edition",
+        "$version": "Windows 10"
+      },
+      {
+        "requires": "$is_ios",
+        "$version": "iOS"
+      },
+      {
+        "requires": "$osx_edition",
+        "$version": "Mac OS"
+      },
+      {
+        "requires": "$is_android",
+        "$version": "Android"
+      },
+      {
+        "requires": "$google_os",
+        "$system": "Google"
+      },
+      {
+        "requires": "$apple_os",
+        "$system": "Apple"
+      },
+      {
+        "requires": "$microsoft_os",
+        "$system": "Microsoft"
+      },
+      {
+        "requires": "$nx_os",
+        "$system": "NX"
+      },
+      {
+        "requires": "$is_ps4",
+        "$version": "PS4"
+      },
+      {
+        "requires": "$console_edition",
+        "$version": "Console"
+      },
+      {
+        "requires": "$game_pad",
+        "$input": "Controller"
+      },
+      {
+        "requires": "$mouse",
+        "$input": "Keyboard & Mouse"
+      },
+      {
+        "requires": "$touch",
+        "$input": "Touch"
+      }
+    ],
+    "font_scale_factor": 0.8
+  },
+
+  "client_detail_content@xerox_lib.i": {
+    "texture": "textures/XeroxClient/rounded_corner/all8x",
+    "size": ["100%c+8px", "100%c+5px"],
+    "layer": 9,
+    "anchor_from": "bottom_left",
+    "offset": [8, -8],
+    "alpha": 0.4,
+    "color": "$xeroxclient_ui_theme_menu_background_color",
+    "anchor_to": "bottom_left",
+    "controls": [
+      {
+        "你死妈东西外传一个试试看,我操你妈贱逼玩意@xerox_lib.vsp": {
+          "size": ["100%cm", "100%c"],
+          "offset": [0, -0.8],
+          "controls": [
+            { "2@xc_modern_start:device_detail.Client_info": {} },
+            { "3@xc_modern_start:device_detail.Client_info_2": {} },
+            { "1@xc_modern_start:device_detail.copyright": {} }
+          ]
+        }
+      }
+    ]
+  }
+}

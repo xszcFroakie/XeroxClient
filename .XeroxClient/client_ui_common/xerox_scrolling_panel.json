@@ -1,0 +1,339 @@
+//由@XSzC.制作的文件.
+//未经允许不要使用任何文件.请阅读LICENSE.txt
+
+//Filemadeby@XSzC.
+//Don'tuseanyfilewithoutpermission.ReadLICENSE.txt
+
+{
+  "namespace": "xc_modern_scrolling_panel",
+
+  "scroll_background_and_viewport@xerox_lib.p": {
+    "size": "$view_port_size",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "clips_children": true,
+    "controls": [
+      {
+        "scrolling_view_port@xerox_lib.p": {
+          "layer": 1,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "clips_children": true,
+          "offset": "$scroll_view_port_offset",
+          "size": "$scroll_view_port_size",
+          "max_size": "$scroll_view_port_max_size",
+          "controls": [
+            {
+              "scrolling_content@$scrolling_content": {
+                "layer": 1,
+                "$scrolling_content_anchor_from|default": "top_left",
+                "$scrolling_content_anchor_to|default": "top_left",
+                "anchor_from": "$scrolling_content_anchor_from",
+                "anchor_to": "$scrolling_content_anchor_to"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "scroll_bar_and_track@xerox_lib.p": {
+    "$scroll_bar_and_track_size|default": ["100%c", "100%"],
+    "size": "$scroll_bar_and_track_size",
+    "clips_children": true,
+    "anchor_from": "right_middle",
+    "anchor_to": "right_middle",
+    "controls": [
+      {
+        "stack_panel@xerox_lib.hsp": {
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "size": ["default", "100%"],
+          "controls": [
+            {
+              "empty_panel_0@xerox_lib.p": {
+                "ignored": "$scroll_bar_contained",
+                "size": "$scroll_bar_left_padding_size"
+              }
+            },
+            {
+              "panel@xerox_lib.p": {
+                "size": ["100%c", "100%"],
+                "controls": [
+                  {
+                    "centered_panel@xerox_lib.p": {
+                      "size": "$scroll_size",
+                      "$scroll_track_anchor|default": "center",
+                      "anchor_from": "$scroll_track_anchor",
+                      "anchor_to": "$scroll_track_anchor",
+                      "$scroll_track_offset|default": [0, 0],
+                      "offset": "$scroll_track_offset",
+                      "controls": [
+                        {
+                          "track@xc_modern_scrolling_panel.scrollbar_track": {
+                            "layer": 2,
+                            "anchor_from": "center",
+                            "anchor_to": "center"
+                          }
+                        },
+                        {
+                          "scroll_box@xc_modern_scrolling_panel.scroll_box": {
+                            "layer": 5,
+                            "anchor_from": "center",
+                            "anchor_to": "center"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "empty_panel_1@xerox_lib.p": {
+                "size": "$scroll_bar_right_padding_size"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "scroll_view_control": {
+    "type": "scroll_view",
+    "size": "$scroll_view_control_size",
+    "scroll_speed": 15,
+    "scrollbar_track_button": "button.scrollbar_skip_track",
+    "scrollbar_touch_button": "button.scrollbar_touch",
+    "always_listen_to_input": true,
+    "always_handle_pointer": true,
+    "$always_handle_scrolling|default": false,
+    "always_handle_scrolling": "$always_handle_scrolling",
+    "$scrollbar_always_visible|default": false,
+    // 似乎并没有这个属性，，
+    //"scrollbar_always_visible": "$scrollbar_always_visible",
+    "scrollbar_track": "track",
+    "scrollbar_box": "box",
+    "scroll_content": "scrolling_content",
+    "scroll_view_port": "scrolling_view_port",
+    "scroll_box_and_track_panel": "bar_and_track",
+    "$jump_to_bottom_on_update|default": false,
+    "jump_to_bottom_on_update": "$jump_to_bottom_on_update",
+    "$scroll_background_image_control|default": "xc_modern_scrolling_panel.scroll_indent_image",
+    "$scroll_track_image_control|default": "xc_modern_scrolling_panel.scroll_indent_image",
+    "$focus_for_tts_enabled": "#focus_for_tts_enabled_binding",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.scrollbar_touch",
+        "mapping_type": "pressed",
+        "button_up_right_of_first_refusal": true
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#gesture_control_enabled"
+      },
+      {
+        "binding_name": "(not #is_using_gamepad)",
+        "binding_name_override": "#focus_for_tts_enabled_binding"
+      }
+    ],
+    "controls": [
+      {
+        "stack_panel@xerox_lib.hsp": {
+          "ignored": "$scroll_bar_contained",
+          "anchor_to": "top_left",
+          "anchor_from": "top_left",
+          "$scroll_view_stack_panel_size|default": ["100%", "100%"],
+          "size": "$scroll_view_stack_panel_size",
+          "controls": [
+            {
+              "background_and_viewport@xc_modern_scrolling_panel.scroll_background_and_viewport": {}
+            },
+            {
+              "bar_and_track@xc_modern_scrolling_panel.scroll_bar_and_track": {}
+            }
+          ]
+        }
+      },
+      {
+        "panel@xerox_lib.p": {
+          "ignored": "(not $scroll_bar_contained)",
+          "anchor_to": "top_left",
+          "anchor_from": "top_left",
+          "$view_port_size|default": ["100%", "100%"],
+          "$scroll_view_port_panel_size|default": ["100%", "100%"],
+          "size": "$scroll_view_port_panel_size",
+          "controls": [
+            {
+              "background_and_viewport@xc_modern_scrolling_panel.scroll_background_and_viewport": {}
+            },
+            {
+              "bar_and_track@xc_modern_scrolling_panel.scroll_bar_and_track": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "scrollbar_track": {
+    "type": "scroll_track",
+    "$focus_for_tts_enabled|default": true,
+    "focus_enabled": "$focus_for_tts_enabled",
+    "$scrollbar_tts_name|default": "accessibility.scrollbar.tts.title",
+    "tts_name": "$scrollbar_tts_name",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.scrollbar_skip_track",
+        "mapping_type": "pressed"
+      }
+    ],
+    "controls": [
+      {
+        "bar_indent@$scroll_track_image_control": {
+          "visible": "$scroll_box_visible"
+        }
+      }
+    ]
+  },
+
+  "scroll_box@xerox_lib.p": {
+    "controls": [
+      {
+        "box": {
+          "type": "scrollbar_box",
+          "anchor_to": "top_left",
+          "anchor_from": "top_left",
+          "layer": 1,
+          "visible": "$scroll_box_visible",
+          "contained": true,
+          "draggable": "vertical",
+          "$scroll_box_mouse_image_control|default": "xc_modern_scrolling_panel.scrollbar_box_image",
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.menu_select",
+              "mapping_type": "pressed",
+              "button_up_right_of_first_refusal": true
+            }
+          ],
+          "controls": [{ "box@$scroll_box_mouse_image_control": {} }]
+        }
+      }
+    ]
+  },
+
+  "scrollbar_box_image@xerox_lib.i": {
+    "texture": "textures/XeroxClient/rounded_corner/all2x",
+    "size": [3, "100%"],
+    "layer": 4
+  },
+
+  "scroll_indent_image@xerox_lib.i": {
+    "texture": "textures/XeroxClient/rounded_corner/all2x",
+    "color": "$xeroxclient_ui_theme_menu_background_color",
+    "alpha": 0.3,
+    "size": [3, "100%"],
+    "layer": 3
+  },
+
+  "scrolling_panel_base@xerox_lib.ip": {
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "$scroll_panel_consume_hover_events|default": true,
+    "consume_hover_events": "$scroll_panel_consume_hover_events",
+    "$scroll_view_name|default": "scroll_view",
+    "$allow_scroll_even_when_content_fits|default": true,
+    "controls": [
+      {
+        "$scroll_view_name@xc_modern_scrolling_panel.scroll_view_control": {
+          "allow_scroll_even_when_content_fits": "$allow_scroll_even_when_content_fits"
+        }
+      }
+    ],
+    "$scrolling_panel_base_button_mappings|default": [],
+    "button_mappings": "$scrolling_panel_base_button_mappings",
+    "tts_ignore_count": true
+  },
+
+  "scrolling_panel": {
+    "type": "panel",
+    "$scrolling_pane_size|default": ["100%", "100%"],
+    "$scrolling_pane_offset|default": [0, 0],
+    "$scroll_view_control_size|default": ["100%", "100%"],
+    "$scroll_view_port_size|default": ["100%", "100%"],
+    "$scroll_view_port_max_size|default": ["100%", "100%"],
+    "$scroll_view_port_offset|default": [0, 0],
+    "$scroll_bar_left_padding_size|default": [2, 0],
+    "$scroll_bar_right_padding_size|default": [2, 0],
+    "$view_port_size|default": ["fill", "100%"],
+    "$scroll_bar_contained|default": false,
+    "$scroll_size|default": [4, "100%"],
+    "$scroll_box_size|default": ["100%", "100%"],
+    "$wider_scroll_area|default": false,
+    "$allow_scrolling_even_when_content_fits|default": true,
+    "$scroll_box_visible|default": true,
+    "controls": [
+      {
+        "scroll@xc_modern_scrolling_panel.scrolling_panel_base": {
+          "size": "$scrolling_pane_size",
+          "offset": "$scrolling_pane_offset"
+        }
+      }
+    ]
+  },
+
+  "scrolling_panel_with_offset@xc_modern_scrolling_panel.scrolling_panel": {
+    "$scroll_view_port_size|default": ["100%-8px", "100%-2px"],
+    "$scroll_view_port_offset|default": [1, 1]
+  },
+
+  "container_scroll_panel@xc_modern_scrolling_panel.scrolling_panel_with_offset": {
+    "$scrolling_pane_offset": [0, 0],
+    "$scrolling_pane_size": ["100%", "100%"],
+    "$scroll_view_port_size": ["100%-2px", "100%-2px"],
+    "$scroll_view_port_offset": [1, 1],
+    "$scroll_box_size": [4, "100%"],
+    "$wider_scroll_area": true,
+    "$scroll_bar_right_padding_size": [0, 0],
+    "$allow_scrolling_even_when_content_fits": false,
+    "$scrolling_panel_base_button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.container_reset_held",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_secondary_select",
+        "to_button_id": "button.container_reset_held",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.container_reset_held",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_back",
+        "to_button_id": "button.container_reset_held",
+        "mapping_type": "pressed",
+        "ignored": "(not$is_ps4)"
+      },
+      {
+        "from_button_id": "button.controller_select",
+        "to_button_id": "button.container_reset_held",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_secondary_select",
+        "to_button_id": "button.container_reset_held",
+        "mapping_type": "pressed"
+      }
+    ]
+  }
+}

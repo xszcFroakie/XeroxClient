@@ -1,0 +1,14 @@
+/*
+ - 如果没有指定，默认值是生物群落将使用的设置
+ - 生物群落中的所有字段都是可选的，默认值将覆盖缺少的字段
+ - 如果默认设置在资源包中被覆盖，那么它将覆盖所有生物群落，除非资源包定义了生物群落
+*/
+{
+  "biomes": {
+    "default": {
+      "water_surface_transparency": 0.2,
+      "fog_color": "#8499A5",
+      "fog_identifier": "xszc:fog_default"
+    }
+  }
+}

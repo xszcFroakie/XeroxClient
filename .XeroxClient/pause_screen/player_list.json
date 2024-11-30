@@ -1,0 +1,311 @@
+{
+  "namespace": "xc_modern_pause:player_list",
+  /*
+  "player_lists@xerox_lib.p": {
+    "size": ["100%", "100%c"],
+    "controls": [
+      {
+        "player_list@xc_modern_pause:player_list.player_list": {
+          "bindings": [
+            {
+              "binding_name": "(not #list_has_display_objective)",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      { im lazzzzzzzzzzzzy, so i dont want to  modify this. xD
+        "scoreboard_list@scoreboard.scoreboard_player_list": {
+          "bindings": [
+            {
+              "binding_name": "#list_has_display_objective",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },*/
+
+  "player_list@xerox_lib.vsp": {
+    "size": ["100%", "100%c"],
+    "focus_container": true,
+    "use_last_focus": true,
+    "controls": [
+      { "players_grid_panel@xc_modern_pause:player_list.players_grid": {} }
+    ]
+  },
+
+  "player_list_scrolling_panel@xc_modern_scrolling_panel.scrolling_panel": {
+    "size": ["100%", "fill"],
+    "$scrolling_content": "xc_modern_pause:player_list.player_list"
+  },
+
+  "player_list_panel_content@xerox_lib.vsp": {
+    "size": [190, 210],
+    "controls": [
+      {
+        "padding@xerox_lib.p": {
+          "size": ["100%", 5],
+          "controls": [
+            {
+              "divide@xerox_lib.i": {
+                "texture": "textures/XeroxClient/diffusion",
+                "alpha": 0.65,
+                "layer": 1,
+                "size": ["100%", 3],
+                "offset": [0, 1]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "players_label@xc_modern_pause:player_list.players_label": {
+          "ignored": "$education_edition",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle"
+        }
+      },
+      {
+        "player_list_scrolling_panel@xc_modern_pause:player_list.player_list_scrolling_panel": {}
+      },
+      {
+        "invite_players@common_buttons.a_rc_8x_text": {
+          "size": ["100%", 20],
+          "$pressed_button_name": "button.menu_invite_players",
+          "$button_text": "pauseScreen.invite",
+          "bindings": [
+            {
+              "binding_name": "#invite_button_enabled",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "players_label@xerox_lib.l": {
+    "text": "#worldname",
+    "size": ["100%", 10],
+    "text_alignment": "center",
+    "font_type": "$global_font_type",
+    "backup_font_type": "$global_font_type_backup",
+    "layer": 2,
+    "bindings": [
+      {
+        "binding_name": "#worldname"
+      }
+    ]
+  },
+
+  "players_grid@xerox_lib.g": {
+    "size": ["100%", "default"],
+    "grid_item_template": "xc_modern_pause:player_list.player_grid_item",
+    "grid_dimension_binding": "#players_grid_dimension",
+    "collection_name": "players_collection",
+    "bindings": [
+      {
+        "binding_name": "#players_grid_dimension",
+        "binding_condition": "always"
+      }
+    ]
+  },
+
+  "player_grid_item@xerox_lib.hsp": {
+    "size": ["100%", 20],
+    "controls": [
+      {
+        "player_button_panel@xerox_lib.hsp": {
+          "size": ["fill", "100%"],
+          "controls": [
+            {
+              "player_button_banner@xerox_lib.p": {
+                "size": ["fill", "100%"],
+                "controls": [
+                  {
+                    "player_button@common_buttons.a_rc_8x_content": {
+                      "size": ["100%", "100%"],
+                      "$button_content": "xc_modern_pause:player_list.player_button_content",
+                      "$pressed_button_name": "button.player_profile_card",
+                      "bindings": [
+                        {
+                          "binding_name": "#button_enabled",
+                          "binding_type": "collection",
+                          "binding_collection_name": "players_collection",
+                          "binding_name_override": "#visible"
+                        },
+                        {
+                          "binding_type": "collection_details",
+                          "binding_collection_name": "players_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "player_button@common_buttons.a_rc_8x_content": {
+                      "hover_enabled": false,
+                      "size": ["100%", "100%"],
+                      "$button_content": "xc_modern_pause:player_list.player_button_content",
+                      "$pressed_button_name": "button.player_profile_card",
+                      "bindings": [
+                        {
+                          "binding_name": "#button_disabled",
+                          "binding_type": "collection",
+                          "binding_collection_name": "players_collection",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "player_permission_button@xc_modern_pause:player_list.player_permission_button": {
+          "bindings": [
+            {
+              "binding_name": "#permissions_button_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "player_permission_button@common_buttons.a_rc_8x_content": {
+    "size": [20, "100%"],
+    "$button_content": "xc_modern_pause:player_list.permission_icon_image",
+    "$button_tts_header": "accessibility.pause.permissions",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_permission",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.menu_permission",
+        "mapping_type": "focused"
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "players_collection"
+      }
+    ]
+  },
+
+  "permission_icon_image@xerox_lib.i": {
+    "texture": "#texture",
+    "size": [15, 15],
+    "bindings": [
+      {
+        "binding_name": "#player_permission_level_icon_texture",
+        "binding_name_override": "#texture",
+        "binding_type": "collection",
+        "binding_collection_name": "players_collection"
+      }
+    ]
+  },
+
+  "player_button_content@xerox_lib.hsp": {
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "size": ["100%", "100%"],
+    "layer": 3,
+    "controls": [
+      {
+        "player_pic_panel@xc_modern_pause:player_list.player_pic_panel": {
+          "layer": 1
+        }
+      },
+      {
+        "player_gamertag@xc_modern_pause:player_list.gametag_wrapper": {
+          "size": ["fill", "100%"],
+          "layer": 1
+        }
+      }
+    ]
+  },
+
+  "player_pic_panel@xerox_lib.p": {
+    "size": [15, "100%"],
+    "ignored": "$education_edition",
+    "controls": [
+      { "player_gamer_pic@xc_modern_pause:player_list.player_gamer_pic": {} },
+      { "player_local_icon@xc_modern_pause:player_list.player_local_icon": {} }
+    ]
+  },
+
+  "player_local_icon@xerox_lib.i": {
+    "texture": "textures/ui/lan_icon",
+    "size": [13, 13],
+    "layer": 1,
+    "bindings": [
+      {
+        "binding_name": "#local_icon_visible",
+        "binding_type": "collection",
+        "binding_collection_name": "players_collection",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "player_gamer_pic@xerox_lib.i": {
+    "texture": "#texture",
+    "size": [15, 15],
+    "layer": 1,
+    "texture_file_system": "#texture_source",
+    "bindings": [
+      {
+        "binding_name": "#texture",
+        "binding_type": "collection",
+        "binding_collection_name": "players_collection"
+      },
+      {
+        "binding_name": "#texture_source",
+        "binding_name_override": "#texture_file_system",
+        "binding_type": "collection",
+        "binding_collection_name": "players_collection"
+      },
+      {
+        "binding_name": "#gamerpic_visible",
+        "binding_type": "collection",
+        "binding_collection_name": "players_collection",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "gametag_wrapper@xerox_lib.p": {
+    "size": ["100%c", "100%"],
+    "controls": [
+      {
+        "gamertag@xc_modern_pause:player_list.player_gamertag": {}
+      }
+    ]
+  },
+
+  "player_gamertag@xerox_lib.l": {
+    "text": "#gamertag",
+    "font_type": "$global_font_type",
+    "backup_font_type": "$global_font_type_backup",
+    "size": ["100%", 10],
+    "layer": 2,
+    "offset": [2, 0],
+    "bindings": [
+      {
+        "binding_name": "#gamertag",
+        "binding_type": "collection",
+        "binding_collection_name": "players_collection"
+      }
+    ]
+  }
+}

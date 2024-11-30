@@ -1,0 +1,137 @@
+{
+  "namespace": "pasue_animation",
+
+  //--------------------------
+
+  "main_menu_alpha_out_animation@xerox_lib.aa": {
+    "easing": "out_cubic",
+    "duration": 0.4,
+    "to": -0.25,
+    "from": 1.0,
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+
+  "main_menu_alpha_out_animation_pop@xerox_lib.aa": {
+    "easing": "out_cubic",
+    "duration": 0.4,
+    "to": -0.25,
+    "from": 1.0,
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+
+  "main_menu_alpha_enter_animation@xerox_lib.aa": {
+    "easing": "out_cubic",
+    "duration": 0.4,
+    "from": -0.25,
+    "to": 1.0,
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+
+  "main_menu_alpha_enter_animation_pop@xerox_lib.aa": {
+    "easing": "out_cubic",
+    "duration": 0.4,
+    "from": -0.25,
+    "to": 1.0,
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
+  },
+
+  "main_menu_offset_out_animation@xerox_lib.ao": {
+    "easing": "out_cubic",
+    "duration": 0.4,
+    "to": [0, "-5%"],
+    "from": [0, 0],
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+
+  "main_menu_offset_out_animation_pop@xerox_lib.ao": {
+    "easing": "out_cubic",
+    "duration": 0.4,
+    "to": [0, "-5%"],
+    "from": [0, 0],
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+
+  "main_menu_offset_enter_animation@xerox_lib.ao": {
+    "easing": "out_cubic",
+    "duration": 0.4,
+    "from": [0, "-5%"],
+    "to": [0, 0],
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+
+  "main_menu_offset_enter_animation_pop@xerox_lib.ao": {
+    "easing": "out_cubic",
+    "duration": 0.4,
+    "from": [0, "-5%"],
+    "to": [0, 0],
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
+  },
+
+  //--------------------------
+
+  "player_list_reset0@xerox_lib.as": {
+    "duration": 0.0,
+    "from": [190, "100%c"],
+    "to": [190, "100%c"],
+    "play_event": "button.player_list_close"
+  },
+
+  "player_list_reset1@xerox_lib.as": {
+    "duration": 0.0,
+    "from": [190, 210],
+    "to": [190, 210],
+    "play_event": "button.player_list_open"
+  },
+
+  "player_list_open@xerox_lib.as": {
+    "easing": "out_cubic",
+    "duration": 0.25,
+    "to": [190, 210],
+    "from": [190, 0],
+    "play_event": "button.player_list_open"
+  },
+
+  "player_list_close@xerox_lib.as": {
+    "easing": "out_cubic",
+    "duration": 0.25,
+    "from": [190, 210],
+    "to": [190, 0],
+    "play_event": "button.player_list_close"
+  },
+
+  "player_list_open_button_show@xerox_lib.as": {
+    "duration": 0.0,
+    "to": ["90%", 20],
+    "from": [0, 0],
+    "play_event": "button.player_list_close"
+  },
+
+  "player_list_close_button_show@xerox_lib.as": {
+    "duration": 0.0,
+    "to": ["90%", 20],
+    "from": [0, 0],
+    "play_event": "button.player_list_open"
+  },
+
+  "player_list_open_button_hide@xerox_lib.as": {
+    "duration": 0.0,
+    "to": [0, 0],
+    "from": ["90%", 20],
+    "play_event": "button.player_list_open"
+  },
+
+  "player_list_close_button_hide@xerox_lib.as": {
+    "duration": 0.0,
+    "to": [0, 0],
+    "from": ["90%", 20],
+    "play_event": "button.player_list_close"
+  }
+}

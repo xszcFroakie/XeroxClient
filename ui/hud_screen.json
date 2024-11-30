@@ -1,0 +1,214 @@
+// 由@XSzC.制作的文件.
+// 未经允许不要使用任何文件. 请阅读LICENSE.txt
+
+// File made by @XSzC.
+// Don't use any file without permission. Read LICENSE.txt
+
+{
+  "namespace": "hud",
+
+  "layout_customization_sub_panel/background/sub_panel_content": {
+    "grid_item_template": "hud.layout_customization_option"
+  },
+
+  "hud_player_renderer/hud_player": {
+    "offset": ["-20240621%", "20.09%"]
+  },
+
+  "exp_progress_bar_and_hotbar/item_text_factory": {
+    "ignored": true
+  },
+
+  "exp_progress_bar_and_hotbar_pocket/item_text": {
+    "ignored": true
+  },
+
+  "centered_gui_elements_at_bottom_middle": {
+    "ignored": true
+  },
+
+  "root_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "redo_vanilla_hotbar@xc_modern_hotbar:vanilla.hotbar_content": {
+              "ignored": "($zeroday_style_hotbar or ((not $zeroday_style_hotbar) and $touch))"
+            }
+          },
+          {
+            "zeroday_hotbar@xc_modern_hotbar:zeroday.hotbar_content": {
+              "ignored": "((not $zeroday_style_hotbar) or ($zeroday_style_hotbar and $touch))"
+            }
+          },
+          {
+            "item_text_factory@xerox_lib.f": {
+              "control_ids": {
+                "item_text": "@xc_modern_hud_texts.item_name_text",
+                "jukebox_text": "@xc_modern_hud_texts.jukebox_popup_text"
+              }
+            }
+          },
+          {
+            "coordinate@xc_modern_coordinate.coordinate": {
+              "$vertical_coordinate|default": true
+            }
+          },
+          { "item_helper@handhold_base.item_helper": {} },
+          { "tab_list@xc_modern_tab_list.tab_list": {} },
+          {
+            "chat_panel@xc_modern_chat.modern_chat_panel": {
+              "size": [160, "0px"]
+            }
+          }
+        ]
+      },
+      {
+        "array_name": "controls",
+        "operation": "replace",
+        "control_name": "sidebar",
+        "value": [
+          {
+            "sidebar@xc_modern_scoreboard.scoreboard_sidebar": {
+              "bindings": [
+                {
+                  "binding_name": "#scoreboard_sidebar_visible",
+                  "binding_name_override": "#visible"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "array_name": "controls",
+        "operation": "remove",
+        "control_name": "chat_stack"
+      },
+      {
+        "array_name": "controls",
+        "operation": "replace",
+        "control_name": "hud_tip_text_factory",
+        "value": [
+          {
+            "hud_tip_text_factory@xerox_lib.f": {
+              "control_name": "@xc_modern_hud_texts.hud_tip_text"
+            }
+          }
+        ]
+      },
+      {
+        "array_name": "controls",
+        "operation": "replace",
+        "control_name": "hud_actionbar_text_area",
+        "value": [
+          {
+            "actionbar_text_area@xerox_lib.p": {
+              "factory": {
+                "name": "hud_actionbar_text_factory",
+                "control_ids": {
+                  "hud_actionbar_text": "hud_actionbar_text@xc_modern_hud_texts.hud_actionbar_text"
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "array_name": "controls",
+        "operation": "replace",
+        "control_name": "hud_title_text_area",
+        "value": [
+          {
+            "title_text_area@xerox_lib.p": {
+              "factory": {
+                "name": "hud_title_text_factory",
+                "control_ids": {
+                  "hud_title_text": "hud_title_text@xc_modern_hud_texts.hud_title_text"
+                }
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "hud_screen": {
+    "always_accepts_input": true,
+    "render_only_when_topmost": "$touch",
+    "low_frequency_rendering": true,
+    "$use_loading_bars": false,
+    "$screen_content": "hud.hud_content",
+    "modifications": [
+      {
+        "array_name": "button_mappings",
+        "operation": "insert_back",
+        "value": [
+          {
+            "from_button_id": "button.inventory_left",
+            "to_button_id": "button.hotbar_slot_select",
+            "mapping_type": "global"
+          },
+          {
+            "from_button_id": "button.inventory_right",
+            "to_button_id": "button.hotbar_slot_select",
+            "mapping_type": "global"
+          },
+          {
+            "from_button_id": "button.slot1",
+            "to_button_id": "button.hotbar_slot_select",
+            "mapping_type": "global"
+          },
+          {
+            "from_button_id": "button.slot2",
+            "to_button_id": "button.hotbar_slot_select",
+            "mapping_type": "global"
+          },
+          {
+            "from_button_id": "button.slot3",
+            "to_button_id": "button.hotbar_slot_select",
+            "mapping_type": "global"
+          },
+          {
+            "from_button_id": "button.slot4",
+            "to_button_id": "button.hotbar_slot_select",
+            "mapping_type": "global"
+          },
+          {
+            "from_button_id": "button.slot5",
+            "to_button_id": "button.hotbar_slot_select",
+            "mapping_type": "global"
+          },
+          {
+            "from_button_id": "button.slot6",
+            "to_button_id": "button.hotbar_slot_select",
+            "mapping_type": "global"
+          },
+          {
+            "from_button_id": "button.slot7",
+            "to_button_id": "button.hotbar_slot_select",
+            "mapping_type": "global"
+          },
+          {
+            "from_button_id": "button.slot8",
+            "to_button_id": "button.hotbar_slot_select",
+            "mapping_type": "global"
+          },
+          {
+            "from_button_id": "button.slot9",
+            "to_button_id": "button.hotbar_slot_select",
+            "mapping_type": "global"
+          },
+          {
+            "from_button_id": "button.slot0",
+            "to_button_id": "button.hotbar_slot_select",
+            "mapping_type": "global"
+          }
+        ]
+      }
+    ]
+  }
+}

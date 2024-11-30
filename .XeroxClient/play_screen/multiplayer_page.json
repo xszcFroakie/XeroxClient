@@ -1,0 +1,419 @@
+// 由@XSzC.制作的文件.
+// 未经允许不要使用任何文件. 请阅读LICENSE.txt
+
+// File made by @XSzC.
+// Don't use any file without permission. Read LICENSE.txt
+
+{
+  "namespace": "xc_modern_play:multiplayer",
+
+  "server_button_content_panel@xerox_lib.hsp": {
+    "size": ["100%", "100%"],
+    "controls": [
+      {
+        "screenshot@xerox_lib.p": {
+          "clips_children": true,
+          "size": ["100%c + 8px", "100%"],
+          "controls": [
+            {
+              "screenshot_pic@xerox_lib.i": {
+                "layer": 5,
+                "size": ["177.78%y", "100% - 8px"],
+                "fill": true,
+                "bindings": [
+                  {
+                    "binding_name": "#third_party_server_logo_texture_path",
+                    "binding_type": "collection",
+                    "binding_name_override": "#texture",
+                    "binding_collection_name": "$collection_name"
+                  },
+                  {
+                    "binding_name": "#third_party_server_logo_resource_location",
+                    "binding_type": "collection",
+                    "binding_name_override": "#texture_file_system",
+                    "binding_collection_name": "$collection_name"
+                  },
+                  {
+                    "binding_name": "#third_party_server_logo_resource_location",
+                    "binding_name_override": "#texture_file_system"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "title_panel@xerox_lib.p": {
+          "size": ["fill", "100%"],
+          "controls": [
+            {
+              "third_party_server_name@play.world_list_text": {
+                "text": "#third_party_server_name",
+                "localize": false,
+                "size": ["100%", 10],
+                "offset": [0, 4],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "bindings": [
+                  {
+                    "binding_name": "#third_party_server_name",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$collection_name"
+                  },
+                  {
+                    "binding_type": "collection",
+                    "binding_name": "#is_server_info_available_collection",
+                    "binding_name_override": "#visible",
+                    "binding_collection_name": "third_party_server_network_worlds"
+                  }
+                ]
+              }
+            },
+            {
+              "third_party_server_message@play.world_list_text": {
+                "text": "#third_party_server_message",
+                "localize": false,
+                "size": ["100%", 10],
+                "offset": [0, -4],
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "bindings": [
+                  {
+                    "binding_name": "#third_party_server_message",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$collection_name"
+                  },
+                  {
+                    "binding_type": "collection",
+                    "binding_name": "(not #is_network_available)",
+                    "binding_name_override": "#visible",
+                    "binding_collection_name": "third_party_server_network_worlds"
+                  }
+                ]
+              }
+            },
+            {
+              "ping@play.ping_rate_panel": {
+                "anchor_from": "right_middle",
+                "anchor_to": "right_middle",
+                "offset": [-4, 0]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "additional_server_toggle_content@xerox_lib.p": {
+    "size": ["100%", "100%"],
+    "controls": [
+      {
+        "network_world_header@play.network_world_header": { "offset": [2, 2] }
+      },
+      {
+        "network_world_details@play.network_world_details": {
+          "color": [],
+          "offset": [2, -2]
+        }
+      },
+      {
+        "ping@play.ping_rate_panel": {
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "offset": [-4, 0]
+        }
+      }
+    ]
+  },
+
+  "server_toggle_base@common_toggles.a_rc_8x_image": {
+    "size": ["100%", "100% - 2px"],
+    "$radio_toggle_group": true,
+    "$toggle_name": "server_navigation_toggle",
+    "$toggle_grid_collection_name": "$collection_name",
+    "$toggle_group_forced_index": "$toggle_index_binding_name",
+    "$toggle_state_binding_name": "#toggle_state",
+    "$toggle_tab_focus_binding_type": "global",
+    "$toggle_tab_focus_binding_name": "#navigation_tab_focus_precedence",
+    "$toggle_on_hover_binding_type": "global",
+    "$toggle_on_hover_binding_name": "#toggle_on_hover",
+    "$button_content": "play.server_button_content_panel",
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "$collection_name"
+      },
+      {
+        "binding_name": "#cross_platform_enabled",
+        "binding_name_override": "#enabled"
+      },
+      {
+        "binding_type": "collection",
+        "binding_name": "#is_server_info_available_collection",
+        "binding_name_override": "#enabled",
+        "binding_collection_name": "$collection_name"
+      },
+      {
+        "binding_type": "collection",
+        "binding_name": "$toggle_index_binding_name",
+        "binding_collection_name": "$collection_name"
+      }
+    ]
+  },
+
+  "featured_server_world_item@xc_modern_play:multiplayer.server_toggle_base": {
+    "size": ["100%", 44],
+    "$button_content": "xc_modern_play:multiplayer.server_button_content_panel",
+    "$toggle_index_binding_name": "#third_party_toggle_index"
+  },
+
+  "more_servers_world_item@xc_modern_play:multiplayer.server_toggle_base": {
+    "size": ["100%", 44],
+    "$button_content": "xc_modern_play:multiplayer.additional_server_toggle_content",
+    "$toggle_index_binding_name": "#additional_server_toggle_index"
+  },
+
+  "servers_scrolling_content@xerox_lib.vsp": {
+    "size": ["100%", "100%c"],
+    "$button_image_size": ["100%", "100% - 4px"],
+    "controls": [
+      {
+        "featured_servers_panel@xerox_lib.vsp": {
+          "size": ["100%", "100%c"],
+          "ignored": "$ignore_3rd_party_servers",
+          "$third_party_featured_servers": "thirdPartyWorld.Featured",
+          "$focus_id": "featured_servers_panel",
+          "controls": [
+            {
+              "loading_featured_panel@play.label_background": {
+                "size": ["100%", "100%c + 4px"],
+                "controls": [
+                  {
+                    "loading_friends_realms_label@xerox_lib.l": {
+                      "size": ["default", "default"],
+                      "text": "thirdPartyWorld.loadingFeaturedServers",
+                      "font_type": "$global_font_type",
+                      "backup_font_type": "$global_font_type_backup"
+                    }
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#loading_servers_progress_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "padding_1@xerox_lib.p": {
+                "size": [0, 2]
+              }
+            },
+            {
+              "featured_servers_label_panel@play.label_background": {
+                "size": ["100%", "100%c + 4px"],
+                "controls": [
+                  {
+                    "featured_servers_label@xerox_lib.l": {
+                      "size": ["default", "default"],
+                      "text": "thirdPartyWorld.Featured",
+                      "font_type": "$global_font_type",
+                      "backup_font_type": "$global_font_type_backup"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "padding_2@xerox_lib.p": {
+                "size": [0, 2]
+              }
+            },
+            {
+              "third_party_featured_grid@play.third_party_featured_server_grid": {
+                "grid_item_template": "xc_modern_play:multiplayer.featured_server_world_item"
+              }
+            },
+            {
+              "padding_3@xerox_lib.p": {
+                "size": [0, 2]
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#featured_servers_visible_and_available",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "padding@xerox_lib.p": {
+          "size": ["100%", 2]
+        }
+      },
+      {
+        "more_servers_label_panel@play.label_background": {
+          "size": ["100%", "100%c + 4px"],
+          "controls": [
+            {
+              "more_servers_label@xerox_lib.l": {
+                "size": ["default", "default"],
+                "text": "thirdPartyWorld.Additional",
+                "font_type": "$global_font_type",
+                "backup_font_type": "$global_font_type_backup",
+                "bindings": [
+                  {
+                    "binding_name": "#is_additional_server_label_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "more_servers_grid@play.more_servers_grid": {
+          "grid_item_template": "xc_modern_play:multiplayer.more_servers_world_item"
+        }
+      }
+    ]
+  },
+
+  "multiplayer_page_content@xerox_lib.vsp": {
+    "size": ["100% - 10px", "100% - 10px"],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "server_navigation_tab_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "top_button_panel@xerox_lib.hsp": {
+          "size": ["100%", 30],
+          "controls": [
+            {
+              "join_server_1@common_buttons.a_rc_8x_text": {
+                "$pressed_button_name": "button.connect_to_third_party_server",
+                "$button_text": "networkWorld.join_server",
+                "size": ["fill", 30],
+                "bindings": [
+                  {
+                    "binding_name": "#is_third_party_server_selected",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "join_server_2@common_buttons.a_rc_8x_text": {
+                "$pressed_button_name": "button.menu_network_server_item",
+                "$button_text": "networkWorld.join_server",
+                "size": ["fill", 30],
+                "bindings": [
+                  {
+                    "binding_name": "#is_additional_server_selected",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "network_server_world_edit@common_buttons.a_rc_8x_text": {
+                "$pressed_button_name": "button.menu_network_server_world_edit",
+                "size": ["fill", 30],
+                "ignored": "$ignore_add_servers",
+                "$button_text": "gui.edit",
+                "bindings": [
+                  {
+                    "binding_name": "#is_additional_server_selected",
+                    "binding_name_override": "#visible"
+                  },
+                  {
+                    "binding_type": "collection_details",
+                    "binding_collection_name": "servers_network_worlds"
+                  },
+                  {
+                    "binding_name": "#network_world_button_enabled",
+                    "binding_name_override": "#enabled",
+                    "binding_collection_name": "servers_network_worlds",
+                    "binding_type": "collection"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "divide@xerox_lib.p": {
+          "size": ["100%", 6],
+          "controls": [
+            {
+              "divide@xerox_lib.i": {
+                "texture": "textures/XeroxClient/diffusion",
+                "alpha": 0.65,
+                "layer": 1,
+                "size": ["100%", 3],
+                "offset": [0, 1]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "servers_scrolling_panel@xc_modern_scrolling_panel.scrolling_panel": {
+          "size": ["100%", "fill"],
+          "$scrolling_content": "xc_modern_play:multiplayer.servers_scrolling_content"
+        }
+      },
+      {
+        "divide@xerox_lib.p": {
+          "ignored": "$ignore_add_servers",
+          "size": ["100%", 6],
+          "controls": [
+            {
+              "divide@xerox_lib.i": {
+                "texture": "textures/XeroxClient/diffusion",
+                "alpha": 0.65,
+                "layer": 1,
+                "size": ["100%", 3],
+                "offset": [0, 1]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "add_server_toggle_button@common_toggles.a_rc_8x_text": {
+          "$xeroxclient_button_color_pressed": "$xeroxclient_ui_theme_button_default_color",
+          "visible": "(not $ignore_add_servers)",
+          "size": ["100%", 20],
+          "$button_text": "networkWorld.add_server",
+          "$radio_toggle_group": true,
+          "$toggle_name": "server_navigation_toggle",
+          "$toggle_view_binding_name": "add_server_toggle_button",
+          "$toggle_state_binding_name": "#toggle_state",
+          "$toggle_on_hover_binding_name": "none",
+          "$toggle_tab_focus_binding_type": "global",
+          "$toggle_tab_focus_binding_name": "#navigation_tab_focus_precedence",
+          "$toggle_group_forced_index": 100,
+          "bindings": [
+            {
+              "binding_name": "#add_server_enabled",
+              "binding_name_override": "#enabled"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

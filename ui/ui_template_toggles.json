@@ -1,0 +1,113 @@
+// 由@XSzC.制作的文件.
+// 未经允许不要使用任何文件. 请阅读LICENSE.txt
+
+// File made by @XSzC.
+// Don't use any file without permission. Read LICENSE.txt
+
+{
+  "namespace": "common_toggles",
+
+  "content_toggle_label_panel/toggle_label": {
+    "font_type": "$global_font_type",
+    "backup_font_type": "$global_font_type_backup"
+  },
+
+  "dark_template_toggle": {
+    "$default_texture|default": "textures/XeroxClient/White",
+    "$hover_texture|default": "textures/XeroxClient/White",
+    "$pressed_texture|default": "textures/XeroxClient/White",
+    "$pressed_no_hover_texture|default": "textures/XeroxClient/White"
+  },
+
+  "light_template_toggle": {
+    "$default_texture|default": "textures/XeroxClient/White",
+    "$hover_texture|default": "textures/XeroxClient/White",
+    "$pressed_texture|default": "textures/XeroxClient/White",
+    "$pressed_no_hover_texture|default": "textures/XeroxClient/White",
+    "$locked_texture|default": "textures/XeroxClient/White",
+
+    "$xeroxclient_button_alpha_default|default": "$xeroxclient_ui_theme_button_default_alpha",
+    "$xeroxclient_button_alpha_hover|default": "$xeroxclient_ui_theme_button_hover_alpha",
+    "$xeroxclient_button_alpha_pressed|default": "$xeroxclient_ui_theme_button_pressed_alpha",
+    "$xeroxclient_button_alpha_locked|default": "$xeroxclient_ui_theme_button_locked_alpha",
+
+    "$xeroxclient_button_color_default|default": "$xeroxclient_ui_theme_button_default_color",
+    "$xeroxclient_button_color_hover|default": "$xeroxclient_ui_theme_button_hover_color",
+    "$xeroxclient_button_color_pressed|default": "$xeroxclient_ui_theme_button_pressed_color",
+    "$xeroxclient_button_color_locked|default": "$xeroxclient_ui_theme_button_locked_color",
+
+    "$xeroxclient_button_content_offset_default": "$xeroxclient_ui_theme_button_content_default_offset",
+    "$xeroxclient_button_content_offset_hover": "$xeroxclient_ui_theme_button_content_hover_offset",
+    "$xeroxclient_button_content_offset_pressed": "$xeroxclient_ui_theme_button_content_pressed_offset"
+  },
+
+  "dark_ui_toggle_collection": {
+    "$default_texture|default": "textures/XeroxClient/White",
+    "$hover_texture|default": "textures/XeroxClient/White",
+    "$pressed_texture|default": "textures/XeroxClient/White",
+    "$pressed_no_hover_texture|default": "textures/XeroxClient/White"
+  },
+
+  "light_ui_toggle_collection": {
+    "$default_texture|default": "textures/XeroxClient/White",
+    "$hover_texture|default": "textures/XeroxClient/White",
+    "$pressed_texture|default": "textures/XeroxClient/White",
+    "$pressed_no_hover_texture|default": "textures/XeroxClient/White",
+    "$locked_texture|default": "textures/XeroxClient/White",
+
+    "$xeroxclient_button_alpha_default|default": "$xeroxclient_ui_theme_button_default_alpha",
+    "$xeroxclient_button_alpha_hover|default": "$xeroxclient_ui_theme_button_hover_alpha",
+    "$xeroxclient_button_alpha_pressed|default": "$xeroxclient_ui_theme_button_pressed_alpha",
+    "$xeroxclient_button_alpha_locked|default": "$xeroxclient_ui_theme_button_locked_alpha",
+
+    "$xeroxclient_button_color_default|default": "$xeroxclient_ui_theme_button_default_color",
+    "$xeroxclient_button_color_hover|default": "$xeroxclient_ui_theme_button_hover_color",
+    "$xeroxclient_button_color_pressed|default": "$xeroxclient_ui_theme_button_pressed_color",
+    "$xeroxclient_button_color_locked|default": "$xeroxclient_ui_theme_button_locked_color",
+
+    "$xeroxclient_button_content_offset_default": "$xeroxclient_ui_theme_button_content_default_offset",
+    "$xeroxclient_button_content_offset_hover": "$xeroxclient_ui_theme_button_content_hover_offset",
+    "$xeroxclient_button_content_offset_pressed": "$xeroxclient_ui_theme_button_content_pressed_offset"
+  },
+
+  "switch_toggle_collection": {},
+
+  "toggle_unchecked": {
+    "$xeroxclient_button_alpha": "$xeroxclient_button_alpha_default",
+    "$xeroxclient_button_color": "$xeroxclient_button_color_default",
+    "$xeroxclient_button_text_offset": "$xeroxclient_button_content_offset_default"
+  },
+
+  "toggle_checked": {
+    "$xeroxclient_button_alpha": "$xeroxclient_button_alpha_pressed",
+    "$xeroxclient_button_color": "$xeroxclient_button_color_pressed",
+    "$xeroxclient_button_text_offset": "$xeroxclient_button_content_offset_pressed"
+  },
+
+  "toggle_unchecked_hover": {
+    "$xeroxclient_button_alpha": "$xeroxclient_button_alpha_hover",
+    "$xeroxclient_button_color": "$xeroxclient_button_color_hover",
+    "$xeroxclient_button_text_offset": "$xeroxclient_button_content_offset_hover"
+  },
+
+  "toggle_checked_hover": {
+    "$xeroxclient_button_alpha": "$xeroxclient_button_alpha_hover",
+    "$xeroxclient_button_color": "$xeroxclient_button_color_hover",
+    "$xeroxclient_button_text_offset": "$xeroxclient_button_content_offset_hover"
+  },
+
+  "toggle_locked": {
+    "$xeroxclient_button_alpha": "$xeroxclient_button_alpha_locked",
+    "$xeroxclient_button_color": "$xeroxclient_button_color_locked"
+  },
+
+  "toggle_unchecked_locked": {
+    "$xeroxclient_button_alpha": "$xeroxclient_button_alpha_locked",
+    "$xeroxclient_button_color": "$xeroxclient_button_color_locked"
+  },
+
+  "toggle_checked_locked": {
+    "$xeroxclient_button_alpha": "$xeroxclient_button_alpha_locked",
+    "$xeroxclient_button_color": "$xeroxclient_button_color_locked"
+  }
+}

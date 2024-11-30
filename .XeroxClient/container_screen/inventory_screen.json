@@ -1,0 +1,1232 @@
+// 由@XSzC.制作的文件.
+// 未经允许不要使用任何文件. 请阅读LICENSE.txt
+
+// File made by @XSzC.
+// Don't use any file without permission. Read LICENSE.txt
+
+{
+  "namespace": "xc_modern_inventory_screen",
+
+  "recipe_book_panel@xerox_lib.vsp": {
+    "size": [146, "100%-2px"],
+    "anchor_from": "right_middle",
+    "anchor_to": "right_middle",
+    "offset": [-1, 0],
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@container:classic_animation.recipe_book_enter",
+      "@container:classic_animation.recipe_book_out"
+    ],
+    "visible": false,
+    "bindings": [
+      {
+        "binding_type": "global",
+        "binding_name": "#is_recipe_book_layout",
+        "binding_name_override": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "tab_panel@xerox_lib.i": {
+          "texture": "textures/XeroxClient/rounded_corner/all8x",
+          "color": "$xeroxclient_ui_theme_menu_background_color",
+          "alpha": 0.3,
+          "layer": 0,
+          "size": ["100%", 22],
+          "clips_children": true,
+          "controls": [
+            {
+              "stack@xerox_lib.hsp": {
+                "size": ["100%-2px", "100%-2px"],
+                "$toggle_group_default_selected": "$construction_index",
+                "$toggle_binding_type": "global",
+                "$toggle_name": "navigation_tab",
+                "$toggle_focus_enabled": false,
+                "$xeroxclient_button_alpha_default": 0.0,
+                "controls": [
+                  {
+                    "con_tab@common_tabs.a_rc_8x": {
+                      "size": ["fill", 20],
+                      "$tab_content": "xc_modern_inventory_screen.construction_icon",
+                      "$tab_view_binding_name": "construction_tab_toggle",
+                      "$toggle_group_forced_index": "$construction_index",
+                      "$toggle_state_binding_name": "#is_left_tab_construct"
+                    }
+                  },
+                  {
+                    "padding0@xerox_lib.p": {
+                      "size": [1, 0]
+                    }
+                  },
+                  {
+                    "equ_tab@common_tabs.a_rc_8x": {
+                      "size": ["fill", 20],
+                      "$tab_content": "xc_modern_inventory_screen.equipment_icon",
+                      "$tab_view_binding_name": "equipment_tab_toggle",
+                      "$toggle_group_forced_index": "$equipment_index",
+                      "$toggle_state_binding_name": "#is_left_tab_equipment"
+                    }
+                  },
+                  {
+                    "padding1@xerox_lib.p": {
+                      "size": [1, 0]
+                    }
+                  },
+                  {
+                    "ite_tab@common_tabs.a_rc_8x": {
+                      "size": ["fill", 20],
+                      "$tab_content": "xc_modern_inventory_screen.miscellaneous_icon",
+                      "$tab_view_binding_name": "items_tab_toggle",
+                      "$toggle_group_forced_index": "$items_index",
+                      "$toggle_state_binding_name": "#is_left_tab_items"
+                    }
+                  },
+                  {
+                    "padding2@xerox_lib.p": {
+                      "size": [1, 0]
+                    }
+                  },
+                  {
+                    "nat_tab@common_tabs.a_rc_8x": {
+                      "size": ["fill", 20],
+                      "$tab_content": "xc_modern_inventory_screen.nature_icon",
+                      "$tab_view_binding_name": "nature_tab_toggle",
+                      "$toggle_group_forced_index": "$nature_index",
+                      "$toggle_state_binding_name": "#is_left_tab_nature"
+                    }
+                  },
+                  {
+                    "padding3@xerox_lib.p": {
+                      "size": [1, 0]
+                    }
+                  },
+                  {
+                    "sea_tab@common_tabs.a_rc_8x": {
+                      "size": ["fill", 20],
+                      "$tab_content": "xc_modern_inventory_screen.search_icon",
+                      "$tab_view_binding_name": "search_tab_toggle",
+                      "$toggle_group_forced_index": "$search_index",
+                      "$toggle_state_binding_name": "#is_left_tab_search"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "padding0@xerox_lib.p": {
+          "size": [0, 1]
+        }
+      },
+      {
+        "recipe_book_background@xerox_lib.i": {
+          "texture": "textures/XeroxClient/rounded_corner/all8x",
+          "color": "$xeroxclient_ui_theme_menu_background_color",
+          "alpha": 0.3,
+          "layer": 0,
+          "size": ["100%", "fill"],
+          //"clips_children": true,
+          "controls": [
+            {
+              "stack@xerox_lib.vsp": {
+                "size": ["100%-2px", "100%-2px"],
+                "controls": [
+                  {
+                    "text_panel@xerox_lib.p": {
+                      "size": ["100%", 20],
+                      "controls": [
+                        {
+                          "creative_label@xerox_lib.l": {
+                            "size": ["100%-2px", "default"],
+                            "anchor_from": "left_middle",
+                            "anchor_to": "left_middle",
+                            "offset": [2, 0],
+                            "layer": 2,
+                            "font_type": "$global_font_type",
+                            "backup_font_type": "$global_font_type_backup",
+                            "text": "#tab_label_text",
+                            "bindings": [
+                              {
+                                "binding_name": "#tab_label_text"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "filter_toggle@common_toggles.a_rc_8x_image": {
+                            "$xeroxclient_button_alpha_default": 0.3,
+                            "anchor_from": "right_middle",
+                            "anchor_to": "right_middle",
+                            "$button_image_size": ["100%", "100%"],
+                            "size": ["100%y", 20],
+                            "$button_content": "xc_modern_inventory_screen.filter_icon",
+                            "$toggle_name": "toggle.enableFiltering",
+                            "$toggle_binding_type": "global",
+                            "$toggle_state_binding_name": "#filtering_enabled",
+                            "visible": false,
+                            "bindings": [
+                              {
+                                "binding_name": "(not #is_creative_mode)",
+                                "binding_name_override": "#visible"
+                              }
+                            ],
+                            "$button_mappings": [
+                              {
+                                "to_button_id": "button.filter_toggle_hovered",
+                                "mapping_type": "pressed"
+                              },
+                              {
+                                "from_button_id": "button.menu_select",
+                                "to_button_id": "button.menu_select",
+                                "mapping_type": "pressed"
+                              },
+                              {
+                                "from_button_id": "button.menu_ok",
+                                "to_button_id": "button.menu_ok",
+                                "mapping_type": "focused"
+                              },
+                              {
+                                "from_button_id": "button.controller_back",
+                                "to_button_id": "button.controller_back",
+                                "mapping_type": "focused",
+                                "ignored": "(not $is_ps4)"
+                              },
+                              {
+                                "ignored": "(not $enable_directional_toggling)",
+                                "from_button_id": "button.menu_left",
+                                "to_button_id": "$toggle_off_button",
+                                "mapping_type": "pressed",
+                                "input_mode_condition": "gamepad_and_not_gaze"
+                              },
+                              {
+                                "ignored": "(not $enable_directional_toggling)",
+                                "from_button_id": "button.menu_right",
+                                "to_button_id": "$toggle_on_button",
+                                "mapping_type": "pressed",
+                                "input_mode_condition": "gamepad_and_not_gaze"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "recipe_book_content@xerox_lib.ip": {
+                      "size": ["100%", "fill"],
+                      "controls": [
+                        {
+                          "recipe_book_scrolling_panel@xc_modern_scrolling_panel.scrolling_panel": {
+                            "$scrolling_content": "xc_modern_inventory_screen.scroll_grid_panel",
+                            "$collection_name": "recipe_book",
+                            "size": ["100%", "100%-4px"],
+                            "$allow_scrolling_even_when_content_fits": false,
+                            "$scrolling_panel_base_button_mappings": [
+                              {
+                                "from_button_id": "button.menu_select",
+                                "to_button_id": "button.destroy_selection",
+                                "mapping_type": "pressed"
+                              },
+                              {
+                                "from_button_id": "button.menu_secondary_select",
+                                "to_button_id": "button.container_reset_held",
+                                "mapping_type": "pressed"
+                              },
+                              {
+                                "from_button_id": "button.menu_ok",
+                                "to_button_id": "button.destroy_selection",
+                                "mapping_type": "pressed"
+                              },
+                              {
+                                "from_button_id": "button.controller_back",
+                                "to_button_id": "button.destroy_selection",
+                                "mapping_type": "pressed",
+                                "ignored": "(not $is_ps4)"
+                              },
+                              {
+                                "from_button_id": "button.controller_select",
+                                "to_button_id": "button.clear_hotbar_or_remove_one",
+                                "mapping_type": "pressed"
+                              },
+                              {
+                                "from_button_id": "button.controller_secondary_select",
+                                "to_button_id": "button.container_reset_held",
+                                "mapping_type": "pressed"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "search_box_and_toggle@xerox_lib.hsp": {
+                      "size": ["100%", "100%cm"],
+                      "visible": false,
+                      "bindings": [
+                        {
+                          "binding_name": "#is_left_tab_search",
+                          "binding_name_override": "#visible"
+                        }
+                      ],
+                      "controls": [
+                        {
+                          "text_edit_control@xc_modern_edit_box.text_edit_box": {
+                            "size": ["fill", 20],
+                            "property_bag": {
+                              "#property_field": "#item_name"
+                            },
+                            "$text_edit_binding_name": "#text_box_item_name",
+                            "$text_edit_box_label_size": ["default", 10],
+                            "$text_edit_box_label_offset": [10, 0],
+                            "$text_edit_box_hovered_button_id": "button.search_bar_hovered",
+                            "$text_edit_box_clear_to_button_id": "button.search_bar_clear",
+                            "$text_edit_box_selected_to_button_id": "button.search_bar_selected",
+                            "$text_edit_box_deselected_to_button_id": "button.search_bar_deselected",
+                            "$text_clear_button_enabled": true,
+                            "$text_clear_button_size": [15, 15],
+                            "$text_clear_button_offset": [2, 0],
+                            "$magnifying_glass_enabled": true,
+                            "$magnifying_glass_size": [8, 8],
+                            "$magnifying_glass_offset": [0.75, -0.5],
+                            "focus_wrap_enabled": false
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "recipe_book_icon@xerox_lib.i": {
+    "size": "$default_size",
+    "$default_size": [12, 12],
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@container:classic_animation.size_enter",
+      "@container:classic_animation.size_out"
+    ],
+    "texture": "textures/XeroxClient/icon/recipe_book"
+  },
+
+  "filter_icon@xerox_lib.i": {
+    "size": [12, 12],
+    "texture": "textures/XeroxClient/icon/filter"
+  },
+
+  "equipment_icon@xerox_lib.i": {
+    "size": [12, 12],
+    "texture": "textures/XeroxClient/icon/equipment"
+  },
+
+  "construction_icon@xerox_lib.i": {
+    "size": [12, 12],
+    "texture": "textures/XeroxClient/icon/construction"
+  },
+
+  "nature_icon@xerox_lib.i": {
+    "size": [12, 12],
+    "texture": "textures/XeroxClient/icon/nature"
+  },
+
+  "miscellaneous_icon@xerox_lib.i": {
+    "size": [12, 12],
+    "texture": "textures/XeroxClient/icon/miscellaneous"
+  },
+
+  "search_icon@xerox_lib.i": {
+    "size": [12, 12],
+    "texture": "textures/XeroxClient/icon/search"
+  },
+
+  "scroll_grid_panel@xerox_lib.ip": {
+    "size": ["100%", "100%c+2px"],
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.destroy_selection",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_secondary_select",
+        "to_button_id": "button.container_reset_held",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.destroy_selection",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_back",
+        "to_button_id": "button.destroy_selection",
+        "mapping_type": "pressed",
+        "ignored": "(not $is_ps4)"
+      },
+      {
+        "from_button_id": "button.controller_select",
+        "to_button_id": "button.clear_hotbar_or_remove_one",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_secondary_select",
+        "to_button_id": "button.container_reset_held",
+        "mapping_type": "pressed"
+      }
+    ],
+    "controls": [{ "grid@xc_modern_inventory_screen.scroll_grid": {} }]
+  },
+
+  "scroll_grid@xerox_lib.g": {
+    "size": ["100%", "default"],
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "$binding_condition|default": "visible",
+    "collection_name": "$collection_name",
+    "$grid_item_precache_count|default": 0,
+    "grid_rescaling_type": "horizontal",
+    "grid_item_template": "xc_modern_inventory_screen.recipe_book_item",
+    "bindings": [
+      {
+        "binding_name": "#recipe_book_total_items",
+        "binding_name_override": "#maximum_grid_items",
+        "binding_condition": "$binding_condition",
+        "binding_type": "collection",
+        "binding_collection_name": "$collection_name"
+      }
+    ]
+  },
+
+  "container_cell_images@crafting.container_cell_images": {
+    "size": "$default_size",
+    "$default_size": "$slot_size",
+    "anims": [
+      "@container:classic_animation.size_enter",
+      "@container:classic_animation.size_out"
+    ],
+    "animation_reset_name": "screen_animation_reset",
+    "$cell_image_size": ["88.8888888889%", "100%x"],
+    "controls": [
+      {
+        "cell_red@crafting.cell_image_red": {
+          "texture": "textures/XeroxClient/rounded_corner/all8x",
+          "alpha": 0.3,
+          "color": [1.0, 0.333, 0.333]
+        }
+      }
+    ]
+  },
+
+  "recipe_book_item@container:classic_common.container_item": {
+    "$stack_count_required": true,
+    "$durability_bar_required": false,
+    "$storage_bar_required": false,
+    "$item_renderer_binding_condition": "visible",
+    "$button_ref": "crafting.creative_no_coalesce_container_slot_button",
+    "$background_images": "xc_modern_inventory_screen.container_cell_images",
+    "$slot_selected_binding_name": "#is_creative_selected_slot",
+    "$stack_count_binding_name": "#recipe_craftable_count",
+    "$item_collection_name": "recipe_book",
+    "$hover_text_binding_name": "#recipe_hover_text",
+    "$hover_text_anchor_from": "center",
+    "$hover_text_anchor_to": "top_right",
+    "$container_hover_text_fixed_offset": ["62.5%", 0],
+    "$container_hover_text_offset": ["-62.5%", "-106.25%"],
+    "$hover_text_anims": [],
+    "anims": [],
+    "controls": [
+      {
+        "item_cell@xerox_lib.p": {
+          "size": "$slot_size",
+          "layer": 0,
+          "controls": [
+            {
+              "$background_image_control_name@xerox_lib.p": {
+                "size": "$cell_image_size",
+                "$cell_image_size|default": ["88.8888888889%", "100%x"],
+                "layer": 1,
+                "controls": [
+                  {
+                    "recipe_book_red_button@xerox_lib.i": {
+                      "texture": "textures/XeroxClient/rounded_corner/all8x",
+                      "alpha": 0.3,
+                      "color": [1.0, 0.333, 0.333],
+                      "visible": false,
+                      "bindings": [
+                        {
+                          "binding_name": "#container_item_background_texture",
+                          "binding_type": "collection",
+                          "binding_collection_name": "$item_collection_name"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "(((#container_item_background_texture - 'textures/ui/' - '.png') = 'recipe_book_red_button') or ((#container_item_background_texture - 'textures/ui/' - '.png') = 'recipe_book_red_button_pressed'))",
+                          "target_property_name": "#visible"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "recipe_book_touch_cell_selected@xerox_lib.i": {
+                      "texture": "textures/XeroxClient/rounded_corner/all8x",
+                      "alpha": 0.3,
+                      "color": [0.667, 0.667, 1.0],
+                      "visible": false,
+                      "bindings": [
+                        {
+                          "binding_name": "#container_item_background_texture",
+                          "binding_type": "collection",
+                          "binding_collection_name": "$item_collection_name"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "((#container_item_background_texture - 'textures/ui/' - '.png') = 'recipe_book_touch_cell_selected')",
+                          "target_property_name": "#visible"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "item@xerox_lib.p": {
+                "size": "$slot_size",
+                "layer": 0,
+                "clips_children": true,
+                "controls": [
+                  {
+                    "stack_count_label@container:classic_common.stack_count_label": {
+                      "layer": 9
+                    }
+                  },
+                  {
+                    "$item_renderer@$item_renderer": {
+                      "size": "$item_rend_size",
+                      "anchor_to": "center",
+                      "anchor_from": "center",
+                      "layer": 7
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "durability_bar@container:classic_common.durability_bar": {
+                "layer": 8
+              }
+            },
+            {
+              "storage_bar@common.storage_bar": {
+                "layer": 8
+              }
+            },
+            {
+              "overlay@xerox_lib.p": {
+                "layer": 9,
+                "size": ["100%cm", "100%cm"],
+                "anchor_from": "bottom_right",
+                "anchor_to": "bottom_right",
+                "offset": [-1, -1],
+                "controls": [
+                  {
+                    "expand@xerox_lib.l": {
+                      "text": "+§🥰",
+                      "size": ["default", "default"],
+                      "text_alignment": "center",
+                      "shadow": true,
+                      "bindings": [
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "overlay",
+                          "resolve_sibling_scope": true,
+                          "source_property_name": "(#container_item_modifier = 2)",
+                          "target_property_name": "#alpha"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "contract@xerox_lib.l": {
+                      "text": "-§🥵",
+                      "size": ["100%sm", "100%sm"],
+                      "text_alignment": "center",
+                      "shadow": true,
+                      "bindings": [
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "overlay",
+                          "resolve_sibling_scope": true,
+                          "source_property_name": "(#container_item_modifier = 1)",
+                          "target_property_name": "#alpha"
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#container_item_modifier",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$item_collection_name",
+                    "binding_condition": "visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "item_selected_image@xerox_lib.p": {
+          "size": "$slot_size",
+          "layer": 4,
+          "$slot_selected_binding_name|default": "#is_selected_slot",
+          "visible": false,
+          "bindings": [
+            {
+              "binding_name": "$slot_selected_binding_name",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ],
+          "controls": [
+            {
+              "progress_bar_release@common.inventory_hold_icon_release": {
+                "layer": 70
+              }
+            }
+          ]
+        }
+      },
+      {
+        "item_button_ref@xerox_lib.p": {
+          "size": "$slot_size",
+          "layer": 5,
+          "controls": [
+            {
+              "not_touch_mode@$button_ref": {
+                //"ignored": "$touch",
+                "tts_ignore_count": true,
+                "tts_skip_message": true,
+                "tts_inherit_siblings": true
+              }
+            }/*
+            {
+              "touch_mode@xerox_lib.p": {
+                "layer": 5,
+                "ignored": "(not $touch)",
+                "controls": [
+                  {
+                    "normal@xerox_lib.p": {
+                      "visible": false,
+                      "bindings": [
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "genshinimpact_normal",
+                          "source_property_name": "#toggle_state",
+                          "target_property_name": "#visible"
+                        }
+                      ],
+                      "controls": [
+                        {
+                          "ref@$button_ref": {
+                            "tts_ignore_count": true,
+                            "tts_skip_message": true,
+                            "tts_inherit_siblings": true
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "auto_place@xerox_lib.p": {
+                      "visible": false,
+                      "bindings": [
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "reserve1999_autoplace",
+                          "source_property_name": "#toggle_state",
+                          "target_property_name": "#visible"
+                        }
+                      ],
+                      "controls": [
+                        {
+                          "ref@$button_ref": {
+                            "tts_ignore_count": true,
+                            "tts_skip_message": true,
+                            "tts_inherit_siblings": true,
+                            "button_mappings": [
+                              {
+                                "from_button_id": "button.menu_select",
+                                "to_button_id": "$auto_place_mode_button_name",
+                                "mapping_type": "pressed"
+                              },
+                              {
+                                "from_button_id": "button.menu_ok",
+                                "to_button_id": "$auto_place_mode_button_name",
+                                "mapping_type": "pressed"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "drop_one@xerox_lib.p": {
+                      "visible": false,
+                      "bindings": [
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "honkaistarrail_dropone",
+                          "source_property_name": "#toggle_state",
+                          "target_property_name": "#visible"
+                        }
+                      ],
+                      "controls": [
+                        {
+                          "ref@$button_ref": {
+                            "tts_ignore_count": true,
+                            "tts_skip_message": true,
+                            "tts_inherit_siblings": true,
+                            "button_mappings": [
+                              {
+                                "from_button_id": "button.menu_select",
+                                "to_button_id": "button.drop_one",
+                                "mapping_type": "pressed"
+                              },
+                              {
+                                "from_button_id": "button.menu_ok",
+                                "to_button_id": "button.drop_one",
+                                "mapping_type": "pressed"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }*/
+          ]
+        }
+      },
+      {
+        "container_item_lock_overlay@common.container_item_lock_overlay": {
+          "size": "$slot_size",
+          "offset": ["5.5555555556%", "5.5555555556%"],
+          "anchor_to": "top_left",
+          "anchor_from": "top_left",
+          "layer": 6
+        }
+      }
+    ]
+  },
+
+  "inventory_panel@xerox_lib.i": {
+    "texture": "textures/XeroxClient/rounded_corner/all8x",
+    "color": "$xeroxclient_ui_theme_menu_background_color",
+    "alpha": 0.3,
+    "layer": 0,
+    "size": ["100%cm", "100%c"],
+    "clips_children": true,
+    "controls": [
+      {
+        "top_half@xerox_lib.p": {
+          "size": ["100%sm", "46.0227272727%x"],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "controls": [
+            {
+              "0size_panel@xerox_lib.p": {
+                "size": [0, 0],
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "ignored": "(not $touch)",
+                "offset": ["-3.9772727273%", "2.4691358025%"],
+                "controls": [
+                  {
+                    "close_button@common_buttons.a_rc_8x_text": {
+                      "$default_size": [12, 12],
+                      "size": "$default_size",
+                      "animation_reset_name": "screen_animation_reset",
+                      "anims": [
+                        "@container:classic_animation.size_enter",
+                        "@container:classic_animation.size_out"
+                      ],
+                      "anchor_from": "top_right",
+                      "anchor_to": "top_right",
+                      "$button_text": "×",
+                      "$button_image_size": ["100%", "100%"],
+                      "$pressed_button_name": "button.menu_exit",
+                      "$xeroxclient_button_alpha_default": 0.0,
+                      "$xeroxclient_button_alpha_hover": 0.9,
+                      "$xeroxclient_button_alpha_pressed": 0.9,
+                      "$xeroxclient_button_color_hover": [1.0, 0.333, 0.333],
+                      "$xeroxclient_button_color_pressed": [1.0, 0.333, 0.333],
+                      "$xeroxclient_button_content_offset_default": [0, -3],
+                      "$xeroxclient_button_content_offset_hover": [0, -3],
+                      "$xeroxclient_button_content_offset_pressed": [0, -3],
+                      "$button_font_type": "HarmonyOS-Regular"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "player@xerox_lib.hsp": {
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "offset": ["3.4090909091%", "-1.2345679012%"],
+                "size": ["100%c", "100%cm"],
+                "controls": [
+                  {
+                    "armor@xerox_lib.i": {
+                      "texture": "textures/XeroxClient/rounded_corner/all8x",
+                      "color": "$xeroxclient_ui_theme_menu_background_color",
+                      "alpha": 0.3,
+                      "layer": 1,
+                      "size": ["111.1111111111%c", "102.7777777778%c"],
+                      "controls": [
+                        {
+                          "armor_grid@xerox_lib.vsp": {
+                            "size": ["100%cm", "400%x"],
+                            "$item_collection_name": "armor_items",
+                            "collection_name": "$item_collection_name",
+                            "controls": [
+                              {
+                                "0@container:classic_common.container_item": {
+                                  "collection_index": 0
+                                }
+                              },
+                              {
+                                "1@container:classic_common.container_item": {
+                                  "collection_index": 1
+                                }
+                              },
+                              {
+                                "2@container:classic_common.container_item": {
+                                  "collection_index": 2
+                                }
+                              },
+                              {
+                                "3@container:classic_common.container_item": {
+                                  "collection_index": 3
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "player@xerox_lib.p": {
+                      "size": ["104.3478260870%c", "100%sm"],
+                      "controls": [
+                        {
+                          "player_rend@xerox_lib.i": {
+                            "texture": "textures/XeroxClient/rounded_corner/all8x",
+                            "color": "$xeroxclient_ui_theme_menu_background_color",
+                            "alpha": 0.3,
+                            "layer": 1,
+                            "size": ["153.3333333333%c", "100%"],
+                            "controls": [
+                              {
+                                "paper_doll_renderer@xerox_lib.cr": {
+                                  "offset": [0, "14.8648648649%"],
+                                  "anchor_from": "top_middle",
+                                  "anchor_to": "top_middle",
+                                  "$default_size": [30, 30],
+                                  "size": "$default_size",
+                                  "renderer": "live_player_renderer",
+                                  "property_bag": {
+                                    "#look_at_cursor": true
+                                  },
+                                  "animation_reset_name": "screen_animation_reset",
+                                  "anims": [
+                                    "@container:classic_animation.size_enter",
+                                    "@container:classic_animation.size_out"
+                                  ],
+                                  "layer": 3
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "offhand@xerox_lib.i": {
+                      "size": ["100%c", "100%sm"],
+                      "controls": [
+                        {
+                          "bg@xerox_lib.i": {
+                            "texture": "textures/XeroxClient/rounded_corner/all8x",
+                            "color": "$xeroxclient_ui_theme_menu_background_color",
+                            "alpha": 0.3,
+                            "layer": 1,
+                            "size": ["111.1111111111%c", "100%x"],
+                            "anchor_from": "bottom_middle",
+                            "anchor_to": "bottom_middle",
+                            "controls": [
+                              {
+                                "offhand_grid@xerox_lib.cp": {
+                                  "$item_collection_name": "offhand_items",
+                                  "collection_name": "$item_collection_name",
+                                  "size": ["100%c", "100%c"],
+                                  "controls": [
+                                    {
+                                      "0@container:classic_common.container_item": {
+                                        "collection_index": 0
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "crafting@xerox_lib.hsp": {
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "offset": ["-2.2727272727%", "19.7530864198%"],
+                "size": ["100%c", "100%cm"],
+                "$background_images": "xc_modern_inventory_screen.container_cell_images",
+                "controls": [
+                  {
+                    "input@xerox_lib.i": {
+                      "texture": "textures/XeroxClient/rounded_corner/all8x",
+                      "color": "$xeroxclient_ui_theme_menu_background_color",
+                      "alpha": 0.3,
+                      "layer": 1,
+                      "size": ["100%c", "100%c"],
+                      "anchor_from": "left_middle",
+                      "anchor_to": "left_middle",
+                      "controls": [
+                        {
+                          "0size_panel_1@xerox_lib.p": {
+                            "size": [0, 0],
+                            "offset": ["2.6315789474%", "-2.6315789474%"],
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left",
+                            "controls": [
+                              {
+                                "crafting_text@xerox_lib.l": {
+                                  "size": ["default", "default"],
+                                  "text_alignment": "left",
+                                  "anchor_from": "bottom_left",
+                                  "anchor_to": "bottom_left",
+                                  "font_type": "$global_font_type",
+                                  "backup_font_type": "$global_font_type_backup",
+                                  "text": "#crafting_label_text",
+                                  "layer": 3,
+                                  "bindings": [
+                                    {
+                                      "binding_name": "#crafting_label_text"
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "input_grid@xerox_lib.cp": {
+                            "size": ["52.7777777778%c", "100%x"],
+                            "$item_collection_name": "crafting_input_items",
+                            "collection_name": "$item_collection_name",
+                            "controls": [
+                              {
+                                "0@container:classic_common.container_item": {
+                                  "collection_index": 0,
+                                  "anchor_to": "bottom_right"
+                                }
+                              },
+                              {
+                                "1@container:classic_common.container_item": {
+                                  "collection_index": 1,
+                                  "anchor_to": "bottom_left"
+                                }
+                              },
+                              {
+                                "2@container:classic_common.container_item": {
+                                  "collection_index": 2,
+                                  "anchor_to": "top_right"
+                                }
+                              },
+                              {
+                                "3@container:classic_common.container_item": {
+                                  "collection_index": 3,
+                                  "anchor_to": "top_left"
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "0size_panel_2@xerox_lib.p": {
+                            "size": [0, 0],
+                            "offset": ["18.4210526316%", "15.7894736842%"],
+                            "anchor_from": "bottom_left",
+                            "anchor_to": "bottom_left",
+                            "$toggle_name": "layout_toggle",
+                            "$xeroxclient_button_alpha_default": 0.3,
+                            "$button_image_size": ["100%", "100%"],
+                            "$default_size": [22, 20],
+                            "$button_content": "xc_modern_inventory_screen.recipe_book_icon",
+                            "controls": [
+                              {
+                                "creative_layout_toggle@common_toggles.a_rc_8x_image": {
+                                  "$toggle_group_forced_index": "$creative_layout_index",
+                                  "$toggle_binding_type": "global",
+                                  "$toggle_state_binding_name": "#is_creative_layout",
+                                  "visible": false,
+                                  "bindings": [
+                                    {
+                                      "binding_type": "global",
+                                      "binding_name": "#is_recipe_book_layout"
+                                    },
+                                    {
+                                      "binding_type": "global",
+                                      "binding_name": "#is_creative_layout"
+                                    },
+                                    {
+                                      "binding_type": "view",
+                                      "source_property_name": "(#is_creative_layout and #is_recipe_book_layout)",
+                                      "target_property_name": "#visible"
+                                    }
+                                  ],
+                                  "size": "$default_size",
+                                  "animation_reset_name": "screen_animation_reset",
+                                  "anims": [
+                                    "@container:classic_animation.size_enter",
+                                    "@container:classic_animation.size_out"
+                                  ],
+                                  "anchor_from": "top_left",
+                                  "anchor_to": "top_left"
+                                }
+                              },
+                              {
+                                "recipe_book_layout_toggle@common_toggles.a_rc_8x_image": {
+                                  "$toggle_group_forced_index": "$recipe_book_layout_index",
+                                  "$toggle_binding_type": "global",
+                                  "$toggle_state_binding_name": "#is_recipe_book_layout",
+                                  "visible": false,
+                                  "bindings": [
+                                    {
+                                      "binding_type": "global",
+                                      "binding_name": "#is_survival_layout"
+                                    },
+                                    {
+                                      "binding_type": "global",
+                                      "binding_name": "#is_creative_layout"
+                                    },
+                                    {
+                                      "binding_type": "view",
+                                      "source_property_name": "(#is_creative_layout or #is_survival_layout)",
+                                      "target_property_name": "#visible"
+                                    }
+                                  ],
+                                  "size": "$default_size",
+                                  "animation_reset_name": "screen_animation_reset",
+                                  "anims": [
+                                    "@container:classic_animation.size_enter",
+                                    "@container:classic_animation.size_out"
+                                  ],
+                                  "anchor_from": "top_left",
+                                  "anchor_to": "top_left"
+                                }
+                              },
+                              {
+                                "survival_layout_toggle@common_toggles.a_rc_8x_image": {
+                                  "$toggle_group_forced_index": "$survival_layout_index",
+                                  "$toggle_binding_type": "global",
+                                  "$toggle_state_binding_name": "#is_survival_layout",
+                                  "visible": false,
+                                  "bindings": [
+                                    {
+                                      "binding_type": "global",
+                                      "binding_name": "#is_recipe_book_layout",
+                                      "binding_name_override": "#visible"
+                                    },
+                                    {
+                                      "binding_type": "global",
+                                      "binding_name": "#is_creative_layout"
+                                    },
+                                    {
+                                      "binding_type": "view",
+                                      "source_property_name": "((not #is_creative_layout) and #is_recipe_book_layout)",
+                                      "target_property_name": "#visible"
+                                    }
+                                  ],
+                                  "size": "$default_size",
+                                  "animation_reset_name": "screen_animation_reset",
+                                  "anims": [
+                                    "@container:classic_animation.size_enter",
+                                    "@container:classic_animation.size_out"
+                                  ],
+                                  "anchor_from": "top_left",
+                                  "anchor_to": "top_left"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "arrow@xerox_lib.p": {
+                      "size": ["112.5%c", "100%sm"],
+                      "controls": [
+                        {
+                          "crafting_arrow@xerox_lib.b": {
+                            "size": "$default_size",
+                            "$default_size": [16, 13],
+                            "property_bag": {
+                              "#collection_name": "crafting_output_items",
+                              "#collection_index": 0
+                            },
+                            "$pressed_button_name": "button.crafting_output_tertiary",
+                            "button_mappings": [
+                              {
+                                "from_button_id": "button.menu_select",
+                                "to_button_id": "$pressed_button_name",
+                                "mapping_type": "pressed"
+                              },
+                              {
+                                "from_button_id": "button.menu_ok",
+                                "to_button_id": "$pressed_button_name",
+                                "mapping_type": "focused"
+                              }
+                            ],
+                            "animation_reset_name": "screen_animation_reset",
+                            "anims": [
+                              "@container:classic_animation.size_enter",
+                              "@container:classic_animation.size_out"
+                            ],
+                            "hover_control": "hover",
+                            "controls": [
+                              {
+                                "default@xerox_lib.i": {
+                                  "texture": "textures/XeroxClient/arrow/m_right",
+                                  "layer": 3,
+                                  "color": [
+                                    0.0039215686, 0.0549019608, 0.0549019607
+                                  ],
+                                  "alpha": 0.3
+                                }
+                              },
+                              {
+                                "hover@xerox_lib.i": {
+                                  "texture": "textures/XeroxClient/arrow/m_right",
+                                  "layer": 4,
+                                  "color": "$xeroxclient_ui_theme_button_hover_color",
+                                  "alpha": 0.65
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "output@xerox_lib.p": {
+                      "size": ["100%c", "100%sm"],
+                      "controls": [
+                        {
+                          "bg@xerox_lib.i": {
+                            "texture": "textures/XeroxClient/rounded_corner/all8x",
+                            "color": "$xeroxclient_ui_theme_menu_background_color",
+                            "alpha": 0.3,
+                            "layer": 1,
+                            "size": ["100%c", "100%c"],
+                            "controls": [
+                              {
+                                "output_grid@xerox_lib.cp": {
+                                  "size": ["111.1111111111%c", "100%x"],
+                                  "$item_collection_name": "crafting_output_items",
+                                  "collection_name": "$item_collection_name",
+                                  "$button_ref": "crafting.output_no_coalesce_container_slot_button",
+                                  "controls": [
+                                    {
+                                      "0@container:classic_common.container_item": {
+                                        "collection_index": 0
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bottom_half@xerox_lib.p": {
+          "size": ["107.3170731707%c", "108.9743589744%c"],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "controls": [
+            {
+              "inv_and_hotbar@container:classic_common.inventory_and_hotbar": {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "offset": [0, "1.1764705882%"]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "main_content@xerox_lib.b": {
+    "default_focus_precedence": 0,
+    "focus_enabled": true,
+    "focus_wrap_enabled": false,
+    "focus_magnet_enabled": true,
+    "consume_hover_events": false,
+    "controls": [
+      { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
+      { "inventory_panel@xc_modern_inventory_screen.inventory_panel": {} },
+      { "recipe_book_panel@xc_modern_inventory_screen.recipe_book_panel": {} },
+      {
+        "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}
+      },
+      {
+        "inventory_selected_icon_button@container:classic_common.inventory_selected_icon_button": {}
+      },
+      { "flying_item_renderer@common.flying_item_renderer": { "layer": 8 } },
+      { "gamepad_cursor@common.gamepad_cursor_button": {} }
+    ]
+  }
+}

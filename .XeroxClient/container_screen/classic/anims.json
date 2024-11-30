@@ -1,0 +1,95 @@
+// 由@XSzC.制作的文件.
+// 未经允许不要使用任何文件. 请阅读LICENSE.txt
+
+// File made by @XSzC.
+// Don't use any file without permission. Read LICENSE.txt
+
+{
+  "namespace": "container:classic_animation",
+
+  "hover_text_offset@xerox_lib.ao": {
+    "from": "$hover_text_fixed_offset",
+    "to": [0, 0],
+    "easing": "out_expo",
+    "duration": 0.2,
+    "reset_event": "button.xeroxClient.hoverText"
+  },
+
+  "hover_text_alpha@xerox_lib.aa": {
+    "from": -0.125,
+    "to": 1.0,
+    "easing": "out_cubic",
+    "duration": 0.15,
+    "reset_event": "button.xeroxClient.hoverText"
+  },
+
+  "recipe_book_enter@xerox_lib.ao": {
+    "from": ["100%-146px", 0],
+    "to": [-1, 0],
+    "easing": "out_expo",
+    "duration": 0.5,
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+
+  "recipe_book_out@xerox_lib.ao": {
+    "from": [-1, 0],
+    "to": ["100%-146px", 0],
+    "easing": "in_sine",
+    "duration": 0.37,
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+
+  "size_enter@xerox_lib.as": {
+    "from": [-0.005, -0.005],
+    "to": "$default_size",
+    "easing": "out_back",
+    "duration": 0.37,
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+
+  "screen_alpha_enter@xerox_lib.aa": {
+    "from": 0.0,
+    "to": 1.0,
+    "easing": "out_cubic",
+    "duration": 0.37,
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+
+  "size_out@xerox_lib.as": {
+    "from": "$default_size",
+    "to": [0, 0],
+    "easing": "in_back",
+    "duration": 0.37,
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+
+  "screen_alpha_out@xerox_lib.aa": {
+    "from": 1.0,
+    "to": -0.25,
+    "easing": "in_cric",
+    "duration": 0.37,
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  } /*,
+
+  "background_alpha_enter@xerox_lib.aa": {
+    "duration": 0.2,
+    "from": 0.0,
+    "to": 1.0,
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+
+  "background_alpha_out@xerox_lib.aa": {
+    "duration": 0.2,
+    "from": 1.0,
+    "to": 0.0,
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  }*/
+}

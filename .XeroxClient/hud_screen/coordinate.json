@@ -1,0 +1,64 @@
+// 由@XSzC.制作的文件.
+// 未经允许不要使用任何文件. 请阅读LICENSE.txt
+
+// File made by @XSzC.
+// Don't use any file without permission. Read LICENSE.txt
+
+{
+  "namespace": "xc_modern_coordinate",
+
+  "coordinate@xerox_lib.p": {
+    "layer": 1,
+    "size": ["100%c", "100%c"],
+    "alpha": 0.6,
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [10, 10],
+    "controls": [
+      {
+        "coordinate_text@xerox_lib.hud_l": {
+          "text": "#madebyxszc",
+          "shadow": true,
+          "layer": 2,
+          "size": ["default", "default"],
+          "enable_profanity_filter": false,
+          "bindings": [
+            {
+              "binding_name": "#player_position_text",
+              "binding_name_override": "#coordinate",
+              "binding_condition": "always_when_visible",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#coordinate - '§§') * 1)",
+              "target_property_name": "#coordinate_x"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#coordinate - ('§§' + #coordinate_x + '/')) * 1)",
+              "target_property_name": "#coordinate_y"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#coordinate - ('§§' + #coordinate_x + '/' + #coordinate_y + '/')) * 1)",
+              "target_property_name": "#coordinate_z"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "('X: ' + #coordinate_x + '\n' + 'Y: ' + #coordinate_y + '\n' + 'Z: ' + #coordinate_z)",
+              "target_property_name": "#madebyxszc",
+              "ignored": "(not $vertical_coordinate)"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "('X: ' + #coordinate_x + ' ' + 'Y: ' + #coordinate_y + ' ' + 'Z: ' + #coordinate_z)",
+              "target_property_name": "#madebyxszc",
+              "ignored": "$vertical_coordinate"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

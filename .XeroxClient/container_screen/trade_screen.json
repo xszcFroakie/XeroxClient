@@ -1,0 +1,583 @@
+// 由@XSzC.制作的文件.
+// 未经允许不要使用任何文件. 请阅读LICENSE.txt
+
+// File made by @XSzC.
+// Don't use any file without permission. Read LICENSE.txt
+
+{
+  "namespace": "xc_modern_trade_screen",
+
+  "single_item_grid@xerox_lib.g": {
+    "size": ["56.25%c", "56.25%c"],
+    "grid_dimensions": [1, 1],
+    "collection_name": "$trade_item_collection_name",
+    "layer": 5,
+    "controls": [
+      {
+        "hover_text_panel@xerox_lib.b": {
+          "hover_control": "hover_text",
+          "consume_event": false,
+          "$default_size": [16, 16],
+          "size": "$default_size",
+          "animation_reset_name": "screen_animation_reset",
+          "anims": [
+            "@container:classic_animation.size_enter",
+            "@container:classic_animation.size_out"
+          ],
+          "controls": [
+            {
+              "hover_text@container:classic_common.custom_hover_text": {
+                "size": ["100%", "100%"],
+                "$hover_text_bindings": [
+                  {
+                    "binding_type": "collection_details"
+                  },
+                  {
+                    "binding_name": "#hover_text",
+                    "binding_collection_name": "$trade_item_collection_name"
+                  }
+                ],
+                "$hover_text_background_bindings": [
+                  {
+                    "binding_type": "collection_details"
+                  },
+                  {
+                    "binding_name": "(not (#hover_text = ''))",
+                    "binding_name_override": "#visible",
+                    "binding_collection_name": "$trade_item_collection_name"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "item_with_count@xerox_lib.p": {
+          "size": ["100%sm", "100%sm"],
+          "$stack_count_required": true,
+          "controls": [
+            {
+              "item_renderer@common.item_renderer": {
+                "$default_size": [12, 12],
+                "size": "$default_size",
+                "animation_reset_name": "screen_animation_reset",
+                "anims": [
+                  "@container:classic_animation.size_enter",
+                  "@container:classic_animation.size_out"
+                ],
+                "layer": 7,
+                "bindings": [
+                  {
+                    "binding_type": "collection_details"
+                  },
+                  {
+                    "binding_name": "#item_id_aux"
+                  },
+                  {
+                    "binding_name": "#item_custom_color"
+                  },
+                  {
+                    "binding_name": "#item_pickup_time"
+                  },
+                  {
+                    "binding_name": "#banner_patterns"
+                  },
+                  {
+                    "binding_name": "#banner_colors"
+                  },
+                  {
+                    "binding_name": "#banner_type"
+                  }
+                ]
+              }
+            },
+            {
+              "stack_count_label@container:classic_common.stack_count_label": {
+                "layer": 8,
+                "text": "#trade_item_count",
+                "bindings": [
+                  {
+                    "binding_type": "collection_details"
+                  },
+                  {
+                    "binding_name": "#trade_item_count"
+                  }
+                ],
+                "controls": [
+                  {
+                    "second_stack_count_label@container:classic_common.stack_count_label": {
+                      "layer": 8,
+                      "text": "#second_trade_item_count",
+                      "offset": [9.3333333333, 0],
+                      "bindings": [
+                        {
+                          "binding_type": "collection_details"
+                        },
+                        {
+                          "binding_name": "#second_trade_item_count"
+                        },
+                        {
+                          "binding_name": "#trade_price_different",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "red_slash@container:classic_common.stack_count_label": {
+                      "text": "-",
+                      "color": [1.0, 0.333, 0.333],
+                      "layer": 9,
+                      "font_scale_factor": 0.9,
+                      "bindings": [
+                        {
+                          "binding_type": "collection_details"
+                        },
+                        {
+                          "binding_name": "#single_slash_visible",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "red_slash_double@container:classic_common.stack_count_label": {
+                      "text": "--",
+                      "color": [1.0, 0.333, 0.333],
+                      "layer": 9,
+                      "font_scale_factor": 0.9,
+                      "bindings": [
+                        {
+                          "binding_type": "collection_details"
+                        },
+                        {
+                          "binding_name": "#double_slash_visible",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "trade_toggle_holder@xerox_lib.p": {
+    "size": ["100%", "22.7272727273%x"],
+    "controls": [
+      {
+        "trade_item_1@xc_modern_trade_screen.single_item_grid": {
+          "$trade_item_collection_name": "trade_item_1",
+          "offset": ["-35.2272727273%", 0]
+          //"offset": ["-35.2272727273%", "-5%"]
+        }
+      },
+      {
+        "trade_item_2@xc_modern_trade_screen.single_item_grid": {
+          "$trade_item_collection_name": "trade_item_2",
+          "offset": ["-1.1363636364%", 0]
+          //"offset": ["-1.1363636364%", "-5%"]
+        }
+      },
+      {
+        "sell_item@xc_modern_trade_screen.single_item_grid": {
+          "$trade_item_collection_name": "sell_item",
+          "offset": ["36.3636363636%", 0]
+          //"offset": ["36.3636363636%", "-5%"]
+        }
+      },
+      {
+        "arrow_panel@xerox_lib.p": {
+          "size": ["100%c", "100%c"],
+          "offset": ["18.1818181818%", 0],
+          //"offset": ["18.1818181818%", "-7.5%"],
+          "controls": [
+            {
+              "arrow@xerox_lib.i": {
+                "texture": "textures/XeroxClient/arrow/s_right",
+                "color": "$xeroxclient_ui_theme_button_hover_color",
+                "alpha": 0.65,
+                "layer": 4,
+                "$default_size": [10, 9],
+                "size": "$default_size",
+                "animation_reset_name": "screen_animation_reset",
+                "anims": [
+                  "@container:classic_animation.size_enter",
+                  "@container:classic_animation.size_out"
+                ],
+                "controls": [
+                  {
+                    "crossout@xerox_lib.i": {
+                      "texture": "textures/XeroxClient/icon/crossout",
+                      "color": [1.0, 0.333, 0.333],
+                      "alpha": 0.7,
+                      "layer": 5,
+                      "bindings": [
+                        { "binding_type": "collection_details" },
+                        {
+                          "binding_name": "#trade_cross_out_visible",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "trade_toggle@trade2.trade_toggle": {
+          "size": ["100%", "100%"],
+          "$toggle_enabled_binding_name": "none",
+          "$unchecked_control": "common_toggles.toggle_unchecked",
+          "$checked_control": "common_toggles.toggle_checked",
+          "$unchecked_locked_control": "common_toggles.toggle_locked",
+          "$unchecked_locked_hover_control": "common_toggles.toggle_locked",
+          "$checked_locked_control": "common_toggles.toggle_locked",
+          "$checked_locked_hover_control": "common_toggles.toggle_locked",
+          "$default_texture": "textures/XeroxClient/rounded_corner/all8x",
+          "$hover_texture": "textures/XeroxClient/rounded_corner/all8x",
+          "$pressed_texture": "textures/XeroxClient/rounded_corner/all8x",
+          "$pressed_no_hover_texture": "textures/XeroxClient/rounded_corner/all8x",
+          "$locked_texture": "textures/XeroxClient/rounded_corner/all8x",
+          "$button_content": "common.empty_panel"
+        }
+      }
+    ]
+  },
+
+  "tier_stack_panel@xerox_lib.vsp": {
+    "size": ["98.8764044944%", "100%c"],
+    "controls": [
+      {
+        "trade_toggle_stack_panel@trade2.trade_toggle_stack_panel": {
+          "factory": {
+            "name": "selected_pack_factory",
+            "control_name": "xc_modern_trade_screen.trade_toggle_holder"
+          }
+        }
+      }
+    ]
+  },
+
+  "scroll_inner_input_panel@trade2.scroll_inner_input_panel": {
+    "size": ["100%", "100%c"],
+    "controls": [
+      {
+        "trade_selector_stack_panel@trade2.trade_selector_stack_panel": {
+          "size": ["100%", "default"],
+          "factory": {
+            "name": "selected_pack_factory",
+            "control_name": "xc_modern_trade_screen.tier_stack_panel"
+          }
+        }
+      }
+    ]
+  },
+
+  "trade_panel@xerox_lib.i": {
+    "texture": "textures/XeroxClient/rounded_corner/all8x",
+    "color": "$xeroxclient_ui_theme_menu_background_color",
+    "alpha": 0.3,
+    "layer": 0,
+    "size": ["100%c", "100%cm"],
+    "clips_children": true,
+    "controls": [
+      {
+        "left_half@xerox_lib.p": {
+          "size": ["60.2409638554%y", "100%sm"],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "controls": [
+            {
+              "0size_panel@xerox_lib.p": {
+                "size": [0, 0],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "offset": ["2%", "3.012048193%"],
+                "controls": [
+                  {
+                    "container_title@xerox_lib.l": {
+                      "text": "trade.trade",
+                      "size": ["default", "default"],
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "font_type": "$global_font_type",
+                      "backup_font_type": "$global_font_type_backup",
+                      "layer": 3
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "trade_scroll_panel@xerox_lib.i": {
+                "texture": "textures/XeroxClient/rounded_corner/all8x",
+                "color": "$xeroxclient_ui_theme_menu_background_color",
+                "alpha": 0.3,
+                "layer": 0,
+                "size": ["102.1276595745%c", "147.9166666667%x"],
+                "offset": ["2%", "3.6144578313%"],
+                "controls": [
+                  {
+                    "scroll_panel@xc_modern_scrolling_panel.scrolling_panel": {
+                      "$default_size": [94, 140],
+                      "size": "$default_size",
+                      "animation_reset_name": "screen_animation_reset",
+                      "anims": [
+                        "@container:classic_animation.size_enter",
+                        "@container:classic_animation.size_out"
+                      ],
+                      "$scroll_size": ["2.8571428571%y", "100%"],
+                      "$scroll_view_port_size": ["63.5714285714%y", "100%"],
+                      "$scrolling_pane_size": ["100%", "100%"],
+                      "$scrolling_content": "xc_modern_trade_screen.scroll_inner_input_panel",
+                      "$collection_name": "trade_tiers"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "right_half@xerox_lib.p": {
+          "size": ["100%cm", "100%c"],
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "controls": [
+            {
+              "top_half@xerox_lib.p": {
+                "size": ["100%sm", "46.0227272727%x"],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "controls": [
+                  {
+                    "0size_panel_1@xerox_lib.p": {
+                      "size": [0, 0],
+                      "anchor_from": "top_right",
+                      "anchor_to": "top_right",
+                      "ignored": "(not $touch)",
+                      "offset": ["-3.9772727273%", "2.4691358025%"],
+                      "controls": [
+                        {
+                          "close_button@common_buttons.a_rc_8x_text": {
+                            "$default_size": [12, 12],
+                            "size": "$default_size",
+                            "animation_reset_name": "screen_animation_reset",
+                            "anims": [
+                              "@container:classic_animation.size_enter",
+                              "@container:classic_animation.size_out"
+                            ],
+                            "anchor_from": "top_right",
+                            "anchor_to": "top_right",
+                            "$button_text": "×",
+                            "$button_image_size": ["100%", "100%"],
+                            "$pressed_button_name": "button.menu_exit",
+                            "$xeroxclient_button_alpha_default": 0.0,
+                            "$xeroxclient_button_alpha_hover": 0.9,
+                            "$xeroxclient_button_alpha_pressed": 0.9,
+                            "$xeroxclient_button_color_hover": [
+                              1.0, 0.333, 0.333
+                            ],
+                            "$xeroxclient_button_color_pressed": [
+                              1.0, 0.333, 0.333
+                            ],
+                            "$xeroxclient_button_content_offset_default": [0, -3],
+                            "$xeroxclient_button_content_offset_hover": [0, -3],
+                            "$xeroxclient_button_content_offset_pressed": [0, -3],
+                            "$button_font_type": "HarmonyOS-Regular"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "0size_panel_2@xerox_lib.p": {
+                      "size": [0, 0],
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "offset": [0, "6.1728395062%"],
+                      "controls": [
+                        {
+                          "container_title@xerox_lib.l": {
+                            "text": "#name_label",
+                            "size": ["default", "default"],
+                            "anchor_from": "top_middle",
+                            "anchor_to": "top_middle",
+                            "font_type": "$global_font_type",
+                            "backup_font_type": "$global_font_type_backup",
+                            "layer": 3,
+                            "bindings": [
+                              {
+                                "binding_name": "#name_label",
+                                "binding_condition": "always_when_visible"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "ingredient_item_1@xerox_lib.i": {
+                      "texture": "textures/XeroxClient/rounded_corner/all8x",
+                      "color": "$xeroxclient_ui_theme_menu_background_color",
+                      "alpha": 0.3,
+                      "layer": 0,
+                      "size": ["111.1111111111%c", "100%x"],
+                      "offset": ["-25%", "5.5555555556%"],
+                      "$item_renderer_binding_condition": "always_when_visible",
+                      "$stack_count_binding_condition": "always_when_visible",
+                      "$item_collection_name": "trade2_ingredient1_item",
+                      "controls": [
+                        { "0@container:classic_common.container_item": {} }
+                      ]
+                    }
+                  },
+                  {
+                    "ingredient_item_2@xerox_lib.i": {
+                      "texture": "textures/XeroxClient/rounded_corner/all8x",
+                      "color": "$xeroxclient_ui_theme_menu_background_color",
+                      "alpha": 0.3,
+                      "layer": 0,
+                      "size": ["111.1111111111%c", "100%x"],
+                      "offset": ["-10.2272727273%", "5.5555555556%"],
+                      "$item_renderer_binding_condition": "always_when_visible",
+                      "$stack_count_binding_condition": "always_when_visible",
+                      "$item_collection_name": "trade2_ingredient2_item",
+                      "controls": [
+                        { "0@container:classic_common.container_item": {} }
+                      ]
+                    }
+                  },
+                  {
+                    "arrow_panel@xerox_lib.p": {
+                      "size": ["100%c", "100%c"],
+                      "offset": ["5.1136363636%", "6.1728395062%"],
+                      "controls": [
+                        {
+                          "trade_arrow@xerox_lib.b": {
+                            "size": "$default_size",
+                            "$default_size": [22, 15],
+                            "property_bag": {
+                              "#collection_name": "trade2_result_item",
+                              "#collection_index": 0
+                            },
+                            "button_mappings": [
+                              {
+                                "from_button_id": "button.menu_select",
+                                "to_button_id": "button.container_auto_place",
+                                "mapping_type": "pressed"
+                              },
+                              {
+                                "from_button_id": "button.menu_ok",
+                                "to_button_id": "button.container_auto_place",
+                                "mapping_type": "pressed"
+                              }
+                            ],
+                            "animation_reset_name": "screen_animation_reset",
+                            "anims": [
+                              "@container:classic_animation.size_enter",
+                              "@container:classic_animation.size_out"
+                            ],
+                            "hover_control": "hover",
+                            "controls": [
+                              {
+                                "default@xerox_lib.i": {
+                                  "texture": "textures/XeroxClient/arrow/l_right",
+                                  "layer": 3,
+                                  "color": [
+                                    0.0039215686, 0.0549019608, 0.0549019607
+                                  ],
+                                  "alpha": 0.3
+                                }
+                              },
+                              {
+                                "hover@xerox_lib.i": {
+                                  "texture": "textures/XeroxClient/arrow/l_right",
+                                  "layer": 4,
+                                  "color": "$xeroxclient_ui_theme_button_hover_color",
+                                  "alpha": 0.65
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "result_item_slot@xerox_lib.i": {
+                      "texture": "textures/XeroxClient/rounded_corner/all8x",
+                      "color": "$xeroxclient_ui_theme_menu_background_color",
+                      "alpha": 0.3,
+                      "layer": 0,
+                      "size": ["107.6923076923%c", "100%x"],
+                      "offset": ["22.7272727273%", "6.7901234568%"],
+                      "$item_renderer_binding_condition": "always_when_visible",
+                      "$stack_count_binding_condition": "always_when_visible",
+                      "$item_collection_name": "trade2_result_item",
+                      "$button_ref": "trade2.trade_result_item_slot_button",
+                      "controls": [
+                        {
+                          "0@container:classic_common.container_item": {
+                            "size": [26, 26]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "bottom_half@xerox_lib.p": {
+                "size": ["107.3170731707%c", "108.9743589744%c"],
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "controls": [
+                  {
+                    "inv_and_hotbar@container:classic_common.inventory_and_hotbar": {
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "offset": [0, "1.1764705882%"]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "main_content@xerox_lib.b": {
+    "default_focus_precedence": 0,
+    "focus_enabled": true,
+    "focus_wrap_enabled": false,
+    "focus_magnet_enabled": true,
+    "consume_hover_events": false,
+    "controls": [
+      { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
+      { "trade_panel@xc_modern_trade_screen.trade_panel": {} },
+      {
+        "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}
+      },
+      {
+        "inventory_selected_icon_button@container:classic_common.inventory_selected_icon_button": {}
+      },
+      { "flying_item_renderer@common.flying_item_renderer": { "layer": 8 } },
+      { "gamepad_cursor@common.gamepad_cursor_button": {} }
+    ]
+  }
+}

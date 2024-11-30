@@ -1,0 +1,292 @@
+// 由@XSzC.制作的文件.
+// 未经允许不要使用任何文件. 请阅读LICENSE.txt
+
+// File made by @XSzC.
+// Don't use any file without permission. Read LICENSE.txt
+
+{
+  "namespace": "xc_modern_cartography_screen",
+
+  "cartography_panel@xerox_lib.i": {
+    "texture": "textures/XeroxClient/rounded_corner/all8x",
+    "color": "$xeroxclient_ui_theme_menu_background_color",
+    "alpha": 0.3,
+    "layer": 0,
+    "size": ["100%cm", "100%c"],
+    "clips_children": true,
+    "controls": [
+      {
+        "top_half@xerox_lib.p": {
+          "size": ["100%sm", "46.0227272727%x"],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "controls": [
+            {
+              "0size_panel_1@xerox_lib.p": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": ["3.9772727273%", "3.7037037037%"],
+                "size": [0, 0],
+                "controls": [
+                  {
+                    "container_title@xerox_lib.l": {
+                      "text": "tile.cartography_table.name",
+                      "size": ["default", "default"],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "text_alignment": "left",
+                      "font_type": "$global_font_type",
+                      "backup_font_type": "$global_font_type_backup",
+                      "layer": 3
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "0size_panel_2@xerox_lib.p": {
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "offset": ["-3.9772727273%", "2.5974025974%"],
+                "size": [0, 0],
+                "ignored": "(not $touch)",
+                "controls": [
+                  {
+                    "close_button@common_buttons.a_rc_8x_text": {
+                      "$default_size": [12, 12],
+                      "size": "$default_size",
+                      "animation_reset_name": "screen_animation_reset",
+                      "anims": [
+                        "@container:classic_animation.size_enter",
+                        "@container:classic_animation.size_out"
+                      ],
+                      "anchor_from": "top_right",
+                      "anchor_to": "top_right",
+                      "$button_text": "×",
+                      "$button_image_size": ["100%", "100%"],
+                      "$pressed_button_name": "button.menu_exit",
+                      "$xeroxclient_button_alpha_default": 0.0,
+                      "$xeroxclient_button_alpha_hover": 0.9,
+                      "$xeroxclient_button_alpha_pressed": 0.9,
+                      "$xeroxclient_button_color_hover": [1.0, 0.333, 0.333],
+                      "$xeroxclient_button_color_pressed": [1.0, 0.333, 0.333],
+                      "$xeroxclient_button_content_offset_default": [0, -3],
+                      "$xeroxclient_button_content_offset_hover": [0, -3],
+                      "$xeroxclient_button_content_offset_pressed": [0, -3],
+                      "$button_font_type": "HarmonyOS-Regular"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "input_slot@xerox_lib.i": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "texture": "textures/XeroxClient/rounded_corner/all8x",
+                "color": "$xeroxclient_ui_theme_menu_background_color",
+                "alpha": 0.3,
+                "layer": 1,
+                "size": ["100%c", "100%c"],
+                "offset": ["7.3863636364%", "16.0493827160%"],
+                "controls": [
+                  {
+                    "input@xerox_lib.cp": {
+                      "size": ["111.1111111111%c", "100%x"],
+                      "$item_collection_name": "cartography_input_items",
+                      "collection_name": "$item_collection_name",
+                      "controls": [
+                        {
+                          "0@container:classic_common.container_item": {
+                            "collection_index": 0
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "additional_slot@xerox_lib.i": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "texture": "textures/XeroxClient/rounded_corner/all8x",
+                "color": "$xeroxclient_ui_theme_menu_background_color",
+                "alpha": 0.3,
+                "layer": 1,
+                "size": ["100%c", "100%c"],
+                "offset": ["7.3863636364%", "61.7283950617%"],
+                "controls": [
+                  {
+                    "additional@xerox_lib.cp": {
+                      "size": ["111.1111111111%c", "100%x"],
+                      "$item_collection_name": "cartography_additional_items",
+                      "collection_name": "$item_collection_name",
+                      "controls": [
+                        {
+                          "0@container:classic_common.container_item": {
+                            "collection_index": 0
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "plus_icon@xerox_lib.i": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "color": "$xeroxclient_ui_theme_menu_background_color",
+                "alpha": 0.3,
+                "size": "$default_size",
+                "$default_size": [13, 13],
+                "animation_reset_name": "screen_animation_reset",
+                "anims": [
+                  "@container:classic_animation.size_enter",
+                  "@container:classic_animation.size_out"
+                ],
+                "texture": "textures/XeroxClient/icon/plus",
+                "layer": 1,
+                "offset": ["9.0909090909%", "43.2098765432%"],
+                "controls": [
+                  {
+                    "arrow_icon@xerox_lib.i": {
+                      "anchor_from": "right_middle",
+                      "anchor_to": "left_middle",
+                      "color": "$xeroxclient_ui_theme_menu_background_color",
+                      "alpha": 0.3,
+                      "size": "$default_size",
+                      "$default_size": [22, 15],
+                      "animation_reset_name": "screen_animation_reset",
+                      "anims": [
+                        "@container:classic_animation.size_enter",
+                        "@container:classic_animation.size_out"
+                      ],
+                      "texture": "textures/XeroxClient/arrow/m_right",
+                      "layer": 1,
+                      "offset": ["69.2307692308%", 0]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "map_image_panel@xerox_lib.i": {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "size": "$default_size",
+                "$default_size": [66, 66],
+                "animation_reset_name": "screen_animation_reset",
+                "anims": [
+                  "@container:classic_animation.size_enter",
+                  "@container:classic_animation.size_out"
+                ],
+                "offset": ["7.3863636364%", "14.8148148148%"],
+                "texture": "textures/XeroxClient/rounded_corner/all8x",
+                "color": "$xeroxclient_ui_theme_menu_background_color",
+                "alpha": 0.3,
+                "layer": 1,
+                "controls": [
+                  {
+                    "copy_map@cartography.map_image": {
+                      "$map_texture": "textures/XeroxClient/icon/copy",
+                      "$map_binding_name": "#is_clone_mode",
+                      "layer": 2,
+                      "size":["30%", "30%"]
+                    }
+                  },
+                  {
+                    "zoom_map@cartography.map_image": {
+                      "$map_texture": "textures/XeroxClient/icon/zoom",
+                      "$map_binding_name": "#is_extend_mode",
+                      "layer": 2,
+                      "size":["30%", "30%"]
+                    }
+                  },
+                  {
+                    "lock_map@cartography.map_image": {
+                      "$map_texture": "textures/XeroxClient/icon/lock",
+                      "$map_binding_name": "#is_locked_mode",
+                      "layer": 2,
+                      "size":["30%", "30%"]
+                    }
+                  }]
+              }
+            },
+            {
+              "result_slot@xerox_lib.i": {
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "texture": "textures/XeroxClient/rounded_corner/all8x",
+                "color": "$xeroxclient_ui_theme_menu_background_color",
+                "alpha": 0.3,
+                "layer": 1,
+                "size": ["100%c", "100%c"],
+                "offset": ["-5.1136363636%", "40.7407407407%"],
+                "controls": [
+                  {
+                    "result@xerox_lib.cp": {
+                      "size": ["107.6923076923%c", "100%x"],
+                      "$item_collection_name": "cartography_additional_items",
+                      "collection_name": "$item_collection_name",
+                      "controls": [
+                        {
+                          "0@container:classic_common.container_item": {
+                            "$slot_size": [26, 26],
+                            "collection_index": 0,
+                            "$button_ref": "cartography.cartography_output_slot_button"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bottom_half@xerox_lib.p": {
+          "size": ["107.3170731707%c", "108.9743589744%c"],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "controls": [
+            {
+              "inv_and_hotbar@container:classic_common.inventory_and_hotbar": {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "offset": [0, "1.1764705882%"]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "main_content@xerox_lib.b": {
+    "default_focus_precedence": 0,
+    "focus_enabled": true,
+    "focus_wrap_enabled": false,
+    "focus_magnet_enabled": true,
+    "consume_hover_events": false,
+    "controls": [
+      { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
+      {
+        "cartography_panel@xc_modern_cartography_screen.cartography_panel": {}
+      },
+      {
+        "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}
+      },
+      {
+        "inventory_selected_icon_button@container:classic_common.inventory_selected_icon_button": {}
+      },
+      { "flying_item_renderer@common.flying_item_renderer": { "layer": 8 } },
+      { "gamepad_cursor@common.gamepad_cursor_button": {} }
+    ]
+  }
+}

@@ -1,0 +1,133 @@
+// 由@XSzC.制作的文件.
+// 未经允许不要使用任何文件. 请阅读LICENSE.txt
+
+// File made by @XSzC.
+// Don't use any file without permission. Read LICENSE.txt
+
+{
+  "namespace": "xc_modern_scoreboard",
+
+  "scoreboard_sidebar_score@xerox_lib.hud_l": {
+    "layer": 2,
+    "size": ["default", 10],
+    "text": "#player_score_sidebar",
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "locked_alpha": 1.0,
+    "color": "$player_score_color",
+    "localize": false,
+    "shadow": true,
+    "bindings": [
+      {
+        "binding_name": "#player_score_sidebar",
+        "binding_type": "collection",
+        "binding_collection_name": "scoreboard_scores"
+      }
+    ]
+  },
+
+  "scoreboard_sidebar_player@xerox_lib.hud_l": {
+    "layer": 2,
+    "text": "#player_name_sidebar",
+    "size": ["default", 10],
+    //"max_size": [100, 10],
+    "locked_alpha": 1.0,
+    "color": "$player_name_color",
+    "localize": false,
+    "shadow": true,
+    "bindings": [
+      {
+        "binding_name": "#player_name_sidebar",
+        "binding_type": "collection",
+        "binding_collection_name": "scoreboard_players"
+      }
+    ]
+  },
+
+  "scoreboard_sidebar@xerox_lib.p": {
+    "size": ["100%cm + 4px", "100%c"],
+    "anchor_from": "right_middle",
+    "anchor_to": "right_middle",
+    "controls": [
+      {
+        "displayed_objective@xerox_lib.hud_l": {
+          "size": ["default", 10],
+          "max_size": [170, 10],
+          "text": "#objective_sidebar_name",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "text_alignment": "center",
+          "locked_alpha": 1.0,
+          "layer": 2,
+          "color": "$objective_title_color",
+          "localize": false,
+          "shadow": true,
+          "bindings": [
+            {
+              "binding_name": "#objective_sidebar_name",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "lists@xerox_lib.p": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "inherit_max_sibling_width": true,
+          "offset": [0, 10],
+          "size": ["100%c", "100%cm"],
+          "controls": [
+            {
+              "players@xerox_lib.vsp": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "size": ["100%cm", "100%c"],
+                "orientation": "vertical",
+                "collection_name": "scoreboard_players",
+                "factory": {
+                  "name": "player_list_factory",
+                  "control_name": "xc_modern_scoreboard.scoreboard_sidebar_player"
+                },
+                "bindings": [
+                  {
+                    "binding_name": "#scoreboard_sidebar_size",
+                    "binding_type": "global",
+                    "binding_name_override": "#collection_length"
+                  }
+                ]
+              }
+            },
+            {
+              "horizontal_padding": {
+                "type": "panel",
+                "size": [10, "100%c"]
+              }
+            },
+            {
+              "scores@xerox_lib.vsp": {
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "size": ["100%cm", "100%c"],
+                "orientation": "vertical",
+                "use_child_anchors": true,
+                "collection_name": "scoreboard_scores",
+                "factory": {
+                  "name": "player_score_factory",
+                  "control_name": "xc_modern_scoreboard.scoreboard_sidebar_score"
+                },
+                "bindings": [
+                  {
+                    "binding_name": "#scoreboard_sidebar_size",
+                    "binding_type": "global",
+                    "binding_name_override": "#collection_length"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
