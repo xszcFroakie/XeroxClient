@@ -7,7 +7,8 @@
 {
   "namespace": "xc_modern_coordinate",
 
-  "coordinate@xerox_lib.p": {
+  "coordinate": {
+    "type": "panel",
     "layer": 1,
     "size": ["100%c", "100%c"],
     "alpha": 0.6,
@@ -16,7 +17,10 @@
     "offset": [10, 10],
     "controls": [
       {
-        "coordinate_text@xerox_lib.hud_l": {
+        "coordinate_text": {
+          "type": "label",
+          "font_type": "$hud_font_type_overlay",
+          "backup_font_type": "$global_font_type_backup",
           "text": "#madebyxszc",
           "shadow": true,
           "layer": 2,

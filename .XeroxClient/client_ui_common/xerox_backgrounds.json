@@ -1,7 +1,8 @@
 {
   "namespace": "xc_backgrounds",
 
-  "diffusion_background@xerox_lib.i": {
+  "diffusion_background": {
+    "type": "image",
     "texture": "textures/XeroxClient/diffusion",
     "alpha": 0.5,
     "color": "$xeroxclient_ui_theme_menu_background_color",
@@ -10,28 +11,32 @@
     "controls": [{ "$main_control@$main_control": {} }]
   },
 
-  "particle_motion@xerox_lib.ao": {
+  "particle_motion": {
+    "anim_type": "offset",
     "duration": "$falling_speed",
     "from": [0, 0],
     "to": [0, "100%"],
     "next": "@xc_backgrounds.particle_motion"
   },
 
-  "particle_alpha_1@xerox_lib.aa": {
+  "particle_alpha_1": {
+    "anim_type": "alpha",
     "duration": "($falling_speed / 12)",
     "from": 0.3,
     "to": 1.0,
     "next": "@xc_backgrounds.particle_alpha_2"
   },
 
-  "particle_alpha_2@xerox_lib.aa": {
+  "particle_alpha_2": {
+    "anim_type": "alpha",
     "duration": "($falling_speed / 12)",
     "to": 0.3,
     "from": 1.0,
     "next": "@xc_backgrounds.particle_alpha_1"
   },
 
-  "particle_image_base@xerox_lib.i": {
+  "particle_image_base": {
+    "type": "image",
     "bilinear": true,
     "size": "$img_size",
     "$img_size|default": ["100%", "100%"],
@@ -40,7 +45,8 @@
     "$show_thr_pa_img|default": false,
     "controls": [
       {
-        "sec_imge@xerox_lib.i": {
+        "sec_image": {
+          "type": "image",
           "bilinear": true,
           "size": ["70%", "70%"],
           "fill": true,
@@ -51,11 +57,13 @@
         }
       },
       {
-        "thr_img@xerox_lib.p": {
+        "thr_image": {
+          "type": "panel",
           "offset": [0, "-100%"],
           "controls": [
             {
-              "thr_imge@xerox_lib.i": {
+              "thr_image": {
+                "type": "image",
                 "bilinear": true,
                 "size": ["70%", "70%"],
                 "ignored": "(not $show_thr_pa_img)",
@@ -72,12 +80,14 @@
     ]
   },
 
-  "falling_dusts@xerox_lib.p": {
+  "falling_dusts": {
+    "type": "panel",
     "$img_size": ["100%", "100%x"],
     "$texture_path": "textures/XeroxClient/background/particles/particle_",
     "controls": [
       {
-        "p1@xerox_lib.p": {
+        "p1": {
+          "type": "panel",
           "offset": "@xc_backgrounds.particle_motion",
           "alpha": "@xc_backgrounds.particle_alpha_1",
           "$falling_speed": 25,
@@ -107,7 +117,8 @@
         }
       },
       {
-        "p2@xerox_lib.p": {
+        "p2": {
+          "type": "panel",
           "offset": "@xc_backgrounds.particle_motion",
           "$falling_speed": 10,
           "$texture_number": 2,
@@ -138,7 +149,8 @@
     ]
   },
 
-  "menu_background@xerox_lib.cr": {
+  "menu_background": {
+    "type": "custom",
     "renderer": "gradient_renderer",
     "color1": [0.0039215686, 0.0549019608, 0.0549019607, 0.4352941176],
     "color2": [0.1960784314, 0.7450980392, 0.7450980392, 0.0],
@@ -162,18 +174,21 @@
       }
     ]
   },
-  
-  "background_base@xerox_lib.i":{
+
+  "background_base": {
+    "type": "image",
     "fill": true,
     "texture": "$background_texture_path"
-  }/*,
+  } /*,
 
-  "animated_image_base@xerox_lib.p": {
+  "animated_image_base": {
+    "type": "panel",
     "size": ["100%", "6.25%"],
     "clips_children": true,
     "controls": [
       {
-        "image@xerox_lib.i": {
+        "image": {
+    "type": "image",
           "fill": true,
           "texture": "($background_texture_path + $frame_count)",
           "layer": -10
@@ -182,7 +197,8 @@
     ]
   },
 
-  "anim_base@xerox_lib.ao": {
+  "anim_base": {
+    "anim_type": "offset",
     "duration": "$frame_per_duration",
     "from": "$o",
     "to": "$o",
@@ -206,7 +222,8 @@
   "14@xc_backgrounds.anim_base": { "$o": [0, "-650%"], "$n": 15 },
   "15@xc_backgrounds.anim_base": { "$o": [0, "-750%"], "$n": 0 },
 
-  "background_content@xerox_lib.vsp": {
+  "background_content": {
+    "type": "stack_panel",
     "size": ["100%", "1600%"],
     "offset": "@xc_backgrounds.0",
     "$frame_per_duration|default": 0.1,
@@ -268,7 +285,8 @@
     ]
   },
 
-  "animated_background@xerox_lib.p": {
+  "animated_background": {
+    "type": "panel",
     "propagate_alpha": true,
     "clips_children": true,
     "controls": [

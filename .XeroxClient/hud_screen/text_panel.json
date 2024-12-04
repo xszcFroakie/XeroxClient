@@ -7,7 +7,8 @@
 {
   "namespace": "xc_modern_hud_texts",
 
-  "hud_title_text@xerox_lib.vsp": {
+  "hud_title_text": {
+    "type": "stack_panel",
     "anchor_to": "bottom_middle",
     "layer": 1,
     "alpha": "@hud.anim_title_text_alpha_in",
@@ -15,11 +16,15 @@
     "offset": [0, -15],
     "controls": [
       {
-        "title_frame@xerox_lib.p": {
+        "title_frame": {
+          "type": "panel",
           "size": ["100%", "100%cm + 6px"],
           "controls": [
             {
-              "title@xerox_lib.hud_l": {
+              "title": {
+                "type": "label",
+                "font_type": "$hud_font_type_overlay",
+                "backup_font_type": "$global_font_type_backup",
                 "color": "$title_command_text_color",
                 "text": "#text",
                 "layer": 31,
@@ -40,11 +45,15 @@
         }
       },
       {
-        "subtitle_frame@xerox_lib.p": {
+        "subtitle_frame": {
+          "type": "panel",
           "size": ["100%", "100%cm + 5px"],
           "controls": [
             {
-              "subtitle@xerox_lib.hud_l": {
+              "subtitle": {
+                "type": "label",
+                "font_type": "$hud_font_type_overlay",
+                "backup_font_type": "$global_font_type_backup",
                 "color": "$title_command_text_color",
                 "text": "#text",
                 "layer": 31,
@@ -77,7 +86,8 @@
     ]
   },
 
-  "item_name_text_root@xerox_lib.p": {
+  "item_name_text_root": {
+    "type": "panel",
     "size": ["100%cm", "100%cm"],
     "$show_survival_padding|default": false,
     "$text_color|default": "$tool_tip_text",
@@ -88,16 +98,21 @@
     "$destroy_id|default": "item_name_text",
     "controls": [
       {
-        "item_text_aligner@xerox_lib.vsp": {
+        "item_text_aligner": {
+          "type": "stack_panel",
           "size": ["100%cm", "100%c"],
           "controls": [
             {
-              "item_text_control@xerox_lib.p": {
+              "item_text_control": {
+                "type": "panel",
                 "size": ["100%cm", 10],
                 "clips_children": true,
                 "controls": [
                   {
-                    "item_text_label@xerox_lib.hud_l": {
+                    "item_text_label": {
+                      "type": "label",
+                      "font_type": "$hud_font_type_overlay",
+                      "backup_font_type": "$global_font_type_backup",
                       "anchor_from": "top_middle",
                       "anchor_to": "top_middle",
                       "size": ["default", "default"],
@@ -148,12 +163,16 @@
     "offset": [0, -63]
   },
 
-  "hud_actionbar_text@xerox_lib.p": {
+  "hud_actionbar_text": {
+    "type": "panel",
     "size": ["100%c + 12px", "100%c + 5px"],
     "offset": [0, "50%-68px"],
     "controls": [
       {
-        "actionbar_message@xerox_lib.hud_l": {
+        "actionbar_message": {
+          "type": "label",
+          "font_type": "$hud_font_type_overlay",
+          "backup_font_type": "$global_font_type_backup",
           "color": "$tool_tip_text",
           "layer": 31,
           "text": "$actionbar_text",
@@ -165,7 +184,8 @@
     ]
   },
 
-  "hud_tip_text@xerox_lib.p": {
+  "hud_tip_text": {
+    "type": "panel",
     "size": ["100%c + 12px", "100%c + 5px"],
     "offset": [0, -42],
     "anchor_from": "bottom_middle",
@@ -174,7 +194,10 @@
     "$destroy_id|default": "popup_tip_text",
     "controls": [
       {
-        "item_text_label@xerox_lib.hud_l": {
+        "item_text_label": {
+          "type": "label",
+          "font_type": "$hud_font_type_overlay",
+          "backup_font_type": "$global_font_type_backup",
           "layer": 31,
           "color": "$tool_tip_text",
           "text": "#text",

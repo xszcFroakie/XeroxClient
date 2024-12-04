@@ -7,7 +7,8 @@
 {
   "namespace": "xc_modern_chest_screen",
 
-  "chest_panel@xerox_lib.i": {
+  "chest_panel": {
+    "type": "image",
     "texture": "textures/XeroxClient/rounded_corner/all8x",
     "color": "$xeroxclient_ui_theme_menu_background_color",
     "alpha": 0.3,
@@ -17,25 +18,29 @@
     "$large_chest|default": false,
     "controls": [
       {
-        "small_chest_panel@xerox_lib.p": {
+        "small_chest_panel": {
+          "type": "panel",
           "size": ["100%cm", "100%c"],
           "ignored": "$large_chest",
           "controls": [
             {
-              "top_half@xerox_lib.p": {
+              "top_half": {
+                "type": "panel",
                 "size": ["100%sm", "137.5%c"],
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
                 "controls": [
                   {
-                    "0size_panel_1@xerox_lib.p": {
+                    "0size_panel_1": {
+                      "type": "panel",
                       "anchor_from": "top_left",
                       "anchor_to": "top_left",
                       "offset": ["3.9772727273%", "5.1948051948%"],
                       "size": [0, 0],
                       "controls": [
                         {
-                          "container_title@xerox_lib.l": {
+                          "container_title": {
+                            "type": "label",
                             "text": "$container_title",
                             "size": ["default", "default"],
                             "anchor_from": "top_left",
@@ -50,7 +55,8 @@
                     }
                   },
                   {
-                    "0size_panel_2@xerox_lib.p": {
+                    "0size_panel_2": {
+                      "type": "panel",
                       "anchor_from": "top_right",
                       "anchor_to": "top_right",
                       "offset": ["-3.9772727273%", "2.5974025974%"],
@@ -74,11 +80,19 @@
                             "$xeroxclient_button_alpha_default": 0.0,
                             "$xeroxclient_button_alpha_hover": 0.9,
                             "$xeroxclient_button_alpha_pressed": 0.9,
-                            "$xeroxclient_button_color_hover": [1.0, 0.333, 0.333],
-                            "$xeroxclient_button_color_pressed": [1.0, 0.333, 0.333],
-                            "$xeroxclient_button_content_offset_default": [0, -3],
+                            "$xeroxclient_button_color_hover": [
+                              1.0, 0.333, 0.333
+                            ],
+                            "$xeroxclient_button_color_pressed": [
+                              1.0, 0.333, 0.333
+                            ],
+                            "$xeroxclient_button_content_offset_default": [
+                              0, -3
+                            ],
                             "$xeroxclient_button_content_offset_hover": [0, -3],
-                            "$xeroxclient_button_content_offset_pressed": [0, -3],
+                            "$xeroxclient_button_content_offset_pressed": [
+                              0, -3
+                            ],
                             "$button_font_type": "HarmonyOS-Regular"
                           }
                         }
@@ -97,7 +111,8 @@
               }
             },
             {
-              "bottom_half@xerox_lib.p": {
+              "bottom_half": {
+                "type": "panel",
                 "size": ["107.3170731707%c", "115.3846153846%c"],
                 "anchor_from": "bottom_middle",
                 "anchor_to": "bottom_middle",
@@ -116,25 +131,29 @@
         }
       },
       {
-        "large_chest_panel@xerox_lib.p": {
+        "large_chest_panel": {
+          "type": "panel",
           "size": ["100%cm", "100%c"],
           "ignored": "(not $large_chest)",
           "controls": [
             {
-              "top_half@xerox_lib.p": {
+              "top_half": {
+                "type": "panel",
                 "size": ["100%sm", "119.0909090909%c"],
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
                 "controls": [
                   {
-                    "0size_panel_1@xerox_lib.p": {
+                    "0size_panel_1": {
+                      "type": "panel",
                       "anchor_from": "top_left",
                       "anchor_to": "top_left",
                       "offset": ["3.9772727273%", "3.0534351145%"],
                       "size": [0, 0],
                       "controls": [
                         {
-                          "container_title@xerox_lib.l": {
+                          "container_title": {
+                            "type": "label",
                             "text": "$container_title",
                             "size": ["default", "default"],
                             "anchor_from": "top_left",
@@ -149,7 +168,8 @@
                     }
                   },
                   {
-                    "0size_panel_2@xerox_lib.p": {
+                    "0size_panel_2": {
+                      "type": "panel",
                       "anchor_from": "top_right",
                       "anchor_to": "top_right",
                       "offset": ["-3.9772727273%", "1.5267175573%"],
@@ -173,11 +193,19 @@
                             "$xeroxclient_button_alpha_default": 0.0,
                             "$xeroxclient_button_alpha_hover": 0.9,
                             "$xeroxclient_button_alpha_pressed": 0.9,
-                            "$xeroxclient_button_color_hover": [1.0, 0.333, 0.333],
-                            "$xeroxclient_button_color_pressed": [1.0, 0.333, 0.333],
-                            "$xeroxclient_button_content_offset_default": [0, -3],
+                            "$xeroxclient_button_color_hover": [
+                              1.0, 0.333, 0.333
+                            ],
+                            "$xeroxclient_button_color_pressed": [
+                              1.0, 0.333, 0.333
+                            ],
+                            "$xeroxclient_button_content_offset_default": [
+                              0, -3
+                            ],
                             "$xeroxclient_button_content_offset_hover": [0, -3],
-                            "$xeroxclient_button_content_offset_pressed": [0, -3],
+                            "$xeroxclient_button_content_offset_pressed": [
+                              0, -3
+                            ],
                             "$button_font_type": "HarmonyOS-Regular"
                           }
                         }
@@ -185,7 +213,8 @@
                     }
                   },
                   {
-                    "chest_grid@xerox_lib.i": {
+                    "chest_grid": {
+                      "type": "image",
                       "size": ["101.2345679012%c", "101.8518518519%c"],
                       "texture": "textures/XeroxClient/rounded_corner/all8x",
                       "color": "$xeroxclient_ui_theme_menu_background_color",
@@ -196,12 +225,15 @@
                       "offset": [0, "-3.8167938931%"],
                       "controls": [
                         {
-                          "9x6_grid@xerox_lib.vsp": {
+                          "9x6_grid": {
+                            "type": "stack_panel",
                             "$item_collection_name": "container_items",
                             "size": ["100%cm", "100%c"],
                             "controls": [
                               {
-                                "top1@xerox_lib.hsp": {
+                                "top1": {
+                                  "type": "stack_panel",
+                                  "orientation": "horizontal",
                                   "size": ["100%c", "100%cm"],
                                   "collection_name": "$item_collection_name",
                                   "controls": [
@@ -254,7 +286,9 @@
                                 }
                               },
                               {
-                                "top2@xerox_lib.hsp": {
+                                "top2": {
+                                  "type": "stack_panel",
+                                  "orientation": "horizontal",
                                   "size": ["100%c", "100%cm"],
                                   "collection_name": "$item_collection_name",
                                   "controls": [
@@ -307,7 +341,9 @@
                                 }
                               },
                               {
-                                "middle1@xerox_lib.hsp": {
+                                "middle1": {
+                                  "type": "stack_panel",
+                                  "orientation": "horizontal",
                                   "size": ["100%c", "100%cm"],
                                   "collection_name": "$item_collection_name",
                                   "controls": [
@@ -360,7 +396,9 @@
                                 }
                               },
                               {
-                                "middle2@xerox_lib.hsp": {
+                                "middle2": {
+                                  "type": "stack_panel",
+                                  "orientation": "horizontal",
                                   "size": ["100%c", "100%cm"],
                                   "collection_name": "$item_collection_name",
                                   "controls": [
@@ -413,7 +451,9 @@
                                 }
                               },
                               {
-                                "bottom1@xerox_lib.hsp": {
+                                "bottom1": {
+                                  "type": "stack_panel",
+                                  "orientation": "horizontal",
                                   "size": ["100%c", "100%cm"],
                                   "collection_name": "$item_collection_name",
                                   "controls": [
@@ -466,7 +506,9 @@
                                 }
                               },
                               {
-                                "bottom2@xerox_lib.hsp": {
+                                "bottom2": {
+                                  "type": "stack_panel",
+                                  "orientation": "horizontal",
                                   "size": ["100%c", "100%cm"],
                                   "collection_name": "$item_collection_name",
                                   "controls": [
@@ -528,7 +570,8 @@
               }
             },
             {
-              "bottom_half@xerox_lib.p": {
+              "bottom_half": {
+                "type": "panel",
                 "size": ["107.3170731707%c", "115.3846153846%c"],
                 "anchor_from": "bottom_middle",
                 "anchor_to": "bottom_middle",
@@ -549,7 +592,8 @@
     ]
   },
 
-  "main_content@xerox_lib.b": {
+  "main_content": {
+    "type": "button",
     "default_focus_precedence": 0,
     "focus_enabled": true,
     "focus_wrap_enabled": false,

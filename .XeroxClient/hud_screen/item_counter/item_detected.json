@@ -1,4 +1,4 @@
-// 由@XSzC.修改的文件. 
+// 由@XSzC.修改的文件.
 // 未经允许不要使用任何文件. 请阅读LICENSE.txt
 
 // File modified by @XSzC.
@@ -10,7 +10,8 @@
 {
   "namespace": "item_detected",
 
-  "item_selected_detection@xerox_lib.p": {
+  "item_selected_detection": {
+    "type": "panel",
     "bindings": [
       {
         "binding_name": "#slot_selected",
@@ -30,7 +31,8 @@
     ]
   },
 
-  "slot_selected_detection_content@xerox_lib.vsp": {
+  "slot_selected_detection_content": {
+    "type": "stack_panel",
     "size": [0, 0],
     "visible": false,
     "collection_name": "$helper_collection_name",

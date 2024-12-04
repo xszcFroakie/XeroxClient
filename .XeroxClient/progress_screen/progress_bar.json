@@ -7,7 +7,8 @@
 {
   "namespace": "xc_modern_progress:progress_bar",
 
-  "text@xerox_lib.l": {
+  "text": {
+    "type": "label",
     "ignored": false,
     "size": ["default", "default"],
     "font_type": "Bahnschrift-SemiBold",
@@ -27,7 +28,8 @@
     ]
   },
 
-  "empty@xerox_lib.i": {
+  "empty": {
+    "type": "image",
     "max_size": [175, 8],
     "texture": "textures/XeroxClient/rounded_corner/all8x",
     "layer": 11,
@@ -36,7 +38,8 @@
     "anchor_to": "bottom_middle"
   },
 
-  "full@xerox_lib.i": {
+  "full": {
+    "type": "image",
     "size": ["100%", 8],
     "min_size": [8, 8],
     "texture": "textures/XeroxClient/rounded_corner/all8x",
@@ -65,7 +68,8 @@
     "color": "$xeroxclient_ui_theme_menu_background_color",
     "controls": [
       {
-        "dot@xerox_lib.p": {
+        "dot": {
+          "type": "panel",
           "anchor_from": "left_middle",
           "anchor_to": "center",
           "size": ["100%sm", "100%sm"],
@@ -110,7 +114,8 @@
     ]
   },
 
-  "static_bar@xerox_lib.p": {
+  "static_bar": {
+    "type": "panel",
     "size": [175, 8],
     "controls": [
       {

@@ -68,13 +68,16 @@
     "sound_pitch": 1.0
   },
 
-  "main_buttons_panel@xerox_lib.vsp": {
+  "main_buttons_panel": {
+    "type": "stack_panel",
     "size": [190, "100%c"],
     "controls": [
       { "resume@xc_modern_pause.return_to_game": {} },
       { "settings@xc_modern_pause.settings": {} },
       {
-        "2button_stack_0@xerox_lib.hsp": {
+        "2button_stack_0": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
           "size": ["100%", "100%cm"],
           "controls": [
             { "achievements@xc_modern_pause.achievements": {} },
@@ -83,7 +86,9 @@
         }
       },
       {
-        "2button_stack_1@xerox_lib.hsp": {
+        "2button_stack_1": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
           "size": ["100%", "100%cm"],
           "controls": [
             { "change_skin@xc_modern_pause.change_skin": {} },
@@ -95,7 +100,8 @@
     ]
   },
 
-  "main_menu@xerox_lib.i": {
+  "main_menu": {
+    "type": "image",
     "texture": "textures/XeroxClient/rounded_corner/all8x",
     "color": "$xeroxclient_ui_theme_menu_background_color",
     "alpha": 0.3,
@@ -105,18 +111,21 @@
     "offset": [0, 67.5],
     "controls": [
       {
-        "stack@xerox_lib.vsp": {
+        "stack": {
+          "type": "stack_panel",
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
           "offset": [0, -5],
           "size": [190, "100%c"],
           "controls": [
             {
-              "title@xerox_lib.p": {
+              "title": {
+                "type": "panel",
                 "size": ["100%", 30],
                 "controls": [
                   {
-                    "game_menu_text@xerox_lib.l": {
+                    "game_menu_text": {
+                      "type": "label",
                       "text": "Game Menu",
                       //"font_type": "HarmonyOS-Bold",
                       "font_type": "$global_font_type",
@@ -135,7 +144,8 @@
               }
             },
             {
-              "player_list_panel@xerox_lib.p": {
+              "player_list_panel": {
+                "type": "panel",
                 "$ignored_default_anims": true,
                 "size": ["100%", 0],
                 "animation_reset_name": "button.player_list_close",
@@ -240,7 +250,8 @@
     ]
   },
 
-  "main_content@xerox_lib.p": {
+  "main_content": {
+    "type": "panel",
     "propagate_alpha": true,
     "animation_reset_name": "screen_animation_reset",
     "anims": [

@@ -7,7 +7,8 @@
 {
   "namespace": "xc_modern_edit_box",
 
-  "text_edit_box_label@xerox_lib.l": {
+  "text_edit_box_label": {
+    "type": "label",
     "font_type": "$global_font_type",
     "backup_font_type": "$global_font_type_backup",
     "localize": false,
@@ -51,7 +52,8 @@
     ]
   },
 
-  "text_edit_box_place_holder_label@xerox_lib.l": {
+  "text_edit_box_place_holder_label": {
+    "type": "label",
     "font_type": "$global_font_type",
     "backup_font_type": "$global_font_type_backup",
     "localize": true,
@@ -77,20 +79,23 @@
     ]
   },
 
-  "X_button@xerox_lib.l": {
+  "X_button": {
+    "type": "label",
     "text": "x",
     "font_type": "HarmonyOS-Regular",
     "offset": [0, -3]
   },
 
-  "X_button_hover@xerox_lib.l": {
+  "X_button_hover": {
+    "type": "label",
     "text": "x",
     "font_type": "HarmonyOS-Regular",
     "offset": [0, -3],
     "color": "$xeroxclient_ui_theme_button_hover_color"
   },
 
-  "clear_text_button@xerox_lib.b": {
+  "clear_text_button": {
+    "type": "button",
     "layer": 10,
     "default_control": "default",
     "hover_control": "hover",
@@ -113,13 +118,15 @@
     ]
   },
 
-  "edit_box_indent@xerox_lib.i": {
+  "edit_box_indent": {
+    "type": "image",
     "texture": "('textures/XeroxClient/rounded_corner/' + $rc_type)",
     "color": "$xeroxclient_ui_theme_menu_background_color",
     "alpha": 0.3,
     "controls": [
       {
-        "border@xerox_lib.i": {
+        "border": {
+          "type": "image",
           "texture": "('textures/XeroxClient/rounded_corner_border/' + $rc_type)",
           "alpha": 0.65
         }
@@ -130,7 +137,8 @@
   "edit_box_indent_hover@xc_modern_edit_box.edit_box_indent": {
     "controls": [
       {
-        "border@xerox_lib.i": {
+        "border": {
+          "type": "image",
           "texture": "('textures/XeroxClient/rounded_corner_border/' + $rc_type)"
         }
       }
@@ -150,11 +158,13 @@
     "$rc_type|default": "all8x",
     "controls": [
       {
-        "centering_panel@xerox_lib.p": {
+        "centering_panel": {
+          "type": "panel",
           "size": ["100% - 6px", "100% - 4px"],
           "controls": [
             {
-              "clipper_panel@xerox_lib.p": {
+              "clipper_panel": {
+                "type": "panel",
                 "size": "$text_edit_clipping_panel_size",
                 "anchor_from": "left_middle",
                 "anchor_to": "left_middle",
@@ -182,7 +192,8 @@
                     }
                   },
                   {
-                    "clear_text_button_panel@xerox_lib.p": {
+                    "clear_text_button_panel": {
+                      "type": "panel",
                       "size": ["100%", "100%"],
                       "visible": "$text_clear_button_enabled",
                       "controls": [
@@ -205,7 +216,8 @@
                     }
                   },
                   {
-                    "visibility_panel@xerox_lib.p": {
+                    "visibility_panel": {
+                      "type": "panel",
                       "$placeholder_label_size|default": "$text_edit_box_label_size",
                       "controls": [
                         {
@@ -243,7 +255,8 @@
     ]
   },
 
-  "text_edit_box_scrolling_content@xerox_lib.ip": {
+  "text_edit_box_scrolling_content": {
+    "type": "input_panel",
     "focus_enabled": true,
     "size": ["100%", "100%c"],
     "$scrolling_content_anchor_from": "top_middle",
@@ -269,11 +282,13 @@
     "max_length": 32767,
     "controls": [
       {
-        "centering_panel@xerox_lib.p": {
+        "centering_panel": {
+          "type": "panel",
           "size": ["100% - 6px", "100% - 4px"],
           "controls": [
             {
-              "clipper_panel@xerox_lib.p": {
+              "clipper_panel": {
+                "type": "panel",
                 "size": "$text_edit_clipping_panel_size",
                 "anchor_from": "left_middle",
                 "anchor_to": "left_middle",
@@ -297,7 +312,8 @@
                     }
                   },
                   {
-                    "visibility_panel@xerox_lib.p": {
+                    "visibility_panel": {
+                      "type": "panel",
                       "controls": [
                         {
                           "place_holder_control@$place_holder_control": {

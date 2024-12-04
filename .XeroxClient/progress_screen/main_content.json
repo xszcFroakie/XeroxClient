@@ -7,7 +7,8 @@
 {
   "namespace": "xc_modern_progress",
 
-  "main_content@xerox_lib.p": {
+  "main_content": {
+    "type": "panel",
     "size": ["100%", "100%"],
     "$dynamic_bar|default": false,
     "controls": [

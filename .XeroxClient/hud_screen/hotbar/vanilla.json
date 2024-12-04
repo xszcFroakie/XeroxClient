@@ -7,7 +7,8 @@
 {
   "namespace": "xc_modern_hotbar:vanilla",
 
-  "cooldown_rend@xerox_lib.cr": {
+  "cooldown_rend": {
+    "type": "custom",
     "renderer": "hotbar_cooldown_renderer",
     "size": [20, 22],
     "bindings": [
@@ -18,7 +19,8 @@
     ]
   },
 
-  "heart_rend@xerox_lib.cr": {
+  "heart_rend": {
+    "type": "custom",
     "size": [1, 1],
     "renderer": "heart_renderer",
     "bindings": [
@@ -29,12 +31,14 @@
     ]
   },
 
-  "horse_heart_rend@xerox_lib.cr": {
+  "horse_heart_rend": {
+    "type": "custom",
     "size": [1, 1],
     "renderer": "horse_heart_renderer"
   },
 
-  "armor_rend@xerox_lib.cr": {
+  "armor_rend": {
+    "type": "custom",
     "size": [1, 1],
     "renderer": "armor_renderer",
     "bindings": [
@@ -45,7 +49,8 @@
     ]
   },
 
-  "hunger_rend@xerox_lib.cr": {
+  "hunger_rend": {
+    "type": "custom",
     "size": [1, 1],
     "renderer": "hunger_renderer",
     "bindings": [
@@ -56,12 +61,14 @@
     ]
   },
 
-  "bubbles_rend@xerox_lib.cr": {
+  "bubbles_rend": {
+    "type": "custom",
     "size": [1, 1],
     "renderer": "bubbles_renderer"
   },
 
-  "progress_text@xerox_lib.l": {
+  "progress_text": {
+    "type": "label",
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "text": "#level_number",
@@ -85,13 +92,15 @@
     "layer": 4
   },
 
-  "exp_progress_bar@xerox_lib.i": {
+  "exp_progress_bar": {
+    "type": "image",
     "texture": "textures/ui/experiencebarempty",
     "layer": 1,
     "size": [182, 5],
     "controls": [
       {
-        "full_@xerox_lib.i": {
+        "full_": {
+          "type": "image",
           "texture": "textures/ui/experiencebarfull",
           "clip_direction": "left",
           "clip_pixelperfect": false,
@@ -106,7 +115,8 @@
         }
       },
       {
-        "nub@xerox_lib.i": {
+        "nub": {
+          "type": "image",
           "size": ["100% - 7px", 5],
           "texture": "textures/ui/experiencenub",
           "tiled": "x",
@@ -147,7 +157,8 @@
     ]
   },
 
-  "centered_elements@xerox_lib.p": {
+  "centered_elements": {
+    "type": "panel",
     "anchor_from": "bottom_middle",
     "anchor_to": "bottom_middle",
     "size": [182, 5],
@@ -228,13 +239,15 @@
       },
       { "exp_progress_bar@xc_modern_hotbar:vanilla.exp_progress_bar": {} },
       {
-        "horse_jump_rend@xerox_lib.cr": {
+        "horse_jump_rend": {
+          "type": "custom",
           "renderer": "horse_jump_renderer",
           "layer": 4
         }
       },
       {
-        "dash_rend@xerox_lib.cr": {
+        "dash_rend": {
+          "type": "custom",
           "renderer": "dash_renderer",
           "layer": 4
         }
@@ -242,7 +255,8 @@
     ]
   },
 
-  "gui_hotbar_grid_item@xerox_lib.i": {
+  "gui_hotbar_grid_item": {
+    "type": "image",
     "layer": 1,
     "size": [20, 22],
     "$stack_count_required": true,
@@ -251,7 +265,8 @@
     "controls": [
       { "slot_selected@hud.hotbar_slot_selected_image": { "layer": 2 } },
       {
-        "hotbar_parent@xerox_lib.p": {
+        "hotbar_parent": {
+          "type": "panel",
           "size": [18, 18],
           "controls": [
             {
@@ -320,13 +335,16 @@
     ]
   },
 
-  "hotbar_panel@xerox_lib.hsp": {
+  "hotbar_panel": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
     "size": [182, 22],
     "layer": 1,
     "collection_name": "$hotbar_collection_name",
     "controls": [
       {
-        "left_elipses@xerox_lib.p": {
+        "left_elipses": {
+          "type": "panel",
           "size": [0, 0],
           "controls": [
             {
@@ -347,7 +365,8 @@
         }
       },
       {
-        "start_cap@xerox_lib.i": {
+        "start_cap": {
+          "type": "image",
           "size": [1, 22],
           "texture": "textures/ui/hotbar_start_cap"
         }
@@ -407,13 +426,15 @@
         }
       },
       {
-        "end_cap@xerox_lib.i": {
+        "end_cap": {
+          "type": "image",
           "size": [1, 22],
           "texture": "textures/ui/hotbar_end_cap"
         }
       },
       {
-        "right_elipses@xerox_lib.p": {
+        "right_elipses": {
+          "type": "panel",
           "size": [0, 0],
           "controls": [
             {
@@ -436,7 +457,8 @@
     ]
   },
 
-  "hotbar_content@xerox_lib.p": {
+  "hotbar_content": {
+    "type": "panel",
     "anchor_to": "bottom_middle",
     "anchor_from": "bottom_middle",
     "size": [182, 22],

@@ -7,7 +7,10 @@
 {
   "namespace": "xc_modern_scoreboard",
 
-  "scoreboard_sidebar_score@xerox_lib.hud_l": {
+  "scoreboard_sidebar_score": {
+    "type": "label",
+    "font_type": "$hud_font_type_overlay",
+    "backup_font_type": "$global_font_type_backup",
     "layer": 2,
     "size": ["default", 10],
     "text": "#player_score_sidebar",
@@ -26,7 +29,10 @@
     ]
   },
 
-  "scoreboard_sidebar_player@xerox_lib.hud_l": {
+  "scoreboard_sidebar_player": {
+    "type": "label",
+    "font_type": "$hud_font_type_overlay",
+    "backup_font_type": "$global_font_type_backup",
     "layer": 2,
     "text": "#player_name_sidebar",
     "size": ["default", 10],
@@ -44,13 +50,17 @@
     ]
   },
 
-  "scoreboard_sidebar@xerox_lib.p": {
+  "scoreboard_sidebar": {
+    "type": "panel",
     "size": ["100%cm + 4px", "100%c"],
     "anchor_from": "right_middle",
     "anchor_to": "right_middle",
     "controls": [
       {
-        "displayed_objective@xerox_lib.hud_l": {
+        "displayed_objective": {
+          "type": "label",
+          "font_type": "$hud_font_type_overlay",
+          "backup_font_type": "$global_font_type_backup",
           "size": ["default", 10],
           "max_size": [170, 10],
           "text": "#objective_sidebar_name",
@@ -71,7 +81,8 @@
         }
       },
       {
-        "lists@xerox_lib.p": {
+        "lists": {
+          "type": "panel",
           "anchor_from": "top_middle",
           "anchor_to": "top_middle",
           "inherit_max_sibling_width": true,
@@ -79,11 +90,11 @@
           "size": ["100%c", "100%cm"],
           "controls": [
             {
-              "players@xerox_lib.vsp": {
+              "players": {
+                "type": "stack_panel",
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
                 "size": ["100%cm", "100%c"],
-                "orientation": "vertical",
                 "collection_name": "scoreboard_players",
                 "factory": {
                   "name": "player_list_factory",
@@ -105,11 +116,11 @@
               }
             },
             {
-              "scores@xerox_lib.vsp": {
+              "scores": {
+                "type": "stack_panel",
                 "anchor_from": "top_right",
                 "anchor_to": "top_right",
                 "size": ["100%cm", "100%c"],
-                "orientation": "vertical",
                 "use_child_anchors": true,
                 "collection_name": "scoreboard_scores",
                 "factory": {

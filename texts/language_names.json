@@ -1,6 +1,6 @@
 [
-  [ "en_US", "English (United States) §7[XeroxClient Support]§r" ],
-  [ "en_GB", "English (United Kingdom) §7[XeroxClient Support]§r" ],
-  [ "zh_CN", "中文(简体) §7[XeroxClient支持]§r" ],
-  [ "zh_TW", "中文(繁體) §7[XeroxClient支持]§r" ]
+  ["en_US", "English (United States) §7[XeroxClient Support]§r"],
+  ["en_GB", "English (United Kingdom) §7[XeroxClient Support]§r"],
+  ["zh_CN", "中文(简体) §7[XeroxClient支持]§r"],
+  ["zh_TW", "中文(繁體) §7[XeroxClient支持]§r"]
 ]

@@ -7,7 +7,8 @@
 {
   "namespace": "xc_modern_start:top",
 
-  "player_info@xerox_lib.i": {
+  "player_info": {
+    "type": "image",
     "size": ["100%c+4px", 20],
     "color": "$xeroxclient_ui_theme_menu_background_color",
     "texture": "textures/XeroxClient/rounded_corner/all8x",
@@ -21,12 +22,15 @@
     ]
   },
 
-  "player_info_content@xerox_lib.hsp": {
+  "player_info_content": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
     "layer": 12,
     "size": ["100%c", 16],
     "controls": [
       {
-        "player_head_portrait@xerox_lib.i": {
+        "player_head_portrait": {
+          "type": "image",
           "size": [20, 16],
           "layer": 12,
           "bilinear": true,
@@ -43,15 +47,19 @@
         }
       },
       {
-        "welcome@xerox_lib.p": {
+        "welcome": {
+          "type": "panel",
           "size": ["100%c", 16],
-          "controls": [{ "welcome_text@xc_modern_start:top.player_name_text": {} }]
+          "controls": [
+            { "welcome_text@xc_modern_start:top.player_name_text": {} }
+          ]
         }
       }
     ]
   },
 
-  "player_name_text@xerox_lib.l": {
+  "player_name_text": {
+    "type": "label",
     "layer": 12,
     "text": "#text",
     "size": ["default", "default"],

@@ -7,18 +7,22 @@
 {
   "namespace": "xc_modern_play:singleplayer",
 
-  "local_world_content_panel@xerox_lib.hsp": {
+  "local_world_content_panel": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
     "type": "stack_panel",
     "orientation": "horizontal",
     "size": ["100%", "100%"],
     "controls": [
       {
-        "screenshot@xerox_lib.p": {
+        "screenshot": {
+          "type": "panel",
           "clips_children": true,
           "size": ["100%c + 8px", "100%"],
           "controls": [
             {
-              "screenshot_pic@xerox_lib.i": {
+              "screenshot_pic": {
+                "type": "image",
                 "layer": 5,
                 "size": ["173.91%y", "100% - 8px"],
                 "force_texture_reload": true,
@@ -43,11 +47,14 @@
         }
       },
       {
-        "text_panel@xerox_lib.p": {
+        "text_panel": {
+          "type": "panel",
           "size": ["fill", "100%"],
           "controls": [
             {
-              "top_side@xerox_lib.hsp": {
+              "top_side": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
                 "size": ["100%", 10],
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
@@ -78,7 +85,9 @@
               }
             },
             {
-              "bottom_side@xerox_lib.hsp": {
+              "bottom_side": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
                 "anchor_from": "bottom_left",
                 "anchor_to": "bottom_left",
                 "size": ["100%", 10],
@@ -109,7 +118,8 @@
         }
       },
       {
-        "padding@xerox_lib.p": {
+        "padding": {
+          "type": "panel",
           "size": [2, 0]
         }
       }
@@ -134,7 +144,8 @@
     ]
   },
 
-  "edit_icon@xerox_lib.i": {
+  "edit_icon": {
+    "type": "image",
     "texture": "textures/XeroxClient/icon/edit",
     "bilinear": true,
     "size": [25, 25]
@@ -152,7 +163,9 @@
     ]
   },
 
-  "local_world_item@xerox_lib.hsp": {
+  "local_world_item": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
     "size": ["100%", 44],
     "controls": [
       { "item_button@xc_modern_play:singleplayer.local_world_item_button": {} },
@@ -160,7 +173,8 @@
     ]
   },
 
-  "worlds_scrolling_content@xerox_lib.vsp": {
+  "worlds_scrolling_content": {
+    "type": "stack_panel",
     "size": ["100%", "100%c"],
     "$button_image_size": ["100%", "100% - 4px"],
     "controls": [
@@ -173,7 +187,8 @@
     ]
   },
 
-  "singleplayer_page_content@xerox_lib.vsp": {
+  "singleplayer_page_content": {
+    "type": "stack_panel",
     "size": ["100% - 10px", "100% - 10px"],
     "bindings": [
       {
@@ -185,7 +200,9 @@
     ],
     "controls": [
       {
-        "top_button_panel@xerox_lib.hsp": {
+        "top_button_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
           "size": ["100%", 30],
           "controls": [
             {
@@ -216,11 +233,13 @@
         }
       },
       {
-        "divide@xerox_lib.p": {
+        "divide": {
+          "type": "panel",
           "size": ["100%", 6],
           "controls": [
             {
-              "divide@xerox_lib.i": {
+              "divide": {
+                "type": "image",
                 "texture": "textures/XeroxClient/diffusion",
                 "alpha": 0.65,
                 "layer": 1,

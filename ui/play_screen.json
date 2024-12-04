@@ -9,7 +9,7 @@
     "$screen_transition_dura_push": 0.4,
     "$screen_transition_dura_pop": 0.4
   },
-  
+
   "label_background": {
     "texture": "textures/XeroxClient/rounded_corner/all8x",
     "color": "$xeroxclient_ui_theme_menu_background_color",

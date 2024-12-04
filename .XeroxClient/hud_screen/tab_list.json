@@ -7,7 +7,8 @@
 {
   "namespace": "xc_modern_tab_list",
 
-  "tab_list@xerox_lib.b": {
+  "tab_list": {
+    "type": "button",
     "pressed_control": "tab_list_content",
     "button_mappings": [
       {
@@ -19,7 +20,8 @@
     ],
     "controls": [
       {
-        "tab_list_content@xerox_lib.i": {
+        "tab_list_content": {
+          "type": "image",
           "anchor_from": "top_middle",
           "anchor_to": "top_middle",
           "offset": [0, 10],
@@ -30,7 +32,8 @@
           "size": ["100%c + 8px", "100%c + 6px"],
           "controls": [
             {
-              "tab_list_grid@xerox_lib.cp": {
+              "tab_list_grid": {
+                "type": "collection_panel",
                 "size": ["100%c", "100%c"],
                 "collection_name": "players_collection",
                 "controls": [{ "list@xc_modern_tab_list.tab_list_stack": {} }]
@@ -42,11 +45,14 @@
     ]
   },
 
-  "tab_list_stack@xerox_lib.hsp": {
+  "tab_list_stack": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
     "size": ["100%c", "100%cm"],
     "controls": [
       {
-        "stack_0@xerox_lib.p": {
+        "stack_0": {
+          "type": "panel",
           "size": ["100%cm", "100%c"],
           "max_size": ["100%cm", 216],
           "$min_index": 0,
@@ -55,7 +61,8 @@
         }
       },
       {
-        "stack_1@xerox_lib.p": {
+        "stack_1": {
+          "type": "panel",
           "size": ["100%cm", "100%c"],
           "max_size": ["100%cm", 216],
           "$min_index": 18,
@@ -82,7 +89,8 @@
         }
       },
       {
-        "stack_2@xerox_lib.p": {
+        "stack_2": {
+          "type": "panel",
           "size": ["100%cm", "100%c"],
           "max_size": ["100%cm", 216],
           "$min_index": 36,
@@ -109,7 +117,8 @@
         }
       },
       {
-        "stack_3@xerox_lib.p": {
+        "stack_3": {
+          "type": "panel",
           "size": ["100%cm", "100%c"],
           "max_size": ["100%cm", 216],
           "$min_index": 54,
@@ -138,7 +147,8 @@
     ]
   },
 
-  "tab_list_grid@xerox_lib.g": {
+  "tab_list_grid": {
+    "type": "grid",
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "size": [140, "100%c"],
@@ -152,7 +162,9 @@
     ]
   },
 
-  "tab_list_grid_item@xerox_lib.hsp": {
+  "tab_list_grid_item": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
     "size": [140, 12],
     "layer": 3,
     "bindings": [
@@ -169,7 +181,8 @@
     ],
     "controls": [
       {
-        "player_picture@xerox_lib.p": {
+        "player_picture": {
+          "type": "panel",
           "layer": 11,
           "size": [10, 10],
           "controls": [
@@ -186,11 +199,13 @@
         }
       },
       {
-        "player_gamertag@xerox_lib.p": {
+        "player_gamertag": {
+          "type": "panel",
           "size": ["fill", 12],
           "controls": [
             {
-              "gamertag_text@xerox_lib.l": {
+              "gamertag_text": {
+                "type": "label",
                 "text": "#gamertag",
                 "anchor_from": "left_middle",
                 "anchor_to": "left_middle",

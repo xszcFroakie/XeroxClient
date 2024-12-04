@@ -5,20 +5,19 @@
 // Don't use any file without permission. Read LICENSE.txt
 
 {
-    "namespace": "beacon",
-  
-    "beacon_screen": {
-      "variables": [
-        {
-          "requires": "$desktop_screen",
-          "$screen_content": "xc_modern_beacon_screen.main_content",
-          "$screen_bg_content": "xc_backgrounds.menu_background"
-        },
-        {
-          "requires": "$pocket_screen",
-          "$screen_content": "beacon_pocket.beacon_panel"
-        }
-      ]
-    }
+  "namespace": "beacon",
+
+  "beacon_screen": {
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_content": "xc_modern_beacon_screen.main_content",
+        "$screen_bg_content": "xc_backgrounds.menu_background"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$screen_content": "beacon_pocket.beacon_panel"
+      }
+    ]
   }
-  
+}

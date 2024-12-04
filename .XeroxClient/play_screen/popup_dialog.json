@@ -26,14 +26,16 @@
     ]
   },
 
-  "join_by_code_popup_content@xerox_lib.i": {
+  "join_by_code_popup_content": {
+    "type": "image",
     "texture": "textures/XeroxClient/rounded_corner/all8x",
     "color": "$xeroxclient_ui_theme_menu_background_color",
     "alpha": 0.7,
     "size": [200, 100],
     "controls": [
       {
-        "background_outline@xerox_lib.i": {
+        "background_outline": {
+          "type": "image",
           "texture": "textures/XeroxClient/rounded_corner_border/all8x",
           "color": "$xeroxclient_ui_theme_button_pressed_color",
           "alpha": 0.8,
@@ -42,16 +44,19 @@
         }
       },
       {
-        "popup_stack_panel@xerox_lib.vsp": {
+        "popup_stack_panel": {
+          "type": "stack_panel",
           "size": ["100%", "100%"],
           "controls": [
             {
-              "header@xerox_lib.p": {
+              "header": {
+                "type": "panel",
                 "size": ["100%", 20],
                 "layer": 1,
                 "controls": [
                   {
-                    "header_text@xerox_lib.l": {
+                    "header_text": {
+                      "type": "label",
                       "text": "networkWorld.joinByCode",
                       "font_type": "$global_font_type",
                       "backup_font_type": "$global_font_type_backup"
@@ -93,17 +98,21 @@
               }
             },
             {
-              "spacing_1@xerox_lib.p": {
+              "spacing_1": {
+                "type": "panel",
                 "size": [0, 1]
               }
             },
             {
-              "upper_body@xerox_lib.hsp": {
+              "upper_body": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
                 "size": ["100%", 22],
                 "layer": 1,
                 "controls": [
                   {
-                    "margin1@xerox_lib.p": {
+                    "margin1": {
+                      "type": "panel",
                       "size": [3, 0]
                     }
                   },
@@ -116,7 +125,8 @@
                     }
                   },
                   {
-                    "spacing@xerox_lib.p": {
+                    "spacing": {
+                      "type": "panel",
                       "size": [1, 0]
                     }
                   },
@@ -129,7 +139,8 @@
                     }
                   },
                   {
-                    "margin2@xerox_lib.p": {
+                    "margin2": {
+                      "type": "panel",
                       "size": [3, 0]
                     }
                   }
@@ -137,23 +148,27 @@
               }
             },
             {
-              "spacing_2@xerox_lib.p": {
+              "spacing_2": {
+                "type": "panel",
                 "size": [0, 10]
               }
             },
             {
-              "lower_body@xerox_lib.p": {
+              "lower_body": {
+                "type": "panel",
                 "size": ["100%", "fill"],
                 "layer": 1,
                 "controls": [
                   {
-                    "lower_body_content@xerox_lib.p": {
+                    "lower_body_content": {
+                      "type": "panel",
                       "size": ["100%", "100%"],
                       "anchor_from": "top_middle",
                       "anchor_to": "top_middle",
                       "controls": [
                         {
-                          "help_text@xerox_lib.l": {
+                          "help_text": {
+                            "type": "label",
                             "size": ["95%", "100%"],
                             "text": "networkWold.joinByCodeHelpText",
                             "text_alignment": "center",
@@ -192,7 +207,8 @@
     ]
   },
 
-  "popup_two_buttons@xerox_lib.i": {
+  "popup_two_buttons": {
+    "type": "image",
     "texture": "textures/XeroxClient/rounded_corner/all8x",
     "color": "$xeroxclient_ui_theme_menu_background_color",
     "alpha": 0.7,
@@ -200,7 +216,8 @@
     "$child_control": "play.high_ping_popup_content_stack_panel",
     "controls": [
       {
-        "background_outline@xerox_lib.i": {
+        "background_outline": {
+          "type": "image",
           "texture": "textures/XeroxClient/rounded_corner_border/all8x",
           "color": "$xeroxclient_ui_theme_button_pressed_color",
           "alpha": 0.8,
@@ -209,18 +226,21 @@
         }
       },
       {
-        "popup_stack_panel@xerox_lib.p": {
+        "popup_stack_panel": {
+          "type": "panel",
           "size": ["100%", "100%"],
           "controls": [
             {
-              "header@xerox_lib.p": {
+              "header": {
+                "type": "panel",
                 "size": ["100%", 20],
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
                 "layer": 1,
                 "controls": [
                   {
-                    "header_text@xerox_lib.l": {
+                    "header_text": {
+                      "type": "label",
                       "text": "networkWorld.highPingWarning.title",
                       "font_type": "$global_font_type",
                       "backup_font_type": "$global_font_type_backup"
@@ -262,7 +282,8 @@
               }
             },
             {
-              "upper_body@xerox_lib.p": {
+              "upper_body": {
+                "type": "panel",
                 "size": ["100% - 8px", "100% - 47px"],
                 "layer": 1,
                 "offset": [0, 21],
@@ -278,14 +299,17 @@
               }
             },
             {
-              "lower_body@xerox_lib.p": {
+              "lower_body": {
+                "type": "panel",
                 "size": ["100%", 25],
                 "anchor_from": "bottom_middle",
                 "anchor_to": "bottom_middle",
                 "layer": 1,
                 "controls": [
                   {
-                    "button_panel@xerox_lib.hsp": {
+                    "button_panel": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
                       "size": ["100% - 6px", 22],
                       "anchor_from": "top_middle",
                       "anchor_to": "top_middle",

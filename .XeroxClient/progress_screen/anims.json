@@ -6,14 +6,16 @@
 
 {
   "namespace": "progress_animation",
-  "dot_draw_to_line@xerox_lib.as": {
+  "dot_draw_to_line": {
+    "anim_type": "size",
     "easing": "in_cubic",
     "duration": 0.5,
     "to": [40, 8],
     "from": [8, 8],
     "next": "@progress_animation.line_draw_to_dot"
   },
-  "line_draw_to_dot@xerox_lib.as": {
+  "line_draw_to_dot": {
+    "anim_type": "size",
     "easing": "out_cubic",
     "duration": 0.5,
     "from": [40, 8],
@@ -21,7 +23,8 @@
     "next": "@progress_animation.dot_draw_to_line"
   },
 
-  "dot_left_to_right@xerox_lib.ao": {
+  "dot_left_to_right": {
+    "anim_type": "offset",
     "easing": "in_out_cubic",
     "duration": 1.0,
     "to": ["100%-4px", 0],
@@ -29,7 +32,8 @@
     "next": "@progress_animation.dot_right_to_left"
   },
 
-  "dot_right_to_left@xerox_lib.ao": {
+  "dot_right_to_left": {
+    "anim_type": "offset",
     "easing": "in_out_cubic",
     "duration": 1.0,
     "from": ["100%-4px", 0],
@@ -37,7 +41,8 @@
     "next": "@progress_animation.dot_left_to_right"
   },
 
-  "dot_expand_size@xerox_lib.as": {
+  "dot_expand_size": {
+    "anim_type": "size",
     "easing": "out_quad",
     "duration": 1.0,
     "from": [10, 8],
@@ -45,17 +50,20 @@
     "next": "@progress_animation.dot_expand_size_w0"
   },
 
-  "dot_expand_size_w0@xerox_lib.w": {
+  "dot_expand_size_w0": {
+    "anim_type": "wait",
     "duration": 0.0,
     "next": "@progress_animation.dot_expand_size_w"
   },
 
-  "dot_expand_size_w@xerox_lib.w": {
+  "dot_expand_size_w": {
+    "anim_type": "wait",
     "duration": 1.0,
     "next": "@progress_animation.dot_expand_size"
   },
 
-  "dot_expand_alpha@xerox_lib.aa": {
+  "dot_expand_alpha": {
+    "anim_type": "alpha",
     "easing": "out_quad",
     "duration": 0.8,
     "from": 1.0,
@@ -63,12 +71,14 @@
     "next": "@progress_animation.dot_expand_alpha_w0"
   },
 
-  "dot_expand_alpha_w0@xerox_lib.w": {
+  "dot_expand_alpha_w0": {
+    "anim_type": "wait",
     "duration": 0.2,
     "next": "@progress_animation.dot_expand_alpha_w"
   },
 
-  "dot_expand_alpha_w@xerox_lib.w": {
+  "dot_expand_alpha_w": {
+    "anim_type": "wait",
     "duration": 1.0,
     "next": "@progress_animation.dot_expand_alpha"
   }

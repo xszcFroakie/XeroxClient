@@ -29,7 +29,8 @@
     "to": [7.5, 45]
   },
 
-  "version_check@xerox_lib.i": {
+  "version_check": {
+    "type": "image",
     "size": [140, "100%c+10px"],
     "texture": "textures/XeroxClient/rounded_corner/all8x",
     "color": "$xeroxclient_ui_theme_menu_background_color",
@@ -41,11 +42,13 @@
     "anims": ["@xc_common.version_check_in"],
     "controls": [
       {
-        "stack@xerox_lib.vsp": {
+        "stack": {
+          "type": "stack_panel",
           "size": [120, "100%c"],
           "controls": [
             {
-              "text1@xerox_lib.l": {
+              "text1": {
+                "type": "label",
                 "color": [1.0, 0.333, 0.333],
                 "size": ["100%", "default"],
                 "layer": 11,
@@ -55,7 +58,8 @@
               }
             },
             {
-              "text2@xerox_lib.l": {
+              "text2": {
+                "type": "label",
                 "size": ["100%", "default"],
                 "layer": 11,
                 "text": "xc.unsupportVersion.suggestVersion",
@@ -64,7 +68,8 @@
               }
             },
             {
-              "text3@xerox_lib.l": {
+              "text3": {
+                "type": "label",
                 "size": ["100%", "default"],
                 "color": [0.333, 1.0, 0.333],
                 "layer": 11,
@@ -74,7 +79,8 @@
               }
             },
             {
-              "text4@xerox_lib.l": {
+              "text4": {
+                "type": "label",
                 "size": ["100%", "default"],
                 "color": [1.0, 1.0, 0.333],
                 "layer": 11,
@@ -97,7 +103,8 @@
     ]
   },
 
-  "item_renderer@xerox_lib.cr": {
+  "item_renderer": {
+    "type": "custom",
     "renderer": "inventory_item_renderer",
     "$item_id_aux|default": -1,
     "property_bag": {

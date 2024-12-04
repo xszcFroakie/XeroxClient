@@ -10,7 +10,8 @@
 {
   "namespace": "handhold_base",
 
-  "counter_item@xerox_lib.p": {
+  "counter_item": {
+    "type": "panel",
     "bindings": [
       {
         "binding_name": "#inventory_stack_count",
@@ -52,7 +53,8 @@
     ]
   },
 
-  "counter_grid@xerox_lib.vsp": {
+  "counter_grid": {
+    "type": "stack_panel",
     "collection_name": "$helper_collection_name",
     "visible": false,
     "controls": [
@@ -242,7 +244,8 @@
     ]
   },
 
-  "item_total_counter@xerox_lib.l": {
+  "item_total_counter": {
+    "type": "label",
     "text": "#Genshin_total_count",
     "size": ["default", "default"],
     "font_type": "$global_font_type",
@@ -473,7 +476,8 @@
     ]
   },
 
-  "item_counter_content@xerox_lib.i": {
+  "item_counter_content": {
+    "type": "image",
     //"$counter_item_id": 1,
     //"offset": [0, 16],
     "alpha": 0.3,
@@ -513,12 +517,15 @@
     ],
     "controls": [
       {
-        "item_stack@xerox_lib.hsp": {
+        "item_stack": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
           "orientation": "horizontal",
           "size": ["100%c", "100%cm"],
           "controls": [
             {
-              "item_renderer@xerox_lib.cr": {
+              "item_renderer": {
+                "type": "custom",
                 "renderer": "inventory_item_renderer",
                 "size": ["100%y", 16],
                 "layer": 4,
@@ -533,7 +540,8 @@
               }
             },
             {
-              "counter_panel@xerox_lib.p": {
+              "counter_panel": {
+                "type": "panel",
                 "size": ["100%c + 3px", "100%sm"],
                 "controls": [
                   {
@@ -552,7 +560,8 @@
     ]
   },
 
-  "dura_viewer_content@xerox_lib.i": {
+  "dura_viewer_content": {
+    "type": "image",
     "alpha": 0.3,
     "layer": 3,
     "texture": "textures/XeroxClient/rounded_corner/all8x",
@@ -584,7 +593,8 @@
     ],
     "controls": [
       {
-        "durability_text@xerox_lib.l": {
+        "durability_text": {
+          "type": "label",
           "text": "#Honkai_dura_viewer",
           "size": ["default", "default"],
           "font_type": "$global_font_type",
@@ -626,7 +636,8 @@
     ]
   },
 
-  "dura_viewer@xerox_lib.cp": {
+  "dura_viewer": {
+    "type": "collection_panel",
     "collection_name": "$helper_collection_name",
     "anchor_to": "$helper_anchor",
     "size": ["100%cm", "100%cm"],
@@ -679,7 +690,8 @@
     ]
   },
 
-  "amount_counter@xerox_lib.cp": {
+  "amount_counter": {
+    "type": "collection_panel",
     "collection_name": "$helper_collection_name",
     "anchor_to": "$helper_anchor",
     "size": ["100%cm", "100%cm"],
@@ -732,7 +744,8 @@
     ]
   },
 
-  "item_helper@xerox_lib.p": {
+  "item_helper": {
+    "type": "panel",
     "$helper_collection_name": "hotbar_items",
     "size": [0, 22],
     "anchor_from": "bottom_middle",

@@ -17,7 +17,7 @@
         "camera_to_accepts_input": false
       },
       "minecraft:camera_attach_to_player": {
-        "offset": [ 0.0, 0.0, 0.0 ]
+        "offset": [0.0, 0.0, 0.0]
       },
       "minecraft:camera_direct_look": {
         "pitch_min": -89.9,

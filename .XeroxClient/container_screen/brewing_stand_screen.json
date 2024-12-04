@@ -7,7 +7,8 @@
 {
   "namespace": "xc_modern_brewing_stand_screen",
 
-  "brewing_stand_panel@xerox_lib.i": {
+  "brewing_stand_panel": {
+    "type": "image",
     "texture": "textures/XeroxClient/rounded_corner/all8x",
     "color": "$xeroxclient_ui_theme_menu_background_color",
     "alpha": 0.3,
@@ -16,20 +17,23 @@
     "clips_children": true,
     "controls": [
       {
-        "top_half@xerox_lib.p": {
+        "top_half": {
+          "type": "panel",
           "size": ["100%sm", "46.0227272727%x"],
           "anchor_from": "top_middle",
           "anchor_to": "top_middle",
           "controls": [
             {
-              "0size_panel_1@xerox_lib.p": {
+              "0size_panel_1": {
+                "type": "panel",
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
                 "offset": [0, "5.1948051948%"],
                 "size": [0, 0],
                 "controls": [
                   {
-                    "container_title@xerox_lib.l": {
+                    "container_title": {
+                      "type": "label",
                       "text": "$container_title",
                       "size": ["default", "default"],
                       "anchor_from": "top_middle",
@@ -44,7 +48,8 @@
               }
             },
             {
-              "0size_panel_2@xerox_lib.p": {
+              "0size_panel_2": {
+                "type": "panel",
                 "anchor_from": "top_right",
                 "anchor_to": "top_right",
                 "offset": ["-3.9772727273%", "2.5974025974%"],
@@ -80,10 +85,12 @@
               }
             },
             {
-              "brewing_stand_pictogram@xerox_lib.p": {
+              "brewing_stand_pictogram": {
+                "type": "panel",
                 "controls": [
                   {
-                    "brewing_input_slot@xerox_lib.i": {
+                    "brewing_input_slot": {
+                      "type": "image",
                       "anchor_from": "top_middle",
                       "anchor_to": "top_middle",
                       "offset": ["-0.5681818182%", "18.5185185185%"],
@@ -99,7 +106,8 @@
                     }
                   },
                   {
-                    "brewing_output_slots@xerox_lib.cp": {
+                    "brewing_output_slots": {
+                      "type": "collection_panel",
                       "collection_name": "$item_collection_name",
                       "$item_collection_name": "brewing_result_items",
                       "size": ["110%c", "39.3939393939%x"],
@@ -108,7 +116,8 @@
                       "anchor_to": "top_middle",
                       "controls": [
                         {
-                          "0@xerox_lib.i": {
+                          "0": {
+                            "type": "image",
                             "anchor_from": "top_left",
                             "anchor_to": "top_left",
                             "size": ["111.1111111111%c", "100%x"],
@@ -125,7 +134,8 @@
                           }
                         },
                         {
-                          "1@xerox_lib.i": {
+                          "1": {
+                            "type": "image",
                             "anchor_from": "bottom_middle",
                             "anchor_to": "bottom_middle",
                             "size": ["111.1111111111%c", "100%x"],
@@ -142,7 +152,8 @@
                           }
                         },
                         {
-                          "2@xerox_lib.i": {
+                          "2": {
+                            "type": "image",
                             "anchor_from": "top_right",
                             "anchor_to": "top_right",
                             "size": ["111.1111111111%c", "100%x"],
@@ -162,7 +173,8 @@
                     }
                   },
                   {
-                    "brewing_fuel_slot@xerox_lib.i": {
+                    "brewing_fuel_slot": {
+                      "type": "image",
                       "anchor_from": "top_left",
                       "anchor_to": "top_left",
                       "offset": ["8.5227272727%", "18.5185185185%"],
@@ -178,7 +190,8 @@
                     }
                   },
                   {
-                    "brewing_arrow_empty_image@xerox_lib.i": {
+                    "brewing_arrow_empty_image": {
+                      "type": "image",
                       "color": "$xeroxclient_ui_theme_menu_background_color",
                       "alpha": 0.3,
                       "layer": 1,
@@ -189,7 +202,8 @@
                       "offset": ["5.1136363636%", "19.7530864198%"],
                       "controls": [
                         {
-                          "brewing_arrow_full_image@xerox_lib.i": {
+                          "brewing_arrow_full_image": {
+                            "type": "image",
                             "layer": 3,
                             "texture": "textures/XeroxClient/icon/brewing_arrow",
                             "clip_direction": "up",
@@ -206,7 +220,8 @@
                     }
                   },
                   {
-                    "brewing_fuel_bar_empty_image@xerox_lib.i": {
+                    "brewing_fuel_bar_empty_image": {
+                      "type": "image",
                       "color": "$xeroxclient_ui_theme_menu_background_color",
                       "alpha": 0.3,
                       "layer": 1,
@@ -217,7 +232,8 @@
                       "offset": ["-5.6818181818%", "51.8518518519%"],
                       "controls": [
                         {
-                          "brewing_fuel_bar_full_image@xerox_lib.i": {
+                          "brewing_fuel_bar_full_image": {
+                            "type": "image",
                             "layer": 3,
                             "texture": "textures/XeroxClient/icon/brewing_fuel_bar",
                             "clip_direction": "left",
@@ -234,7 +250,8 @@
                     }
                   },
                   {
-                    "bubbles_empty_image@xerox_lib.i": {
+                    "bubbles_empty_image": {
+                      "type": "image",
                       "color": "$xeroxclient_ui_theme_menu_background_color",
                       "alpha": 0.3,
                       "texture": "textures/XeroxClient/icon/brewing_bubbles",
@@ -245,7 +262,8 @@
                       "offset": ["-7.3863636364%", "14.8148148148%"],
                       "controls": [
                         {
-                          "bubbles_full_image@xerox_lib.i": {
+                          "bubbles_full_image": {
+                            "type": "image",
                             "texture": "textures/XeroxClient/icon/brewing_bubbles",
                             "layer": 3,
                             "clip_direction": "down",
@@ -262,7 +280,8 @@
                     }
                   },
                   {
-                    "brewing_fuel_pipes@xerox_lib.i": {
+                    "brewing_fuel_pipes": {
+                      "type": "image",
                       "color": "$xeroxclient_ui_theme_menu_background_color",
                       "alpha": 0.3,
                       "layer": 2,
@@ -274,7 +293,8 @@
                     }
                   },
                   {
-                    "brewing_pipes@xerox_lib.i": {
+                    "brewing_pipes": {
+                      "type": "image",
                       "color": "$xeroxclient_ui_theme_menu_background_color",
                       "alpha": 0.3,
                       "layer": 2,
@@ -292,7 +312,8 @@
         }
       },
       {
-        "bottom_half@xerox_lib.p": {
+        "bottom_half": {
+          "type": "panel",
           "size": ["107.3170731707%c", "108.9743589744%c"],
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
@@ -310,7 +331,8 @@
     ]
   },
 
-  "main_content@xerox_lib.b": {
+  "main_content": {
+    "type": "button",
     "default_focus_precedence": 0,
     "focus_enabled": true,
     "focus_wrap_enabled": false,

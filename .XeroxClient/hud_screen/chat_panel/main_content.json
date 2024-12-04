@@ -7,7 +7,10 @@
 {
   "namespace": "xc_modern_chat",
 
-  "chat_label@xerox_lib.hud_l": {
+  "chat_label": {
+    "type": "label",
+    "font_type": "$hud_font_type_overlay",
+    "backup_font_type": "$global_font_type_backup",
     "layer": 31,
     "text": "#text",
     "size": ["100%-2px", "default"],
@@ -26,7 +29,8 @@
     ]
   },
 
-  "chat_grid_item@xerox_lib.p": {
+  "chat_grid_item": {
+    "type": "panel",
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "bindings": [
@@ -38,7 +42,8 @@
     "anims": ["@xc_modern_chat.chat_start_anim"],
     "controls": [
       {
-        "chat_msg@xerox_lib.p": {
+        "chat_msg": {
+          "type": "panel",
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "size": ["100%", "100%c"],
@@ -47,7 +52,8 @@
           "anims": ["@xc_modern_chat.chat_wait_anim_1"],
           "controls": [
             {
-              "chat_content@xerox_lib.p": {
+              "chat_content": {
+                "type": "panel",
                 "layer": 1,
                 "anchor_from": "bottom_left",
                 "anchor_to": "bottom_left",
@@ -70,14 +76,16 @@
     ]
   },
 
-  "modern_chat_panel@xerox_lib.p": {
+  "modern_chat_panel": {
+    "type": "panel",
     "layer": 3,
     "offset": [1, -26],
     "anchor_from": "bottom_left",
     "anchor_to": "bottom_left",
     "controls": [
       {
-        "stack_panel@xerox_lib.vsp": {
+        "stack_panel": {
+          "type": "stack_panel",
           "anchor_from": "bottom_left",
           "anchor_to": "bottom_left",
           "factory": {

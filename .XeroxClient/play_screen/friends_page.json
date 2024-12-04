@@ -7,7 +7,9 @@
 {
   "namespace": "xc_modern_play:friends",
 
-  "realms_world_content@xerox_lib.hsp": {
+  "realms_world_content": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
     "size": ["100%", "100%"],
     "variables": [
       {
@@ -21,13 +23,15 @@
     ],
     "controls": [
       {
-        "screenshot@xerox_lib.p": {
+        "screenshot": {
+          "type": "panel",
           "ignored": "(not $show_screenshot)",
           "clips_children": true,
           "size": ["100%c + 8px", "100%"],
           "controls": [
             {
-              "screenshot_pic@xerox_lib.i": {
+              "screenshot_pic": {
+                "type": "image",
                 "layer": 5,
                 "size": ["173.91%y", "100% - 8px"],
                 "texture": "textures/ui/RealmDemoScreen"
@@ -37,7 +41,8 @@
         }
       },
       {
-        "realms_world_content_text_area@xerox_lib.p": {
+        "realms_world_content_text_area": {
+          "type": "panel",
           "size": ["fill", "100%"],
           "controls": [
             {
@@ -62,15 +67,19 @@
         }
       },
       {
-        "realms_world_content_status_area@xerox_lib.hsp": {
+        "realms_world_content_status_area": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
           "size": ["100%c", "100%"],
           "controls": [
             {
-              "world_player_count_text_panel@xerox_lib.p": {
+              "world_player_count_text_panel": {
+                "type": "panel",
                 "size": ["100%c", "100%"],
                 "controls": [
                   {
-                    "realms_world_player_count@xerox_lib.l": {
+                    "realms_world_player_count": {
+                      "type": "label",
                       "text": "#realms_world_player_count",
                       "size": ["default", "default"],
                       "font_type": "$global_font_type",
@@ -98,7 +107,9 @@
     ]
   },
 
-  "realms_world_item@xerox_lib.hsp": {
+  "realms_world_item": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
     "layer": 1,
     "size": ["100%", 30],
     "controls": [
@@ -128,7 +139,8 @@
         }
       },
       {
-        "edit_panel@xerox_lib.p": {
+        "edit_panel": {
+          "type": "panel",
           "size": ["100%y", "100%"],
           "controls": [
             {
@@ -148,7 +160,8 @@
               }
             },
             {
-              "realms_world_expiry_notification@xerox_lib.i": {
+              "realms_world_expiry_notification": {
+                "type": "image",
                 "texture": "textures/XeroxClient/rounded_corner/all8x",
                 "color": "$xeroxclient_ui_theme_menu_background_color",
                 "alpha": 0.3,
@@ -166,7 +179,8 @@
                 ],
                 "controls": [
                   {
-                    "!@xerox_lib.l": {
+                    "!": {
+                      "type": "label",
                       "text": "!",
                       "layer": 7,
                       "font_type": "HarmonyOS-Bold",
@@ -188,11 +202,13 @@
         }
       },
       {
-        "feed_panel_with_unread_count@xerox_lib.p": {
+        "feed_panel_with_unread_count": {
+          "type": "panel",
           "size": ["100%y", "100%"],
           "controls": [
             {
-              "feed_panel@xerox_lib.p": {
+              "feed_panel": {
+                "type": "panel",
                 "size": ["100%y", "100%"],
                 "controls": [
                   {
@@ -225,13 +241,15 @@
               }
             },
             {
-              "unread_story_count@xerox_lib.p": {
+              "unread_story_count": {
+                "type": "panel",
                 "anchor_from": "top_right",
                 "anchor_to": "center",
                 "size": ["100%c", "100%c"],
                 "controls": [
                   {
-                    "text@xerox_lib.l": {
+                    "text": {
+                      "type": "label",
                       "size": ["default", "default"],
                       "text": "#realms_unread_story_count",
                       "bindings": [
@@ -246,7 +264,8 @@
                       "layer": 9,
                       "controls": [
                         {
-                          "background@xerox_lib.i": {
+                          "background": {
+                            "type": "image",
                             "texture": "textures/XeroxClient/rounded_corner/all8x",
                             "color": "$xeroxclient_ui_theme_menu_background_color",
                             "alpha": 0.3,
@@ -272,7 +291,8 @@
         }
       },
       {
-        "leave_realm_panel@xerox_lib.p": {
+        "leave_realm_panel": {
+          "type": "panel",
           "size": ["100%c", "100%"],
           "controls": [
             {
@@ -306,22 +326,26 @@
     ]
   },
 
-  "leave_icon@xerox_lib.i": {
+  "leave_icon": {
+    "type": "image",
     "texture": "textures/XeroxClient/icon/crossout",
     "bilinear": true,
     "size": [15, 15]
   },
 
-  "story_icon@xerox_lib.i": {
+  "story_icon": {
+    "type": "image",
     "texture": "textures/XeroxClient/icon/recipe_book",
     "bilinear": true,
     "size": [15, 15]
   },
 
-  "notification_content@xerox_lib.p": {
+  "notification_content": {
+    "type": "panel",
     "controls": [
       {
-        "icon@xerox_lib.i": {
+        "icon": {
+          "type": "image",
           "layer": 1,
           "texture": "textures/XeroxClient/icon/notification",
           "bilinear": true,
@@ -329,12 +353,14 @@
         }
       },
       {
-        "count@xerox_lib.p": {
+        "count": {
+          "type": "panel",
           "anchor_from": "top_right",
           "anchor_to": "center",
           "controls": [
             {
-              "text@xerox_lib.l": {
+              "text": {
+                "type": "label",
                 "text": "#realms_notification_count",
                 "bindings": [
                   {
@@ -346,7 +372,8 @@
                 "layer": 9,
                 "controls": [
                   {
-                    "background@xerox_lib.i": {
+                    "background": {
+                      "type": "image",
                       "texture": "textures/XeroxClient/rounded_corner/all8x",
                       "color": "$xeroxclient_ui_theme_menu_background_color",
                       "alpha": 0.3,
@@ -363,7 +390,8 @@
     ]
   },
 
-  "friends_scrolling_content@xerox_lib.vsp": {
+  "friends_scrolling_content": {
+    "type": "stack_panel",
     "size": ["100%", "100%c"],
     "controls": [
       {
@@ -378,7 +406,8 @@
         }
       },
       {
-        "joinable_realms_panel@xerox_lib.vsp": {
+        "joinable_realms_panel": {
+          "type": "stack_panel",
           "ignored": "$is_editor_mode_enabled",
           "size": ["100%", "100%c"],
           "$tts_section_header": "playscreen.joinableRealms",
@@ -412,7 +441,8 @@
                 "size": ["100%", "100%c + 6px"],
                 "controls": [
                   {
-                    "loading_friends_realms_label@xerox_lib.l": {
+                    "loading_friends_realms_label": {
+                      "type": "label",
                       "max_size": ["100% - 4px", 40],
                       "text": "#realms_loading_display_message",
                       "anchor_from": "top_middle",
@@ -460,7 +490,8 @@
         }
       },
       {
-        "padding@xerox_lib.p": {
+        "padding": {
+          "type": "panel",
           "size": [0, 1]
         }
       },
@@ -609,7 +640,8 @@
     ]
   },
 
-  "friends_page_content@xerox_lib.vsp": {
+  "friends_page_content": {
+    "type": "stack_panel",
     "size": ["100% - 10px", "100% - 10px"],
     "bindings": [
       {
@@ -621,7 +653,9 @@
     ],
     "controls": [
       {
-        "add_friend_and_invite@xerox_lib.hsp": {
+        "add_friend_and_invite": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
           "size": ["100%", 30],
           "controls": [
             {
@@ -692,11 +726,13 @@
         }
       },
       {
-        "divide@xerox_lib.p": {
+        "divide": {
+          "type": "panel",
           "size": ["100%", 6],
           "controls": [
             {
-              "divide@xerox_lib.i": {
+              "divide": {
+                "type": "image",
                 "texture": "textures/XeroxClient/diffusion",
                 "alpha": 0.65,
                 "layer": 1,

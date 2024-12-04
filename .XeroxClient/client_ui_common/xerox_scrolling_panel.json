@@ -7,14 +7,16 @@
 {
   "namespace": "xc_modern_scrolling_panel",
 
-  "scroll_background_and_viewport@xerox_lib.p": {
+  "scroll_background_and_viewport": {
+    "type": "panel",
     "size": "$view_port_size",
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "clips_children": true,
     "controls": [
       {
-        "scrolling_view_port@xerox_lib.p": {
+        "scrolling_view_port": {
+          "type": "panel",
           "layer": 1,
           "anchor_from": "top_left",
           "anchor_to": "top_left",
@@ -38,7 +40,8 @@
     ]
   },
 
-  "scroll_bar_and_track@xerox_lib.p": {
+  "scroll_bar_and_track": {
+    "type": "panel",
     "$scroll_bar_and_track_size|default": ["100%c", "100%"],
     "size": "$scroll_bar_and_track_size",
     "clips_children": true,
@@ -46,23 +49,28 @@
     "anchor_to": "right_middle",
     "controls": [
       {
-        "stack_panel@xerox_lib.hsp": {
+        "stack_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
           "anchor_from": "center",
           "anchor_to": "center",
           "size": ["default", "100%"],
           "controls": [
             {
-              "empty_panel_0@xerox_lib.p": {
+              "empty_panel_0": {
+                "type": "panel",
                 "ignored": "$scroll_bar_contained",
                 "size": "$scroll_bar_left_padding_size"
               }
             },
             {
-              "panel@xerox_lib.p": {
+              "panel": {
+                "type": "panel",
                 "size": ["100%c", "100%"],
                 "controls": [
                   {
-                    "centered_panel@xerox_lib.p": {
+                    "centered_panel": {
+                      "type": "panel",
                       "size": "$scroll_size",
                       "$scroll_track_anchor|default": "center",
                       "anchor_from": "$scroll_track_anchor",
@@ -91,7 +99,8 @@
               }
             },
             {
-              "empty_panel_1@xerox_lib.p": {
+              "empty_panel_1": {
+                "type": "panel",
                 "size": "$scroll_bar_right_padding_size"
               }
             }
@@ -143,7 +152,9 @@
     ],
     "controls": [
       {
-        "stack_panel@xerox_lib.hsp": {
+        "stack_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
           "ignored": "$scroll_bar_contained",
           "anchor_to": "top_left",
           "anchor_from": "top_left",
@@ -160,7 +171,8 @@
         }
       },
       {
-        "panel@xerox_lib.p": {
+        "panel": {
+          "type": "panel",
           "ignored": "(not $scroll_bar_contained)",
           "anchor_to": "top_left",
           "anchor_from": "top_left",
@@ -202,7 +214,8 @@
     ]
   },
 
-  "scroll_box@xerox_lib.p": {
+  "scroll_box": {
+    "type": "panel",
     "controls": [
       {
         "box": {
@@ -228,13 +241,15 @@
     ]
   },
 
-  "scrollbar_box_image@xerox_lib.i": {
+  "scrollbar_box_image": {
+    "type": "image",
     "texture": "textures/XeroxClient/rounded_corner/all2x",
     "size": [3, "100%"],
     "layer": 4
   },
 
-  "scroll_indent_image@xerox_lib.i": {
+  "scroll_indent_image": {
+    "type": "image",
     "texture": "textures/XeroxClient/rounded_corner/all2x",
     "color": "$xeroxclient_ui_theme_menu_background_color",
     "alpha": 0.3,
@@ -242,7 +257,8 @@
     "layer": 3
   },
 
-  "scrolling_panel_base@xerox_lib.ip": {
+  "scrolling_panel_base": {
+    "type": "input_panel",
     "anchor_to": "top_left",
     "anchor_from": "top_left",
     "$scroll_panel_consume_hover_events|default": true,

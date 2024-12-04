@@ -12,14 +12,16 @@
     "duration": 0.2
   },
 
-  "anim_item_name_text_offset_in@xerox_lib.ao": {
+  "anim_item_name_text_offset_in": {
+    "anim_type": "offset",
     "easing": "out_expo",
     "from": [45, 0],
     "to": [0, 0],
     "duration": 0.2
   },
 
-  "item_name_text@xerox_lib.p": {
+  "item_name_text": {
+    "type": "panel",
     "size": ["100%cm", 12.5],
     "clips_children": true,
     "anchor_from": "top_left",
@@ -28,7 +30,8 @@
     "offset": "@xc_modern_hotbar:zeroday.anim_item_name_text_offset_in",
     "controls": [
       {
-        "item_text_label@xerox_lib.l": {
+        "item_text_label": {
+          "type": "label",
           "anchor_from": "top_middle",
           "anchor_to": "top_middle",
           "size": ["default", "default"],
@@ -85,7 +88,8 @@
     ]
   },
 
-  "gui_hotbar_grid_item@xerox_lib.p": {
+  "gui_hotbar_grid_item": {
+    "type": "panel",
     "size": ["100%c", 30],
     "$hotbar_content_size|default": [24, 24],
     "$hotbar_parent_size|default": [12, 12],
@@ -93,7 +97,8 @@
     "$item_count_scale_factor|default": 0.75,
     "controls": [
       {
-        "hotbar_content@xerox_lib.i": {
+        "hotbar_content": {
+          "type": "image",
           "size": "$hotbar_content_size",
           "offset": [0, -3],
           "anchor_to": "bottom_middle",
@@ -104,7 +109,8 @@
           "$item_name_text_required|default": false,
           "controls": [
             {
-              "item_text_factory@xerox_lib.f": {
+              "item_text_factory": {
+                "type": "factory",
                 "ignored": "(not $item_name_text_required)",
                 "control_ids": {
                   "item_text": "@xc_modern_hotbar:zeroday.item_name_text",
@@ -113,7 +119,8 @@
               }
             },
             {
-              "slot_background@xerox_lib.i": {
+              "slot_background": {
+                "type": "image",
                 "size": ["150%", "100%x"],
                 "layer": 1,
                 "$stack_count_required": true,
@@ -139,7 +146,8 @@
               }
             },
             {
-              "empty_slot_count@xerox_lib.l": {
+              "empty_slot_count": {
+                "type": "label",
                 "text": "$slot_number",
                 "shadow": true,
                 "font_type": "$zeroday_hotbar_font_type_overlay",
@@ -158,7 +166,8 @@
                 "alpha": "$slot_count_alpha",
                 "controls": [
                   {
-                    "slot_background@xerox_lib.i": {
+                    "slot_background": {
+                      "type": "image",
                       "size": ["110%", "110%"],
                       "layer": -1,
                       "texture": "textures/XeroxClient/diffusion2",
@@ -171,7 +180,8 @@
               }
             },
             {
-              "hotbar_parent@xerox_lib.p": {
+              "hotbar_parent": {
+                "type": "panel",
                 "size": "$hotbar_parent_size",
                 "controls": [
                   {
@@ -226,7 +236,9 @@
     ]
   },
 
-  "hotbar_content_base@xerox_lib.hsp": {
+  "hotbar_content_base": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
     "size": ["100%c", 30],
     "layer": 1,
     "collection_name": "$hotbar_collection_name",
@@ -987,7 +999,8 @@
     ]
   },
 
-  "hotbar_panel@xerox_lib.cp": {
+  "hotbar_panel": {
+    "type": "collection_panel",
     "size": ["100%cm", 30],
     "layer": 1,
     "collection_name": "$hotbar_collection_name",
@@ -1004,14 +1017,16 @@
     ]
   },
 
-  "hotbar_content@xerox_lib.vsp": {
+  "hotbar_content": {
+    "type": "stack_panel",
     "anchor_to": "bottom_middle",
     "anchor_from": "bottom_middle",
     "size": [0, "100%c"],
     "$hotbar_collection_name": "hotbar_items",
     "controls": [
       {
-        "0size_panel_1@xerox_lib.p": {
+        "0size_panel_1": {
+          "type": "panel",
           "size": [0, "100%c"],
           "controls": [
             { "yes,hotbar_panel@xc_modern_hotbar:zeroday.hotbar_panel": {} }
@@ -1019,12 +1034,14 @@
         }
       },
       {
-        "padding0@xerox_lib.p": {
+        "padding0": {
+          "type": "panel",
           "size": [0, 5]
         }
       },
       {
-        "padding1@xerox_lib.p": {
+        "padding1": {
+          "type": "panel",
           "size": [0, 10],
           "bindings": [
             {
@@ -1035,7 +1052,8 @@
         }
       },
       {
-        "padding2@xerox_lib.p": {
+        "padding2": {
+          "type": "panel",
           "size": [0, 15],
           "bindings": [
             {
@@ -1046,7 +1064,8 @@
         }
       },
       {
-        "0size_panel_2@xerox_lib.p": {
+        "0size_panel_2": {
+          "type": "panel",
           "size": [0, "100%c"],
           "controls": [
             {
@@ -1058,7 +1077,8 @@
         }
       },
       {
-        "padding3@xerox_lib.p": {
+        "padding3": {
+          "type": "panel",
           "size": [0, 5]
         }
       }

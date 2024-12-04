@@ -1,7 +1,8 @@
 {
   "namespace": "xc_modern_pause:player_list",
   /*
-  "player_lists@xerox_lib.p": {
+  "player_lists": {
+    "type": "panel",
     "size": ["100%", "100%c"],
     "controls": [
       {
@@ -27,7 +28,8 @@
     ]
   },*/
 
-  "player_list@xerox_lib.vsp": {
+  "player_list": {
+    "type": "stack_panel",
     "size": ["100%", "100%c"],
     "focus_container": true,
     "use_last_focus": true,
@@ -41,15 +43,18 @@
     "$scrolling_content": "xc_modern_pause:player_list.player_list"
   },
 
-  "player_list_panel_content@xerox_lib.vsp": {
+  "player_list_panel_content": {
+    "type": "stack_panel",
     "size": [190, 210],
     "controls": [
       {
-        "padding@xerox_lib.p": {
+        "padding": {
+          "type": "panel",
           "size": ["100%", 5],
           "controls": [
             {
-              "divide@xerox_lib.i": {
+              "divide": {
+                "type": "image",
                 "texture": "textures/XeroxClient/diffusion",
                 "alpha": 0.65,
                 "layer": 1,
@@ -86,7 +91,8 @@
     ]
   },
 
-  "players_label@xerox_lib.l": {
+  "players_label": {
+    "type": "label",
     "text": "#worldname",
     "size": ["100%", 10],
     "text_alignment": "center",
@@ -100,7 +106,8 @@
     ]
   },
 
-  "players_grid@xerox_lib.g": {
+  "players_grid": {
+    "type": "grid",
     "size": ["100%", "default"],
     "grid_item_template": "xc_modern_pause:player_list.player_grid_item",
     "grid_dimension_binding": "#players_grid_dimension",
@@ -113,15 +120,20 @@
     ]
   },
 
-  "player_grid_item@xerox_lib.hsp": {
+  "player_grid_item": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
     "size": ["100%", 20],
     "controls": [
       {
-        "player_button_panel@xerox_lib.hsp": {
+        "player_button_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
           "size": ["fill", "100%"],
           "controls": [
             {
-              "player_button_banner@xerox_lib.p": {
+              "player_button_banner": {
+                "type": "panel",
                 "size": ["fill", "100%"],
                 "controls": [
                   {
@@ -202,7 +214,8 @@
     ]
   },
 
-  "permission_icon_image@xerox_lib.i": {
+  "permission_icon_image": {
+    "type": "image",
     "texture": "#texture",
     "size": [15, 15],
     "bindings": [
@@ -215,7 +228,9 @@
     ]
   },
 
-  "player_button_content@xerox_lib.hsp": {
+  "player_button_content": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
     "anchor_from": "left_middle",
     "anchor_to": "left_middle",
     "size": ["100%", "100%"],
@@ -235,7 +250,8 @@
     ]
   },
 
-  "player_pic_panel@xerox_lib.p": {
+  "player_pic_panel": {
+    "type": "panel",
     "size": [15, "100%"],
     "ignored": "$education_edition",
     "controls": [
@@ -244,7 +260,8 @@
     ]
   },
 
-  "player_local_icon@xerox_lib.i": {
+  "player_local_icon": {
+    "type": "image",
     "texture": "textures/ui/lan_icon",
     "size": [13, 13],
     "layer": 1,
@@ -258,7 +275,8 @@
     ]
   },
 
-  "player_gamer_pic@xerox_lib.i": {
+  "player_gamer_pic": {
+    "type": "image",
     "texture": "#texture",
     "size": [15, 15],
     "layer": 1,
@@ -284,7 +302,8 @@
     ]
   },
 
-  "gametag_wrapper@xerox_lib.p": {
+  "gametag_wrapper": {
+    "type": "panel",
     "size": ["100%c", "100%"],
     "controls": [
       {
@@ -293,7 +312,8 @@
     ]
   },
 
-  "player_gamertag@xerox_lib.l": {
+  "player_gamertag": {
+    "type": "label",
     "text": "#gamertag",
     "font_type": "$global_font_type",
     "backup_font_type": "$global_font_type_backup",

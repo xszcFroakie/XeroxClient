@@ -1,4 +1,4 @@
-// 由@XSzC.制作的文件. 
+// 由@XSzC.制作的文件.
 // 未经允许不要使用任何文件. 请阅读LICENSE.txt
 
 // File made by @XSzC.
@@ -49,7 +49,7 @@
   "progress_screen_text": {
     "font_type": "$global_font_type",
     "backup_font_type": "$global_font_type_backup",
-    "text_alignment": "center"/*,
+    "text_alignment": "center" /*,
     "controls": [
       {
         "background": {
@@ -140,7 +140,6 @@
     "$screen_content": "xc_modern_progress.main_content",
     "$dynamic_bar": true
   },
-
 
   "world_convert_modal_progress_screen": {
     "$screen_content": "xc_modern_progress.main_content"

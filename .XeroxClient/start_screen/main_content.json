@@ -7,42 +7,50 @@
 {
   "namespace": "xc_modern_start",
 
-  "clo_icon@xerox_lib.i": {
+  "clo_icon": {
+    "type": "image",
     "bilinear": true,
     "texture": "textures/XeroxClient/icon/crossout"
   },
 
-  "ach_icon@xerox_lib.i": {
+  "ach_icon": {
+    "type": "image",
     "bilinear": true,
     "texture": "textures/XeroxClient/icon/achievement"
   },
 
-  "pro_icon@xerox_lib.i": {
+  "pro_icon": {
+    "type": "image",
     "bilinear": true,
     "texture": "textures/XeroxClient/icon/profile"
   },
 
-  "set_icon@xerox_lib.i": {
+  "set_icon": {
+    "type": "image",
     "bilinear": true,
     "texture": "textures/XeroxClient/icon/settings"
   },
 
-  "sto_icon@xerox_lib.i": {
+  "sto_icon": {
+    "type": "image",
     "bilinear": true,
     "texture": "textures/XeroxClient/icon/store"
   },
 
-  "not_icon@xerox_lib.i": {
+  "not_icon": {
+    "type": "image",
     "bilinear": true,
     "texture": "textures/XeroxClient/icon/notification"
   },
 
-  "gat_icon@xerox_lib.i": {
+  "gat_icon": {
+    "type": "image",
     "bilinear": true,
     "texture": "textures/XeroxClient/icon/gather"
   },
 
-  "fee_icon@xerox_lib.i": {
+  "fee_icon": {
+    "type": "image",
     "bilinear": true,
     "texture": "textures/XeroxClient/icon/feedback"
   },
@@ -102,7 +110,8 @@
     "$button_content_size": [18, 18]
   },
 
-  "realms_pending_invite@xerox_lib.p": {
+  "realms_pending_invite": {
+    "type": "panel",
     "size": [20, 20],
     "bindings": [
       {
@@ -119,7 +128,8 @@
         }
       },
       {
-        "count@xerox_lib.p": {
+        "count": {
+          "type": "panel",
           "offset": [-2.5, 2],
           "anchor_from": "top_right",
           "anchor_to": "center",
@@ -133,7 +143,8 @@
           ],
           "controls": [
             {
-              "text@xerox_lib.l": {
+              "text": {
+                "type": "label",
                 "layer": 9,
                 "font_scale_factor": 0.8,
                 "text": "#realms_notification_count",
@@ -157,7 +168,8 @@
     ]
   },
 
-  "notification@xerox_lib.p": {
+  "notification": {
+    "type": "panel",
     "size": [20, 20],
     "bindings": [
       {
@@ -174,7 +186,8 @@
         }
       },
       {
-        "notificationcenter_button_unread_panel@xerox_lib.p": {
+        "notificationcenter_button_unread_panel": {
+          "type": "panel",
           "anchor_from": "top_right",
           "anchor_to": "top_right",
           "size": [8, 4],
@@ -188,7 +201,8 @@
               }
             },
             {
-              "text@xerox_lib.l": {
+              "text": {
+                "type": "label",
                 "layer": 9,
                 "font_scale_factor": 0.8,
                 "text": "#notificationcenter_unread_count",
@@ -205,7 +219,8 @@
     ]
   },
 
-  "gathering_button@xerox_lib.p": {
+  "gathering_button": {
+    "type": "panel",
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "size": [30, 30],
@@ -222,7 +237,8 @@
     ],
     "controls": [
       {
-        "badge_panel@xerox_lib.p": {
+        "badge_panel": {
+          "type": "panel",
           "size": [120, 20],
           "anchor_from": "right_middle",
           "anchor_to": "left_middle",
@@ -234,7 +250,8 @@
           ],
           "controls": [
             {
-              "badge@xerox_lib.i": {
+              "badge": {
+                "type": "image",
                 "size": ["100%", 20],
                 "layer": 4,
                 "texture": "textures/XeroxClient/rounded_corner/all8x",
@@ -243,7 +260,8 @@
               }
             },
             {
-              "count@xerox_lib.l": {
+              "count": {
+                "type": "label",
                 "text": "#text",
                 "offset": [-2, 0],
                 "size": [100, 10],
@@ -273,7 +291,8 @@
     ]
   },
 
-  "feedback@xerox_lib.p": {
+  "feedback": {
+    "type": "panel",
     "size": [20, 20],
     "$button_content": "xc_modern_start.fee_icon",
     "bindings": [
@@ -323,7 +342,8 @@
     ]
   },
 
-  "main_buttons_panel@xerox_lib.vsp": {
+  "main_buttons_panel": {
+    "type": "stack_panel",
     "size": ["100%cm", "100%c"],
     "layer": 1,
     "offset": [0, -10],
@@ -340,7 +360,8 @@
     ],
     "controls": [
       {
-        "logo@xerox_lib.i": {
+        "logo": {
+          "type": "image",
           "size": [130, 90],
           "layer": 5,
           "bilinear": true,
@@ -355,12 +376,14 @@
         }
       },
       {
-        "padding1@xerox_lib.p": {
+        "padding1": {
+          "type": "panel",
           "size": [0, 7]
         }
       },
       {
-        "main_panel@xerox_lib.p": {
+        "main_panel": {
+          "type": "panel",
           "size": ["100%cm", "100%cm"],
           "layer": 1,
           "propagate_alpha": true,
@@ -373,7 +396,8 @@
           ],
           "controls": [
             {
-              "background@xerox_lib.i": {
+              "background": {
+                "type": "image",
                 "size": [130, "100%sm+22px"],
                 "texture": "textures/XeroxClient/rounded_corner/all16x",
                 "color": "$xeroxclient_ui_theme_menu_background_color",
@@ -382,7 +406,8 @@
                 "controls": [
                   { "1@xc_modern_start:device_detail.version": {} },
                   {
-                    "small_buttons@xerox_lib.i": {
+                    "small_buttons": {
+                      "type": "image",
                       "size": ["100%c+4px", "100%c+4px"],
                       "texture": "textures/XeroxClient/rounded_corner/all8x",
                       "color": "$xeroxclient_ui_theme_menu_background_color",
@@ -393,7 +418,9 @@
                       "offset": [0, 5],
                       "controls": [
                         {
-                          "stack@xerox_lib.hsp": {
+                          "stack": {
+                            "type": "stack_panel",
+                            "orientation": "horizontal",
                             "size": ["100%c", 20],
                             "controls": [
                               { "0@xc_modern_start.feedback": {} },
@@ -415,7 +442,8 @@
               }
             },
             {
-              "main_panel@xerox_lib.vsp": {
+              "main_panel": {
+                "type": "stack_panel",
                 "size": [120, 48],
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
@@ -434,14 +462,16 @@
     ]
   },
 
-  "main_menu@xerox_lib.p": {
+  "main_menu": {
+    "type": "panel",
     "controls": [
       { "main_buttons_panel@xc_modern_start.main_buttons_panel": {} },
       { "main_content@xc_modern_start.main_content": {} }
     ]
   },
 
-  "background@xerox_lib.p": {
+  "background": {
+    "type": "panel",
     "controls": [
       {
         "bg@xc_common.background": {
@@ -471,7 +501,8 @@
     ]
   },
 
-  "offline_account@xerox_lib.i": {
+  "offline_account": {
+    "type": "image",
     "size": ["100%c+12px", 30],
     "texture": "textures/XeroxClient/rounded_corner/all8x",
     "alpha": 0.4,
@@ -488,7 +519,8 @@
     ],
     "controls": [
       {
-        "offline_acc_text@xerox_lib.l": {
+        "offline_acc_text": {
+          "type": "label",
           "size": ["default", 10],
           "font_type": "$global_font_type",
           "backup_font_type": "$global_font_type_backup",
@@ -498,8 +530,9 @@
       }
     ]
   },
-  
-  "main_content@xerox_lib.p": {
+
+  "main_content": {
+    "type": "panel",
     "propagate_alpha": true,
     "size": ["100%", "100%"],
     "animation_reset_name": "screen_animation_reset",
@@ -515,7 +548,9 @@
     ],
     "controls": [
       {
-        "top_right_button_panel@xerox_lib.hsp": {
+        "top_right_button_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
           "size": ["100%c", 20],
           "anchor_from": "top_right",
           "anchor_to": "top_right",
@@ -524,7 +559,8 @@
             { "1@xc_modern_start:top.player_info": {} },
             { "2@xc_modern_start.xbl_signin_button": {} },
             {
-              "padding@xerox_lib.p": {
+              "padding": {
+                "type": "panel",
                 "size": [2, 0]
               }
             },

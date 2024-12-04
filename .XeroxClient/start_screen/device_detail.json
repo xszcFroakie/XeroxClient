@@ -7,7 +7,8 @@
 {
   "namespace": "xc_modern_start:device_detail",
 
-  "copyright@xerox_lib.l": {
+  "copyright": {
+    "type": "label",
     "layer": 6,
     "text": "Copyright Mojang AB. Don't distribute!",
     "font_type": "$global_font_type",
@@ -19,7 +20,8 @@
     "font_scale_factor": 0.8
   },
 
-  "version@xerox_lib.l": {
+  "version": {
+    "type": "label",
     "layer": 6,
     "font_type": "HarmonyOS-Bold",
     "text": "#text",
@@ -40,7 +42,8 @@
     "font_scale_factor": 0.8
   },
 
-  "Client_info@xerox_lib.l": {
+  "Client_info": {
+    "type": "label",
     "text": "($ClientName + ' ' + $ClientVersion + ' | '+ $ClientAuthor)",
     "anchor_from": "top_left",
     "anchor_to": "top_left",
@@ -52,7 +55,8 @@
     "font_scale_factor": 0.8
   },
 
-  "Client_info_2@xerox_lib.l": {
+  "Client_info_2": {
+    "type": "label",
     "text": "( $system + ' - ' + $version + ' | ' + $input )",
     "anchor_from": "top_left",
     "anchor_to": "top_left",
@@ -126,7 +130,8 @@
     "font_scale_factor": 0.8
   },
 
-  "client_detail_content@xerox_lib.i": {
+  "client_detail_content": {
+    "type": "image",
     "texture": "textures/XeroxClient/rounded_corner/all8x",
     "size": ["100%c+8px", "100%c+5px"],
     "layer": 9,
@@ -137,7 +142,8 @@
     "anchor_to": "bottom_left",
     "controls": [
       {
-        "你死妈东西外传一个试试看,我操你妈贱逼玩意@xerox_lib.vsp": {
+        "你死妈东西外传一个试试看,我操你妈贱逼玩意": {
+          "type": "stack_panel",
           "size": ["100%cm", "100%c"],
           "offset": [0, -0.8],
           "controls": [

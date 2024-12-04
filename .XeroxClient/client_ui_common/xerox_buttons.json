@@ -7,7 +7,8 @@
 {
   "namespace": "common_buttons",
 
-  "default_color@xerox_lib.ac": {
+  "default_color": {
+    "anim_type": "color",
     "ignored": "$ignored_default_anims",
     "from": "$xeroxclient_button_color_hover",
     "to": "$xeroxclient_button_color_default",
@@ -16,7 +17,8 @@
     "reset_event": "('button.xeroxclient.' + $pressed_button_name)"
   },
 
-  "default_alpha@xerox_lib.aa": {
+  "default_alpha": {
+    "anim_type": "alpha",
     "ignored": "$ignored_default_anims",
     "from": "$xeroxclient_button_alpha_hover",
     "to": "$xeroxclient_button_alpha_default",
@@ -25,7 +27,8 @@
     "reset_event": "('button.xeroxclient.' + $pressed_button_name)"
   },
 
-  "hover_color@xerox_lib.ac": {
+  "hover_color": {
+    "anim_type": "color",
     "ignored": "$ignored_hover_anims",
     "from": "$xeroxclient_button_color_default",
     "to": "$xeroxclient_button_color_hover",
@@ -34,7 +37,8 @@
     "reset_event": "('button.xeroxclient.' + $pressed_button_name)"
   },
 
-  "hover_alpha@xerox_lib.aa": {
+  "hover_alpha": {
+    "anim_type": "alpha",
     "ignored": "$ignored_hover_anims",
     "from": "$xeroxclient_button_alpha_default",
     "to": "$xeroxclient_button_alpha_hover",

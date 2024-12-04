@@ -25,7 +25,8 @@
     "end_event": "screen.exit_end"
   },
 
-  "tab_enter_alpha_wait@xerox_lib.aa": {
+  "tab_enter_alpha_wait": {
+    "anim_type": "alpha",
     "duration": "$wait_dura",
     "from": -0.25,
     "to": -0.25,
@@ -34,7 +35,8 @@
     "next": "@play_animation.tab_enter_alpha_animation"
   },
 
-  "tab_enter_alpha_animation@xerox_lib.aa": {
+  "tab_enter_alpha_animation": {
+    "anim_type": "alpha",
     "easing": "out_cubic",
     "duration": 0.6,
     "from": -0.25,
@@ -65,7 +67,8 @@
     "end_event": "screen.exit_end"
   },
 
-  "tab_enter_offset_wait@xerox_lib.ao": {
+  "tab_enter_offset_wait": {
+    "anim_type": "offset",
     "duration": "$wait_dura",
     "from": "$offset_2",
     "to": "$offset_2",
@@ -74,7 +77,8 @@
     "next": "@play_animation.tab_enter_offset_animation"
   },
 
-  "tab_enter_offset_animation@xerox_lib.ao": {
+  "tab_enter_offset_animation": {
+    "anim_type": "offset",
     "easing": "out_cubic",
     "duration": 0.6,
     "from": "$offset_2",
@@ -91,7 +95,8 @@
 
   //--------------------------
 
-  "gradient_bg_out_animation@xerox_lib.aa": {
+  "gradient_bg_out_animation": {
+    "anim_type": "alpha",
     "easing": "out_cubic",
     "duration": 0.6,
     "to": -0.25,
@@ -100,7 +105,8 @@
     "end_event": "screen.exit_end"
   },
 
-  "gradient_bg_out_animation_pop@xerox_lib.aa": {
+  "gradient_bg_out_animation_pop": {
+    "anim_type": "alpha",
     "easing": "out_cubic",
     "duration": 0.6,
     "to": -0.25,
@@ -109,7 +115,8 @@
     "end_event": "screen.exit_end"
   },
 
-  "gradient_bg_enter_animation@xerox_lib.aa": {
+  "gradient_bg_enter_animation": {
+    "anim_type": "alpha",
     "easing": "out_cubic",
     "duration": 0.4,
     "from": -0.25,
@@ -118,7 +125,8 @@
     "end_event": "screen.entrance_end"
   },
 
-  "gradient_bg_enter_animation_pop@xerox_lib.aa": {
+  "gradient_bg_enter_animation_pop": {
+    "anim_type": "alpha",
     "easing": "out_cubic",
     "duration": 0.4,
     "from": -0.25,
@@ -129,7 +137,8 @@
 
   //--------------------------
 
-  "tab_content_out_offset_animation@xerox_lib.ao": {
+  "tab_content_out_offset_animation": {
+    "anim_type": "offset",
     "easing": "out_cubic",
     "duration": 0.3,
     "to": [100, 0],
@@ -138,7 +147,8 @@
     "end_event": "screen.exit_end"
   },
 
-  "tab_content_out_offset_animation_pop@xerox_lib.ao": {
+  "tab_content_out_offset_animation_pop": {
+    "anim_type": "offset",
     "easing": "out_cubic",
     "duration": 0.3,
     "to": [100, 0],
@@ -147,7 +157,8 @@
     "end_event": "screen.exit_end"
   },
 
-  "tab_content_enter_offset_animation@xerox_lib.ao": {
+  "tab_content_enter_offset_animation": {
+    "anim_type": "offset",
     "easing": "out_cubic",
     "duration": 0.4,
     "from": [100, 0],
@@ -156,7 +167,8 @@
     "end_event": "screen.entrance_end"
   },
 
-  "tab_content_enter_offset_animation_pop@xerox_lib.ao": {
+  "tab_content_enter_offset_animation_pop": {
+    "anim_type": "offset",
     "easing": "out_cubic",
     "duration": 0.4,
     "from": [100, 0],
@@ -165,7 +177,8 @@
     "end_event": "screen.entrance_end"
   },
 
-  "tab_content_out_alpha_animation@xerox_lib.aa": {
+  "tab_content_out_alpha_animation": {
+    "anim_type": "alpha",
     "easing": "out_cubic",
     "duration": 0.3,
     "to": -0.25,
@@ -174,7 +187,8 @@
     "end_event": "screen.exit_end"
   },
 
-  "tab_content_out_alpha_animation_pop@xerox_lib.aa": {
+  "tab_content_out_alpha_animation_pop": {
+    "anim_type": "alpha",
     "easing": "out_cubic",
     "duration": 0.3,
     "to": -0.25,
@@ -183,7 +197,8 @@
     "end_event": "screen.exit_end"
   },
 
-  "tab_content_enter_alpha_animation@xerox_lib.aa": {
+  "tab_content_enter_alpha_animation": {
+    "anim_type": "alpha",
     "easing": "out_cubic",
     "duration": 0.6,
     "from": -0.25,
@@ -192,7 +207,8 @@
     "end_event": "screen.entrance_end"
   },
 
-  "tab_content_enter_alpha_animation_pop@xerox_lib.aa": {
+  "tab_content_enter_alpha_animation_pop": {
+    "anim_type": "alpha",
     "easing": "out_cubic",
     "duration": 0.6,
     "from": -0.25,
@@ -203,7 +219,8 @@
 
   //--------------------------
 
-  "bg_out_animation@xerox_lib.aa": {
+  "bg_out_animation": {
+    "anim_type": "alpha",
     "easing": "out_cubic",
     "duration": 0.3,
     "to": 0.0,
@@ -212,7 +229,8 @@
     "end_event": "screen.exit_end"
   },
 
-  "bg_out_animation_pop@xerox_lib.aa": {
+  "bg_out_animation_pop": {
+    "anim_type": "alpha",
     "easing": "out_cubic",
     "duration": 0.3,
     "to": 0.0,
@@ -221,7 +239,8 @@
     "end_event": "screen.exit_end"
   },
 
-  "bg_enter_animation@xerox_lib.aa": {
+  "bg_enter_animation": {
+    "anim_type": "alpha",
     "easing": "out_cubic",
     "duration": 0.3,
     "from": 0.0,
@@ -230,12 +249,13 @@
     "end_event": "screen.entrance_end"
   },
 
-  "bg_enter_animation_pop@xerox_lib.aa": {
+  "bg_enter_animation_pop": {
+    "anim_type": "alpha",
     "easing": "out_cubic",
     "duration": 0.3,
     "from": 0.0,
     "to": 1.0,
     "play_event": "screen.entrance_pop",
     "end_event": "screen.entrance_end"
-  },
+  }
 }

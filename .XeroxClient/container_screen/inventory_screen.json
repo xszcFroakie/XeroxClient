@@ -7,7 +7,8 @@
 {
   "namespace": "xc_modern_inventory_screen",
 
-  "recipe_book_panel@xerox_lib.vsp": {
+  "recipe_book_panel": {
+    "type": "stack_panel",
     "size": [146, "100%-2px"],
     "anchor_from": "right_middle",
     "anchor_to": "right_middle",
@@ -27,7 +28,8 @@
     ],
     "controls": [
       {
-        "tab_panel@xerox_lib.i": {
+        "tab_panel": {
+          "type": "image",
           "texture": "textures/XeroxClient/rounded_corner/all8x",
           "color": "$xeroxclient_ui_theme_menu_background_color",
           "alpha": 0.3,
@@ -36,7 +38,9 @@
           "clips_children": true,
           "controls": [
             {
-              "stack@xerox_lib.hsp": {
+              "stack": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
                 "size": ["100%-2px", "100%-2px"],
                 "$toggle_group_default_selected": "$construction_index",
                 "$toggle_binding_type": "global",
@@ -54,7 +58,8 @@
                     }
                   },
                   {
-                    "padding0@xerox_lib.p": {
+                    "padding0": {
+                      "type": "panel",
                       "size": [1, 0]
                     }
                   },
@@ -68,7 +73,8 @@
                     }
                   },
                   {
-                    "padding1@xerox_lib.p": {
+                    "padding1": {
+                      "type": "panel",
                       "size": [1, 0]
                     }
                   },
@@ -82,7 +88,8 @@
                     }
                   },
                   {
-                    "padding2@xerox_lib.p": {
+                    "padding2": {
+                      "type": "panel",
                       "size": [1, 0]
                     }
                   },
@@ -96,7 +103,8 @@
                     }
                   },
                   {
-                    "padding3@xerox_lib.p": {
+                    "padding3": {
+                      "type": "panel",
                       "size": [1, 0]
                     }
                   },
@@ -116,12 +124,14 @@
         }
       },
       {
-        "padding0@xerox_lib.p": {
+        "padding0": {
+          "type": "panel",
           "size": [0, 1]
         }
       },
       {
-        "recipe_book_background@xerox_lib.i": {
+        "recipe_book_background": {
+          "type": "image",
           "texture": "textures/XeroxClient/rounded_corner/all8x",
           "color": "$xeroxclient_ui_theme_menu_background_color",
           "alpha": 0.3,
@@ -130,15 +140,18 @@
           //"clips_children": true,
           "controls": [
             {
-              "stack@xerox_lib.vsp": {
+              "stack": {
+                "type": "stack_panel",
                 "size": ["100%-2px", "100%-2px"],
                 "controls": [
                   {
-                    "text_panel@xerox_lib.p": {
+                    "text_panel": {
+                      "type": "panel",
                       "size": ["100%", 20],
                       "controls": [
                         {
-                          "creative_label@xerox_lib.l": {
+                          "creative_label": {
+                            "type": "label",
                             "size": ["100%-2px", "default"],
                             "anchor_from": "left_middle",
                             "anchor_to": "left_middle",
@@ -214,7 +227,8 @@
                     }
                   },
                   {
-                    "recipe_book_content@xerox_lib.ip": {
+                    "recipe_book_content": {
+                      "type": "input_panel",
                       "size": ["100%", "fill"],
                       "controls": [
                         {
@@ -262,7 +276,9 @@
                     }
                   },
                   {
-                    "search_box_and_toggle@xerox_lib.hsp": {
+                    "search_box_and_toggle": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
                       "size": ["100%", "100%cm"],
                       "visible": false,
                       "bindings": [
@@ -306,7 +322,8 @@
     ]
   },
 
-  "recipe_book_icon@xerox_lib.i": {
+  "recipe_book_icon": {
+    "type": "image",
     "size": "$default_size",
     "$default_size": [12, 12],
     "animation_reset_name": "screen_animation_reset",
@@ -317,37 +334,44 @@
     "texture": "textures/XeroxClient/icon/recipe_book"
   },
 
-  "filter_icon@xerox_lib.i": {
+  "filter_icon": {
+    "type": "image",
     "size": [12, 12],
     "texture": "textures/XeroxClient/icon/filter"
   },
 
-  "equipment_icon@xerox_lib.i": {
+  "equipment_icon": {
+    "type": "image",
     "size": [12, 12],
     "texture": "textures/XeroxClient/icon/equipment"
   },
 
-  "construction_icon@xerox_lib.i": {
+  "construction_icon": {
+    "type": "image",
     "size": [12, 12],
     "texture": "textures/XeroxClient/icon/construction"
   },
 
-  "nature_icon@xerox_lib.i": {
+  "nature_icon": {
+    "type": "image",
     "size": [12, 12],
     "texture": "textures/XeroxClient/icon/nature"
   },
 
-  "miscellaneous_icon@xerox_lib.i": {
+  "miscellaneous_icon": {
+    "type": "image",
     "size": [12, 12],
     "texture": "textures/XeroxClient/icon/miscellaneous"
   },
 
-  "search_icon@xerox_lib.i": {
+  "search_icon": {
+    "type": "image",
     "size": [12, 12],
     "texture": "textures/XeroxClient/icon/search"
   },
 
-  "scroll_grid_panel@xerox_lib.ip": {
+  "scroll_grid_panel": {
+    "type": "input_panel",
     "size": ["100%", "100%c+2px"],
     "button_mappings": [
       {
@@ -385,7 +409,8 @@
     "controls": [{ "grid@xc_modern_inventory_screen.scroll_grid": {} }]
   },
 
-  "scroll_grid@xerox_lib.g": {
+  "scroll_grid": {
+    "type": "grid",
     "size": ["100%", "default"],
     "anchor_to": "top_left",
     "anchor_from": "top_left",
@@ -444,18 +469,21 @@
     "anims": [],
     "controls": [
       {
-        "item_cell@xerox_lib.p": {
+        "item_cell": {
+          "type": "panel",
           "size": "$slot_size",
           "layer": 0,
           "controls": [
             {
-              "$background_image_control_name@xerox_lib.p": {
+              "$background_image_control_name": {
+                "type": "panel",
                 "size": "$cell_image_size",
                 "$cell_image_size|default": ["88.8888888889%", "100%x"],
                 "layer": 1,
                 "controls": [
                   {
-                    "recipe_book_red_button@xerox_lib.i": {
+                    "recipe_book_red_button": {
+                      "type": "image",
                       "texture": "textures/XeroxClient/rounded_corner/all8x",
                       "alpha": 0.3,
                       "color": [1.0, 0.333, 0.333],
@@ -475,7 +503,8 @@
                     }
                   },
                   {
-                    "recipe_book_touch_cell_selected@xerox_lib.i": {
+                    "recipe_book_touch_cell_selected": {
+                      "type": "image",
                       "texture": "textures/XeroxClient/rounded_corner/all8x",
                       "alpha": 0.3,
                       "color": [0.667, 0.667, 1.0],
@@ -498,7 +527,8 @@
               }
             },
             {
-              "item@xerox_lib.p": {
+              "item": {
+                "type": "panel",
                 "size": "$slot_size",
                 "layer": 0,
                 "clips_children": true,
@@ -530,7 +560,8 @@
               }
             },
             {
-              "overlay@xerox_lib.p": {
+              "overlay": {
+                "type": "panel",
                 "layer": 9,
                 "size": ["100%cm", "100%cm"],
                 "anchor_from": "bottom_right",
@@ -538,7 +569,8 @@
                 "offset": [-1, -1],
                 "controls": [
                   {
-                    "expand@xerox_lib.l": {
+                    "expand": {
+                      "type": "label",
                       "text": "+§🥰",
                       "size": ["default", "default"],
                       "text_alignment": "center",
@@ -555,7 +587,8 @@
                     }
                   },
                   {
-                    "contract@xerox_lib.l": {
+                    "contract": {
+                      "type": "label",
                       "text": "-§🥵",
                       "size": ["100%sm", "100%sm"],
                       "text_alignment": "center",
@@ -586,7 +619,8 @@
         }
       },
       {
-        "item_selected_image@xerox_lib.p": {
+        "item_selected_image": {
+          "type": "panel",
           "size": "$slot_size",
           "layer": 4,
           "$slot_selected_binding_name|default": "#is_selected_slot",
@@ -609,7 +643,8 @@
         }
       },
       {
-        "item_button_ref@xerox_lib.p": {
+        "item_button_ref": {
+          "type": "panel",
           "size": "$slot_size",
           "layer": 5,
           "controls": [
@@ -620,14 +655,16 @@
                 "tts_skip_message": true,
                 "tts_inherit_siblings": true
               }
-            }/*
+            } /*
             {
-              "touch_mode@xerox_lib.p": {
+              "touch_mode": {
+    "type": "panel",
                 "layer": 5,
                 "ignored": "(not $touch)",
                 "controls": [
                   {
-                    "normal@xerox_lib.p": {
+                    "normal": {
+    "type": "panel",
                       "visible": false,
                       "bindings": [
                         {
@@ -649,7 +686,8 @@
                     }
                   },
                   {
-                    "auto_place@xerox_lib.p": {
+                    "auto_place": {
+    "type": "panel",
                       "visible": false,
                       "bindings": [
                         {
@@ -683,7 +721,8 @@
                     }
                   },
                   {
-                    "drop_one@xerox_lib.p": {
+                    "drop_one": {
+    "type": "panel",
                       "visible": false,
                       "bindings": [
                         {
@@ -734,7 +773,8 @@
     ]
   },
 
-  "inventory_panel@xerox_lib.i": {
+  "inventory_panel": {
+    "type": "image",
     "texture": "textures/XeroxClient/rounded_corner/all8x",
     "color": "$xeroxclient_ui_theme_menu_background_color",
     "alpha": 0.3,
@@ -743,13 +783,15 @@
     "clips_children": true,
     "controls": [
       {
-        "top_half@xerox_lib.p": {
+        "top_half": {
+          "type": "panel",
           "size": ["100%sm", "46.0227272727%x"],
           "anchor_from": "top_middle",
           "anchor_to": "top_middle",
           "controls": [
             {
-              "0size_panel@xerox_lib.p": {
+              "0size_panel": {
+                "type": "panel",
                 "size": [0, 0],
                 "anchor_from": "top_right",
                 "anchor_to": "top_right",
@@ -785,14 +827,17 @@
               }
             },
             {
-              "player@xerox_lib.hsp": {
+              "player": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
                 "anchor_from": "bottom_left",
                 "anchor_to": "bottom_left",
                 "offset": ["3.4090909091%", "-1.2345679012%"],
                 "size": ["100%c", "100%cm"],
                 "controls": [
                   {
-                    "armor@xerox_lib.i": {
+                    "armor": {
+                      "type": "image",
                       "texture": "textures/XeroxClient/rounded_corner/all8x",
                       "color": "$xeroxclient_ui_theme_menu_background_color",
                       "alpha": 0.3,
@@ -800,7 +845,8 @@
                       "size": ["111.1111111111%c", "102.7777777778%c"],
                       "controls": [
                         {
-                          "armor_grid@xerox_lib.vsp": {
+                          "armor_grid": {
+                            "type": "stack_panel",
                             "size": ["100%cm", "400%x"],
                             "$item_collection_name": "armor_items",
                             "collection_name": "$item_collection_name",
@@ -832,11 +878,13 @@
                     }
                   },
                   {
-                    "player@xerox_lib.p": {
+                    "player": {
+                      "type": "panel",
                       "size": ["104.3478260870%c", "100%sm"],
                       "controls": [
                         {
-                          "player_rend@xerox_lib.i": {
+                          "player_rend": {
+                            "type": "image",
                             "texture": "textures/XeroxClient/rounded_corner/all8x",
                             "color": "$xeroxclient_ui_theme_menu_background_color",
                             "alpha": 0.3,
@@ -844,7 +892,8 @@
                             "size": ["153.3333333333%c", "100%"],
                             "controls": [
                               {
-                                "paper_doll_renderer@xerox_lib.cr": {
+                                "paper_doll_renderer": {
+                                  "type": "custom",
                                   "offset": [0, "14.8648648649%"],
                                   "anchor_from": "top_middle",
                                   "anchor_to": "top_middle",
@@ -869,11 +918,13 @@
                     }
                   },
                   {
-                    "offhand@xerox_lib.i": {
+                    "offhand": {
+                      "type": "image",
                       "size": ["100%c", "100%sm"],
                       "controls": [
                         {
-                          "bg@xerox_lib.i": {
+                          "bg": {
+                            "type": "image",
                             "texture": "textures/XeroxClient/rounded_corner/all8x",
                             "color": "$xeroxclient_ui_theme_menu_background_color",
                             "alpha": 0.3,
@@ -883,7 +934,8 @@
                             "anchor_to": "bottom_middle",
                             "controls": [
                               {
-                                "offhand_grid@xerox_lib.cp": {
+                                "offhand_grid": {
+                                  "type": "collection_panel",
                                   "$item_collection_name": "offhand_items",
                                   "collection_name": "$item_collection_name",
                                   "size": ["100%c", "100%c"],
@@ -906,7 +958,9 @@
               }
             },
             {
-              "crafting@xerox_lib.hsp": {
+              "crafting": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
                 "anchor_from": "top_right",
                 "anchor_to": "top_right",
                 "offset": ["-2.2727272727%", "19.7530864198%"],
@@ -914,7 +968,8 @@
                 "$background_images": "xc_modern_inventory_screen.container_cell_images",
                 "controls": [
                   {
-                    "input@xerox_lib.i": {
+                    "input": {
+                      "type": "image",
                       "texture": "textures/XeroxClient/rounded_corner/all8x",
                       "color": "$xeroxclient_ui_theme_menu_background_color",
                       "alpha": 0.3,
@@ -924,14 +979,16 @@
                       "anchor_to": "left_middle",
                       "controls": [
                         {
-                          "0size_panel_1@xerox_lib.p": {
+                          "0size_panel_1": {
+                            "type": "panel",
                             "size": [0, 0],
                             "offset": ["2.6315789474%", "-2.6315789474%"],
                             "anchor_from": "top_left",
                             "anchor_to": "top_left",
                             "controls": [
                               {
-                                "crafting_text@xerox_lib.l": {
+                                "crafting_text": {
+                                  "type": "label",
                                   "size": ["default", "default"],
                                   "text_alignment": "left",
                                   "anchor_from": "bottom_left",
@@ -951,7 +1008,8 @@
                           }
                         },
                         {
-                          "input_grid@xerox_lib.cp": {
+                          "input_grid": {
+                            "type": "collection_panel",
                             "size": ["52.7777777778%c", "100%x"],
                             "$item_collection_name": "crafting_input_items",
                             "collection_name": "$item_collection_name",
@@ -984,7 +1042,8 @@
                           }
                         },
                         {
-                          "0size_panel_2@xerox_lib.p": {
+                          "0size_panel_2": {
+                            "type": "panel",
                             "size": [0, 0],
                             "offset": ["18.4210526316%", "15.7894736842%"],
                             "anchor_from": "bottom_left",
@@ -1096,11 +1155,13 @@
                     }
                   },
                   {
-                    "arrow@xerox_lib.p": {
+                    "arrow": {
+                      "type": "panel",
                       "size": ["112.5%c", "100%sm"],
                       "controls": [
                         {
-                          "crafting_arrow@xerox_lib.b": {
+                          "crafting_arrow": {
+                            "type": "button",
                             "size": "$default_size",
                             "$default_size": [16, 13],
                             "property_bag": {
@@ -1128,7 +1189,8 @@
                             "hover_control": "hover",
                             "controls": [
                               {
-                                "default@xerox_lib.i": {
+                                "default": {
+                                  "type": "image",
                                   "texture": "textures/XeroxClient/arrow/m_right",
                                   "layer": 3,
                                   "color": [
@@ -1138,7 +1200,8 @@
                                 }
                               },
                               {
-                                "hover@xerox_lib.i": {
+                                "hover": {
+                                  "type": "image",
                                   "texture": "textures/XeroxClient/arrow/m_right",
                                   "layer": 4,
                                   "color": "$xeroxclient_ui_theme_button_hover_color",
@@ -1152,11 +1215,13 @@
                     }
                   },
                   {
-                    "output@xerox_lib.p": {
+                    "output": {
+                      "type": "panel",
                       "size": ["100%c", "100%sm"],
                       "controls": [
                         {
-                          "bg@xerox_lib.i": {
+                          "bg": {
+                            "type": "image",
                             "texture": "textures/XeroxClient/rounded_corner/all8x",
                             "color": "$xeroxclient_ui_theme_menu_background_color",
                             "alpha": 0.3,
@@ -1164,7 +1229,8 @@
                             "size": ["100%c", "100%c"],
                             "controls": [
                               {
-                                "output_grid@xerox_lib.cp": {
+                                "output_grid": {
+                                  "type": "collection_panel",
                                   "size": ["111.1111111111%c", "100%x"],
                                   "$item_collection_name": "crafting_output_items",
                                   "collection_name": "$item_collection_name",
@@ -1191,7 +1257,8 @@
         }
       },
       {
-        "bottom_half@xerox_lib.p": {
+        "bottom_half": {
+          "type": "panel",
           "size": ["107.3170731707%c", "108.9743589744%c"],
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
@@ -1209,7 +1276,8 @@
     ]
   },
 
-  "main_content@xerox_lib.b": {
+  "main_content": {
+    "type": "button",
     "default_focus_precedence": 0,
     "focus_enabled": true,
     "focus_wrap_enabled": false,

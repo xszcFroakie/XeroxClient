@@ -7,7 +7,8 @@
 {
   "namespace": "xc_modern_beacon_screen",
 
-  "image_atlas@xerox_lib.i": {
+  "image_atlas": {
+    "type": "image",
     "size": "$default_size",
     "anims": [
       "@container:classic_animation.size_enter",
@@ -16,7 +17,8 @@
     "animation_reset_name": "screen_animation_reset"
   },
 
-  "button_unchecked_default@xerox_lib.i": {
+  "button_unchecked_default": {
+    "type": "image",
     "texture": "textures/XeroxClient/rounded_corner/all8x",
     "alpha": "$xeroxclient_ui_theme_button_default_alpha",
     "color": "$xeroxclient_ui_theme_button_default_color"
@@ -89,7 +91,8 @@
     "color": "$xeroxclient_ui_theme_button_pressed_color"
   },
 
-  "toggle_template@xerox_lib.p": {
+  "toggle_template": {
+    "type": "panel",
     "$image_control|default": "beacon.image_template",
     "controls": [
       {
@@ -131,7 +134,8 @@
         }
       },
       {
-        "image_template@xerox_lib.i": {
+        "image_template": {
+          "type": "image",
           "$image_size|default": [18, 18],
           "size": "$default_size",
           "$default_size": "$image_size",
@@ -154,7 +158,8 @@
     ]
   },
 
-  "panel_template@xerox_lib.p": {
+  "panel_template": {
+    "type": "panel",
     "size": "$default_size",
     "$default_size": [22, 22],
     "anims": [
@@ -177,7 +182,8 @@
     "controls": [{ "$button_control@$button_control": {} }]
   },
 
-  "beacon_panel@xerox_lib.i": {
+  "beacon_panel": {
+    "type": "image",
     "texture": "textures/XeroxClient/rounded_corner/all8x",
     "color": "$xeroxclient_ui_theme_menu_background_color",
     "alpha": 0.3,
@@ -186,13 +192,15 @@
     "clips_children": true,
     "controls": [
       {
-        "top_half@xerox_lib.p": {
+        "top_half": {
+          "type": "panel",
           "size": ["100%sm", "56.0869565217%x"],
           "anchor_from": "top_middle",
           "anchor_to": "top_middle",
           "controls": [
             {
-              "beacon_inner_panel@xerox_lib.i": {
+              "beacon_inner_panel": {
+                "type": "image",
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
                 "offset": [0, "4.1237113402%"],
@@ -299,7 +307,8 @@
                     }
                   },
                   {
-                    "primary_power_label@xerox_lib.l": {
+                    "primary_power_label": {
+                      "type": "label",
                       "anchor_from": "top_middle",
                       "anchor_to": "top_middle",
                       "font_type": "$global_font_type",
@@ -311,7 +320,8 @@
                     }
                   },
                   {
-                    "secondary_power_label@xerox_lib.l": {
+                    "secondary_power_label": {
+                      "type": "label",
                       "anchor_from": "top_middle",
                       "anchor_to": "top_middle",
                       "font_type": "$global_font_type",
@@ -326,13 +336,15 @@
               }
             },
             {
-              "usable_item_and_payment_panel@xerox_lib.p": {
+              "usable_item_and_payment_panel": {
+                "type": "panel",
                 "size": ["89.8148148148%sm", "11.3402061856%x"],
                 "anchor_from": "bottom_middle",
                 "anchor_to": "bottom_middle",
                 "controls": [
                   {
-                    "usable_items_panel@xerox_lib.p": {
+                    "usable_items_panel": {
+                      "type": "panel",
                       "anchor_from": "center",
                       "anchor_to": "right_middle",
                       "offset": ["4.1237113402%", 0],
@@ -433,7 +445,8 @@
                     }
                   },
                   {
-                    "ingredient_item@xerox_lib.i": {
+                    "ingredient_item": {
+                      "type": "image",
                       "texture": "textures/XeroxClient/rounded_corner/all8x",
                       "color": "$xeroxclient_ui_theme_menu_background_color",
                       "alpha": 0.3,
@@ -480,7 +493,8 @@
         }
       },
       {
-        "bottom_half@xerox_lib.p": {
+        "bottom_half": {
+          "type": "panel",
           "size": ["140.2439024390%c", "115.3846153846%c"],
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
@@ -494,7 +508,8 @@
     ]
   },
 
-  "main_content@xerox_lib.b": {
+  "main_content": {
+    "type": "button",
     "default_focus_precedence": 0,
     "focus_enabled": true,
     "focus_wrap_enabled": false,

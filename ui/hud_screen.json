@@ -44,7 +44,8 @@
             }
           },
           {
-            "item_text_factory@xerox_lib.f": {
+            "item_text_factory": {
+              "type": "factory",
               "control_ids": {
                 "item_text": "@xc_modern_hud_texts.item_name_text",
                 "jukebox_text": "@xc_modern_hud_texts.jukebox_popup_text"
@@ -93,7 +94,8 @@
         "control_name": "hud_tip_text_factory",
         "value": [
           {
-            "hud_tip_text_factory@xerox_lib.f": {
+            "hud_tip_text_factory": {
+              "type": "factory",
               "control_name": "@xc_modern_hud_texts.hud_tip_text"
             }
           }
@@ -105,7 +107,8 @@
         "control_name": "hud_actionbar_text_area",
         "value": [
           {
-            "actionbar_text_area@xerox_lib.p": {
+            "actionbar_text_area": {
+              "type": "panel",
               "factory": {
                 "name": "hud_actionbar_text_factory",
                 "control_ids": {
@@ -122,7 +125,8 @@
         "control_name": "hud_title_text_area",
         "value": [
           {
-            "title_text_area@xerox_lib.p": {
+            "title_text_area": {
+              "type": "panel",
               "factory": {
                 "name": "hud_title_text_factory",
                 "control_ids": {
