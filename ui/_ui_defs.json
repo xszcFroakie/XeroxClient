@@ -12,6 +12,7 @@
     ".XeroxClient/client_ui_common/xerox_client_common.json",
     ".XeroxClient/client_ui_common/xerox_edit_box.json",
     ".XeroxClient/client_ui_common/xerox_scrolling_panel.json",
+    ".XeroxClient/client_ui_common/xerox_slider.json",
     ".XeroxClient/client_ui_common/xerox_tabs.json",
     ".XeroxClient/client_ui_common/xerox_toggles.json",
 

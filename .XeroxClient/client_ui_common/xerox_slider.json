@@ -1,0 +1,302 @@
+{
+  "namespace": "xc_modern_slider",
+
+  "slider_box_layout": {
+    "type": "image",
+    "texture": "textures/XeroxClient/rounded_corner/all8x",
+    "color": "$slider_box_color",
+    "$is_hover|default": false,
+    "controls": [
+      {
+        "border": {
+          "type": "image",
+          "size": ["100% + 1px", "100% + 1px"],
+          "texture": "textures/XeroxClient/rounded_corner_border/all8x",
+          "layer": 3,
+          "ignored": "(not $is_hover)"
+        }
+      }
+    ]
+  },
+
+  "slider_box": {
+    "type": "slider_box",
+    "layer": 3,
+    "size": [16, 16],
+    "default_control": "default",
+    "hover_control": "hover",
+    "locked_control": "locked",
+    "indent_control": "indent",
+    "controls": [
+      {
+        "default@xc_modern_slider.slider_box_layout": {
+          "$slider_box_color": "$xeroxclient_ui_theme_button_hover_color",
+          "layer": 4
+        }
+      },
+      {
+        "hover@xc_modern_slider.slider_box_layout": {
+          "$slider_box_color": "$xeroxclient_ui_theme_button_pressed_color",
+          "$is_hover": true,
+          "layer": 5
+        }
+      },
+      {
+        "indent@xc_modern_slider.slider_box_layout": {
+          "$slider_box_color": "$xeroxclient_ui_theme_button_pressed_color",
+          "$is_hover": true,
+          "layer": 6
+        }
+      },
+      {
+        "locked@xc_modern_slider.slider_box_layout": {
+          "$slider_box_color": "$xeroxclient_ui_theme_button_locked_color",
+          "layer": 4
+        }
+      }
+    ]
+  },
+
+  "slider_bar_background": {
+    "type": "image",
+    "size": ["100% + 16px", 16],
+    "texture": "textures/XeroxClient/rounded_corner/all8x",
+    "color": "$slider_bar_background_color",
+    "alpha": "$slider_bar_background_alpha",
+    "layer": 1,
+    "$is_hover|default": false,
+    "$progress_clip_direction|default": "left",
+    "controls": [
+      {
+        "slider_progress": {
+          "type": "image",
+          "texture": "textures/XeroxClient/rounded_corner/all8x",
+          "color": "$slider_progress_color",
+          "alpha": "$slider_progress_alpha",
+          "layer": 2,
+          "clip_direction": "$progress_clip_direction",
+          "clip_pixelperfect": false,
+          "ignored": "$is_hover"
+        }
+      },
+      {
+        "slider_progress_hover": {
+          "type": "image",
+          "texture": "textures/XeroxClient/rounded_corner/all8x",
+          "color": "$slider_progress_color",
+          "alpha": "$slider_progress_alpha",
+          "layer": 2,
+          "clip_direction": "$progress_clip_direction",
+          "clip_pixelperfect": false,
+          "ignored": "(not $is_hover)"
+        }
+      }
+    ]
+  },
+
+  "slider": {
+    "type": "slider",
+    "size": ["100% - 17px", 17],
+    "$focus_id|default": "",
+    "$focus_override_down|default": "",
+    "$focus_override_up|default": "",
+    "$focus_override_left|default": "",
+    "$focus_override_right|default": "",
+    "focus_identifier": "$focus_id",
+    "focus_change_down": "$focus_override_down",
+    "focus_change_up": "$focus_override_up",
+    "focus_change_left": "$focus_override_left",
+    "focus_change_right": "$focus_override_right",
+    "focus_enabled": true,
+    "$default_focus_precedence|default": 0,
+    "default_focus_precedence": "$default_focus_precedence",
+    "$slider_select_on_hover|default": false,
+    "slider_select_on_hover": "$slider_select_on_hover",
+    "layer": 1,
+    "always_listen_to_input": false,
+    "always_handle_pointer": true,
+    "slider_box_control": "slider_box",
+    "$slider_track_button|default": "button.slider_skip_track",
+    "$slider_direction|default": "horizontal",
+    "$slider_steps|default": 1,
+    "$slider_collection_name|default": "",
+    "slider_name": "$slider_name",
+    "slider_track_button": "$slider_name",
+    "slider_direction": "$slider_direction",
+    "slider_steps": "$slider_steps",
+    "slider_collection_name": "$slider_collection_name",
+    "$slider_binding_type|default": "global",
+    "$slider_binding_condition|default": "visible",
+    "$slider_value_binding_name|default": "#slider_value",
+    "$slider_steps_binding_type|default": "global",
+    "$slider_steps_binding_condition|default": "visible",
+    "$slider_steps_binding_name|default": "#slider_steps",
+    "$slider_enabled_binding_type|default": "none",
+    "$slider_enabled_binding_condition|default": "visible",
+    "$slider_enabled_binding_name|default": "#slider_enabled",
+    "$slider_tts_binding_type|default": "global",
+    "$slider_tts_binding_condition|default": "visible",
+    "$slider_tts_header|default": "",
+    "$slider_tts_header_binding_type|default": "none",
+    "$slider_tts_header_binding_condition|default": "visible",
+    "$slider_header_collection_name": "",
+    "$slider_tts_override_value|default": " ",
+    "$slider_tts_name|default": "accessibility.slider.tts.title",
+    "$slider_tts_text_value|default": "",
+    "$tts_section_header|default": "",
+    "default_control": "slider_bar_default",
+    "hover_control": "slider_bar_hover",
+    //"background_control": "slider_background",
+    //"background_hover_control": "slider_background_hover",
+    "progress_control": "slider_progress",
+    "progress_hover_control": "slider_progress_hover",
+    "tts_control_header": "$slider_tts_header",
+    "tts_section_header": "$tts_section_header",
+    "tts_override_control_value": "$slider_tts_override_value",
+    "tts_name": "$slider_tts_name",
+    "tts_value_changed": "$slider_tts_text_value",
+    "$slider_small_decrease_button|default": "slider.small_decrease",
+    "$slider_small_increase_button|default": "slider.small_increase",
+    "$slider_selected_button|default": "slider.selected",
+    "$slider_deselected_button|default": "slider.deselected",
+    "slider_small_decrease_button": "$slider_small_decrease_button",
+    "slider_small_increase_button": "$slider_small_increase_button",
+    "slider_selected_button": "$slider_selected_button",
+    "slider_deselected_button": "$slider_deselected_button",
+    "factory": {
+      "name": "slider_step_factory",
+      "control_ids": {}
+    },
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "$slider_name",
+        "mapping_type": "pressed",
+        "button_up_right_of_first_refusal": true
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "$slider_selected_button",
+        "mapping_type": "focused"
+      },
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "$slider_deselected_button",
+        "mapping_type": "focused"
+      },
+      {
+        "ignored": "($slider_direction = 'vertical')",
+        "from_button_id": "button.menu_left",
+        "to_button_id": "$slider_small_decrease_button",
+        "mapping_type": "pressed",
+        "input_mode_condition": "not_gaze",
+        "ignore_input_scope": true
+      },
+      {
+        "ignored": "($slider_direction = 'horizontal')",
+        "from_button_id": "button.menu_up",
+        "to_button_id": "$slider_small_decrease_button",
+        "mapping_type": "pressed",
+        "input_mode_condition": "not_gaze",
+        "ignore_input_scope": true
+      },
+      {
+        "ignored": "($slider_direction = 'vertical')",
+        "from_button_id": "button.menu_right",
+        "to_button_id": "$slider_small_increase_button",
+        "mapping_type": "pressed",
+        "input_mode_condition": "not_gaze",
+        "ignore_input_scope": true
+      },
+      {
+        "ignored": "($slider_direction = 'horizontal')",
+        "from_button_id": "button.menu_down",
+        "to_button_id": "$slider_small_increase_button",
+        "mapping_type": "pressed",
+        "input_mode_condition": "not_gaze",
+        "ignore_input_scope": true
+      }
+    ],
+    "controls": [
+      {
+        "slider_box@xc_modern_slider.slider_box": {
+          "$slider_track_button": "$slider_name"
+        }
+      },
+      {
+        "slider_bar_default@xc_modern_slider.slider_bar_background": {
+          "$slider_bar_background_alpha": "$xeroxclient_ui_theme_button_default_alpha",
+          "$slider_bar_background_color": "$xeroxclient_ui_theme_button_default_color",
+          "$slider_progress_alpha": "$xeroxclient_ui_theme_button_hover_alpha",
+          "$slider_progress_color": "$xeroxclient_ui_theme_button_hover_color"
+        }
+      },
+      {
+        "slider_bar_hover@xc_modern_slider.slider_bar_background": {
+          "$is_hover": true,
+          "$slider_bar_background_alpha": "$xeroxclient_ui_theme_button_default_alpha",
+          "$slider_bar_background_color": "$xeroxclient_ui_theme_button_hover_color",
+          "$slider_progress_alpha": "$xeroxclient_ui_theme_button_pressed_alpha",
+          "$slider_progress_color": "$xeroxclient_ui_theme_button_pressed_color",
+          "visible": false
+        }
+      },
+      {
+        "slider_bar_locked@xc_modern_slider.slider_bar_background": {
+          "$slider_bar_background_alpha": "$xeroxclient_ui_theme_button_locked_alpha",
+          "$slider_bar_background_color": "$xeroxclient_ui_theme_button_locked_color",
+          "$slider_progress_alpha": "$xeroxclient_ui_theme_button_locked_alpha",
+          "$slider_progress_color": "$xeroxclient_ui_theme_button_locked_color",
+          "bindings": [
+            {
+              "binding_type": "$slider_enabled_binding_type",
+              "binding_condition": "$slider_enabled_binding_condition",
+              "binding_collection_name": "$slider_collection_name",
+              "binding_name": "(not $slider_enabled_binding_name)",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ],
+    "property_bag": {
+      "#slider_steps": 1,
+      "#slider_value": 0
+    },
+    "bindings": [
+      {
+        "binding_type": "$slider_steps_binding_type",
+        "binding_condition": "$slider_steps_binding_condition",
+        "binding_collection_name": "$slider_collection_name",
+        "binding_name": "$slider_steps_binding_name",
+        "binding_name_override": "#slider_steps"
+      },
+      {
+        "binding_type": "$slider_binding_type",
+        "binding_condition": "$slider_binding_condition",
+        "binding_collection_name": "$slider_collection_name",
+        "binding_name": "$slider_value_binding_name",
+        "binding_name_override": "#slider_value"
+      },
+      {
+        "binding_type": "$slider_enabled_binding_type",
+        "binding_condition": "$slider_enabled_binding_condition",
+        "binding_collection_name": "$slider_collection_name",
+        "binding_name": "$slider_enabled_binding_name",
+        "binding_name_override": "#enabled"
+      },
+      {
+        "binding_type": "$slider_tts_binding_type",
+        "binding_condition": "$slider_tts_binding_condition",
+        "binding_collection_name": "$slider_collection_name",
+        "binding_name": "$slider_tts_text_value"
+      },
+      {
+        "binding_type": "$slider_tts_header_binding_type",
+        "binding_condition": "$slider_tts_header_binding_condition",
+        "binding_collection_name": "$slider_header_collection_name",
+        "binding_name": "$slider_tts_header"
+      }
+    ]
+  }
+}
