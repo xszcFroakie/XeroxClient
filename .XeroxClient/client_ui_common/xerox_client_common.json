@@ -11,13 +11,22 @@
     "type": "stack_panel",
     "orientation": "horizontal",
     "size": ["100%c", 10],
-    "$rgb_text_layer": -999,
+    "$rgb_text_layer": 999,
     "$rgb_text_shadow": true,
+    "$rgb_text_font_scale_factor": 3.0,
     "controls": [
-      { "1@startup.rgbt": { "$rgb_text": "X", "$rgb_delay": "0" } },
-      { "2@startup.rgbt": { "$rgb_text": "S", "$rgb_delay": "1" } },
-      { "3@startup.rgbt": { "$rgb_text": "z", "$rgb_delay": "2" } },
-      { "4@startup.rgbt": { "$rgb_text": "C", "$rgb_delay": "3" } }
+      { "01@startup.rgbt": { "$rgb_text": "X", "$rgb_delay": "0" } },
+      { "02@startup.rgbt": { "$rgb_text": "E", "$rgb_delay": "1" } },
+      { "03@startup.rgbt": { "$rgb_text": "R", "$rgb_delay": "2" } },
+      { "04@startup.rgbt": { "$rgb_text": "O", "$rgb_delay": "3" } },
+      { "05@startup.rgbt": { "$rgb_text": "X", "$rgb_delay": "4" } },
+      { "06@startup.rgbt": { "$rgb_text": " ", "$rgb_delay": "5" } },
+      { "07@startup.rgbt": { "$rgb_text": "C", "$rgb_delay": "6" } },
+      { "08@startup.rgbt": { "$rgb_text": "L", "$rgb_delay": "7" } },
+      { "09@startup.rgbt": { "$rgb_text": "I", "$rgb_delay": "8" } },
+      { "10@startup.rgbt": { "$rgb_text": "E", "$rgb_delay": "9" } },
+      { "11@startup.rgbt": { "$rgb_text": "N", "$rgb_delay": "10" } },
+      { "12@startup.rgbt": { "$rgb_text": "T", "$rgb_delay": "11" } }
     ]
   },
 
