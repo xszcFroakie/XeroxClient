@@ -6,7 +6,7 @@
 {
   "biomes": {
     "default": {
-      "water_surface_transparency": 0.2,
+      "water_surface_transparency": 0.65,
       "fog_color": "#8499A5",
       "fog_identifier": "xszc:fog_default"
     }
