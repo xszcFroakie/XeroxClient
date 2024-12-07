@@ -1,8 +1,10 @@
-<div><h1 align=center><img src="pack_icon.png" alt="icon" width="200"><br>Xerox Client<br></h1></div>
+# Xerox Client
+
+A resource pack that provide modern user interface and unique features, for **Bedrock Edition** only.
 
 [English](/README.md) | [简体中文](/README_CH.md)
 
->A resource pack for Minecraft Bedrock Edition
+---
 
 ## Terms of Use
 

@@ -1,8 +1,10 @@
-<div><h1 align=center><img src="pack_icon.png" alt="icon" width="200"><br>Xerox Client<br></h1></div>
+# Xerox Client
+
+一个提供现代用户界面和独特功能的资源包，仅适用于**基岩版**。
 
 [English](/README.md) | [简体中文](/README_CH.md)
 
->《我的世界》基岩版资源包
+---
 
 ## 使用条款
 
