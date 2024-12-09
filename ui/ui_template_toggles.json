@@ -8,23 +8,30 @@
   "namespace": "common_toggles",
 
   "content_toggle_label_panel/toggle_label": {
-    "font_type": "$global_font_type",
+    "$xeroxclient_ui_control|default": false,
+
+    "font_type": "$font_type",
+    "$font_type": "$content_toggle_label_font_type",
+    "variables": {
+      "requires": "$xeroxclient_ui_control",
+      "$font_type": "$global_font_type"
+    },
     "backup_font_type": "$global_font_type_backup"
   },
 
   "dark_template_toggle": {
-    "$default_texture|default": "textures/XeroxClient/White",
-    "$hover_texture|default": "textures/XeroxClient/White",
-    "$pressed_texture|default": "textures/XeroxClient/White",
-    "$pressed_no_hover_texture|default": "textures/XeroxClient/White"
+    //"$default_texture|default": "textures/XeroxClient/White",
+    //"$hover_texture|default": "textures/XeroxClient/White",
+    //"$pressed_texture|default": "textures/XeroxClient/White",
+    //"$pressed_no_hover_texture|default": "textures/XeroxClient/White"
   },
 
   "light_template_toggle": {
-    "$default_texture|default": "textures/XeroxClient/White",
-    "$hover_texture|default": "textures/XeroxClient/White",
-    "$pressed_texture|default": "textures/XeroxClient/White",
-    "$pressed_no_hover_texture|default": "textures/XeroxClient/White",
-    "$locked_texture|default": "textures/XeroxClient/White",
+    //"$default_texture|default": "textures/XeroxClient/White",
+    //"$hover_texture|default": "textures/XeroxClient/White",
+    //"$pressed_texture|default": "textures/XeroxClient/White",
+    //"$pressed_no_hover_texture|default": "textures/XeroxClient/White",
+    //"$locked_texture|default": "textures/XeroxClient/White",
 
     "$xeroxclient_button_alpha_default|default": "$xeroxclient_ui_theme_button_default_alpha",
     "$xeroxclient_button_alpha_hover|default": "$xeroxclient_ui_theme_button_hover_alpha",
@@ -42,18 +49,18 @@
   },
 
   "dark_ui_toggle_collection": {
-    "$default_texture|default": "textures/XeroxClient/White",
-    "$hover_texture|default": "textures/XeroxClient/White",
-    "$pressed_texture|default": "textures/XeroxClient/White",
-    "$pressed_no_hover_texture|default": "textures/XeroxClient/White"
+    //"$default_texture|default": "textures/XeroxClient/White",
+    //"$hover_texture|default": "textures/XeroxClient/White",
+    //"$pressed_texture|default": "textures/XeroxClient/White",
+    //"$pressed_no_hover_texture|default": "textures/XeroxClient/White"
   },
 
   "light_ui_toggle_collection": {
-    "$default_texture|default": "textures/XeroxClient/White",
-    "$hover_texture|default": "textures/XeroxClient/White",
-    "$pressed_texture|default": "textures/XeroxClient/White",
-    "$pressed_no_hover_texture|default": "textures/XeroxClient/White",
-    "$locked_texture|default": "textures/XeroxClient/White",
+    //"$default_texture|default": "textures/XeroxClient/White",
+    //"$hover_texture|default": "textures/XeroxClient/White",
+    //"$pressed_texture|default": "textures/XeroxClient/White",
+    //"$pressed_no_hover_texture|default": "textures/XeroxClient/White",
+    //"$locked_texture|default": "textures/XeroxClient/White",
 
     "$xeroxclient_button_alpha_default|default": "$xeroxclient_ui_theme_button_default_alpha",
     "$xeroxclient_button_alpha_hover|default": "$xeroxclient_ui_theme_button_hover_alpha",

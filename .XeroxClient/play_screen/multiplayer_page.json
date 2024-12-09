@@ -116,7 +116,7 @@
     "size": ["100%", "100%"],
     "controls": [
       {
-        "network_world_header@play.network_world_header": { "offset": [2, 2] }
+        "network_world_header@play.network_world_header": { "$text_color":[], "offset": [2, 2] }
       },
       {
         "network_world_details@play.network_world_details": {

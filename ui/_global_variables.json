@@ -15,9 +15,7 @@
   // Theme
   "$xeroxclient_ui_theme_screen_transition_dura": 0.15,
 
-  "$xeroxclient_ui_theme_menu_background_color": [
-    0.0039215686, 0.0549019608, 0.0549019607
-  ],
+  "$xeroxclient_ui_theme_menu_background_color": [0.0039215686, 0.0549019608, 0.0549019607],
   "$xeroxclient_ui_theme_menu_background_alpha": 0.4352941176, // unused
 
   "$xeroxclient_ui_theme_button_default_alpha": 0.3,
@@ -25,15 +23,9 @@
   "$xeroxclient_ui_theme_button_pressed_alpha": 0.6,
   "$xeroxclient_ui_theme_button_locked_alpha": 0.7,
 
-  "$xeroxclient_ui_theme_button_default_color": [
-    0.0039215686, 0.0549019608, 0.0549019607
-  ],
-  "$xeroxclient_ui_theme_button_hover_color": [
-    0.5058823529, 0.2588235294, 0.8352941176
-  ],
-  "$xeroxclient_ui_theme_button_pressed_color": [
-    0.5058823529, 0.2588235294, 0.8352941176
-  ],
+  "$xeroxclient_ui_theme_button_default_color": [0.0039215686, 0.0549019608, 0.0549019607],
+  "$xeroxclient_ui_theme_button_hover_color": [0.5058823529, 0.2588235294, 0.8352941176],
+  "$xeroxclient_ui_theme_button_pressed_color": [0.5058823529, 0.2588235294, 0.8352941176],
   "$xeroxclient_ui_theme_button_locked_color": [0.627451, 0.627451, 0.627451],
 
   "$xeroxclient_ui_theme_button_content_default_offset": [0, 0],
@@ -43,9 +35,7 @@
   "$xeroxclient_ui_theme_button_text_default_color": [1.0, 1.0, 1.0],
   "$xeroxclient_ui_theme_button_text_hover_color": [1.0, 1.0, 1.0],
   "$xeroxclient_ui_theme_button_text_pressed_color": [1.0, 1.0, 1.0],
-  "$xeroxclient_ui_theme_button_text_locked_color": [
-    0.4784313725, 0.4784313725, 0.4784313725
-  ],
+  "$xeroxclient_ui_theme_button_text_locked_color": [0.4784313725, 0.4784313725, 0.4784313725],
 
   // Container Screen and Hotbar
 
@@ -58,33 +48,5 @@
   "$ClientVersion": "v1.0.0",
   "$ClientAuthor": "Made By XSzC.",
   "$current_client_version": "001000000", // 当前客户端版本, 每三位数字代表'ClientVersion'中小数点前后数字
-  "$xeroxclient_debug_mode": true,
-
-  // Vanilla Variables
-
-  "$light_button_default_text_color": [1.0, 1.0, 1.0],
-  "$light_button_locked_text_color": [1.0, 1.0, 1.0],
-  "$light_toggle_default_text_color": [1.0, 1.0, 1.0],
-  "$light_toggle_checked_default_text_color": [1.0, 1.0, 1.0],
-  "$dark_button_locked_text_color": [0.4784313725, 0.4784313725, 0.4784313725],
-  "$title_text_color": [1.0, 1.0, 1.0],
-  "$pocket_title_text_color": [1.0, 1.0, 1.0],
-  "$tab_unchecked_text_color": [1.0, 1.0, 1.0],
-  "$tab_unchecked_locked_text_color": [
-    0.4784313725, 0.4784313725, 0.4784313725
-  ],
-  "$tab_unchecked_locked_hover_text_color": [
-    0.4784313725, 0.4784313725, 0.4784313725
-  ],
-  "$tab_checked_text_color": [1.0, 1.0, 1.0],
-  "$tab_checked_locked_text_color": [0.4784313725, 0.4784313725, 0.4784313725],
-  "$tab_checked_locked_hover_text_color": [
-    0.4784313725, 0.4784313725, 0.4784313725
-  ],
-  "$portfolio_body_text_color": [1.0, 1.0, 1.0],
-  "$portfolio_close_color": [1.0, 1.0, 1.0],
-  "$dark_body_text_color": [1.0, 1.0, 1.0],
-  "$light_glyph_default_color": [1.0, 1.0, 1.0],
-  "$light_glyph_locked_color": [0.4784313725, 0.4784313725, 0.4784313725],
-  "$dark_glyph_locked_color": [0.4784313725, 0.4784313725, 0.4784313725]
+  "$xeroxclient_debug_mode": true
 }

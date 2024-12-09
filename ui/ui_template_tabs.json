@@ -12,9 +12,18 @@
   },
 
   "tab_image": {
-    "alpha": "$xeroxclient_button_alpha",
+    "$xeroxclient_ui_control|default": false,
+
+    "alpha": "$alpha",
+    "color": "$color",
+    "$alpha": 1,
+    "$color": [],
+    "variables": {
+      "requires": "$xeroxclient_ui_control",
+      "$alpha": "$xeroxclient_button_alpha",
+      "$color": "$xeroxclient_button_color"
+    },
     "$xeroxclient_button_alpha|default": 0.45,
-    "color": "$xeroxclient_button_color",
     "$xeroxclient_button_color|default": []
   },
 
@@ -71,14 +80,14 @@
   },
 
   "base_tab": {
-    "$unchecked_default_image|default": "textures/XeroxClient/White",
-    "$unchecked_hover_image|default": "textures/XeroxClient/White",
-    "$unchecked_locked_image|default": "textures/XeroxClient/White",
-    "$unchecked_locked_hover_image|default": "textures/XeroxClient/White",
-    "$checked_default_image|default": "textures/XeroxClient/White",
-    "$checked_hover_image|default": "textures/XeroxClient/White",
-    "$checked_locked_image|default": "textures/XeroxClient/White",
-    "$checked_locked_hover_image|default": "textures/XeroxClient/White",
+    //"$unchecked_default_image|default": "textures/XeroxClient/White",
+    //"$unchecked_hover_image|default": "textures/XeroxClient/White",
+    //"$unchecked_locked_image|default": "textures/XeroxClient/White",
+    //"$unchecked_locked_hover_image|default": "textures/XeroxClient/White",
+    //"$checked_default_image|default": "textures/XeroxClient/White",
+    //"$checked_hover_image|default": "textures/XeroxClient/White",
+    //"$checked_locked_image|default": "textures/XeroxClient/White",
+    //"$checked_locked_hover_image|default": "textures/XeroxClient/White",
 
     "$xeroxclient_button_alpha_default|default": "$xeroxclient_ui_theme_button_default_alpha",
     "$xeroxclient_button_alpha_hover|default": "$xeroxclient_ui_theme_button_hover_alpha",
@@ -101,38 +110,38 @@
   },
 
   "tab_top": {
-    "$unchecked_default_image": "textures/XeroxClient/White",
-    "$unchecked_hover_image": "textures/XeroxClient/White",
-    "$unchecked_locked_image": "textures/XeroxClient/White",
-    "$unchecked_locked_hover_image": "textures/XeroxClient/White",
-    "$checked_default_image": "textures/XeroxClient/White",
-    "$checked_hover_image": "textures/XeroxClient/White",
-    "$checked_locked_image": "textures/XeroxClient/White",
-    "$checked_locked_hover_image": "textures/XeroxClient/White",
-    "variables": []
+    //"$unchecked_default_image": "textures/XeroxClient/White",
+    //"$unchecked_hover_image": "textures/XeroxClient/White",
+    //"$unchecked_locked_image": "textures/XeroxClient/White",
+    //"$unchecked_locked_hover_image": "textures/XeroxClient/White",
+    //"$checked_default_image": "textures/XeroxClient/White",
+    //"$checked_hover_image": "textures/XeroxClient/White",
+    //"$checked_locked_image": "textures/XeroxClient/White",
+    //"$checked_locked_hover_image": "textures/XeroxClient/White",
+    //"variables": []
   },
 
   "tab_left": {
-    "$unchecked_default_image": "textures/XeroxClient/White",
-    "$unchecked_hover_image": "textures/XeroxClient/White",
-    "$unchecked_locked_image": "textures/XeroxClient/White",
-    "$unchecked_locked_hover_image": "textures/XeroxClient/White",
-    "$checked_default_image": "textures/XeroxClient/White",
-    "$checked_hover_image|default": "textures/XeroxClient/White",
-    "$checked_locked_image": "textures/XeroxClient/White",
-    "$checked_locked_hover_image": "textures/XeroxClient/White",
-    "variables": []
+    //"$unchecked_default_image": "textures/XeroxClient/White",
+    //"$unchecked_hover_image": "textures/XeroxClient/White",
+    //"$unchecked_locked_image": "textures/XeroxClient/White",
+    //"$unchecked_locked_hover_image": "textures/XeroxClient/White",
+    //"$checked_default_image": "textures/XeroxClient/White",
+    //"$checked_hover_image|default": "textures/XeroxClient/White",
+    //"$checked_locked_image": "textures/XeroxClient/White",
+    //"$checked_locked_hover_image": "textures/XeroxClient/White",
+    //"variables": []
   },
 
   "tab_right": {
-    "$unchecked_default_image": "textures/XeroxClient/White",
-    "$unchecked_hover_image": "textures/XeroxClient/White",
-    "$unchecked_locked_image": "textures/XeroxClient/White",
-    "$unchecked_locked_hover_image": "textures/XeroxClient/White",
-    "$checked_default_image": "textures/XeroxClient/White",
-    "$checked_hover_image": "textures/XeroxClient/White",
-    "$checked_locked_image": "textures/XeroxClient/White",
-    "$checked_locked_hover_image": "textures/XeroxClient/White",
-    "variables": []
+    //"$unchecked_default_image": "textures/XeroxClient/White",
+    //"$unchecked_hover_image": "textures/XeroxClient/White",
+    //"$unchecked_locked_image": "textures/XeroxClient/White",
+    //"$unchecked_locked_hover_image": "textures/XeroxClient/White",
+    //"$checked_default_image": "textures/XeroxClient/White",
+    //"$checked_hover_image": "textures/XeroxClient/White",
+    //"$checked_locked_image": "textures/XeroxClient/White",
+    //"$checked_locked_hover_image": "textures/XeroxClient/White",
+    //"variables": []
   }
 }

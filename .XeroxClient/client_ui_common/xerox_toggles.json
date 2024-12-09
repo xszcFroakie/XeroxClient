@@ -1,9 +1,17 @@
 {
   "namespace": "common_toggles",
 
+  "tbase@common_toggles.light_text_toggle": {
+    "$xeroxclient_ui_control": true
+  },
+
+  "ibase@common_toggles.light_image_toggle": {
+    "$xeroxclient_ui_control": true
+  },
+
   ////*/ Text Toggle /*////
 
-  "a_rc_16x_text@common_toggles.light_text_toggle": {
+  "a_rc_16x_text@common_toggles.tbase": {
     "$default_texture": "textures/XeroxClient/rounded_corner/all16x",
     "$hover_texture": "textures/XeroxClient/rounded_corner/all16x",
     "$pressed_texture": "textures/XeroxClient/rounded_corner/all16x",
@@ -11,7 +19,7 @@
     "$locked_texture": "textures/XeroxClient/rounded_corner/all16x"
   },
 
-  "a_rc_8x_text@common_toggles.light_text_toggle": {
+  "a_rc_8x_text@common_toggles.tbase": {
     "$default_texture": "textures/XeroxClient/rounded_corner/all8x",
     "$hover_texture": "textures/XeroxClient/rounded_corner/all8x",
     "$pressed_texture": "textures/XeroxClient/rounded_corner/all8x",
@@ -19,7 +27,7 @@
     "$locked_texture": "textures/XeroxClient/rounded_corner/all8x"
   },
 
-  "tl_rc_16x_text@common_toggles.light_text_toggle": {
+  "tl_rc_16x_text@common_toggles.tbase": {
     "$default_texture": "textures/XeroxClient/rounded_corner/t_left16x",
     "$hover_texture": "textures/XeroxClient/rounded_corner/t_left16x",
     "$pressed_texture": "textures/XeroxClient/rounded_corner/t_left16x",
@@ -27,7 +35,7 @@
     "$locked_texture": "textures/XeroxClient/rounded_corner/t_left16x"
   },
 
-  "tr_rc_16x_text@common_toggles.light_text_toggle": {
+  "tr_rc_16x_text@common_toggles.tbase": {
     "$default_texture": "textures/XeroxClient/rounded_corner/t_right16x",
     "$hover_texture": "textures/XeroxClient/rounded_corner/t_right16x",
     "$pressed_texture": "textures/XeroxClient/rounded_corner/t_right16x",
@@ -35,7 +43,7 @@
     "$locked_texture": "textures/XeroxClient/rounded_corner/t_right16x"
   },
 
-  "bl_rc_16x_text@common_toggles.light_text_toggle": {
+  "bl_rc_16x_text@common_toggles.tbase": {
     "$default_texture": "textures/XeroxClient/rounded_corner/b_left16x",
     "$hover_texture": "textures/XeroxClient/rounded_corner/b_left16x",
     "$pressed_texture": "textures/XeroxClient/rounded_corner/b_left16x",
@@ -43,7 +51,7 @@
     "$locked_texture": "textures/XeroxClient/rounded_corner/b_left16x"
   },
 
-  "br_rc_16x_text@common_toggles.light_text_toggle": {
+  "br_rc_16x_text@common_toggles.tbase": {
     "$default_texture": "textures/XeroxClient/rounded_corner/b_right16x",
     "$hover_texture": "textures/XeroxClient/rounded_corner/b_right16x",
     "$pressed_texture": "textures/XeroxClient/rounded_corner/b_right16x",
@@ -51,7 +59,7 @@
     "$locked_texture": "textures/XeroxClient/rounded_corner/b_right16x"
   },
 
-  "tl_rc_8x_text@common_toggles.light_text_toggle": {
+  "tl_rc_8x_text@common_toggles.tbase": {
     "$default_texture": "textures/XeroxClient/rounded_corner/t_left8x",
     "$hover_texture": "textures/XeroxClient/rounded_corner/t_left8x",
     "$pressed_texture": "textures/XeroxClient/rounded_corner/t_left8x",
@@ -59,7 +67,7 @@
     "$locked_texture": "textures/XeroxClient/rounded_corner/t_left8x"
   },
 
-  "tr_rc_8x_text@common_toggles.light_text_toggle": {
+  "tr_rc_8x_text@common_toggles.tbase": {
     "$default_texture": "textures/XeroxClient/rounded_corner/t_right8x",
     "$hover_texture": "textures/XeroxClient/rounded_corner/t_right8x",
     "$pressed_texture": "textures/XeroxClient/rounded_corner/t_right8x",
@@ -67,7 +75,7 @@
     "$locked_texture": "textures/XeroxClient/rounded_corner/t_right8x"
   },
 
-  "bl_rc_8x_text@common_toggles.light_text_toggle": {
+  "bl_rc_8x_text@common_toggles.tbase": {
     "$default_texture": "textures/XeroxClient/rounded_corner/b_left8x",
     "$hover_texture": "textures/XeroxClient/rounded_corner/b_left8x",
     "$pressed_texture": "textures/XeroxClient/rounded_corner/b_left8x",
@@ -75,7 +83,7 @@
     "$locked_texture": "textures/XeroxClient/rounded_corner/b_left8x"
   },
 
-  "br_rc_8x_text@common_toggles.light_text_toggle": {
+  "br_rc_8x_text@common_toggles.tbase": {
     "$default_texture": "textures/XeroxClient/rounded_corner/b_right8x",
     "$hover_texture": "textures/XeroxClient/rounded_corner/b_right8x",
     "$pressed_texture": "textures/XeroxClient/rounded_corner/b_right8x",
@@ -83,7 +91,7 @@
     "$locked_texture": "textures/XeroxClient/rounded_corner/b_right8x"
   },
 
-  "ta_rc_16x_text@common_toggles.light_text_toggle": {
+  "ta_rc_16x_text@common_toggles.tbase": {
     "$default_texture": "textures/XeroxClient/rounded_corner/top16x",
     "$hover_texture": "textures/XeroxClient/rounded_corner/top16x",
     "$pressed_texture": "textures/XeroxClient/rounded_corner/top16x",
@@ -91,7 +99,7 @@
     "$locked_texture": "textures/XeroxClient/rounded_corner/top16x"
   },
 
-  "ba_rc_16x_text@common_toggles.light_text_toggle": {
+  "ba_rc_16x_text@common_toggles.tbase": {
     "$default_texture": "textures/XeroxClient/rounded_corner/bottom16x",
     "$hover_texture": "textures/XeroxClient/rounded_corner/bottom16x",
     "$pressed_texture": "textures/XeroxClient/rounded_corner/bottom16x",
@@ -99,7 +107,7 @@
     "$locked_texture": "textures/XeroxClient/rounded_corner/bottom16x"
   },
 
-  "la_rc_16x_text@common_toggles.light_text_toggle": {
+  "la_rc_16x_text@common_toggles.tbase": {
     "$default_texture": "textures/XeroxClient/rounded_corner/left16x",
     "$hover_texture": "textures/XeroxClient/rounded_corner/left16x",
     "$pressed_texture": "textures/XeroxClient/rounded_corner/left16x",
@@ -107,7 +115,7 @@
     "$locked_texture": "textures/XeroxClient/rounded_corner/left16x"
   },
 
-  "ra_rc_16x_text@common_toggles.light_text_toggle": {
+  "ra_rc_16x_text@common_toggles.tbase": {
     "$default_texture": "textures/XeroxClient/rounded_corner/right16x",
     "$hover_texture": "textures/XeroxClient/rounded_corner/right16x",
     "$pressed_texture": "textures/XeroxClient/rounded_corner/right16x",
@@ -115,7 +123,7 @@
     "$locked_texture": "textures/XeroxClient/rounded_corner/right16x"
   },
 
-  "ta_rc_8x_text@common_toggles.light_text_toggle": {
+  "ta_rc_8x_text@common_toggles.tbase": {
     "$default_texture": "textures/XeroxClient/rounded_corner/top8x",
     "$hover_texture": "textures/XeroxClient/rounded_corner/top8x",
     "$pressed_texture": "textures/XeroxClient/rounded_corner/top8x",
@@ -123,7 +131,7 @@
     "$locked_texture": "textures/XeroxClient/rounded_corner/top8x"
   },
 
-  "ba_rc_8x_text@common_toggles.light_text_toggle": {
+  "ba_rc_8x_text@common_toggles.tbase": {
     "$default_texture": "textures/XeroxClient/rounded_corner/bottom8x",
     "$hover_texture": "textures/XeroxClient/rounded_corner/bottom8x",
     "$pressed_texture": "textures/XeroxClient/rounded_corner/bottom8x",
@@ -131,7 +139,7 @@
     "$locked_texture": "textures/XeroxClient/rounded_corner/bottom8x"
   },
 
-  "la_rc_8x_text@common_toggles.light_text_toggle": {
+  "la_rc_8x_text@common_toggles.tbase": {
     "$default_texture": "textures/XeroxClient/rounded_corner/left8x",
     "$hover_texture": "textures/XeroxClient/rounded_corner/left8x",
     "$pressed_texture": "textures/XeroxClient/rounded_corner/left8x",
@@ -139,7 +147,7 @@
     "$locked_texture": "textures/XeroxClient/rounded_corner/left8x"
   },
 
-  "ra_rc_8x_text@common_toggles.light_text_toggle": {
+  "ra_rc_8x_text@common_toggles.tbase": {
     "$default_texture": "textures/XeroxClient/rounded_corner/right8x",
     "$hover_texture": "textures/XeroxClient/rounded_corner/right8x",
     "$pressed_texture": "textures/XeroxClient/rounded_corner/right8x",
@@ -149,7 +157,7 @@
 
   ////*/ Image Toggle /*////
 
-  "a_rc_16x_image@common_toggles.light_image_toggle": {
+  "a_rc_16x_image@common_toggles.ibase": {
     "$default_texture": "textures/XeroxClient/rounded_corner/all16x",
     "$hover_texture": "textures/XeroxClient/rounded_corner/all16x",
     "$pressed_texture": "textures/XeroxClient/rounded_corner/all16x",
@@ -157,7 +165,7 @@
     "$locked_texture": "textures/XeroxClient/rounded_corner/all16x"
   },
 
-  "a_rc_8x_image@common_toggles.light_image_toggle": {
+  "a_rc_8x_image@common_toggles.ibase": {
     "$default_texture": "textures/XeroxClient/rounded_corner/all8x",
     "$hover_texture": "textures/XeroxClient/rounded_corner/all8x",
     "$pressed_texture": "textures/XeroxClient/rounded_corner/all8x",
@@ -165,7 +173,7 @@
     "$locked_texture": "textures/XeroxClient/rounded_corner/all8x"
   },
 
-  "tl_rc_16x_image@common_toggles.light_image_toggle": {
+  "tl_rc_16x_image@common_toggles.ibase": {
     "$default_texture": "textures/XeroxClient/rounded_corner/t_left16x",
     "$hover_texture": "textures/XeroxClient/rounded_corner/t_left16x",
     "$pressed_texture": "textures/XeroxClient/rounded_corner/t_left16x",
@@ -173,7 +181,7 @@
     "$locked_texture": "textures/XeroxClient/rounded_corner/t_left16x"
   },
 
-  "tr_rc_16x_image@common_toggles.light_image_toggle": {
+  "tr_rc_16x_image@common_toggles.ibase": {
     "$default_texture": "textures/XeroxClient/rounded_corner/t_right16x",
     "$hover_texture": "textures/XeroxClient/rounded_corner/t_right16x",
     "$pressed_texture": "textures/XeroxClient/rounded_corner/t_right16x",
@@ -181,7 +189,7 @@
     "$locked_texture": "textures/XeroxClient/rounded_corner/t_right16x"
   },
 
-  "bl_rc_16x_image@common_toggles.light_image_toggle": {
+  "bl_rc_16x_image@common_toggles.ibase": {
     "$default_texture": "textures/XeroxClient/rounded_corner/b_left16x",
     "$hover_texture": "textures/XeroxClient/rounded_corner/b_left16x",
     "$pressed_texture": "textures/XeroxClient/rounded_corner/b_left16x",
@@ -189,7 +197,7 @@
     "$locked_texture": "textures/XeroxClient/rounded_corner/b_left16x"
   },
 
-  "br_rc_16x_image@common_toggles.light_image_toggle": {
+  "br_rc_16x_image@common_toggles.ibase": {
     "$default_texture": "textures/XeroxClient/rounded_corner/b_right16x",
     "$hover_texture": "textures/XeroxClient/rounded_corner/b_right16x",
     "$pressed_texture": "textures/XeroxClient/rounded_corner/b_right16x",
@@ -197,7 +205,7 @@
     "$locked_texture": "textures/XeroxClient/rounded_corner/b_right16x"
   },
 
-  "tl_rc_8x_image@common_toggles.light_image_toggle": {
+  "tl_rc_8x_image@common_toggles.ibase": {
     "$default_texture": "textures/XeroxClient/rounded_corner/t_left8x",
     "$hover_texture": "textures/XeroxClient/rounded_corner/t_left8x",
     "$pressed_texture": "textures/XeroxClient/rounded_corner/t_left8x",
@@ -205,7 +213,7 @@
     "$locked_texture": "textures/XeroxClient/rounded_corner/t_left8x"
   },
 
-  "tr_rc_8x_image@common_toggles.light_image_toggle": {
+  "tr_rc_8x_image@common_toggles.ibase": {
     "$default_texture": "textures/XeroxClient/rounded_corner/t_right8x",
     "$hover_texture": "textures/XeroxClient/rounded_corner/t_right8x",
     "$pressed_texture": "textures/XeroxClient/rounded_corner/t_right8x",
@@ -213,7 +221,7 @@
     "$locked_texture": "textures/XeroxClient/rounded_corner/t_right8x"
   },
 
-  "bl_rc_8x_image@common_toggles.light_image_toggle": {
+  "bl_rc_8x_image@common_toggles.ibase": {
     "$default_texture": "textures/XeroxClient/rounded_corner/b_left8x",
     "$hover_texture": "textures/XeroxClient/rounded_corner/b_left8x",
     "$pressed_texture": "textures/XeroxClient/rounded_corner/b_left8x",
@@ -221,7 +229,7 @@
     "$locked_texture": "textures/XeroxClient/rounded_corner/b_left8x"
   },
 
-  "br_rc_8x_image@common_toggles.light_image_toggle": {
+  "br_rc_8x_image@common_toggles.ibase": {
     "$default_texture": "textures/XeroxClient/rounded_corner/b_right8x",
     "$hover_texture": "textures/XeroxClient/rounded_corner/b_right8x",
     "$pressed_texture": "textures/XeroxClient/rounded_corner/b_right8x",
@@ -229,7 +237,7 @@
     "$locked_texture": "textures/XeroxClient/rounded_corner/b_right8x"
   },
 
-  "ta_rc_16x_image@common_toggles.light_image_toggle": {
+  "ta_rc_16x_image@common_toggles.ibase": {
     "$default_texture": "textures/XeroxClient/rounded_corner/top16x",
     "$hover_texture": "textures/XeroxClient/rounded_corner/top16x",
     "$pressed_texture": "textures/XeroxClient/rounded_corner/top16x",
@@ -237,7 +245,7 @@
     "$locked_texture": "textures/XeroxClient/rounded_corner/top16x"
   },
 
-  "ba_rc_16x_image@common_toggles.light_image_toggle": {
+  "ba_rc_16x_image@common_toggles.ibase": {
     "$default_texture": "textures/XeroxClient/rounded_corner/bottom16x",
     "$hover_texture": "textures/XeroxClient/rounded_corner/bottom16x",
     "$pressed_texture": "textures/XeroxClient/rounded_corner/bottom16x",
@@ -245,7 +253,7 @@
     "$locked_texture": "textures/XeroxClient/rounded_corner/bottom16x"
   },
 
-  "la_rc_16x_image@common_toggles.light_image_toggle": {
+  "la_rc_16x_image@common_toggles.ibase": {
     "$default_texture": "textures/XeroxClient/rounded_corner/left16x",
     "$hover_texture": "textures/XeroxClient/rounded_corner/left16x",
     "$pressed_texture": "textures/XeroxClient/rounded_corner/left16x",
@@ -253,7 +261,7 @@
     "$locked_texture": "textures/XeroxClient/rounded_corner/left16x"
   },
 
-  "ra_rc_16x_image@common_toggles.light_image_toggle": {
+  "ra_rc_16x_image@common_toggles.ibase": {
     "$default_texture": "textures/XeroxClient/rounded_corner/right16x",
     "$hover_texture": "textures/XeroxClient/rounded_corner/right16x",
     "$pressed_texture": "textures/XeroxClient/rounded_corner/right16x",
@@ -261,7 +269,7 @@
     "$locked_texture": "textures/XeroxClient/rounded_corner/right16x"
   },
 
-  "ta_rc_8x_image@common_toggles.light_image_toggle": {
+  "ta_rc_8x_image@common_toggles.ibase": {
     "$default_texture": "textures/XeroxClient/rounded_corner/top8x",
     "$hover_texture": "textures/XeroxClient/rounded_corner/top8x",
     "$pressed_texture": "textures/XeroxClient/rounded_corner/top8x",
@@ -269,7 +277,7 @@
     "$locked_texture": "textures/XeroxClient/rounded_corner/top8x"
   },
 
-  "ba_rc_8x_image@common_toggles.light_image_toggle": {
+  "ba_rc_8x_image@common_toggles.ibase": {
     "$default_texture": "textures/XeroxClient/rounded_corner/bottom8x",
     "$hover_texture": "textures/XeroxClient/rounded_corner/bottom8x",
     "$pressed_texture": "textures/XeroxClient/rounded_corner/bottom8x",
@@ -277,7 +285,7 @@
     "$locked_texture": "textures/XeroxClient/rounded_corner/bottom8x"
   },
 
-  "la_rc_8x_image@common_toggles.light_image_toggle": {
+  "la_rc_8x_image@common_toggles.ibase": {
     "$default_texture": "textures/XeroxClient/rounded_corner/left8x",
     "$hover_texture": "textures/XeroxClient/rounded_corner/left8x",
     "$pressed_texture": "textures/XeroxClient/rounded_corner/left8x",
@@ -285,7 +293,7 @@
     "$locked_texture": "textures/XeroxClient/rounded_corner/left8x"
   },
 
-  "ra_rc_8x_image@common_toggles.light_image_toggle": {
+  "ra_rc_8x_image@common_toggles.ibase": {
     "$default_texture": "textures/XeroxClient/rounded_corner/right8x",
     "$hover_texture": "textures/XeroxClient/rounded_corner/right8x",
     "$pressed_texture": "textures/XeroxClient/rounded_corner/right8x",

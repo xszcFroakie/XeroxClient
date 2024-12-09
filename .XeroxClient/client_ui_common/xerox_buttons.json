@@ -47,9 +47,17 @@
     "reset_event": "('button.xeroxclient.' + $pressed_button_name)"
   },
 
+  "tbase@common_buttons.light_text_button": {
+    "$xeroxclient_ui_control": true
+  },
+
+  "cbase@common_buttons.light_content_button": {
+    "$xeroxclient_ui_control": true
+  },
+
   ////*/ Text Button /*////
 
-  "a_rc_16x_text@common_buttons.light_text_button": {
+  "a_rc_16x_text@common_buttons.tbase": {
     "$hover_anim_enabled": true,
     "$default_button_texture": "textures/XeroxClient/rounded_corner/all16x",
     "$hover_button_texture": "textures/XeroxClient/rounded_corner/all16x",
@@ -57,7 +65,7 @@
     "$locked_button_texture": "textures/XeroxClient/rounded_corner/all16x"
   },
 
-  "a_rc_8x_text@common_buttons.light_text_button": {
+  "a_rc_8x_text@common_buttons.tbase": {
     "$hover_anim_enabled": true,
     "$default_button_texture": "textures/XeroxClient/rounded_corner/all8x",
     "$hover_button_texture": "textures/XeroxClient/rounded_corner/all8x",
@@ -65,7 +73,7 @@
     "$locked_button_texture": "textures/XeroxClient/rounded_corner/all8x"
   },
 
-  "tl_rc_16x_text@common_buttons.light_text_button": {
+  "tl_rc_16x_text@common_buttons.tbase": {
     "$hover_anim_enabled": true,
     "$default_button_texture": "textures/XeroxClient/rounded_corner/t_left16x",
     "$hover_button_texture": "textures/XeroxClient/rounded_corner/t_left16x",
@@ -73,7 +81,7 @@
     "$locked_button_texture": "textures/XeroxClient/rounded_corner/t_left16x"
   },
 
-  "tr_rc_16x_text@common_buttons.light_text_button": {
+  "tr_rc_16x_text@common_buttons.tbase": {
     "$hover_anim_enabled": true,
     "$default_button_texture": "textures/XeroxClient/rounded_corner/t_right16x",
     "$hover_button_texture": "textures/XeroxClient/rounded_corner/t_right16x",
@@ -81,7 +89,7 @@
     "$locked_button_texture": "textures/XeroxClient/rounded_corner/t_right16x"
   },
 
-  "bl_rc_16x_text@common_buttons.light_text_button": {
+  "bl_rc_16x_text@common_buttons.tbase": {
     "$hover_anim_enabled": true,
     "$default_button_texture": "textures/XeroxClient/rounded_corner/b_left16x",
     "$hover_button_texture": "textures/XeroxClient/rounded_corner/b_left16x",
@@ -89,7 +97,7 @@
     "$locked_button_texture": "textures/XeroxClient/rounded_corner/b_left16x"
   },
 
-  "br_rc_16x_text@common_buttons.light_text_button": {
+  "br_rc_16x_text@common_buttons.tbase": {
     "$hover_anim_enabled": true,
     "$default_button_texture": "textures/XeroxClient/rounded_corner/b_right16x",
     "$hover_button_texture": "textures/XeroxClient/rounded_corner/b_right16x",
@@ -97,7 +105,7 @@
     "$locked_button_texture": "textures/XeroxClient/rounded_corner/b_right16x"
   },
 
-  "tl_rc_8x_text@common_buttons.light_text_button": {
+  "tl_rc_8x_text@common_buttons.tbase": {
     "$hover_anim_enabled": true,
     "$default_button_texture": "textures/XeroxClient/rounded_corner/t_left8x",
     "$hover_button_texture": "textures/XeroxClient/rounded_corner/t_left8x",
@@ -105,7 +113,7 @@
     "$locked_button_texture": "textures/XeroxClient/rounded_corner/t_left8x"
   },
 
-  "tr_rc_8x_text@common_buttons.light_text_button": {
+  "tr_rc_8x_text@common_buttons.tbase": {
     "$hover_anim_enabled": true,
     "$default_button_texture": "textures/XeroxClient/rounded_corner/t_right8x",
     "$hover_button_texture": "textures/XeroxClient/rounded_corner/t_right8x",
@@ -113,7 +121,7 @@
     "$locked_button_texture": "textures/XeroxClient/rounded_corner/t_right8x"
   },
 
-  "bl_rc_8x_text@common_buttons.light_text_button": {
+  "bl_rc_8x_text@common_buttons.tbase": {
     "$hover_anim_enabled": true,
     "$default_button_texture": "textures/XeroxClient/rounded_corner/b_left8x",
     "$hover_button_texture": "textures/XeroxClient/rounded_corner/b_left8x",
@@ -121,7 +129,7 @@
     "$locked_button_texture": "textures/XeroxClient/rounded_corner/b_left8x"
   },
 
-  "br_rc_8x_text@common_buttons.light_text_button": {
+  "br_rc_8x_text@common_buttons.tbase": {
     "$hover_anim_enabled": true,
     "$default_button_texture": "textures/XeroxClient/rounded_corner/b_right8x",
     "$hover_button_texture": "textures/XeroxClient/rounded_corner/b_right8x",
@@ -129,7 +137,7 @@
     "$locked_button_texture": "textures/XeroxClient/rounded_corner/b_right8x"
   },
 
-  "ta_rc_16x_text@common_buttons.light_text_button": {
+  "ta_rc_16x_text@common_buttons.tbase": {
     "$hover_anim_enabled": true,
     "$default_button_texture": "textures/XeroxClient/rounded_corner/top16x",
     "$hover_button_texture": "textures/XeroxClient/rounded_corner/top16x",
@@ -137,7 +145,7 @@
     "$locked_button_texture": "textures/XeroxClient/rounded_corner/top16x"
   },
 
-  "ba_rc_16x_text@common_buttons.light_text_button": {
+  "ba_rc_16x_text@common_buttons.tbase": {
     "$hover_anim_enabled": true,
     "$default_button_texture": "textures/XeroxClient/rounded_corner/bottom16x",
     "$hover_button_texture": "textures/XeroxClient/rounded_corner/bottom16x",
@@ -145,7 +153,7 @@
     "$locked_button_texture": "textures/XeroxClient/rounded_corner/bottom16x"
   },
 
-  "la_rc_16x_text@common_buttons.light_text_button": {
+  "la_rc_16x_text@common_buttons.tbase": {
     "$hover_anim_enabled": true,
     "$default_button_texture": "textures/XeroxClient/rounded_corner/left16x",
     "$hover_button_texture": "textures/XeroxClient/rounded_corner/left16x",
@@ -153,7 +161,7 @@
     "$locked_button_texture": "textures/XeroxClient/rounded_corner/left16x"
   },
 
-  "ra_rc_16x_text@common_buttons.light_text_button": {
+  "ra_rc_16x_text@common_buttons.tbase": {
     "$hover_anim_enabled": true,
     "$default_button_texture": "textures/XeroxClient/rounded_corner/right16x",
     "$hover_button_texture": "textures/XeroxClient/rounded_corner/right16x",
@@ -161,7 +169,7 @@
     "$locked_button_texture": "textures/XeroxClient/rounded_corner/right16x"
   },
 
-  "ta_rc_8x_text@common_buttons.light_text_button": {
+  "ta_rc_8x_text@common_buttons.tbase": {
     "$hover_anim_enabled": true,
     "$default_button_texture": "textures/XeroxClient/rounded_corner/top8x",
     "$hover_button_texture": "textures/XeroxClient/rounded_corner/top8x",
@@ -169,7 +177,7 @@
     "$locked_button_texture": "textures/XeroxClient/rounded_corner/top8x"
   },
 
-  "ba_rc_8x_text@common_buttons.light_text_button": {
+  "ba_rc_8x_text@common_buttons.tbase": {
     "$hover_anim_enabled": true,
     "$default_button_texture": "textures/XeroxClient/rounded_corner/bottom8x",
     "$hover_button_texture": "textures/XeroxClient/rounded_corner/bottom8x",
@@ -177,7 +185,7 @@
     "$locked_button_texture": "textures/XeroxClient/rounded_corner/bottom8x"
   },
 
-  "la_rc_8x_text@common_buttons.light_text_button": {
+  "la_rc_8x_text@common_buttons.tbase": {
     "$hover_anim_enabled": true,
     "$default_button_texture": "textures/XeroxClient/rounded_corner/left8x",
     "$hover_button_texture": "textures/XeroxClient/rounded_corner/left8x",
@@ -185,7 +193,7 @@
     "$locked_button_texture": "textures/XeroxClient/rounded_corner/left8x"
   },
 
-  "ra_rc_8x_text@common_buttons.light_text_button": {
+  "ra_rc_8x_text@common_buttons.tbase": {
     "$hover_anim_enabled": true,
     "$default_button_texture": "textures/XeroxClient/rounded_corner/right8x",
     "$hover_button_texture": "textures/XeroxClient/rounded_corner/right8x",
@@ -195,7 +203,7 @@
 
   ////*/ Content Button /*////
 
-  "a_rc_16x_content@common_buttons.light_content_button": {
+  "a_rc_16x_content@common_buttons.cbase": {
     "$hover_anim_enabled": true,
     "$default_button_texture": "textures/XeroxClient/rounded_corner/all16x",
     "$hover_button_texture": "textures/XeroxClient/rounded_corner/all16x",
@@ -203,7 +211,7 @@
     "$locked_button_texture": "textures/XeroxClient/rounded_corner/all16x"
   },
 
-  "a_rc_8x_content@common_buttons.light_content_button": {
+  "a_rc_8x_content@common_buttons.cbase": {
     "$hover_anim_enabled": true,
     "$default_button_texture": "textures/XeroxClient/rounded_corner/all8x",
     "$hover_button_texture": "textures/XeroxClient/rounded_corner/all8x",
@@ -211,7 +219,7 @@
     "$locked_button_texture": "textures/XeroxClient/rounded_corner/all8x"
   },
 
-  "tl_rc_16x_content@common_buttons.light_content_button": {
+  "tl_rc_16x_content@common_buttons.cbase": {
     "$hover_anim_enabled": true,
     "$default_button_texture": "textures/XeroxClient/rounded_corner/t_left16x",
     "$hover_button_texture": "textures/XeroxClient/rounded_corner/t_left16x",
@@ -219,7 +227,7 @@
     "$locked_button_texture": "textures/XeroxClient/rounded_corner/t_left16x"
   },
 
-  "tr_rc_16x_content@common_buttons.light_content_button": {
+  "tr_rc_16x_content@common_buttons.cbase": {
     "$hover_anim_enabled": true,
     "$default_button_texture": "textures/XeroxClient/rounded_corner/t_right16x",
     "$hover_button_texture": "textures/XeroxClient/rounded_corner/t_right16x",
@@ -227,7 +235,7 @@
     "$locked_button_texture": "textures/XeroxClient/rounded_corner/t_right16x"
   },
 
-  "bl_rc_16x_content@common_buttons.light_content_button": {
+  "bl_rc_16x_content@common_buttons.cbase": {
     "$hover_anim_enabled": true,
     "$default_button_texture": "textures/XeroxClient/rounded_corner/b_left16x",
     "$hover_button_texture": "textures/XeroxClient/rounded_corner/b_left16x",
@@ -235,7 +243,7 @@
     "$locked_button_texture": "textures/XeroxClient/rounded_corner/b_left16x"
   },
 
-  "br_rc_16x_content@common_buttons.light_content_button": {
+  "br_rc_16x_content@common_buttons.cbase": {
     "$hover_anim_enabled": true,
     "$default_button_texture": "textures/XeroxClient/rounded_corner/b_right16x",
     "$hover_button_texture": "textures/XeroxClient/rounded_corner/b_right16x",
@@ -243,7 +251,7 @@
     "$locked_button_texture": "textures/XeroxClient/rounded_corner/b_right16x"
   },
 
-  "tl_rc_8x_content@common_buttons.light_content_button": {
+  "tl_rc_8x_content@common_buttons.cbase": {
     "$hover_anim_enabled": true,
     "$default_button_texture": "textures/XeroxClient/rounded_corner/t_left8x",
     "$hover_button_texture": "textures/XeroxClient/rounded_corner/t_left8x",
@@ -251,7 +259,7 @@
     "$locked_button_texture": "textures/XeroxClient/rounded_corner/t_left8x"
   },
 
-  "tr_rc_8x_content@common_buttons.light_content_button": {
+  "tr_rc_8x_content@common_buttons.cbase": {
     "$hover_anim_enabled": true,
     "$default_button_texture": "textures/XeroxClient/rounded_corner/t_right8x",
     "$hover_button_texture": "textures/XeroxClient/rounded_corner/t_right8x",
@@ -259,7 +267,7 @@
     "$locked_button_texture": "textures/XeroxClient/rounded_corner/t_right8x"
   },
 
-  "bl_rc_8x_content@common_buttons.light_content_button": {
+  "bl_rc_8x_content@common_buttons.cbase": {
     "$hover_anim_enabled": true,
     "$default_button_texture": "textures/XeroxClient/rounded_corner/b_left8x",
     "$hover_button_texture": "textures/XeroxClient/rounded_corner/b_left8x",
@@ -267,7 +275,7 @@
     "$locked_button_texture": "textures/XeroxClient/rounded_corner/b_left8x"
   },
 
-  "br_rc_8x_content@common_buttons.light_content_button": {
+  "br_rc_8x_content@common_buttons.cbase": {
     "$hover_anim_enabled": true,
     "$default_button_texture": "textures/XeroxClient/rounded_corner/b_right8x",
     "$hover_button_texture": "textures/XeroxClient/rounded_corner/b_right8x",
@@ -275,7 +283,7 @@
     "$locked_button_texture": "textures/XeroxClient/rounded_corner/b_right8x"
   },
 
-  "ta_rc_16x_content@common_buttons.light_content_button": {
+  "ta_rc_16x_content@common_buttons.cbase": {
     "$hover_anim_enabled": true,
     "$default_button_texture": "textures/XeroxClient/rounded_corner/top16x",
     "$hover_button_texture": "textures/XeroxClient/rounded_corner/top16x",
@@ -283,7 +291,7 @@
     "$locked_button_texture": "textures/XeroxClient/rounded_corner/top16x"
   },
 
-  "ba_rc_16x_content@common_buttons.light_content_button": {
+  "ba_rc_16x_content@common_buttons.cbase": {
     "$hover_anim_enabled": true,
     "$default_button_texture": "textures/XeroxClient/rounded_corner/bottom16x",
     "$hover_button_texture": "textures/XeroxClient/rounded_corner/bottom16x",
@@ -291,7 +299,7 @@
     "$locked_button_texture": "textures/XeroxClient/rounded_corner/bottom16x"
   },
 
-  "la_rc_16x_content@common_buttons.light_content_button": {
+  "la_rc_16x_content@common_buttons.cbase": {
     "$hover_anim_enabled": true,
     "$default_button_texture": "textures/XeroxClient/rounded_corner/left16x",
     "$hover_button_texture": "textures/XeroxClient/rounded_corner/left16x",
@@ -299,7 +307,7 @@
     "$locked_button_texture": "textures/XeroxClient/rounded_corner/left16x"
   },
 
-  "ra_rc_16x_content@common_buttons.light_content_button": {
+  "ra_rc_16x_content@common_buttons.cbase": {
     "$hover_anim_enabled": true,
     "$default_button_texture": "textures/XeroxClient/rounded_corner/right16x",
     "$hover_button_texture": "textures/XeroxClient/rounded_corner/right16x",
@@ -307,7 +315,7 @@
     "$locked_button_texture": "textures/XeroxClient/rounded_corner/right16x"
   },
 
-  "ta_rc_8x_content@common_buttons.light_content_button": {
+  "ta_rc_8x_content@common_buttons.cbase": {
     "$hover_anim_enabled": true,
     "$default_button_texture": "textures/XeroxClient/rounded_corner/top8x",
     "$hover_button_texture": "textures/XeroxClient/rounded_corner/top8x",
@@ -315,7 +323,7 @@
     "$locked_button_texture": "textures/XeroxClient/rounded_corner/top8x"
   },
 
-  "ba_rc_8x_content@common_buttons.light_content_button": {
+  "ba_rc_8x_content@common_buttons.cbase": {
     "$hover_anim_enabled": true,
     "$default_button_texture": "textures/XeroxClient/rounded_corner/bottom8x",
     "$hover_button_texture": "textures/XeroxClient/rounded_corner/bottom8x",
@@ -323,7 +331,7 @@
     "$locked_button_texture": "textures/XeroxClient/rounded_corner/bottom8x"
   },
 
-  "la_rc_8x_content@common_buttons.light_content_button": {
+  "la_rc_8x_content@common_buttons.cbase": {
     "$hover_anim_enabled": true,
     "$default_button_texture": "textures/XeroxClient/rounded_corner/left8x",
     "$hover_button_texture": "textures/XeroxClient/rounded_corner/left8x",
@@ -331,7 +339,7 @@
     "$locked_button_texture": "textures/XeroxClient/rounded_corner/left8x"
   },
 
-  "ra_rc_8x_content@common_buttons.light_content_button": {
+  "ra_rc_8x_content@common_buttons.cbase": {
     "$hover_anim_enabled": true,
     "$default_button_texture": "textures/XeroxClient/rounded_corner/right8x",
     "$hover_button_texture": "textures/XeroxClient/rounded_corner/right8x",

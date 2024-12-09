@@ -7,9 +7,13 @@
 {
   "namespace": "common_tabs",
 
+  "base@common_tabs.base_tab": {
+    "$xeroxclient_ui_control": true
+  },
+
   ////*/ Tab /*////
 
-  "a_rc_16x@common_tabs.base_tab": {
+  "a_rc_16x@common_tabs.base": {
     "$unchecked_default_image": "textures/XeroxClient/rounded_corner/all16x",
     "$unchecked_hover_image": "textures/XeroxClient/rounded_corner/all16x",
     "$unchecked_locked_image": "textures/XeroxClient/rounded_corner/all16x",
@@ -20,7 +24,7 @@
     "$checked_locked_hover_image": "textures/XeroxClient/rounded_corner/all16x"
   },
 
-  "a_rc_8x@common_tabs.base_tab": {
+  "a_rc_8x@common_tabs.base": {
     "$unchecked_default_image": "textures/XeroxClient/rounded_corner/all8x",
     "$unchecked_hover_image": "textures/XeroxClient/rounded_corner/all8x",
     "$unchecked_locked_image": "textures/XeroxClient/rounded_corner/all8x",
@@ -31,7 +35,7 @@
     "$checked_locked_hover_image": "textures/XeroxClient/rounded_corner/all8x"
   },
 
-  "tl_rc_16x@common_tabs.base_tab": {
+  "tl_rc_16x@common_tabs.base": {
     "$unchecked_default_image": "textures/XeroxClient/rounded_corner/t_left16x",
     "$unchecked_hover_image": "textures/XeroxClient/rounded_corner/t_left16x",
     "$unchecked_locked_image": "textures/XeroxClient/rounded_corner/t_left16x",
@@ -42,7 +46,7 @@
     "$checked_locked_hover_image": "textures/XeroxClient/rounded_corner/t_left16x"
   },
 
-  "tr_rc_16x@common_tabs.base_tab": {
+  "tr_rc_16x@common_tabs.base": {
     "$unchecked_default_image": "textures/XeroxClient/rounded_corner/t_right16x",
     "$unchecked_hover_image": "textures/XeroxClient/rounded_corner/t_right16x",
     "$unchecked_locked_image": "textures/XeroxClient/rounded_corner/t_right16x",
@@ -53,7 +57,7 @@
     "$checked_locked_hover_image": "textures/XeroxClient/rounded_corner/t_right16x"
   },
 
-  "bl_rc_16x@common_tabs.base_tab": {
+  "bl_rc_16x@common_tabs.base": {
     "$unchecked_default_image": "textures/XeroxClient/rounded_corner/b_left16x",
     "$unchecked_hover_image": "textures/XeroxClient/rounded_corner/b_left16x",
     "$unchecked_locked_image": "textures/XeroxClient/rounded_corner/b_left16x",
@@ -64,7 +68,7 @@
     "$checked_locked_hover_image": "textures/XeroxClient/rounded_corner/b_left16x"
   },
 
-  "br_rc_16x@common_tabs.base_tab": {
+  "br_rc_16x@common_tabs.base": {
     "$unchecked_default_image": "textures/XeroxClient/rounded_corner/b_right16x",
     "$unchecked_hover_image": "textures/XeroxClient/rounded_corner/b_right16x",
     "$unchecked_locked_image": "textures/XeroxClient/rounded_corner/b_right16x",
@@ -75,7 +79,7 @@
     "$checked_locked_hover_image": "textures/XeroxClient/rounded_corner/b_right16x"
   },
 
-  "tl_rc_8x@common_tabs.base_tab": {
+  "tl_rc_8x@common_tabs.base": {
     "$unchecked_default_image": "textures/XeroxClient/rounded_corner/t_left8x",
     "$unchecked_hover_image": "textures/XeroxClient/rounded_corner/t_left8x",
     "$unchecked_locked_image": "textures/XeroxClient/rounded_corner/t_left8x",
@@ -86,7 +90,7 @@
     "$checked_locked_hover_image": "textures/XeroxClient/rounded_corner/t_left8x"
   },
 
-  "tr_rc_8x@common_tabs.base_tab": {
+  "tr_rc_8x@common_tabs.base": {
     "$unchecked_default_image": "textures/XeroxClient/rounded_corner/t_right8x",
     "$unchecked_hover_image": "textures/XeroxClient/rounded_corner/t_right8x",
     "$unchecked_locked_image": "textures/XeroxClient/rounded_corner/t_right8x",
@@ -97,7 +101,7 @@
     "$checked_locked_hover_image": "textures/XeroxClient/rounded_corner/t_right8x"
   },
 
-  "bl_rc_8x@common_tabs.base_tab": {
+  "bl_rc_8x@common_tabs.base": {
     "$unchecked_default_image": "textures/XeroxClient/rounded_corner/b_left8x",
     "$unchecked_hover_image": "textures/XeroxClient/rounded_corner/b_left8x",
     "$unchecked_locked_image": "textures/XeroxClient/rounded_corner/b_left8x",
@@ -108,7 +112,7 @@
     "$checked_locked_hover_image": "textures/XeroxClient/rounded_corner/b_left8x"
   },
 
-  "br_rc_8x@common_tabs.base_tab": {
+  "br_rc_8x@common_tabs.base": {
     "$unchecked_default_image": "textures/XeroxClient/rounded_corner/b_right8x",
     "$unchecked_hover_image": "textures/XeroxClient/rounded_corner/b_right8x",
     "$unchecked_locked_image": "textures/XeroxClient/rounded_corner/b_right8x",
@@ -119,7 +123,7 @@
     "$checked_locked_hover_image": "textures/XeroxClient/rounded_corner/b_right8x"
   },
 
-  "ta_rc_16x@common_tabs.base_tab": {
+  "ta_rc_16x@common_tabs.base": {
     "$unchecked_default_image": "textures/XeroxClient/rounded_corner/top16x",
     "$unchecked_hover_image": "textures/XeroxClient/rounded_corner/top16x",
     "$unchecked_locked_image": "textures/XeroxClient/rounded_corner/top16x",
@@ -130,7 +134,7 @@
     "$checked_locked_hover_image": "textures/XeroxClient/rounded_corner/top16x"
   },
 
-  "ba_rc_16x@common_tabs.base_tab": {
+  "ba_rc_16x@common_tabs.base": {
     "$unchecked_default_image": "textures/XeroxClient/rounded_corner/bottom16x",
     "$unchecked_hover_image": "textures/XeroxClient/rounded_corner/bottom16x",
     "$unchecked_locked_image": "textures/XeroxClient/rounded_corner/bottom16x",
@@ -141,7 +145,7 @@
     "$checked_locked_hover_image": "textures/XeroxClient/rounded_corner/bottom16x"
   },
 
-  "la_rc_16x@common_tabs.base_tab": {
+  "la_rc_16x@common_tabs.base": {
     "$unchecked_default_image": "textures/XeroxClient/rounded_corner/left16x",
     "$unchecked_hover_image": "textures/XeroxClient/rounded_corner/left16x",
     "$unchecked_locked_image": "textures/XeroxClient/rounded_corner/left16x",
@@ -152,7 +156,7 @@
     "$checked_locked_hover_image": "textures/XeroxClient/rounded_corner/left16x"
   },
 
-  "ra_rc_16x@common_tabs.base_tab": {
+  "ra_rc_16x@common_tabs.base": {
     "$unchecked_default_image": "textures/XeroxClient/rounded_corner/right16x",
     "$unchecked_hover_image": "textures/XeroxClient/rounded_corner/right16x",
     "$unchecked_locked_image": "textures/XeroxClient/rounded_corner/right16x",
@@ -163,7 +167,7 @@
     "$checked_locked_hover_image": "textures/XeroxClient/rounded_corner/right16x"
   },
 
-  "ta_rc_8x@common_tabs.base_tab": {
+  "ta_rc_8x@common_tabs.base": {
     "$unchecked_default_image": "textures/XeroxClient/rounded_corner/top8x",
     "$unchecked_hover_image": "textures/XeroxClient/rounded_corner/top8x",
     "$unchecked_locked_image": "textures/XeroxClient/rounded_corner/top8x",
@@ -174,7 +178,7 @@
     "$checked_locked_hover_image": "textures/XeroxClient/rounded_corner/top8x"
   },
 
-  "ba_rc_8x@common_tabs.base_tab": {
+  "ba_rc_8x@common_tabs.base": {
     "$unchecked_default_image": "textures/XeroxClient/rounded_corner/bottom8x",
     "$unchecked_hover_image": "textures/XeroxClient/rounded_corner/bottom8x",
     "$unchecked_locked_image": "textures/XeroxClient/rounded_corner/bottom8x",
@@ -185,7 +189,7 @@
     "$checked_locked_hover_image": "textures/XeroxClient/rounded_corner/bottom8x"
   },
 
-  "la_rc_8x@common_tabs.base_tab": {
+  "la_rc_8x@common_tabs.base": {
     "$unchecked_default_image": "textures/XeroxClient/rounded_corner/left8x",
     "$unchecked_hover_image": "textures/XeroxClient/rounded_corner/left8x",
     "$unchecked_locked_image": "textures/XeroxClient/rounded_corner/left8x",
@@ -196,7 +200,7 @@
     "$checked_locked_hover_image": "textures/XeroxClient/rounded_corner/left8x"
   },
 
-  "ra_rc_8x@common_tabs.base_tab": {
+  "ra_rc_8x@common_tabs.base": {
     "$unchecked_default_image": "textures/XeroxClient/rounded_corner/right8x",
     "$unchecked_hover_image": "textures/XeroxClient/rounded_corner/right8x",
     "$unchecked_locked_image": "textures/XeroxClient/rounded_corner/right8x",
