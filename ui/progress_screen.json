@@ -16,6 +16,14 @@
     "ignored": true
   },
 
+  "world_modal_progress_panel/base_content/progress_title_text": {
+    "color": [1.0, 1.0, 1.0]
+  },
+
+  "world_modal_progress_panel/base_content/progress_bar_text": {
+    "color": [1.0, 1.0, 1.0]
+  },
+
   "world_modal_progress_panel/inside_content/loading_bar_panel/progress_loading_bars": {
     "bindings": [
       {
@@ -47,6 +55,7 @@
   },
 
   "progress_screen_text": {
+    "color": [1.0, 1.0, 1.0],
     "font_type": "$global_font_type",
     "backup_font_type": "$global_font_type_backup",
     "text_alignment": "center" /*,
@@ -75,12 +84,12 @@
   },
 
   "progress_title_text": {
-    "$visible_expression": "(not (#title_text = ''))"
+    "color": [1.0, 1.0, 1.0]
     //"font_type": "Roboto-Bold"
   },
 
   "progress_bar_text": {
-    "$visible_expression": "(not (#progress_text = ''))"
+    "color": [1.0, 1.0, 1.0]
     //"font_type": "Roboto-Regular"
   },
 
