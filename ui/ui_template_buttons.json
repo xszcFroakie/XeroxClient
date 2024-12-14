@@ -7,22 +7,6 @@
 {
   "namespace": "common_buttons",
 
-  "borderless_form_fitting_button_panel/$button_image": {
-    "$xeroxclient_ui_control|default": false,
-
-    "alpha": "$alpha",
-    "color": "$color",
-    "$alpha": 1,
-    "$color": [],
-    "$xeroxclient_button_alpha|default": "",
-    "$xeroxclient_button_color|default": [],
-    "variables": {
-      "requires": "$xeroxclient_ui_control",
-      "$alpha": "$xeroxclient_button_alpha",
-      "$color": "$xeroxclient_button_color"
-    }
-  },
-
   "button_image": {
     "type": "image",
     "layer": 1,
@@ -110,7 +94,7 @@
     "alpha": "$alpha",
     "color": "$color",
     "$alpha": 1,
-    "$color": [],
+    "$color": "$button_image_color",
     "$xeroxclient_button_alpha|default": 0.45,
     "$xeroxclient_button_color|default": [],
     "variables": {
@@ -126,87 +110,6 @@
   },
 
   "new_ui_button_panel/border": {
-    "$xeroxclient_ui_control|default": false,
-
-    "alpha": "$alpha",
-    "$alpha": 1,
-    "variables": {
-      "requires": "$xeroxclient_ui_control",
-      "$alpha": 0
-    }
-  },
-
-  "new_ui_form_fitting_button_panel/border/$button_image": {
-    "$xeroxclient_ui_control|default": false,
-
-    "alpha": "$alpha",
-    "color": "$color",
-    "$alpha": 1,
-    "$color": [],
-    "variables": {
-      "requires": "$xeroxclient_ui_control",
-      "$alpha": "$xeroxclient_button_alpha",
-      "$color": "$xeroxclient_button_color"
-    },
-    "$xeroxclient_button_alpha|default": 0.45,
-    "$xeroxclient_button_color|default": []
-  },
-
-  "new_ui_form_fitting_button_panel/border": {
-    "$xeroxclient_ui_control|default": false,
-
-    "alpha": "$alpha",
-    "$alpha": 1,
-    "variables": {
-      "requires": "$xeroxclient_ui_control",
-      "$alpha": 0
-    }
-  },
-
-  "new_ui_width_fitting_button_panel/border/$button_image": {
-    "$xeroxclient_ui_control|default": false,
-
-    "alpha": "$alpha",
-    "color": "$color",
-    "$alpha": 1,
-    "$color": [],
-    "variables": {
-      "requires": "$xeroxclient_ui_control",
-      "$alpha": "$xeroxclient_button_alpha",
-      "$color": "$xeroxclient_button_color"
-    },
-    "$xeroxclient_button_alpha|default": 0.45,
-    "$xeroxclient_button_color|default": []
-  },
-
-  "new_ui_width_fitting_button_panel/border": {
-    "$xeroxclient_ui_control|default": false,
-
-    "alpha": "$alpha",
-    "$alpha": 1,
-    "variables": {
-      "requires": "$xeroxclient_ui_control",
-      "$alpha": 0
-    }
-  },
-
-  "new_ui_height_fitting_button_panel/border/$button_image": {
-    "$xeroxclient_ui_control|default": false,
-
-    "alpha": "$alpha",
-    "color": "$color",
-    "$alpha": 1,
-    "$color": [],
-    "variables": {
-      "requires": "$xeroxclient_ui_control",
-      "$alpha": "$xeroxclient_button_alpha",
-      "$color": "$xeroxclient_button_color"
-    },
-    "$xeroxclient_button_alpha|default": 0.45,
-    "$xeroxclient_button_color|default": []
-  },
-
-  "new_ui_height_fitting_button_panel/border": {
     "$xeroxclient_ui_control|default": false,
 
     "alpha": "$alpha",
@@ -275,45 +178,6 @@
     ]
   },
 
-  "dark_text_button/default": {
-    "$new_ui_button_alpha": "$xeroxclient_button_alpha_default",
-    "$xeroxclient_button_color": "$xeroxclient_button_color_default",
-    "$button_offset": "$xeroxclient_button_content_offset_default",
-    "$xeroxclient_button_text_color": "$xeroxclient_button_text_color_default",
-    "$xeroxclient_button_hover_anims": [
-      "@common_buttons.default_alpha",
-      "@common_buttons.default_color"
-    ],
-    "$ignored_default_anims|default": true
-  },
-
-  "dark_text_button/hover": {
-    "$xeroxclient_button_alpha": "$xeroxclient_button_alpha_hover",
-    "$xeroxclient_button_color": "$xeroxclient_button_color_hover",
-    "$button_offset": "$xeroxclient_button_content_offset_hover",
-    "$xeroxclient_button_text_color": "$xeroxclient_button_text_color_hover",
-    "$xeroxclient_button_hover_anims": [
-      "@common_buttons.hover_alpha",
-      "@common_buttons.hover_color"
-    ],
-    "$ignored_hover_anims|default": true
-  },
-
-  "dark_text_button/pressed": {
-    "$xeroxclient_button_alpha": "$xeroxclient_button_alpha_pressed",
-    "$xeroxclient_button_color": "$xeroxclient_button_color_pressed",
-    "$button_offset": "$xeroxclient_button_content_offset_pressed",
-    "$xeroxclient_button_text_color": "$xeroxclient_button_text_color_pressed"
-  },
-
-  "dark_text_button/locked": {
-    "$xeroxclient_button_alpha": "$xeroxclient_button_alpha_locked",
-    "$xeroxclient_button_color": "$xeroxclient_button_color_locked",
-    "$xeroxclient_button_text_color": "$xeroxclient_button_text_color_locked"
-  },
-
-  "dark_text_button": {},
-
   "new_ui_binding_button_label": {
     "$xeroxclient_ui_control|default": false,
 
@@ -327,13 +191,6 @@
     },
     "font_type": "$font_type",
     "backup_font_type": "$global_font_type_backup"
-  },
-
-  "transparent_content_button": {
-    "$xeroxclient_button_alpha_default": 0,
-    "$xeroxclient_button_alpha_hover": 0,
-    "$xeroxclient_button_alpha_pressed": 0,
-    "$xeroxclient_button_alpha_locked": 0
   },
 
   "light_content_button/default": {
@@ -385,152 +242,5 @@
         ]
       }
     ]
-  },
-
-  "dark_content_button/default": {
-    "$xeroxclient_button_alpha": "$xeroxclient_button_alpha_default",
-    "$xeroxclient_button_color": "$xeroxclient_button_color_default",
-    "$xeroxclient_button_hover_anims": [
-      "@common_buttons.default_alpha",
-      "@common_buttons.default_color"
-    ],
-    "$ignored_default_anims|default": true
-  },
-
-  "dark_content_button/hover": {
-    "$xeroxclient_button_alpha": "$xeroxclient_button_alpha_hover",
-    "$xeroxclient_button_color": "$xeroxclient_button_color_hover",
-    "$xeroxclient_button_hover_anims": [
-      "@common_buttons.hover_alpha",
-      "@common_buttons.hover_color"
-    ],
-    "$ignored_hover_anims|default": true
-  },
-
-  "dark_content_button/pressed": {
-    "$xeroxclient_button_alpha": "$xeroxclient_button_alpha_pressed",
-    "$xeroxclient_button_color": "$xeroxclient_button_color_pressed"
-  },
-
-  "dark_content_button/locked": {
-    "$xeroxclient_button_alpha": "$xeroxclient_button_alpha_locked",
-    "$xeroxclient_button_color": "$xeroxclient_button_color_locked"
-  },
-
-  "dark_content_button": {},
-
-  "light_text_form_fitting_button": {
-    "$xeroxclient_button_content_offset_default": [3, 3],
-    "$xeroxclient_button_content_offset_hover": [3, 3],
-    "$xeroxclient_button_content_offset_pressed": [3, 3]
-  },
-
-  "dark_text_form_fitting_button": {
-    "$xeroxclient_button_content_offset_default": [3, 3],
-    "$xeroxclient_button_content_offset_hover": [3, 3],
-    "$xeroxclient_button_content_offset_pressed": [3, 3]
-  },
-
-  "no_background_content_button": {
-    "$xeroxclient_button_alpha_default|default": 0,
-    "$xeroxclient_button_alpha_hover|default": 0.25,
-    "$xeroxclient_button_alpha_pressed|default": 0.25,
-    "$xeroxclient_button_alpha_locked|default": 0.45,
-
-    "$xeroxclient_button_color_default|default": [],
-    "$xeroxclient_button_color_hover|default": [0.7, 0.7, 0.7],
-    "$xeroxclient_button_color_pressed|default": [0.7, 0.7, 0.7],
-    "$xeroxclient_button_color_locked|default": "$xeroxclient_ui_theme_button_locked_color",
-
-    "$xeroxclient_button_text_color_locked": "$xeroxclient_ui_theme_button_text_locked_color"
-  },
-
-  "no_background_content_button/default": {
-    "$xeroxclient_button_alpha": "$xeroxclient_button_alpha_default",
-    "$xeroxclient_button_color": "$xeroxclient_button_color_default",
-    "$default_state": true
-  },
-
-  "no_background_content_button/hover": {
-    "$xeroxclient_button_alpha": "$xeroxclient_button_alpha_hover",
-    "$xeroxclient_button_color": "$xeroxclient_button_color_hover",
-    "$hover_state": true
-  },
-
-  "no_background_content_button/pressed": {
-    "$xeroxclient_button_alpha": "$xeroxclient_button_alpha_pressed",
-    "$xeroxclient_button_color": "$xeroxclient_button_color_pressed",
-    "$pressed_state": true
-  },
-
-  "no_background_content_button/locked": {
-    "$xeroxclient_button_alpha": "$xeroxclient_button_alpha_locked",
-    "$xeroxclient_button_color": "$xeroxclient_button_color_locked",
-    "$locked_state": true,
-    "$xeroxclient_button_text_color": "$xeroxclient_button_text_color_locked"
-  },
-
-  "light_glyph_button/default": {
-    "$xeroxclient_button_alpha": "$xeroxclient_button_alpha_default",
-    "$xeroxclient_button_color": "$xeroxclient_button_color_default",
-    "$xeroxclient_button_hover_anims": [
-      "@common_buttons.default_alpha",
-      "@common_buttons.default_color"
-    ],
-    "$ignored_default_anims|default": true
-  },
-
-  "light_glyph_button/hover": {
-    "$xeroxclient_button_alpha": "$xeroxclient_button_alpha_hover",
-    "$xeroxclient_button_color": "$xeroxclient_button_color_hover",
-    "$xeroxclient_button_hover_anims": [
-      "@common_buttons.hover_alpha",
-      "@common_buttons.hover_color"
-    ],
-    "$ignored_hover_anims|default": true
-  },
-
-  "light_glyph_button/pressed": {
-    "$xeroxclient_button_alpha": "$xeroxclient_button_alpha_pressed",
-    "$xeroxclient_button_color": "$xeroxclient_button_color_pressed"
-  },
-
-  "light_glyph_button/locked": {
-    "$xeroxclient_button_alpha": "$xeroxclient_button_alpha_locked",
-    "$xeroxclient_button_color": "$xeroxclient_button_color_locked"
-  },
-
-  "light_glyph_button": {},
-
-  "dark_glyph_button/default": {
-    "$xeroxclient_button_alpha": "$xeroxclient_button_alpha_default",
-    "$xeroxclient_button_color": "$xeroxclient_button_color_default",
-    "$xeroxclient_button_hover_anims": [
-      "@common_buttons.default_alpha",
-      "@common_buttons.default_color"
-    ],
-    "$ignored_default_anims|default": true
-  },
-
-  "dark_glyph_button/hover": {
-    "$xeroxclient_button_alpha": "$xeroxclient_button_alpha_hover",
-    "$xeroxclient_button_color": "$xeroxclient_button_color_hover",
-    "$xeroxclient_button_hover_anims": [
-      "@common_buttons.hover_alpha",
-      "@common_buttons.hover_color"
-    ],
-    "$ignored_hover_anims|default": true
-  },
-
-  "dark_glyph_button/pressed": {
-    "$xeroxclient_button_alpha": "$xeroxclient_button_alpha_pressed",
-    "$xeroxclient_button_color": "$xeroxclient_button_color_pressed"
-  },
-
-  "dark_glyph_button/locked": {
-    "$xeroxclient_button_alpha": "$xeroxclient_button_alpha_locked",
-    "$xeroxclient_button_color": "$xeroxclient_button_color_locked"
-  },
-
-  "dark_glyph_button": {}
+  }
 }
