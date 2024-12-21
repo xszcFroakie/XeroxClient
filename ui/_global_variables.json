@@ -16,7 +16,7 @@
   "$xeroxclient_ui_theme_screen_transition_dura": 0.15,
 
   "$xeroxclient_ui_theme_menu_background_color": [0.0039215686, 0.0549019608, 0.0549019607],
-  "$xeroxclient_ui_theme_menu_background_alpha": 0.4352941176, // unused
+  "$xeroxclient_ui_theme_menu_background_alpha": 0.4352941176,
 
   "$xeroxclient_ui_theme_button_default_alpha": 0.3,
   "$xeroxclient_ui_theme_button_hover_alpha": 0.55,

@@ -7,6 +7,67 @@
 {
   "namespace": "container:classic_common",
 
+  "slot_default": {
+    "type": "image",
+    "size": ["65%", "100%x"],
+    "texture": "textures/XeroxClient/icon/container_default"
+  },
+
+  "slot_auto_place": {
+    "type": "image",
+    "size": ["65%", "100%x"],
+    "texture": "textures/XeroxClient/icon/container_auto_place"
+  },
+
+  "slot_drop": {
+    "type": "image",
+    "size": ["65%", "100%x"],
+    "texture": "textures/XeroxClient/icon/container_drop"
+  },
+
+  "slot_mode_toggle@common_toggles.a_rc_8x_image": {
+    "size": ["100%", "100%x"],
+    "$toggle_name": "艾斯爱慕",
+    "$radio_toggle_group": true
+  },
+
+  "mode_selection_panel": {
+    "type": "stack_panel",
+    "size": "$default_size",
+    "$default_size": [22, 66],
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@container:classic_animation.size_enter",
+      "@container:classic_animation.size_out"
+    ],
+    "$button_image_size_override": ["100% - 2px", "100%x"],
+    "$button_content_size": ["100%", "100%"],
+    "controls": [
+      {
+        "default@container:classic_common.slot_mode_toggle": {
+          "$button_content": "container:classic_common.slot_default",
+          "$toggle_view_binding_name": "genshinimpact_normal",
+          "$toggle_group_forced_index": 0,
+          "$toggle_default_state": true
+        }
+      },
+      {
+        "auto_place@container:classic_common.slot_mode_toggle": {
+          "$button_content": "container:classic_common.slot_auto_place",
+          "$toggle_view_binding_name": "reserve1999_autoplace",
+          "$toggle_group_forced_index": 1
+        }
+      },
+      {
+        "drop@container:classic_common.slot_mode_toggle": {
+          "$button_content": "container:classic_common.slot_drop",
+          "$toggle_view_binding_name": "honkaistarrail_dropone",
+          "$toggle_group_forced_index": 2
+        }
+      }
+    ]
+  },
+
   "utility_button": {
     "type": "panel",
     "$item_collection_name|default": "none",
@@ -1338,22 +1399,22 @@
             {
               "not_touch_mode@$button_ref": {
                 "layer": 5,
-                //"ignored": "$touch",
+                "ignored": "$touch",
                 "consume_hover_events": false,
                 "tts_ignore_count": true,
                 "tts_skip_message": true,
                 "tts_inherit_siblings": true
               }
-            } /*,
+            },
             {
               "touch_mode": {
-    "type": "panel",
+                "type": "panel",
                 "layer": 5,
                 "ignored": "(not $touch)",
                 "controls": [
                   {
                     "normal": {
-    "type": "panel",
+                      "type": "panel",
                       "visible": false,
                       "bindings": [
                         {
@@ -1377,7 +1438,7 @@
                   },
                   {
                     "auto_place": {
-    "type": "panel",
+                      "type": "panel",
                       "visible": false,
                       "bindings": [
                         {
@@ -1397,12 +1458,12 @@
                             "button_mappings": [
                               {
                                 "from_button_id": "button.menu_select",
-                                "to_button_id": "$auto_place_mode_button_name",
+                                "to_button_id": "button.container_auto_place",
                                 "mapping_type": "pressed"
                               },
                               {
                                 "from_button_id": "button.menu_ok",
-                                "to_button_id": "$auto_place_mode_button_name",
+                                "to_button_id": "button.container_auto_place",
                                 "mapping_type": "pressed"
                               }
                             ]
@@ -1413,7 +1474,7 @@
                   },
                   {
                     "drop_one": {
-    "type": "panel",
+                      "type": "panel",
                       "visible": false,
                       "bindings": [
                         {
@@ -1449,7 +1510,7 @@
                   }
                 ]
               }
-            }*/
+            }
           ]
         }
       },

@@ -601,7 +601,39 @@
     "consume_hover_events": false,
     "controls": [
       { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
-      { "chest_panel@xc_modern_chest_screen.chest_panel": {} },
+      {
+        "center_panel": {
+          "type": "panel",
+          "size": ["100%c", "100%c"],
+          "controls": [
+            { "chest_panel@xc_modern_chest_screen.chest_panel": {} },
+            {
+              "0size_panel": {
+                "type": "panel",
+                "size": [0, 0],
+                "anchor_from": "bottom_right",
+                "anchor_to": "bottom_right",
+                "offset": "$offset",
+                "$offset": [0, "-0.6024096386%"],
+                "$large_chest|default": false,
+                "variables": {
+                  "requires": "$large_chest",
+                  "$offset": [0, "-0.4504504505%"]
+                },
+                "ignored": "(not $touch)",
+                "controls": [
+                  {
+                    "mode_selection@container:classic_common.mode_selection_panel": {
+                      "anchor_from": "bottom_right",
+                      "anchor_to": "bottom_left"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
       {
         "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}
       },

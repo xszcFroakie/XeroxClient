@@ -376,7 +376,33 @@
     "consume_hover_events": false,
     "controls": [
       { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
-      { "inventory_panel@xc_modern_crafting_screen.crafting_panel": {} },
+      {
+        "center_panel": {
+          "type": "panel",
+          "size": ["100%c", "100%c"],
+          "controls": [
+            { "inventory_panel@xc_modern_crafting_screen.crafting_panel": {} },
+            {
+              "0size_panel": {
+                "type": "panel",
+                "size": [0, 0],
+                "anchor_from": "bottom_right",
+                "anchor_to": "bottom_right",
+                "offset": [0, "-0.6024096386%"],
+                "ignored": "(not $touch)",
+                "controls": [
+                  {
+                    "mode_selection@container:classic_common.mode_selection_panel": {
+                      "anchor_from": "bottom_right",
+                      "anchor_to": "bottom_left"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
       { "recipe_book_panel@xc_modern_inventory_screen.recipe_book_panel": {} },
       {
         "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}

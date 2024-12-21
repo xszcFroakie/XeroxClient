@@ -517,7 +517,33 @@
     "consume_hover_events": false,
     "controls": [
       { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
-      { "beacon_panel@xc_modern_beacon_screen.beacon_panel": {} },
+      {
+        "center_panel": {
+          "type": "panel",
+          "size": ["100%c", "100%c"],
+          "controls": [
+            { "beacon_panel@xc_modern_beacon_screen.beacon_panel": {} },
+            {
+              "0size_panel": {
+                "type": "panel",
+                "size": [0, 0],
+                "anchor_from": "bottom_right",
+                "anchor_to": "bottom_right",
+                "offset": [0, "-0.4566210046%"],
+                "ignored": "(not $touch)",
+                "controls": [
+                  {
+                    "mode_selection@container:classic_common.mode_selection_panel": {
+                      "anchor_from": "bottom_right",
+                      "anchor_to": "bottom_left"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
       {
         "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}
       },

@@ -241,7 +241,9 @@
       },
       {
         "trade_toggle@trade2.trade_toggle": {
+          "$xeroxclient_ui_control": true,
           "size": ["100%", "100%"],
+          "$toggle_enabled_binding_type": "none",
           "$toggle_enabled_binding_name": "none",
           "$unchecked_control": "common_toggles.toggle_unchecked",
           "$checked_control": "common_toggles.toggle_checked",
@@ -600,7 +602,33 @@
     "consume_hover_events": false,
     "controls": [
       { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
-      { "trade_panel@xc_modern_trade_screen.trade_panel": {} },
+      {
+        "center_panel": {
+          "type": "panel",
+          "size": ["100%c", "100%c"],
+          "controls": [
+            { "trade_panel@xc_modern_trade_screen.trade_panel": {} },
+            {
+              "0size_panel": {
+                "type": "panel",
+                "size": [0, 0],
+                "anchor_from": "bottom_right",
+                "anchor_to": "bottom_right",
+                "offset": ["0.3623188406%", "-0.6024096386%"],
+                "ignored": "(not $touch)",
+                "controls": [
+                  {
+                    "mode_selection@container:classic_common.mode_selection_panel": {
+                      "anchor_from": "bottom_right",
+                      "anchor_to": "bottom_left"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
       {
         "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}
       },

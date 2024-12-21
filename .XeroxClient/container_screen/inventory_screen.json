@@ -372,7 +372,7 @@
 
   "scroll_grid_panel": {
     "type": "input_panel",
-    "size": ["100%", "100%c+2px"],
+    "size": ["100%", "100%c + 2px"],
     "button_mappings": [
       {
         "from_button_id": "button.menu_select",
@@ -650,21 +650,21 @@
           "controls": [
             {
               "not_touch_mode@$button_ref": {
-                //"ignored": "$touch",
+                "ignored": "$touch",
                 "tts_ignore_count": true,
                 "tts_skip_message": true,
                 "tts_inherit_siblings": true
               }
-            } /*
+            },
             {
               "touch_mode": {
-    "type": "panel",
+                "type": "panel",
                 "layer": 5,
                 "ignored": "(not $touch)",
                 "controls": [
                   {
                     "normal": {
-    "type": "panel",
+                      "type": "panel",
                       "visible": false,
                       "bindings": [
                         {
@@ -687,7 +687,7 @@
                   },
                   {
                     "auto_place": {
-    "type": "panel",
+                      "type": "panel",
                       "visible": false,
                       "bindings": [
                         {
@@ -706,12 +706,12 @@
                             "button_mappings": [
                               {
                                 "from_button_id": "button.menu_select",
-                                "to_button_id": "$auto_place_mode_button_name",
+                                "to_button_id": "button.container_auto_place",
                                 "mapping_type": "pressed"
                               },
                               {
                                 "from_button_id": "button.menu_ok",
-                                "to_button_id": "$auto_place_mode_button_name",
+                                "to_button_id": "button.container_auto_place",
                                 "mapping_type": "pressed"
                               }
                             ]
@@ -722,7 +722,7 @@
                   },
                   {
                     "drop_one": {
-    "type": "panel",
+                      "type": "panel",
                       "visible": false,
                       "bindings": [
                         {
@@ -757,7 +757,7 @@
                   }
                 ]
               }
-            }*/
+            }
           ]
         }
       },
@@ -778,7 +778,7 @@
     "texture": "textures/XeroxClient/rounded_corner/all8x",
     "color": "$xeroxclient_ui_theme_menu_background_color",
     "alpha": 0.3,
-    "layer": 0,
+    "layer": 1,
     "size": ["100%cm", "100%c"],
     "clips_children": true,
     "controls": [
@@ -1285,7 +1285,35 @@
     "consume_hover_events": false,
     "controls": [
       { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
-      { "inventory_panel@xc_modern_inventory_screen.inventory_panel": {} },
+      {
+        "center_panel": {
+          "type": "panel",
+          "size": ["100%c", "100%c"],
+          "controls": [
+            {
+              "inventory_panel@xc_modern_inventory_screen.inventory_panel": {}
+            },
+            {
+              "0size_panel": {
+                "type": "panel",
+                "size": [0, 0],
+                "anchor_from": "bottom_right",
+                "anchor_to": "bottom_right",
+                "offset": [0, "-0.6024096386%"],
+                //"ignored": "(not $touch)",
+                "controls": [
+                  {
+                    "mode_selection@container:classic_common.mode_selection_panel": {
+                      "anchor_from": "bottom_right",
+                      "anchor_to": "bottom_left"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
       { "recipe_book_panel@xc_modern_inventory_screen.recipe_book_panel": {} },
       {
         "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}
