@@ -101,7 +101,7 @@
                       "size": ["111.1111111111%c", "100%x"],
                       "$item_collection_name": "brewing_input_item",
                       "controls": [
-                        { "0@container:classic_common.container_item": {} }
+                        { "0@xc_modern_container:classic_common.container_item": {} }
                       ]
                     }
                   },
@@ -128,7 +128,7 @@
                             "collection_index": 0,
                             "controls": [
                               {
-                                "0@container:classic_common.container_item": {}
+                                "0@xc_modern_container:classic_common.container_item": {}
                               }
                             ]
                           }
@@ -146,7 +146,7 @@
                             "collection_index": 1,
                             "controls": [
                               {
-                                "1@container:classic_common.container_item": {}
+                                "1@xc_modern_container:classic_common.container_item": {}
                               }
                             ]
                           }
@@ -164,7 +164,7 @@
                             "collection_index": 2,
                             "controls": [
                               {
-                                "2@container:classic_common.container_item": {}
+                                "2@xc_modern_container:classic_common.container_item": {}
                               }
                             ]
                           }
@@ -185,7 +185,7 @@
                       "size": ["111.1111111111%c", "100%x"],
                       "$item_collection_name": "brewing_fuel_item",
                       "controls": [
-                        { "0@container:classic_common.container_item": {} }
+                        { "0@xc_modern_container:classic_common.container_item": {} }
                       ]
                     }
                   },
@@ -319,7 +319,7 @@
           "anchor_to": "bottom_middle",
           "controls": [
             {
-              "inv_and_hotbar@container:classic_common.inventory_and_hotbar": {
+              "inv_and_hotbar@xc_modern_container:classic_common.inventory_and_hotbar": {
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
                 "offset": [0, "1.1764705882%"]
@@ -358,7 +358,7 @@
                 "ignored": "(not $touch)",
                 "controls": [
                   {
-                    "mode_selection@container:classic_common.mode_selection_panel": {
+                    "mode_selection@xc_modern_container:classic_common.mode_selection_panel": {
                       "anchor_from": "bottom_right",
                       "anchor_to": "bottom_left"
                     }
@@ -373,7 +373,7 @@
         "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}
       },
       {
-        "inventory_selected_icon_button@container:classic_common.inventory_selected_icon_button": {}
+        "inventory_selected_icon_button@xc_modern_container:classic_common.inventory_selected_icon_button": {}
       },
       { "flying_item_renderer@common.flying_item_renderer": { "layer": 8 } },
       { "gamepad_cursor@common.gamepad_cursor_button": {} }

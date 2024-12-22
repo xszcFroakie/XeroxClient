@@ -144,12 +144,12 @@
                                   "anchor_to": "bottom_middle",
                                   "controls": [
                                     {
-                                      "0@container:classic_common.container_item": {
+                                      "0@xc_modern_container:classic_common.container_item": {
                                         "collection_index": 0
                                       }
                                     },
                                     {
-                                      "1@container:classic_common.container_item": {
+                                      "1@xc_modern_container:classic_common.container_item": {
                                         "collection_index": 1,
                                         "bindings": [
                                           {
@@ -254,27 +254,27 @@
                                   ],
                                   "controls": [
                                     {
-                                      "0@container:classic_common.container_item": {
+                                      "0@xc_modern_container:classic_common.container_item": {
                                         "collection_index": 0
                                       }
                                     },
                                     {
-                                      "3@container:classic_common.container_item": {
+                                      "3@xc_modern_container:classic_common.container_item": {
                                         "collection_index": 3
                                       }
                                     },
                                     {
-                                      "6@container:classic_common.container_item": {
+                                      "6@xc_modern_container:classic_common.container_item": {
                                         "collection_index": 6
                                       }
                                     },
                                     {
-                                      "9@container:classic_common.container_item": {
+                                      "9@xc_modern_container:classic_common.container_item": {
                                         "collection_index": 9
                                       }
                                     },
                                     {
-                                      "12@container:classic_common.container_item": {
+                                      "12@xc_modern_container:classic_common.container_item": {
                                         "collection_index": 12,
                                         "bindings": [
                                           {
@@ -301,27 +301,27 @@
                                   ],
                                   "controls": [
                                     {
-                                      "1@container:classic_common.container_item": {
+                                      "1@xc_modern_container:classic_common.container_item": {
                                         "collection_index": 1
                                       }
                                     },
                                     {
-                                      "4@container:classic_common.container_item": {
+                                      "4@xc_modern_container:classic_common.container_item": {
                                         "collection_index": 4
                                       }
                                     },
                                     {
-                                      "7@container:classic_common.container_item": {
+                                      "7@xc_modern_container:classic_common.container_item": {
                                         "collection_index": 7
                                       }
                                     },
                                     {
-                                      "10@container:classic_common.container_item": {
+                                      "10@xc_modern_container:classic_common.container_item": {
                                         "collection_index": 10
                                       }
                                     },
                                     {
-                                      "13@container:classic_common.container_item": {
+                                      "13@xc_modern_container:classic_common.container_item": {
                                         "collection_index": 13,
                                         "bindings": [
                                           {
@@ -348,27 +348,27 @@
                                   ],
                                   "controls": [
                                     {
-                                      "2@container:classic_common.container_item": {
+                                      "2@xc_modern_container:classic_common.container_item": {
                                         "collection_index": 2
                                       }
                                     },
                                     {
-                                      "5@container:classic_common.container_item": {
+                                      "5@xc_modern_container:classic_common.container_item": {
                                         "collection_index": 5
                                       }
                                     },
                                     {
-                                      "8@container:classic_common.container_item": {
+                                      "8@xc_modern_container:classic_common.container_item": {
                                         "collection_index": 8
                                       }
                                     },
                                     {
-                                      "11@container:classic_common.container_item": {
+                                      "11@xc_modern_container:classic_common.container_item": {
                                         "collection_index": 11
                                       }
                                     },
                                     {
-                                      "14@container:classic_common.container_item": {
+                                      "14@xc_modern_container:classic_common.container_item": {
                                         "collection_index": 14,
                                         "bindings": [
                                           {
@@ -401,7 +401,7 @@
           "anchor_to": "bottom_middle",
           "controls": [
             {
-              "inv_and_hotbar@container:classic_common.inventory_and_hotbar": {
+              "inv_and_hotbar@xc_modern_container:classic_common.inventory_and_hotbar": {
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
                 "offset": [0, "1.1764705882%"]
@@ -438,7 +438,7 @@
                 "ignored": "(not $touch)",
                 "controls": [
                   {
-                    "mode_selection@container:classic_common.mode_selection_panel": {
+                    "mode_selection@xc_modern_container:classic_common.mode_selection_panel": {
                       "anchor_from": "bottom_right",
                       "anchor_to": "bottom_left"
                     }
@@ -453,7 +453,7 @@
         "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}
       },
       {
-        "inventory_selected_icon_button@container:classic_common.inventory_selected_icon_button": {}
+        "inventory_selected_icon_button@xc_modern_container:classic_common.inventory_selected_icon_button": {}
       },
       { "flying_item_renderer@common.flying_item_renderer": { "layer": 8 } },
       { "gamepad_cursor@common.gamepad_cursor_button": {} }

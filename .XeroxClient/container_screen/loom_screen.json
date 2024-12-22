@@ -13,7 +13,7 @@
 
   "pattern_button@loom.pattern_button": {
     "size": ["25%", "100%x"],
-    "$highlight_control": "container:classic_common.highlight_slot_panel",
+    "$highlight_control": "xc_modern_container:classic_common.highlight_slot_panel",
     "$button_ref": "loom.pattern_slot_button",
     "$banner_pattern_ref": "xc_modern_loom_screen.banner_pattern",
     "$background_images": "common.empty_panel",
@@ -129,14 +129,14 @@
                       "anchor_to": "top_middle",
                       "controls": [
                         {
-                          "0@container:classic_common.container_item": {
+                          "0@xc_modern_container:classic_common.container_item": {
                             "$item_collection_name": "loom_input_items",
                             "anchor_to": "right_middle",
                             "offset": ["-2.5%", 0]
                           }
                         },
                         {
-                          "1@container:classic_common.container_item": {
+                          "1@xc_modern_container:classic_common.container_item": {
                             "$item_collection_name": "loom_dye_items",
                             "anchor_to": "left_middle",
                             "offset": ["2.5%", 0]
@@ -157,7 +157,7 @@
                       "anchor_to": "bottom_middle",
                       "controls": [
                         {
-                          "0@container:classic_common.container_item": {
+                          "0@xc_modern_container:classic_common.container_item": {
                             "$item_collection_name": "loom_material_items",
                             "anchor_from": "top_middle",
                             "anchor_to": "top_middle"
@@ -313,7 +313,7 @@
                 "anchor_to": "bottom_right",
                 "controls": [
                   {
-                    "0@container:classic_common.container_item": {
+                    "0@xc_modern_container:classic_common.container_item": {
                       "$slot_size": [26, 26],
                       "$item_collection_name": "loom_result_items",
                       "$button_ref": "loom.result_slot_button"
@@ -333,7 +333,7 @@
           "anchor_to": "bottom_middle",
           "controls": [
             {
-              "inv_and_hotbar@container:classic_common.inventory_and_hotbar": {
+              "inv_and_hotbar@xc_modern_container:classic_common.inventory_and_hotbar": {
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
                 "offset": [0, "1.1764705882%"]
@@ -370,7 +370,7 @@
                 "ignored": "(not $touch)",
                 "controls": [
                   {
-                    "mode_selection@container:classic_common.mode_selection_panel": {
+                    "mode_selection@xc_modern_container:classic_common.mode_selection_panel": {
                       "anchor_from": "bottom_right",
                       "anchor_to": "bottom_left"
                     }
@@ -385,7 +385,7 @@
         "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}
       },
       {
-        "inventory_selected_icon_button@container:classic_common.inventory_selected_icon_button": {}
+        "inventory_selected_icon_button@xc_modern_container:classic_common.inventory_selected_icon_button": {}
       },
       { "flying_item_renderer@common.flying_item_renderer": { "layer": 8 } },
       { "gamepad_cursor@common.gamepad_cursor_button": {} }

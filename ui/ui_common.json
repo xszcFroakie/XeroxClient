@@ -42,9 +42,9 @@
 
   "container_slot_button_prototype": {
     "controls": [
-      { "hover@container:classic_common.highlight_slot_panel": {} },
+      { "hover@xc_modern_container:classic_common.highlight_slot_panel": {} },
       {
-        "hover_text@container:classic_common.custom_hover_text": {
+        "hover_text@xc_modern_container:classic_common.custom_hover_text": {
           "$hover_text_binding_name|default": "#hover_text",
           "$dura_view_text_color|default": [1.0, 1.0, 1.0],
           "$hover_text_bindings": [
@@ -75,7 +75,7 @@
           "$default_size": ["100%", "100%"],
           "anims": "$hover_text_anims",
           "animation_reset_name": "screen_animation_reset",
-          "$hover_text_control": "container:classic_common.container_hover_text"
+          "$hover_text_control": "xc_modern_container:classic_common.container_hover_text"
         }
       }
     ]

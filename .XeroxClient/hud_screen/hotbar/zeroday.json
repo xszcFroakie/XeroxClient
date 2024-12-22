@@ -66,7 +66,7 @@
     ]
   },
 
-  "item_count@container:classic_common.stack_count_label": {
+  "item_count@xc_modern_container:classic_common.stack_count_label": {
     "layer": 4,
     "$stack_count_collection_name": "$hotbar_collection_name",
     "offset": [0, "16.6666666667%"],
@@ -197,7 +197,7 @@
                     }
                   },
                   {
-                    "item_dura@container:classic_common.durability_bar": {
+                    "item_dura@xc_modern_container:classic_common.durability_bar": {
                       "$item_collection_name": "$hotbar_collection_name",
                       "offset": [0, "41.6666666667%"],
                       "size": ["108.3333333333%", "8.3333333333%"],
@@ -206,7 +206,7 @@
                     }
                   },
                   {
-                    "item_store@container:classic_common.storage_bar": {
+                    "item_store@xc_modern_container:classic_common.storage_bar": {
                       "$item_collection_name": "$hotbar_collection_name",
                       "offset": [0, "41.6666666667%"],
                       "size": ["108.3333333333%", "8.3333333333%"],

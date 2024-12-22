@@ -29,7 +29,7 @@
     "color": "$xeroxclient_ui_theme_button_hover_color",
     "controls": [
       {
-        "hover_text@container:classic_common.custom_hover_text": {
+        "hover_text@xc_modern_container:classic_common.custom_hover_text": {
           "$hover_text_bindings": [
             {
               "binding_name": "#button_hover",
@@ -48,7 +48,7 @@
     "color": "$xeroxclient_ui_theme_button_hover_color",
     "controls": [
       {
-        "hover_text@container:classic_common.custom_hover_text": {
+        "hover_text@xc_modern_container:classic_common.custom_hover_text": {
           "$hover_text_bindings": [
             {
               "binding_name": "#button_hover",
@@ -72,7 +72,7 @@
     "color": "$xeroxclient_ui_theme_button_default_color",
     "controls": [
       {
-        "hover_text@container:classic_common.custom_hover_text": {
+        "hover_text@xc_modern_container:classic_common.custom_hover_text": {
           "$hover_text_bindings": [
             {
               "binding_name": "#button_hover",
@@ -457,7 +457,7 @@
                       "size": ["111.1111111111%c", "100%x"],
                       "controls": [
                         {
-                          "0@container:classic_common.container_item": {
+                          "0@xc_modern_container:classic_common.container_item": {
                             "$item_collection_name": "beacon_payment_items"
                           }
                         }
@@ -500,7 +500,7 @@
           "anchor_to": "bottom_middle",
           "controls": [
             {
-              "inv_and_hotbar@container:classic_common.inventory_and_hotbar": {}
+              "inv_and_hotbar@xc_modern_container:classic_common.inventory_and_hotbar": {}
             }
           ]
         }
@@ -533,7 +533,7 @@
                 "ignored": "(not $touch)",
                 "controls": [
                   {
-                    "mode_selection@container:classic_common.mode_selection_panel": {
+                    "mode_selection@xc_modern_container:classic_common.mode_selection_panel": {
                       "anchor_from": "bottom_right",
                       "anchor_to": "bottom_left"
                     }
@@ -548,7 +548,7 @@
         "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}
       },
       {
-        "inventory_selected_icon_button@container:classic_common.inventory_selected_icon_button": {}
+        "inventory_selected_icon_button@xc_modern_container:classic_common.inventory_selected_icon_button": {}
       },
       { "flying_item_renderer@common.flying_item_renderer": { "layer": 8 } },
       { "gamepad_cursor@common.gamepad_cursor_button": {} }
