@@ -1000,11 +1000,11 @@
     "$hover_text_control|default": "container:classic_common.hover_text",
     "hover_control": "hover_text_background",
     "consume_hover_events": false,
+    "allow_clipping": false,
     "controls": [
       {
         "hover_text_not_touch": {
           "type": "input_panel",
-          "allow_clipping": false,
           "ignored": "$touch",
           "layer": 29,
           "consume_hover_events": false,
@@ -1047,20 +1047,28 @@
       },
       {
         "hover_text_touch": {
-          "type": "image",
-          "allow_clipping": false,
+          "type": "panel",
           "ignored": "(not $touch)",
-          "size": ["100%c+8px", "100%c+5px"],
-          "alpha": 0.8,
-          "texture": "textures/XeroxClient/rounded_corner/all8x",
-          "layer": 200,
-          "color": "$xeroxclient_ui_theme_menu_background_color",
-          "anchor_from": "$hover_text_anchor_from",
-          "anchor_to": "$hover_text_anchor_to",
-          "offset": "$hover_text_offset",
-          "$hover_text_background_bindings|default": [],
-          "bindings": "$hover_text_background_bindings",
-          "controls": [{ "$hover_text_control@$hover_text_control": {} }]
+          "layer": 29,
+          "controls": [
+            {
+              "hover_text_background": {
+                "type": "image",
+                "ignored": "(not $touch)",
+                "size": ["100%c+8px", "100%c+5px"],
+                "alpha": 0.8,
+                "texture": "textures/XeroxClient/rounded_corner/all8x",
+                "layer": 200,
+                "color": "$xeroxclient_ui_theme_menu_background_color",
+                "anchor_from": "$hover_text_anchor_from",
+                "anchor_to": "$hover_text_anchor_to",
+                "offset": "$hover_text_offset",
+                "$hover_text_background_bindings|default": [],
+                "bindings": "$hover_text_background_bindings",
+                "controls": [{ "$hover_text_control@$hover_text_control": {} }]
+              }
+            }
+          ]
         }
       }
     ],
@@ -1415,7 +1423,6 @@
                   {
                     "normal": {
                       "type": "panel",
-                      "visible": false,
                       "bindings": [
                         {
                           "binding_type": "view",
@@ -1427,7 +1434,6 @@
                       "controls": [
                         {
                           "ref@$button_ref": {
-                            "consume_hover_events": false,
                             "tts_ignore_count": true,
                             "tts_skip_message": true,
                             "tts_inherit_siblings": true
@@ -1439,7 +1445,6 @@
                   {
                     "auto_place": {
                       "type": "panel",
-                      "visible": false,
                       "bindings": [
                         {
                           "binding_type": "view",
@@ -1451,7 +1456,6 @@
                       "controls": [
                         {
                           "ref@$button_ref": {
-                            "consume_hover_events": false,
                             "tts_ignore_count": true,
                             "tts_skip_message": true,
                             "tts_inherit_siblings": true,
@@ -1475,7 +1479,6 @@
                   {
                     "drop_one": {
                       "type": "panel",
-                      "visible": false,
                       "bindings": [
                         {
                           "binding_type": "view",
@@ -1487,7 +1490,6 @@
                       "controls": [
                         {
                           "ref@$button_ref": {
-                            "consume_hover_events": false,
                             "tts_ignore_count": true,
                             "tts_skip_message": true,
                             "tts_inherit_siblings": true,

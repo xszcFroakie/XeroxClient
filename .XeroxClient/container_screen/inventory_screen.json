@@ -665,7 +665,6 @@
                   {
                     "normal": {
                       "type": "panel",
-                      "visible": false,
                       "bindings": [
                         {
                           "binding_type": "view",
@@ -688,7 +687,6 @@
                   {
                     "auto_place": {
                       "type": "panel",
-                      "visible": false,
                       "bindings": [
                         {
                           "binding_type": "view",
@@ -723,7 +721,6 @@
                   {
                     "drop_one": {
                       "type": "panel",
-                      "visible": false,
                       "bindings": [
                         {
                           "binding_type": "view",
@@ -1300,7 +1297,7 @@
                 "anchor_from": "bottom_right",
                 "anchor_to": "bottom_right",
                 "offset": [0, "-0.6024096386%"],
-                //"ignored": "(not $touch)",
+                "ignored": "(not $touch)",
                 "controls": [
                   {
                     "mode_selection@container:classic_common.mode_selection_panel": {
