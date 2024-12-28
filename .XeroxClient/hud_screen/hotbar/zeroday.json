@@ -22,8 +22,7 @@
 
   "item_name_text": {
     "type": "panel",
-    "size": ["100%cm", 12.5],
-    "clips_children": true,
+    "size": ["100%cm", "100%cm"],
     "anchor_from": "top_left",
     "anchor_to": "bottom_left",
     "animation_reset_name": "button.hotbar_slot_select",
@@ -32,11 +31,9 @@
       {
         "item_text_label": {
           "type": "label",
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
           "size": ["default", "default"],
           "max_size": [200, "default"],
-          "text_alignment": "center",
+          "text_alignment": "left",
           "layer": 31,
           "text": "#text",
           "animation_reset_name": "button.hotbar_slot_select",
