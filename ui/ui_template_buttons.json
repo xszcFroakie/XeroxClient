@@ -167,7 +167,7 @@
         "operation": "insert_back",
         "value": [
           {
-            "hover_tip@container:classic_common.custom_hover_text": {
+            "hover_tip@xc_modern_container:classic_common.custom_hover_text": {
               "$hover_text": "$button_hover_tip_text",
               "$hover_text_bindings": "$button_hover_tip_text_binding",
               "ignored": "(not $button_hover_tip)"
@@ -233,7 +233,7 @@
         "operation": "insert_back",
         "value": [
           {
-            "hover_tip@container:classic_common.custom_hover_text": {
+            "hover_tip@xc_modern_container:classic_common.custom_hover_text": {
               "$hover_text": "$button_hover_tip_text",
               "$hover_text_bindings": "$button_hover_tip_text_binding",
               "ignored": "(not $button_hover_tip)"

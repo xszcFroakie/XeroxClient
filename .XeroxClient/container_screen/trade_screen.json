@@ -28,7 +28,7 @@
           ],
           "controls": [
             {
-              "hover_text@container:classic_common.custom_hover_text": {
+              "hover_text@xc_modern_container:classic_common.custom_hover_text": {
                 "size": ["100%", "100%"],
                 "$hover_text_bindings": [
                   {
@@ -96,7 +96,7 @@
               }
             },
             {
-              "stack_count_label@container:classic_common.stack_count_label": {
+              "stack_count_label@xc_modern_container:classic_common.stack_count_label": {
                 "layer": 8,
                 "text": "#trade_item_count",
                 "bindings": [
@@ -109,7 +109,7 @@
                 ],
                 "controls": [
                   {
-                    "second_stack_count_label@container:classic_common.stack_count_label": {
+                    "second_stack_count_label@xc_modern_container:classic_common.stack_count_label": {
                       "layer": 8,
                       "text": "#second_trade_item_count",
                       "offset": [9.3333333333, 0],
@@ -128,7 +128,7 @@
                     }
                   },
                   {
-                    "red_slash@container:classic_common.stack_count_label": {
+                    "red_slash@xc_modern_container:classic_common.stack_count_label": {
                       "text": "-",
                       "color": [1.0, 0.333, 0.333],
                       "layer": 9,
@@ -145,7 +145,7 @@
                     }
                   },
                   {
-                    "red_slash_double@container:classic_common.stack_count_label": {
+                    "red_slash_double@xc_modern_container:classic_common.stack_count_label": {
                       "text": "--",
                       "color": [1.0, 0.333, 0.333],
                       "layer": 9,
@@ -464,7 +464,7 @@
                       "$stack_count_binding_condition": "always_when_visible",
                       "$item_collection_name": "trade2_ingredient1_item",
                       "controls": [
-                        { "0@container:classic_common.container_item": {} }
+                        { "0@xc_modern_container:classic_common.container_item": {} }
                       ]
                     }
                   },
@@ -481,7 +481,7 @@
                       "$stack_count_binding_condition": "always_when_visible",
                       "$item_collection_name": "trade2_ingredient2_item",
                       "controls": [
-                        { "0@container:classic_common.container_item": {} }
+                        { "0@xc_modern_container:classic_common.container_item": {} }
                       ]
                     }
                   },
@@ -560,7 +560,7 @@
                       "$button_ref": "trade2.trade_result_item_slot_button",
                       "controls": [
                         {
-                          "0@container:classic_common.container_item": {
+                          "0@xc_modern_container:classic_common.container_item": {
                             "size": [26, 26]
                           }
                         }
@@ -578,7 +578,7 @@
                 "anchor_to": "bottom_middle",
                 "controls": [
                   {
-                    "inv_and_hotbar@container:classic_common.inventory_and_hotbar": {
+                    "inv_and_hotbar@xc_modern_container:classic_common.inventory_and_hotbar": {
                       "anchor_from": "top_middle",
                       "anchor_to": "top_middle",
                       "offset": [0, "1.1764705882%"]
@@ -618,7 +618,7 @@
                 "ignored": "(not $touch)",
                 "controls": [
                   {
-                    "mode_selection@container:classic_common.mode_selection_panel": {
+                    "mode_selection@xc_modern_container:classic_common.mode_selection_panel": {
                       "anchor_from": "bottom_right",
                       "anchor_to": "bottom_left"
                     }
@@ -633,7 +633,7 @@
         "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}
       },
       {
-        "inventory_selected_icon_button@container:classic_common.inventory_selected_icon_button": {}
+        "inventory_selected_icon_button@xc_modern_container:classic_common.inventory_selected_icon_button": {}
       },
       { "flying_item_renderer@common.flying_item_renderer": { "layer": 8 } },
       { "gamepad_cursor@common.gamepad_cursor_button": {} }

@@ -123,17 +123,17 @@
                             "size": ["100%c", "100%cm"],
                             "controls": [
                               {
-                                "template_item_slot@container:classic_common.container_item": {
+                                "template_item_slot@xc_modern_container:classic_common.container_item": {
                                   "$item_collection_name": "smithing_table_template_items"
                                 }
                               },
                               {
-                                "input_item_slot@container:classic_common.container_item": {
+                                "input_item_slot@xc_modern_container:classic_common.container_item": {
                                   "$item_collection_name": "smithing_table_input_items"
                                 }
                               },
                               {
-                                "material_item_slot@container:classic_common.container_item": {
+                                "material_item_slot@xc_modern_container:classic_common.container_item": {
                                   "$item_collection_name": "smithing_table_material_items"
                                 }
                               }
@@ -189,7 +189,7 @@
                       "size": ["111.1111111111%c", "100%x"],
                       "controls": [
                         {
-                          "0@container:classic_common.container_item": {
+                          "0@xc_modern_container:classic_common.container_item": {
                             "$item_collection_name": "smithing_table_result_items",
                             "$button_ref": "smithing_table_2.smithing_table_output_slot_button"
                           }
@@ -252,7 +252,7 @@
           "anchor_to": "bottom_middle",
           "controls": [
             {
-              "inv_and_hotbar@container:classic_common.inventory_and_hotbar": {
+              "inv_and_hotbar@xc_modern_container:classic_common.inventory_and_hotbar": {
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
                 "offset": [0, "1.1764705882%"]
@@ -291,7 +291,7 @@
                 "ignored": "(not $touch)",
                 "controls": [
                   {
-                    "mode_selection@container:classic_common.mode_selection_panel": {
+                    "mode_selection@xc_modern_container:classic_common.mode_selection_panel": {
                       "anchor_from": "bottom_right",
                       "anchor_to": "bottom_left"
                     }
@@ -306,7 +306,7 @@
         "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}
       },
       {
-        "inventory_selected_icon_button@container:classic_common.inventory_selected_icon_button": {}
+        "inventory_selected_icon_button@xc_modern_container:classic_common.inventory_selected_icon_button": {}
       },
       { "flying_item_renderer@common.flying_item_renderer": { "layer": 8 } },
       { "gamepad_cursor@common.gamepad_cursor_button": {} }

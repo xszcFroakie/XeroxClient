@@ -104,7 +104,7 @@
                       "size": ["111.1111111111%c", "100%x"],
                       "controls": [
                         {
-                          "input_grid@container:classic_common.container_item": {
+                          "input_grid@xc_modern_container:classic_common.container_item": {
                             "$item_collection_name": "grindstone_input_items"
                           }
                         }
@@ -123,7 +123,7 @@
                       "size": ["111.1111111111%c", "100%x"],
                       "controls": [
                         {
-                          "additional_grid@container:classic_common.container_item": {
+                          "additional_grid@xc_modern_container:classic_common.container_item": {
                             "$item_collection_name": "grindstone_additional_items"
                           }
                         }
@@ -184,7 +184,7 @@
                 "offset": ["22.1590909091%", "1.2345679012%"],
                 "controls": [
                   {
-                    "result_grid@container:classic_common.container_item": {
+                    "result_grid@xc_modern_container:classic_common.container_item": {
                       "$item_collection_name": "grindstone_result_items",
                       "$button_ref": "grindstone.grindstone_output_slot_button"
                     }
@@ -203,7 +203,7 @@
           "anchor_to": "bottom_middle",
           "controls": [
             {
-              "inv_and_hotbar@container:classic_common.inventory_and_hotbar": {
+              "inv_and_hotbar@xc_modern_container:classic_common.inventory_and_hotbar": {
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
                 "offset": [0, "1.1764705882%"]
@@ -242,7 +242,7 @@
                 //"ignored": "(not $touch)",
                 "controls": [
                   {
-                    "mode_selection@container:classic_common.mode_selection_panel": {
+                    "mode_selection@xc_modern_container:classic_common.mode_selection_panel": {
                       "anchor_from": "bottom_right",
                       "anchor_to": "bottom_left"
                     }
@@ -257,7 +257,7 @@
         "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}
       },
       {
-        "inventory_selected_icon_button@container:classic_common.inventory_selected_icon_button": {}
+        "inventory_selected_icon_button@xc_modern_container:classic_common.inventory_selected_icon_button": {}
       },
       { "flying_item_renderer@common.flying_item_renderer": { "layer": 8 } },
       { "gamepad_cursor@common.gamepad_cursor_button": {} }
