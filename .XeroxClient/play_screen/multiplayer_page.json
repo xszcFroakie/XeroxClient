@@ -116,7 +116,10 @@
     "size": ["100%", "100%"],
     "controls": [
       {
-        "network_world_header@play.network_world_header": { "$text_color":[], "offset": [2, 2] }
+        "network_world_header@play.network_world_header": {
+          "$text_color": [],
+          "offset": [2, 2]
+        }
       },
       {
         "network_world_details@play.network_world_details": {
@@ -345,25 +348,36 @@
               }
             },
             {
-              "network_server_world_edit@common_buttons.a_rc_8x_text": {
-                "$pressed_button_name": "button.menu_network_server_world_edit",
-                "size": ["fill", 30],
-                "ignored": "$ignore_add_servers",
-                "$button_text": "gui.edit",
+              "network_server_world_edit": {
+                "type": "collection_panel",
+                "size": ["100%c", "100%c"],
                 "bindings": [
                   {
                     "binding_name": "#is_additional_server_selected",
                     "binding_name_override": "#visible"
-                  },
+                  }
+                ],
+                "collection_name": "servers_network_worlds",
+                "controls": [
                   {
-                    "binding_type": "collection_details",
-                    "binding_collection_name": "servers_network_worlds"
-                  },
-                  {
-                    "binding_name": "#network_world_button_enabled",
-                    "binding_name_override": "#enabled",
-                    "binding_collection_name": "servers_network_worlds",
-                    "binding_type": "collection"
+                    "button@common_buttons.a_rc_8x_text": {
+                      "$pressed_button_name": "button.menu_network_server_world_edit",
+                      "size": ["fill", 30],
+                      "ignored": "$ignore_add_servers",
+                      "$button_text": "gui.edit",
+                      "bindings": [
+                        {
+                          "binding_type": "collection_details",
+                          "binding_collection_name": "servers_network_worlds"
+                        },
+                        {
+                          "binding_name": "#network_world_button_enabled",
+                          "binding_name_override": "#enabled",
+                          "binding_collection_name": "servers_network_worlds",
+                          "binding_type": "collection"
+                        }
+                      ]
+                    }
                   }
                 ]
               }
