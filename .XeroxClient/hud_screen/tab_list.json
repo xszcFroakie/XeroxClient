@@ -25,123 +25,8 @@
           "anchor_from": "top_middle",
           "anchor_to": "top_middle",
           "offset": [0, 10],
-          "alpha": 0.3,
-          "layer": 10,
-          "texture": "textures/XeroxClient/rounded_corner/all8x",
-          "color": "$xeroxclient_ui_theme_menu_background_color",
-          "size": ["100%c + 8px", "100%c + 6px"],
-          "controls": [
-            {
-              "tab_list_grid": {
-                "type": "collection_panel",
-                "size": ["100%c", "100%c"],
-                "collection_name": "players_collection",
-                "controls": [{ "list@xc_modern_tab_list.tab_list_stack": {} }]
-              }
-            }
-          ]
-        }
-      }
-    ]
-  },
-
-  "tab_list_stack": {
-    "type": "stack_panel",
-    "orientation": "horizontal",
-    "size": ["100%c", "100%cm"],
-    "controls": [
-      {
-        "stack_0": {
-          "type": "panel",
-          "size": ["100%cm", "100%c"],
-          "max_size": ["100%cm", 216],
-          "$min_index": 0,
-          "$max_index": 17,
-          "controls": [{ "0-17@xc_modern_tab_list.tab_list_grid": {} }]
-        }
-      },
-      {
-        "stack_1": {
-          "type": "panel",
-          "size": ["100%cm", "100%c"],
-          "max_size": ["100%cm", 216],
-          "$min_index": 18,
-          "$max_index": 35,
-          "controls": [
-            {
-              "18-35@xc_modern_tab_list.tab_list_grid": {
-                "offset": [0, -216]
-              }
-            }
-          ],
-          "bindings": [
-            {
-              "binding_name": "#collection_index",
-              "binding_type": "collection",
-              "binding_collection_name": "players_collection"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "(#collection_index > 17)",
-              "target_property_name": "#visible"
-            }
-          ]
-        }
-      },
-      {
-        "stack_2": {
-          "type": "panel",
-          "size": ["100%cm", "100%c"],
-          "max_size": ["100%cm", 216],
-          "$min_index": 36,
-          "$max_index": 53,
-          "controls": [
-            {
-              "36-53@xc_modern_tab_list.tab_list_grid": {
-                "offset": [0, -432]
-              }
-            }
-          ],
-          "bindings": [
-            {
-              "binding_name": "#collection_index",
-              "binding_type": "collection",
-              "binding_collection_name": "players_collection"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "(#collection_index > 35)",
-              "target_property_name": "#visible"
-            }
-          ]
-        }
-      },
-      {
-        "stack_3": {
-          "type": "panel",
-          "size": ["100%cm", "100%c"],
-          "max_size": ["100%cm", 216],
-          "$min_index": 54,
-          "$max_index": 71,
-          "controls": [
-            {
-              "54-71@xc_modern_tab_list.tab_list_grid": {
-                "offset": [0, -648]
-              }
-            }
-          ],
-          "bindings": [
-            {
-              "binding_name": "#collection_index",
-              "binding_type": "collection",
-              "binding_collection_name": "players_collection"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "(#collection_index > 53)",
-              "target_property_name": "#visible"
-            }
-          ]
+          "size": [560, "100%c"],
+          "controls": [{ "tab_list_grid@xc_modern_tab_list.tab_list_grid": {} }]
         }
       }
     ]
@@ -149,9 +34,9 @@
 
   "tab_list_grid": {
     "type": "grid",
-    "anchor_from": "top_middle",
-    "anchor_to": "top_middle",
-    "size": [140, "100%c"],
+    "size": ["25%", "default"],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
     "grid_item_template": "xc_modern_tab_list.tab_list_grid_item",
     "collection_name": "players_collection",
     "grid_dimension_binding": "#players_grid_dimension",
@@ -163,62 +48,88 @@
   },
 
   "tab_list_grid_item": {
-    "type": "stack_panel",
-    "orientation": "horizontal",
-    "size": [140, 12],
-    "layer": 3,
-    "bindings": [
-      {
-        "binding_name": "#collection_index",
-        "binding_type": "collection",
-        "binding_collection_name": "players_collection"
-      },
-      {
-        "binding_type": "view",
-        "source_property_name": "(((#collection_index > $min_index) or (#collection_index = $min_index)) and ((#collection_index < $max_index) or (#collection_index = $max_index)))",
-        "target_property_name": "#visible"
-      }
-    ],
+    "type": "panel",
+    "size": ["25%", 14],
+    "layer": 200,
     "controls": [
       {
-        "player_picture": {
-          "type": "panel",
-          "layer": 11,
-          "size": [10, 10],
-          "controls": [
-            {
-              "player_gamer_pic@pause.player_gamer_pic": {
-                "size": [10, 10],
-                "controls": []
-              }
-            },
-            {
-              "player_local_icon@pause.player_local_icon": { "size": [10, 10] }
-            }
-          ]
+        "background": {
+          "type": "image",
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "offset": [0.5, 0],
+          "size": ["400% - 1px", "100% - 1px"],
+          "alpha": 0.3,
+          "layer": 2,
+          "texture": "textures/XeroxClient/rounded_corner/all8x",
+          "color": "$xeroxclient_ui_theme_menu_background_color"
         }
       },
       {
-        "player_gamertag": {
-          "type": "panel",
-          "size": ["fill", 12],
+        "main": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "size": ["25%", "100% - 2px"],
+          "layer": 3,
+          "bindings": [
+            {
+              "binding_name": "#collection_index",
+              "binding_type": "collection",
+              "binding_collection_name": "players_collection"
+            }
+          ],
           "controls": [
             {
-              "gamertag_text": {
-                "type": "label",
-                "text": "#gamertag",
-                "anchor_from": "left_middle",
-                "anchor_to": "left_middle",
-                "size": ["default", "default"],
-                "font_type": "$global_font_type",
-                "backup_font_type": "$global_font_type_backup",
-                "offset": [1, 0],
+              "padding": {
+                "type": "panel",
+                "size": [2, 0]
+              }
+            },
+            {
+              "player_picture": {
+                "type": "panel",
                 "layer": 11,
-                "bindings": [
+                "size": [12, 12],
+                "controls": [
                   {
-                    "binding_name": "#gamertag",
-                    "binding_type": "collection",
-                    "binding_collection_name": "players_collection"
+                    "player_gamer_pic@pause.player_gamer_pic": {
+                      "size": [10, 10],
+                      "controls": []
+                    }
+                  },
+                  {
+                    "player_local_icon@pause.player_local_icon": {
+                      "size": [10, 10]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "player_gamertag": {
+                "type": "panel",
+                "size": ["fill", 12],
+                "controls": [
+                  {
+                    "gamertag_text": {
+                      "type": "label",
+                      "text": "#gamertag",
+                      "anchor_from": "left_middle",
+                      "anchor_to": "left_middle",
+                      "size": ["default", "default"],
+                      "font_type": "$global_font_type",
+                      "backup_font_type": "$global_font_type_backup",
+                      "layer": 11,
+                      "bindings": [
+                        {
+                          "binding_name": "#gamertag",
+                          "binding_type": "collection",
+                          "binding_collection_name": "players_collection"
+                        }
+                      ]
+                    }
                   }
                 ]
               }
