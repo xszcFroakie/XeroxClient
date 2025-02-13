@@ -1,0 +1,43 @@
+// 由@XSzC.制作的文件.
+// 未经允许不要使用任何文件. 请阅读LICENSE.txt
+
+// File made by @XSzC.
+// Don't use any file without permission. Read LICENSE.txt
+
+{
+  "namespace": "xc_modern_hud:moduels",
+
+  "armor_hud": {
+    "type": "panel",
+    "size": [64, 16],
+    "offset": "$armor_hud_offset",
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "variables": [
+      {
+        "requires": "((not $zeroday_style_hotbar) or ($zeroday_style_hotbar and $touch))",
+        "$armor_hud_offset": [42, -40]
+      },
+      {
+        "requires": "($zeroday_style_hotbar or ((not $zeroday_style_hotbar) and $touch))",
+        "$armor_hud_offset": [128, -5]
+      }
+    ],
+    "controls": [
+      {
+        "armor_hud_renderer": {
+          "type": "custom",
+          "renderer": "live_player_renderer",
+          "size": [16, 16],
+          "offset": [-24, 485.5]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#show_survival_ui",
+        "binding_name_override": "#visible"
+      }
+    ]
+  }
+}

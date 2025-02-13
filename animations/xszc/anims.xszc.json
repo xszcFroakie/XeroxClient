@@ -1,0 +1,33 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.xszc.armor_hud": {
+      "loop": true,
+      "bones": {
+        "armor_hud": {
+          "scale": "1/0.9375",
+          "position": [0, "q.is_swimming ? -20/0.9375", 0],
+          "rotation": [0.0, "(q.is_riding ? q.target_y_rotation)", 0.0]
+        }
+      }
+    },
+    "animation.player.cape": {
+      "loop": true,
+      "bones": {
+        "cape": {
+          "rotation": [
+            "math.clamp(-30.0 * (q.cape_flap_amount * 4.5) - math.sin(q.modified_distance_moved * 55.0) * 3.0 - 5.0, -170.0, -12.0)",
+            "q.modified_move_speed * math.pow(math.sin(q.body_y_rotation - q.head_y_rotation(0)), 3) * 55",
+            0
+          ],
+          "position": [
+            0,
+            "query.get_root_locator_offset('armor_offset.default_neck', 1)",
+            0
+          ],
+          "scale": "q.armor_texture_slot(1) != 5 && !v.is_first_person && !v.map_face_icon"
+        }
+      }
+    }
+  }
+}

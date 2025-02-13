@@ -1,0 +1,213 @@
+// 由@Greninja.制作的文件.
+// 未经允许不要使用任何文件. 请阅读LICENSE.txt
+
+// File made by @Greninja.
+// Don't use any file without permission. Read LICENSE.txt
+
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.hud_helmet": {
+      "arrays": {
+        "textures": {
+          "array.helmets": [
+            "texture.empty_helmet",
+            "texture.leather_helmet",
+            "texture.chainmail_helmet",
+            "texture.iron_helmet",
+            "texture.diamond_helmet",
+            "texture.gold_helmet",
+            "texture.turtle_helmet",
+            "texture.netherite_helmet",
+            "texture.pumpkin"
+          ]
+        }
+      },
+      "geometry": "Geometry.hud_helmet",
+      "materials": [{ "*": "Material.armor" }],
+      "textures": [
+        "array.helmets[(q.armor_texture_slot(0) < 5 ? (q.armor_texture_slot(0) + 1) : q.armor_texture_slot(0)) + (q.is_item_name_any('slot.armor.head', 0, 'minecraft:carved_pumpkin') ? 8)]"
+      ],
+      "color": {
+        "r": "q.armor_color_slot(0, 0)",
+        "g": "q.armor_color_slot(0, 1)",
+        "b": "q.armor_color_slot(0, 2)",
+        "a": "q.armor_color_slot(0, 3)"
+      },
+      "is_hurt_color": {
+        "r": "v.is_enchanted_helmet ? 0.4",
+        "g": 0,
+        "b": "v.is_enchanted_helmet",
+        "a": "v.is_enchanted_helmet ? 0.3"
+      },
+      "on_fire_color": {
+        "r": "v.is_enchanted_helmet ? 0.4",
+        "g": 0,
+        "b": "v.is_enchanted_helmet",
+        "a": "v.is_enchanted_helmet ? 0.3"
+      },
+      "overlay_color": {
+        "r": "v.is_enchanted_helmet ? 0.4",
+        "g": 0,
+        "b": "v.is_enchanted_helmet",
+        "a": "v.is_enchanted_helmet ? 0.3"
+      },
+      "light_color_multiplier": "v.is_enchanted_helmet ? 0.05 * -math.cos(q.life_time * 500.0) + 1.5 : 1.25",
+      "ignore_lighting": true,
+      "filter_lighting": true,
+      "part_visibility": [{ "*": "q.is_on_screen" }]
+    },
+    "controller.render.hud_chestplate": {
+      "arrays": {
+        "textures": {
+          "array.chestplates": [
+            "texture.empty_chestplate",
+            "texture.leather_chestplate",
+            "texture.chainmail_chestplate",
+            "texture.iron_chestplate",
+            "texture.diamond_chestplate",
+            "texture.gold_chestplate",
+            "texture.elytra",
+            "texture.netherite_chestplate"
+          ]
+        }
+      },
+      "geometry": "Geometry.hud_chestplate",
+      "materials": [{ "*": "Material.armor" }],
+      "textures": [
+        "array.chestplates[(q.armor_texture_slot(1) < 6) ? (q.armor_texture_slot(1) + 1) : (q.armor_texture_slot(1) == 7 ? 7)]"
+      ],
+      "color": {
+        "r": "q.armor_color_slot(1, 0)",
+        "g": "q.armor_color_slot(1, 1)",
+        "b": "q.armor_color_slot(1, 2)",
+        "a": "q.armor_color_slot(1, 3)"
+      },
+      "is_hurt_color": {
+        "r": "v.is_enchanted_chestplate ? 0.4",
+        "g": 0,
+        "b": "v.is_enchanted_chestplate",
+        "a": "v.is_enchanted_chestplate ? 0.3"
+      },
+      "on_fire_color": {
+        "r": "v.is_enchanted_chestplate ? 0.4",
+        "g": 0,
+        "b": "v.is_enchanted_chestplate",
+        "a": "v.is_enchanted_chestplate ? 0.3"
+      },
+      "overlay_color": {
+        "r": "v.is_enchanted_chestplate ? 0.4",
+        "g": 0,
+        "b": "v.is_enchanted_chestplate",
+        "a": "v.is_enchanted_chestplate ? 0.3"
+      },
+      "light_color_multiplier": "v.is_enchanted_chestplate ? 0.05 * -math.cos(q.life_time * 500.0) + 1.5 : 1.25",
+      "ignore_lighting": true,
+      "filter_lighting": true,
+      "part_visibility": [{ "*": "q.is_on_screen" }]
+    },
+    "controller.render.hud_leggings": {
+      "arrays": {
+        "textures": {
+          "array.leggings": [
+            "texture.empty_leggings",
+            "texture.leather_leggings",
+            "texture.chainmail_leggings",
+            "texture.iron_leggings",
+            "texture.diamond_leggings",
+            "texture.gold_leggings",
+            "texture.netherite_leggings"
+          ]
+        }
+      },
+      "geometry": "Geometry.hud_leggings",
+      "materials": [{ "*": "Material.armor" }],
+      "textures": [
+        "array.leggings[(q.armor_texture_slot(2) < 5) ? (q.armor_texture_slot(2) + 1) : (q.armor_texture_slot(2) == 7 ? 6)]"
+      ],
+      "color": {
+        "r": "q.armor_color_slot(2, 0)",
+        "g": "q.armor_color_slot(2, 1)",
+        "b": "q.armor_color_slot(2, 2)",
+        "a": "q.armor_color_slot(2, 3)"
+      },
+      "is_hurt_color": {
+        "r": "v.is_enchanted_leggings ? 0.4",
+        "g": 0,
+        "b": "v.is_enchanted_leggings",
+        "a": "v.is_enchanted_leggings ? 0.3"
+      },
+      "on_fire_color": {
+        "r": "v.is_enchanted_leggings ? 0.4",
+        "g": 0,
+        "b": "v.is_enchanted_leggings",
+        "a": "v.is_enchanted_leggings ? 0.3"
+      },
+      "overlay_color": {
+        "r": "v.is_enchanted_leggings ? 0.4",
+        "g": 0,
+        "b": "v.is_enchanted_leggings",
+        "a": "v.is_enchanted_leggings ? 0.3"
+      },
+      "light_color_multiplier": "v.is_enchanted_leggings ? 0.05 * -math.cos(q.life_time * 500.0) + 1.5 : 1.25",
+      "ignore_lighting": true,
+      "filter_lighting": true,
+      "part_visibility": [{ "*": "q.is_on_screen" }]
+    },
+    "controller.render.hud_boots": {
+      "arrays": {
+        "textures": {
+          "array.boots": [
+            "texture.empty_boots",
+            "texture.leather_boots",
+            "texture.chainmail_boots",
+            "texture.iron_boots",
+            "texture.diamond_boots",
+            "texture.gold_boots",
+            "texture.netherite_boots"
+          ]
+        }
+      },
+      "geometry": "Geometry.hud_boots",
+      "materials": [{ "*": "Material.armor" }],
+      "textures": [
+        "array.boots[(q.armor_texture_slot(3) < 5) ? (q.armor_texture_slot(3) + 1) : (q.armor_texture_slot(3) == 7 ? 6)]"
+      ],
+      "color": {
+        "r": "q.armor_color_slot(3, 0)",
+        "g": "q.armor_color_slot(3, 1)",
+        "b": "q.armor_color_slot(3, 2)",
+        "a": "q.armor_color_slot(3, 3)"
+      },
+      "is_hurt_color": {
+        "r": "v.is_enchanted_boots ? 0.4",
+        "g": 0,
+        "b": "v.is_enchanted_boots",
+        "a": "v.is_enchanted_boots ? 0.3"
+      },
+      "on_fire_color": {
+        "r": "v.is_enchanted_boots ? 0.4",
+        "g": 0,
+        "b": "v.is_enchanted_boots",
+        "a": "v.is_enchanted_boots ? 0.3"
+      },
+      "overlay_color": {
+        "r": "v.is_enchanted_boots ? 0.4",
+        "g": 0,
+        "b": "v.is_enchanted_boots",
+        "a": "v.is_enchanted_boots ? 0.3"
+      },
+      "light_color_multiplier": "v.is_enchanted_boots ? 0.05 * -math.cos(q.life_time * 500.0) + 1.5 : 1.25",
+      "ignore_lighting": true,
+      "filter_lighting": true,
+      "part_visibility": [{ "*": "q.is_on_screen" }]
+    },
+    "controller.render.player.cape": {
+      "geometry": "q.is_emoting ? Geometry.cape_emote : Geometry.cape",
+      "materials": [{ "*": "Material.default" }],
+      "textures": ["Texture.cape"],
+      "is_hurt_color": {},
+      "on_fire_color": {}
+    }
+  }
+}

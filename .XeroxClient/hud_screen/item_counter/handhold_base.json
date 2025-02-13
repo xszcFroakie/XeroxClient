@@ -520,7 +520,6 @@
         "item_stack": {
           "type": "stack_panel",
           "orientation": "horizontal",
-          "orientation": "horizontal",
           "size": ["100%c", "100%cm"],
           "controls": [
             {
