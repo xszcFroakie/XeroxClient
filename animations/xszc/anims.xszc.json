@@ -1,10 +1,10 @@
 {
   "format_version": "1.8.0",
   "animations": {
-    "animation.xszc.armor_hud": {
+    "animation.xszc.modules.initialize": {
       "loop": true,
       "bones": {
-        "armor_hud": {
+        "xszc_modules": {
           "scale": "1/0.9375",
           "position": [0, "q.is_swimming ? -20/0.9375", 0],
           "rotation": [0.0, "(q.is_riding ? q.target_y_rotation)", 0.0]
@@ -22,7 +22,7 @@
           ],
           "position": [
             0,
-            "query.get_root_locator_offset('armor_offset.default_neck', 1)",
+            "q.get_root_locator_offset('armor_offset.default_neck', 1)",
             0
           ],
           "scale": "q.armor_texture_slot(1) != 5 && !v.is_first_person && !v.map_face_icon"

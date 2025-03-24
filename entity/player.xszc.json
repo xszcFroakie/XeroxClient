@@ -85,10 +85,10 @@
           "v.item_use_normalized = q.main_hand_item_use_duration / q.main_hand_item_max_duration;",
           "v.render_in_hud = q.is_in_ui && q.is_on_screen && q.is_alive;"
         ],
-        "animate": ["root", "armor_hud"]
+        "animate": ["root", "mod.init"]
       },
       "animations": {
-        "armor_hud": "animation.xszc.armor_hud",
+        "mod.init": "animation.xszc.modules.initialize",
 
         "root": "controller.animation.player.root",
         "base_controller": "controller.animation.player.base",
