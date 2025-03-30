@@ -48,7 +48,7 @@
         "empty_chestplate": "textures/ui/empty_armor_slot_chestplate",
         "empty_helmet": "textures/ui/empty_armor_slot_helmet",
         "empty_leggings": "textures/ui/empty_armor_slot_leggings",
-        "pumpkin": "textures/XeroxClient/armor_hud/pumpkin"
+        "pumpkin": "textures/XeroxClient/xszc_modules/armor_hud/pumpkin"
       },
       "geometry": {
         "default": "geometry.humanoid.custom",
@@ -85,7 +85,7 @@
           "v.item_use_normalized = q.main_hand_item_use_duration / q.main_hand_item_max_duration;",
           "v.render_in_hud = q.is_in_ui && q.is_on_screen && q.is_alive;"
         ],
-        "animate": ["root", "mod.init"]
+        "animate": ["root", { "mod.init": "q.is_in_ui || v.is_paperdoll" }]
       },
       "animations": {
         "mod.init": "animation.xszc.modules.initialize",

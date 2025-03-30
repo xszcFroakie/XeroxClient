@@ -5,7 +5,7 @@
 // Don't use any file without permission. Read LICENSE.txt
 
 {
-  "namespace": "xc_modern_hud:moduels",
+  "namespace": "xc_modern_hud:modules",
 
   "armor_hud": {
     "type": "panel",

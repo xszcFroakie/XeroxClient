@@ -33,7 +33,7 @@
         "array_name": "controls",
         "operation": "insert_front",
         "value": [
-          { "armor_hud@xc_modern_hud:moduels.armor_hud": {} },
+          { "armor_hud@xc_modern_hud:modules.armor_hud": {} },
           {
             "redo_vanilla_hotbar@xc_modern_hotbar:vanilla.hotbar_content": {
               "ignored": "($zeroday_style_hotbar or ((not $zeroday_style_hotbar) and $touch))"
