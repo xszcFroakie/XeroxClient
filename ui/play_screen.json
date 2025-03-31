@@ -20,13 +20,13 @@
     "texture": "textures/XeroxClient/rounded_corner/all8x",
     "color": "$xeroxclient_ui_theme_menu_background_color",
     "alpha": 0.3
-  },
+  },/*
 
   "crossplatform_disabled_panel/disable_text": {
     "color": [],
     "font_type": "$global_font_type",
     "backup_font_type": "$global_font_type_backup"
-  },
+  },*/
 
   "world_list_label_panel/list_label": {
     "layer": 3,
