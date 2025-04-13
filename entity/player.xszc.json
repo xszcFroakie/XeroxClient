@@ -85,10 +85,23 @@
           "v.item_use_normalized = q.main_hand_item_use_duration / q.main_hand_item_max_duration;",
           "v.render_in_hud = q.is_in_ui && q.is_on_screen && q.is_alive;"
         ],
-        "animate": ["root", { "mod.init": "q.is_in_ui || v.is_paperdoll" }]
+        "animate": [
+          "root",
+          { "mod.init": "q.is_in_ui || v.is_paperdoll" },
+          "mod.load"
+        ]
+      },
+      "particle_effects": {
+        "dashtrail.cubics.g1": "xszc:dashtrail.cubics.g1",
+        "dashtrail.cubics.g2": "xszc:dashtrail.cubics.g2",
+        "dashtrail.cubics.g3": "xszc:dashtrail.cubics.g3",
+        "dashtrail.cubics.g4": "xszc:dashtrail.cubics.g4",
+        "dashtrail.cubics.g5": "xszc:dashtrail.cubics.g5"
       },
       "animations": {
         "mod.init": "animation.xszc.modules.initialize",
+        "mod.load": "controller.animation.xszc.modules.load",
+        "mod.dashtrail": "controller.animation.xszc.modules.dashtrail",
 
         "root": "controller.animation.player.root",
         "base_controller": "controller.animation.player.base",

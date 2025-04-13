@@ -1,0 +1,37 @@
+// 文件由@Greninja.修改.
+// 未经允许不要使用任何文件. 请阅读LICENSE.txt
+
+// File modified by @Greninja.
+// Don't use any file without permission. Read LICENSE.txt
+
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.xszc.modules.load": {
+      "initial_state": "load",
+      "states": {
+        "load": {
+          "animations": [{ "mod.dashtrail": "q.is_local_player" }]
+        }
+      }
+    },
+    "controller.animation.xszc.modules.dashtrail": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "transitions": [{ "dashtrail": "q.is_moving" }]
+        },
+        "dashtrail": {
+          "particle_effects": [
+            { "effect": "dashtrail.cubics.g1" },
+            { "effect": "dashtrail.cubics.g2" },
+            { "effect": "dashtrail.cubics.g3" },
+            { "effect": "dashtrail.cubics.g4" },
+            { "effect": "dashtrail.cubics.g5" }
+          ],
+          "transitions": [{ "default": "!q.is_moving" }]
+        }
+      }
+    }
+  }
+}
