@@ -1,7 +1,7 @@
-// 由@Greninja.制作的文件. 
+// 由@XSzC.制作的文件. 
 // 未经允许不要使用任何文件. 请阅读LICENSE.txt
 
-// File made by @Greninja.
+// File made by @XSzC.
 // Don't use any file without permission. Read LICENSE.txt
 
 {"format_version":"1.12.0","minecraft:geometry":[{"description":{"identifier":"geometry.xszc.armor_helmet","texture_width":16,"texture_height":16,"visible_bounds_width":2,"visible_bounds_height":2.5,"visible_bounds_offset":[0,0,0]},"bones":[{"name":"xszc_modules","pivot":[0,0,0]},{"name":"armor_hud","parent":"xszc_modules","pivot":[0,0,0]},{"name":"hud_helmet","parent":"armor_hud","pivot":[0,0,0],"cubes":[{"origin":[-8,500,0],"size":[16,16,0],"uv":[0,0]}]}]},{"description":{"identifier":"geometry.xszc.armor_chestplate","texture_width":16,"texture_height":16,"visible_bounds_width":2,"visible_bounds_height":2.5,"visible_bounds_offset":[0,0,0]},"bones":[{"name":"xszc_modules","pivot":[0,0,0]},{"name":"armor_hud","parent":"xszc_modules","pivot":[0,0,0]},{"name":"hud_chestplate","parent":"armor_hud","pivot":[0,0,0],"cubes":[{"origin":[8,500,0],"size":[16,16,0],"uv":[0,0]}]}]},{"description":{"identifier":"geometry.xszc.armor_leggings","texture_width":16,"texture_height":16,"visible_bounds_width":2,"visible_bounds_height":2.5,"visible_bounds_offset":[0,0,0]},"bones":[{"name":"xszc_modules","pivot":[0,0,0]},{"name":"armor_hud","parent":"xszc_modules","pivot":[0,0,0]},{"name":"hud_leggings","parent":"armor_hud","pivot":[0,0,0],"cubes":[{"origin":[24,500,0],"size":[16,16,0],"uv":[0,0]}]}]},{"description":{"identifier":"geometry.xszc.armor_boots","texture_width":16,"texture_height":16,"visible_bounds_width":2,"visible_bounds_height":2.5,"visible_bounds_offset":[0,0,0]},"bones":[{"name":"xszc_modules","pivot":[0,0,0]},{"name":"armor_hud","parent":"xszc_modules","pivot":[0,0,0]},{"name":"hud_boots","parent":"armor_hud","pivot":[0,0,0],"cubes":[{"origin":[40,500,0],"size":[16,16,0],"uv":[0,0]}]}]}]}

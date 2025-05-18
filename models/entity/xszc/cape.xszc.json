@@ -1,7 +1,7 @@
-// 由@Greninja.制作的文件. 
+// 由@XSzC.制作的文件. 
 // 未经允许不要使用任何文件. 请阅读LICENSE.txt
 
-// File made by @Greninja.
+// File made by @XSzC.
 // Don't use any file without permission. Read LICENSE.txt
 
 {"format_version":"1.12.0","minecraft:geometry":[{"description":{"identifier":"geometry.xszc.cape","texture_width":64,"texture_height":32,"visible_bounds_width":2,"visible_bounds_height":2.5,"visible_bounds_offset":[0,0.75,0]},"bones":[{"name":"root","pivot":[0,0,0]},{"name":"cape","parent":"root","pivot":[0,24,2],"rotation":[0,180,0],"cubes":[{"origin":[-5,8,1],"size":[10,16,1],"uv":[0,0]}]}]},{"description":{"identifier":"geometry.xszc.cape_emote","texture_width":64,"texture_height":32,"visible_bounds_width":2,"visible_bounds_height":2.5,"visible_bounds_offset":[0,0.75,0]},"bones":[{"name":"root","pivot":[0,0,0]},{"name":"waist","parent":"root","pivot":[0,12,0]},{"name":"body","parent":"waist","pivot":[0,24,0]},{"name":"cape","parent":"body","pivot":[0,24,2],"rotation":[0,180,0],"cubes":[{"origin":[-5,8,1],"size":[10,16,1],"uv":[0,0]}]}]}]}
