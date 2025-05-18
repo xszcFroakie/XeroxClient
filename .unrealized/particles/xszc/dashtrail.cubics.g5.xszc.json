@@ -1,3 +1,9 @@
+// 文件由@XSzC.修改.
+// 未经允许不要使用任何文件. 请阅读LICENSE.txt
+
+// File modified by @XSzC.
+// Don't use any file without permission. Read LICENSE.txt
+
 {
   "format_version": "1.10.0",
   "particle_effect": {
@@ -21,7 +27,7 @@
         "num_particles": "math.round(math.random(0, 1.7) * (v.emitter_random_1 + v.emitter_random_2 + v.emitter_random_3 + v.emitter_random_4) / 4)"
       },
       "minecraft:emitter_lifetime_looping": {
-        "active_time": "math.random(0.05, 0.1)"
+        "active_time": "math.random(0.1, 0.15)"
       },
       "minecraft:emitter_shape_sphere": {
         "radius": 0.3,

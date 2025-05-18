@@ -1,0 +1,50 @@
+// 文件由@XSzC.修改.
+// 未经允许不要使用任何文件. 请阅读LICENSE.txt
+
+// File modified by @XSzC.
+// Don't use any file without permission. Read LICENSE.txt
+
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.xszc.modules.dashtrail": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "transitions": [{ "dashtrail": "q.is_moving" }]
+        },
+        "dashtrail": {
+          "particle_effects": [
+            { "effect": "dashtrail.cubics.g1" },
+            { "effect": "dashtrail.cubics.g2" },
+            { "effect": "dashtrail.cubics.g3" },
+            { "effect": "dashtrail.cubics.g4" },
+            { "effect": "dashtrail.cubics.g5" },
+            { "effect": "dashtrail.cubics.t1" },
+            { "effect": "dashtrail.cubics.t2" },
+            { "effect": "dashtrail.cubics.t3" },
+            { "effect": "dashtrail.cubics.t4" },
+            { "effect": "dashtrail.cubics.t5" },
+            { "effect": "dashtrail.cubics.t6" },
+            { "effect": "dashtrail.cubics.t7" },
+            { "effect": "dashtrail.cubics.t8" },
+            { "effect": "dashtrail.cubics.t9" },
+            { "effect": "dashtrail.cubics.t10" },
+            { "effect": "dashtrail.cubics.t11" },
+            { "effect": "dashtrail.cubics.t12" },
+            { "effect": "dashtrail.cubics.t13" },
+            { "effect": "dashtrail.cubics.t14" },
+            { "effect": "dashtrail.cubics.t15" },
+            { "effect": "dashtrail.cubics.t16" },
+            { "effect": "dashtrail.cubics.t17" },
+            { "effect": "dashtrail.cubics.t18" },
+            { "effect": "dashtrail.cubics.t19" },
+            { "effect": "dashtrail.cubics.t20" },
+            { "effect": "dashtrail.cubics.t21" }
+          ],
+          "transitions": [{ "default": "!q.is_moving" }]
+        }
+      }
+    }
+  }
+}
