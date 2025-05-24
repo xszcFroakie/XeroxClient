@@ -1,0 +1,133 @@
+// File made by @XSzC.
+// Secondary distribution must follow the GPL-3.0-only Protocol!!
+
+{
+  "namespace": "xc_common",
+
+  "dropdown": {
+    "type": "panel",
+    "$dropdown_content|default": "common.empty_panel",
+    "$dropdown_toggle|default": "common.checkbox",
+    "$dropdown_name|default": "dropdown_control",
+    "$dropdown_scroll_content_size|default": ["100%", "500%"],
+    "$dropdown_toggle_name|default": "($dropdown_name + '_toggle')",
+    "$dropdown_background|default": "common.dropdown_background",
+    "controls": [
+      {
+        "$dropdown_name@$dropdown_toggle": {
+          "type": "dropdown",
+          "$toggle_view_binding_name": "$dropdown_name",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "dropdown_name": "$dropdown_name",
+          "dropdown_content_control": "dropdown_content",
+          "dropdown_area": "$dropdown_area",
+          "$toggle_name": "$dropdown_name",
+          "$toggle_state_binding_name": "('#' + $dropdown_name)",
+          "$toggle_tts_name": "accessibility.dropdown.tts.title",
+          "$toggle_tts_toggle_on_text": "",
+          "$toggle_tts_toggle_off_text": "",
+          "tts_control_type_order_priority": -1
+        }
+      },
+      {
+        "dropdown_content": {
+          "type": "input_panel",
+          "layer": 42,
+          "size": "$dropdown_scroll_content_size",
+          "$anchor_dropdown_content_from|default": "top_left",
+          "$anchor_dropdown_content_to|default": "top_left",
+          "anchor_from": "$anchor_dropdown_content_from",
+          "anchor_to": "$anchor_dropdown_content_to",
+          "modal": true,
+          "property_bag": {
+            "#is_dropdown": true
+          },
+          "ttsSectionContainer": true,
+          "$dropdown_content_controls|default": [
+            {
+              "scroll@xc_modern_scrolling_panel.scrolling_panel": {
+                "layer": 2,
+                "size": ["100%", "100%"],
+                "$scrolling_pane_size": ["100%", "100%"],
+                "$scrolling_content": "$dropdown_content",
+                "$scroll_view_port_size": ["100% - 4px", "100% - 4px"],
+                "$scroll_view_port_size_touch": ["100% - 4px", "100% - 4px"],
+                "$scroll_view_port_offset": [2, 2],
+                "$scroll_view_port_offset_touch": [2, 2],
+                "$scroll_size": [5, "100%-2px"],
+                "$scroll_size_touch": [5, "100%-2px"],
+                "$scroll_background_image_control": "$dropdown_background",
+                "$background_size": ["100%", "100%"],
+                "$background_size_touch": ["100%", "100%"],
+                "$show_background": true,
+                "$scroll_bar_contained": true
+              }
+            }
+          ],
+          "controls": "$dropdown_content_controls",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "($dropdown_name)",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible",
+              "resolve_sibling_scope": true
+            }
+          ],
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_cancel",
+              "to_button_id": "button.dropdown_exit",
+              "mapping_type": "global"
+            },
+            {
+              "from_button_id": "button.menu_ok",
+              "to_button_id": "button.dropdown_exit",
+              "mapping_type": "global"
+            },
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.dropdown_exit",
+              "mapping_type": "global"
+            },
+            {
+              "from_button_id": "button.menu_up",
+              "to_button_id": "button.menu_up",
+              "mapping_type": "global",
+              "scope": "view"
+            },
+            {
+              "from_button_id": "button.menu_down",
+              "to_button_id": "button.menu_down",
+              "mapping_type": "global",
+              "scope": "view"
+            },
+            {
+              "from_button_id": "button.menu_left",
+              "to_button_id": "button.menu_left",
+              "mapping_type": "global",
+              "scope": "view"
+            },
+            {
+              "from_button_id": "button.menu_right",
+              "to_button_id": "button.menu_right",
+              "mapping_type": "global",
+              "scope": "view"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+// ▒██   ██▒  ██████ ▒███████▒ ▄████▄  
+// ▒▒ █ █ ▒░▒██    ▒ ▒ ▒ ▒ ▄▀░▒██▀ ▀█  
+// ░░  █   ░░ ▓██▄   ░ ▒ ▄▀▒░ ▒▓█    ▄ 
+//  ░ █ █ ▒   ▒   ██▒  ▄▀▒   ░▒▓▓▄ ▄██▒
+// ▒██▒ ▒██▒▒██████▒▒▒███████▒▒ ▓███▀ ░
+// ▒▒ ░ ░▓ ░▒ ▒▓▒ ▒ ░░▒▒ ▓░▒░▒░ ░▒ ▒  ░
+// ░░   ░▒ ░░ ░▒  ░ ░░░▒ ▒ ░ ▒  ░  ▒   
+//  ░    ░  ░  ░  ░  ░ ░ ░ ░ ░░        
+//  ░    ░        ░    ░ ░    ░ ░      
+//                   ░        ░        

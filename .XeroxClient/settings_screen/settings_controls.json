@@ -1,0 +1,278 @@
+// File made by @XSzC.
+// Secondary distribution must follow the GPL-3.0-only Protocol!!
+
+{
+  "namespace": "xc_modern_settings:controls",
+
+  "option_text_edit_control@xc_modern_edit_box.text_edit_box": {
+    "$option_text_edit_control_size|default": ["100%", 20],
+    "size": "$option_text_edit_control_size",
+    "$text_edit_box_content_binding_name": "$option_binding_name",
+    "$text_edit_box_binding_collection_name": "$option_binding_name",
+    "$text_edit_box_binding_type": "global",
+    "$text_box_enabled_binding_name": "$option_enabled_binding_name",
+    "enabled": "$enabled",
+    "$place_holder_text": "$option_place_holder_text",
+    "$text_box_tts_header": "$option_label",
+    "variables": [
+      {
+        "requires": "(not $option_enabled_binding_name or not $enabled)",
+        "$text_box_enabled_binding_name": "#not_data_bound",
+        "$text_edit_box_enabled_binding_type": "none"
+      }
+    ]
+  },
+
+  "option_toggle_state": {
+    "type": "image",
+    "size": [8, 8],
+    "texture": "textures/XeroxClient/White"
+  },
+
+  "option_toggle_default@xc_modern_settings:controls.option_toggle_state": {
+    "color": "$xeroxclient_ui_theme_button_default_color",
+    "alpha": "$xeroxclient_ui_theme_button_default_alpha"
+  },
+
+  "option_toggle_hover@xc_modern_settings:controls.option_toggle_state": {
+    "color": "$xeroxclient_ui_theme_button_hover_color",
+    "alpha": "$xeroxclient_ui_theme_button_hover_alpha"
+  },
+
+  "option_toggle_pressed@xc_modern_settings:controls.option_toggle_state": {
+    "color": "$xeroxclient_ui_theme_button_pressed_color",
+    "alpha": "$xeroxclient_ui_theme_button_pressed_alpha"
+  },
+
+  "option_toggle_locked@xc_modern_settings:controls.option_toggle_state": {
+    "color": "$xeroxclient_ui_theme_button_locked_color",
+    "alpha": "$xeroxclient_ui_theme_button_locked_alpha"
+  },
+
+  "option_toggle_control@settings_common.option_toggle_control": {
+    "$unchecked_control": "xc_modern_settings:controls.option_toggle_default",
+    "$checked_control": "xc_modern_settings:controls.option_toggle_pressed",
+    "$unchecked_hover_control": "xc_modern_settings:controls.option_toggle_hover",
+    "$checked_hover_control": "xc_modern_settings:controls.option_toggle_hover",
+    "$unchecked_locked_control": "xc_modern_settings:controls.option_toggle_locked",
+    "$unchecked_locked_hover_control": "xc_modern_settings:controls.option_toggle_locked",
+    "$checked_locked_control": "xc_modern_settings:controls.option_toggle_locked",
+    "$checked_locked_hover_control": "xc_modern_settings:controls.option_toggle_locked"
+  },
+
+  "option_radio_state": {
+    "type": "panel",
+    "size": ["100%", 16],
+    "$radio_label_bindings|default": [],
+    "$no_label|default": false,
+    "controls": [
+      {
+        "radio_image@$toggle_state": {
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "size": [10, 10],
+          "offset": [3, 0],
+          "layer": 2
+        }
+      },
+      {
+        "radio_label": {
+          "ignored": "$no_label",
+          "type": "label",
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "text": "$radio_label_text",
+          "font_type": "$global_font_type",
+          "backup_font_type": "$global_font_type_backup",
+          "offset": [16, 0],
+          "size": ["100% - 16px", "default"],
+          "bindings": "$radio_label_bindings",
+          "layer": 2
+        }
+      }
+    ]
+  },
+
+  "option_radio_default@xc_modern_settings:controls.option_radio_state": {
+    "$toggle_state": "@xc_modern_settings:controls.option_toggle_default"
+  },
+
+  "option_radio_hover@xc_modern_settings:controls.option_radio_state": {
+    "$toggle_state": "@xc_modern_settings:controls.option_toggle_hover"
+  },
+
+  "option_radio_pressed@xc_modern_settings:controls.option_radio_state": {
+    "$toggle_state": "@xc_modern_settings:controls.option_toggle_pressed"
+  },
+
+  "option_radio_locked@xc_modern_settings:controls.option_radio_state": {
+    "$toggle_state": "@xc_modern_settings:controls.option_toggle_locked"
+  },
+
+  "radio_with_label_core@settings_common.radio_with_label_core": {
+    "$unchecked_control": "xc_modern_settings:controls.option_radio_default",
+    "$checked_control": "xc_modern_settings:controls.option_radio_pressed",
+    "$unchecked_hover_control": "xc_modern_settings:controls.option_radio_hover",
+    "$checked_hover_control": "xc_modern_settings:controls.option_radio_hover",
+    "$unchecked_locked_control": "xc_modern_settings:controls.option_radio_locked",
+    "$unchecked_locked_hover_control": "xc_modern_settings:controls.option_radio_locked",
+    "$checked_locked_control": "xc_modern_settings:controls.option_radio_locked",
+    "$checked_locked_hover_control": "xc_modern_settings:controls.option_radio_locked"
+  },
+
+  "option_slider_control": {
+    "type": "panel",
+    "size": ["100%", 16],
+    "controls": [
+      {
+        "slider@xc_modern_slider.slider": {
+          "$option_label|default": "",
+          "$slider_tts_header": "$option_label",
+          "$slider_tts_header_binding_type": "global",
+          "enabled": "$enabled",
+          "$slider_enabled_binding_name": "$option_enabled_binding_name",
+          "$slider_enabled_binding_type": "global",
+          "variables": [
+            {
+              "requires": "(not $option_enabled_binding_name or not $enabled)",
+              "$slider_enabled_binding_name": "#not_data_bound",
+              "$slider_enabled_binding_type": "none"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  // dropdown
+
+  "option_generic": {
+    "type": "panel",
+    "$option_generic_panel_size|default": ["100%", "100%c"],
+    "size": "$option_generic_panel_size",
+    "$enabled|default": true,
+    "$option_enabled_binding_name|default": "",
+    "controls": [
+      {
+        "option_generic_core@xc_modern_settings:controls.option_generic_core": {}
+      }
+    ]
+  },
+
+  "option_generic_core": {
+    "$allow_data_binding|default": true,
+    "$option_label|default": "",
+    "$show_option_label|default": true,
+    "$label_bindings|default": [],
+    "$has_option_description|default": false,
+    "$option_description|default": "",
+    "$option_enabled_binding_type|default": "global",
+    "$option_label_alignment|default": "left",
+    "$label_offset|default": [0, 0],
+    "type": "stack_panel",
+    "size": ["100%", "100%c"],
+    "enabled": "$enabled",
+    "variables": [
+      {
+        "requires": "(not $enabled or not $option_enabled_binding_name)",
+        "$option_enabled_binding_type": "none",
+        "$option_enabled_binding_name": "#not_data_bound"
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "$option_enabled_binding_type",
+        "binding_name": "$option_enabled_binding_name",
+        "binding_name_override": "#enabled"
+      }
+    ],
+    "controls": [
+      {
+        "layout": {
+          "type": "panel",
+          "$line_size|default": ["100%", "100%c - 16px + 2px"],
+          "$line_min_size|default": ["100%", 16],
+          "size": "$line_size",
+          "min_size": "$line_min_size",
+          "$label_size|default": ["100% - 34px", "default"],
+          "$label_offset|default": [34, 3],
+          "controls": [
+            {
+              "$control_name@$control_name": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left"
+              }
+            },
+            {
+              "option_label": {
+                "type": "label",
+                "color": "$main_header_text_color",
+                "text_alignment": "$option_label_alignment",
+                "layer": 1,
+                "size": "$label_size",
+                "offset": "$label_offset",
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "text": "$option_label",
+                "visible": "$show_option_label",
+                "bindings": "$label_bindings",
+                "locked_color": "$xeroxclient_ui_theme_button_text_locked_color"
+              }
+            },
+            {
+              "option_descriptive_text": {
+                "ignored": "(not $has_option_description)",
+                "type": "label",
+                "text_alignment": "$option_label_alignment",
+                "size": "$label_size",
+                "offset": "$label_offset",
+                "min_size": [0, 0],
+                "color": "$option_description_text_color",
+                "text": "$option_description",
+                "visible": "$show_option_label",
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "locked_color": "$xeroxclient_ui_theme_button_text_locked_color"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "padding": {
+          "type": "panel",
+          "size": [0, 2]
+        }
+      }
+    ]
+  },
+
+  "option_toggle@xc_modern_settings:controls.option_generic": {
+    "$control_name": "xc_modern_settings:controls.option_toggle_control",
+    "$option_label|default": "",
+    "$toggle_tts_header": "$option_label"
+  },
+
+  "option_radio_group@xc_modern_settings:controls.option_generic": {
+    "$control_name": "xc_modern_settings:controls.option_radio_group_control"
+  },
+
+  "option_text_edit@xc_modern_settings:controls.option_generic": {
+    "$option_place_holder_text|default": "...",
+    "$control_name": "xc_modern_settings:controls.option_text_edit_control"
+  },
+
+  "option_slider@xc_modern_settings:controls.option_generic": {
+    "$control_name": "xc_modern_settings:controls.option_slider_control"
+  }
+}
+// ▒██   ██▒  ██████ ▒███████▒ ▄████▄  
+// ▒▒ █ █ ▒░▒██    ▒ ▒ ▒ ▒ ▄▀░▒██▀ ▀█  
+// ░░  █   ░░ ▓██▄   ░ ▒ ▄▀▒░ ▒▓█    ▄ 
+//  ░ █ █ ▒   ▒   ██▒  ▄▀▒   ░▒▓▓▄ ▄██▒
+// ▒██▒ ▒██▒▒██████▒▒▒███████▒▒ ▓███▀ ░
+// ▒▒ ░ ░▓ ░▒ ▒▓▒ ▒ ░░▒▒ ▓░▒░▒░ ░▒ ▒  ░
+// ░░   ░▒ ░░ ░▒  ░ ░░░▒ ▒ ░ ▒  ░  ▒   
+//  ░    ░  ░  ░  ░  ░ ░ ░ ░ ░░        
+//  ░    ░        ░    ░ ░    ░ ░      
+//                   ░        ░        
