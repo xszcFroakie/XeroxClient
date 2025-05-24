@@ -1,4 +1,0 @@
-credits
-
--item counter by Vargoo
--durability viewer by Xanerix

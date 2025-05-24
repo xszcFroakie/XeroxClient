@@ -4,7 +4,7 @@
 {
   "format_version": 2,
   "header": {
-    "description": "Follow the GPL-3.0-only Protocol.\n\nCredits:\n main - @XSzC\n background - @Camille Unknown(Bluesky)",
+    "description": "Follow the GPL-3.0-only Protocol.\n\nFor more info, read README.md.",
     "name": "§l§bXerox§rClient - §3Neo§r",
     "uuid": "20064BD5-4EE7-46B5-A12D-F2314A6777E8",
     "version": [1, 1, 0],
