@@ -1,13 +1,10 @@
-// 由@XSzC.制作的文件.
-// 未经允许不要使用任何文件. 请阅读LICENSE.txt
-
 // File made by @XSzC.
-// Don't use any file without permission. Read LICENSE.txt
+// Secondary distribution must follow the GPL-3.0-only Protocol!!
 
 {
   "format_version": 2,
   "header": {
-    "description": "Made By XSzC.§r\nDont distribute!!",
+    "description": "Follow the GPL-3.0-only Protocol.\n\nCredits:\n main - @XSzC\n background - @Camille Unknown(Bluesky)",
     "name": "§l§bXerox§rClient - §3Neo§r",
     "uuid": "20064BD5-4EE7-46B5-A12D-F2314A6777E8",
     "version": [1, 1, 0],
@@ -23,7 +20,17 @@
   ],
   "metadata": {
     "authors": ["XSzC."],
-    "license": "玩家可以修改本包内容个人使用, 但禁止在网络上发布其修改过的资源包.你不可以私自将它整合到其他资源包并发布, 更不可以用来盈利.未经作者同意禁止私自修改进行第二次发布, 转载, 或用于商业用途.",
+    "license": "Follow the GPL-3.0-only Protocol.",
     "url": "https://space.bilibili.com/687032519"
   }
 }
+// ▒██   ██▒  ██████ ▒███████▒ ▄████▄  
+// ▒▒ █ █ ▒░▒██    ▒ ▒ ▒ ▒ ▄▀░▒██▀ ▀█  
+// ░░  █   ░░ ▓██▄   ░ ▒ ▄▀▒░ ▒▓█    ▄ 
+//  ░ █ █ ▒   ▒   ██▒  ▄▀▒   ░▒▓▓▄ ▄██▒
+// ▒██▒ ▒██▒▒██████▒▒▒███████▒▒ ▓███▀ ░
+// ▒▒ ░ ░▓ ░▒ ▒▓▒ ▒ ░░▒▒ ▓░▒░▒░ ░▒ ▒  ░
+// ░░   ░▒ ░░ ░▒  ░ ░░░▒ ▒ ░ ▒  ░  ▒   
+//  ░    ░  ░  ░  ░  ░ ░ ░ ░ ░░        
+//  ░    ░        ░    ░ ░    ░ ░      
+//                   ░        ░        
