@@ -24,8 +24,8 @@
   "$xeroxclient_ui_theme_button_locked_alpha": 0.7,
 
   "$xeroxclient_ui_theme_button_default_color": [0.0039215686, 0.0549019608, 0.0549019607],
-  "$xeroxclient_ui_theme_button_hover_color": [0.5058823529, 0.2588235294, 0.8352941176],
-  "$xeroxclient_ui_theme_button_pressed_color": [0.5058823529, 0.2588235294, 0.8352941176],
+  "$xeroxclient_ui_theme_button_hover_color": [0.5058823529, 0.8470588235, 0.8156862745],
+  "$xeroxclient_ui_theme_button_pressed_color": [0.5058823529, 0.8470588235, 0.8156862745],
   "$xeroxclient_ui_theme_button_locked_color": [0.627451, 0.627451, 0.627451],
 
   "$xeroxclient_ui_theme_button_content_default_offset": [0, 0],
