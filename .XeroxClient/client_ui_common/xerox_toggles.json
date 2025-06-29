@@ -5,11 +5,21 @@
   "namespace": "common_toggles",
 
   "tbase@common_toggles.light_text_toggle": {
-    "$xeroxclient_ui_control": true
+    "$xeroxclient_ui_control": true,
+    "$default_texture": "textures/XeroxClient/White",
+    "$hover_texture": "textures/XeroxClient/White",
+    "$pressed_texture": "textures/XeroxClient/White",
+    "$pressed_no_hover_texture": "textures/XeroxClient/White",
+    "$locked_texture": "textures/XeroxClient/White"
   },
 
   "ibase@common_toggles.light_image_toggle": {
-    "$xeroxclient_ui_control": true
+    "$xeroxclient_ui_control": true,
+    "$default_texture": "textures/XeroxClient/White",
+    "$hover_texture": "textures/XeroxClient/White",
+    "$pressed_texture": "textures/XeroxClient/White",
+    "$pressed_no_hover_texture": "textures/XeroxClient/White",
+    "$locked_texture": "textures/XeroxClient/White"
   },
 
   ////*/ Text Toggle /*////

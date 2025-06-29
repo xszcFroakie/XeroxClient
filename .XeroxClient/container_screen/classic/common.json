@@ -6,42 +6,35 @@
 
   "slot_default": {
     "type": "image",
-    "size": ["65%", "100%x"],
     "texture": "textures/XeroxClient/icon/container_default"
   },
 
   "slot_auto_place": {
     "type": "image",
-    "size": ["65%", "100%x"],
     "texture": "textures/XeroxClient/icon/container_auto_place"
   },
 
   "slot_drop": {
     "type": "image",
-    "size": ["65%", "100%x"],
     "texture": "textures/XeroxClient/icon/container_drop"
-  },
-
-  "slot_mode_toggle@common_toggles.a_rc_8x_image": {
-    "size": ["100%", "100%x"],
-    "$toggle_name": "艾斯爱慕",
-    "$radio_toggle_group": true
   },
 
   "mode_selection_panel": {
     "type": "stack_panel",
     "size": "$default_size",
-    "$default_size": [22, 66],
+    "$default_size": [18, 48],
     "animation_reset_name": "screen_animation_reset",
     "anims": [
       "@container:classic_animation.size_enter",
       "@container:classic_animation.size_out"
     ],
-    "$button_image_size_override": ["100% - 2px", "100%x"],
-    "$button_content_size": ["100%", "100%"],
+    "$button_image_size": ["88.8888888889%", "100%"],
+    "$toggle_name": "艾斯爱慕",
+    "$radio_toggle_group": true,
     "controls": [
       {
-        "default@xc_modern_container:classic_common.slot_mode_toggle": {
+        "default@common_toggles.ta_rc_8x_image": {
+          "size": ["100%", "fill"],
           "$button_content": "xc_modern_container:classic_common.slot_default",
           "$toggle_view_binding_name": "genshinimpact_normal",
           "$toggle_group_forced_index": 0,
@@ -49,14 +42,16 @@
         }
       },
       {
-        "auto_place@xc_modern_container:classic_common.slot_mode_toggle": {
+        "auto_place@common_toggles.ibase": {
+          "size": ["100%", "fill"],
           "$button_content": "xc_modern_container:classic_common.slot_auto_place",
-          "$toggle_view_binding_name": "reserve1999_autoplace",
+          "$toggle_view_binding_name": "zenlesszonezero_autoplace",
           "$toggle_group_forced_index": 1
         }
       },
       {
-        "drop@xc_modern_container:classic_common.slot_mode_toggle": {
+        "drop@common_toggles.ba_rc_8x_image": {
+          "size": ["100%", "fill"],
           "$button_content": "xc_modern_container:classic_common.slot_drop",
           "$toggle_view_binding_name": "honkaistarrail_dropone",
           "$toggle_group_forced_index": 2
@@ -1531,13 +1526,13 @@
     ]
   }
 }
-// ▒██   ██▒  ██████ ▒███████▒ ▄████▄  
-// ▒▒ █ █ ▒░▒██    ▒ ▒ ▒ ▒ ▄▀░▒██▀ ▀█  
-// ░░  █   ░░ ▓██▄   ░ ▒ ▄▀▒░ ▒▓█    ▄ 
+// ▒██   ██▒  ██████ ▒███████▒ ▄████▄
+// ▒▒ █ █ ▒░▒██    ▒ ▒ ▒ ▒ ▄▀░▒██▀ ▀█
+// ░░  █   ░░ ▓██▄   ░ ▒ ▄▀▒░ ▒▓█    ▄
 //  ░ █ █ ▒   ▒   ██▒  ▄▀▒   ░▒▓▓▄ ▄██▒
 // ▒██▒ ▒██▒▒██████▒▒▒███████▒▒ ▓███▀ ░
 // ▒▒ ░ ░▓ ░▒ ▒▓▒ ▒ ░░▒▒ ▓░▒░▒░ ░▒ ▒  ░
-// ░░   ░▒ ░░ ░▒  ░ ░░░▒ ▒ ░ ▒  ░  ▒   
-//  ░    ░  ░  ░  ░  ░ ░ ░ ░ ░░        
-//  ░    ░        ░    ░ ░    ░ ░      
-//                   ░        ░        
+// ░░   ░▒ ░░ ░▒  ░ ░░░▒ ▒ ░ ▒  ░  ▒
+//  ░    ░  ░  ░  ░  ░ ░ ░ ░ ░░
+//  ░    ░        ░    ░ ░    ░ ░
+//                   ░        ░
