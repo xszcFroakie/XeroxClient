@@ -48,15 +48,6 @@
           ]
         }
       }
-    ],
-    "bindings": [
-      {
-        "binding_type": "view",
-        "source_control_name": "slot_background",
-        "source_property_name": "#visible",
-        "target_property_name": "#visible",
-        "resolve_sibling_scope": true
-      }
     ]
   },
 
@@ -86,34 +77,49 @@
 
   "slot_size1": {
     "anim_type": "size",
-    "from": ["100%y", 24],
-    "to": ["100%y", "5%"],
+    "from": [0, 0],
+    "to": [0, "0.5%"],
     "easing": "out_cubic",
     "duration": 0.2
   },
 
   "slot_size2": {
     "anim_type": "size",
-    "to": ["100%y", 24],
-    "from": ["100%y", "5%"],
+    "to": [0, 0],
+    "from": [0, "0.5%"],
     "easing": "out_cubic",
     "duration": 0.2
+  },
+
+  "slot_padding1": {
+    "type": "panel",
+    "size": [0, "100%"],
+    "anims": ["@xc_modern_hotbar:zeroday.slot_size1"]
+  },
+
+  "slot_padding2": {
+    "type": "panel",
+    "size": [0, "100%"],
+    "anims": ["@xc_modern_hotbar:zeroday.slot_size2"]
   },
 
   "gui_hotbar_grid_item_1": {
     "type": "stack_panel",
     "size": ["100%cm", 30],
-    "controls": [
+    "bindings": [
       {
-        "padding_1": {
-          "type": "panel",
-          "size": [0, "fill"]
-        }
-      },
+        "binding_type": "view",
+        "source_control_name": "collection_panel_1",
+        "source_property_name": "((#slot_scale_factor_calc > #slot_scale_factor) * 1)",
+        "target_property_name": "#visible",
+        "resolve_sibling_scope": true
+      }
+    ],
+    "controls": [
       {
         "collection_panel_1": {
           "type": "collection_panel",
-          "size": ["100%cm", "100%"],
+          "size": [0, "100%"],
           "use_anchored_offset": true,
           "property_bag": {
             "#current_eq_expected": true,
@@ -121,8 +127,8 @@
             "#slot_scale_factor": 0
           },
           "factory": {
-            "name": "hotbar_slot_1",
-            "control_name": "xc_modern_hotbar:zeroday.gui_hotbar_grid_item_template_1",
+            "name": "('hotbar_slot_' + $slot_number + '_1')",
+            "control_name": "xc_modern_hotbar:zeroday.slot_padding1",
             "max_children_size": 1
           },
           "bindings": [
@@ -154,7 +160,7 @@
             },
             {
               "binding_type": "view",
-              "source_property_name": "(#if_le_4 * #slot_absolute_index)",
+              "source_property_name": "(#if_le_4 * #slot_absolute_index * 1)",
               "target_property_name": "#le_4_scale_factor"
             },
             {
@@ -165,6 +171,16 @@
             {
               "binding_type": "view",
               "source_property_name": "(20 - #le_4_scale_factor - #gr_4_scale_factor)",
+              "target_property_name": "#slot_scale_factor_unprocessed"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#slot_scale_factor = #slot_scale_factor_expected)",
+              "target_property_name": "#current_eq_expected"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#slot_scale_factor_unprocessed * 100)",
               "target_property_name": "#slot_scale_factor_expected"
             },
             {
@@ -174,22 +190,12 @@
             },
             {
               "binding_type": "view",
-              "source_property_name": "(#slot_scale_factor = #slot_scale_factor_expected)",
-              "target_property_name": "#current_eq_expected"
-            },
-            {
-              "binding_type": "view",
               "source_property_name": "((#slot_scale_factor_calc * #current_eq_expected) + (#slot_scale_factor * (not #current_eq_expected)))",
               "target_property_name": "#slot_scale_factor_calc"
             },
             {
               "binding_type": "view",
-              "source_property_name": "(#slot_scale_factor_calc > #slot_scale_factor)",
-              "target_property_name": "#visible"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "(0 + (#slot_scale_factor_calc - #slot_scale_factor) * (#slot_scale_factor_calc > #slot_scale_factor))",
+              "source_property_name": "((#slot_scale_factor_calc - #slot_scale_factor) * (#slot_scale_factor_calc > #slot_scale_factor))",
               "target_property_name": "#size_binding_y"
             },
             {
@@ -199,6 +205,11 @@
             }
           ]
         }
+      },
+      {
+        "gui_hotbar_grid_item_template_1@xc_modern_hotbar:zeroday.gui_hotbar_grid_item_template": {
+          "size": ["100%y", "fill"]
+        }
       }
     ]
   },
@@ -206,17 +217,20 @@
   "gui_hotbar_grid_item_2": {
     "type": "stack_panel",
     "size": ["100%cm", 30],
-    "controls": [
+    "bindings": [
       {
-        "padding_2": {
-          "type": "panel",
-          "size": [0, "fill"]
-        }
-      },
+        "binding_type": "view",
+        "source_control_name": "collection_panel_2",
+        "source_property_name": "((#slot_scale_factor_calc < #slot_scale_factor) * 1)",
+        "target_property_name": "#visible",
+        "resolve_sibling_scope": true
+      }
+    ],
+    "controls": [
       {
         "collection_panel_2": {
           "type": "collection_panel",
-          "size": ["100%cm", "100%"],
+          "size": [0, "100%"],
           "use_anchored_offset": true,
           "property_bag": {
             "#current_eq_expected": true,
@@ -224,8 +238,8 @@
             "#slot_scale_factor": 0
           },
           "factory": {
-            "name": "hotbar_slot_2",
-            "control_name": "xc_modern_hotbar:zeroday.gui_hotbar_grid_item_template_2",
+            "name": "('hotbar_slot_' + $slot_number + '_2')",
+            "control_name": "xc_modern_hotbar:zeroday.slot_padding2",
             "max_children_size": 1
           },
           "bindings": [
@@ -238,13 +252,13 @@
             },
             {
               "binding_type": "view",
-              "source_property_name": "#slot_scale_factor_expected",
-              "target_property_name": "#slot_scale_factor"
+              "source_property_name": "(#slot_scale_factor = #slot_scale_factor_expected)",
+              "target_property_name": "#current_eq_expected"
             },
             {
               "binding_type": "view",
-              "source_property_name": "(#slot_scale_factor = #slot_scale_factor_expected)",
-              "target_property_name": "#current_eq_expected"
+              "source_property_name": "#slot_scale_factor_expected",
+              "target_property_name": "#slot_scale_factor"
             },
             {
               "binding_type": "view",
@@ -253,12 +267,7 @@
             },
             {
               "binding_type": "view",
-              "source_property_name": "(#slot_scale_factor_calc < #slot_scale_factor)",
-              "target_property_name": "#visible"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "(0 + (#slot_scale_factor - #slot_scale_factor_calc) * (#slot_scale_factor_calc < #slot_scale_factor))",
+              "source_property_name": "((#slot_scale_factor - #slot_scale_factor_calc) * (#slot_scale_factor_calc < #slot_scale_factor))",
               "target_property_name": "#size_binding_y"
             },
             {
@@ -268,19 +277,16 @@
             }
           ]
         }
+      },
+      {
+        "gui_hotbar_grid_item_template_2@xc_modern_hotbar:zeroday.gui_hotbar_grid_item_template": {
+          "size": ["100%y", "fill"]
+        }
       }
     ]
   },
 
-  "gui_hotbar_grid_item_template_1@xc_modern_hotbar:zeroday.gui_hotbar_grid_item_template": {
-    "size": "@xc_modern_hotbar:zeroday.slot_size1"
-  },
-
-  "gui_hotbar_grid_item_template_2@xc_modern_hotbar:zeroday.gui_hotbar_grid_item_template": {
-    "size": "@xc_modern_hotbar:zeroday.slot_size2"
-  },
-
-  /*// unrealized, cuz integer cant be converted into float :skull: //*/
+  /*// unrealized //*/
 
   "gui_hotbar_grid_item_template": {
     "type": "image",
@@ -289,24 +295,48 @@
     //"alpha": 0.3,
     //"size": "$hotbar_content_size",
     "size": ["100%y", "100%"],
-    "offset": [0, -3],
     "anchor_to": "bottom_middle",
     "anchor_from": "bottom_middle",
     "$stack_count_required": true,
     "$durability_bar_required": true,
     "$storage_bar_required": true,
-    "$item_name_text_required|default": false,
     "$slot_count_alpha|default": 0.6,
     "$item_count_scale_factor|default": 0.75,
     "controls": [
       {
-        "item_text_factory": {
-          "type": "factory",
-          "ignored": "(not $item_name_text_required)",
-          "control_ids": {
-            "item_text": "@xc_modern_hotbar:zeroday.item_name_text",
-            "jukebox_text": "@common.empty_panel"
-          }
+        "item_text_text": {
+          "type": "panel",
+          "controls": [
+            {
+              "item_text_factory": {
+                "type": "factory",
+                "control_ids": {
+                  "item_text": "@xc_modern_hotbar:zeroday.item_name_text",
+                  "jukebox_text": "@common.empty_panel"
+                }
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "slot_background",
+              "source_property_name": "#visible",
+              "target_property_name": "#not_empty",
+              "resolve_sibling_scope": true
+            },
+            {
+              "binding_name": "#slot_selected",
+              "binding_name_override": "#is_selected",
+              "binding_type": "collection",
+              "binding_collection_name": "$hotbar_collection_name"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#not_empty and #is_selected)",
+              "target_property_name": "#visible"
+            }
+          ]
         }
       },
       {
@@ -429,8 +459,16 @@
     "type": "panel",
     "size": ["100%cm", 30],
     "controls": [
-      //{ "1@xc_modern_hotbar:zeroday.gui_hotbar_grid_item_1": {} },
-      //{ "2@xc_modern_hotbar:zeroday.gui_hotbar_grid_item_2": {} },
+      /*{
+        "1@xc_modern_hotbar:zeroday.gui_hotbar_grid_item_1": {
+          "offset": [0, -3]
+        }
+      },
+      {
+        "2@xc_modern_hotbar:zeroday.gui_hotbar_grid_item_2": {
+          "offset": [0, -3]
+        }
+      }*/
       {
         "gui_hotbar_grid_item": {
           "type": "panel",
@@ -438,6 +476,7 @@
           "use_anchored_offset": true,
           "anchor_to": "bottom_middle",
           "anchor_from": "bottom_middle",
+          "offset": [0, -3],
           "bindings": [
             {
               "binding_type": "view",
