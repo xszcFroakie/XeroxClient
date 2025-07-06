@@ -106,7 +106,7 @@
     "type": "image",
     "texture": "textures/XeroxClient/rounded_corner/all8x",
     "color": "$xeroxclient_ui_theme_menu_background_color",
-    "alpha": 0.3,
+    "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
     "layer": 0,
     "size": [200, "100%cm + 5px"],
     "anchor_to": "bottom_middle",
