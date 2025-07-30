@@ -6,3 +6,4 @@
 - item counter - [@Vargoo](https://space.bilibili.com/109421510)
 - durability viewer - [@Xanerix](https://space.bilibili.com/381253187)
 - background - [@Camille Unknown](https://bsky.app/profile/camilleunknown.bsky.social)
+- most of icons - [IconPark](https://iconpark.oceanengine.com/home)
