@@ -24,6 +24,10 @@
     "ignored": true
   },
 
+  "chat_panel": {
+    "ignored": true
+  },
+
   "root_panel": {
     "modifications": [
       {
@@ -138,12 +142,48 @@
     ]
   },
 
+  "xc_hud_content_override": {
+    "type": "panel",
+    "$hud_size": [ "100%", "100%" ],
+    "$hud_player_rend_desktop_offset|default": [ 15, 15 ],
+    "variables": [
+      {
+        "requires": "($compress_hud_width)",
+        "$hud_size": [ "90%", "100%" ]
+      }
+    ],
+    "size": "$hud_size",
+    "controls": [
+      {
+        "root_panel@hud.root_panel": {}
+      },
+      {
+        "editor_gizmo_renderer@editor_gizmo_renderer": {
+          "ignored": "(not $is_editor_mode_enabled)"
+        }
+      },
+      {
+        "editor_compass_renderer@editor_compass_renderer": {
+          "ignored": "(not $is_editor_mode_enabled)"
+        }
+      },
+      {
+        "editor_volume_highlight_renderer@editor_volume_highlight_renderer": {
+          "ignored": "(not $is_editor_mode_enabled)"
+        }
+      },
+      {
+        "camera_renderer@camera_renderer": {}
+      }
+    ]
+  },
+
   "hud_screen": {
     "always_accepts_input": true,
     "render_only_when_topmost": "$touch",
     "low_frequency_rendering": true,
     "$use_loading_bars": false,
-    "$screen_content": "hud.hud_content",
+    "$screen_content": "hud.xc_hud_content_override",
     "modifications": [
       {
         "array_name": "button_mappings",
