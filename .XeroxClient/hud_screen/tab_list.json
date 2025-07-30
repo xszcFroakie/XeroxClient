@@ -15,25 +15,149 @@
         "consume_event": false
       }
     ],
+    "ignored": "$touch",
     "controls": [
       {
         "tab_list_content": {
-          "type": "image",
+          "type": "panel",
           "anchor_from": "top_middle",
           "anchor_to": "top_middle",
           "offset": [0, 10],
-          "size": [560, "100%c"],
-          "controls": [{ "tab_list_grid@xc_modern_tab_list.tab_list_grid": {} }]
+          "size": [400, 156],
+          "clips_children": true,
+          "controls": [
+            {
+              "tab_list_grid_@xc_modern_tab_list.single_list_grid": {
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "grid_item_template": "xc_modern_tab_list.tab_list_grid",
+                "size": ["100%", "100%c"]
+              }
+            }
+          ]
         }
       }
     ]
   },
 
   "tab_list_grid": {
+    "type": "panel",
+    "size": ["100%", 156],
+    "controls": [
+      {
+        "tab_list_grid_item": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": ["100%c", "100%"],
+          "controls": [
+            {
+              "stack_1": {
+                "type": "panel",
+                "size": ["100%c", 156],
+                "clips_children": true,
+                "controls": [
+                  {
+                    "1@xc_modern_tab_list.single_list_grid": {
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "stack_2": {
+                "type": "panel",
+                "size": ["100%c", 156],
+                "clips_children": true,
+                "controls": [
+                  {
+                    "2@xc_modern_tab_list.single_list_grid": {
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "offset": [0, -156]
+                    }
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#collection_index",
+                    "binding_type": "collection",
+                    "binding_collection_name": "players_collection"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#collection_index > 11)",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "stack_3": {
+                "type": "panel",
+                "size": ["100%c", 156],
+                "clips_children": true,
+                "controls": [
+                  {
+                    "3@xc_modern_tab_list.single_list_grid": {
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "offset": [0, -312]
+                    }
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#collection_index",
+                    "binding_type": "collection",
+                    "binding_collection_name": "players_collection"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#collection_index > 23)",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "stack_4": {
+                "type": "panel",
+                "size": ["100%c", 156],
+                "clips_children": true,
+                "controls": [
+                  {
+                    "4@xc_modern_tab_list.single_list_grid": {
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "offset": [0, -468]
+                    }
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#collection_index",
+                    "binding_type": "collection",
+                    "binding_collection_name": "players_collection"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#collection_index > 35)",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "single_list_grid": {
     "type": "grid",
-    "size": ["25%", "default"],
-    "anchor_from": "top_left",
-    "anchor_to": "top_left",
+    "size": [100, "100%c"],
     "grid_item_template": "xc_modern_tab_list.tab_list_grid_item",
     "collection_name": "players_collection",
     "grid_dimension_binding": "#players_grid_dimension",
@@ -46,19 +170,16 @@
 
   "tab_list_grid_item": {
     "type": "panel",
-    "size": ["25%", 14],
+    "size": [100, 13],
     "layer": 200,
     "controls": [
       {
         "background": {
           "type": "image",
-          "anchor_from": "left_middle",
-          "anchor_to": "left_middle",
-          "offset": [0.5, 0],
-          "size": ["400% - 1px", "100% - 1px"],
+          "size": ["100% - 1px", 12],
           "alpha": 0.3,
           "layer": 2,
-          "texture": "textures/XeroxClient/rounded_corner/all8x",
+          "texture": "textures/XeroxClient/rounded_corner/all2x",
           "color": "$xeroxclient_ui_theme_menu_background_color"
         }
       },
@@ -66,9 +187,7 @@
         "main": {
           "type": "stack_panel",
           "orientation": "horizontal",
-          "anchor_from": "left_middle",
-          "anchor_to": "left_middle",
-          "size": ["25%", "100% - 2px"],
+          "size": ["100% - 2px", 12],
           "layer": 3,
           "bindings": [
             {
@@ -78,12 +197,6 @@
             }
           ],
           "controls": [
-            {
-              "padding": {
-                "type": "panel",
-                "size": [2, 0]
-              }
-            },
             {
               "player_picture": {
                 "type": "panel",
@@ -137,13 +250,13 @@
     ]
   }
 }
-// ▒██   ██▒  ██████ ▒███████▒ ▄████▄  
-// ▒▒ █ █ ▒░▒██    ▒ ▒ ▒ ▒ ▄▀░▒██▀ ▀█  
-// ░░  █   ░░ ▓██▄   ░ ▒ ▄▀▒░ ▒▓█    ▄ 
+// ▒██   ██▒  ██████ ▒███████▒ ▄████▄
+// ▒▒ █ █ ▒░▒██    ▒ ▒ ▒ ▒ ▄▀░▒██▀ ▀█
+// ░░  █   ░░ ▓██▄   ░ ▒ ▄▀▒░ ▒▓█    ▄
 //  ░ █ █ ▒   ▒   ██▒  ▄▀▒   ░▒▓▓▄ ▄██▒
 // ▒██▒ ▒██▒▒██████▒▒▒███████▒▒ ▓███▀ ░
 // ▒▒ ░ ░▓ ░▒ ▒▓▒ ▒ ░░▒▒ ▓░▒░▒░ ░▒ ▒  ░
-// ░░   ░▒ ░░ ░▒  ░ ░░░▒ ▒ ░ ▒  ░  ▒   
-//  ░    ░  ░  ░  ░  ░ ░ ░ ░ ░░        
-//  ░    ░        ░    ░ ░    ░ ░      
-//                   ░        ░        
+// ░░   ░▒ ░░ ░▒  ░ ░░░▒ ▒ ░ ▒  ░  ▒
+//  ░    ░  ░  ░  ░  ░ ░ ░ ░ ░░
+//  ░    ░        ░    ░ ░    ░ ░
+//                   ░        ░
