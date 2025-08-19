@@ -26,19 +26,22 @@
     "size": ["100%c", 16],
     "controls": [
       {
-        "player_head_portrait": {
-          "type": "image",
+        "gamerpic_panel": {
+          "type": "panel",
           "size": [20, 16],
-          "layer": 12,
-          "bilinear": true,
-          "bindings": [
+          "controls": [
             {
-              "binding_name": "#gamerpic_texture_path",
-              "binding_name_override": "#texture"
-            },
-            {
-              "binding_name": "#gamerpic_texture_location_type",
-              "binding_name_override": "#texture_file_system"
+              "gamerpic_panel": {
+                "type": "custom",
+                "renderer": "profile_image_renderer",
+                "size": [16, 16],
+                "layer": 12,
+                "bindings": [
+                  {
+                    "binding_name": "#profile_image_options"
+                  }
+                ]
+              }
             }
           ]
         }
@@ -76,13 +79,13 @@
     ]
   }
 }
-// ▒██   ██▒  ██████ ▒███████▒ ▄████▄  
-// ▒▒ █ █ ▒░▒██    ▒ ▒ ▒ ▒ ▄▀░▒██▀ ▀█  
-// ░░  █   ░░ ▓██▄   ░ ▒ ▄▀▒░ ▒▓█    ▄ 
+// ▒██   ██▒  ██████ ▒███████▒ ▄████▄
+// ▒▒ █ █ ▒░▒██    ▒ ▒ ▒ ▒ ▄▀░▒██▀ ▀█
+// ░░  █   ░░ ▓██▄   ░ ▒ ▄▀▒░ ▒▓█    ▄
 //  ░ █ █ ▒   ▒   ██▒  ▄▀▒   ░▒▓▓▄ ▄██▒
 // ▒██▒ ▒██▒▒██████▒▒▒███████▒▒ ▓███▀ ░
 // ▒▒ ░ ░▓ ░▒ ▒▓▒ ▒ ░░▒▒ ▓░▒░▒░ ░▒ ▒  ░
-// ░░   ░▒ ░░ ░▒  ░ ░░░▒ ▒ ░ ▒  ░  ▒   
-//  ░    ░  ░  ░  ░  ░ ░ ░ ░ ░░        
-//  ░    ░        ░    ░ ░    ░ ░      
-//                   ░        ░        
+// ░░   ░▒ ░░ ░▒  ░ ░░░▒ ▒ ░ ▒  ░  ▒
+//  ░    ░  ░  ░  ░  ░ ░ ░ ░ ░░
+//  ░    ░        ░    ░ ░    ░ ░
+//                   ░        ░
