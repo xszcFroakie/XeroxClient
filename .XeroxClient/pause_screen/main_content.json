@@ -141,7 +141,6 @@
             },
             {
               "main_buttons_panel@xc_modern_pause.main_buttons_panel": {
-                "offset": [0, -5],
                 "layer": 1
               }
             },
@@ -151,21 +150,16 @@
                 "$ignored_default_anims": true,
                 "size": ["100%", 0],
                 "animation_reset_name": "button.player_list_close",
-                "anims": [
-                  "@pasue_animation.player_list_open",
-                  "@pasue_animation.player_list_reset0"
-                ],
+                "anims": ["@pasue_animation.player_list_open"],
                 "clips_children": true,
                 "controls": [
                   {
                     "player_list@xc_modern_pause:player_list.player_list_panel_content": {
-                      "anchor_from": "top_middle",
-                      "anchor_to": "top_middle",
+                      "size": ["100%", 0],
+                      "anchor_from": "bottom_middle",
+                      "anchor_to": "bottom_middle",
                       "animation_reset_name": "button.player_list_open",
-                      "anims": [
-                        "@pasue_animation.player_list_close",
-                        "@pasue_animation.player_list_reset1"
-                      ],
+                      "anims": ["@pasue_animation.player_list_close"],
                       "clips_children": true
                     }
                   }
@@ -189,23 +183,6 @@
           "anims": [
             "@pasue_animation.player_list_open_button_show",
             "@pasue_animation.player_list_open_button_hide"
-          ],
-          "button_mappings": [
-            {
-              "from_button_id": "button.menu_select",
-              "to_button_id": "$pressed_button_name",
-              "mapping_type": "double_pressed"
-            },
-            {
-              "from_button_id": "button.menu_ok",
-              "to_button_id": "$pressed_button_name",
-              "mapping_type": "double_pressed"
-            },
-            {
-              "ignored": "(not $hover_anim_enabled)",
-              "to_button_id": "('button.xeroxclient.' + $pressed_button_name)",
-              "mapping_type": "pressed"
-            }
           ]
         }
       },
@@ -223,29 +200,6 @@
           "anims": [
             "@pasue_animation.player_list_close_button_show",
             "@pasue_animation.player_list_close_button_hide"
-          ],
-          "button_mappings": [
-            {
-              "from_button_id": "button.menu_select",
-              "to_button_id": "$pressed_button_name",
-              "mapping_type": "double_pressed"
-            },
-            {
-              "from_button_id": "button.menu_cancel",
-              "to_button_id": "$pressed_button_name",
-              "mapping_type": "global",
-              "consume_event": false
-            },
-            {
-              "from_button_id": "button.menu_ok",
-              "to_button_id": "$pressed_button_name",
-              "mapping_type": "double_pressed"
-            },
-            {
-              "ignored": "(not $hover_anim_enabled)",
-              "to_button_id": "('button.xeroxclient.' + $pressed_button_name)",
-              "mapping_type": "pressed"
-            }
           ]
         }
       }
@@ -269,13 +223,13 @@
     "controls": [{ "main_menu@xc_modern_pause.main_menu": {} }]
   }
 }
-// ▒██   ██▒  ██████ ▒███████▒ ▄████▄  
-// ▒▒ █ █ ▒░▒██    ▒ ▒ ▒ ▒ ▄▀░▒██▀ ▀█  
-// ░░  █   ░░ ▓██▄   ░ ▒ ▄▀▒░ ▒▓█    ▄ 
+// ▒██   ██▒  ██████ ▒███████▒ ▄████▄
+// ▒▒ █ █ ▒░▒██    ▒ ▒ ▒ ▒ ▄▀░▒██▀ ▀█
+// ░░  █   ░░ ▓██▄   ░ ▒ ▄▀▒░ ▒▓█    ▄
 //  ░ █ █ ▒   ▒   ██▒  ▄▀▒   ░▒▓▓▄ ▄██▒
 // ▒██▒ ▒██▒▒██████▒▒▒███████▒▒ ▓███▀ ░
 // ▒▒ ░ ░▓ ░▒ ▒▓▒ ▒ ░░▒▒ ▓░▒░▒░ ░▒ ▒  ░
-// ░░   ░▒ ░░ ░▒  ░ ░░░▒ ▒ ░ ▒  ░  ▒   
-//  ░    ░  ░  ░  ░  ░ ░ ░ ░ ░░        
-//  ░    ░        ░    ░ ░    ░ ░      
-//                   ░        ░        
+// ░░   ░▒ ░░ ░▒  ░ ░░░▒ ▒ ░ ▒  ░  ▒
+//  ░    ░  ░  ░  ░  ░ ░ ░ ░ ░░
+//  ░    ░        ░    ░ ░    ░ ░
+//                   ░        ░
