@@ -37,7 +37,6 @@
   // Container Screen and Hotbar
 
   "$show_flying_item": false,
-  "$zeroday_style_hotbar": true, // For PC only
 
   // Client
 
