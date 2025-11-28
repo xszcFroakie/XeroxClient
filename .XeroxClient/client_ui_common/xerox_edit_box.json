@@ -54,7 +54,7 @@
     "font_type": "$global_font_type",
     "backup_font_type": "$global_font_type_backup",
     "localize": true,
-    "color": "$xeroxclient_ui_theme_button_text_default_color",
+    "color": "$xeroxclient_ui_theme_button_text_locked_color",
     "locked_color": "$xeroxclient_ui_theme_button_text_locked_color",
     "text_alignment": "$text_alignment",
     "$text_alignment|default": "left",

@@ -1,0 +1,9 @@
+{
+  "namespace": "chat",
+
+  "chat_screen": {
+    "close_on_player_hurt": false,
+    "$screen_content": "xc_modern_chat.main_content",
+    "$screen_bg_content": "common.empty_panel"
+  }
+}

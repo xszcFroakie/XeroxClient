@@ -1,0 +1,281 @@
+{
+  "namespace": "xc_modern_chat:chat_marco",
+
+  // Inspired by RainbowPie
+
+  "command_text": {
+    "type": "edit_box",
+    "focus_enabled": true,
+    "enabled_newline": true,
+    "max_length": 32767,
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.text_edit_box_selected",
+        "handle_select": true,
+        "handle_deselect": false,
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.text_edit_box_selected",
+        "handle_select": false,
+        "handle_deselect": true,
+        "mapping_type": "global",
+        "consume_event": false
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.text_edit_box_selected",
+        "handle_select": true,
+        "handle_deselect": false,
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.text_edit_box_deselected",
+        "handle_select": false,
+        "handle_deselect": true,
+        "mapping_type": "global"
+      },
+      {
+        "to_button_id": "button.text_edit_box_hovered",
+        "mapping_type": "pressed"
+      }
+    ]
+  },
+
+  "marco_button": {
+    "type": "panel",
+    "$marco_command|default": "marco",
+    "$marco_command_control|default": "",
+    "$marco_button_text|default": "",
+    "$marco_button_content|default": "common.empty_panel",
+    "$marco_auto_send|default": true,
+    "$marco_button_type|default": "common_buttons.a_rc_8x_text",
+    "controls": [
+      {
+        "command_button@$marco_button_type": {
+          "$pressed_button_name": "button.send",
+          "$button_text": "$marco_button_text",
+          "$button_content": "$marco_button_content",
+          "size": ["100%", "100%"],
+          "layer": 1,
+          "variables": [
+            {
+              "requires": "(not $marco_auto_send)",
+              "$pressed_button_name": "xcMarco.send"
+            }
+          ]
+        }
+      },
+      {
+        "deselect_text_box": {
+          "type": "input_panel",
+          "size": ["100%", "100%"],
+          "consume_hover_events": false,
+          "layer": 5,
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.text_edit_box_deselected",
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.menu_ok",
+              "to_button_id": "button.text_edit_box_deselected",
+              "mapping_type": "pressed"
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#keyboard_being_used",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "command_text@xc_modern_chat:chat_marco.command_text": {
+          "size": ["100%", "100%"],
+          "text_box_name": "#message_text_box",
+          "text_control": "command_text_control",
+          "consume_hover_events": false,
+          "layer": 4,
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.keyboard_toggle",
+              "mapping_type": "pressed",
+              "consume_event": false
+            },
+            {
+              "from_button_id": "button.menu_ok",
+              "to_button_id": "button.keyboard_toggle",
+              "mapping_type": "pressed",
+              "consume_event": false
+            }
+          ],
+          "controls": [
+            {
+              "command_text_control": {
+                "type": "label",
+                "text": "#item_name",
+                "visible": false,
+                "property_bag": {
+                  "#command": "$marco_command",
+                  "#property_field": "#item_name"
+                },
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "#command",
+                    "target_property_name": "#item_name",
+                    "ignored": "(not ($marco_command_control = ''))"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "$marco_command_control",
+                    "source_property_name": "#item_name",
+                    "target_property_name": "#item_name",
+                    "ignored": "($marco_command_control = '')"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "marco_buttons": {
+    "type": "image",
+    "texture": "textures/XeroxClient/rounded_corner/all8x",
+    "color": "$xeroxclient_ui_theme_menu_background_color",
+    "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
+    "size": ["100%c + 2px", "100%c + 2px"],
+    "controls": [
+      {
+        "stack_1": {
+          "type": "stack_panel",
+          "size": ["100%c", 25],
+          "orientation": "horizontal",
+          "controls": [
+            {
+              "gm_cr@xc_modern_chat:chat_marco.marco_button": {
+                "$marco_button_type": "common_buttons.a_rc_8x_content",
+                "size": [25, 25],
+                "$marco_command": "/gamemode creative",
+                "$marco_button_content": "xc_modern_chat:chat_marco.cr_icon",
+                "$button_hover_tip": true,
+                "$button_hover_tip_text": "gameMode.creative",
+                "bindings": [
+                  {
+                    "binding_name": "#cheats_on",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "gm_su@xc_modern_chat:chat_marco.marco_button": {
+                "$marco_button_type": "common_buttons.a_rc_8x_content",
+                "size": [25, 25],
+                "$marco_command": "/gamemode survival",
+                "$marco_button_content": "xc_modern_chat:chat_marco.su_icon",
+                "$button_hover_tip": true,
+                "$button_hover_tip_text": "gameMode.survival",
+                "bindings": [
+                  {
+                    "binding_name": "#cheats_on",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "gm_ad@xc_modern_chat:chat_marco.marco_button": {
+                "$marco_button_type": "common_buttons.a_rc_8x_content",
+                "size": [25, 25],
+                "$marco_command": "/gamemode adventure",
+                "$marco_button_content": "xc_modern_chat:chat_marco.ad_icon",
+                "$button_hover_tip": true,
+                "$button_hover_tip_text": "gameMode.adventure",
+                "bindings": [
+                  {
+                    "binding_name": "#cheats_on",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "gm_sp@xc_modern_chat:chat_marco.marco_button": {
+                "$marco_button_type": "common_buttons.a_rc_8x_content",
+                "size": [25, 25],
+                "$marco_command": "/gamemode spectator",
+                "$marco_button_content": "xc_modern_chat:chat_marco.sp_icon",
+                "$button_hover_tip": true,
+                "$button_hover_tip_text": "gameMode.spectator",
+                "bindings": [
+                  {
+                    "binding_name": "#cheats_on",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "debug_marco_buttons": {
+    "type": "image",
+    "texture": "textures/XeroxClient/rounded_corner/all8x",
+    "color": "$xeroxclient_ui_theme_menu_background_color",
+    "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
+    "size": ["100%c + 2px", "100%c + 2px"],
+    "ignored": "(not $xeroxclient_debug_mode)",
+    "controls": [
+      {
+        "stack_1": {
+          "type": "stack_panel",
+          "size": ["100%c", 20],
+          "orientation": "horizontal",
+          "controls": [
+            {
+              "reload_all@xc_modern_chat:chat_marco.marco_button": {
+                "size": [50, 20],
+                "$marco_command": "/reload all",
+                "$marco_button_text": "profileScreen.reload"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "cr_icon@xc_common.item_renderer": {
+    "size": [16, 16],
+    "$item_id_aux": 131072
+  },
+
+  "su_icon@xc_common.item_renderer": {
+    "size": [16, 16],
+    "$item_id_aux": 21692416
+  },
+
+  "ad_icon@xc_common.item_renderer": {
+    "size": [16, 16],
+    "$item_id_aux": 35979266
+  },
+
+  "sp_icon@xc_common.item_renderer": {
+    "size": [16, 16],
+    "$item_id_aux": 30146560
+  }
+}

@@ -4,6 +4,9 @@
 {
   "ui_defs": [
     //XeroxClient
+    ".XeroxClient/chat_screen/chat_marco.json",
+    ".XeroxClient/chat_screen/main_content.json",
+
     ".XeroxClient/client_ui_common/xerox_backgrounds.json",
     ".XeroxClient/client_ui_common/xerox_buttons.json",
     ".XeroxClient/client_ui_common/xerox_client_common.json",
