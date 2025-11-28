@@ -37,12 +37,6 @@
           { "armor_hud@xc_modern_hud:modules.armor_hud": {} },
           {
             "redo_vanilla_hotbar@xc_modern_hotbar:vanilla.hotbar_content": {
-              "ignored": "($zeroday_style_hotbar or ((not $zeroday_style_hotbar) and $touch))"
-            }
-          },
-          {
-            "zeroday_hotbar@xc_modern_hotbar:zeroday.hotbar_content": {
-              "ignored": "((not $zeroday_style_hotbar) or ($zeroday_style_hotbar and $touch))"
             }
           },
           {

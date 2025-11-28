@@ -7,7 +7,6 @@
 
   "$hud_font_type_overlay": "default",
   "$hotbar_font_type_overlay": "UIFont",
-  "$zeroday_hotbar_font_type_overlay": "HarmonyOS-Bold",
 
   // Theme
   "$xeroxclient_ui_theme_screen_transition_dura": 0.15,
@@ -37,7 +36,6 @@
   // Container Screen and Hotbar
 
   "$show_flying_item": false,
-  "$zeroday_style_hotbar": true, // For PC only
 
   // Client
 

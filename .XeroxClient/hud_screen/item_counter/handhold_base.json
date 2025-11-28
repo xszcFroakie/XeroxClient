@@ -747,7 +747,9 @@
     "anchor_from": "bottom_middle",
     "anchor_to": "bottom_middle",
     "offset": "$helper_offset",
-    "variables": [
+    "$helper_anchor": "center",
+    "$helper_offset": [0, -65],
+    /*"variables": [
       {
         "requires": "((not $zeroday_style_hotbar) or ($zeroday_style_hotbar and $touch))",
         "$helper_anchor": "center",
@@ -758,7 +760,7 @@
         "$helper_anchor": "right_middle",
         "$helper_offset": [-96, -5]
       }
-    ],
+    ],*/
     "controls": [
       { "dura_viewer@handhold_base.dura_viewer": {} },
       { "amount_counter@handhold_base.amount_counter": {} },
@@ -772,13 +774,13 @@
     ]
   }
 }
-// ▒██   ██▒  ██████ ▒███████▒ ▄████▄  
-// ▒▒ █ █ ▒░▒██    ▒ ▒ ▒ ▒ ▄▀░▒██▀ ▀█  
-// ░░  █   ░░ ▓██▄   ░ ▒ ▄▀▒░ ▒▓█    ▄ 
+// ▒██   ██▒  ██████ ▒███████▒ ▄████▄
+// ▒▒ █ █ ▒░▒██    ▒ ▒ ▒ ▒ ▄▀░▒██▀ ▀█
+// ░░  █   ░░ ▓██▄   ░ ▒ ▄▀▒░ ▒▓█    ▄
 //  ░ █ █ ▒   ▒   ██▒  ▄▀▒   ░▒▓▓▄ ▄██▒
 // ▒██▒ ▒██▒▒██████▒▒▒███████▒▒ ▓███▀ ░
 // ▒▒ ░ ░▓ ░▒ ▒▓▒ ▒ ░░▒▒ ▓░▒░▒░ ░▒ ▒  ░
-// ░░   ░▒ ░░ ░▒  ░ ░░░▒ ▒ ░ ▒  ░  ▒   
-//  ░    ░  ░  ░  ░  ░ ░ ░ ░ ░░        
-//  ░    ░        ░    ░ ░    ░ ░      
-//                   ░        ░        
+// ░░   ░▒ ░░ ░▒  ░ ░░░▒ ▒ ░ ▒  ░  ▒
+//  ░    ░  ░  ░  ░  ░ ░ ░ ░ ░░
+//  ░    ░        ░    ░ ░    ░ ░
+//                   ░        ░

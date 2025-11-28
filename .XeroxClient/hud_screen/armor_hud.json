@@ -10,7 +10,8 @@
     "offset": "$armor_hud_offset",
     "anchor_from": "bottom_middle",
     "anchor_to": "bottom_middle",
-    "variables": [
+    "$armor_hud_offset": [42, -40],
+    /*"variables": [
       {
         "requires": "((not $zeroday_style_hotbar) or ($zeroday_style_hotbar and $touch))",
         "$armor_hud_offset": [42, -40]
@@ -19,7 +20,7 @@
         "requires": "($zeroday_style_hotbar or ((not $zeroday_style_hotbar) and $touch))",
         "$armor_hud_offset": [128, -5]
       }
-    ],
+    ],*/
     "controls": [
       {
         "armor_hud_renderer": {
@@ -38,13 +39,13 @@
     ]
   }
 }
-// ▒██   ██▒  ██████ ▒███████▒ ▄████▄  
-// ▒▒ █ █ ▒░▒██    ▒ ▒ ▒ ▒ ▄▀░▒██▀ ▀█  
-// ░░  █   ░░ ▓██▄   ░ ▒ ▄▀▒░ ▒▓█    ▄ 
+// ▒██   ██▒  ██████ ▒███████▒ ▄████▄
+// ▒▒ █ █ ▒░▒██    ▒ ▒ ▒ ▒ ▄▀░▒██▀ ▀█
+// ░░  █   ░░ ▓██▄   ░ ▒ ▄▀▒░ ▒▓█    ▄
 //  ░ █ █ ▒   ▒   ██▒  ▄▀▒   ░▒▓▓▄ ▄██▒
 // ▒██▒ ▒██▒▒██████▒▒▒███████▒▒ ▓███▀ ░
 // ▒▒ ░ ░▓ ░▒ ▒▓▒ ▒ ░░▒▒ ▓░▒░▒░ ░▒ ▒  ░
-// ░░   ░▒ ░░ ░▒  ░ ░░░▒ ▒ ░ ▒  ░  ▒   
-//  ░    ░  ░  ░  ░  ░ ░ ░ ░ ░░        
-//  ░    ░        ░    ░ ░    ░ ░      
-//                   ░        ░        
+// ░░   ░▒ ░░ ░▒  ░ ░░░▒ ▒ ░ ▒  ░  ▒
+//  ░    ░  ░  ░  ░  ░ ░ ░ ░ ░░
+//  ░    ░        ░    ░ ░    ░ ░
+//                   ░        ░

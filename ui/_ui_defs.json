@@ -40,7 +40,6 @@
     ".XeroxClient/hud_screen/coordinate.json",
     ".XeroxClient/hud_screen/hotbar/button_mappings.json",
     ".XeroxClient/hud_screen/hotbar/vanilla.json",
-    ".XeroxClient/hud_screen/hotbar/zeroday.json",
     ".XeroxClient/hud_screen/item_counter/handhold_base.json",
     ".XeroxClient/hud_screen/item_counter/item_detected.json",
     ".XeroxClient/hud_screen/scoreboard.json",
@@ -72,13 +71,13 @@
     ".lib"
   ]
 }
-// ▒██   ██▒  ██████ ▒███████▒ ▄████▄  
-// ▒▒ █ █ ▒░▒██    ▒ ▒ ▒ ▒ ▄▀░▒██▀ ▀█  
-// ░░  █   ░░ ▓██▄   ░ ▒ ▄▀▒░ ▒▓█    ▄ 
+// ▒██   ██▒  ██████ ▒███████▒ ▄████▄
+// ▒▒ █ █ ▒░▒██    ▒ ▒ ▒ ▒ ▄▀░▒██▀ ▀█
+// ░░  █   ░░ ▓██▄   ░ ▒ ▄▀▒░ ▒▓█    ▄
 //  ░ █ █ ▒   ▒   ██▒  ▄▀▒   ░▒▓▓▄ ▄██▒
 // ▒██▒ ▒██▒▒██████▒▒▒███████▒▒ ▓███▀ ░
 // ▒▒ ░ ░▓ ░▒ ▒▓▒ ▒ ░░▒▒ ▓░▒░▒░ ░▒ ▒  ░
-// ░░   ░▒ ░░ ░▒  ░ ░░░▒ ▒ ░ ▒  ░  ▒   
-//  ░    ░  ░  ░  ░  ░ ░ ░ ░ ░░        
-//  ░    ░        ░    ░ ░    ░ ░      
-//                   ░        ░        
+// ░░   ░▒ ░░ ░▒  ░ ░░░▒ ▒ ░ ▒  ░  ▒
+//  ░    ░  ░  ░  ░  ░ ░ ░ ░ ░░
+//  ░    ░        ░    ░ ░    ░ ░
+//                   ░        ░

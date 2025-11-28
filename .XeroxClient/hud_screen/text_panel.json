@@ -150,7 +150,6 @@
   },
 
   "item_name_text@xc_modern_hud_texts.item_name_text_root": {
-    "visible": "((not $zeroday_style_hotbar) or ($zeroday_style_hotbar and $touch))",
     "offset": [0, -36]
   },
 
