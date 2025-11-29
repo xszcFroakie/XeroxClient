@@ -46,8 +46,8 @@
     "anim_type": "size",
     "from": [-0.005, -0.005],
     "to": "$default_size",
-    "easing": "out_back",
-    "duration": 0.37,
+    "easing": "out_quart",
+    "duration": 0.3,
     "play_event": "screen.entrance_push",
     "end_event": "screen.entrance_end"
   },
@@ -56,8 +56,8 @@
     "anim_type": "alpha",
     "from": 0.0,
     "to": 1.0,
-    "easing": "out_cubic",
-    "duration": 0.37,
+    "easing": "out_quart",
+    "duration": 0.3,
     "play_event": "screen.entrance_push",
     "end_event": "screen.entrance_end"
   },
@@ -67,7 +67,7 @@
     "from": "$default_size",
     "to": [0, 0],
     "easing": "in_back",
-    "duration": 0.37,
+    "duration": 0.3,
     "play_event": "screen.exit_pop",
     "end_event": "screen.exit_end"
   },
@@ -76,8 +76,8 @@
     "anim_type": "alpha",
     "from": 1.0,
     "to": -0.25,
-    "easing": "in_cric",
-    "duration": 0.37,
+    "easing": "in_quart",
+    "duration": 0.3,
     "play_event": "screen.exit_pop",
     "end_event": "screen.exit_end"
   } /*,
