@@ -43,7 +43,7 @@
   "$ClientVersion": "v1.0.0",
   "$ClientAuthor": "Made By XSzC.",
   "$current_client_version": "001000000", // 当前客户端版本, 每三位数字代表'ClientVersion'中小数点前后数字
-  "$xeroxclient_debug_mode": true
+  "$xeroxclient_debug_mode": false
 }
 // ▒██   ██▒  ██████ ▒███████▒ ▄████▄  
 // ▒▒ █ █ ▒░▒██    ▒ ▒ ▒ ▒ ▄▀░▒██▀ ▀█  
