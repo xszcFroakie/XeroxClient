@@ -457,14 +457,14 @@
         }
       },
       {
-        "marcos@xc_modern_chat:chat_marco.marco_buttons": {
+        "macros@xc_modern_chat:chat_macro.macro_buttons": {
           "offset": [-10, 35],
           "anchor_from": "top_right",
           "anchor_to": "top_right"
         }
       },
       {
-        "debug_marcos@xc_modern_chat:chat_marco.debug_marco_buttons": {
+        "debug_macros@xc_modern_chat:chat_macro.debug_macro_buttons": {
           "offset": [-10, -10],
           "anchor_from": "bottom_right",
           "anchor_to": "bottom_right"

@@ -1,5 +1,5 @@
 {
-  "namespace": "xc_modern_chat:chat_marco",
+  "namespace": "xc_modern_chat:chat_macro",
 
   // Inspired by RainbowPie
 
@@ -45,26 +45,26 @@
     ]
   },
 
-  "marco_button": {
+  "macro_button": {
     "type": "panel",
-    "$marco_command|default": "marco",
-    "$marco_command_control|default": "",
-    "$marco_button_text|default": "",
-    "$marco_button_content|default": "common.empty_panel",
-    "$marco_auto_send|default": true,
-    "$marco_button_type|default": "common_buttons.a_rc_8x_text",
+    "$macro_command|default": "macro",
+    "$macro_command_control|default": "",
+    "$macro_button_text|default": "",
+    "$macro_button_content|default": "common.empty_panel",
+    "$macro_auto_send|default": true,
+    "$macro_button_type|default": "common_buttons.a_rc_8x_text",
     "controls": [
       {
-        "command_button@$marco_button_type": {
+        "command_button@$macro_button_type": {
           "$pressed_button_name": "button.send",
-          "$button_text": "$marco_button_text",
-          "$button_content": "$marco_button_content",
+          "$button_text": "$macro_button_text",
+          "$button_content": "$macro_button_content",
           "size": ["100%", "100%"],
           "layer": 1,
           "variables": [
             {
-              "requires": "(not $marco_auto_send)",
-              "$pressed_button_name": "xcMarco.send"
+              "requires": "(not $macro_auto_send)",
+              "$pressed_button_name": "xcmacro.send"
             }
           ]
         }
@@ -96,7 +96,7 @@
         }
       },
       {
-        "command_text@xc_modern_chat:chat_marco.command_text": {
+        "command_text@xc_modern_chat:chat_macro.command_text": {
           "size": ["100%", "100%"],
           "text_box_name": "#message_text_box",
           "text_control": "command_text_control",
@@ -123,7 +123,7 @@
                 "text": "#item_name",
                 "visible": false,
                 "property_bag": {
-                  "#command": "$marco_command",
+                  "#command": "$macro_command",
                   "#property_field": "#item_name"
                 },
                 "bindings": [
@@ -131,14 +131,14 @@
                     "binding_type": "view",
                     "source_property_name": "#command",
                     "target_property_name": "#item_name",
-                    "ignored": "(not ($marco_command_control = ''))"
+                    "ignored": "(not ($macro_command_control = ''))"
                   },
                   {
                     "binding_type": "view",
-                    "source_control_name": "$marco_command_control",
+                    "source_control_name": "$macro_command_control",
                     "source_property_name": "#item_name",
                     "target_property_name": "#item_name",
-                    "ignored": "($marco_command_control = '')"
+                    "ignored": "($macro_command_control = '')"
                   }
                 ]
               }
@@ -149,7 +149,7 @@
     ]
   },
 
-  "marco_buttons": {
+  "macro_buttons": {
     "type": "image",
     "texture": "textures/XeroxClient/rounded_corner/all8x",
     "color": "$xeroxclient_ui_theme_menu_background_color",
@@ -163,41 +163,41 @@
           "orientation": "horizontal",
           "controls": [
             {
-              "gm_cr@xc_modern_chat:chat_marco.marco_button": {
-                "$marco_button_type": "common_buttons.a_rc_8x_content",
+              "gm_cr@xc_modern_chat:chat_macro.macro_button": {
+                "$macro_button_type": "common_buttons.a_rc_8x_content",
                 "size": [25, 25],
-                "$marco_command": "/gamemode creative",
-                "$marco_button_content": "xc_modern_chat:chat_marco.cr_icon",
+                "$macro_command": "/gamemode creative",
+                "$macro_button_content": "xc_modern_chat:chat_macro.cr_icon",
                 "$button_hover_tip": true,
                 "$button_hover_tip_text": "gameMode.creative"
               }
             },
             {
-              "gm_su@xc_modern_chat:chat_marco.marco_button": {
-                "$marco_button_type": "common_buttons.a_rc_8x_content",
+              "gm_su@xc_modern_chat:chat_macro.macro_button": {
+                "$macro_button_type": "common_buttons.a_rc_8x_content",
                 "size": [25, 25],
-                "$marco_command": "/gamemode survival",
-                "$marco_button_content": "xc_modern_chat:chat_marco.su_icon",
+                "$macro_command": "/gamemode survival",
+                "$macro_button_content": "xc_modern_chat:chat_macro.su_icon",
                 "$button_hover_tip": true,
                 "$button_hover_tip_text": "gameMode.survival"
               }
             },
             {
-              "gm_ad@xc_modern_chat:chat_marco.marco_button": {
-                "$marco_button_type": "common_buttons.a_rc_8x_content",
+              "gm_ad@xc_modern_chat:chat_macro.macro_button": {
+                "$macro_button_type": "common_buttons.a_rc_8x_content",
                 "size": [25, 25],
-                "$marco_command": "/gamemode adventure",
-                "$marco_button_content": "xc_modern_chat:chat_marco.ad_icon",
+                "$macro_command": "/gamemode adventure",
+                "$macro_button_content": "xc_modern_chat:chat_macro.ad_icon",
                 "$button_hover_tip": true,
                 "$button_hover_tip_text": "gameMode.adventure"
               }
             },
             {
-              "gm_sp@xc_modern_chat:chat_marco.marco_button": {
-                "$marco_button_type": "common_buttons.a_rc_8x_content",
+              "gm_sp@xc_modern_chat:chat_macro.macro_button": {
+                "$macro_button_type": "common_buttons.a_rc_8x_content",
                 "size": [25, 25],
-                "$marco_command": "/gamemode spectator",
-                "$marco_button_content": "xc_modern_chat:chat_marco.sp_icon",
+                "$macro_command": "/gamemode spectator",
+                "$macro_button_content": "xc_modern_chat:chat_macro.sp_icon",
                 "$button_hover_tip": true,
                 "$button_hover_tip_text": "gameMode.spectator"
               }
@@ -214,7 +214,7 @@
     ]
   },
 
-  "debug_marco_buttons": {
+  "debug_macro_buttons": {
     "type": "image",
     "texture": "textures/XeroxClient/rounded_corner/all8x",
     "color": "$xeroxclient_ui_theme_menu_background_color",
@@ -229,10 +229,10 @@
           "orientation": "horizontal",
           "controls": [
             {
-              "reload_all@xc_modern_chat:chat_marco.marco_button": {
+              "reload_all@xc_modern_chat:chat_macro.macro_button": {
                 "size": [50, 20],
-                "$marco_command": "/reload all",
-                "$marco_button_text": "profileScreen.reload"
+                "$macro_command": "/reload all",
+                "$macro_button_text": "profileScreen.reload"
               }
             }
           ]
