@@ -250,6 +250,7 @@
                 "layer": -1,
                 "animation_reset_name": "('button.xeroxClient.' + $pressed_button_name)",
                 "disable_anim_fast_forward": true,
+                "$ignored_hover_anims": false,
                 "anims": ["@common_buttons.hover_alpha"]
               }
             },
