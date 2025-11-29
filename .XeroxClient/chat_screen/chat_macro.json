@@ -64,7 +64,7 @@
           "variables": [
             {
               "requires": "(not $macro_auto_send)",
-              "$pressed_button_name": "xcmacro.send"
+              "$pressed_button_name": "xcMacro.send"
             }
           ]
         }
@@ -161,6 +161,7 @@
           "type": "stack_panel",
           "size": ["100%c", 25],
           "orientation": "horizontal",
+          "$button_hover_tip": true,
           "controls": [
             {
               "gm_cr@xc_modern_chat:chat_macro.macro_button": {
@@ -168,7 +169,6 @@
                 "size": [25, 25],
                 "$macro_command": "/gamemode creative",
                 "$macro_button_content": "xc_modern_chat:chat_macro.cr_icon",
-                "$button_hover_tip": true,
                 "$button_hover_tip_text": "gameMode.creative"
               }
             },
@@ -178,7 +178,6 @@
                 "size": [25, 25],
                 "$macro_command": "/gamemode survival",
                 "$macro_button_content": "xc_modern_chat:chat_macro.su_icon",
-                "$button_hover_tip": true,
                 "$button_hover_tip_text": "gameMode.survival"
               }
             },
@@ -188,7 +187,6 @@
                 "size": [25, 25],
                 "$macro_command": "/gamemode adventure",
                 "$macro_button_content": "xc_modern_chat:chat_macro.ad_icon",
-                "$button_hover_tip": true,
                 "$button_hover_tip_text": "gameMode.adventure"
               }
             },
@@ -198,7 +196,6 @@
                 "size": [25, 25],
                 "$macro_command": "/gamemode spectator",
                 "$macro_button_content": "xc_modern_chat:chat_macro.sp_icon",
-                "$button_hover_tip": true,
                 "$button_hover_tip_text": "gameMode.spectator"
               }
             }
