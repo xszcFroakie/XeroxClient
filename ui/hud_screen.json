@@ -36,8 +36,7 @@
         "value": [
           { "armor_hud@xc_modern_hud:modules.armor_hud": {} },
           {
-            "redo_vanilla_hotbar@xc_modern_hotbar:vanilla.hotbar_content": {
-            }
+            "redo_vanilla_hotbar@xc_modern_hotbar:vanilla.hotbar_content": {}
           },
           {
             "item_text_factory": {
@@ -138,12 +137,12 @@
 
   "xc_hud_content_override": {
     "type": "panel",
-    "$hud_size": [ "100%", "100%" ],
-    "$hud_player_rend_desktop_offset|default": [ 15, 15 ],
+    "$hud_size": ["100%", "100%"],
+    "$hud_player_rend_desktop_offset|default": [15, 15],
     "variables": [
       {
         "requires": "($compress_hud_width)",
-        "$hud_size": [ "90%", "100%" ]
+        "$hud_size": ["90%", "100%"]
       }
     ],
     "size": "$hud_size",
@@ -248,13 +247,13 @@
     ]
   }
 }
-// ▒██   ██▒  ██████ ▒███████▒ ▄████▄  
-// ▒▒ █ █ ▒░▒██    ▒ ▒ ▒ ▒ ▄▀░▒██▀ ▀█  
-// ░░  █   ░░ ▓██▄   ░ ▒ ▄▀▒░ ▒▓█    ▄ 
+// ▒██   ██▒  ██████ ▒███████▒ ▄████▄
+// ▒▒ █ █ ▒░▒██    ▒ ▒ ▒ ▒ ▄▀░▒██▀ ▀█
+// ░░  █   ░░ ▓██▄   ░ ▒ ▄▀▒░ ▒▓█    ▄
 //  ░ █ █ ▒   ▒   ██▒  ▄▀▒   ░▒▓▓▄ ▄██▒
 // ▒██▒ ▒██▒▒██████▒▒▒███████▒▒ ▓███▀ ░
 // ▒▒ ░ ░▓ ░▒ ▒▓▒ ▒ ░░▒▒ ▓░▒░▒░ ░▒ ▒  ░
-// ░░   ░▒ ░░ ░▒  ░ ░░░▒ ▒ ░ ▒  ░  ▒   
-//  ░    ░  ░  ░  ░  ░ ░ ░ ░ ░░        
-//  ░    ░        ░    ░ ░    ░ ░      
-//                   ░        ░        
+// ░░   ░▒ ░░ ░▒  ░ ░░░▒ ▒ ░ ▒  ░  ▒
+//  ░    ░  ░  ░  ░  ░ ░ ░ ░ ░░
+//  ░    ░        ░    ░ ░    ░ ░
+//                   ░        ░

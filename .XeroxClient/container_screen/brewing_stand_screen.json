@@ -98,7 +98,9 @@
                       "size": ["111.1111111111%c", "100%x"],
                       "$item_collection_name": "brewing_input_item",
                       "controls": [
-                        { "0@xc_modern_container:classic_common.container_item": {} }
+                        {
+                          "0@xc_modern_container:classic_common.container_item": {}
+                        }
                       ]
                     }
                   },
@@ -182,7 +184,9 @@
                       "size": ["111.1111111111%c", "100%x"],
                       "$item_collection_name": "brewing_fuel_item",
                       "controls": [
-                        { "0@xc_modern_container:classic_common.container_item": {} }
+                        {
+                          "0@xc_modern_container:classic_common.container_item": {}
+                        }
                       ]
                     }
                   },
@@ -377,13 +381,13 @@
     ]
   }
 }
-// ▒██   ██▒  ██████ ▒███████▒ ▄████▄  
-// ▒▒ █ █ ▒░▒██    ▒ ▒ ▒ ▒ ▄▀░▒██▀ ▀█  
-// ░░  █   ░░ ▓██▄   ░ ▒ ▄▀▒░ ▒▓█    ▄ 
+// ▒██   ██▒  ██████ ▒███████▒ ▄████▄
+// ▒▒ █ █ ▒░▒██    ▒ ▒ ▒ ▒ ▄▀░▒██▀ ▀█
+// ░░  █   ░░ ▓██▄   ░ ▒ ▄▀▒░ ▒▓█    ▄
 //  ░ █ █ ▒   ▒   ██▒  ▄▀▒   ░▒▓▓▄ ▄██▒
 // ▒██▒ ▒██▒▒██████▒▒▒███████▒▒ ▓███▀ ░
 // ▒▒ ░ ░▓ ░▒ ▒▓▒ ▒ ░░▒▒ ▓░▒░▒░ ░▒ ▒  ░
-// ░░   ░▒ ░░ ░▒  ░ ░░░▒ ▒ ░ ▒  ░  ▒   
-//  ░    ░  ░  ░  ░  ░ ░ ░ ░ ░░        
-//  ░    ░        ░    ░ ░    ░ ░      
-//                   ░        ░        
+// ░░   ░▒ ░░ ░▒  ░ ░░░▒ ▒ ░ ▒  ░  ▒
+//  ░    ░  ░  ░  ░  ░ ░ ░ ░ ░░
+//  ░    ░        ░    ░ ░    ░ ░
+//                   ░        ░

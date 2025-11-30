@@ -461,7 +461,9 @@
                       "$stack_count_binding_condition": "always_when_visible",
                       "$item_collection_name": "trade2_ingredient1_item",
                       "controls": [
-                        { "0@xc_modern_container:classic_common.container_item": {} }
+                        {
+                          "0@xc_modern_container:classic_common.container_item": {}
+                        }
                       ]
                     }
                   },
@@ -478,7 +480,9 @@
                       "$stack_count_binding_condition": "always_when_visible",
                       "$item_collection_name": "trade2_ingredient2_item",
                       "controls": [
-                        { "0@xc_modern_container:classic_common.container_item": {} }
+                        {
+                          "0@xc_modern_container:classic_common.container_item": {}
+                        }
                       ]
                     }
                   },
@@ -637,13 +641,13 @@
     ]
   }
 }
-// ▒██   ██▒  ██████ ▒███████▒ ▄████▄  
-// ▒▒ █ █ ▒░▒██    ▒ ▒ ▒ ▒ ▄▀░▒██▀ ▀█  
-// ░░  █   ░░ ▓██▄   ░ ▒ ▄▀▒░ ▒▓█    ▄ 
+// ▒██   ██▒  ██████ ▒███████▒ ▄████▄
+// ▒▒ █ █ ▒░▒██    ▒ ▒ ▒ ▒ ▄▀░▒██▀ ▀█
+// ░░  █   ░░ ▓██▄   ░ ▒ ▄▀▒░ ▒▓█    ▄
 //  ░ █ █ ▒   ▒   ██▒  ▄▀▒   ░▒▓▓▄ ▄██▒
 // ▒██▒ ▒██▒▒██████▒▒▒███████▒▒ ▓███▀ ░
 // ▒▒ ░ ░▓ ░▒ ▒▓▒ ▒ ░░▒▒ ▓░▒░▒░ ░▒ ▒  ░
-// ░░   ░▒ ░░ ░▒  ░ ░░░▒ ▒ ░ ▒  ░  ▒   
-//  ░    ░  ░  ░  ░  ░ ░ ░ ░ ░░        
-//  ░    ░        ░    ░ ░    ░ ░      
-//                   ░        ░        
+// ░░   ░▒ ░░ ░▒  ░ ░░░▒ ▒ ░ ▒  ░  ▒
+//  ░    ░  ░  ░  ░  ░ ░ ░ ░ ░░
+//  ░    ░        ░    ░ ░    ░ ░
+//                   ░        ░
