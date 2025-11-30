@@ -6,4 +6,7 @@ xc.unsupportVersion.description=使用不支持的遊戲版本可能會導致一
 
 xc.tip.press2x=雙擊
 
+xc.button.copy=複製
+xc.button.paste=貼上
+
 map.position=§§%s/%s/%s

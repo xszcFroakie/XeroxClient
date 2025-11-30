@@ -6,4 +6,7 @@ xc.unsupportVersion.description=Using an unsupported version may cause some erro
 
 xc.tip.press2x=Press 2x
 
+xc.button.copy=Copy
+xc.button.paste=Paste
+
 map.position=§§%s/%s/%s

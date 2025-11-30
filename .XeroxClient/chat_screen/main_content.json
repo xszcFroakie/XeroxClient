@@ -332,11 +332,92 @@
     ]
   },
 
-  "chat_header_panel": {
+  "coordinate_panel": {
     "type": "stack_panel",
-    "orientation": "horizontal",
-    "size": ["100%", 15],
-    "controls": []
+    "size": ["100%cm", "100%c"],
+    "$radio_toggle_group": true,
+    "controls": [
+      {
+        "button_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": ["100%c", 20],
+          "$radio_toggle_group": true,
+          "controls": [
+            {
+              "my_position@common_toggles.a_rc_8x_text": {
+                "size": [70, 20],
+                "$toggle_name": "#coordinate_type_position",
+                "$toggle_state_binding_name": "#coordinate_type_position",
+                "$button_text": "chat.coordinateTypeFacing",
+                "$xeroxclient_button_alpha_pressed": "$xeroxclient_ui_theme_button_default_alpha",
+                "$xeroxclient_button_color_pressed": "$xeroxclient_ui_theme_button_default_color",
+                "bindings": [
+                  {
+                    "binding_name": "#coordinate_type_facing",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "block_position@common_toggles.a_rc_8x_text": {
+                "size": [70, 20],
+                "$toggle_name": "#coordinate_type_facing",
+                "$toggle_state_binding_name": "#coordinate_type_facing",
+                "$button_text": "chat.coordinateTypePosition",
+                "$xeroxclient_button_alpha_pressed": "$xeroxclient_ui_theme_button_default_alpha",
+                "$xeroxclient_button_color_pressed": "$xeroxclient_ui_theme_button_default_color",
+                "bindings": [
+                  {
+                    "binding_name": "#coordinate_type_position",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "copy_coordinate_button@common_buttons.a_rc_8x_text": {
+                "size": [30, 20],
+                "$button_text": "xc.button.copy",
+                "$pressed_button_name": "copy_coordinates_button"
+              }
+            },
+            {
+              "paste_button@common_buttons.a_rc_8x_text": {
+                "size": [30, 20],
+                "$button_text": "xc.button.paste",
+                "$pressed_button_name": "paste_button"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "coord_text_panel": {
+          "type": "panel",
+          "size": ["100%sm", 15],
+          "controls": [
+            {
+              "coord_text": {
+                "type": "label",
+                "size": ["100% - 5px", "default"],
+                "text": "#text",
+                "text_alignment": "center",
+                "font_type": "$global_font_type",
+                "backup_font_type": "$global_font_type_backup",
+                "bindings": [
+                  {
+                    "binding_name": "#coordinates_text",
+                    "binding_name_override": "#text"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
   },
 
   "main_content": {
@@ -372,12 +453,7 @@
                       ]
                     }
                   },
-                  {
-                    "padding": {
-                      "type": "panel",
-                      "size": [0, 2.5]
-                    }
-                  },
+                  { "padding": { "type": "panel", "size": [0, 2.5] } },
                   {
                     "text_edit_panel": {
                       "type": "stack_panel",
@@ -409,68 +485,146 @@
         }
       },
       {
-        "touch_utils": {
-          "type": "image",
-          "texture": "textures/XeroxClient/rounded_corner/all8x",
-          "color": "$xeroxclient_ui_theme_menu_background_color",
-          "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
-          "size": ["100%c + 2px", "100%c + 2px"],
-          "offset": [-10, 10],
-          "anchor_from": "top_right",
-          "anchor_to": "top_right",
+        "utils_panel": {
+          "type": "stack_panel",
+          "size": [0, "100% - 20px"],
+          "offset": [-10, 0],
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
           "controls": [
             {
-              "stack_panel": {
-                "type": "stack_panel",
-                "size": [100, 20],
-                "orientation": "horizontal",
+              "0x_panel0": {
+                "type": "panel",
+                "size": [0, "100%c"],
                 "controls": [
                   {
-                    "autocompleteback@common_buttons.a_rc_8x_text": {
-                      "$button_text": "TAB▲",
-                      "$pressed_button_name": "button.chat_autocomplete_back",
-                      "size": ["150%y", 20]
+                    "touch_utils": {
+                      "type": "image",
+                      "texture": "textures/XeroxClient/rounded_corner/all8x",
+                      "color": "$xeroxclient_ui_theme_menu_background_color",
+                      "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
+                      "size": ["100%c + 2px", "100%c + 2px"],
+                      "anchor_from": "right_middle",
+                      "anchor_to": "right_middle",
+                      "controls": [
+                        {
+                          "stack_panel": {
+                            "type": "stack_panel",
+                            "size": [100, 20],
+                            "orientation": "horizontal",
+                            "controls": [
+                              {
+                                "autocompleteback@common_buttons.a_rc_8x_text": {
+                                  "$button_text": "TAB▲",
+                                  "$pressed_button_name": "button.chat_autocomplete_back",
+                                  "size": ["150%y", 20]
+                                }
+                              },
+                              {
+                                "autocomplete@common_buttons.a_rc_8x_text": {
+                                  "$button_text": "TAB▼",
+                                  "$pressed_button_name": "button.chat_autocomplete",
+                                  "size": ["150%y", 20]
+                                }
+                              },
+                              {
+                                "previous@common_buttons.a_rc_8x_text": {
+                                  "$button_text": "▲",
+                                  "$pressed_button_name": "button.chat_previous_message",
+                                  "size": ["100%y", 20]
+                                }
+                              },
+                              {
+                                "next@common_buttons.a_rc_8x_text": {
+                                  "$button_text": "▼",
+                                  "$pressed_button_name": "button.chat_next_message",
+                                  "size": ["100%y", 20]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
                     }
-                  },
+                  }
+                ]
+              }
+            },
+            {
+              "padding0": {
+                "type": "panel",
+                "size": [0, 5],
+                "bindings": [
                   {
-                    "autocomplete@common_buttons.a_rc_8x_text": {
-                      "$button_text": "TAB▼",
-                      "$pressed_button_name": "button.chat_autocomplete",
-                      "size": ["150%y", 20]
+                    "binding_name": "#chat_coordinate_dropdown_visible",
+                    "binding_name_override": "#visible",
+                    "binding_type": "global"
+                  }
+                ]
+              }
+            },
+            {
+              "0x_panel1": {
+                "type": "panel",
+                "size": [0, "100%c"],
+                "controls": [
+                  {
+                    "coordinate_panel_background": {
+                      "type": "image",
+                      "texture": "textures/XeroxClient/rounded_corner/all8x",
+                      "color": "$xeroxclient_ui_theme_menu_background_color",
+                      "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
+                      "size": ["100%c + 2px", "100%c + 2px"],
+                      "anchor_from": "right_middle",
+                      "anchor_to": "right_middle",
+                      "controls": [
+                        {
+                          "coordinate_panel@xc_modern_chat.coordinate_panel": {}
+                        }
+                      ]
                     }
-                  },
+                  }
+                ],
+                "bindings": [
                   {
-                    "previous@common_buttons.a_rc_8x_text": {
-                      "$button_text": "▲",
-                      "$pressed_button_name": "button.chat_previous_message",
-                      "size": ["100%y", 20]
+                    "binding_name": "#chat_coordinate_dropdown_visible",
+                    "binding_name_override": "#visible",
+                    "binding_type": "global"
+                  }
+                ]
+              }
+            },
+            { "padding1": { "type": "panel", "size": [0, 5] } },
+            {
+              "0x_panel2": {
+                "type": "panel",
+                "size": [0, "100%c"],
+                "controls": [
+                  {
+                    "macros@xc_modern_chat:chat_macro.macro_buttons": {
+                      "anchor_from": "right_middle",
+                      "anchor_to": "right_middle"
                     }
-                  },
+                  }
+                ]
+              }
+            },
+            { "filling": { "type": "panel", "size": [0, "fill"] } },
+            {
+              "0x_panel3": {
+                "type": "panel",
+                "size": [0, "100%c"],
+                "controls": [
                   {
-                    "next@common_buttons.a_rc_8x_text": {
-                      "$button_text": "▼",
-                      "$pressed_button_name": "button.chat_next_message",
-                      "size": ["100%y", 20]
+                    "debug_macros@xc_modern_chat:chat_macro.debug_macro_buttons": {
+                      "anchor_from": "right_middle",
+                      "anchor_to": "right_middle"
                     }
                   }
                 ]
               }
             }
           ]
-        }
-      },
-      {
-        "macros@xc_modern_chat:chat_macro.macro_buttons": {
-          "offset": [-10, 35],
-          "anchor_from": "top_right",
-          "anchor_to": "top_right"
-        }
-      },
-      {
-        "debug_macros@xc_modern_chat:chat_macro.debug_macro_buttons": {
-          "offset": [-10, -10],
-          "anchor_from": "bottom_right",
-          "anchor_to": "bottom_right"
         }
       },
       { "popup_factory@chat_settings.popup_factory": {} }
