@@ -513,7 +513,7 @@
     "size": ["101.2345679012%c", "103.7037037037%c"],
     "texture": "textures/XeroxClient/rounded_corner/all8x",
     "color": "$xeroxclient_ui_theme_menu_background_color",
-    "alpha": 0.3,
+    "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
     "layer": 2,
     "controls": [
       {
@@ -529,7 +529,7 @@
     "size": ["101.2345679012%c", "12.1951219512%x"],
     "texture": "textures/XeroxClient/rounded_corner/all8x",
     "color": "$xeroxclient_ui_theme_menu_background_color",
-    "alpha": 0.3,
+    "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
     "layer": 2,
     "controls": [
       {

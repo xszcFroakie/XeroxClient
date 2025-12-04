@@ -258,7 +258,7 @@
                 "size": ["100%", 20],
                 "layer": 4,
                 "texture": "textures/XeroxClient/rounded_corner/all8x",
-                "alpha": 0.4,
+                "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
                 "color": "$xeroxclient_ui_theme_menu_background_color"
               }
             },
@@ -405,7 +405,7 @@
                 "texture": "textures/XeroxClient/rounded_corner/all16x",
                 "color": "$xeroxclient_ui_theme_menu_background_color",
                 "layer": -1,
-                "alpha": 0.4,
+                "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
                 "controls": [
                   { "1@xc_modern_start:device_detail.version": {} },
                   {
@@ -414,7 +414,7 @@
                       "size": ["100%c+4px", "100%c+4px"],
                       "texture": "textures/XeroxClient/rounded_corner/all8x",
                       "color": "$xeroxclient_ui_theme_menu_background_color",
-                      "alpha": 0.4,
+                      "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
                       "layer": -1,
                       "anchor_from": "bottom_middle",
                       "anchor_to": "top_middle",
@@ -508,7 +508,7 @@
     "type": "image",
     "size": ["100%c+12px", 30],
     "texture": "textures/XeroxClient/rounded_corner/all8x",
-    "alpha": 0.4,
+    "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
     "layer": 10,
     "color": "$xeroxclient_ui_theme_menu_background_color",
     "anchor_from": "top_left",

@@ -29,7 +29,7 @@
           "type": "image",
           "texture": "textures/XeroxClient/rounded_corner/all8x",
           "color": "$xeroxclient_ui_theme_menu_background_color",
-          "alpha": 0.3,
+          "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
           "layer": 0,
           "size": ["100%", 22],
           "clips_children": true,
@@ -131,7 +131,7 @@
           "type": "image",
           "texture": "textures/XeroxClient/rounded_corner/all8x",
           "color": "$xeroxclient_ui_theme_menu_background_color",
-          "alpha": 0.3,
+          "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
           "layer": 0,
           "size": ["100%", "fill"],
           //"clips_children": true,
@@ -440,7 +440,7 @@
       {
         "cell_red@crafting.cell_image_red": {
           "texture": "textures/XeroxClient/rounded_corner/all8x",
-          "alpha": 0.3,
+          "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
           "color": [1.0, 0.333, 0.333]
         }
       }
@@ -482,7 +482,7 @@
                     "recipe_book_red_button": {
                       "type": "image",
                       "texture": "textures/XeroxClient/rounded_corner/all8x",
-                      "alpha": 0.3,
+                      "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
                       "color": [1.0, 0.333, 0.333],
                       "visible": false,
                       "bindings": [
@@ -503,7 +503,7 @@
                     "recipe_book_touch_cell_selected": {
                       "type": "image",
                       "texture": "textures/XeroxClient/rounded_corner/all8x",
-                      "alpha": 0.3,
+                      "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
                       "color": [0.667, 0.667, 1.0],
                       "visible": false,
                       "bindings": [
@@ -834,7 +834,7 @@
                       "type": "image",
                       "texture": "textures/XeroxClient/rounded_corner/all8x",
                       "color": "$xeroxclient_ui_theme_menu_background_color",
-                      "alpha": 0.3,
+                      "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
                       "layer": 1,
                       "size": ["111.1111111111%c", "102.7777777778%c"],
                       "controls": [
@@ -881,7 +881,7 @@
                             "type": "image",
                             "texture": "textures/XeroxClient/rounded_corner/all8x",
                             "color": "$xeroxclient_ui_theme_menu_background_color",
-                            "alpha": 0.3,
+                            "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
                             "layer": 1,
                             "size": ["153.3333333333%c", "100%"],
                             "controls": [
@@ -921,7 +921,7 @@
                             "type": "image",
                             "texture": "textures/XeroxClient/rounded_corner/all8x",
                             "color": "$xeroxclient_ui_theme_menu_background_color",
-                            "alpha": 0.3,
+                            "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
                             "layer": 1,
                             "size": ["111.1111111111%c", "100%x"],
                             "anchor_from": "bottom_middle",
@@ -966,7 +966,7 @@
                       "type": "image",
                       "texture": "textures/XeroxClient/rounded_corner/all8x",
                       "color": "$xeroxclient_ui_theme_menu_background_color",
-                      "alpha": 0.3,
+                      "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
                       "layer": 1,
                       "size": ["100%c", "100%c"],
                       "anchor_from": "left_middle",
@@ -1190,7 +1190,7 @@
                                   "color": [
                                     0.0039215686, 0.0549019608, 0.0549019607
                                   ],
-                                  "alpha": 0.3
+                                  "alpha": "$xeroxclient_ui_theme_menu_background_alpha"
                                 }
                               },
                               {
@@ -1218,7 +1218,7 @@
                             "type": "image",
                             "texture": "textures/XeroxClient/rounded_corner/all8x",
                             "color": "$xeroxclient_ui_theme_menu_background_color",
-                            "alpha": 0.3,
+                            "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
                             "layer": 1,
                             "size": ["100%c", "100%c"],
                             "controls": [

@@ -30,7 +30,7 @@
     "max_size": [175, 8],
     "texture": "textures/XeroxClient/rounded_corner/all8x",
     "layer": 11,
-    "alpha": 0.4,
+    "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
     "anchor_from": "bottom_middle",
     "anchor_to": "bottom_middle"
   },

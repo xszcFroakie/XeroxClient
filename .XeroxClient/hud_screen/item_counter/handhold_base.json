@@ -477,7 +477,7 @@
     "type": "image",
     //"$counter_item_id": 1,
     //"offset": [0, 16],
-    "alpha": 0.3,
+    "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
     "layer": 3,
     "texture": "textures/XeroxClient/rounded_corner/all8x",
     "color": "$xeroxclient_ui_theme_menu_background_color",
@@ -558,7 +558,7 @@
 
   "dura_viewer_content": {
     "type": "image",
-    "alpha": 0.3,
+    "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
     "layer": 3,
     "texture": "textures/XeroxClient/rounded_corner/all8x",
     "color": "$xeroxclient_ui_theme_menu_background_color",

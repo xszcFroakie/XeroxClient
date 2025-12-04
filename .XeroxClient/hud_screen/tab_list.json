@@ -177,7 +177,7 @@
         "background": {
           "type": "image",
           "size": ["100% - 1px", 12],
-          "alpha": 0.3,
+          "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
           "layer": 2,
           "texture": "textures/XeroxClient/rounded_corner/all2x",
           "color": "$xeroxclient_ui_theme_menu_background_color"

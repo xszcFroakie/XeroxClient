@@ -134,7 +134,7 @@
     "layer": 9,
     "anchor_from": "bottom_left",
     "offset": [8, -8],
-    "alpha": 0.4,
+    "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
     "color": "$xeroxclient_ui_theme_menu_background_color",
     "anchor_to": "bottom_left",
     "controls": [

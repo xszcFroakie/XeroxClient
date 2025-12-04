@@ -42,7 +42,7 @@
                 "type": "image",
                 "texture": "textures/XeroxClient/rounded_corner/all8x",
                 "color": "$xeroxclient_ui_theme_button_locked_color",
-                "alpha": 0.3,
+                "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
                 "layer": 1,
                 "size": ["88.8888888889%", "100%x"]
               }
@@ -139,7 +139,7 @@
                 "type": "image",
                 "texture": "textures/XeroxClient/rounded_corner/all8x",
                 "color": "$xeroxclient_ui_theme_menu_background_color",
-                "alpha": 0.3,
+                "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
                 "layer": 1,
                 "offset": "$grid_offset",
                 "size": ["103.7037037037%c", "100%x"],
@@ -237,7 +237,7 @@
                 "type": "image",
                 "texture": "textures/XeroxClient/rounded_corner/all8x",
                 "color": "$xeroxclient_ui_theme_menu_background_color",
-                "alpha": 0.3,
+                "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
                 "layer": 1,
                 "offset": "$grid_offset",
                 "size": ["102.2222222222%c", "111.1111111111%c"],
@@ -287,7 +287,7 @@
                 "type": "image",
                 "texture": "textures/XeroxClient/rounded_corner/all8x",
                 "color": "$xeroxclient_ui_theme_menu_background_color",
-                "alpha": 0.3,
+                "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
                 "layer": 1,
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
@@ -505,7 +505,7 @@
                       "texture": "textures/XeroxClient/arrow/l_right",
                       "layer": 3,
                       "color": [1.0, 0.333, 0.333],
-                      "alpha": 0.3,
+                      "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
                       "bindings": [
                         {
                           "binding_name": "(#redstone_arrow_texture = 'textures/ui/redstone_arrow_powered')",
@@ -520,7 +520,7 @@
                       "texture": "textures/XeroxClient/arrow/l_right",
                       "layer": 3,
                       "color": [0.0039215686, 0.0549019608, 0.0549019607],
-                      "alpha": 0.3,
+                      "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
                       "bindings": [
                         {
                           "binding_name": "(#redstone_arrow_texture = 'textures/ui/redstone_arrow_unpowered')",
@@ -538,7 +538,7 @@
                 "type": "image",
                 "texture": "textures/XeroxClient/rounded_corner/all8x",
                 "color": "$xeroxclient_ui_theme_menu_background_color",
-                "alpha": 0.3,
+                "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
                 "layer": 1,
                 "size": ["107.6923076923%c", "100%x"],
                 "anchor_from": "top_right",

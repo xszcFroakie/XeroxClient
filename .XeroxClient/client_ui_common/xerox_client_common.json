@@ -40,7 +40,7 @@
     "size": [140, "100%c+10px"],
     "texture": "textures/XeroxClient/rounded_corner/all8x",
     "color": "$xeroxclient_ui_theme_menu_background_color",
-    "alpha": 0.3,
+    "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "offset": [7.5, 45],

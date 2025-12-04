@@ -100,7 +100,7 @@
                             "type": "image",
                             "texture": "textures/XeroxClient/rounded_corner/all8x",
                             "color": "$xeroxclient_ui_theme_menu_background_color",
-                            "alpha": 0.3,
+                            "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
                             "layer": 1,
                             "size": ["100%sm", "190%x"],
                             "bindings": [
@@ -116,7 +116,7 @@
                             "type": "image",
                             "texture": "textures/XeroxClient/rounded_corner/all8x",
                             "color": "$xeroxclient_ui_theme_menu_background_color",
-                            "alpha": 0.3,
+                            "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
                             "layer": 1,
                             "size": ["100%sm", "100%x"],
                             "bindings": [
@@ -175,7 +175,7 @@
                             "type": "image",
                             "texture": "textures/XeroxClient/rounded_corner/all8x",
                             "color": "$xeroxclient_ui_theme_menu_background_color",
-                            "alpha": 0.3,
+                            "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
                             "layer": 1,
                             "size": ["308.6419753086%c", "112%x"],
                             "controls": [
@@ -209,7 +209,7 @@
                       "type": "image",
                       "texture": "textures/XeroxClient/rounded_corner/all8x",
                       "color": "$xeroxclient_ui_theme_menu_background_color",
-                      "alpha": 0.3,
+                      "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
                       "layer": 1,
                       "size": ["102.2222222222%c", "103.7037037037%c"],
                       "controls": [

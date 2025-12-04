@@ -96,7 +96,7 @@
                       "anchor_to": "top_middle",
                       "texture": "textures/XeroxClient/rounded_corner/all8x",
                       "color": "$xeroxclient_ui_theme_menu_background_color",
-                      "alpha": 0.3,
+                      "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
                       "layer": 1,
                       "size": ["111.1111111111%c", "100%x"],
                       "controls": [
@@ -115,7 +115,7 @@
                       "anchor_to": "bottom_middle",
                       "texture": "textures/XeroxClient/rounded_corner/all8x",
                       "color": "$xeroxclient_ui_theme_menu_background_color",
-                      "alpha": 0.3,
+                      "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
                       "layer": 1,
                       "size": ["111.1111111111%c", "100%x"],
                       "controls": [
@@ -148,7 +148,7 @@
                       "texture": "textures/XeroxClient/arrow/l_right",
                       "layer": 3,
                       "color": "$xeroxclient_ui_theme_menu_background_color",
-                      "alpha": 0.3
+                      "alpha": "$xeroxclient_ui_theme_menu_background_alpha"
                     }
                   },
                   {
@@ -175,7 +175,7 @@
                 "anchor_to": "left_middle",
                 "texture": "textures/XeroxClient/rounded_corner/all8x",
                 "color": "$xeroxclient_ui_theme_menu_background_color",
-                "alpha": 0.3,
+                "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
                 "layer": 1,
                 "size": ["111.1111111111%c", "100%x"],
                 "offset": ["22.1590909091%", "1.2345679012%"],

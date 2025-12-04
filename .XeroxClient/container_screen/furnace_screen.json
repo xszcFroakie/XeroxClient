@@ -94,7 +94,7 @@
                       "type": "image",
                       "texture": "textures/XeroxClient/rounded_corner/all8x",
                       "color": "$xeroxclient_ui_theme_menu_background_color",
-                      "alpha": 0.3,
+                      "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
                       "layer": 1,
                       "size": ["111.1111111111%c", "100%x"],
                       "controls": [
@@ -116,7 +116,7 @@
                             "type": "image",
                             "texture": "textures/XeroxClient/icon/fire",
                             "color": "$xeroxclient_ui_theme_menu_background_color",
-                            "alpha": 0.3,
+                            "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
                             "layer": 1,
                             "$default_size": [13, 13],
                             "size": "$default_size",
@@ -151,7 +151,7 @@
                       "type": "image",
                       "texture": "textures/XeroxClient/rounded_corner/all8x",
                       "color": "$xeroxclient_ui_theme_menu_background_color",
-                      "alpha": 0.3,
+                      "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
                       "layer": 1,
                       "size": ["111.1111111111%c", "100%x"],
                       "controls": [
@@ -184,7 +184,7 @@
                       "texture": "textures/XeroxClient/arrow/l_right",
                       "layer": 3,
                       "color": "$xeroxclient_ui_theme_menu_background_color",
-                      "alpha": 0.3
+                      "alpha": "$xeroxclient_ui_theme_menu_background_alpha"
                     }
                   },
                   {
@@ -212,7 +212,7 @@
                 "type": "image",
                 "texture": "textures/XeroxClient/rounded_corner/all8x",
                 "color": "$xeroxclient_ui_theme_menu_background_color",
-                "alpha": 0.3,
+                "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
                 "layer": 1,
                 "size": ["107.6923076923%c", "100%x"],
                 "anchor_to": "left_middle",

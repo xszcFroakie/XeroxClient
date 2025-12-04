@@ -249,7 +249,7 @@
     "type": "image",
     "texture": "textures/XeroxClient/rounded_corner/all2x",
     "color": "$xeroxclient_ui_theme_menu_background_color",
-    "alpha": 0.3,
+    "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
     "size": [3, "100%"],
     "layer": 3
   },

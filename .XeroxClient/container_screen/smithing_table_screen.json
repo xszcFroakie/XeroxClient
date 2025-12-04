@@ -109,7 +109,7 @@
                       "type": "image",
                       "texture": "textures/XeroxClient/rounded_corner/all8x",
                       "color": "$xeroxclient_ui_theme_menu_background_color",
-                      "alpha": 0.3,
+                      "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
                       "layer": 0,
                       "size": ["103.7037037037%c", "100%sm"],
                       "controls": [
@@ -149,7 +149,7 @@
                           "arrow": {
                             "type": "image",
                             "color": "$xeroxclient_ui_theme_menu_background_color",
-                            "alpha": 0.3,
+                            "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
                             "size": "$default_size",
                             "$default_size": [18, 12],
                             "animation_reset_name": "screen_animation_reset",
@@ -181,7 +181,7 @@
                       "type": "image",
                       "texture": "textures/XeroxClient/rounded_corner/all8x",
                       "color": "$xeroxclient_ui_theme_menu_background_color",
-                      "alpha": 0.3,
+                      "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
                       "layer": 0,
                       "size": ["111.1111111111%c", "100%x"],
                       "controls": [

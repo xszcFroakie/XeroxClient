@@ -215,7 +215,7 @@
                       "size": ["101.2345679012%c", "101.8518518519%c"],
                       "texture": "textures/XeroxClient/rounded_corner/all8x",
                       "color": "$xeroxclient_ui_theme_menu_background_color",
-                      "alpha": 0.3,
+                      "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
                       "layer": 2,
                       "anchor_from": "bottom_middle",
                       "anchor_to": "bottom_middle",

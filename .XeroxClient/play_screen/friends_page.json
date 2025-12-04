@@ -161,7 +161,7 @@
                 "type": "image",
                 "texture": "textures/XeroxClient/rounded_corner/all8x",
                 "color": "$xeroxclient_ui_theme_menu_background_color",
-                "alpha": 0.3,
+                "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
                 "size": ["100%c + 2px", "100%c"],
                 "anchor_from": "top_right",
                 "anchor_to": "center",
@@ -265,7 +265,7 @@
                             "type": "image",
                             "texture": "textures/XeroxClient/rounded_corner/all8x",
                             "color": "$xeroxclient_ui_theme_menu_background_color",
-                            "alpha": 0.3,
+                            "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
                             "layer": 8,
                             "size": ["100% + 4px", "100%"]
                           }
@@ -373,7 +373,7 @@
                       "type": "image",
                       "texture": "textures/XeroxClient/rounded_corner/all8x",
                       "color": "$xeroxclient_ui_theme_menu_background_color",
-                      "alpha": 0.3,
+                      "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
                       "layer": 8,
                       "size": ["100% + 4px", "100%"]
                     }

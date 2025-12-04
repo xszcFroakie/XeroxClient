@@ -16,13 +16,13 @@
   "label_background": {
     "texture": "textures/XeroxClient/rounded_corner/all8x",
     "color": "$xeroxclient_ui_theme_menu_background_color",
-    "alpha": 0.3
+    "alpha": "$xeroxclient_ui_theme_menu_background_alpha"
   },
 
   "dark_label_background": {
     "texture": "textures/XeroxClient/rounded_corner/all8x",
     "color": "$xeroxclient_ui_theme_menu_background_color",
-    "alpha": 0.3
+    "alpha": "$xeroxclient_ui_theme_menu_background_alpha"
   } /*
 
   "crossplatform_disabled_panel/disable_text": {
