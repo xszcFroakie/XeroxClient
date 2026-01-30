@@ -26,23 +26,38 @@
           "bindings": [
             {
               "binding_name": "#player_position_text",
-              "binding_name_override": "#coordinate",
+              "binding_name_override": "#coordinate_raw",
               "binding_condition": "always_when_visible",
               "binding_type": "global"
             },
             {
               "binding_type": "view",
-              "source_property_name": "((#coordinate - '§§') * 1)",
+              "source_property_name": "(#coordinate_raw - '-1' - '-2' - '-3' - '-4' - '-5' - '-6' - '-7' - '-8' - '-9')",
+              "target_property_name": "#coordinate_processed_1"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#coordinate_processed_1 - '1' - '2' - '3' - '4' - '5' - '6' - '7' - '8' - '9' - '0')",
+              "target_property_name": "#coordinate_processed_2"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#coordinate_raw - ' ') - (#coordinate_processed_2 - ' ' - ':' - ','))",
+              "target_property_name": "#coordinate_no_prefix"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#coordinate_no_prefix - ':')",
               "target_property_name": "#coordinate_x"
             },
             {
               "binding_type": "view",
-              "source_property_name": "((#coordinate - ('§§' + #coordinate_x + '/')) * 1)",
+              "source_property_name": "(#coordinate_no_prefix - (':' + #coordinate_x + ','))",
               "target_property_name": "#coordinate_y"
             },
             {
               "binding_type": "view",
-              "source_property_name": "((#coordinate - ('§§' + #coordinate_x + '/' + #coordinate_y + '/')) * 1)",
+              "source_property_name": "(#coordinate_no_prefix - (':' + #coordinate_x + ',' + #coordinate_y + ','))",
               "target_property_name": "#coordinate_z"
             },
             {

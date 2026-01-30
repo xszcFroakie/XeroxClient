@@ -9,4 +9,4 @@ xc.tip.press2x=雙擊
 xc.button.copy=複製
 xc.button.paste=貼上
 
-map.position=§§%s/%s/%s
+map.position=Position: %s, %s, %s ## Why only Chinese can't separate numbers?😅
