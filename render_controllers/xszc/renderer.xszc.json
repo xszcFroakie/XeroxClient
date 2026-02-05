@@ -14,8 +14,10 @@
             "texture.iron_helmet",
             "texture.diamond_helmet",
             "texture.gold_helmet",
+            "texture.gold_helmet",
             "texture.turtle_helmet",
             "texture.netherite_helmet",
+            "texture.copper_helmet",
             "texture.pumpkin"
           ]
         }
@@ -23,7 +25,7 @@
       "geometry": "Geometry.hud_helmet",
       "materials": [{ "*": "Material.armor" }],
       "textures": [
-        "array.helmets[(q.armor_texture_slot(0) < 5 ? (q.armor_texture_slot(0) + 1) : q.armor_texture_slot(0)) + (q.is_item_name_any('slot.armor.head', 0, 'minecraft:carved_pumpkin') ? 8)]"
+        "array.helmets[q.armor_texture_slot(0) + 1 + (q.is_item_name_any('slot.armor.head', 0, 'minecraft:carved_pumpkin') ? 10)]"
       ],
       "color": {
         "r": "q.armor_color_slot(0, 0)",
@@ -65,15 +67,15 @@
             "texture.diamond_chestplate",
             "texture.gold_chestplate",
             "texture.elytra",
-            "texture.netherite_chestplate"
+            "texture.elytra",
+            "texture.netherite_chestplate",
+            "texture.copper_chestplate"
           ]
         }
       },
       "geometry": "Geometry.hud_chestplate",
       "materials": [{ "*": "Material.armor" }],
-      "textures": [
-        "array.chestplates[(q.armor_texture_slot(1) < 6) ? (q.armor_texture_slot(1) + 1) : (q.armor_texture_slot(1) == 7 ? 7)]"
-      ],
+      "textures": ["array.chestplates[q.armor_texture_slot(1) + 1]"],
       "color": {
         "r": "q.armor_color_slot(1, 0)",
         "g": "q.armor_color_slot(1, 1)",
@@ -113,15 +115,16 @@
             "texture.iron_leggings",
             "texture.diamond_leggings",
             "texture.gold_leggings",
-            "texture.netherite_leggings"
+            "texture.gold_leggings",
+            "texture.gold_leggings",
+            "texture.netherite_leggings",
+            "texture.copper_leggings"
           ]
         }
       },
       "geometry": "Geometry.hud_leggings",
       "materials": [{ "*": "Material.armor" }],
-      "textures": [
-        "array.leggings[(q.armor_texture_slot(2) < 5) ? (q.armor_texture_slot(2) + 1) : (q.armor_texture_slot(2) == 7 ? 6)]"
-      ],
+      "textures": ["array.leggings[q.armor_texture_slot(2) + 1]"],
       "color": {
         "r": "q.armor_color_slot(2, 0)",
         "g": "q.armor_color_slot(2, 1)",
@@ -161,15 +164,16 @@
             "texture.iron_boots",
             "texture.diamond_boots",
             "texture.gold_boots",
-            "texture.netherite_boots"
+            "texture.gold_boots",
+            "texture.gold_boots",
+            "texture.netherite_boots",
+            "texture.copper_boots"
           ]
         }
       },
       "geometry": "Geometry.hud_boots",
       "materials": [{ "*": "Material.armor" }],
-      "textures": [
-        "array.boots[(q.armor_texture_slot(3) < 5) ? (q.armor_texture_slot(3) + 1) : (q.armor_texture_slot(3) == 7 ? 6)]"
-      ],
+      "textures": ["array.boots[q.armor_texture_slot(3) + 1]"],
       "color": {
         "r": "q.armor_color_slot(3, 0)",
         "g": "q.armor_color_slot(3, 1)",
@@ -208,6 +212,16 @@
     }
   }
 }
+// ▒██   ██▒  ██████ ▒███████▒ ▄████▄
+// ▒▒ █ █ ▒░▒██    ▒ ▒ ▒ ▒ ▄▀░▒██▀ ▀█
+// ░░  █   ░░ ▓██▄   ░ ▒ ▄▀▒░ ▒▓█    ▄
+//  ░ █ █ ▒   ▒   ██▒  ▄▀▒   ░▒▓▓▄ ▄██▒
+// ▒██▒ ▒██▒▒██████▒▒▒███████▒▒ ▓███▀ ░
+// ▒▒ ░ ░▓ ░▒ ▒▓▒ ▒ ░░▒▒ ▓░▒░▒░ ░▒ ▒  ░
+// ░░   ░▒ ░░ ░▒  ░ ░░░▒ ▒ ░ ▒  ░  ▒
+//  ░    ░  ░  ░  ░  ░ ░ ░ ░ ░░
+//  ░    ░        ░    ░ ░    ░ ░
+//                   ░        ░
 // ▒██   ██▒  ██████ ▒███████▒ ▄████▄
 // ▒▒ █ █ ▒░▒██    ▒ ▒ ▒ ▒ ▄▀░▒██▀ ▀█
 // ░░  █   ░░ ▓██▄   ░ ▒ ▄▀▒░ ▒▓█    ▄
