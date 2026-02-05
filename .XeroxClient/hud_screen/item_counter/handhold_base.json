@@ -34,7 +34,7 @@
       },
       {
         "binding_type": "view",
-        "source_property_name": "(#inventory_stack_count * 1)",
+        "source_property_name": "((#inventory_stack_count + 1 - 1) * 1)",
         "target_property_name": "#ItemStackCount"
       },
       {
@@ -44,7 +44,7 @@
       },
       {
         "binding_type": "view",
-        "source_property_name": "((#OneCount + #ItemStackCount) * #is_item_right)",
+        "source_property_name": "((#OneCount + #ItemStackCount) / 10 * #is_item_right)",
         "target_property_name": "#slot_item_counter"
       }
     ]
