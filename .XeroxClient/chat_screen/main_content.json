@@ -435,6 +435,14 @@
           "anchor_to": "left_middle",
           "controls": [
             {
+              "host_panel@host_options.host_panel": {
+                "$xeroxclient_ui_control": true,
+                "$button_text_color": [],
+                "size": [140, "100% - 20px"],
+                "offset": [2.5, -27.5]
+              }
+            },
+            {
               "stack_panel": {
                 "type": "stack_panel",
                 "size": ["100% - 5px", "100% - 5px"],
@@ -457,19 +465,63 @@
                   {
                     "text_edit_panel": {
                       "type": "stack_panel",
-                      "size": ["100%", 20],
+                      "size": ["100%", 25],
                       "orientation": "horizontal",
                       "controls": [
                         {
-                          "text_edit_box@xc_modern_chat.text_edit_box": {
-                            "size": ["fill", 20],
-                            "$rc_type": "left8x"
+                          "host_main_button@common_buttons.la_rc_8x_text": {
+                            "$button_image_size": ["100%", "100%"],
+                            "$pressed_button_name": "button.host_toggle",
+                            "size": [25, 25],
+                            "$button_text": "/",
+                            "bindings": [
+                              {
+                                "binding_name": "#cheats_on",
+                                "binding_name_override": "#visible"
+                              }
+                            ]
                           }
                         },
-                        { "padding": { "type": "panel", "size": [1, 0] } },
+                        {
+                          "padding0": {
+                            "type": "panel",
+                            "size": [1, 0],
+                            "bindings": [
+                              {
+                                "binding_name": "#cheats_on",
+                                "binding_name_override": "#visible"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "text_edit_box_square@xc_modern_chat.text_edit_box": {
+                            "size": ["fill", 25],
+                            "$rc_type": "none",
+                            "bindings": [
+                              {
+                                "binding_name": "#cheats_on",
+                                "binding_name_override": "#visible"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "text_edit_box_rounded_corner@xc_modern_chat.text_edit_box": {
+                            "size": ["fill", 25],
+                            "$rc_type": "left8x",
+                            "bindings": [
+                              {
+                                "binding_name": "(not #cheats_on)",
+                                "binding_name_override": "#visible"
+                              }
+                            ]
+                          }
+                        },
+                        { "padding1": { "type": "panel", "size": [1, 0] } },
                         {
                           "send_button@common_buttons.ra_rc_8x_text": {
-                            "size": [28, 20],
+                            "size": [28, 25],
                             "$button_image_size": ["100%", "100%"],
                             "$button_text": "Send",
                             "$pressed_button_name": "button.send"

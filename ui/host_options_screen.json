@@ -1,0 +1,89 @@
+{
+  "namespace": "host_options",
+
+  "button_label": {
+    "font_type": "$global_font_type",
+    "backup_font_type": "$global_font_type_backup",
+    "color": []
+  },
+
+  "scrollable_selector_area_@xc_modern_scrolling_panel.scrolling_panel": {
+    "$size_scrollable_panel|default": ["100%", "100%"],
+    "$offset_scrollable_panel|default": [0, 0],
+    "offset": "$offset_scrollable_panel",
+    "size": "$size_scrollable_panel",
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "$scroll_size": [5, "100%"],
+    "$show_background": false,
+    "$scroll_bar_contained": false
+  },
+
+  "host_main_button": {
+    "$default_button_texture": "textures/XeroxClient/rounded_corner/all8x",
+    "$hover_button_texture": "textures/XeroxClient/rounded_corner/all8x",
+    "$pressed_button_texture": "textures/XeroxClient/rounded_corner/all8x",
+    "$locked_button_texture": "textures/XeroxClient/rounded_corner/all8x"
+  },
+
+  "scrolling_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "remove",
+        "control_name": "background"
+      },
+      {
+        "array_name": "controls",
+        "operation": "replace",
+        "control_name": "scrollable_tab",
+        "value": [
+          {
+            "scrollable_tab@host_options.scrollable_selector_area_": {
+              "layer": 2,
+              "$scrolling_content": "$main_scrolling_content",
+              "anchor_from": "bottom_middle",
+              "anchor_to": "bottom_middle",
+              "$offset_scrollable_panel": "$main_offset_scrollable_panel",
+              "$size_scrollable_panel": "$main_size_scrollable_panel"
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "button_content": {
+    "$button_glyph_texture|default": "textures/XeroxClient/arrow/right"
+  },
+
+  "main_light_button": {
+    "$default_button_texture": "textures/XeroxClient/rounded_corner/all8x",
+    "$hover_button_texture": "textures/XeroxClient/rounded_corner/all8x",
+    "$pressed_button_texture": "textures/XeroxClient/rounded_corner/all8x",
+    "$locked_button_texture": "textures/XeroxClient/rounded_corner/all8x"
+  },
+
+  "main_dark_button": {
+    "$default_button_texture": "textures/XeroxClient/rounded_corner/all8x",
+    "$hover_button_texture": "textures/XeroxClient/rounded_corner/all8x",
+    "$pressed_button_texture": "textures/XeroxClient/rounded_corner/all8x",
+    "$locked_button_texture": "textures/XeroxClient/rounded_corner/all8x"
+  },
+
+  "return_from_sub_command_button": {
+    "$button_glyph_texture": "textures/XeroxClient/arrow/left"
+  },
+
+  "host_teleport_grid_item/host_option_button": {
+    "$button_glyph_texture": "textures/XeroxClient/arrow/right"
+  },
+
+  "host_teleport_grid_item/host_option_toggle": {
+    "$default_texture": "textures/XeroxClient/rounded_corner/all8x",
+    "$hover_texture": "textures/XeroxClient/rounded_corner/all8x",
+    "$pressed_texture": "textures/XeroxClient/rounded_corner/all8x",
+    "$pressed_no_hover_texture": "textures/XeroxClient/rounded_corner/all8x",
+    "$locked_texture": "textures/XeroxClient/rounded_corner/all8x"
+  }
+}
