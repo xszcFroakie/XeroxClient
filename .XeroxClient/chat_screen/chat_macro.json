@@ -213,33 +213,6 @@
     ]
   },
 
-  "debug_macro_buttons": {
-    "type": "image",
-    "texture": "textures/XeroxClient/rounded_corner/all8x",
-    "color": "$xeroxclient_ui_theme_menu_background_color",
-    "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
-    "size": ["100%c + 2px", "100%c + 2px"],
-    "ignored": "(not $xeroxclient_debug_mode)",
-    "controls": [
-      {
-        "stack_1": {
-          "type": "stack_panel",
-          "size": ["100%c", 20],
-          "orientation": "horizontal",
-          "controls": [
-            {
-              "reload_all@xc_modern_chat:chat_macro.macro_button": {
-                "size": [50, 20],
-                "$macro_command": "/reload all",
-                "$macro_button_text": "profileScreen.reload"
-              }
-            }
-          ]
-        }
-      }
-    ]
-  },
-
   "cr_icon@xc_common.item_renderer": {
     "size": [16, 16],
     "$item_id_aux": 131072

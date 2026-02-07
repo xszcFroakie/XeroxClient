@@ -3,12 +3,15 @@
 {
   "namespace": "xc_modern_chat",
 
-  "chat_settings_button@chat.small_button": {
-    "$button_content": "chat.gear_image",
-    "$pressed_button_name": "button.open_chat_settings",
-    "$focus_id": "chat_settings_button_focus_id",
-    "$focus_override_up": "coordinate_dropdown_focus_id",
-    "$button_tts_header": "chat.settings"
+  "settings_icon": {
+    "type": "image",
+    "texture": "textures/XeroxClient/icon/settings"
+  },
+
+  "settings_button@common_buttons.a_rc_8x_content": {
+    "size": [23, 23],
+    "$button_content": "xc_modern_chat.settings_icon",
+    "$pressed_button_name": "button.open_chat_settings"
   },
 
   "messages_text": {
@@ -668,9 +671,17 @@
                 "size": [0, "100%c"],
                 "controls": [
                   {
-                    "debug_macros@xc_modern_chat:chat_macro.debug_macro_buttons": {
+                    "button_background": {
+                      "type": "image",
+                      "texture": "textures/XeroxClient/rounded_corner/all8x",
+                      "color": "$xeroxclient_ui_theme_menu_background_color",
+                      "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
+                      "size": ["100%c + 2px", "100%c + 2px"],
                       "anchor_from": "right_middle",
-                      "anchor_to": "right_middle"
+                      "anchor_to": "right_middle",
+                      "controls": [
+                        { "settings_button@xc_modern_chat.settings_button": {} }
+                      ]
                     }
                   }
                 ]
