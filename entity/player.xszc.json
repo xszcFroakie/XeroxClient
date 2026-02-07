@@ -227,7 +227,6 @@
         "first_person_shield_block": "animation.player.first_person.shield_block",
         "first_person_attack_controller": "controller.animation.player.first_person_attack",
         "first_person_attack_rotation": "animation.player.first_person.attack_rotation",
-        "first_person_attack_rotation_item": "animation.player.first_person.attack_rotation_item",
         "first_person_vr_attack_rotation": "animation.player.first_person.vr_attack_rotation",
         "first_person_walk": "animation.player.first_person.walk",
         "first_person_map_controller": "controller.animation.player.first_person_map",
@@ -264,9 +263,9 @@
         {
           "controller.render.player.third_person_spectator": "!v.is_first_person && !v.map_face_icon && q.is_spectator"
         },
-        { "controller.render.player.first_person": "v.is_first_person" },
+        { "controller.render.player.first_person": "v.is_first_person && !q.is_spectator" },
         {
-          "controller.render.player.third_person": "!v.is_first_person && !v.map_face_icon"
+          "controller.render.player.third_person": "!v.is_first_person && !v.map_face_icon && !q.is_spectator"
         },
         { "controller.render.player.map": "v.map_face_icon" },
         { "controller.render.player.cape": "q.is_local_player" },
