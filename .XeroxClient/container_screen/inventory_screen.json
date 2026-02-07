@@ -1294,7 +1294,7 @@
                 "anchor_from": "bottom_right",
                 "anchor_to": "bottom_right",
                 "offset": [0, "-0.6024096386%"],
-                //"ignored": "(not $touch)",
+                "ignored": "(not $touch)",
                 "controls": [
                   {
                     "mode_selection@xc_modern_container:classic_common.mode_selection_panel": {
