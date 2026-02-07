@@ -16,8 +16,6 @@
     ".XeroxClient/client_ui_common/xerox_tabs.json",
     ".XeroxClient/client_ui_common/xerox_toggles.json",
 
-    ".XeroxClient/debug_feature.json",
-
     ".XeroxClient/container_screen/anvil_screen.json",
     ".XeroxClient/container_screen/beacon_screen.json",
     ".XeroxClient/container_screen/brewing_stand_screen.json",
@@ -43,8 +41,8 @@
     ".XeroxClient/hud_screen/coordinate.json",
     ".XeroxClient/hud_screen/hotbar/button_mappings.json",
     ".XeroxClient/hud_screen/hotbar/vanilla.json",
-    ".XeroxClient/hud_screen/item_counter/handhold_base.json",
-    ".XeroxClient/hud_screen/item_counter/item_detected.json",
+    ".XeroxClient/hud_screen/handhold_utils/handhold_base.json",
+    ".XeroxClient/hud_screen/handhold_utils/item_detection.json",
     ".XeroxClient/hud_screen/scoreboard.json",
     ".XeroxClient/hud_screen/tab_list.json",
     ".XeroxClient/hud_screen/text_panel.json",

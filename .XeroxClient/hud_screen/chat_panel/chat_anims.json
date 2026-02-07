@@ -2,7 +2,7 @@
 // Secondary distribution must follow the GPL-3.0-only Protocol!!
 
 {
-  "namespace": "xc_modern_chat",
+  "namespace": "xc_modern_hud:chat_panel_animation",
 
   "chat_offset_start_anim": {
     "anim_type": "offset",
@@ -11,12 +11,12 @@
     "duration": 0.4,
     "from": ["-70%", 0],
     "to": [0, 0],
-    "next": "@xc_modern_chat.chat_offset_wait_anim"
+    "next": "@xc_modern_hud:chat_panel_animation.chat_offset_wait_anim"
   },
   "chat_offset_wait_anim": {
     "anim_type": "wait",
     "duration": "($chat_item_lifetime - 0.6)",
-    "next": "@xc_modern_chat.chat_offset_end_anim"
+    "next": "@xc_modern_hud:chat_panel_animation.chat_offset_end_anim"
   },
   "chat_offset_end_anim": {
     "anim_type": "offset",
@@ -39,18 +39,18 @@
     "duration": 0.4,
     "from": ["100%", "100%c"],
     "to": ["100%", "100%c"],
-    "next": "@xc_modern_chat.chat_wait_anim_2"
+    "next": "@xc_modern_hud:chat_panel_animation.chat_wait_anim_2"
   },
   "chat_wait_anim_2": {
     "anim_type": "wait",
     "duration": "($chat_item_lifetime - 0.6)",
-    "next": "@xc_modern_chat.chat_end_anim"
+    "next": "@xc_modern_hud:chat_panel_animation.chat_end_anim"
   },
   "chat_end_anim": {
     "anim_type": "size",
     "easing": "out_quart",
     "duration": 0.3,
-    "destroy_at_end": "xc_modern_chat.chat_grid_item",
+    "destroy_at_end": "xc_modern_hud:chat_panel_animation.chat_grid_item",
     "to": ["100%", "0%c"],
     "from": ["100%", "100%c"]
   },
@@ -61,12 +61,12 @@
     "from": 0,
     "to": 1.0,
     "easing": "out_cubic",
-    "next": "@xc_modern_chat.chat_bg_wait_anim"
+    "next": "@xc_modern_hud:chat_panel_animation.chat_bg_wait_anim"
   },
   "chat_bg_wait_anim": {
     "anim_type": "wait",
     "duration": "($chat_item_lifetime - 0.6)",
-    "next": "@xc_modern_chat.chat_bg_end_anim"
+    "next": "@xc_modern_hud:chat_panel_animation.chat_bg_end_anim"
   },
   "chat_bg_end_anim": {
     "anim_type": "alpha",
@@ -82,12 +82,12 @@
     "from": -0.025,
     "to": 1.0,
     "duration": 0.4,
-    "next": "@xc_modern_chat.chat_text_wait_anim"
+    "next": "@xc_modern_hud:chat_panel_animation.chat_text_wait_anim"
   },
   "chat_text_wait_anim": {
     "anim_type": "wait",
     "duration": "($chat_item_lifetime - 0.6)",
-    "next": "@xc_modern_chat.chat_text_end_anim"
+    "next": "@xc_modern_hud:chat_panel_animation.chat_text_end_anim"
   },
   "chat_text_end_anim": {
     "anim_type": "alpha",

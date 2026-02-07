@@ -2,7 +2,7 @@
 // Secondary distribution must follow the GPL-3.0-only Protocol!!
 
 {
-  "namespace": "xc_modern_scoreboard",
+  "namespace": "xc_modern_hud:scoreboard",
 
   "scoreboard_sidebar_score": {
     "type": "label",
@@ -95,7 +95,7 @@
                 "collection_name": "scoreboard_players",
                 "factory": {
                   "name": "player_list_factory",
-                  "control_name": "xc_modern_scoreboard.scoreboard_sidebar_player"
+                  "control_name": "xc_modern_hud:scoreboard.scoreboard_sidebar_player"
                 },
                 "bindings": [
                   {
@@ -122,7 +122,7 @@
                 "collection_name": "scoreboard_scores",
                 "factory": {
                   "name": "player_score_factory",
-                  "control_name": "xc_modern_scoreboard.scoreboard_sidebar_score"
+                  "control_name": "xc_modern_hud:scoreboard.scoreboard_sidebar_score"
                 },
                 "bindings": [
                   {

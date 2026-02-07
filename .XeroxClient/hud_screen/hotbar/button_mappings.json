@@ -7,7 +7,7 @@
 // Don't use any file without permission. Read LICENSE.txt
 
 {
-  "namespace": "xc_modern_hotbar:mappings",
+  "namespace": "xc_modern_hud:hotbar:mappings",
   "button_mappings_for_not_touch_mode": {
     "type": "input_panel",
     "button_mappings": [

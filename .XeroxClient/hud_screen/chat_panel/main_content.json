@@ -2,7 +2,7 @@
 // Secondary distribution must follow the GPL-3.0-only Protocol!!
 
 {
-  "namespace": "xc_modern_chat",
+  "namespace": "xc_modern_hud:chat_panel",
 
   "chat_label": {
     "type": "label",
@@ -36,7 +36,7 @@
         "binding_name_override": "#visible"
       }
     ],
-    "anims": ["@xc_modern_chat.chat_start_anim"],
+    "anims": ["@xc_modern_hud:chat_panel_animation.chat_start_anim"],
     "controls": [
       {
         "chat_msg": {
@@ -45,8 +45,8 @@
           "anchor_to": "top_left",
           "size": ["100%", "100%c"],
           "propagate_alpha": true,
-          "alpha": "@xc_modern_chat.chat_bg_start_anim",
-          "anims": ["@xc_modern_chat.chat_wait_anim_1"],
+          "alpha": "@xc_modern_hud:chat_panel_animation.chat_bg_start_anim",
+          "anims": ["@xc_modern_hud:chat_panel_animation.chat_wait_anim_1"],
           "controls": [
             {
               "chat_content": {
@@ -55,10 +55,10 @@
                 "anchor_from": "bottom_left",
                 "anchor_to": "bottom_left",
                 "size": ["100%", "100%c"],
-                "offset": "@xc_modern_chat.chat_offset_start_anim",
+                "offset": "@xc_modern_hud:chat_panel_animation.chat_offset_start_anim",
                 "controls": [
                   {
-                    "chat_text@xc_modern_chat.chat_label": {
+                    "chat_text@xc_modern_hud:chat_panel.chat_label": {
                       "anchor_from": "top_left",
                       "anchor_to": "top_left",
                       "offset": [2, 0]
@@ -89,7 +89,7 @@
             "name": "chat_item_factory",
             "max_children_size": 12,
             "control_ids": {
-              "chat_item": "chat_item@xc_modern_chat.chat_grid_item"
+              "chat_item": "chat_item@xc_modern_hud:chat_panel.chat_grid_item"
             }
           }
         }

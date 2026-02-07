@@ -5,7 +5,7 @@
 //Thanks for @XSzC.
 //某些人别盗了你妈死了恶不恶心啊 盗没盗自己心里没点b数吗
 {
-  "namespace": "handhold_base",
+  "namespace": "xc_modern_hud:handhold_utils:handhold_base",
 
   "counter_item": {
     "type": "panel",
@@ -56,185 +56,185 @@
     "visible": false,
     "controls": [
       {
-        "slot_selected_detection_content@item_detected.slot_selected_detection_content": {}
+        "slot_selected_detection_content@xc_modern_hud:handhold_utils:item_detection.slot_selected_detection_content": {}
       },
       {
-        "counter_0@handhold_base.counter_item": {
+        "counter_0@xc_modern_hud:handhold_utils:handhold_base.counter_item": {
           "collection_index": 0
         }
       },
       {
-        "counter_1@handhold_base.counter_item": {
+        "counter_1@xc_modern_hud:handhold_utils:handhold_base.counter_item": {
           "collection_index": 1
         }
       },
       {
-        "counter_2@handhold_base.counter_item": {
+        "counter_2@xc_modern_hud:handhold_utils:handhold_base.counter_item": {
           "collection_index": 2
         }
       },
       {
-        "counter_3@handhold_base.counter_item": {
+        "counter_3@xc_modern_hud:handhold_utils:handhold_base.counter_item": {
           "collection_index": 3
         }
       },
       {
-        "counter_4@handhold_base.counter_item": {
+        "counter_4@xc_modern_hud:handhold_utils:handhold_base.counter_item": {
           "collection_index": 4
         }
       },
       {
-        "counter_5@handhold_base.counter_item": {
+        "counter_5@xc_modern_hud:handhold_utils:handhold_base.counter_item": {
           "collection_index": 5
         }
       },
       {
-        "counter_6@handhold_base.counter_item": {
+        "counter_6@xc_modern_hud:handhold_utils:handhold_base.counter_item": {
           "collection_index": 6
         }
       },
       {
-        "counter_7@handhold_base.counter_item": {
+        "counter_7@xc_modern_hud:handhold_utils:handhold_base.counter_item": {
           "collection_index": 7
         }
       },
       {
-        "counter_8@handhold_base.counter_item": {
+        "counter_8@xc_modern_hud:handhold_utils:handhold_base.counter_item": {
           "collection_index": 8
         }
       },
       {
-        "counter_9@handhold_base.counter_item": {
+        "counter_9@xc_modern_hud:handhold_utils:handhold_base.counter_item": {
           "collection_index": 9
         }
       },
       {
-        "counter_10@handhold_base.counter_item": {
+        "counter_10@xc_modern_hud:handhold_utils:handhold_base.counter_item": {
           "collection_index": 10
         }
       },
       {
-        "counter_11@handhold_base.counter_item": {
+        "counter_11@xc_modern_hud:handhold_utils:handhold_base.counter_item": {
           "collection_index": 11
         }
       },
       {
-        "counter_12@handhold_base.counter_item": {
+        "counter_12@xc_modern_hud:handhold_utils:handhold_base.counter_item": {
           "collection_index": 12
         }
       },
       {
-        "counter_13@handhold_base.counter_item": {
+        "counter_13@xc_modern_hud:handhold_utils:handhold_base.counter_item": {
           "collection_index": 13
         }
       },
       {
-        "counter_14@handhold_base.counter_item": {
+        "counter_14@xc_modern_hud:handhold_utils:handhold_base.counter_item": {
           "collection_index": 14
         }
       },
       {
-        "counter_15@handhold_base.counter_item": {
+        "counter_15@xc_modern_hud:handhold_utils:handhold_base.counter_item": {
           "collection_index": 15
         }
       },
       {
-        "counter_16@handhold_base.counter_item": {
+        "counter_16@xc_modern_hud:handhold_utils:handhold_base.counter_item": {
           "collection_index": 16
         }
       },
       {
-        "counter_17@handhold_base.counter_item": {
+        "counter_17@xc_modern_hud:handhold_utils:handhold_base.counter_item": {
           "collection_index": 17
         }
       },
       {
-        "counter_18@handhold_base.counter_item": {
+        "counter_18@xc_modern_hud:handhold_utils:handhold_base.counter_item": {
           "collection_index": 18
         }
       },
       {
-        "counter_19@handhold_base.counter_item": {
+        "counter_19@xc_modern_hud:handhold_utils:handhold_base.counter_item": {
           "collection_index": 19
         }
       },
       {
-        "counter_20@handhold_base.counter_item": {
+        "counter_20@xc_modern_hud:handhold_utils:handhold_base.counter_item": {
           "collection_index": 20
         }
       },
       {
-        "counter_21@handhold_base.counter_item": {
+        "counter_21@xc_modern_hud:handhold_utils:handhold_base.counter_item": {
           "collection_index": 21
         }
       },
       {
-        "counter_22@handhold_base.counter_item": {
+        "counter_22@xc_modern_hud:handhold_utils:handhold_base.counter_item": {
           "collection_index": 22
         }
       },
       {
-        "counter_23@handhold_base.counter_item": {
+        "counter_23@xc_modern_hud:handhold_utils:handhold_base.counter_item": {
           "collection_index": 23
         }
       },
       {
-        "counter_24@handhold_base.counter_item": {
+        "counter_24@xc_modern_hud:handhold_utils:handhold_base.counter_item": {
           "collection_index": 24
         }
       },
       {
-        "counter_25@handhold_base.counter_item": {
+        "counter_25@xc_modern_hud:handhold_utils:handhold_base.counter_item": {
           "collection_index": 25
         }
       },
       {
-        "counter_26@handhold_base.counter_item": {
+        "counter_26@xc_modern_hud:handhold_utils:handhold_base.counter_item": {
           "collection_index": 26
         }
       },
       {
-        "counter_27@handhold_base.counter_item": {
+        "counter_27@xc_modern_hud:handhold_utils:handhold_base.counter_item": {
           "collection_index": 27
         }
       },
       {
-        "counter_28@handhold_base.counter_item": {
+        "counter_28@xc_modern_hud:handhold_utils:handhold_base.counter_item": {
           "collection_index": 28
         }
       },
       {
-        "counter_29@handhold_base.counter_item": {
+        "counter_29@xc_modern_hud:handhold_utils:handhold_base.counter_item": {
           "collection_index": 29
         }
       },
       {
-        "counter_30@handhold_base.counter_item": {
+        "counter_30@xc_modern_hud:handhold_utils:handhold_base.counter_item": {
           "collection_index": 30
         }
       },
       {
-        "counter_31@handhold_base.counter_item": {
+        "counter_31@xc_modern_hud:handhold_utils:handhold_base.counter_item": {
           "collection_index": 31
         }
       },
       {
-        "counter_32@handhold_base.counter_item": {
+        "counter_32@xc_modern_hud:handhold_utils:handhold_base.counter_item": {
           "collection_index": 32
         }
       },
       {
-        "counter_33@handhold_base.counter_item": {
+        "counter_33@xc_modern_hud:handhold_utils:handhold_base.counter_item": {
           "collection_index": 33
         }
       },
       {
-        "counter_34@handhold_base.counter_item": {
+        "counter_34@xc_modern_hud:handhold_utils:handhold_base.counter_item": {
           "collection_index": 34
         }
       },
       {
-        "counter_35@handhold_base.counter_item": {
+        "counter_35@xc_modern_hud:handhold_utils:handhold_base.counter_item": {
           "collection_index": 35
         }
       }
@@ -247,7 +247,7 @@
     "size": ["default", "default"],
     "font_type": "$global_font_type",
     "backup_font_type": "$global_font_type_backup",
-    //"controls": [{ "counter_grid@handhold_base.counter_grid": {} }],
+    //"controls": [{ "counter_grid@xc_modern_hud:handhold_utils:handhold_base.counter_grid": {} }],
     "bindings": [
       {
         "binding_type": "view",
@@ -541,7 +541,7 @@
                 "size": ["100%c + 3px", "100%sm"],
                 "controls": [
                   {
-                    "item_total_counter@handhold_base.item_total_counter": {
+                    "item_total_counter@xc_modern_hud:handhold_utils:handhold_base.item_total_counter": {
                       "layer": 4,
                       "anchor_from": "right_middle",
                       "anchor_to": "right_middle"
@@ -639,47 +639,47 @@
     "size": ["100%cm", "100%cm"],
     "controls": [
       {
-        "viewer_slot_0@handhold_base.dura_viewer_content": {
+        "viewer_slot_0@xc_modern_hud:handhold_utils:handhold_base.dura_viewer_content": {
           "collection_index": 0
         }
       },
       {
-        "viewer_slot_1@handhold_base.dura_viewer_content": {
+        "viewer_slot_1@xc_modern_hud:handhold_utils:handhold_base.dura_viewer_content": {
           "collection_index": 1
         }
       },
       {
-        "viewer_slot_2@handhold_base.dura_viewer_content": {
+        "viewer_slot_2@xc_modern_hud:handhold_utils:handhold_base.dura_viewer_content": {
           "collection_index": 2
         }
       },
       {
-        "viewer_slot_3@handhold_base.dura_viewer_content": {
+        "viewer_slot_3@xc_modern_hud:handhold_utils:handhold_base.dura_viewer_content": {
           "collection_index": 3
         }
       },
       {
-        "viewer_slot_4@handhold_base.dura_viewer_content": {
+        "viewer_slot_4@xc_modern_hud:handhold_utils:handhold_base.dura_viewer_content": {
           "collection_index": 4
         }
       },
       {
-        "viewer_slot_5@handhold_base.dura_viewer_content": {
+        "viewer_slot_5@xc_modern_hud:handhold_utils:handhold_base.dura_viewer_content": {
           "collection_index": 5
         }
       },
       {
-        "viewer_slot_6@handhold_base.dura_viewer_content": {
+        "viewer_slot_6@xc_modern_hud:handhold_utils:handhold_base.dura_viewer_content": {
           "collection_index": 6
         }
       },
       {
-        "viewer_slot_7@handhold_base.dura_viewer_content": {
+        "viewer_slot_7@xc_modern_hud:handhold_utils:handhold_base.dura_viewer_content": {
           "collection_index": 7
         }
       },
       {
-        "viewer_slot_8@handhold_base.dura_viewer_content": {
+        "viewer_slot_8@xc_modern_hud:handhold_utils:handhold_base.dura_viewer_content": {
           "collection_index": 8
         }
       }
@@ -693,47 +693,47 @@
     "size": ["100%cm", "100%cm"],
     "controls": [
       {
-        "counter_slot_0@handhold_base.item_counter_content": {
+        "counter_slot_0@xc_modern_hud:handhold_utils:handhold_base.item_counter_content": {
           "collection_index": 0
         }
       },
       {
-        "counter_slot_1@handhold_base.item_counter_content": {
+        "counter_slot_1@xc_modern_hud:handhold_utils:handhold_base.item_counter_content": {
           "collection_index": 1
         }
       },
       {
-        "counter_slot_2@handhold_base.item_counter_content": {
+        "counter_slot_2@xc_modern_hud:handhold_utils:handhold_base.item_counter_content": {
           "collection_index": 2
         }
       },
       {
-        "counter_slot_3@handhold_base.item_counter_content": {
+        "counter_slot_3@xc_modern_hud:handhold_utils:handhold_base.item_counter_content": {
           "collection_index": 3
         }
       },
       {
-        "counter_slot_4@handhold_base.item_counter_content": {
+        "counter_slot_4@xc_modern_hud:handhold_utils:handhold_base.item_counter_content": {
           "collection_index": 4
         }
       },
       {
-        "counter_slot_5@handhold_base.item_counter_content": {
+        "counter_slot_5@xc_modern_hud:handhold_utils:handhold_base.item_counter_content": {
           "collection_index": 5
         }
       },
       {
-        "counter_slot_6@handhold_base.item_counter_content": {
+        "counter_slot_6@xc_modern_hud:handhold_utils:handhold_base.item_counter_content": {
           "collection_index": 6
         }
       },
       {
-        "counter_slot_7@handhold_base.item_counter_content": {
+        "counter_slot_7@xc_modern_hud:handhold_utils:handhold_base.item_counter_content": {
           "collection_index": 7
         }
       },
       {
-        "counter_slot_8@handhold_base.item_counter_content": {
+        "counter_slot_8@xc_modern_hud:handhold_utils:handhold_base.item_counter_content": {
           "collection_index": 8
         }
       }
@@ -762,9 +762,9 @@
       }
     ],*/
     "controls": [
-      { "dura_viewer@handhold_base.dura_viewer": {} },
-      { "amount_counter@handhold_base.amount_counter": {} },
-      { "item_counter_grid@handhold_base.counter_grid": {} }
+      { "dura_viewer@xc_modern_hud:handhold_utils:handhold_base.dura_viewer": {} },
+      { "amount_counter@xc_modern_hud:handhold_utils:handhold_base.amount_counter": {} },
+      { "item_counter_grid@xc_modern_hud:handhold_utils:handhold_base.counter_grid": {} }
     ],
     "bindings": [
       {

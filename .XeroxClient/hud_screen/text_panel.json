@@ -2,7 +2,7 @@
 // Secondary distribution must follow the GPL-3.0-only Protocol!!
 
 {
-  "namespace": "xc_modern_hud_texts",
+  "namespace": "xc_modern_hud:texts",
 
   "hud_title_text": {
     "type": "stack_panel",
@@ -149,11 +149,11 @@
     ]
   },
 
-  "item_name_text@xc_modern_hud_texts.item_name_text_root": {
+  "item_name_text@xc_modern_hud:texts.item_name_text_root": {
     "offset": [0, -36]
   },
 
-  "jukebox_popup_text@xc_modern_hud_texts.item_name_text_root": {
+  "jukebox_popup_text@xc_modern_hud:texts.item_name_text_root": {
     "$text_color": "$jukebox_text_color",
     "$text_binding": "#jukebox_text",
     "offset": [0, -63]

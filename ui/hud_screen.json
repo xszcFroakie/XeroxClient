@@ -36,26 +36,26 @@
         "value": [
           { "armor_hud@xc_modern_hud:modules.armor_hud": {} },
           {
-            "redo_vanilla_hotbar@xc_modern_hotbar:vanilla.hotbar_content": {}
+            "redo_vanilla_hotbar@xc_modern_hud:hotbar:vanilla.hotbar_content": {}
           },
           {
             "item_text_factory": {
               "type": "factory",
               "control_ids": {
-                "item_text": "@xc_modern_hud_texts.item_name_text",
-                "jukebox_text": "@xc_modern_hud_texts.jukebox_popup_text"
+                "item_text": "@xc_modern_hud:texts.item_name_text",
+                "jukebox_text": "@xc_modern_hud:texts.jukebox_popup_text"
               }
             }
           },
           {
-            "coordinate@xc_modern_coordinate.coordinate": {
+            "coordinate@xc_modern_hud:coordinate.coordinate": {
               "$vertical_coordinate|default": true
             }
           },
-          { "item_helper@handhold_base.item_helper": {} },
-          { "tab_list@xc_modern_tab_list.tab_list": {} },
+          { "item_helper@xc_modern_hud:handhold_utils:handhold_base.item_helper": {} },
+          { "tab_list@xc_modern_hud:tab_list.tab_list": {} },
           {
-            "chat_panel@xc_modern_chat.modern_chat_panel": {
+            "chat_panel@xc_modern_hud:chat_panel.modern_chat_panel": {
               "size": [160, "0px"]
             }
           }
@@ -67,7 +67,7 @@
         "control_name": "sidebar",
         "value": [
           {
-            "sidebar@xc_modern_scoreboard.scoreboard_sidebar": {
+            "sidebar@xc_modern_hud:scoreboard.scoreboard_sidebar": {
               "bindings": [
                 {
                   "binding_name": "#scoreboard_sidebar_visible",
@@ -91,7 +91,7 @@
           {
             "hud_tip_text_factory": {
               "type": "factory",
-              "control_name": "@xc_modern_hud_texts.hud_tip_text"
+              "control_name": "@xc_modern_hud:texts.hud_tip_text"
             }
           }
         ]
@@ -107,7 +107,7 @@
               "factory": {
                 "name": "hud_actionbar_text_factory",
                 "control_ids": {
-                  "hud_actionbar_text": "hud_actionbar_text@xc_modern_hud_texts.hud_actionbar_text"
+                  "hud_actionbar_text": "hud_actionbar_text@xc_modern_hud:texts.hud_actionbar_text"
                 }
               }
             }
@@ -125,7 +125,7 @@
               "factory": {
                 "name": "hud_title_text_factory",
                 "control_ids": {
-                  "hud_title_text": "hud_title_text@xc_modern_hud_texts.hud_title_text"
+                  "hud_title_text": "hud_title_text@xc_modern_hud:texts.hud_title_text"
                 }
               }
             }

@@ -2,7 +2,7 @@
 // Secondary distribution must follow the GPL-3.0-only Protocol!!
 
 {
-  "namespace": "xc_modern_coordinate",
+  "namespace": "xc_modern_hud:coordinate",
 
   "coordinate": {
     "type": "panel",

@@ -2,7 +2,7 @@
 // Secondary distribution must follow the GPL-3.0-only Protocol!!
 
 {
-  "namespace": "xc_modern_hotbar:vanilla",
+  "namespace": "xc_modern_hud:hotbar:vanilla",
 
   "cooldown_rend": {
     "type": "custom",
@@ -84,7 +84,7 @@
     "layer": 5
   },
 
-  "progress_text_outline@xc_modern_hotbar:vanilla.progress_text": {
+  "progress_text_outline@xc_modern_hud:hotbar:vanilla.progress_text": {
     "color": "black",
     "layer": 4
   },
@@ -121,27 +121,27 @@
         }
       },
       {
-        "progress_text@xc_modern_hotbar:vanilla.progress_text": {
+        "progress_text@xc_modern_hud:hotbar:vanilla.progress_text": {
           "offset": [0, -7]
         }
       },
       {
-        "outline_0@xc_modern_hotbar:vanilla.progress_text_outline": {
+        "outline_0@xc_modern_hud:hotbar:vanilla.progress_text_outline": {
           "offset": [-1, -7]
         }
       },
       {
-        "outline_1@xc_modern_hotbar:vanilla.progress_text_outline": {
+        "outline_1@xc_modern_hud:hotbar:vanilla.progress_text_outline": {
           "offset": [1, -7]
         }
       },
       {
-        "outline_2@xc_modern_hotbar:vanilla.progress_text_outline": {
+        "outline_2@xc_modern_hud:hotbar:vanilla.progress_text_outline": {
           "offset": [0, -8]
         }
       },
       {
-        "outline_3@xc_modern_hotbar:vanilla.progress_text_outline": {
+        "outline_3@xc_modern_hud:hotbar:vanilla.progress_text_outline": {
           "offset": [0, -6]
         }
       }
@@ -162,14 +162,14 @@
     "offset": [0, -8],
     "controls": [
       {
-        "heart_rend@xc_modern_hotbar:vanilla.heart_rend": {
+        "heart_rend@xc_modern_hud:hotbar:vanilla.heart_rend": {
           "offset": [0, -14],
           "anchor_from": "bottom_left",
           "anchor_to": "bottom_left"
         }
       },
       {
-        "horse_heart_rend_0@xc_modern_hotbar:vanilla.horse_heart_rend": {
+        "horse_heart_rend_0@xc_modern_hud:hotbar:vanilla.horse_heart_rend": {
           "offset": [0, -30],
           "anchor_from": "bottom_right",
           "anchor_to": "bottom_right",
@@ -182,7 +182,7 @@
         }
       },
       {
-        "horse_heart_rend_1@xc_modern_hotbar:vanilla.horse_heart_rend": {
+        "horse_heart_rend_1@xc_modern_hud:hotbar:vanilla.horse_heart_rend": {
           "offset": [0, -24],
           "anchor_from": "bottom_right",
           "anchor_to": "bottom_right",
@@ -195,21 +195,21 @@
         }
       },
       {
-        "armor_rend@xc_modern_hotbar:vanilla.armor_rend": {
+        "armor_rend@xc_modern_hud:hotbar:vanilla.armor_rend": {
           "offset": [0, -14],
           "anchor_from": "bottom_left",
           "anchor_to": "bottom_left"
         }
       },
       {
-        "hunger_rend@xc_modern_hotbar:vanilla.hunger_rend": {
+        "hunger_rend@xc_modern_hud:hotbar:vanilla.hunger_rend": {
           "offset": [0, -14],
           "anchor_from": "bottom_right",
           "anchor_to": "bottom_right"
         }
       },
       {
-        "bubbles_rend_0@xc_modern_hotbar:vanilla.bubbles_rend": {
+        "bubbles_rend_0@xc_modern_hud:hotbar:vanilla.bubbles_rend": {
           "offset": [0, -24],
           "anchor_from": "bottom_right",
           "anchor_to": "bottom_right",
@@ -222,7 +222,7 @@
         }
       },
       {
-        "bubbles_rend_1@xc_modern_hotbar:vanilla.bubbles_rend": {
+        "bubbles_rend_1@xc_modern_hud:hotbar:vanilla.bubbles_rend": {
           "offset": [0, -44],
           "anchor_from": "bottom_right",
           "anchor_to": "bottom_right",
@@ -234,7 +234,7 @@
           ]
         }
       },
-      { "exp_progress_bar@xc_modern_hotbar:vanilla.exp_progress_bar": {} },
+      { "exp_progress_bar@xc_modern_hud:hotbar:vanilla.exp_progress_bar": {} },
       {
         "horse_jump_rend": {
           "type": "custom",
@@ -369,55 +369,55 @@
         }
       },
       {
-        "slot_0@xc_modern_hotbar:vanilla.gui_hotbar_grid_item": {
+        "slot_0@xc_modern_hud:hotbar:vanilla.gui_hotbar_grid_item": {
           "collection_index": 0,
           "texture": "textures/ui/hotbar_0"
         }
       },
       {
-        "slot_1@xc_modern_hotbar:vanilla.gui_hotbar_grid_item": {
+        "slot_1@xc_modern_hud:hotbar:vanilla.gui_hotbar_grid_item": {
           "collection_index": 1,
           "texture": "textures/ui/hotbar_1"
         }
       },
       {
-        "slot_2@xc_modern_hotbar:vanilla.gui_hotbar_grid_item": {
+        "slot_2@xc_modern_hud:hotbar:vanilla.gui_hotbar_grid_item": {
           "collection_index": 2,
           "texture": "textures/ui/hotbar_2"
         }
       },
       {
-        "slot_3@xc_modern_hotbar:vanilla.gui_hotbar_grid_item": {
+        "slot_3@xc_modern_hud:hotbar:vanilla.gui_hotbar_grid_item": {
           "collection_index": 3,
           "texture": "textures/ui/hotbar_3"
         }
       },
       {
-        "slot_4@xc_modern_hotbar:vanilla.gui_hotbar_grid_item": {
+        "slot_4@xc_modern_hud:hotbar:vanilla.gui_hotbar_grid_item": {
           "collection_index": 4,
           "texture": "textures/ui/hotbar_4"
         }
       },
       {
-        "slot_5@xc_modern_hotbar:vanilla.gui_hotbar_grid_item": {
+        "slot_5@xc_modern_hud:hotbar:vanilla.gui_hotbar_grid_item": {
           "collection_index": 5,
           "texture": "textures/ui/hotbar_5"
         }
       },
       {
-        "slot_6@xc_modern_hotbar:vanilla.gui_hotbar_grid_item": {
+        "slot_6@xc_modern_hud:hotbar:vanilla.gui_hotbar_grid_item": {
           "collection_index": 6,
           "texture": "textures/ui/hotbar_6"
         }
       },
       {
-        "slot_7@xc_modern_hotbar:vanilla.gui_hotbar_grid_item": {
+        "slot_7@xc_modern_hud:hotbar:vanilla.gui_hotbar_grid_item": {
           "collection_index": 7,
           "texture": "textures/ui/hotbar_7"
         }
       },
       {
-        "slot_8@xc_modern_hotbar:vanilla.gui_hotbar_grid_item": {
+        "slot_8@xc_modern_hud:hotbar:vanilla.gui_hotbar_grid_item": {
           "collection_index": 8,
           "texture": "textures/ui/hotbar_8"
         }
@@ -461,9 +461,9 @@
     "size": [182, 22],
     "$hotbar_collection_name": "hotbar_items",
     "controls": [
-      { "hotbar_panel@xc_modern_hotbar:vanilla.hotbar_panel": {} },
+      { "hotbar_panel@xc_modern_hud:hotbar:vanilla.hotbar_panel": {} },
       {
-        "centered_elements@xc_modern_hotbar:vanilla.centered_elements": {
+        "centered_elements@xc_modern_hud:hotbar:vanilla.centered_elements": {
           "offset": [0, -24]
         }
       }
