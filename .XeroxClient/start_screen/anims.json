@@ -6,22 +6,6 @@
 
   //--------------------------
 
-  "logo_out_animation@start_animation.logo_enter_animation": {
-    "duration": 0.6,
-    "from": 1.0,
-    "to": 0.0,
-    "play_event": "screen.exit_push",
-    "end_event": "screen.exit_end"
-  },
-
-  "logo_out_animation_pop@start_animation.logo_enter_animation": {
-    "duration": 0.6,
-    "from": 1.0,
-    "to": 0.0,
-    "play_event": "screen.exit_pop",
-    "end_event": "screen.exit_end"
-  },
-
   "logo_enter_animation_wait": {
     "anim_type": "alpha",
     "duration": 1.0,
@@ -109,26 +93,6 @@
 
   //--------------------------
 
-  "main_content_out_animation": {
-    "anim_type": "size",
-    "easing": "out_cubic",
-    "duration": 0.9,
-    "to": ["125%", "100%"],
-    "from": ["100%", "100%"],
-    "play_event": "screen.exit_push",
-    "end_event": "screen.exit_end"
-  },
-
-  "main_content_out_animation_pop": {
-    "anim_type": "size",
-    "easing": "out_cubic",
-    "duration": 0.9,
-    "to": ["125%", "100%"],
-    "from": ["100%", "100%"],
-    "play_event": "screen.exit_pop",
-    "end_event": "screen.exit_end"
-  },
-
   "main_content_enter_animation": {
     "anim_type": "size",
     "easing": "out_cubic",
@@ -143,29 +107,13 @@
     "anim_type": "size",
     "easing": "out_cubic",
     "duration": 0.7,
-    "from": ["120%", "100%"],
+    "from": ["100%", "100%"],
     "to": ["100%", "100%"],
     "play_event": "screen.entrance_pop",
     "end_event": "screen.entrance_end"
   },
 
   //--------------------------
-
-  "main_panel_out_animation2@start_animation.main_panel_enter_animation2": {
-    "duration": 0.0,
-    "to": ["100%cm", "100%c"],
-    "from": ["100%cm", "100%c"],
-    "play_event": "screen.exit_push",
-    "end_event": "screen.exit_end"
-  },
-
-  "main_panel_out_animation2_pop@start_animation.main_panel_enter_animation2": {
-    "duration": 0.0,
-    "to": ["100%cm", "100%c"],
-    "from": ["100%cm", "100%c"],
-    "play_event": "screen.exit_pop",
-    "end_event": "screen.exit_end"
-  },
 
   "main_panel_enter_animation2_wait": {
     "anim_type": "size",
@@ -193,26 +141,6 @@
     "end_event": "screen.entrance_end"
   },
 
-  "main_panel_out_animation": {
-    "anim_type": "offset",
-    "easing": "out_cubic",
-    "duration": 0.7,
-    "from": [0, -10],
-    "to": [0, 20],
-    "play_event": "screen.exit_push",
-    "end_event": "screen.exit_end"
-  },
-
-  "main_panel_out_animation_pop": {
-    "anim_type": "offset",
-    "easing": "out_cubic",
-    "duration": 0.7,
-    "from": [0, -10],
-    "to": [0, 20],
-    "play_event": "screen.exit_pop",
-    "end_event": "screen.exit_end"
-  },
-
   "main_panel_enter_animation": {
     "anim_type": "offset",
     "duration": 0.0,
@@ -227,32 +155,12 @@
     "easing": "out_cubic",
     "duration": 0.6,
     "to": [0, -10],
-    "from": [0, 20],
+    "from": [0, -10],
     "play_event": "screen.entrance_pop",
     "end_event": "screen.entrance_end"
   },
 
   //--------------------------
-
-  "main_content_panel_out_animation": {
-    "anim_type": "alpha",
-    "easing": "out_cubic",
-    "duration": 0.6,
-    "from": 1.0,
-    "to": 0.0,
-    "play_event": "screen.exit_push",
-    "end_event": "screen.exit_end"
-  },
-
-  "main_content_panel_out_animation_pop": {
-    "anim_type": "alpha",
-    "easing": "out_cubic",
-    "duration": 0.6,
-    "from": 1.0,
-    "to": 0.0,
-    "play_event": "screen.exit_pop",
-    "end_event": "screen.exit_end"
-  },
 
   "main_content_panel_enter_animation_wait": {
     "anim_type": "alpha",
@@ -284,26 +192,6 @@
 
   //--------------------------
 
-  "bottom_text_out_animation": {
-    "anim_type": "offset",
-    "easing": "out_cubic",
-    "duration": 0.6,
-    "from": [0, 0],
-    "to": [0, 24],
-    "play_event": "screen.exit_push",
-    "end_event": "screen.exit_end"
-  },
-
-  "bottom_text_out_animation_pop": {
-    "anim_type": "offset",
-    "easing": "out_cubic",
-    "duration": 0.6,
-    "from": [0, 0],
-    "to": [0, 24],
-    "play_event": "screen.exit_pop",
-    "end_event": "screen.exit_end"
-  },
-
   "bottom_text_enter_animation": {
     "anim_type": "offset",
     "easing": "out_cubic",
@@ -319,32 +207,12 @@
     "easing": "out_cubic",
     "duration": 0.6,
     "to": [0, 0],
-    "from": [0, 23],
+    "from": [0, 0],
     "play_event": "screen.entrance_pop",
     "end_event": "screen.entrance_end"
   },
 
   //--------------------------
-
-  "bottom_button_out_animation": {
-    "anim_type": "offset",
-    "easing": "in_cubic",
-    "duration": 0.4,
-    "from": [0, -20],
-    "to": [0, 50],
-    "play_event": "screen.exit_push",
-    "end_event": "screen.exit_end"
-  },
-
-  "bottom_button_out_animation_pop": {
-    "anim_type": "offset",
-    "easing": "in_cubic",
-    "duration": 0.4,
-    "from": [0, -20],
-    "to": [0, 50],
-    "play_event": "screen.exit_pop",
-    "end_event": "screen.exit_end"
-  },
 
   "bottom_button_enter_animation": {
     "anim_type": "offset",
@@ -361,32 +229,12 @@
     "easing": "in_cubic",
     "duration": 0.4,
     "to": [0, -20],
-    "from": [0, 50],
+    "from": [0, -20],
     "play_event": "screen.entrance_pop",
     "end_event": "screen.entrance_end"
   },
 
   //--------------------------
-
-  "top_content_out_animation": {
-    "anim_type": "offset",
-    "easing": "out_cubic",
-    "duration": 0.3,
-    "from": [0, 0],
-    "to": [0, -35],
-    "play_event": "screen.exit_push",
-    "end_event": "screen.exit_end"
-  },
-
-  "top_content_out_animation_pop": {
-    "anim_type": "offset",
-    "easing": "out_cubic",
-    "duration": 0.3,
-    "from": [0, 0],
-    "to": [0, -35],
-    "play_event": "screen.exit_pop",
-    "end_event": "screen.exit_end"
-  },
 
   "top_content_enter_animation": {
     "anim_type": "offset",
@@ -403,7 +251,7 @@
     "easing": "out_cubic",
     "duration": 0.6,
     "to": [0, 0],
-    "from": [0, -35],
+    "from": [0, -0],
     "play_event": "screen.entrance_pop",
     "end_event": "screen.entrance_end"
   }

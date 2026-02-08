@@ -7,6 +7,7 @@
   "clo_icon": {
     "type": "image",
     "bilinear": true,
+    "size": ["75%", "75%"],
     "texture": "textures/XeroxClient/icon/crossout"
   },
 
@@ -34,10 +35,10 @@
     "texture": "textures/XeroxClient/icon/store"
   },
 
-  "not_icon": {
+  "inbox_icon": {
     "type": "image",
     "bilinear": true,
-    "texture": "textures/XeroxClient/icon/notification"
+    "texture": "textures/XeroxClient/icon/bell"
   },
 
   "gat_icon": {
@@ -107,117 +108,60 @@
     "$button_content_size": [18, 18]
   },
 
-  "realms_pending_invite": {
+  "inbox": {
     "type": "panel",
     "size": [20, 20],
-    "bindings": [
-      {
-        "binding_name": "#realms_notification_visible",
-        "binding_name_override": "#visible"
-      }
-    ],
+    "ignored": "$education_edition",
     "controls": [
       {
-        "button@common_buttons.a_rc_8x_content": {
+        "inbox_button@common_buttons.a_rc_8x_content": {
           "size": [20, 20],
-          "$pressed_button_name": "button.menu_invite_notification",
-          "$button_content": "xc_modern_start.not_icon"
-        }
-      },
-      {
-        "count": {
-          "type": "panel",
-          "offset": [-2.5, 2],
-          "anchor_from": "top_right",
-          "anchor_to": "center",
-          "bindings": [
-            { "binding_name": "#realms_notification_count" },
+          "$button_content": "xc_modern_start.inbox_icon",
+          "$pressed_button_name": "button.menu_inbox",
+          "button_mappings": [
             {
-              "binding_type": "view",
-              "source_property_name": "(not (#realms_notification_count = 0))",
-              "target_property_name": "#visible"
-            }
-          ],
-          "controls": [
-            {
-              "text": {
-                "type": "label",
-                "layer": 9,
-                "font_scale_factor": 0.8,
-                "text": "#realms_notification_count",
-                "font_type": "$global_font_type",
-                "backup_font_type": "$global_font_type_backup",
-                "bindings": [{ "binding_name": "#realms_notification_count" }],
-                "controls": [
-                  {
-                    "background@start.notification_button_text_background": {
-                      "texture": "textures/XeroxClient/rounded_corner/all2x",
-                      "alpha": 0.8,
-                      "color": "$xeroxclient_ui_theme_menu_background_color",
-                      "layer": -1,
-                      "size": ["100%+4px", "100%"],
-                      "offset": [-0.5, 0]
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        }
-      }
-    ]
-  },
-
-  "notification": {
-    "type": "panel",
-    "size": [20, 20],
-    "bindings": [
-      {
-        "binding_name": "#notificationcenter_enabled",
-        "binding_name_override": "#visible"
-      }
-    ],
-    "controls": [
-      {
-        "button@common_buttons.a_rc_8x_content": {
-          "size": [20, 20],
-          "$pressed_button_name": "button.menu_notificationcenter",
-          "$button_content": "xc_modern_start.not_icon"
-        }
-      },
-      {
-        "notificationcenter_button_unread_panel": {
-          "type": "panel",
-          "anchor_from": "top_right",
-          "anchor_to": "top_right",
-          "size": [8, 4],
-          "offset": [2, 3],
-          "controls": [
-            {
-              "background@start.unread_notification_icon": {
-                "texture": "textures/XeroxClient/rounded_corner/all2x",
-                "alpha": 0.8,
-                "color": "$xeroxclient_ui_theme_menu_background_color",
-                "layer": 8,
-                "offset": [6, -5],
-                "size": ["100%sm+4px", "100%sm"]
-              }
+              "from_button_id": "button.menu_select",
+              "to_button_id": "$pressed_button_name",
+              "mapping_type": "pressed"
             },
             {
-              "text": {
-                "type": "label",
-                "layer": 9,
-                "font_scale_factor": 0.8,
-                "text": "#notificationcenter_unread_count",
-                "font_type": "$global_font_type",
-                "backup_font_type": "$global_font_type_backup",
-                "bindings": [
-                  { "binding_name": "#notificationcenter_unread_count" }
-                ]
-              }
+              "from_button_id": "button.menu_ok",
+              "to_button_id": "$pressed_button_name",
+              "mapping_type": "pressed"
+            },
+            {
+              "to_button_id": "inbox_button.is_hovered",
+              "mapping_type": "pressed"
             }
           ]
         }
+      },
+      {
+        "red_dot": {
+          "type": "image",
+          "size": [3, 3],
+          "texture": "textures/XeroxClient/rounded_corner/all2x",
+          "color": [1.0, 0.333, 0.333],
+          "anchor_from": "top_right",
+          "anchor_to": "center",
+          "offset": [-5.5, 5],
+          "layer": 10,
+          "bindings": [
+            {
+              "binding_name": "#unread_notification_icon"
+            },
+            {
+              "binding_name": "#unread_notification_icon_visibility",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#inbox_enabled",
+        "binding_name_override": "#visible"
       }
     ]
   },
@@ -352,12 +296,8 @@
     "offset": [0, -10],
     "animation_reset_name": "screen_animation_reset",
     "anims": [
-      "@start_animation.main_panel_out_animation",
-      "@start_animation.main_panel_out_animation_pop",
       "@start_animation.main_panel_enter_animation",
       "@start_animation.main_panel_enter_animation_pop",
-      "@start_animation.main_panel_out_animation2",
-      "@start_animation.main_panel_out_animation2_pop",
       "@start_animation.main_panel_enter_animation2_wait",
       "@start_animation.main_panel_enter_animation2_pop"
     ],
@@ -371,8 +311,6 @@
           "texture": "textures/XeroxClient/client_icon/client_icon",
           "animation_reset_name": "screen_animation_reset",
           "anims": [
-            "@start_animation.logo_out_animation",
-            "@start_animation.logo_out_animation_pop",
             "@start_animation.logo_enter_animation_wait",
             "@start_animation.logo_enter_animation_pop"
           ]
@@ -392,8 +330,6 @@
           "propagate_alpha": true,
           "animation_reset_name": "screen_animation_reset",
           "anims": [
-            "@start_animation.main_content_panel_out_animation",
-            "@start_animation.main_content_panel_out_animation_pop",
             "@start_animation.main_content_panel_enter_animation_wait",
             "@start_animation.main_content_panel_enter_animation_pop"
           ],
@@ -432,9 +368,8 @@
                                 "2@xc_modern_start.to_achievements_screen": {}
                               },
                               {
-                                "3@xc_modern_start.realms_pending_invite": {}
-                              },
-                              { "4@xc_modern_start.notification": {} }
+                                "3@xc_modern_start.inbox": {}
+                              }
                             ]
                           }
                         }
@@ -506,7 +441,7 @@
 
   "offline_account": {
     "type": "image",
-    "size": ["100%c+12px", 30],
+    "size": ["100%c + 12px", 30],
     "texture": "textures/XeroxClient/rounded_corner/all8x",
     "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
     "layer": 10,
@@ -540,12 +475,8 @@
     "size": ["100%", "100%"],
     "animation_reset_name": "screen_animation_reset",
     "anims": [
-      //"@start_animation.main_content_enter_animation",
+      "@start_animation.main_content_enter_animation",
       "@start_animation.main_content_enter_animation_pop",
-      "@start_animation.main_content_out_animation",
-      "@start_animation.main_content_out_animation_pop",
-      "@start_animation.main_content_panel_out_animation",
-      "@start_animation.main_content_panel_out_animation_pop",
       "@start_animation.main_content_panel_enter_animation_wait",
       "@start_animation.main_content_panel_enter_animation_pop"
     ],

@@ -139,7 +139,7 @@
     "anchor_to": "bottom_left",
     "controls": [
       {
-        "你死妈东西外传一个试试看,我操你妈贱逼玩意": {
+        "text_stack": {
           "type": "stack_panel",
           "size": ["100%cm", "100%c"],
           "offset": [0, -0.8],

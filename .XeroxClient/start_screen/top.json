@@ -4,9 +4,48 @@
 {
   "namespace": "xc_modern_start:top",
 
+  "player_info@common.button": {
+    "$default_button_texture": "textures/XeroxClient/rounded_corner/all8x",
+    "$hover_button_texture": "textures/XeroxClient/rounded_corner/all8x",
+    "$pressed_button_texture": "textures/XeroxClient/rounded_corner/all8x",
+    "$locked_button_texture": "textures/XeroxClient/rounded_corner/all8x",
+    "size": ["100%cm", "100%cm"],
+    "$pressed_button_name": "button.menu_profile",
+    "controls": [
+      {
+        "default": {
+          "type": "image",
+          "size": ["100%sm + 4px", 20],
+          "color": "$xeroxclient_ui_theme_button_default_color",
+          "texture": "textures/XeroxClient/rounded_corner/all8x",
+          "alpha": "$xeroxclient_ui_theme_button_default_alpha"
+        }
+      },
+      {
+        "hover": {
+          "type": "image",
+          "size": ["100%sm + 4px", 20],
+          "color": "$xeroxclient_ui_theme_button_hover_color",
+          "texture": "textures/XeroxClient/rounded_corner/all8x",
+          "alpha": "$xeroxclient_ui_theme_button_hover_alpha"
+        }
+      },
+      {
+        "pressed": {
+          "type": "image",
+          "size": ["100%sm + 4px", 20],
+          "color": "$xeroxclient_ui_theme_button_pressed_color",
+          "texture": "textures/XeroxClient/rounded_corner/all8x",
+          "alpha": "$xeroxclient_ui_theme_button_pressed_alpha"
+        }
+      },
+      { "@xc_modern_start:top.player_info_content": {} }
+    ]
+  } /*
+  
   "player_info": {
     "type": "image",
-    "size": ["100%c+4px", 20],
+    "size": ["100%c + 4px", 20],
     "color": "$xeroxclient_ui_theme_menu_background_color",
     "texture": "textures/XeroxClient/rounded_corner/all8x",
     "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
@@ -17,7 +56,7 @@
         "binding_name_override": "#visible"
       }
     ]
-  },
+  },*/,
 
   "player_info_content": {
     "type": "stack_panel",
@@ -35,6 +74,8 @@
                 "type": "custom",
                 "renderer": "profile_image_renderer",
                 "size": [16, 16],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
                 "layer": 12,
                 "bindings": [
                   {
@@ -61,7 +102,7 @@
   "player_name_text": {
     "type": "label",
     "layer": 12,
-    "text": "#text",
+    "text": "#playername",
     "size": ["default", "default"],
     "max_size": ["default", "default"],
     //"offset": [0, -1],
@@ -70,11 +111,6 @@
     "bindings": [
       {
         "binding_name": "#playername"
-      },
-      {
-        "binding_type": "view",
-        "source_property_name": "('Hello, ' + #playername)",
-        "target_property_name": "#text"
       }
     ]
   }
