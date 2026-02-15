@@ -4,10 +4,10 @@
 {
   "format_version": 2,
   "header": {
-    "description": "Follow the GPL-3.0-only Protocol.\n\nFor more info, read README.md.",
-    "name": "§l§bXerox§rClient - §3Neo§r",
+    "description": "Follow the GPL-3.0-only Protocol.\nFor more info, read README.md.",
+    "name": "§lXerox Client",
     "uuid": "20064BD5-4EE7-46B5-A12D-F2314A6777E8",
-    "version": [1, 1, 0],
+    "version": [1, 0, 0],
     "min_engine_version": [1, 13, 0]
   },
   "modules": [
