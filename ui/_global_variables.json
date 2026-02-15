@@ -43,6 +43,9 @@
     0.4784313725, 0.4784313725, 0.4784313725
   ],
 
+  "$xeroxclient_ui_theme_main_text_color": [1.0, 1.0, 1.0],
+  "$xeroxclient_ui_theme_secondary_text_color": [0.8, 0.8, 0.8],
+
   // Container Screen and Hotbar
 
   "$show_flying_item": false,

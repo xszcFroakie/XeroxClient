@@ -62,7 +62,17 @@
     ".XeroxClient/progress_screen/main_content.json",
     ".XeroxClient/progress_screen/progress_bar.json",
 
+    ".XeroxClient/settings_screen/accessibility.json",
+    ".XeroxClient/settings_screen/controls.json",
+    ".XeroxClient/settings_screen/creator.json",
+    ".XeroxClient/settings_screen/general.json",
+    ".XeroxClient/settings_screen/global_resource_pack.json",
+    ".XeroxClient/settings_screen/graphic.json",
+    ".XeroxClient/settings_screen/language.json",
+    ".XeroxClient/settings_screen/main_content.json",
     ".XeroxClient/settings_screen/settings_controls.json",
+    ".XeroxClient/settings_screen/sound.json",
+    ".XeroxClient/settings_screen/storage.json",
 
     ".XeroxClient/start_screen/anims.json",
     ".XeroxClient/start_screen/device_detail.json",

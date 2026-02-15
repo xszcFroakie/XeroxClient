@@ -1,0 +1,769 @@
+// File made by @XSzC.
+// Secondary distribution must follow the GPL-3.0-only Protocol!!
+{
+  "namespace": "xc_modern_settings:creator",
+
+  "content_memory_tier_dropdown_content@xc_modern_settings:controls.option_radio_dropdown_group": {
+    "$radio_buttons": [
+      {
+        "memory_tier_superLow@xc_modern_settings:controls.radio_with_label": {
+          "$toggle_state_binding_name": "#memory_tier_superLow",
+          "$radio_label_text": "options.creator.deviceInfoMemoryTier.superLow"
+        }
+      },
+      {
+        "memory_tier_low@xc_modern_settings:controls.radio_with_label": {
+          "$toggle_state_binding_name": "#memory_tier_low",
+          "$radio_label_text": "options.creator.deviceInfoMemoryTier.low"
+        }
+      },
+      {
+        "memory_tier_mid@xc_modern_settings:controls.radio_with_label": {
+          "$toggle_state_binding_name": "#memory_tier_mid",
+          "$radio_label_text": "options.creator.deviceInfoMemoryTier.mid"
+        }
+      },
+      {
+        "memory_tier_high@xc_modern_settings:controls.radio_with_label": {
+          "$toggle_state_binding_name": "#memory_tier_high",
+          "$radio_label_text": "options.creator.deviceInfoMemoryTier.high"
+        }
+      },
+      {
+        "memory_tier_superHigh@xc_modern_settings:controls.radio_with_label": {
+          "$toggle_state_binding_name": "#memory_tier_superHigh",
+          "$radio_label_text": "options.creator.deviceInfoMemoryTier.superHigh"
+        }
+      }
+    ]
+  },
+
+  "content_log_gui_level_content@xc_modern_settings:controls.option_radio_dropdown_group": {
+    "$radio_buttons": [
+      {
+        "@xc_modern_settings:controls.radio_with_label": {
+          "$toggle_state_binding_name": "#content_log_gui_level_verbose",
+          "$radio_label_text": "options.content_log_gui.level.verbose"
+        }
+      },
+      {
+        "@xc_modern_settings:controls.radio_with_label": {
+          "$toggle_state_binding_name": "#content_log_gui_level_info",
+          "$radio_label_text": "options.content_log_gui.level.info"
+        }
+      },
+      {
+        "@xc_modern_settings:controls.radio_with_label": {
+          "$toggle_state_binding_name": "#content_log_gui_level_warn",
+          "$radio_label_text": "options.content_log_gui.level.warn"
+        }
+      },
+      {
+        "@xc_modern_settings:controls.radio_with_label": {
+          "$toggle_state_binding_name": "#content_log_gui_level_error",
+          "$radio_label_text": "options.content_log_gui.level.error"
+        }
+      }
+    ]
+  },
+
+  "main_content@xc_modern_settings:main_content.section_pages_main_content_base": {
+    "$is_editor_ignored|default": false,
+    "variables": {
+      "requires": "(not $is_desktop or $is_publish)",
+      "$is_editor_ignored": true
+    },
+    "$toggle_view_binding_name": "creator_button_toggle",
+    "controls": [
+      {
+        "editor_toggle_panel": {
+          "type": "stack_panel",
+          "size": ["100%", "100%c"],
+          "ignored": "$is_editor_ignored",
+          "controls": [
+            {
+              "editor_active_label": {
+                "type": "label",
+                "text": "#editor_activity_label",
+                "font_type": "$global_font_type",
+                "backup_font_type": "$global_font_type_backup",
+                "size": ["100%", "default"],
+                "bindings": [
+                  {
+                    "binding_name": "#editor_activity_label"
+                  }
+                ]
+              }
+            },
+            {
+              "editor_confirmation_section_label": {
+                "type": "label",
+                "text": "#editor_label",
+                "font_type": "$global_font_type",
+                "backup_font_type": "$global_font_type_backup",
+                "size": ["100%", "default"],
+                "bindings": [
+                  {
+                    "binding_name": "#editor_label"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "creator_toggles_panel": {
+          "type": "stack_panel",
+          "size": ["100%", "100%c"],
+          "controls": [
+            {
+              "padding": {
+                "type": "panel",
+                "size": ["100%", 5],
+                "ignored": "$is_editor_ignored",
+                "controls": [
+                  {
+                    "line": {
+                      "type": "image",
+                      "size": ["100% - 30px", 1],
+                      "alpha": 0.5,
+                      "layer": 3,
+                      "texture": "textures/XeroxClient/diffusion"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "copy_coordinate_section_stack_panel": {
+                "type": "stack_panel",
+                "size": ["100%", "100%c"],
+                "visible": "$supports_clipboard_set",
+                "controls": [
+                  {
+                    "content_log_section_label": {
+                      "type": "label",
+                      "text": "options.creatorTitle",
+                      "size": ["100%", "default"],
+                      "font_type": "$global_font_type",
+                      "backup_font_type": "$global_font_type_backup"
+                    }
+                  },
+                  {
+                    "option_content_file_log@xc_modern_settings:controls.option_toggle": {
+                      "$option_label": "options.copyCoordinateUI",
+                      "$option_binding_name": "#copy_coordinate_ui",
+                      "$toggle_name": "copy_coordinate_ui"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "go_to_keybinds@common_buttons.a_rc_8x_text": {
+                "$pressed_button_name": "button.go_to_keybinds",
+                "$button_text": "options.go_to_keybinds",
+                "size": ["100%", 30],
+                "bindings": [
+                  {
+                    "binding_name": "#show_keybinds_button",
+                    "binding_name_override": "#visible"
+                  },
+                  {
+                    "binding_name": "#go_to_keybinds",
+                    "binding_name_override": "#enabled"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "debugger_toggles_panel": {
+          "type": "stack_panel",
+          "size": ["100%", "100%c"],
+          "bindings": [
+            {
+              "binding_name": "#script_debugger_options_enabled",
+              "binding_name_override": "#enabled"
+            }
+          ],
+          "controls": [
+            {
+              "padding": {
+                "type": "panel",
+                "size": ["100%", 5],
+                "controls": [
+                  {
+                    "line": {
+                      "type": "image",
+                      "size": ["100% - 30px", 1],
+                      "alpha": 0.5,
+                      "layer": 3,
+                      "texture": "textures/XeroxClient/diffusion"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "primary_panel": {
+                "type": "stack_panel",
+                "size": ["100%", "100%c"],
+                "controls": [
+                  {
+                    "heading": {
+                      "type": "label",
+                      "text": "options.creator.debuggerHeading",
+                      "size": ["100%", "default"],
+                      "font_type": "$global_font_type",
+                      "backup_font_type": "$global_font_type_backup"
+                    }
+                  },
+                  {
+                    "stack_0@xc_modern_settings:main_content.option_stack_panel": {
+                      "controls": [
+                        {
+                          "passcode_required_toggle@xc_modern_settings:controls.option_toggle": {
+                            "size": ["fill", "100%c"],
+                            "$option_label": "options.creator.debuggerPasscodeRequired",
+                            "$option_binding_name": "#script_debugger_passcode_required",
+                            "$option_enabled_binding_name": "#script_debugger_passcode_required_enabled",
+                            "$toggle_name": "script_debugger_passcode_required"
+                          }
+                        },
+                        {
+                          "auto_attach_toggle@xc_modern_settings:controls.option_toggle": {
+                            "size": ["fill", "100%c"],
+                            "$option_label": "options.creator.debuggerAutoAttach",
+                            "$option_binding_name": "#script_debugger_auto_attach",
+                            "$option_enabled_binding_name": "#script_debugger_auto_attach_enabled",
+                            "$toggle_name": "script_debugger_auto_attach"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "passcode_input@xc_modern_settings:controls.option_text_edit": {
+                      "$text_box_name": "script_debugger_passcode",
+                      "$option_label": "options.creator.debuggerPasscode",
+                      "$option_binding_name": "#script_debugger_passcode",
+                      "bindings": [
+                        {
+                          "binding_name": "#script_debugger_passcode_visible",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "all_options_panel": {
+                      "type": "stack_panel",
+                      "size": ["100%", "100%c"],
+                      "bindings": [
+                        {
+                          "binding_name": "#script_debugger_auto_attach_options_visible",
+                          "binding_name_override": "#visible"
+                        }
+                      ],
+                      "controls": [
+                        {
+                          "attach_mode_option@xc_modern_settings:controls.option_radio_dropdown_group": {
+                            "ignored": "$ms_platform",
+                            "$option_enabled_binding_name": "#script_debugger_auto_attach_enabled",
+                            "$radio_buttons": [
+                              {
+                                "connect@xc_modern_settings:controls.radio_with_label": {
+                                  "$toggle_state_binding_name": "#script_debugger_attach_mode_connect",
+                                  "$radio_label_text": "options.creator.debuggerConnect"
+                                }
+                              },
+                              {
+                                "listen@xc_modern_settings:controls.radio_with_label": {
+                                  "$toggle_state_binding_name": "#script_debugger_attach_mode_listen",
+                                  "$radio_label_text": "options.creator.debuggerListen"
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "host_input@xc_modern_settings:controls.option_text_edit": {
+                            "$text_box_name": "script_debugger_host",
+                            "$option_label": "options.creator.debuggerHost",
+                            "$option_binding_name": "#script_debugger_host",
+                            "bindings": [
+                              {
+                                "binding_name": "#script_debugger_attach_mode_connect",
+                                "binding_name_override": "#enabled"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "port_input@xc_modern_settings:controls.option_text_edit": {
+                            "$text_box_name": "script_debugger_port",
+                            "$option_label": "options.creator.debuggerPort",
+                            "$option_binding_name": "#script_debugger_port"
+                          }
+                        },
+                        {
+                          "auto_attach_timeout_slider@xc_modern_settings:controls.option_slider": {
+                            "$option_label": "#script_debugger_auto_attach_timeout_slider_label",
+                            "$slider_name": "script_debugger_auto_attach_timeout",
+                            "$slider_value_binding_name": "#script_debugger_auto_attach_timeout",
+                            "$slider_tts_text_value": "#script_debugger_auto_attach_timeout_text_value",
+                            "$option_enabled_binding_name": "#script_debugger_auto_attach_timeout_enabled",
+                            "$slider_steps_binding_name": "#script_debugger_auto_attach_timeout_steps",
+                            "$label_bindings": [
+                              {
+                                "binding_name": "$option_label"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "diagnostics_toggles_panel": {
+          "type": "stack_panel",
+          "size": ["100%", "100%c"],
+          "bindings": [
+            {
+              "binding_name": "#diagnostics_options_enabled",
+              "binding_name_override": "#enabled"
+            }
+          ],
+          "controls": [
+            {
+              "padding": {
+                "type": "panel",
+                "size": ["100%", 5],
+                "controls": [
+                  {
+                    "line": {
+                      "type": "image",
+                      "size": ["100% - 30px", 1],
+                      "alpha": 0.5,
+                      "layer": 3,
+                      "texture": "textures/XeroxClient/diffusion"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "primary_panel": {
+                "type": "stack_panel",
+                "size": ["100%", "100%c"],
+                "controls": [
+                  {
+                    "heading": {
+                      "type": "label",
+                      "text": "options.creator.diagnosticsHeading",
+                      "size": ["100%", "default"],
+                      "font_type": "$global_font_type",
+                      "backup_font_type": "$global_font_type_backup"
+                    }
+                  },
+                  {
+                    "serverbound_client_diagnostics_toggle@xc_modern_settings:controls.option_toggle": {
+                      "$option_label": "options.creator.serverboundClientDiagnosticsEnabled",
+                      "$option_binding_name": "#serverbound_client_diagnostics_enabled",
+                      "$toggle_name": "serverbound_client_diagnostics_enabled"
+                    }
+                  },
+                  {
+                    "clear_diagnostics_capture_files@common_buttons.a_rc_8x_text": {
+                      "size": ["100%", 30],
+                      "$pressed_button_name": "button.clear_diagnostics_captures",
+                      "$button_text": "options.creator.diagnosticsClearCaptures"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "watchdog_toggles_panel": {
+          "type": "stack_panel",
+          "size": ["100%", "100%c"],
+          "bindings": [
+            {
+              "binding_name": "#script_watchdog_options_enabled",
+              "binding_name_override": "#enabled"
+            }
+          ],
+          "controls": [
+            {
+              "padding": {
+                "type": "panel",
+                "size": ["100%", 5],
+                "controls": [
+                  {
+                    "line": {
+                      "type": "image",
+                      "size": ["100% - 30px", 1],
+                      "alpha": 0.5,
+                      "layer": 3,
+                      "texture": "textures/XeroxClient/diffusion"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "primary_panel": {
+                "type": "stack_panel",
+                "size": ["100%", "100%c"],
+                "controls": [
+                  {
+                    "heading": {
+                      "type": "label",
+                      "text": "options.creator.watchdogHeading",
+                      "size": ["100%", "default"],
+                      "font_type": "$global_font_type",
+                      "backup_font_type": "$global_font_type_backup"
+                    }
+                  },
+                  {
+                    "hang_threshold_slider@xc_modern_settings:controls.option_slider": {
+                      "$option_label": "#script_watchdog_hang_threshold_slider_label",
+                      "$slider_name": "script_watchdog_hang_threshold",
+                      "$slider_value_binding_name": "#script_watchdog_hang_threshold",
+                      "$slider_tts_text_value": "#script_watchdog_hang_threshold_text_value",
+                      "$option_enabled_binding_name": "#script_watchdog_hang_threshold_enabled",
+                      "$slider_steps_binding_name": "#script_watchdog_hang_threshold_steps",
+                      "$label_bindings": [
+                        {
+                          "binding_name": "$option_label"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "stack_0@xc_modern_settings:main_content.option_stack_panel": {
+                      "controls": [
+                        {
+                          "spike_warning_toggle@xc_modern_settings:controls.option_toggle": {
+                            "size": ["fill", "100%c"],
+                            "$option_label": "options.creator.watchdogSpikeWarning",
+                            "$option_binding_name": "#script_watchdog_spike_warning",
+                            "$option_enabled_binding_name": "#script_watchdog_spike_warning_enabled",
+                            "$toggle_name": "script_watchdog_spike_warning"
+                          }
+                        },
+                        {
+                          "slow_warning_toggle@xc_modern_settings:controls.option_toggle": {
+                            "size": ["fill", "100%c"],
+                            "$option_label": "options.creator.watchdogSlowWarning",
+                            "$option_binding_name": "#script_watchdog_slow_warning",
+                            "$option_enabled_binding_name": "#script_watchdog_slow_warning_enabled",
+                            "$toggle_name": "script_watchdog_slow_warning"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "spike_threshold_slider@xc_modern_settings:controls.option_slider": {
+                      "$option_label": "#script_watchdog_spike_threshold_slider_label",
+                      "$slider_name": "script_watchdog_spike_threshold",
+                      "$slider_value_binding_name": "#script_watchdog_spike_threshold",
+                      "$slider_tts_text_value": "#script_watchdog_spike_threshold_text_value",
+                      "$option_enabled_binding_name": "#script_watchdog_spike_threshold_enabled",
+                      "$slider_steps_binding_name": "#script_watchdog_spike_threshold_steps",
+                      "$label_bindings": [
+                        {
+                          "binding_name": "$option_label"
+                        }
+                      ],
+                      "bindings": [
+                        {
+                          "binding_name": "#script_watchdog_spike_threshold_visible",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "slow_threshold_slider@xc_modern_settings:controls.option_slider": {
+                      "$option_label": "#script_watchdog_slow_threshold_slider_label",
+                      "$slider_name": "script_watchdog_slow_threshold",
+                      "$slider_value_binding_name": "#script_watchdog_slow_threshold",
+                      "$slider_tts_text_value": "#script_watchdog_slow_threshold_text_value",
+                      "$option_enabled_binding_name": "#script_watchdog_slow_threshold_enabled",
+                      "$slider_steps_binding_name": "#script_watchdog_slow_threshold_steps",
+                      "$label_bindings": [
+                        {
+                          "binding_name": "$option_label"
+                        }
+                      ],
+                      "bindings": [
+                        {
+                          "binding_name": "#script_watchdog_slow_threshold_visible",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "device_info_toggles_panel": {
+          "type": "stack_panel",
+          "size": ["100%", "100%c"],
+          "bindings": [
+            {
+              "binding_name": "#device_info_options_enabled",
+              "binding_name_override": "#enabled"
+            }
+          ],
+          "controls": [
+            {
+              "padding": {
+                "type": "panel",
+                "size": ["100%", 5],
+                "controls": [
+                  {
+                    "line": {
+                      "type": "image",
+                      "size": ["100% - 30px", 1],
+                      "alpha": 0.5,
+                      "layer": 3,
+                      "texture": "textures/XeroxClient/diffusion"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "primary_panel": {
+                "type": "stack_panel",
+                "size": ["100%", "100%c"],
+                "controls": [
+                  {
+                    "heading": {
+                      "type": "label",
+                      "text": "options.creator.deviceInfo",
+                      "size": ["100%", "default"],
+                      "font_type": "$global_font_type",
+                      "backup_font_type": "$global_font_type_backup"
+                    }
+                  },
+                  {
+                    "device_info_memory_tier_use_override_toggle@xc_modern_settings:controls.option_toggle": {
+                      "$option_label": "options.creator.deviceInfoUseMemoryTierOverride",
+                      "$option_binding_name": "#device_info_use_memory_tier_override",
+                      "$option_enabled_binding_name": "#device_info_use_memory_tier_override_enabled",
+                      "$toggle_name": "device_info_use_memory_tier_override"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "device_info_memory_tier_dropdown@xc_modern_settings:controls.option_dropdown": {
+                "$use_scrolling_panel": true,
+                "$option_label": "options.creator.deviceInfoMemoryTier",
+                "$dropdown_content": "xc_modern_settings:creator.content_memory_tier_dropdown_content",
+                "$dropdown_area": "content_area",
+                "$dropdown_name": "device_info_memory_tier_dropdown",
+                "$options_dropdown_toggle_label_binding": "#device_info_memory_tier_dropdown_toggle_label",
+                "$option_enabled_binding_name": "#device_info_memory_tier_override_enabled",
+                "$dropdown_scroll_content_size": ["100%", "250%"],
+                "bindings": [
+                  {
+                    "binding_name": "#device_info_memory_tier_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "content_log_panel": {
+          "type": "stack_panel",
+          "size": ["100%", "100%c"],
+          "controls": [
+            {
+              "padding0": {
+                "type": "panel",
+                "size": ["100%", 5],
+                "controls": [
+                  {
+                    "line": {
+                      "type": "image",
+                      "size": ["100% - 30px", 1],
+                      "alpha": 0.5,
+                      "layer": 3,
+                      "texture": "textures/XeroxClient/diffusion"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "content_log_section_label": {
+                "type": "label",
+                "text": "contentlog.settingsSectionName",
+                "size": ["100%", "default"],
+                "font_type": "$global_font_type",
+                "backup_font_type": "$global_font_type_backup"
+              }
+            },
+            {
+              "stack_0@xc_modern_settings:main_content.option_stack_panel": {
+                "controls": [
+                  {
+                    "option_content_file_log@xc_modern_settings:controls.option_toggle": {
+                      "size": ["fill", "100%c"],
+                      "$option_label": "options.content_log_file",
+                      "$option_binding_name": "#content_log_file",
+                      "$option_enabled_binding_name": "#content_log_file_enabled",
+                      "$toggle_name": "content_log_file"
+                    }
+                  },
+                  {
+                    "option_content_gui_log@xc_modern_settings:controls.option_toggle": {
+                      "size": ["fill", "100%c"],
+                      "$option_label": "options.content_log_gui",
+                      "$option_binding_name": "#content_log_gui",
+                      "$option_enabled_binding_name": "#content_log_gui_enabled",
+                      "$toggle_name": "content_log_gui"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "option_content_gui_log_show_on_errors@xc_modern_settings:controls.option_toggle": {
+                "$option_label": "options.content_log_gui_show_on_errors",
+                "$option_binding_name": "#content_log_gui_show_on_errors",
+                "$option_enabled_binding_name": "#content_log_gui_show_on_errors_enabled",
+                "$toggle_name": "content_log_gui_show_on_errors"
+              }
+            },
+            {
+              "option_content_log_gui_level@xc_modern_settings:controls.option_dropdown": {
+                "$option_label": "options.content_log_gui.level",
+                "$dropdown_content": "xc_modern_settings:creator.content_log_gui_level_content",
+                "$dropdown_area": "content_area",
+                "$dropdown_name": "content_log_gui_level_dropdown",
+                "$options_dropdown_toggle_label_binding": "#content_log_gui_level_dropdown_toggle_label",
+                "$option_enabled_binding_name": "#content_log_gui_level_dropdown_enabled"
+              }
+            },
+            {
+              "content_log_buttons@xc_modern_settings:main_content.option_stack_panel": {
+                "controls": [
+                  {
+                    "open_content_log_history@common_buttons.a_rc_8x_text": {
+                      "$pressed_button_name": "button.open_content_log_history",
+                      "$button_text": "contentlog.history.title",
+                      "size": ["fill", 30],
+                      "bindings": [
+                        {
+                          "binding_name": "#content_log_gui_option_enabled",
+                          "binding_name_override": "#enabled"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "clear_content_log_files@common_buttons.a_rc_8x_text": {
+                      "$pressed_button_name": "button.clear_content_log_files",
+                      "$button_text": "contentlog.clear_files",
+                      "size": ["fill", 30],
+                      "bindings": [
+                        {
+                          "binding_name": "#allow_content_log_write_to_disk",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "padding1": {
+                "type": "panel",
+                "size": [0, 5],
+                "bindings": [
+                  {
+                    "binding_name": "#content_log_file_enabled",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "content_log_location_label_header": {
+                "type": "label",
+                "text": "contentlog.logLocationSectionName",
+                "size": ["100%", "default"],
+                "font_type": "$global_font_type",
+                "backup_font_type": "$global_font_type_backup",
+                "bindings": [
+                  {
+                    "binding_name": "#content_log_file_enabled",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "content_log_location_label": {
+                "type": "label",
+                "text": "#text",
+                "size": ["100%", "default"],
+                "font_type": "$global_font_type",
+                "backup_font_type": "$global_font_type_backup",
+                "hide_hyphen": true,
+                "bindings": [
+                  {
+                    "binding_name": "#content_log_location_text",
+                    "binding_name_override": "#text"
+                  },
+                  {
+                    "binding_name": "#content_log_file_enabled",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+// ▒██   ██▒  ██████ ▒███████▒ ▄████▄
+// ▒▒ █ █ ▒░▒██    ▒ ▒ ▒ ▒ ▄▀░▒██▀ ▀█
+// ░░  █   ░░ ▓██▄   ░ ▒ ▄▀▒░ ▒▓█    ▄
+//  ░ █ █ ▒   ▒   ██▒  ▄▀▒   ░▒▓▓▄ ▄██▒
+// ▒██▒ ▒██▒▒██████▒▒▒███████▒▒ ▓███▀ ░
+// ▒▒ ░ ░▓ ░▒ ▒▓▒ ▒ ░░▒▒ ▓░▒░▒░ ░▒ ▒  ░
+// ░░   ░▒ ░░ ░▒  ░ ░░░▒ ▒ ░ ▒  ░  ▒
+//  ░    ░  ░  ░  ░  ░ ░ ░ ░ ░░
+//  ░    ░        ░    ░ ░    ░ ░
+//                   ░        ░
