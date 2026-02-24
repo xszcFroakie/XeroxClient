@@ -7,7 +7,7 @@
   "slider_box_layout": {
     "type": "image",
     "texture": "textures/XeroxClient/rounded_corner/all8x",
-    "color": "$slider_box_color" /*,
+    "color": "$slider_box_color",
     "$is_hover|default": false,
     "controls": [
       {
@@ -15,17 +15,17 @@
           "type": "image",
           "size": ["100% + 1px", "100% + 1px"],
           "texture": "textures/XeroxClient/rounded_corner_border/all8x",
-          "layer": -1,
+          "layer": 3,
           "ignored": "(not $is_hover)"
         }
       }
-    ]*/
+    ]
   },
 
   "slider_box": {
     "type": "slider_box",
     "layer": 3,
-    "size": [12, 12],
+    "size": [16, 16],
     "default_control": "default",
     "hover_control": "hover",
     "locked_control": "locked",
@@ -62,7 +62,7 @@
 
   "slider_bar_background": {
     "type": "image",
-    "size": ["100% + 12px", 10],
+    "size": ["100% + 16px", 16],
     "texture": "textures/XeroxClient/rounded_corner/all8x",
     "color": "$slider_bar_background_color",
     "alpha": "$slider_bar_background_alpha",
@@ -99,7 +99,7 @@
 
   "slider": {
     "type": "slider",
-    "size": ["100% - 12px", 10],
+    "size": ["100% - 16px", 16],
     "$focus_id|default": "",
     "$focus_override_down|default": "",
     "$focus_override_up|default": "",
