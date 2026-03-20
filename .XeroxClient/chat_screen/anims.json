@@ -2,7 +2,91 @@
 // Secondary distribution must follow the GPL-3.0-only Protocol!!
 
 {
-  "namespace": "chat_animation"
+  "namespace": "chat_animation",
+
+  //--------------------------
+
+  "chat_panel_content_out_animation": {
+    "anim_type": "offset",
+    "easing": "out_cubic",
+    "duration": 0.29,
+    "to": [-90, 0],
+    "from": [10, 0],
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+
+  "chat_panel_content_out_animation_pop": {
+    "anim_type": "offset",
+    "easing": "out_cubic",
+    "duration": 0.29,
+    "to": [-90, 0],
+    "from": [10, 0],
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+
+  "chat_panel_content_enter_animation": {
+    "anim_type": "offset",
+    "easing": "out_cubic",
+    "duration": 0.29,
+    "from": [-90, 0],
+    "to": [10, 0],
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+
+  "chat_panel_content_enter_animation_pop": {
+    "anim_type": "offset",
+    "easing": "out_cubic",
+    "duration": 0.29,
+    "from": [-90, 0],
+    "to": [10, 0],
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
+  },
+
+  //--------------------------
+
+  "utils_panel_out_animation": {
+    "anim_type": "offset",
+    "easing": "out_cubic",
+    "duration": 0.29,
+    "to": [90, 0],
+    "from": [-10, 0],
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+
+  "utils_panel_out_animation_pop": {
+    "anim_type": "offset",
+    "easing": "out_cubic",
+    "duration": 0.29,
+    "to": [90, 0],
+    "from": [-10, 0],
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+
+  "utils_panel_enter_animation": {
+    "anim_type": "offset",
+    "easing": "out_cubic",
+    "duration": 0.29,
+    "from": [90, 0],
+    "to": [-10, 0],
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+
+  "utils_panel_enter_animation_pop": {
+    "anim_type": "offset",
+    "easing": "out_cubic",
+    "duration": 0.29,
+    "from": [90, 0],
+    "to": [-10, 0],
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
+  }
 }
 // ▒██   ██▒  ██████ ▒███████▒ ▄████▄
 // ▒▒ █ █ ▒░▒██    ▒ ▒ ▒ ▒ ▄▀░▒██▀ ▀█

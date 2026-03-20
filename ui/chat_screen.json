@@ -6,7 +6,13 @@
   "chat_screen": {
     "close_on_player_hurt": false,
     "$screen_content": "xc_modern_chat.main_content",
-    "$screen_bg_content": "common.empty_panel"
+    "$screen_bg_content": "xc_backgrounds.menu_background",
+    "$screen_animations": [
+      "@common.screen_exit_animation_push_fade",
+      "@common.screen_exit_animation_pop_fade",
+      "@common.screen_entrance_animation_push_fade",
+      "@common.screen_entrance_animation_pop_fade"
+    ]
   }
 }
 // ▒██   ██▒  ██████ ▒███████▒ ▄████▄

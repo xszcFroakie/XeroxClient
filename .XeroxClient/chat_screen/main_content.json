@@ -409,6 +409,7 @@
                 "text_alignment": "center",
                 "font_type": "$global_font_type",
                 "backup_font_type": "$global_font_type_backup",
+                "layer": 4,
                 "bindings": [
                   {
                     "binding_name": "#coordinates_text",
@@ -436,6 +437,13 @@
           "offset": [10, 0],
           "anchor_from": "left_middle",
           "anchor_to": "left_middle",
+          "animation_reset_name": "screen_animation_reset",
+          "anims": [
+            "@chat_animation.chat_panel_content_out_animation",
+            "@chat_animation.chat_panel_content_out_animation_pop",
+            "@chat_animation.chat_panel_content_enter_animation",
+            "@chat_animation.chat_panel_content_enter_animation_pop"
+          ],
           "controls": [
             {
               "host_panel@host_options.host_panel": {
@@ -546,6 +554,15 @@
           "offset": [-10, 0],
           "anchor_from": "right_middle",
           "anchor_to": "right_middle",
+          "animation_reset_name": "screen_animation_reset",
+          "anims": [
+            "@chat_animation.utils_panel_out_animation",
+            "@chat_animation.utils_panel_out_animation_pop",
+            "@chat_animation.utils_panel_enter_animation",
+            "@chat_animation.utils_panel_enter_animation_pop"
+          ],
+          "$hover_text_anchor_from": "center",
+          "$hover_text_anchor_to": "top_right",
           "controls": [
             {
               "0x_panel0": {
@@ -565,7 +582,7 @@
                         {
                           "stack_panel": {
                             "type": "stack_panel",
-                            "size": [100, 20],
+                            "size": ["100%c", 20],
                             "orientation": "horizontal",
                             "controls": [
                               {
@@ -593,6 +610,13 @@
                                 "next@common_buttons.a_rc_8x_text": {
                                   "$button_text": "▼",
                                   "$pressed_button_name": "button.chat_next_message",
+                                  "size": ["100%y", 20]
+                                }
+                              },
+                              {
+                                "close@common_buttons.a_rc_8x_content": {
+                                  "$button_content": "xc_modern_start.clo_icon",
+                                  "$pressed_button_name": "button.menu_exit",
                                   "size": ["100%y", 20]
                                 }
                               }

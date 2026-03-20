@@ -4,6 +4,7 @@
 {
   "ui_defs": [
     //XeroxClient
+    ".XeroxClient/chat_screen/anims.json",
     ".XeroxClient/chat_screen/chat_macro.json",
     ".XeroxClient/chat_screen/main_content.json",
 
