@@ -24,6 +24,10 @@
     "ignored": true
   },
 
+  "centered_gui_elements_at_bottom_middle_touch": {
+    "ignored": true
+  },
+
   "chat_panel": {
     "ignored": true
   },
@@ -52,7 +56,9 @@
               "$vertical_coordinate|default": true
             }
           },
-          { "item_helper@xc_modern_hud:handhold_utils:handhold_base.item_helper": {} },
+          {
+            "item_helper@xc_modern_hud:handhold_utils:handhold_base.item_helper": {}
+          },
           { "tab_list@xc_modern_hud:tab_list.tab_list": {} },
           {
             "chat_panel@xc_modern_hud:chat_panel.modern_chat_panel": {

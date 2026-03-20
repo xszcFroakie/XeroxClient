@@ -12,7 +12,7 @@
   },
 
   "base_screen/variables_button_mappings_and_controls/bg_no_safezone_screen_panel": {
-    "layer": -10
+    //"layer": -10
   },
 
   "button": {

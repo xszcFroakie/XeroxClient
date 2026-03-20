@@ -107,7 +107,7 @@
     "texture": "textures/XeroxClient/rounded_corner/all8x",
     "color": "$xeroxclient_ui_theme_menu_background_color",
     "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
-    "layer": 0,
+    "layer": 10,
     "size": [200, "100%cm + 5px"],
     "anchor_to": "bottom_middle",
     "offset": [0, 67.5],
