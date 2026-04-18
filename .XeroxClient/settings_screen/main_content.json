@@ -2,7 +2,6 @@
 // Secondary distribution must follow the GPL-3.0-only Protocol!!
 {
   "namespace": "xc_modern_settings:main_content",
-
   "toggle_button_control": {
     "type": "panel",
     "layer": 2,
@@ -47,7 +46,6 @@
       }
     ]
   },
-
   "section_toggle_base@common_toggles.a_rc_8x_image": {
     "size": ["100%", 25],
     "$button_content": "xc_modern_settings:main_content.toggle_button_control",
@@ -59,7 +57,6 @@
     "$toggle_on_hover_binding_type": "global",
     "$toggle_on_hover_binding_name": "#toggle_on_hover"
   },
-
   "selector_group_label": {
     "type": "image",
     "texture": "textures/XeroxClient/rounded_corner/all8x",
@@ -79,7 +76,6 @@
       }
     ]
   },
-
   "section_selector_panel": {
     "type": "stack_panel",
     "size": ["100%", "100%c"],
@@ -252,7 +248,6 @@
       }
     ]
   },
-
   "section_pages_main_content_base": {
     "type": "stack_panel",
     "$toggle_view_binding_name|default": "none",
@@ -269,36 +264,48 @@
     "offset": [0, 1],
     "visible": false
   },
-
   "section_pages_panel": {
     "type": "panel",
     "size": ["100%", "100%c + 2px"],
     "controls": [
-      { "accessibility@xc_modern_settings:accessibility.main_content": {} },
-      { "general@xc_modern_settings:general.main_content": {} },
-      { "graphic@xc_modern_settings:graphic.main_content": {} },
-      { "sound@xc_modern_settings:sound.main_content": {} },
-      { "language@xc_modern_settings:language.main_content": {} },
-      { "creator@xc_modern_settings:creator.main_content": {} }
+      {
+        "accessibility@xc_modern_settings:accessibility.main_content": {}
+      },
+      {
+        "general@xc_modern_settings:general.main_content": {}
+      },
+      {
+        "graphic@xc_modern_settings:graphic.main_content": {}
+      },
+      {
+        "sound@xc_modern_settings:sound.main_content": {}
+      },
+      {
+        "language@xc_modern_settings:language.main_content": {}
+      },
+      {
+        "creator@xc_modern_settings:creator.main_content": {}
+      }
     ]
   },
-
   "option_stack_panel": {
     "type": "stack_panel",
     "orientation": "horizontal",
     "size": ["100%", "100%cm"]
   },
-
   "background": {
     "type": "panel",
     "controls": [
       {
-        "in_game@xc_backgrounds.menu_background": { "ignored": "$is_pregame" }
+        "in_game@xc_backgrounds.menu_background": {
+          "ignored": "$is_pregame"
+        }
       },
-      { "not_in_game@xc_common.background_for_pregame_only": {} }
+      {
+        "not_in_game@xc_common.background_for_pregame_only": {}
+      }
     ]
   },
-
   "main_content": {
     "type": "panel",
     "controls": [
@@ -417,7 +424,10 @@
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
           "propagate_alpha": true,
-          "alpha": "@settings_animation.close_button_area_description_fade",
+          "anims": [
+            "@settings_animation.close_button_area_description_fade1",
+            "@settings_animation.close_button_area_description_fade2"
+          ],
           "layer": 1,
           "controls": [
             {
@@ -425,8 +435,9 @@
                 "type": "image",
                 "texture": "textures/XeroxClient/diffusion",
                 "color": "$xeroxclient_ui_theme_menu_background_color",
-                "alpha": 0.8,
-                "size": ["100%sm + 50px", "250%"],
+                "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
+                "size": ["100%sm + 150px", "250%"],
+                "max_size": ["100%", "250%"],
                 "anchor_from": "bottom_middle",
                 "anchor_to": "center",
                 "layer": 2
