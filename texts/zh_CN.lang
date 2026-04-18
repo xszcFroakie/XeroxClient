@@ -10,3 +10,6 @@ xc.button.copy=复制
 xc.button.paste=粘贴
 
 map.position=Position: %s, %s, %s ## Why only Chinese can't separate numbers?😅
+
+xc.options.unchangedSectionNotice=此部分因故暂未修改，可能在后续版本中更新或被 Ore UI 替代。
+xc.options.closeButtonAreaDescription=双击此处以关闭界面！

@@ -8,3 +8,6 @@ xc.tip.press2x=Press 2x
 
 xc.button.copy=Copy
 xc.button.paste=Paste
+
+xc.options.unchangedSectionNotice=This section has not been modified for certain reasons and may be updated or replaced by Ore UI in a future release.
+xc.options.closeButtonAreaDescription=Double-click here to close the screen!

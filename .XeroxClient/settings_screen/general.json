@@ -1,0 +1,471 @@
+// File made by @XSzC.
+// Secondary distribution must follow the GPL-3.0-only Protocol!!
+{
+  "namespace": "xc_modern_settings:general",
+
+  "auto_update_mode_dropdown_content@xc_modern_settings:controls.option_radio_dropdown_group": {
+    "$radio_buttons": [
+      {
+        "off@xc_modern_settings:controls.radio_with_label": {
+          "$toggle_state_binding_name": "#auto_update_mode_off",
+          "$radio_label_text": "options.autoUpdateMode.off"
+        }
+      },
+      {
+        "wifi@xc_modern_settings:controls.radio_with_label": {
+          "$toggle_state_binding_name": "#auto_update_mode_on_wifi_only",
+          "$radio_label_text": "options.autoUpdateMode.on.withWifiOnly"
+        }
+      },
+      {
+        "cellular@xc_modern_settings:controls.radio_with_label": {
+          "$toggle_state_binding_name": "#auto_update_mode_on_with_cellular",
+          "$radio_label_text": "options.autoUpdateMode.on.withCellular"
+        }
+      }
+    ]
+  },
+
+  "main_content@xc_modern_settings:main_content.section_pages_main_content_base": {
+    "$toggle_view_binding_name": "general_button_toggle",
+    "controls": [
+      {
+        "option_toggle_fail_realms_purchase_fulfillment@xc_modern_settings:controls.option_toggle": {
+          "$option_label": "options.failRealmsPurchaseFulfillment",
+          "$option_binding_name": "#fail_realms_purchase_fulfillment",
+          "$option_enabled_binding_name": "#fail_realms_purchase_fulfillment_enabled",
+          "$toggle_name": "fail_realms_purchase_fulfillment",
+          "bindings": [
+            {
+              "binding_name": "#fail_realms_purchase_fulfillment_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "network_label_header": {
+          "type": "label",
+          "text": "options.networkSettings",
+          "font_type": "$global_font_type",
+          "backup_font_type": "$global_font_type_backup"
+        }
+      },
+      {
+        "stack_0@xc_modern_settings:main_content.option_stack_panel": {
+          "ignored": "$console_edition",
+          "controls": [
+            {
+              "websockets_enabled_toggle@xc_modern_settings:controls.option_toggle": {
+                "size": ["fill", "100%c"],
+                "$option_label": "options.websocketsEnabled",
+                "$option_binding_name": "#websockets_enabled",
+                "$option_enabled_binding_name": "#websockets_enabled_enabled",
+                "$toggle_name": "websockets_enabled"
+              }
+            },
+            {
+              "websocket_encryption_toggle@xc_modern_settings:controls.option_toggle": {
+                "size": ["fill", "100%c"],
+                "$option_label": "options.websocketEncryption",
+                "$option_binding_name": "#websocket_encryption",
+                "$option_enabled_binding_name": "#websocket_encryption_enabled",
+                "$toggle_name": "websocket_encryption",
+                "bindings": [
+                  {
+                    "binding_name": "#websocket_encryption_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stack_1@xc_modern_settings:main_content.option_stack_panel": {
+          "ignored": "($is_console or $win10_edition or $osx_edition)",
+          "controls": [
+            {
+              "mobile_data_option_toggle@xc_modern_settings:controls.option_toggle": {
+                "size": ["fill", "100%c"],
+                "$option_label": "options.allowCellularData",
+                "$option_binding_name": "#allow_cellular_data",
+                "$option_enabled_binding_name": "#allow_cellular_data_enabled",
+                "$toggle_name": "allow_cellular_data",
+                "$has_option_description": true,
+                "$option_description": "options.allowCellularData.message"
+              }
+            },
+            {
+              "auto_update_mode_dropdown@xc_modern_settings:controls.option_dropdown": {
+                "size": ["fill", "100%c"],
+                "$option_label": "options.autoUpdateMode",
+                "$dropdown_content": "xc_modern_settings:general.auto_update_mode_dropdown_content",
+                "$dropdown_area": "content_area",
+                "$dropdown_name": "auto_update_mode_dropdown",
+                "$options_dropdown_toggle_label_binding": "#auto_update_mode_dropdown_toggle_label"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stack_2@xc_modern_settings:main_content.option_stack_panel": {
+          "controls": [
+            {
+              "cross_platform_enabled_toggle@xc_modern_settings:controls.option_toggle": {
+                "ignored": "(not $supports_cross_platform_play_toggle)",
+                "size": ["fill", "100%c"],
+                "$option_label": "options.crossPlatformPlay",
+                "$option_binding_name": "#crossplatform_toggle",
+                "$option_enabled_binding_name": "#crossplatform_toggle_enabled",
+                "$toggle_name": "crossplatform_toggle"
+              }
+            },
+            {
+              "auto_update_enabled_toggle@xc_modern_settings:controls.option_toggle": {
+                "ignored": "((not $is_console and not $win10_edition and not $osx_edition) or $nx_os)",
+                "size": ["fill", "100%c"],
+                "$option_label": "options.autoUpdateEnabled",
+                "$option_binding_name": "#auto_update_enabled",
+                "$toggle_name": "auto_update_enabled"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stack_3@xc_modern_settings:main_content.option_stack_panel": {
+          "controls": [
+            {
+              "tutorial_toggle@xc_modern_settings:controls.option_toggle": {
+                "size": ["fill", "100%c"],
+                "$option_label": "options.tutorial",
+                "$option_binding_name": "#tutorial_option_toggle",
+                "$toggle_name": "tutorial_option_toggle",
+                "$has_option_description": true,
+                "$option_description": "options.tutorialHint",
+                "bindings": [
+                  {
+                    "binding_name": "#tutorial_toggle_enabled",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "tutorial_animation_toggle@xc_modern_settings:controls.option_toggle": {
+                "size": ["fill", "100%c"],
+                "$option_label": "options.tutorial_show_animation",
+                "$option_binding_name": "#tutorial_show_animations_toggle",
+                "$toggle_name": "tutorial_show_animations_toggle",
+                "bindings": [
+                  {
+                    "binding_name": "#edu_show_animation_toggle",
+                    "binding_name_override": "#visible"
+                  },
+                  {
+                    "binding_name": "#gametips_enabled",
+                    "binding_name_override": "#enabled"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "tutorial_restart_button@common_buttons.a_rc_8x_text": {
+          "size": ["100%", 30],
+          "$pressed_button_name": "button.tutorial_restart",
+          "$button_text": "options.restartTutorial",
+          "bindings": [
+            {
+              "binding_name": "#tutorial_toggle_enabled",
+              "binding_name_override": "#visible"
+            },
+            {
+              "binding_name": "#gametips_enabled",
+              "binding_name_override": "#enabled"
+            }
+          ]
+        }
+      },
+      {
+        "stack_4@xc_modern_settings:main_content.option_stack_panel": {
+          "controls": [
+            {
+              "only_allow_trusted_skins_toggle@xc_modern_settings:controls.option_toggle": {
+                "size": ["fill", "100%c"],
+                "$option_label": "options.onlyTrustedSkinsAllowed",
+                "$option_binding_name": "#only_trusted_skins_allowed",
+                "$option_enabled_binding_name": "#only_trusted_skins_allowed_enabled",
+                "$toggle_name": "only_trusted_skins_allowed"
+              }
+            },
+            {
+              "filter_profanity_toggle@xc_modern_settings:controls.option_toggle": {
+                "size": ["fill", "100%c"],
+                "$option_label": "options.filterProfanity",
+                "$option_binding_name": "#filter_profanity",
+                "$option_enabled_binding_name": "#filter_profanity_enabled",
+                "$option_tooltip_binding_type": "global",
+                "$option_tooltip_area": "general_and_controls_sections",
+                "$option_tooltip_text_binding_name": "#filter_profanity_option_tooltip_text",
+                "$toggle_name": "filter_profanity"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "pause_label_header": {
+          "type": "label",
+          "text": "options.pauseHeader",
+          "font_type": "$global_font_type",
+          "backup_font_type": "$global_font_type_backup",
+          "bindings": [
+            {
+              "binding_name": "#pause_toggle_enabled",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pause_toggle@xc_modern_settings:controls.option_toggle": {
+          "$option_label": "options.pauseHint",
+          "$option_binding_name": "#pause_option_toggle",
+          "$toggle_name": "pause_option_toggle",
+          "bindings": [
+            {
+              "binding_name": "#pause_toggle_enabled",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "link_button@common_buttons.a_rc_8x_text": {
+          "ignored": "(not $education_edition)",
+          "size": ["100%", 30],
+          "$button_text": "options.goToFeedbackWebsite",
+          "$pressed_button_name": "button.menu_open_uri",
+          "property_bag": {
+            "#hyperlink": "https://aka.ms/minecraftedusupport"
+          }
+        }
+      },
+      {
+        "ecomode_label_header": {
+          "type": "label",
+          "text": "options.ecoMode",
+          "font_type": "$global_font_type",
+          "backup_font_type": "$global_font_type_backup"
+        }
+      },
+      {
+        "ecomode_enabled_toggle@xc_modern_settings:controls.option_toggle": {
+          "$option_label": "options.enableEcoMode",
+          "$option_binding_name": "#ecomode_toggle",
+          "$option_enabled_binding_name": "#ecomode_toggle_enabled",
+          "$toggle_name": "ecomode_toggle"
+        }
+      },
+      {
+        "padding0": {
+          "type": "panel",
+          "size": ["100%", 5],
+          "controls": [
+            {
+              "line": {
+                "type": "image",
+                "size": ["100% - 30px", 1],
+                "alpha": 0.5,
+                "layer": 3,
+                "texture": "textures/XeroxClient/diffusion"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stack_5@xc_modern_settings:main_content.option_stack_panel": {
+          "controls": [
+            {
+              "credits_button@common_buttons.a_rc_8x_text": {
+                "size": ["fill", 30],
+                "$pressed_button_name": "button.credits",
+                "$button_text": "options.credits"
+              }
+            },
+            {
+              "attribution_link_button@common_buttons.a_rc_8x_text": {
+                "size": ["fill", 30],
+                "$button_text": "options.attribution",
+                "$pressed_button_name": "button.menu_open_uri",
+                "variables": [
+                  {
+                    "requires": "(not $nx_os)",
+                    "$attribution_button_url": "https://www.minecraft.net/attribution/?hideChrome"
+                  },
+                  {
+                    "requires": "($nx_os)",
+                    "$attribution_button_url": "https://aka.ms/switchattribution"
+                  }
+                ],
+                "property_bag": {
+                  "#hyperlink": "$attribution_button_url"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stack_6@xc_modern_settings:main_content.option_stack_panel": {
+          "controls": [
+            {
+              "terms_and_conditions_link_button@common_buttons.a_rc_8x_text": {
+                "ignored": "(not $thirdpartyconsole)",
+                "size": ["fill", 30],
+                "$button_text": "options.termsAndConditions",
+                "$pressed_button_name": "button.menu_open_uri",
+                "bindings": [
+                  {
+                    "binding_name": "#terms_and_conditions_hyperlink",
+                    "binding_name_override": "#hyperlink",
+                    "binding_type": "global"
+                  }
+                ]
+              }
+            },
+            {
+              "feedback_link_button@common_buttons.a_rc_8x_text": {
+                "ignored": "($nx_os or not $supports_xbl_achievements or not $feedback_visible)",
+                "size": ["fill", 30],
+                "$button_text": "options.helpCenter",
+                "$pressed_button_name": "button.feedback_link"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "padding1": {
+          "type": "panel",
+          "size": ["100%", 5],
+          "controls": [
+            {
+              "line": {
+                "type": "image",
+                "size": ["100% - 30px", 1],
+                "alpha": 0.5,
+                "layer": 3,
+                "texture": "textures/XeroxClient/diffusion"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "licenses_label_header": {
+          "type": "label",
+          "text": "options.licenses",
+          "font_type": "$global_font_type",
+          "backup_font_type": "$global_font_type_backup"
+        }
+      },
+      {
+        "stack_7@xc_modern_settings:main_content.option_stack_panel": {
+          "controls": [
+            {
+              "licensed_content_link_button@common_buttons.a_rc_8x_text": {
+                "ignored": "($education_edition)",
+                "size": ["fill", 30],
+                "$button_text": "options.licensed_content",
+                "$pressed_button_name": "button.menu_open_uri",
+                "variables": [
+                  {
+                    "requires": "(not $nx_os)",
+                    "$licensed_content_button_url": "https://www.minecraft.net/licensed-content/?hideChrome"
+                  },
+                  {
+                    "requires": "($nx_os)",
+                    "$licensed_content_button_url": "https://aka.ms/switchcontent"
+                  }
+                ],
+                "property_bag": {
+                  "#hyperlink": "$licensed_content_button_url"
+                }
+              }
+            },
+            {
+              "font_license_popup_button@common_buttons.a_rc_8x_text": {
+                "size": ["fill", 30],
+                "$pressed_button_name": "button.font_license_popup",
+                "$button_text": "options.font_license"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "build_info_label_panel": {
+          "type": "button",
+          "size": ["100%", "100%c + 10px"],
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.copy_build_info",
+              "mapping_type": "pressed"
+            }
+          ],
+          "controls": [
+            {
+              "build_info_label": {
+                "type": "label",
+                "font_type": "$global_font_type",
+                "backup_font_type": "$global_font_type_backup",
+                "offset": [2, 0],
+                "text": "#build_information",
+                "size": ["100%", "default"],
+                "bindings": [
+                  {
+                    "binding_name": "#build_information"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "treatment_ids_label": {
+          "visible": "(not $education_edition)",
+          "type": "label",
+          "font_type": "$global_font_type",
+          "backup_font_type": "$global_font_type_backup",
+          "size": ["100%", "default"],
+          "text": "#treatment_ids",
+          "bindings": [
+            {
+              "binding_name": "#treatment_ids"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+// ▒██   ██▒  ██████ ▒███████▒ ▄████▄
+// ▒▒ █ █ ▒░▒██    ▒ ▒ ▒ ▒ ▄▀░▒██▀ ▀█
+// ░░  █   ░░ ▓██▄   ░ ▒ ▄▀▒░ ▒▓█    ▄
+//  ░ █ █ ▒   ▒   ██▒  ▄▀▒   ░▒▓▓▄ ▄██▒
+// ▒██▒ ▒██▒▒██████▒▒▒███████▒▒ ▓███▀ ░
+// ▒▒ ░ ░▓ ░▒ ▒▓▒ ▒ ░░▒▒ ▓░▒░▒░ ░▒ ▒  ░
+// ░░   ░▒ ░░ ░▒  ░ ░░░▒ ▒ ░ ▒  ░  ▒
+//  ░    ░  ░  ░  ░  ░ ░ ░ ░ ░░
+//  ░    ░        ░    ░ ░    ░ ░
+//                   ░        ░

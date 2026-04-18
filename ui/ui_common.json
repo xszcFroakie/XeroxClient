@@ -15,6 +15,15 @@
     //"layer": -10
   },
 
+  "base_screen/variables_button_mappings_and_controls/screen_background": {
+    "ignored": true
+  },
+
+  "dropdown/dropdown_content": {
+    "modal": false,
+    "inline_modal": true
+  },
+
   "button": {
     "$hover_anim_enabled|default": false,
     "modifications": [

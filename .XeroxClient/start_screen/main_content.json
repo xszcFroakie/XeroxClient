@@ -44,7 +44,7 @@
   "gat_icon": {
     "type": "image",
     "bilinear": true,
-    "texture": "textures/XeroxClient/icon/gather"
+    "texture": "textures/XeroxClient/icon/multiplayer"
   },
 
   "fee_icon": {
