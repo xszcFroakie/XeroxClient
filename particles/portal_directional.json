@@ -1,0 +1,67 @@
+// File made by @XSzC.
+// Secondary distribution must follow the GPL-3.0-only Protocol!!
+{
+  "format_version": "1.10.0",
+  "particle_effect": {
+    "description": {
+      "identifier": "minecraft:portal_directional",
+      "basic_render_parameters": {
+        "material": "particles_alpha",
+        "texture": "textures/particle/particles"
+      }
+    },
+    "components": {
+      "minecraft:emitter_rate_instant": {
+        "num_particles": 1
+      },
+
+      "minecraft:emitter_lifetime_expression": {
+        "activation_expression": 1,
+        "expiration_expression": 1
+      },
+
+      "minecraft:emitter_shape_point": {
+      },
+
+      "minecraft:particle_lifetime_expression": {
+        "max_lifetime": "Math.Random(2.0,2.45)"
+      },
+
+      "minecraft:particle_motion_parametric": {
+        "relative_position": [
+          "variable.alpha = variable.particle_age/variable.particle_lifetime; variable.distance = (1-(-1*(variable.alpha)+Math.Pow((variable.alpha),2)*2)); return variable.direction.x * variable.distance;",
+          "variable.direction.y * variable.distance - variable.alpha",
+          "variable.direction.z * variable.distance"
+        ]
+      },
+
+      "minecraft:particle_appearance_billboard": {
+        "size": [
+          "(variable.particle_random_2 * 0.02 + 0.05) * (1 - Math.Pow((1-(variable.particle_age/variable.particle_lifetime)),2))",
+          "(variable.particle_random_2 * 0.02 + 0.05) * (1 - Math.Pow((1-(variable.particle_age/variable.particle_lifetime)),2))"
+        ],
+        "facing_camera_mode": "rotate_xyz",
+
+        "uv": {
+          "texture_width": 128,
+          "texture_height": 128,
+          "uv": [ "Math.round(variable.particle_random_1*8)*8", 0 ],
+          "uv_size": [ 8, 8 ]
+        }
+      },
+      "minecraft:particle_appearance_tinting": {
+        "color": [ "variable.particle_random_1 * 0.6 + 0.4", "(variable.particle_random_1 * 0.6 + 0.4) * 0.3", "(variable.particle_random_1 * 0.6 + 0.4) * 0.9", 1.0 ]
+      }
+    }
+  }
+}
+// ▒██   ██▒  ██████ ▒███████▒ ▄████▄
+// ▒▒ █ █ ▒░▒██    ▒ ▒ ▒ ▒ ▄▀░▒██▀ ▀█
+// ░░  █   ░░ ▓██▄   ░ ▒ ▄▀▒░ ▒▓█    ▄
+//  ░ █ █ ▒   ▒   ██▒  ▄▀▒   ░▒▓▓▄ ▄██▒
+// ▒██▒ ▒██▒▒██████▒▒▒███████▒▒ ▓███▀ ░
+// ▒▒ ░ ░▓ ░▒ ▒▓▒ ▒ ░░▒▒ ▓░▒░▒░ ░▒ ▒  ░
+// ░░   ░▒ ░░ ░▒  ░ ░░░▒ ▒ ░ ▒  ░  ▒
+//  ░    ░  ░  ░  ░  ░ ░ ░ ░ ░░
+//  ░    ░        ░    ░ ░    ░ ░
+//                   ░        ░
