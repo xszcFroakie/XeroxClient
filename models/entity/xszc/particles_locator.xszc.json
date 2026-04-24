@@ -1,39 +1,28 @@
 // File made by @XSzC.
 // Secondary distribution must follow the GPL-3.0-only Protocol!!
-
 {
-  "format_version": "1.10.0",
-  "animation_controllers": {
-    "controller.animation.xszc.modules.load": {
-      "initial_state": "load",
-      "states": {
-        "load": {
-          "animations": [
-            { "mod.init": "q.is_in_ui || v.is_paperdoll" },
-            "mod.sharpness_particle"
-          ]
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.particles_locator",
+        "texture_width": 16,
+        "texture_height": 16,
+        "visible_bounds_width": 1,
+        "visible_bounds_height": 1,
+        "visible_bounds_offset": [0, 0, 0]
+      },
+      "bones": [
+        {
+          "name": "root",
+          "pivot": [0, 0, 0],
+          "locators": {
+            "sharpness": [0, 12, 0]
+          }
         }
-      }
-    },
-    "controller.animation.sharpness_particle": {
-      "initial_state": "default",
-      "states": {
-        "default": {
-          "transitions": [{ "hurt": "v.hurt_time" }]
-        },
-        "hurt": {
-          "on_entry": ["v.life_time = q.life_time;"],
-          "particle_effects": [
-            {
-              "effect": "sharpness",
-              "locator": "sharpness"
-            }
-          ],
-          "transitions": [{ "default": "q.life_time - v.life_time >= 0.5" }]
-        }
-      }
+      ]
     }
-  }
+  ]
 }
 // ▒██   ██▒  ██████ ▒███████▒ ▄████▄
 // ▒▒ █ █ ▒░▒██    ▒ ▒ ▒ ▒ ▄▀░▒██▀ ▀█

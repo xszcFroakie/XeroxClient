@@ -59,7 +59,8 @@
         "hud_helmet": "geometry.xszc.armor_helmet",
         "hud_chestplate": "geometry.xszc.armor_chestplate",
         "hud_leggings": "geometry.xszc.armor_leggings",
-        "hud_boots": "geometry.xszc.armor_boots"
+        "hud_boots": "geometry.xszc.armor_boots",
+        "p_locator": "geometry.particles_locator"
       },
       "scripts": {
         "scale": "0.9375",
@@ -76,7 +77,8 @@
           "v.is_blinking = 0.0;",
           "v.last_blink_time = 0.0;",
           "v.hand_bob = 0.0;",
-          "v.melee_spear_java_to_bedrock_scale = 40.0;"
+          "v.melee_spear_java_to_bedrock_scale = 40.0;",
+          "v.hurt_time = 0.0;"
         ],
         "pre_animation": [
           // XSzC Modules
@@ -176,14 +178,17 @@
         ],
         "animate": [
           "root",
-          { "mod.init": "q.is_in_ui || v.is_paperdoll" }
-          //"mod.load"
+          "mod.load"
         ],
         "should_update_effects_offscreen": "1.0"
       },
+      "particle_effects": {
+        "sharpness": "xszc:sharpness_particle"
+      },
       "animations": {
         "mod.init": "animation.xszc.modules.initialize",
-        //"mod.load": "controller.animation.xszc.modules.load",
+        "mod.load": "controller.animation.xszc.modules.load",
+        "mod.sharpness_particle": "controller.animation.sharpness_particle",
 
         "root": "controller.animation.player.root",
         "base_controller": "controller.animation.player.base",
@@ -263,7 +268,9 @@
         {
           "controller.render.player.third_person_spectator": "!v.is_first_person && !v.map_face_icon && q.is_spectator"
         },
-        { "controller.render.player.first_person": "v.is_first_person && !q.is_spectator" },
+        {
+          "controller.render.player.first_person": "v.is_first_person && !q.is_spectator"
+        },
         {
           "controller.render.player.third_person": "!v.is_first_person && !v.map_face_icon && !q.is_spectator"
         },
@@ -273,7 +280,8 @@
         { "controller.render.hud_helmet": "v.render_in_hud" },
         { "controller.render.hud_chestplate": "v.render_in_hud" },
         { "controller.render.hud_leggings": "v.render_in_hud" },
-        { "controller.render.hud_boots": "v.render_in_hud" }
+        { "controller.render.hud_boots": "v.render_in_hud" },
+        "controller.render.particle"
       ],
       "enable_attachables": true,
       "min_engine_version": "1.8.0"

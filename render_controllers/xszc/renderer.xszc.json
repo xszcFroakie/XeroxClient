@@ -209,6 +209,13 @@
       "textures": ["Texture.cape"],
       "is_hurt_color": {},
       "on_fire_color": {}
+    },
+    "controller.render.particle": {
+      "geometry": "Geometry.p_locator",
+      "materials": [{ "*": "Material.default" }],
+      "textures": ["Texture.default"],
+      "is_hurt_color": { "a": "v.hurt_time = 1.0;" },
+      "overlay_color": { "a": "v.hurt_time = 0.0;" }
     }
   }
 }
