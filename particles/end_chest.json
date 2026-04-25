@@ -34,7 +34,7 @@
 
       "minecraft:particle_motion_parametric": {
         "relative_position": [
-          "variable.alpha = variable.particle_age/variable.particle_lifetime; variable.distance = (1-(-1*(variable.alpha)+Math.Pow((variable.alpha),2)*2)); variable.random_directionX = (Math.Round(variable.custom_random3)*2-1); return 0.25*variable.random_directionX + variable.custom_random2*variable.random_directionX * variable.distance;",
+          "variable.alpha = v.particle_age/v.particle_lifetime; variable.distance = (1-(-1*(variable.alpha)+Math.Pow((variable.alpha),2)*2)); variable.random_directionX = (Math.Round(variable.custom_random3)*2-1); return 0.25*variable.random_directionX + variable.custom_random2*variable.random_directionX * variable.distance;",
           "1.0 + ((variable.custom_random6 - 0.5) * 0.125) * variable.distance - variable.alpha",
           "variable.random_directionZ = (Math.Round(variable.custom_random5)*2-1); return 0.25*variable.random_directionZ + variable.custom_random4*variable.random_directionZ * variable.distance;"
         ]
@@ -42,20 +42,25 @@
 
       "minecraft:particle_appearance_billboard": {
         "size": [
-          "(variable.particle_random_2 * 0.02 + 0.05) * (1 - Math.Pow((1-(variable.particle_age/variable.particle_lifetime)),2))",
-          "(variable.particle_random_2 * 0.02 + 0.05) * (1 - Math.Pow((1-(variable.particle_age/variable.particle_lifetime)),2))"
+          "(v.particle_random_2 * 0.02 + 0.05) * (1 - Math.Pow((1-(v.particle_age/v.particle_lifetime)),2))",
+          "(v.particle_random_2 * 0.02 + 0.05) * (1 - Math.Pow((1-(v.particle_age/v.particle_lifetime)),2))"
         ],
         "facing_camera_mode": "rotate_xyz",
 
         "uv": {
           "texture_width": 128,
           "texture_height": 128,
-          "uv": [ "Math.round(variable.custom_random1*8)*8", 0 ],
-          "uv_size": [ 8, 8 ]
+          "uv": ["Math.round(variable.custom_random1*8)*8", 0],
+          "uv_size": [8, 8]
         }
       },
       "minecraft:particle_appearance_tinting": {
-        "color": [ "variable.particle_random_1 * 0.6 + 0.4", "(variable.particle_random_1 * 0.6 + 0.4) * 0.3", "(variable.particle_random_1 * 0.6 + 0.4) * 0.9", 1.0 ]
+        "color": [
+          "v.particle_random_1 * 0.6 + 0.4",
+          "(v.particle_random_1 * 0.6 + 0.4) * 0.3",
+          "(v.particle_random_1 * 0.6 + 0.4) * 0.9",
+          1.0
+        ]
       }
     }
   }

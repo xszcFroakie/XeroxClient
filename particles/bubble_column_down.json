@@ -30,22 +30,26 @@
         "minecraft:bubble_column"
       ],
       "minecraft:particle_initialization": {
-        "per_update_expression": "variable.angle = variable.particle_random_1 * 360 + variable.particle_age * 180;",
-        "per_render_expression": "variable.size = (0.05 * variable.particle_random_3+0.1)*(variable.particle_random_4*0.9+0.2);"
+        "per_update_expression": "variable.angle = v.particle_random_1 * 360 + v.particle_age * 180;",
+        "per_render_expression": "variable.size = (0.05 * v.particle_random_3+0.1)*(v.particle_random_4*0.9+0.2);"
       },
       "minecraft:particle_initial_speed": "1",
       "minecraft:particle_motion_dynamic": {
-        "linear_acceleration": ["Math.cos(variable.angle)*3", -1.3, "Math.sin(variable.angle)*3"],
+        "linear_acceleration": [
+          "Math.cos(variable.angle)*3",
+          -1.3,
+          "Math.sin(variable.angle)*3"
+        ],
         "linear_drag_coefficient": 2
       },
       "minecraft:particle_appearance_billboard": {
-        "size": [ "variable.size", "variable.size" ],
+        "size": ["variable.size", "variable.size"],
         "facing_camera_mode": "rotate_xyz",
         "uv": {
           "texture_width": 128,
           "texture_height": 128,
-          "uv": [ 0, 16 ],
-          "uv_size": [ 8, 8 ]
+          "uv": [0, 16],
+          "uv_size": [8, 8]
         }
       },
       "minecraft:particle_appearance_lighting": {}

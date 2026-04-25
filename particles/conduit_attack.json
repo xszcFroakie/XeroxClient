@@ -25,28 +25,31 @@
 
       "minecraft:particle_motion_parametric": {
         "relative_position": [
-          "variable.pos = 1 - (variable.particle_age / variable.particle_lifetime); return (-0.5 + variable.particle_random_1) * (3 + variable.aabb_dimension_x) * variable.pos;",
-          "(-1.0 + variable.particle_random_2 * variable.aabb_dimension_y) * variable.pos - Math.pow((1 - variable.pos), 3) * 1.2",
-          "(-0.5 + variable.particle_random_3) * (3 + variable.aabb_dimension_x) * variable.pos"
+          "v.pos = 1 - (v.particle_age / v.particle_lifetime); return (-0.5 + v.particle_random_1) * (3 + variable.aabb_dimension_x) * v.pos;",
+          "(-1.0 + v.particle_random_2 * variable.aabb_dimension_y) * v.pos - Math.pow((1 - v.pos), 3) * 1.2",
+          "(-0.5 + v.particle_random_3) * (3 + variable.aabb_dimension_x) * v.pos"
         ]
       },
 
       "minecraft:particle_appearance_billboard": {
-        "size": [ "variable.particle_random_1 * 0.05 + 0.02", "variable.particle_random_1 * 0.05 + 0.02" ],
+        "size": [
+          "v.particle_random_1 * 0.05 + 0.02",
+          "v.particle_random_1 * 0.05 + 0.02"
+        ],
         "facing_camera_mode": "rotate_xyz",
         "uv": {
           "texture_width": 128,
           "texture_height": 128,
-          "uv": [ "Math.round(variable.particle_random_2 * 11) * 8", 104 ],
-          "uv_size": [ 8, 8 ]
+          "uv": ["Math.round(v.particle_random_2 * 11) * 8", 104],
+          "uv_size": [8, 8]
         }
       },
 
       "minecraft:particle_appearance_tinting": {
         "color": [
-          "variable.particle_random_3 * 0.54 + 0.36",
-          "variable.particle_random_3 * 0.54 + 0.36",
-          "variable.particle_random_3 * 0.6 + 0.4"
+          "v.particle_random_3 * 0.54 + 0.36",
+          "v.particle_random_3 * 0.54 + 0.36",
+          "v.particle_random_3 * 0.6 + 0.4"
         ]
       }
     }

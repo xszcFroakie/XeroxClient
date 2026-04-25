@@ -35,8 +35,8 @@
       },
 
       "minecraft:particle_initialization": {
-        "per_update_expression": "variable.xaccel = variable.particle_random_3 - 0.5; variable.zaccel = variable.particle_random_4 - 0.5;",
-        "per_render_expression": "variable.size = (variable.particle_random_2 * 0.02 + 0.05) * (1 - Math.Pow((1-(variable.particle_age/variable.particle_lifetime)),2)); variable.color = (variable.particle_random_1 * 0.6 + 0.4);"
+        "per_update_expression": "variable.xaccel = v.particle_random_3 - 0.5; variable.zaccel = v.particle_random_4 - 0.5;",
+        "per_render_expression": "variable.size = (v.particle_random_2 * 0.02 + 0.05) * (1 - Math.Pow((1-(v.particle_age/v.particle_lifetime)),2)); variable.color = (v.particle_random_1 * 0.6 + 0.4);"
       },
 
       "minecraft:particle_appearance_billboard": {
@@ -46,12 +46,17 @@
         "uv": {
           "texture_width": 128,
           "texture_height": 128,
-          "uv": [ "Math.round(variable.particle_random_3*8)*8", 0 ],
-          "uv_size": [ 8, 8 ]
+          "uv": ["Math.round(v.particle_random_3*8)*8", 0],
+          "uv_size": [8, 8]
         }
       },
       "minecraft:particle_appearance_tinting": {
-        "color": [ "variable.color", "variable.color * 0.3", "variable.color * 0.9", 1.0 ]
+        "color": [
+          "variable.color",
+          "variable.color * 0.3",
+          "variable.color * 0.9",
+          1.0
+        ]
       }
     }
   }
