@@ -39,7 +39,7 @@
       },
       {
         "binding_type": "view",
-        "source_property_name": "(#inventory_stack_count = 0)",
+        "source_property_name": "((#inventory_stack_count = 0) * 10)",
         "target_property_name": "#OneCount"
       },
       {
@@ -762,9 +762,15 @@
       }
     ],*/
     "controls": [
-      { "dura_viewer@xc_modern_hud:handhold_utils:handhold_base.dura_viewer": {} },
-      { "amount_counter@xc_modern_hud:handhold_utils:handhold_base.amount_counter": {} },
-      { "item_counter_grid@xc_modern_hud:handhold_utils:handhold_base.counter_grid": {} }
+      {
+        "dura_viewer@xc_modern_hud:handhold_utils:handhold_base.dura_viewer": {}
+      },
+      {
+        "amount_counter@xc_modern_hud:handhold_utils:handhold_base.amount_counter": {}
+      },
+      {
+        "item_counter_grid@xc_modern_hud:handhold_utils:handhold_base.counter_grid": {}
+      }
     ],
     "bindings": [
       {
