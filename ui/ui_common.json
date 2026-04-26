@@ -47,7 +47,6 @@
       "@container:classic_animation.screen_alpha_enter",
       "@container:classic_animation.screen_alpha_out"
     ],
-    "$show_dusts": true,
     "$screen_transition_dura_push": 0.37,
     "$screen_transition_dura_pop": 0.37
   },
