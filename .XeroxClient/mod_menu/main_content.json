@@ -1,0 +1,159 @@
+{
+  "namespace": "xc_mod_menu",
+
+  "close_icon": {
+    "type": "image",
+    "texture": "textures/XeroxClient/arrow/left",
+    "anims": "$xeroxclient_button_hover_anims",
+    "$xeroxclient_button_hover_anims|default": [],
+    "animation_reset_name": "('button.xeroxClient.' + $pressed_button_name)",
+    "disable_anim_fast_forward": true,
+    "size": [16, 16]
+  },
+
+  "close_icon_default_alpha@common_buttons.default_alpha": {
+    "ignored": false,
+    "from": 0.7,
+    "to": 0.9
+  },
+
+  "close_icon_hover_alpha@common_buttons.hover_alpha": {
+    "ignored": false,
+    "to": 0.7,
+    "from": 0.9
+  },
+
+  "close_toggle@common.toggle": {
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [20, 20],
+    "$hover_anim_enabled": true,
+    "$pressed_button_name": "button.modMenuClose",
+    "$toggle_name": "t",
+    "$radio_toggle_group": true,
+    "$toggle_group_default_selected": 1,
+    "$toggle_group_forced_index": 1,
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_ok",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_exit",
+        "to_button_id": "button.menu_ok",
+        "mapping_type": "global"
+      },
+      {
+        "to_button_id": "('button.xeroxClient.' + $pressed_button_name)",
+        "mapping_type": "pressed"
+      }
+    ],
+    "controls": [
+      {
+        "checked@xc_mod_menu.close_icon": {
+          "$xeroxclient_button_hover_anims": [
+            "@xc_mod_menu.close_icon_default_alpha"
+          ]
+        }
+      },
+      {
+        "checked_hover@xc_mod_menu.close_icon": {
+          "$xeroxclient_button_hover_anims": [
+            "@xc_mod_menu.close_icon_hover_alpha"
+          ]
+        }
+      },
+      {
+        "unchecked@xc_mod_menu.close_icon": {
+          "$xeroxclient_button_hover_anims": [
+            "@xc_mod_menu.close_icon_default_alpha"
+          ]
+        }
+      },
+      {
+        "unchecked_hover@xc_mod_menu.close_icon": {
+          "$xeroxclient_button_hover_anims": [
+            "@xc_mod_menu.close_icon_hover_alpha"
+          ]
+        }
+      }
+    ]
+  },
+
+  "open_toggle@common.toggle": {
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "offset": [185, "-10%"],
+    "size": [30, 30],
+    "$pressed_button_name": "button.modMenuOpen",
+    "$toggle_name": "t",
+    "$radio_toggle_group": true,
+    "$toggle_group_default_selected": 1,
+    "$toggle_group_forced_index": 0,
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "mod_menu_open",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [],
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "double_pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "double_pressed"
+      }
+    ]
+  },
+
+  "main_content": {
+    "type": "screen",
+    "layer": 100,
+    "modal": true,
+    "controls": [
+      {
+        "main_menu_background": {
+          "type": "image",
+          "texture": "textures/XeroxClient/rounded_corner/all8x",
+          "alpha": 0.9,
+          "color": "$xeroxclient_ui_theme_menu_background_color",
+          "size": ["100% - 80px", "100% - 60px"],
+          "layer": 101,
+          "controls": [
+            {
+              "mod_menu_close@xc_mod_menu.close_toggle": {
+                "layer": 102
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "mod_menu_close",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  }
+}

@@ -173,7 +173,9 @@
       },
       {
         "camera_renderer@camera_renderer": {}
-      }
+      },
+      { "mod_menu_open@xc_mod_menu.open_toggle": {} },
+      { "mod_menu_content@xc_mod_menu.main_content": {} }
     ]
   },
 

@@ -13,7 +13,8 @@
     ],
     "variables": [],
     "$screen_content": "xc_modern_pause.main_content",
-    "$screen_bg_content": "xc_backgrounds.menu_background"
+    "$screen_bg_content": "common.empty_panel",
+    "force_render_below": true
   }
 }
 // ▒██   ██▒  ██████ ▒███████▒ ▄████▄

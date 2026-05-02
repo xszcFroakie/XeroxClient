@@ -48,6 +48,9 @@
     ".XeroxClient/hud_screen/tab_list.json",
     ".XeroxClient/hud_screen/text_panel.json",
 
+    ".XeroxClient/mod_menu/anims.json",
+    ".XeroxClient/mod_menu/main_content.json",
+
     ".XeroxClient/pause_screen/anims.json",
     ".XeroxClient/pause_screen/main_content.json",
 

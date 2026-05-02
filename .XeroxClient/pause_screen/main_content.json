@@ -76,9 +76,6 @@
     "$button_icon": "miscellaneous",
     "$hover_anim_enabled": true,
     "$pressed_button_name": "button.modMenuOpen",
-    "$toggle_name": "t",
-    "$radio_toggle_group": true,
-    "$toggle_group_default_selected": 1,
     "$toggle_group_forced_index": 0,
     "button_mappings": [
       {
@@ -123,6 +120,12 @@
         "unchecked_hover@common_buttons.shadow_diffusion_base": {
           "$xeroxclient_button_alpha": 0.7,
           "$xeroxclient_button_hover_anims": ["@common_buttons.hover_alpha_sd"]
+        }
+      },
+      {
+        "hover_tip@xc_modern_container:classic_common.custom_hover_text": {
+          "$hover_text": "xc.tip.press2x",
+          "$hover_text_bindings": []
         }
       }
     ]
@@ -339,10 +342,55 @@
 
   "main_content": {
     "type": "panel",
+    "$toggle_name": "t",
+    "$radio_toggle_group": true,
+    "$toggle_group_default_selected": 1,
     "controls": [
+      {
+        "close_toggle@common.toggle": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [40, 30],
+          "size": [20, 20],
+          "$pressed_button_name": "button.modMenuClose",
+          "$toggle_group_forced_index": 1,
+          "controls": [],
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.menu_select",
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.menu_ok",
+              "to_button_id": "button.menu_select",
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.menu_cancel",
+              "to_button_id": "button.menu_ok",
+              "mapping_type": "global"
+            },
+            {
+              "from_button_id": "button.menu_exit",
+              "to_button_id": "button.menu_ok",
+              "mapping_type": "global"
+            }
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "close_toggle",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
       {
         "fake_button@common.button": {
           // prevent focus on quit button when opening the pause screen
+          "$pressed_button_name": "button.fake",
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "size": [1, 1],
@@ -351,22 +399,37 @@
         }
       },
       {
-        "menu_background@xc_backgrounds.menu_background": {
-          "gradient_direction": "horizontal"
-        }
-      },
-      {
-        "left_panel@xc_modern_pause.left_panel": {
-          "animation_reset_name": "screen_animation_reset",
-          "anims": [
-            "@pause_animation.left_panel_enter_animation",
-            "@pause_animation.left_panel_enter_animation_pop",
-            "@pause_animation.left_panel_out_animation",
-            "@pause_animation.left_panel_out_animation_pop"
+        "main_menu": {
+          "type": "panel",
+          "controls": [
+            {
+              "menu_background@xc_backgrounds.menu_background": {
+                "gradient_direction": "horizontal"
+              }
+            },
+            {
+              "left_panel@xc_modern_pause.left_panel": {
+                "animation_reset_name": "screen_animation_reset",
+                "anims": [
+                  "@pause_animation.left_panel_enter_animation",
+                  "@pause_animation.left_panel_enter_animation_pop",
+                  "@pause_animation.left_panel_out_animation",
+                  "@pause_animation.left_panel_out_animation_pop"
+                ]
+              }
+            },
+            { "right_panel@xc_modern_pause.right_panel": {} }
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mod_menu",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
           ]
         }
-      },
-      { "right_panel@xc_modern_pause.right_panel": {} }
+      }
     ]
   }
 }
