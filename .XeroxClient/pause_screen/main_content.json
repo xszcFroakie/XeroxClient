@@ -3,38 +3,53 @@
 {
   "namespace": "xc_modern_pause",
 
-  "change_skin@common_buttons.a_rc_8x_text": {
-    "size": ["50%", 20],
+  "change_skin@common_buttons.shadow_diff": {
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "size": [30, 30],
     "$pressed_button_name": "button.to_profile_or_skins_screen",
-    "$button_text": "menu.skins"
+    "$button_text": "Skins",
+    "$button_icon": "profile"
   },
 
-  "return_to_game@common_buttons.a_rc_8x_text": {
-    "size": ["100%", 20],
+  "return_to_game@common_buttons.shadow_diff": {
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [30, 30],
     "$pressed_button_name": "button.menu_continue",
-    "$button_text": "menu.returnToGame"
+    "$button_text": "Resume",
+    "$button_icon": "play"
   },
 
-  "store@common_buttons.a_rc_8x_text": {
-    "size": ["50%", 20],
+  "store@common_buttons.shadow_diff": {
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "size": [30, 30],
     "$pressed_button_name": "button.menu_store",
-    "$button_text": "menu.store"
+    "$button_text": "Store",
+    "$button_icon": "store"
   },
 
-  "settings@common_buttons.a_rc_8x_text": {
-    "size": ["100%", 20],
+  "settings@common_buttons.shadow_diff": {
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_left",
+    "offset": [5, 0],
+    "size": [30, 30],
     "$pressed_button_name": "button.menu_settings",
-    "$button_text": "menu.settings"
+    "$button_text": "Settings",
+    "$button_icon": "settings"
   },
 
-  "quit@common_buttons.a_rc_8x_text": {
-    "$button_hover_tip": true,
-    "size": ["100%", 20],
+  "quit@common_buttons.shadow_diff": {
+    "anchor_from": "top_left",
+    "anchor_to": "center",
+    "size": [45, 45],
+    "offset": [-10, 0],
     "$pressed_button_name": "button.menu_quit",
-    "$button_text": "pauseScreen.quit",
-    "$xeroxclient_button_color_hover": [1.0, 0.333, 0.333],
-    "$xeroxclient_button_color_pressed": [1.0, 0.333, 0.333],
-    "clips_children": true,
+    "$icon_folder": "arrow/",
+    "$button_icon": "left2",
+    "$icon_color": [1.0, 0.95, 0.9],
+    "$button_hover_tip": true,
     "button_mappings": [
       {
         "from_button_id": "button.menu_select",
@@ -47,120 +62,179 @@
         "mapping_type": "double_pressed"
       },
       {
-        "ignored": "(not $hover_anim_enabled)",
-        "to_button_id": "('button.xeroxclient.' + $pressed_button_name)",
+        "to_button_id": "('button.xeroxClient.' + $pressed_button_name)",
         "mapping_type": "pressed"
       }
     ]
   },
 
-  "achievements@common_buttons.a_rc_8x_text": {
-    "size": ["50%", 20],
-    "$button_text": "menu.achievements",
+  "mod_menu@common.toggle": {
+    "anchor_from": "bottom_right",
+    "anchor_to": "bottom_right",
+    "size": [30, 30],
+    "$button_text": "Mod Menu",
+    "$button_icon": "miscellaneous",
+    "$hover_anim_enabled": true,
+    "$pressed_button_name": "button.modMenuOpen",
+    "$toggle_name": "t",
+    "$radio_toggle_group": true,
+    "$toggle_group_default_selected": 1,
+    "$toggle_group_forced_index": 0,
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "double_pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "double_pressed"
+      },
+      {
+        "to_button_id": "('button.xeroxClient.' + $pressed_button_name)",
+        "mapping_type": "pressed"
+      }
+    ],
+    "controls": [
+      {
+        "checked@common_buttons.shadow_diffusion_base": {
+          "$xeroxclient_button_alpha": 0.9,
+          "$xeroxclient_button_hover_anims": [
+            "@common_buttons.default_alpha_sd"
+          ]
+        }
+      },
+      {
+        "checked_hover@common_buttons.shadow_diffusion_base": {
+          "$xeroxclient_button_alpha": 0.7,
+          "$xeroxclient_button_hover_anims": ["@common_buttons.hover_alpha_sd"]
+        }
+      },
+      {
+        "unchecked@common_buttons.shadow_diffusion_base": {
+          "$xeroxclient_button_alpha": 0.9,
+          "$xeroxclient_button_hover_anims": [
+            "@common_buttons.default_alpha_sd"
+          ]
+        }
+      },
+      {
+        "unchecked_hover@common_buttons.shadow_diffusion_base": {
+          "$xeroxclient_button_alpha": 0.7,
+          "$xeroxclient_button_hover_anims": ["@common_buttons.hover_alpha_sd"]
+        }
+      }
+    ]
+  },
+
+  "achievements@common_buttons.shadow_diff": {
+    "anchor_from": "top_middle",
+    "anchor_to": "top_right",
+    "offset": [-5, 0],
+    "size": [30, 30],
+    "$button_text": "Achievements",
+    "$button_icon": "achievement",
     "$pressed_button_name": "button.menu_achievements"
   },
 
-  "take_screenshot@common_buttons.a_rc_8x_text": {
-    "size": ["50%", 20],
+  "social@common_buttons.shadow_diff": {
+    "anchor_from": "top_middle",
+    "anchor_to": "top_left",
+    "offset": [5, 0],
+    "size": [30, 30],
+    "$button_text": "Social",
+    "$button_icon": "multiplayer",
+    "$pressed_button_name": "button.friends_drawer"
+  },
+
+  "take_screenshot@common_buttons.shadow_diff": {
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_right",
+    "offset": [-5, 0],
+    "size": [30, 30],
     "$pressed_button_name": "button.screenshot",
     "$button_tts_header": "key.screenshot",
-    "$button_text": "key.screenshot",
+    "$button_text": "Screenshot",
+    "$button_icon": "camera",
     "sound_name": "random.screenshot",
     "sound_volume": 1.0,
     "sound_pitch": 1.0
   },
 
-  "main_buttons_panel": {
+  "left_panel": {
     "type": "stack_panel",
-    "size": [190, "100%c"],
+    "size": [150, "80%"],
+    "offset": [50, 0],
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
     "controls": [
-      { "resume@xc_modern_pause.return_to_game": {} },
-      { "settings@xc_modern_pause.settings": {} },
       {
-        "2button_stack_0": {
-          "type": "stack_panel",
-          "orientation": "horizontal",
-          "size": ["100%", "100%cm"],
+        "top_panel": {
+          "type": "panel",
+          "size": ["100%", 40],
           "controls": [
-            { "achievements@xc_modern_pause.achievements": {} },
-            { "store@xc_modern_pause.store": {} }
+            { "quit@xc_modern_pause.quit": {} },
+            {
+              "header": {
+                "type": "label",
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "text": "Game Menu",
+                "font_type": "$global_font_type",
+                "backup_font_type": "$global_font_type_backup",
+                "font_scale_factor": 4.0,
+                "offset": [15, 0],
+                "color": [1.0, 0.95, 0.9]
+              }
+            },
+            {
+              "subtext": {
+                "type": "label",
+                "text": "($ClientName + ' ' + $ClientVersion)",
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "size": ["default", "default"],
+                "font_type": "$global_font_type",
+                "backup_font_type": "$global_font_type_backup",
+                "alpha": 0.6,
+                "offset": [18, 0],
+                "color": [0.95, 0.9, 0.8]
+              }
+            }
           ]
         }
       },
       {
-        "2button_stack_1": {
-          "type": "stack_panel",
-          "orientation": "horizontal",
-          "size": ["100%", "100%cm"],
-          "controls": [
-            { "change_skin@xc_modern_pause.change_skin": {} },
-            { "take_screenshot@xc_modern_pause.take_screenshot": {} }
-          ]
-        }
-      },
-      { "quit@xc_modern_pause.quit": {} }
-    ]
-  },
-
-  "main_menu": {
-    "type": "image",
-    "texture": "textures/XeroxClient/rounded_corner/all8x",
-    "color": "$xeroxclient_ui_theme_menu_background_color",
-    "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
-    "layer": 10,
-    "size": [200, "100%cm + 5px"],
-    "anchor_to": "bottom_middle",
-    "offset": [0, 67.5],
-    "controls": [
-      {
-        "stack": {
-          "type": "stack_panel",
-          "anchor_from": "bottom_middle",
-          "anchor_to": "bottom_middle",
-          "offset": [0, -5],
-          "size": [190, "100%c"],
+        "middle_panel": {
+          "type": "panel",
+          "size": ["100%", "fill"],
           "controls": [
             {
-              "title": {
-                "type": "panel",
-                "size": ["100%", 30],
+              "text_panel": {
+                "type": "image",
+                "texture": "textures/XeroxClient/diffusion2",
+                "size": ["100%", 56],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "offset": [10, 10],
+                "clips_children": true,
+                "alpha": 0.3,
                 "controls": [
                   {
-                    "game_menu_text": {
+                    "diphyrambos": {
                       "type": "label",
-                      "text": "Game Menu",
-                      //"font_type": "HarmonyOS-Bold",
+                      "text": "Bacchum in remotis carmina rupibus.\nVidi docentem, credite posteri.\nNymphasque discentes et aures\nCapripedum Satyrorum acutas.\nEuhoe, recenti mens trepidat metu.\nPlenoque Bacchi pectore turbidum.\nLaetatur, Euhoe, parce Liber,\nParce gravi metuende thyrso.\nFas pervicācis est mihi Thyiadas.\nVinique fontem lactis et uberes.\nCantare rivos atque truncis.\nLapsa cavis iterare mella.\nFas et beatae coniugis additum.\nStellis honorem tectaque Penthei.\nDisiecta non leni ruina.\nThracis et exitium Lycurgī.\nTu flectis amnēs, tū mare barbarum.\nTu separatis uvidus in iugis.\nNodo coerces viperino.\nBistonidum sine fraude crīnēs.\nBistonidum sine fraude crīnēs.",
+                      "color": [0.75, 0.7, 0.6],
+                      "size": ["default", "default"],
                       "font_type": "$global_font_type",
                       "backup_font_type": "$global_font_type_backup",
-                      "text_alignment": "center",
-                      "font_scale_factor": 1.25
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "main_buttons_panel@xc_modern_pause.main_buttons_panel": {
-                "layer": 1
-              }
-            },
-            {
-              "player_list_panel": {
-                "type": "panel",
-                "$ignored_default_anims": true,
-                "size": ["100%", 0],
-                "animation_reset_name": "button.player_list_close",
-                "anims": ["@pasue_animation.player_list_open"],
-                "clips_children": true,
-                "controls": [
-                  {
-                    "player_list@xc_modern_pause:player_list.player_list_panel_content": {
-                      "size": ["100%", 0],
-                      "anchor_from": "bottom_middle",
-                      "anchor_to": "bottom_middle",
-                      "animation_reset_name": "button.player_list_open",
-                      "anims": ["@pasue_animation.player_list_close"],
-                      "clips_children": true
+                      "font_scale_factor": 0.8,
+                      "alpha": 0.7,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "disable_anim_fast_forward": true,
+                      "offset": "@pause_animation.diphyrambos_loop_0"
                     }
                   }
                 ]
@@ -170,36 +244,93 @@
         }
       },
       {
-        "open_player_list@common_buttons.a_rc_8x_text": {
-          "$button_hover_tip": true,
-          "size": ["90%", 20],
-          "$pressed_button_name": "button.player_list_open",
-          "$button_text": "key.playerlist",
-          "anchor_from": "bottom_middle",
-          "anchor_to": "top_middle",
-          "offset": [0, 1],
-          "clips_children": true,
-          "animation_reset_name": "button.player_list_close",
-          "anims": [
-            "@pasue_animation.player_list_open_button_show",
-            "@pasue_animation.player_list_open_button_hide"
+        "bottom_panel": {
+          "type": "panel",
+          "size": ["100%", 65],
+          "$icon_color": [1.0, 0.95, 0.9],
+          "$text_color": [0.9, 0.85, 0.8],
+          "controls": [
+            {
+              "button_panel": {
+                "type": "panel",
+                "offset": [15, 0],
+                "controls": [
+                  { "resume@xc_modern_pause.return_to_game": {} },
+                  { "achievements@xc_modern_pause.achievements": {} },
+                  { "social@xc_modern_pause.social": {} },
+                  { "change_skin@xc_modern_pause.change_skin": {} },
+                  { "store@xc_modern_pause.store": {} },
+                  { "take_screenshot@xc_modern_pause.take_screenshot": {} },
+                  { "settings@xc_modern_pause.settings": {} },
+                  { "mod_menu@xc_modern_pause.mod_menu": {} }
+                ]
+              }
+            }
           ]
         }
-      },
+      }
+    ]
+  },
+
+  "right_panel": {
+    "type": "panel",
+    "size": ["30%", "100%"],
+    "offset": ["-15%", 0],
+    "anchor_from": "right_middle",
+    "anchor_to": "right_middle",
+    "controls": [
       {
-        "close_player_list@common_buttons.a_rc_8x_text": {
-          "$button_hover_tip": true,
-          "size": [0, 0],
-          "$pressed_button_name": "button.player_list_close",
-          "$button_text": "gui.close",
-          "anchor_from": "bottom_middle",
-          "anchor_to": "top_middle",
-          "offset": [0, 1],
-          "clips_children": true,
-          "animation_reset_name": "button.player_list_open",
+        "paper_doll_panel": {
+          "type": "input_panel",
+          "offset": [0, -10],
+          "gesture_tracking_button": "button.turn_doll",
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.turn_doll",
+              "mapping_type": "pressed",
+              "button_up_right_of_first_refusal": true
+            }
+          ],
+          "animation_reset_name": "screen_animation_reset",
           "anims": [
-            "@pasue_animation.player_list_close_button_show",
-            "@pasue_animation.player_list_close_button_hide"
+            "@pause_animation.paper_doll_enter_animation",
+            "@pause_animation.paper_doll_enter_animation_pop",
+            "@pause_animation.paper_doll_out_animation",
+            "@pause_animation.paper_doll_out_animation_pop"
+          ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "controls": [
+            {
+              "paper_doll": {
+                "type": "custom",
+                "renderer": "paper_doll_renderer",
+                "camera_tilt_degrees": -10,
+                "starting_rotation": 30,
+                "layer": 2,
+                "rotation": "gesture_x",
+                "size": ["100%y", "100%"],
+                "use_selected_skin": false,
+                "bindings": [
+                  {
+                    "binding_name": "#paper_doll_skin"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "paper_doll_panel",
+                    "source_property_name": "#gesture_delta_source",
+                    "target_property_name": "#gesture_delta_source"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "paper_doll_panel",
+                    "source_property_name": "#gesture_mouse_delta_x",
+                    "target_property_name": "#gesture_mouse_delta_x"
+                  }
+                ]
+              }
+            }
           ]
         }
       }
@@ -208,19 +339,35 @@
 
   "main_content": {
     "type": "panel",
-    "propagate_alpha": true,
-    "animation_reset_name": "screen_animation_reset",
-    "anims": [
-      "@pasue_animation.main_menu_alpha_out_animation",
-      "@pasue_animation.main_menu_alpha_out_animation_pop",
-      "@pasue_animation.main_menu_alpha_enter_animation",
-      "@pasue_animation.main_menu_alpha_enter_animation_pop",
-      "@pasue_animation.main_menu_offset_out_animation",
-      "@pasue_animation.main_menu_offset_out_animation_pop",
-      "@pasue_animation.main_menu_offset_enter_animation",
-      "@pasue_animation.main_menu_offset_enter_animation_pop"
-    ],
-    "controls": [{ "main_menu@xc_modern_pause.main_menu": {} }]
+    "controls": [
+      {
+        "fake_button@common.button": {
+          // prevent focus on quit button when opening the pause screen
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "size": [1, 1],
+          "sound_volume": 0.0,
+          "sound_pitch": 0.0
+        }
+      },
+      {
+        "menu_background@xc_backgrounds.menu_background": {
+          "gradient_direction": "horizontal"
+        }
+      },
+      {
+        "left_panel@xc_modern_pause.left_panel": {
+          "animation_reset_name": "screen_animation_reset",
+          "anims": [
+            "@pause_animation.left_panel_enter_animation",
+            "@pause_animation.left_panel_enter_animation_pop",
+            "@pause_animation.left_panel_out_animation",
+            "@pause_animation.left_panel_out_animation_pop"
+          ]
+        }
+      },
+      { "right_panel@xc_modern_pause.right_panel": {} }
+    ]
   }
 }
 // ▒██   ██▒  ██████ ▒███████▒ ▄████▄

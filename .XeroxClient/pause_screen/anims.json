@@ -1,155 +1,136 @@
 // File made by @XSzC.
-// Secondary distribution must follow the GPL-3.0-only Protocol!!
+// Secondary distribution must follow the GPL-8.0-only Protocol!!
 
 {
-  "namespace": "pasue_animation",
+  "namespace": "pause_animation",
 
-  //--------------------------
+  // diphyrambos scrolling loop
 
-  "main_menu_alpha_out_animation": {
-    "anim_type": "alpha",
+  "diphyrambos_loop_0": {
+    "anim_type": "wait",
+    "duration": 8,
+    "next": "@pause_animation.diphyrambos_loop_1"
+  },
+
+  "diphyrambos_loop_1": {
+    "anim_type": "offset",
+    "from": [0, 0],
+    "to": [0, -56],
+    "easing": "in_out_cubic",
+    "duration": 1.3,
+    "next": "@pause_animation.diphyrambos_loop_2"
+  },
+
+  "diphyrambos_loop_2": {
+    "anim_type": "wait",
+    "duration": 8,
+    "next": "@pause_animation.diphyrambos_loop_8"
+  },
+
+  "diphyrambos_loop_8": {
+    "anim_type": "offset",
+    "from": [0, -56],
+    "to": [0, -112],
+    "easing": "in_out_cubic",
+    "duration": 1.3,
+    "next": "@pause_animation.diphyrambos_loop_4"
+  },
+
+  "diphyrambos_loop_4": {
+    "anim_type": "wait",
+    "duration": 8,
+    "next": "@pause_animation.diphyrambos_loop_5"
+  },
+
+  "diphyrambos_loop_5": {
+    "anim_type": "offset",
+    "from": [0, -112],
+    "to": [0, 0],
+    "easing": "in_out_cubic",
+    "duration": 1.3,
+    "next": "@pause_animation.diphyrambos_loop_0"
+  },
+
+  // main menu animations
+
+  "left_panel_out_animation": {
+    "anim_type": "offset",
     "easing": "out_cubic",
-    "duration": 0.4,
-    "to": -0.25,
-    "from": 1.0,
+    "duration": 0.2,
+    "to": [30, 0],
+    "from": [50, 0],
     "play_event": "screen.exit_push",
     "end_event": "screen.exit_end"
   },
 
-  "main_menu_alpha_out_animation_pop": {
-    "anim_type": "alpha",
+  "left_panel_out_animation_pop": {
+    "anim_type": "offset",
     "easing": "out_cubic",
-    "duration": 0.4,
-    "to": -0.25,
-    "from": 1.0,
+    "duration": 0.2,
+    "to": [30, 0],
+    "from": [50, 0],
     "play_event": "screen.exit_pop",
     "end_event": "screen.exit_end"
   },
 
-  "main_menu_alpha_enter_animation": {
-    "anim_type": "alpha",
+  "left_panel_enter_animation": {
+    "anim_type": "offset",
     "easing": "out_cubic",
-    "duration": 0.4,
-    "from": -0.25,
-    "to": 1.0,
+    "duration": 0.2,
+    "from": [30, 0],
+    "to": [50, 0],
     "play_event": "screen.entrance_push",
     "end_event": "screen.entrance_end"
   },
 
-  "main_menu_alpha_enter_animation_pop": {
-    "anim_type": "alpha",
+  "left_panel_enter_animation_pop": {
+    "anim_type": "offset",
     "easing": "out_cubic",
-    "duration": 0.4,
-    "from": -0.25,
-    "to": 1.0,
+    "duration": 0.2,
+    "from": [30, 0],
+    "to": [50, 0],
     "play_event": "screen.entrance_pop",
     "end_event": "screen.entrance_end"
   },
 
-  "main_menu_offset_out_animation": {
-    "anim_type": "offset",
-    "easing": "out_cubic",
-    "duration": 0.4,
-    "to": [0, "-5%"],
-    "from": [0, 0],
+  "paper_doll_out_animation": {
+    "anim_type": "size",
+    "easing": "out_quad",
+    "duration": 0.2,
+    "to": ["30%", 0],
+    "from": ["30%", "100%"],
     "play_event": "screen.exit_push",
     "end_event": "screen.exit_end"
   },
 
-  "main_menu_offset_out_animation_pop": {
-    "anim_type": "offset",
-    "easing": "out_cubic",
-    "duration": 0.4,
-    "to": [0, "-5%"],
-    "from": [0, 0],
+  "paper_doll_out_animation_pop": {
+    "anim_type": "size",
+    "easing": "out_quad",
+    "duration": 0.2,
+    "to": ["30%", 0],
+    "from": ["30%", "100%"],
     "play_event": "screen.exit_pop",
     "end_event": "screen.exit_end"
   },
 
-  "main_menu_offset_enter_animation": {
-    "anim_type": "offset",
-    "easing": "out_cubic",
-    "duration": 0.4,
-    "from": [0, "-5%"],
-    "to": [0, 0],
+  "paper_doll_enter_animation": {
+    "anim_type": "size",
+    "easing": "out_quad",
+    "duration": 0.2,
+    "from": ["30%", 0],
+    "to": ["30%", "100%"],
     "play_event": "screen.entrance_push",
     "end_event": "screen.entrance_end"
   },
 
-  "main_menu_offset_enter_animation_pop": {
-    "anim_type": "offset",
-    "easing": "out_cubic",
-    "duration": 0.4,
-    "from": [0, "-5%"],
-    "to": [0, 0],
+  "paper_doll_enter_animation_pop": {
+    "anim_type": "size",
+    "easing": "out_quad",
+    "duration": 0.2,
+    "from": ["30%", 0],
+    "to": ["30%", "100%"],
     "play_event": "screen.entrance_pop",
     "end_event": "screen.entrance_end"
-  },
-
-  //--------------------------
-
-  "player_list_reset0": {
-    "anim_type": "size",
-    "duration": 0.0,
-    "from": [190, 0],
-    "to": [190, 0]
-  },
-
-  "player_list_reset1": {
-    "anim_type": "size",
-    "duration": 0.0,
-    "from": [190, 210],
-    "to": [190, 210]
-  },
-
-  "player_list_open": {
-    "anim_type": "size",
-    "easing": "out_cubic",
-    "duration": 0.25,
-    "to": [190, 210],
-    "from": [190, 0],
-    "play_event": "button.player_list_open"
-  },
-
-  "player_list_close": {
-    "anim_type": "size",
-    "easing": "out_cubic",
-    "duration": 0.25,
-    "from": [190, 210],
-    "to": [190, 0],
-    "play_event": "button.player_list_close"
-  },
-
-  "player_list_open_button_show": {
-    "anim_type": "size",
-    "duration": 0.0,
-    "to": ["90%", 20],
-    "from": [0, 0],
-    "play_event": "button.player_list_close"
-  },
-
-  "player_list_close_button_show": {
-    "anim_type": "size",
-    "duration": 0.0,
-    "to": ["90%", 20],
-    "from": [0, 0],
-    "play_event": "button.player_list_open"
-  },
-
-  "player_list_open_button_hide": {
-    "anim_type": "size",
-    "duration": 0.0,
-    "to": [0, 0],
-    "from": ["90%", 20],
-    "play_event": "button.player_list_open"
-  },
-
-  "player_list_close_button_hide": {
-    "anim_type": "size",
-    "duration": 0.0,
-    "to": [0, 0],
-    "from": ["90%", 20],
-    "play_event": "button.player_list_close"
   }
 }
 // ▒██   ██▒  ██████ ▒███████▒ ▄████▄

@@ -50,7 +50,6 @@
 
     ".XeroxClient/pause_screen/anims.json",
     ".XeroxClient/pause_screen/main_content.json",
-    ".XeroxClient/pause_screen/player_list.json",
 
     ".XeroxClient/play_screen/anims.json",
     ".XeroxClient/play_screen/friends_page.json",
