@@ -94,11 +94,24 @@
     "$color": "$button_image_color",
     "$xeroxclient_button_alpha|default": 0.45,
     "$xeroxclient_button_color|default": [],
-    "variables": {
-      "requires": "$xeroxclient_ui_control",
-      "$alpha": "$xeroxclient_button_alpha",
-      "$color": "$xeroxclient_button_color"
-    },
+    "$custom_button_image|default": false,
+    "variables": [
+      {
+        "requires": "($xeroxclient_ui_control and (not $custom_button_image)",
+        "$alpha": "$xeroxclient_button_alpha",
+        "$color": "$xeroxclient_button_color"
+      },
+      {
+        "requires": "($xeroxclient_ui_control and $custom_button_image)",
+        "$alpha": 0,
+        "$color": [],
+        "$controls": "$custom_button_image_controls"
+      }
+    ],
+    "controls": "$controls",
+    "$controls|default": [],
+    "clips_children": "$custom_button_image_clips_children",
+    "$custom_button_image_clips_children|default": false,
     "anims": "$xeroxclient_button_hover_anims",
     "$xeroxclient_button_hover_anims|default": [],
     "animation_reset_name": "('button.xeroxClient.' + $pressed_button_name)",

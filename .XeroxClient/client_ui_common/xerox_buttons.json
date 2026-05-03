@@ -361,6 +361,7 @@
   "shadow_diffusion_base": {
     "type": "image",
     "texture": "textures/XeroxClient/diffusion2",
+    "color": "black",
     "size": ["100% + 10px", "100% + 10px"],
     "alpha": 0.4,
     "$ignored_default_anims": false,

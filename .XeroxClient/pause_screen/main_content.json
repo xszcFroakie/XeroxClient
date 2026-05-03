@@ -217,6 +217,7 @@
               "text_panel": {
                 "type": "image",
                 "texture": "textures/XeroxClient/diffusion2",
+                "color": "black",
                 "size": ["100%", 56],
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
@@ -350,7 +351,7 @@
         "close_toggle@common.toggle": {
           "anchor_from": "top_left",
           "anchor_to": "top_left",
-          "offset": [40, 30],
+          "offset": [45, 35],
           "size": [20, 20],
           "$pressed_button_name": "button.modMenuClose",
           "$toggle_group_forced_index": 1,

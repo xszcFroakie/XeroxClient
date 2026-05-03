@@ -27,6 +27,7 @@
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "size": [20, 20],
+    "offset": [5, 5],
     "$hover_anim_enabled": true,
     "$pressed_button_name": "button.modMenuClose",
     "$toggle_name": "t",
@@ -141,6 +142,47 @@
             {
               "mod_menu_close@xc_mod_menu.close_toggle": {
                 "layer": 102
+              }
+            },
+            {
+              "page_tab_panel": {
+                "type": "stack_panel",
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "max_size": ["100% - 30px", 20],
+                "size": [320, 20],
+                "orientation": "horizontal",
+                "offset": [25, 5],
+                "controls": [
+                  {
+                    "hud@xc_mod_menu:controls.page_tab": {
+                      "$toggle_view_binding_name": "hud_page",
+                      "$button_text": "HUD",
+                      "$toggle_group_forced_index": 0
+                    }
+                  },
+                  {
+                    "utils@xc_mod_menu:controls.page_tab": {
+                      "$toggle_view_binding_name": "utils_page",
+                      "$button_text": "Utils",
+                      "$toggle_group_forced_index": 1
+                    }
+                  },
+                  {
+                    "crosshair@xc_mod_menu:controls.page_tab": {
+                      "$toggle_view_binding_name": "crosshair_page",
+                      "$button_text": "Crosshair",
+                      "$toggle_group_forced_index": 2
+                    }
+                  },
+                  {
+                    "misc@xc_mod_menu:controls.page_tab": {
+                      "$toggle_view_binding_name": "misc_page",
+                      "$button_text": "Misc",
+                      "$toggle_group_forced_index": 3
+                    }
+                  }
+                ]
               }
             }
           ]

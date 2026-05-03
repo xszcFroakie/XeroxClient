@@ -1,0 +1,40 @@
+{
+  "namespace": "xc_mod_menu:controls",
+
+  "page_tab@common_toggles.a_rc_8x_text": {
+    "size": ["fill", 20],
+    "$xeroxclient_button_alpha_default": 0,
+    "$radio_toggle_group": true,
+    "$toggle_name": "mod_menu_page",
+    "$toggle_group_default_selected": 0,
+    "$button_font_scale_factor": 1.1,
+    "$button_image_size": ["100%", 14],
+    "$button_text_max_size": ["default", "default"],
+    "$custom_button_image": true,
+    "$custom_button_image_clips_children": true,
+    "$custom_button_image_controls": [
+      {
+        "glow": {
+          "type": "image",
+          "texture": "textures/XeroxClient/diffusion2",
+          "size": [40, 15],
+          "alpha": "($xeroxclient_button_alpha / 2)",
+          "color": "$xeroxclient_button_color",
+          "anchor_from": "bottom_middle",
+          "anchor_to": "center"
+        }
+      },
+      {
+        "line": {
+          "type": "image",
+          "texture": "textures/XeroxClient/diffusion",
+          "size": ["100% - 20px", 2],
+          "alpha": "$xeroxclient_button_alpha",
+          "color": "$xeroxclient_button_color",
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle"
+        }
+      }
+    ]
+  }
+}

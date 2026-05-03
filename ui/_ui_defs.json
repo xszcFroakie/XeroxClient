@@ -49,6 +49,7 @@
     ".XeroxClient/hud_screen/text_panel.json",
 
     ".XeroxClient/mod_menu/anims.json",
+    ".XeroxClient/mod_menu/common_controls.json",
     ".XeroxClient/mod_menu/main_content.json",
 
     ".XeroxClient/pause_screen/anims.json",
