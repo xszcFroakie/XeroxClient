@@ -55,7 +55,6 @@
                 "anchor_from": "bottom_left",
                 "anchor_to": "bottom_left",
                 "size": ["100%", "100%c"],
-                "offset": "@xc_modern_hud:chat_panel_animation.chat_offset_start_anim",
                 "controls": [
                   {
                     "chat_text@xc_modern_hud:chat_panel.chat_label": {

@@ -4,51 +4,32 @@
 {
   "namespace": "xc_modern_hud:chat_panel_animation",
 
-  "chat_offset_start_anim": {
-    "anim_type": "offset",
-    "ignored": true,
-    "easing": "out_expo",
-    "duration": 0.4,
-    "from": ["-70%", 0],
-    "to": [0, 0],
-    "next": "@xc_modern_hud:chat_panel_animation.chat_offset_wait_anim"
-  },
-  "chat_offset_wait_anim": {
-    "anim_type": "wait",
-    "duration": "($chat_item_lifetime - 0.6)",
-    "next": "@xc_modern_hud:chat_panel_animation.chat_offset_end_anim"
-  },
-  "chat_offset_end_anim": {
-    "anim_type": "offset",
-    "easing": "out_cubic",
-    "duration": 0.3,
-    "to": ["-50%", 0],
-    "from": [0, 0]
-  },
-
   "chat_start_anim": {
     "anim_type": "size",
-    "easing": "out_cubic",
-    "duration": 0.5,
+    "easing": "out_quad",
+    "duration": 0.3,
     "from": ["100%", "0%c"],
     "to": ["100%", "100%c"]
   },
+
   "chat_wait_anim_1": {
     "anim_type": "size",
-    "easing": "out_cubic",
-    "duration": 0.4,
+    "easing": "out_quad",
+    "duration": 0.3,
     "from": ["100%", "100%c"],
     "to": ["100%", "100%c"],
     "next": "@xc_modern_hud:chat_panel_animation.chat_wait_anim_2"
   },
+
   "chat_wait_anim_2": {
     "anim_type": "wait",
     "duration": "($chat_item_lifetime - 0.6)",
     "next": "@xc_modern_hud:chat_panel_animation.chat_end_anim"
   },
+
   "chat_end_anim": {
     "anim_type": "size",
-    "easing": "out_quart",
+    "easing": "out_quad",
     "duration": 0.3,
     "destroy_at_end": "xc_modern_hud:chat_panel_animation.chat_grid_item",
     "to": ["100%", "0%c"],
@@ -57,44 +38,48 @@
 
   "chat_bg_start_anim": {
     "anim_type": "alpha",
-    "duration": 0.4,
-    "from": 0,
+    "duration": 0.3,
+    "from": 0.0,
     "to": 1.0,
-    "easing": "out_cubic",
+    "easing": "out_quad",
     "next": "@xc_modern_hud:chat_panel_animation.chat_bg_wait_anim"
   },
+
   "chat_bg_wait_anim": {
     "anim_type": "wait",
     "duration": "($chat_item_lifetime - 0.6)",
     "next": "@xc_modern_hud:chat_panel_animation.chat_bg_end_anim"
   },
+
   "chat_bg_end_anim": {
     "anim_type": "alpha",
-    "easing": "out_cubic",
-    "duration": 0.2,
+    "easing": "out_quad",
+    "duration": 0.3,
     "from": 1.0,
-    "to": 0
+    "to": 0.0
   },
 
   "chat_text_start_anim": {
     "anim_type": "alpha",
-    "easing": "out_cubic",
+    "easing": "out_quad",
     "from": -0.025,
     "to": 1.0,
-    "duration": 0.4,
+    "duration": 0.3,
     "next": "@xc_modern_hud:chat_panel_animation.chat_text_wait_anim"
   },
+
   "chat_text_wait_anim": {
     "anim_type": "wait",
     "duration": "($chat_item_lifetime - 0.6)",
     "next": "@xc_modern_hud:chat_panel_animation.chat_text_end_anim"
   },
+
   "chat_text_end_anim": {
     "anim_type": "alpha",
-    "easing": "out_cubic",
-    "duration": 0.2,
+    "easing": "out_quad",
+    "duration": 0.3,
     "from": 1.0,
-    "to": -0.5
+    "to": -0.025
   }
 }
 // ▒██   ██▒  ██████ ▒███████▒ ▄████▄
