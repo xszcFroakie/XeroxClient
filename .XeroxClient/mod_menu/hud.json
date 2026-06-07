@@ -1,0 +1,269 @@
+// File made by @XSzC.
+// Secondary distribution must follow the GPL-3.0-only Protocol!!
+{
+  "namespace": "xc_mod_menu:hud_page",
+
+  "main_content@xc_modern_scrolling_panel.scrolling_panel": {
+    "size": ["100% - 2px", "100%"],
+    "$scrolling_content": "xc_mod_menu:hud_page.hud_mod_options",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "hud_page",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "hud_mod_options": {
+    "type": "stack_panel",
+    "size": ["100%", "100%c"],
+    "controls": [
+      {
+        "option_stack_0@xc_mod_menu:controls.option_stack": {
+          "controls": [
+            {
+              "1@xc_mod_menu:controls.option_toggle": {
+                "size": ["fill", "100%c"],
+                "$option_label": "xc.modMenu.options.hud.actionbar",
+                "$control_view_binding_name": "mod.actionbar",
+                "$toggle_default_state": "$hud.actionbar_text"
+              }
+            },
+            {
+              "2@xc_mod_menu:controls.option_toggle": {
+                "size": ["fill", "100%c"],
+                "$option_label": "xc.modMenu.options.hud.hudtip",
+                "$control_view_binding_name": "mod.hudtip",
+                "$toggle_default_state": "$hud.hud_tip_text"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "option_stack_1@xc_mod_menu:controls.option_stack": {
+          "controls": [
+            {
+              "1@xc_mod_menu:controls.option_toggle": {
+                "size": ["fill", "100%c"],
+                "$option_label": "xc.modMenu.options.hud.title",
+                "$control_view_binding_name": "mod.title",
+                "$toggle_default_state": "$hud.title_text"
+              }
+            },
+            {
+              "2@xc_mod_menu:controls.option_toggle": {
+                "size": ["fill", "100%c"],
+                "$option_label": "xc.modMenu.options.hud.subtitle",
+                "$control_view_binding_name": "mod.subtitle",
+                "$toggle_default_state": "$hud.subtitle_text"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "option_stack_2@xc_mod_menu:controls.option_stack": {
+          "controls": [
+            {
+              "1@xc_mod_menu:controls.option_toggle": {
+                "size": ["fill", "100%c"],
+                "$option_label": "xc.modMenu.options.hud.itemname",
+                "$control_view_binding_name": "mod.itemname",
+                "$toggle_default_state": "$hud.item_name_text"
+              }
+            },
+            {
+              "2@xc_mod_menu:controls.option_toggle": {
+                "size": ["fill", "100%c"],
+                "$option_label": "xc.modMenu.options.hud.jukebox",
+                "$control_view_binding_name": "mod.jukebox",
+                "$toggle_default_state": "$hud.jukebox_text"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "chat_panel@xc_mod_menu:controls.option_toggle": {
+          "$option_label": "xc.modMenu.options.hud.chatPanel",
+          "$control_view_binding_name": "mod.chat_panel",
+          "$toggle_default_state": "$hud.chat_panel"
+        }
+      },
+      {
+        "chat_panel_extra@xc_mod_menu:controls.option_extra_stack": {
+          "$source_control_name": "mod.chat_panel",
+          "$controls": [
+            {
+              "chat_panel_width@xc_mod_menu:controls.option_slider": {
+                "$option_label": "xc.modMenu.options.hud.chatPanelWidth",
+                "$control_view_binding_name": "mod.chat_panel.width",
+                "$slider_default_value": "$hud.chat_panel.width",
+                "$slider_property_bag": { "#slider_steps": 51 }
+              }
+            },
+            {
+              "chat_panel_height@xc_mod_menu:controls.option_slider": {
+                "$option_label": "xc.modMenu.options.hud.chatPanelHeight",
+                "$control_view_binding_name": "mod.chat_panel.height",
+                "$slider_default_value": "$hud.chat_panel.height"
+              }
+            },
+            {
+              "chat_panel_background_opacity@xc_mod_menu:controls.option_slider": {
+                "$option_label": "xc.modMenu.options.hud.chatPanelBackgroundOpacity",
+                "$control_view_binding_name": "mod.chat_panel.background_opacity",
+                "$slider_default_value": "$hud.chat_panel.background_opacity"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "paperdoll@xc_mod_menu:controls.option_radio_group_toggle": {
+          "$option_label": "xc.modMenu.options.hud.paperdoll",
+          "$control_view_binding_name": "mod.paperdoll",
+          "$radio_group_name": "mod.paperdoll.options",
+          "$toggle_group_default_selected": "$hud.paperdoll",
+          "$radio_buttons": [
+            {
+              "@xc_mod_menu:controls.radio_toggle": {
+                "$button_text": "xc.modMenu.options.hud.paperdoll.always",
+                "$toggle_group_forced_index": 0,
+                "$control_view_binding_name": "mod.paperdoll.off",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "mod.paperdoll.always",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "@xc_mod_menu:controls.radio_toggle": {
+                "$button_text": "xc.modMenu.options.hud.paperdoll.activeOnly",
+                "$toggle_group_forced_index": 1,
+                "$control_view_binding_name": "mod.paperdoll.always",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "mod.paperdoll.activeOnly",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "@xc_mod_menu:controls.radio_toggle": {
+                "$button_text": "xc.modMenu.options.off",
+                "$toggle_group_forced_index": 2,
+                "$control_view_binding_name": "mod.paperdoll.activeOnly",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "mod.paperdoll.off",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "paperdoll_extra@xc_mod_menu:controls.option_extra_stack": {
+          "$source_control_name": "mod.paperdoll.off",
+          "$source_property_name": "(not #toggle_state)",
+          "$controls": [
+            {
+              "paperdoll_x_offset@xc_mod_menu:controls.option_slider": {
+                "$option_label": "xc.modMenu.options.hud.paperdollxOffset",
+                "$control_view_binding_name": "mod.paperdoll.x_offset",
+                "$slider_default_value": "$hud.paperdoll.x_offset"
+              }
+            },
+            {
+              "paperdoll_y_offset@xc_mod_menu:controls.option_slider": {
+                "$option_label": "xc.modMenu.options.hud.paperdollyOffset",
+                "$control_view_binding_name": "mod.paperdoll.y_offset",
+                "$slider_default_value": "$hud.paperdoll.y_offset"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "coordinate@xc_mod_menu:controls.option_radio_group_toggle": {
+          "$option_label": "xc.modMenu.options.hud.coordinate",
+          "$control_view_binding_name": "mod.coordinate",
+          "$radio_group_name": "mod.coordinate.options",
+          "$toggle_group_default_selected": "$hud.coordinate",
+          "$radio_buttons": [
+            {
+              "@xc_mod_menu:controls.radio_toggle": {
+                "$button_text": "xc.modMenu.options.hud.coordinate.horizontal",
+                "$toggle_group_forced_index": 0,
+                "$control_view_binding_name": "mod.coordinate.off",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "mod.coordinate.horizontal",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "@xc_mod_menu:controls.radio_toggle": {
+                "$button_text": "xc.modMenu.options.hud.coordinate.vertical",
+                "$toggle_group_forced_index": 1,
+                "$control_view_binding_name": "mod.coordinate.horizontal",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "mod.coordinate.vertical",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "@xc_mod_menu:controls.radio_toggle": {
+                "$button_text": "xc.modMenu.options.off",
+                "$toggle_group_forced_index": 2,
+                "$control_view_binding_name": "mod.coordinate.vertical",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "mod.coordinate.off",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+// ▒██   ██▒  ██████ ▒███████▒ ▄████▄
+// ▒▒ █ █ ▒░▒██    ▒ ▒ ▒ ▒ ▄▀░▒██▀ ▀█
+// ░░  █   ░░ ▓██▄   ░ ▒ ▄▀▒░ ▒▓█    ▄
+//  ░ █ █ ▒   ▒   ██▒  ▄▀▒   ░▒▓▓▄ ▄██▒
+// ▒██▒ ▒██▒▒██████▒▒▒███████▒▒ ▓███▀ ░
+// ▒▒ ░ ░▓ ░▒ ▒▓▒ ▒ ░░▒▒ ▓░▒░▒░ ░▒ ▒  ░
+// ░░   ░▒ ░░ ░▒  ░ ░░░▒ ▒ ░ ▒  ░  ▒
+//  ░    ░  ░  ░  ░  ░ ░ ░ ░ ░░
+//  ░    ░        ░    ░ ░    ░ ░
+//                   ░        ░

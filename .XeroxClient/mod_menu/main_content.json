@@ -94,16 +94,16 @@
     ]
   },
 
-  "open_toggle@common.toggle": {
+  "open_toggle": {
     "anchor_from": "bottom_left",
     "anchor_to": "bottom_left",
     "offset": [185, "-10%"],
     "size": [30, 30],
-    "$pressed_button_name": "button.modMenuOpen",
-    "$toggle_name": "t",
-    "$radio_toggle_group": true,
-    "$toggle_group_default_selected": 1,
-    "$toggle_group_forced_index": 0,
+    "type": "toggle",
+    "toggle_group_default_selected": 1,
+    "toggle_name": "t",
+    "toggle_group_forced_index": 0,
+    "radio_toggle_group": true,
     "bindings": [
       {
         "binding_type": "view",
@@ -112,16 +112,15 @@
         "target_property_name": "#visible"
       }
     ],
-    "controls": [],
     "button_mappings": [
       {
         "from_button_id": "button.menu_select",
-        "to_button_id": "button.menu_select",
+        "to_button_id": "button.xeroxClient.modMenuOpen",
         "mapping_type": "double_pressed"
       },
       {
         "from_button_id": "button.menu_ok",
-        "to_button_id": "button.menu_select",
+        "to_button_id": "button.xeroxClient.modMenuOpen",
         "mapping_type": "double_pressed"
       }
     ]
@@ -133,55 +132,85 @@
     "modal": true,
     "controls": [
       {
-        "main_menu_background": {
+        "outline": {
           "type": "image",
-          "texture": "textures/XeroxClient/rounded_corner/all8x",
-          "alpha": 0.9,
-          "color": "$xeroxclient_ui_theme_menu_background_color",
+          "texture": "textures/XeroxClient/rounded_corner_border/all8x",
+          "alpha": "$xeroxclient_ui_theme_button_hover_alpha",
+          "color": "$xeroxclient_ui_theme_button_hover_color",
           "size": ["100% - 80px", "100% - 60px"],
-          "layer": 101,
+          "layer": 102,
+          // idk why it doesnt work. :(
+          //"propagate_alpha": true,
+          //"animation_reset_name": "button.xeroxClient.modMenuOpen",
+          //"anims": [
+          //  "@mod_menu_animation.mod_menu_enter_size_animation",
+          //  "@mod_menu_animation.mod_menu_enter_alpha_animation"
+          //],
           "controls": [
             {
-              "mod_menu_close@xc_mod_menu.close_toggle": {
-                "layer": 102
-              }
-            },
-            {
-              "page_tab_panel": {
-                "type": "stack_panel",
-                "anchor_from": "top_left",
-                "anchor_to": "top_left",
-                "max_size": ["100% - 30px", 20],
-                "size": [320, 20],
-                "orientation": "horizontal",
-                "offset": [25, 5],
+              "main_menu_background": {
+                "type": "image",
+                "texture": "textures/XeroxClient/rounded_corner/all8x",
+                "alpha": "$xeroxclient_ui_theme_menu_background_alpha",
+                "color": "$xeroxclient_ui_theme_menu_background_color",
+                "layer": 101,
                 "controls": [
                   {
-                    "hud@xc_mod_menu:controls.page_tab": {
-                      "$toggle_view_binding_name": "hud_page",
-                      "$button_text": "HUD",
-                      "$toggle_group_forced_index": 0
+                    "mod_menu_close@xc_mod_menu.close_toggle": {
+                      "layer": 102
                     }
                   },
                   {
-                    "utils@xc_mod_menu:controls.page_tab": {
-                      "$toggle_view_binding_name": "utils_page",
-                      "$button_text": "Utils",
-                      "$toggle_group_forced_index": 1
+                    "page_tab_panel": {
+                      "type": "stack_panel",
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "max_size": ["100% - 30px", 20],
+                      "size": [320, 20],
+                      "orientation": "horizontal",
+                      "offset": [25, 5],
+                      "controls": [
+                        {
+                          "hud@xc_mod_menu:controls.page_tab": {
+                            "$toggle_view_binding_name": "hud_page",
+                            "$button_text": "HUD",
+                            "$toggle_group_forced_index": 0
+                          }
+                        },
+                        {
+                          "utils@xc_mod_menu:controls.page_tab": {
+                            "$toggle_view_binding_name": "utils_page",
+                            "$button_text": "Utils",
+                            "$toggle_group_forced_index": 1
+                          }
+                        },
+                        {
+                          "crosshair@xc_mod_menu:controls.page_tab": {
+                            "$toggle_view_binding_name": "crosshair_page",
+                            "$button_text": "Crosshair",
+                            "$toggle_group_forced_index": 2
+                          }
+                        },
+                        {
+                          "misc@xc_mod_menu:controls.page_tab": {
+                            "$toggle_view_binding_name": "misc_page",
+                            "$button_text": "Misc",
+                            "$toggle_group_forced_index": 3
+                          }
+                        }
+                      ]
                     }
                   },
                   {
-                    "crosshair@xc_mod_menu:controls.page_tab": {
-                      "$toggle_view_binding_name": "crosshair_page",
-                      "$button_text": "Crosshair",
-                      "$toggle_group_forced_index": 2
-                    }
-                  },
-                  {
-                    "misc@xc_mod_menu:controls.page_tab": {
-                      "$toggle_view_binding_name": "misc_page",
-                      "$button_text": "Misc",
-                      "$toggle_group_forced_index": 3
+                    "page_content_panel@xc_mod_menu.cfg": {
+                      "type": "panel",
+                      "anchor_from": "bottom_middle",
+                      "anchor_to": "bottom_middle",
+                      "offset": [0, -5],
+                      "size": ["100% - 10px", "100% - 35px"],
+                      "controls": [
+                        { "hud@xc_mod_menu:hud_page.main_content": {} }
+                      ]
                     }
                   }
                 ]

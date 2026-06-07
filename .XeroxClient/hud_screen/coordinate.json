@@ -4,6 +4,17 @@
 {
   "namespace": "xc_modern_hud:coordinate",
 
+  "coordinate_text": {
+    "type": "label",
+    "font_type": "$hud_font_type_overlay",
+    "backup_font_type": "$global_font_type_backup",
+    "text": "#madebyxszc",
+    "shadow": true,
+    "layer": 2,
+    "size": ["default", "default"],
+    "enable_profanity_filter": false
+  },
+
   "coordinate": {
     "type": "panel",
     "layer": 1,
@@ -14,66 +25,78 @@
     "offset": [10, 10],
     "controls": [
       {
-        "coordinate_text": {
-          "type": "label",
-          "font_type": "$hud_font_type_overlay",
-          "backup_font_type": "$global_font_type_backup",
-          "text": "#madebyxszc",
-          "shadow": true,
-          "layer": 2,
-          "size": ["default", "default"],
-          "enable_profanity_filter": false,
+        "vertical@xc_modern_hud:coordinate.coordinate_text": {
           "bindings": [
             {
-              "binding_name": "#player_position_text",
-              "binding_name_override": "#coordinate_raw",
-              "binding_condition": "always_when_visible",
-              "binding_type": "global"
-            },
-            {
               "binding_type": "view",
-              "source_property_name": "(#coordinate_raw - '-1' - '-2' - '-3' - '-4' - '-5' - '-6' - '-7' - '-8' - '-9')",
-              "target_property_name": "#coordinate_processed_1"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "(#coordinate_processed_1 - '1' - '2' - '3' - '4' - '5' - '6' - '7' - '8' - '9' - '0')",
-              "target_property_name": "#coordinate_processed_2"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "((#coordinate_raw - ' ') - (#coordinate_processed_2 - ' ' - ':' - ','))",
-              "target_property_name": "#coordinate_no_prefix"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "(#coordinate_no_prefix - ':')",
-              "target_property_name": "#coordinate_x"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "(#coordinate_no_prefix - (':' + #coordinate_x + ','))",
-              "target_property_name": "#coordinate_y"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "(#coordinate_no_prefix - (':' + #coordinate_x + ',' + #coordinate_y + ','))",
-              "target_property_name": "#coordinate_z"
-            },
-            {
-              "binding_type": "view",
+              "source_control_name": "coordinate_mod",
               "source_property_name": "('X: ' + #coordinate_x + '\n' + 'Y: ' + #coordinate_y + '\n' + 'Z: ' + #coordinate_z)",
-              "target_property_name": "#madebyxszc",
-              "ignored": "(not $vertical_coordinate)"
+              "target_property_name": "#madebyxszc"
             },
             {
               "binding_type": "view",
-              "source_property_name": "('X: ' + #coordinate_x + ' ' + 'Y: ' + #coordinate_y + ' ' + 'Z: ' + #coordinate_z)",
-              "target_property_name": "#madebyxszc",
-              "ignored": "$vertical_coordinate"
+              "source_control_name": "mod.coordinate.vertical",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
             }
           ]
         }
+      },
+      {
+        "horizontal@xc_modern_hud:coordinate.coordinate_text": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "coordinate_mod",
+              "source_property_name": "('X: ' + #coordinate_x + ' ' + 'Y: ' + #coordinate_y + ' ' + 'Z: ' + #coordinate_z)",
+              "target_property_name": "#madebyxszc"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "mod.coordinate.horizontal",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#player_position_text",
+        "binding_name_override": "#coordinate_raw",
+        "binding_condition": "always_when_visible",
+        "binding_type": "global"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#coordinate_raw - '-1' - '-2' - '-3' - '-4' - '-5' - '-6' - '-7' - '-8' - '-9')",
+        "target_property_name": "#coordinate_processed_1"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#coordinate_processed_1 - '1' - '2' - '3' - '4' - '5' - '6' - '7' - '8' - '9' - '0')",
+        "target_property_name": "#coordinate_processed_2"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((#coordinate_raw - ' ') - (#coordinate_processed_2 - ' ' - ':' - ','))",
+        "target_property_name": "#coordinate_no_prefix"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#coordinate_no_prefix - ':')",
+        "target_property_name": "#coordinate_x"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#coordinate_no_prefix - (':' + #coordinate_x + ','))",
+        "target_property_name": "#coordinate_y"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#coordinate_no_prefix - (':' + #coordinate_x + ',' + #coordinate_y + ','))",
+        "target_property_name": "#coordinate_z"
       }
     ]
   }

@@ -220,6 +220,7 @@
         "ignore_input_scope": true
       }
     ],
+    "$ignore_locked_state|default": false,
     "controls": [
       {
         "slider_box@xc_modern_slider.slider_box": {
@@ -250,6 +251,7 @@
           "$slider_bar_background_color": "$xeroxclient_ui_theme_button_locked_color",
           "$slider_progress_alpha": "$xeroxclient_ui_theme_button_locked_alpha",
           "$slider_progress_color": "$xeroxclient_ui_theme_button_locked_color",
+          "ignored": "$ignore_locked_state",
           "bindings": [
             {
               "binding_type": "$slider_enabled_binding_type",

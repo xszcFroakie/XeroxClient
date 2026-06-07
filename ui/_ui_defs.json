@@ -50,7 +50,9 @@
 
     ".XeroxClient/mod_menu/anims.json",
     ".XeroxClient/mod_menu/common_controls.json",
+    ".XeroxClient/mod_menu/hud.json",
     ".XeroxClient/mod_menu/main_content.json",
+    ".XeroxClient/mod_menu/movable_mods.json",
 
     ".XeroxClient/pause_screen/anims.json",
     ".XeroxClient/pause_screen/main_content.json",
@@ -84,7 +86,7 @@
     ".XeroxClient/start_screen/main_content.json",
     ".XeroxClient/start_screen/top.json",
 
-    ".lib"
+    "!mod.config"
   ]
 }
 // ▒██   ██▒  ██████ ▒███████▒ ▄████▄

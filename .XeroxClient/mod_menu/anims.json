@@ -1,5 +1,26 @@
 // File made by @XSzC.
 // Secondary distribution must follow the GPL-3.0-only Protocol!!
+{
+  "namespcace": "mod_menu_animation",
+
+  "mod_menu_enter_size_animation": {
+    "anim_type": "size",
+    "easing": "out_quad",
+    "duration": 0.5,
+    "from": ["90% - 100px", "90% - 80px"],
+    "to": ["100% - 80px", "100% - 60px"],
+    "reset_event": "button.xeroxClient.modMenuOpen"
+  },
+
+  "mod_menu_enter_alpha_animation": {
+    "anim_type": "alpha",
+    "easing": "out_quad",
+    "duration": 0.5,
+    "from": 0.0,
+    "to": 1.0,
+    "reset_event": "button.xeroxClient.modMenuOpen"
+  }
+}
 // ▒██   ██▒  ██████ ▒███████▒ ▄████▄
 // ▒▒ █ █ ▒░▒██    ▒ ▒ ▒ ▒ ▄▀░▒██▀ ▀█
 // ░░  █   ░░ ▓██▄   ░ ▒ ▄▀▒░ ▒▓█    ▄

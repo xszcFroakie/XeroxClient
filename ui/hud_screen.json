@@ -38,6 +38,8 @@
         "array_name": "controls",
         "operation": "insert_front",
         "value": [
+          { "paperdoll@xc_mod_menu:movable_mods.paperdoll_mod": {} },
+          { "coordinate_mod@xc_modern_hud:coordinate.coordinate": {} },
           { "armor_hud@xc_modern_hud:modules.armor_hud": {} },
           {
             "redo_vanilla_hotbar@xc_modern_hud:hotbar:vanilla.hotbar_content": {}
@@ -52,17 +54,53 @@
             }
           },
           {
-            "coordinate@xc_modern_hud:coordinate.coordinate": {
-              "$vertical_coordinate|default": true
-            }
-          },
-          {
             "item_helper@xc_modern_hud:handhold_utils:handhold_base.item_helper": {}
           },
           { "tab_list@xc_modern_hud:tab_list.tab_list": {} },
           {
-            "chat_panel@xc_modern_hud:chat_panel.modern_chat_panel": {
-              "size": [160, "0px"]
+            "chat_panel_mod": {
+              "type": "panel",
+              "size": ["100%", "100% - 26px"],
+              "anchor_from": "top_left",
+              "anchor_to": "top_left",
+              "controls": [
+                {
+                  "chat_panel_content": {
+                    "type": "panel",
+                    "layer": 2,
+                    "anchor_from": "bottom_left",
+                    "anchor_to": "bottom_left",
+                    "size": [0, 0],
+                    "bindings": [
+                      {
+                        "binding_type": "view",
+                        "source_control_name": "mod.chat_panel",
+                        "source_property_name": "#toggle_state",
+                        "target_property_name": "#visible"
+                      },
+                      {
+                        "binding_type": "view",
+                        "source_control_name": "mod.chat_panel.width",
+                        "source_property_name": "(#slider_value / 100)",
+                        "target_property_name": "#size_binding_x"
+                      },
+                      {
+                        "binding_type": "view",
+                        "source_control_name": "mod.chat_panel.height",
+                        "source_property_name": "(#slider_value / 100)",
+                        "target_property_name": "#size_binding_y"
+                      }
+                    ],
+                    "controls": [
+                      {
+                        "chat_panel@xc_modern_hud:chat_panel.modern_chat_panel": {
+                          "size": ["100%", "0px"]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
             }
           }
         ]
@@ -175,7 +213,25 @@
         "camera_renderer@camera_renderer": {}
       },
       { "mod_menu_open@xc_mod_menu.open_toggle": {} },
-      { "mod_menu_content@xc_mod_menu.main_content": {} }
+      { "mod_menu_content@xc_mod_menu.main_content": {} },
+      {
+        "slider_config": {
+          "type": "slider",
+          "property_bag": {
+            "#slider_steps": 100,
+            "#slider_value": 0
+          },
+          "visible": false,
+          "size": [0, 0],
+          "slider_name": "xszc_mod_options_slider",
+          "bindings": [
+            {
+              "binding_name": "#slider_steps",
+              "binding_name_override": "#slider_steps"
+            }
+          ]
+        }
+      }
     ]
   },
 

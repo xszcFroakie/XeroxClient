@@ -8,14 +8,14 @@
     "type": "stack_panel",
     "anchor_to": "bottom_middle",
     "layer": 1,
+    "offset": [0, -15],
     "alpha": "@hud.anim_title_text_alpha_in",
     "propagate_alpha": true,
-    "offset": [0, -15],
     "controls": [
       {
         "title_frame": {
           "type": "panel",
-          "size": ["100%", "100%cm + 6px"],
+          "size": ["100%", 26],
           "controls": [
             {
               "title": {
@@ -34,6 +34,12 @@
                     "binding_name": "#hud_title_text_string",
                     "binding_name_override": "#text",
                     "binding_type": "global"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "mod.title",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
                   }
                 ]
               }
@@ -44,7 +50,7 @@
       {
         "subtitle_frame": {
           "type": "panel",
-          "size": ["100%", "100%cm + 5px"],
+          "size": ["100%", 15],
           "controls": [
             {
               "subtitle": {
@@ -73,6 +79,12 @@
                     "binding_name": "#hud_subtitle_text_string",
                     "binding_name_override": "#text",
                     "binding_type": "global"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "mod.subtitle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
                   }
                 ]
               }
@@ -150,13 +162,29 @@
   },
 
   "item_name_text@xc_modern_hud:texts.item_name_text_root": {
-    "offset": [0, -36]
+    "offset": [0, -36],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "mod.itemname",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
   },
 
   "jukebox_popup_text@xc_modern_hud:texts.item_name_text_root": {
     "$text_color": "$jukebox_text_color",
     "$text_binding": "#jukebox_text",
-    "offset": [0, -63]
+    "offset": [0, -63],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "mod.jukebox",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
   },
 
   "hud_actionbar_text": {
@@ -176,6 +204,14 @@
           "alpha": "@hud.anim_actionbar_text_alpha_out",
           "shadow": true
         }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "mod.actionbar",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
       }
     ]
   },
@@ -206,6 +242,14 @@
             }
           ]
         }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "mod.hudtip",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
       }
     ]
   }

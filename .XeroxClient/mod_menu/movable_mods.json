@@ -1,0 +1,117 @@
+// File made by @XSzC.
+// Secondary distribution must follow the GPL-3.0-only Protocol!!
+{
+  "namespace": "xc_mod_menu:movable_mods",
+
+  "movable_mod_control": {
+    "$control_x_size|default": [], // [100%-element_x, 100%]
+    "$control_y_size|default": [], // [100%, 100%-element_y]
+    "$x_filling_source_control_name|default": "heypixel.妖猫",
+    "$y_filling_source_control_name|default": "heypixel.孙政",
+    "$control_name|default": "深蓝互动.周剑",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "type": "stack_panel",
+    "size": "$control_y_size",
+    "$slider_value_max|default": 100,
+    "controls": [
+      {
+        "y_filling": {
+          "type": "panel",
+          "size": [0, 0],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "$y_filling_source_control_name",
+              "source_property_name": "(#slider_value / $slider_value_max)",
+              "target_property_name": "#size_binding_y"
+            }
+          ]
+        }
+      },
+      {
+        "x_area": {
+          "type": "stack_panel",
+          "size": "$control_x_size",
+          "orientation": "horizontal",
+          "controls": [
+            {
+              "x_filling": {
+                "type": "panel",
+                "size": [0, 0],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "$x_filling_source_control_name",
+                    "source_property_name": "(#slider_value / $slider_value_max)",
+                    "target_property_name": "#size_binding_x"
+                  }
+                ]
+              }
+            },
+            { "$control_name@$control_name": {} }
+          ]
+        }
+      }
+    ]
+  },
+
+  "paperdoll_mod@xc_mod_menu:movable_mods.movable_mod_control": {
+    "$control_x_size": ["100% - 20px", "100%"],
+    "$control_y_size": ["100%", "100% - 40px"],
+    "$x_filling_source_control_name": "mod.paperdoll.x_offset",
+    "$y_filling_source_control_name": "mod.paperdoll.y_offset",
+    "$control_name": "xc_mod_menu:movable_mods.paperdoll_element"
+  },
+
+  "paperdoll_element": {
+    "type": "panel",
+    "size": [20, 40],
+    "controls": [
+      {
+        "hud_player_renderer": {
+          "layer": -2,
+          "type": "custom",
+          "renderer": "hud_player_renderer",
+          "size": [20, 20],
+          "anchor_to": "bottom_middle",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mod.paperdoll.activeOnly",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "live_player_renderer": {
+          "layer": -2,
+          "type": "custom",
+          "renderer": "live_player_renderer",
+          "size": [20, 20],
+          "anchor_to": "bottom_middle",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mod.paperdoll.always",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+// ▒██   ██▒  ██████ ▒███████▒ ▄████▄
+// ▒▒ █ █ ▒░▒██    ▒ ▒ ▒ ▒ ▄▀░▒██▀ ▀█
+// ░░  █   ░░ ▓██▄   ░ ▒ ▄▀▒░ ▒▓█    ▄
+//  ░ █ █ ▒   ▒   ██▒  ▄▀▒   ░▒▓▓▄ ▄██▒
+// ▒██▒ ▒██▒▒██████▒▒▒███████▒▒ ▓███▀ ░
+// ▒▒ ░ ░▓ ░▒ ▒▓▒ ▒ ░░▒▒ ▓░▒░▒░ ░▒ ▒  ░
+// ░░   ░▒ ░░ ░▒  ░ ░░░▒ ▒ ░ ▒  ░  ▒
+//  ░    ░  ░  ░  ░  ░ ░ ░ ░ ░░
+//  ░    ░        ░    ░ ░    ░ ░
+//                   ░        ░

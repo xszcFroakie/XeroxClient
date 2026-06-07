@@ -50,7 +50,8 @@
           "controls": [
             {
               "chat_content": {
-                "type": "panel",
+                "type": "image",
+                "texture": "textures/XeroxClient/Black",
                 "layer": 1,
                 "anchor_from": "bottom_left",
                 "anchor_to": "bottom_left",
@@ -62,6 +63,14 @@
                       "anchor_to": "top_left",
                       "offset": [2, 0]
                     }
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "mod.chat_panel.background_opacity",
+                    "source_property_name": "(#slider_value / 100)",
+                    "target_property_name": "#alpha"
                   }
                 ]
               }
@@ -75,7 +84,7 @@
   "modern_chat_panel": {
     "type": "panel",
     "layer": 3,
-    "offset": [1, -26],
+    "offset": [1, 0],
     "anchor_from": "bottom_left",
     "anchor_to": "bottom_left",
     "controls": [
