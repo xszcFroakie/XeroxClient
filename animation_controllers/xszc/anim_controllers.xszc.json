@@ -10,7 +10,8 @@
         "load": {
           "animations": [
             { "mod.init": "q.is_in_ui || v.is_paperdoll" },
-            "mod.sharpness_particle"
+            "mod.sharpness_particle",
+            "mod.direction_hud"
           ]
         }
       }

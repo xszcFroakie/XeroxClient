@@ -34,28 +34,29 @@
         "a": "q.armor_color_slot(0, 3)"
       },
       "is_hurt_color": {
-        "r": "v.is_enchanted_helmet ? 0.4",
+        "r": "(q.armor_material_slot(0) == 1 || q.armor_material_slot(0) == 3) ? 0.4",
         "g": 0,
-        "b": "v.is_enchanted_helmet",
-        "a": "v.is_enchanted_helmet ? 0.3"
+        "b": "(q.armor_material_slot(0) == 1 || q.armor_material_slot(0) == 3)",
+        "a": "(q.armor_material_slot(0) == 1 || q.armor_material_slot(0) == 3) ? 0.3"
       },
       "on_fire_color": {
-        "r": "v.is_enchanted_helmet ? 0.4",
+        "r": "(q.armor_material_slot(0) == 1 || q.armor_material_slot(0) == 3) ? 0.4",
         "g": 0,
-        "b": "v.is_enchanted_helmet",
-        "a": "v.is_enchanted_helmet ? 0.3"
+        "b": "(q.armor_material_slot(0) == 1 || q.armor_material_slot(0) == 3)",
+        "a": "(q.armor_material_slot(0) == 1 || q.armor_material_slot(0) == 3) ? 0.3"
       },
       "overlay_color": {
-        "r": "v.is_enchanted_helmet ? 0.4",
+        "r": "(q.armor_material_slot(0) == 1 || q.armor_material_slot(0) == 3) ? 0.4",
         "g": 0,
-        "b": "v.is_enchanted_helmet",
-        "a": "v.is_enchanted_helmet ? 0.3"
+        "b": "(q.armor_material_slot(0) == 1 || q.armor_material_slot(0) == 3)",
+        "a": "(q.armor_material_slot(0) == 1 || q.armor_material_slot(0) == 3) ? 0.3"
       },
-      "light_color_multiplier": "v.is_enchanted_helmet ? 0.05 * -math.cos(q.life_time * 500.0) + 1.5 : 1.25",
+      "light_color_multiplier": "(q.armor_material_slot(0) == 1 || q.armor_material_slot(0) == 3) ? 0.05 * -math.cos(q.life_time * 500.0) + 1.5 : 1.25",
       "ignore_lighting": true,
       "filter_lighting": true,
       "part_visibility": [{ "*": "q.is_on_screen" }]
     },
+
     "controller.render.hud_chestplate": {
       "arrays": {
         "textures": {
@@ -83,28 +84,29 @@
         "a": "q.armor_color_slot(1, 3)"
       },
       "is_hurt_color": {
-        "r": "v.is_enchanted_chestplate ? 0.4",
+        "r": "(q.armor_material_slot(1) == 1 || q.armor_material_slot(1) == 3) ? 0.4",
         "g": 0,
-        "b": "v.is_enchanted_chestplate",
-        "a": "v.is_enchanted_chestplate ? 0.3"
+        "b": "(q.armor_material_slot(1) == 1 || q.armor_material_slot(1) == 3)",
+        "a": "(q.armor_material_slot(1) == 1 || q.armor_material_slot(1) == 3) ? 0.3"
       },
       "on_fire_color": {
-        "r": "v.is_enchanted_chestplate ? 0.4",
+        "r": "(q.armor_material_slot(1) == 1 || q.armor_material_slot(1) == 3) ? 0.4",
         "g": 0,
-        "b": "v.is_enchanted_chestplate",
-        "a": "v.is_enchanted_chestplate ? 0.3"
+        "b": "(q.armor_material_slot(1) == 1 || q.armor_material_slot(1) == 3)",
+        "a": "(q.armor_material_slot(1) == 1 || q.armor_material_slot(1) == 3) ? 0.3"
       },
       "overlay_color": {
-        "r": "v.is_enchanted_chestplate ? 0.4",
+        "r": "(q.armor_material_slot(1) == 1 || q.armor_material_slot(1) == 3) ? 0.4",
         "g": 0,
-        "b": "v.is_enchanted_chestplate",
-        "a": "v.is_enchanted_chestplate ? 0.3"
+        "b": "(q.armor_material_slot(1) == 1 || q.armor_material_slot(1) == 3)",
+        "a": "(q.armor_material_slot(1) == 1 || q.armor_material_slot(1) == 3) ? 0.3"
       },
-      "light_color_multiplier": "v.is_enchanted_chestplate ? 0.05 * -math.cos(q.life_time * 500.0) + 1.5 : 1.25",
+      "light_color_multiplier": "(q.armor_material_slot(1) == 1 || q.armor_material_slot(1) == 3) ? 0.05 * -math.cos(q.life_time * 500.0) + 1.5 : 1.25",
       "ignore_lighting": true,
       "filter_lighting": true,
       "part_visibility": [{ "*": "q.is_on_screen" }]
     },
+
     "controller.render.hud_leggings": {
       "arrays": {
         "textures": {
@@ -132,28 +134,29 @@
         "a": "q.armor_color_slot(2, 3)"
       },
       "is_hurt_color": {
-        "r": "v.is_enchanted_leggings ? 0.4",
+        "r": "(q.armor_material_slot(2) == 1 || q.armor_material_slot(2) == 3) ? 0.4",
         "g": 0,
-        "b": "v.is_enchanted_leggings",
-        "a": "v.is_enchanted_leggings ? 0.3"
+        "b": "(q.armor_material_slot(2) == 1 || q.armor_material_slot(2) == 3)",
+        "a": "(q.armor_material_slot(2) == 1 || q.armor_material_slot(2) == 3) ? 0.3"
       },
       "on_fire_color": {
-        "r": "v.is_enchanted_leggings ? 0.4",
+        "r": "(q.armor_material_slot(2) == 1 || q.armor_material_slot(2) == 3) ? 0.4",
         "g": 0,
-        "b": "v.is_enchanted_leggings",
-        "a": "v.is_enchanted_leggings ? 0.3"
+        "b": "(q.armor_material_slot(2) == 1 || q.armor_material_slot(2) == 3)",
+        "a": "(q.armor_material_slot(2) == 1 || q.armor_material_slot(2) == 3) ? 0.3"
       },
       "overlay_color": {
-        "r": "v.is_enchanted_leggings ? 0.4",
+        "r": "(q.armor_material_slot(2) == 1 || q.armor_material_slot(2) == 3) ? 0.4",
         "g": 0,
-        "b": "v.is_enchanted_leggings",
-        "a": "v.is_enchanted_leggings ? 0.3"
+        "b": "(q.armor_material_slot(2) == 1 || q.armor_material_slot(2) == 3)",
+        "a": "(q.armor_material_slot(2) == 1 || q.armor_material_slot(2) == 3) ? 0.3"
       },
-      "light_color_multiplier": "v.is_enchanted_leggings ? 0.05 * -math.cos(q.life_time * 500.0) + 1.5 : 1.25",
+      "light_color_multiplier": "(q.armor_material_slot(2) == 1 || q.armor_material_slot(2) == 3) ? 0.05 * -math.cos(q.life_time * 500.0) + 1.5 : 1.25",
       "ignore_lighting": true,
       "filter_lighting": true,
       "part_visibility": [{ "*": "q.is_on_screen" }]
     },
+
     "controller.render.hud_boots": {
       "arrays": {
         "textures": {
@@ -181,28 +184,113 @@
         "a": "q.armor_color_slot(3, 3)"
       },
       "is_hurt_color": {
-        "r": "v.is_enchanted_boots ? 0.4",
+        "r": "(q.armor_material_slot(3) == 1 || q.armor_material_slot(3) == 3) ? 0.4",
         "g": 0,
-        "b": "v.is_enchanted_boots",
-        "a": "v.is_enchanted_boots ? 0.3"
+        "b": "(q.armor_material_slot(3) == 1 || q.armor_material_slot(3) == 3)",
+        "a": "(q.armor_material_slot(3) == 1 || q.armor_material_slot(3) == 3) ? 0.3"
       },
       "on_fire_color": {
-        "r": "v.is_enchanted_boots ? 0.4",
+        "r": "(q.armor_material_slot(3) == 1 || q.armor_material_slot(3) == 3) ? 0.4",
         "g": 0,
-        "b": "v.is_enchanted_boots",
-        "a": "v.is_enchanted_boots ? 0.3"
+        "b": "(q.armor_material_slot(3) == 1 || q.armor_material_slot(3) == 3)",
+        "a": "(q.armor_material_slot(3) == 1 || q.armor_material_slot(3) == 3) ? 0.3"
       },
       "overlay_color": {
-        "r": "v.is_enchanted_boots ? 0.4",
+        "r": "(q.armor_material_slot(3) == 1 || q.armor_material_slot(3) == 3) ? 0.4",
         "g": 0,
-        "b": "v.is_enchanted_boots",
-        "a": "v.is_enchanted_boots ? 0.3"
+        "b": "(q.armor_material_slot(3) == 1 || q.armor_material_slot(3) == 3)",
+        "a": "(q.armor_material_slot(3) == 1 || q.armor_material_slot(3) == 3) ? 0.3"
       },
-      "light_color_multiplier": "v.is_enchanted_boots ? 0.05 * -math.cos(q.life_time * 500.0) + 1.5 : 1.25",
+      "light_color_multiplier": "(q.armor_material_slot(3) == 1 || q.armor_material_slot(3) == 3) ? 0.05 * -math.cos(q.life_time * 500.0) + 1.5 : 1.25",
       "ignore_lighting": true,
       "filter_lighting": true,
       "part_visibility": [{ "*": "q.is_on_screen" }]
     },
+
+    "controller.render.direction_hud": {
+      "geometry": "Geometry.direction_hud",
+      "materials": [{ "*": "Material.blend" }],
+      "textures": ["Texture.direction_hud"],
+      "ignore_lighting": true,
+      "filter_lighting": true,
+      "light_color_multiplier": 1.25
+    },
+
+    "controller.render.direction_yaw_ones": {
+      "arrays": {
+        "textures": {
+          "array.texture": [
+            "texture.zero",
+            "texture.one",
+            "texture.two",
+            "texture.three",
+            "texture.four",
+            "texture.five",
+            "texture.six",
+            "texture.seven",
+            "texture.eight",
+            "texture.nine"
+          ]
+        }
+      },
+      "geometry": "Geometry.direction_yaw_ones",
+      "materials": [{ "*": "Material.blend" }],
+      "textures": [
+        "t.direc_ones = math.mod(v.yaw_fixed, 10); return array.texture[t.direc_ones];"
+      ],
+      "ignore_lighting": true,
+      "filter_lighting": true,
+      "light_color_multiplier": 1.25
+    },
+
+    "controller.render.direction_yaw_tens": {
+      "arrays": {
+        "textures": {
+          "array.texture": [
+            "texture.zero",
+            "texture.one",
+            "texture.two",
+            "texture.three",
+            "texture.four",
+            "texture.five",
+            "texture.six",
+            "texture.seven",
+            "texture.eight",
+            "texture.nine"
+          ]
+        }
+      },
+      "geometry": "Geometry.direction_yaw_tens",
+      "materials": [{ "*": "Material.blend" }],
+      "textures": [
+        "t.direc_tens = math.mod(v.yaw_fixed/10, 10); return array.texture[t.direc_tens];"
+      ],
+      "ignore_lighting": true,
+      "filter_lighting": true,
+      "light_color_multiplier": 1.25
+    },
+
+    "controller.render.direction_yaw_hundreds": {
+      "arrays": {
+        "textures": {
+          "array.texture": [
+            "texture.zero",
+            "texture.one",
+            "texture.two",
+            "texture.three"
+          ]
+        }
+      },
+      "geometry": "Geometry.direction_yaw_hundreds",
+      "materials": [{ "*": "Material.blend" }],
+      "textures": [
+        "t.direc_hundreds = math.mod(v.yaw_fixed/100, 10); return array.texture[t.direc_hundreds];"
+      ],
+      "ignore_lighting": true,
+      "filter_lighting": true,
+      "light_color_multiplier": 1.25
+    },
+
     "controller.render.player.cape": {
       "geometry": "q.is_emoting ? Geometry.cape_emote : Geometry.cape",
       "materials": [{ "*": "Material.default" }],
@@ -210,6 +298,7 @@
       "is_hurt_color": {},
       "on_fire_color": {}
     },
+
     "controller.render.particle": {
       "geometry": "Geometry.p_locator",
       "materials": [{ "*": "Material.default" }],

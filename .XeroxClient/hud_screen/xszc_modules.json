@@ -37,6 +37,55 @@
         "binding_name_override": "#visible"
       }
     ]
+  },
+
+  "direction_hud": {
+    "type": "stack_panel",
+    "size": [340, "100%c"],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      {
+        "filling": {
+          "type": "panel",
+          "size": [0, 20],
+          "bindings": [
+            {
+              "binding_type": "global",
+              "binding_name": "#inventory_touch_button",
+              "binding_name_override": "#visible",
+              "binding_condition": "always"
+            }
+          ]
+        }
+      },
+      {
+        "renderer": {
+          "type": "panel",
+          "size": [340, 47.5],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "controls": [
+            {
+              "direction_pointer": {
+                "type": "label",
+                "text": "▼",
+                "font_scale_factor": 1.2,
+                "offset": [0.5, -7]
+              }
+            },
+            {
+              "direction_hud_renderer": {
+                "type": "custom",
+                "renderer": "paper_doll_renderer",
+                "size": [40, 40],
+                "offset": [0, 1022.5]
+              }
+            }
+          ]
+        }
+      }
+    ]
   }
 }
 // ▒██   ██▒  ██████ ▒███████▒ ▄████▄

@@ -11,6 +11,7 @@
         "cape": "entity_alphatest",
         "animated": "player_animated",
         "spectator": "player_spectator",
+        "blend": "entity_alphablend",
         "armor": "armor_hud"
       },
       "textures": {
@@ -50,7 +51,18 @@
         "empty_chestplate": "textures/ui/empty_armor_slot_chestplate",
         "empty_helmet": "textures/ui/empty_armor_slot_helmet",
         "empty_leggings": "textures/ui/empty_armor_slot_leggings",
-        "pumpkin": "textures/XeroxClient/xszc_modules/armor_hud/pumpkin"
+        "pumpkin": "textures/XeroxClient/xszc_modules/armor_hud/pumpkin",
+        "direction_hud": "textures/XeroxClient/xszc_modules/direction_hud/font",
+        "zero": "textures/XeroxClient/xszc_modules/0",
+        "one": "textures/XeroxClient/xszc_modules/1",
+        "two": "textures/XeroxClient/xszc_modules/2",
+        "three": "textures/XeroxClient/xszc_modules/3",
+        "four": "textures/XeroxClient/xszc_modules/4",
+        "five": "textures/XeroxClient/xszc_modules/5",
+        "six": "textures/XeroxClient/xszc_modules/6",
+        "seven": "textures/XeroxClient/xszc_modules/7",
+        "eight": "textures/XeroxClient/xszc_modules/8",
+        "nine": "textures/XeroxClient/xszc_modules/9"
       },
       "geometry": {
         "default": "geometry.humanoid.custom",
@@ -60,7 +72,11 @@
         "hud_chestplate": "geometry.xszc.armor_chestplate",
         "hud_leggings": "geometry.xszc.armor_leggings",
         "hud_boots": "geometry.xszc.armor_boots",
-        "p_locator": "geometry.particles_locator"
+        "p_locator": "geometry.particles_locator",
+        "direction_hud": "geometry.xszc.direction_hud",
+        "direction_yaw_ones": "geometry.xszc.direction_yaw_ones",
+        "direction_yaw_tens": "geometry.xszc.direction_yaw_tens",
+        "direction_yaw_hundreds": "geometry.xszc.direction_yaw_hundreds"
       },
       "scripts": {
         "scale": "0.9375",
@@ -83,12 +99,9 @@
         "pre_animation": [
           // XSzC Modules
 
-          "v.is_enchanted_helmet = q.armor_material_slot(0) == 1 || q.armor_material_slot(0) == 3;",
-          "v.is_enchanted_chestplate = q.armor_material_slot(1) == 1 || q.armor_material_slot(1) == 3;",
-          "v.is_enchanted_leggings = q.armor_material_slot(2) == 1 || q.armor_material_slot(2) == 3;",
-          "v.is_enchanted_boots = q.armor_material_slot(3) == 1 || q.armor_material_slot(3) == 3;",
-
           "v.render_in_hud = q.is_in_ui && q.is_on_screen && q.is_alive;",
+
+          "v.yaw_fixed = q.camera_rotation(1) < 0 ? 360 + q.camera_rotation(1) : q.camera_rotation(1);",
 
           // VANILLA
 
@@ -176,10 +189,7 @@
           "v.tp_melee_spear_attack_item_rotation_x = t.melee_spear_attack_thrust_scale * 60.0 + t.melee_spear_attack_recover_scale * -60.0;",
           "v.tp_melee_spear_attack_attachable_position_z = (t.melee_spear_attack_thrust_scale * -0.15 + t.melee_spear_attack_recover_scale * 0.15) * v.melee_spear_java_to_bedrock_scale;"
         ],
-        "animate": [
-          "root",
-          "mod.load"
-        ],
+        "animate": ["root", "mod.load"],
         "should_update_effects_offscreen": "1.0"
       },
       "particle_effects": {
@@ -189,6 +199,7 @@
         "mod.init": "animation.xszc.modules.initialize",
         "mod.load": "controller.animation.xszc.modules.load",
         "mod.sharpness_particle": "controller.animation.sharpness_particle",
+        "mod.direction_hud": "animation.xszc.modules.direction_hud",
 
         "root": "controller.animation.player.root",
         "base_controller": "controller.animation.player.base",
@@ -281,6 +292,10 @@
         { "controller.render.hud_chestplate": "v.render_in_hud" },
         { "controller.render.hud_leggings": "v.render_in_hud" },
         { "controller.render.hud_boots": "v.render_in_hud" },
+        { "controller.render.direction_hud": "v.is_paperdoll" },
+        { "controller.render.direction_yaw_ones": "v.is_paperdoll" },
+        { "controller.render.direction_yaw_tens": "v.is_paperdoll" },
+        { "controller.render.direction_yaw_hundreds": "v.is_paperdoll" },
         "controller.render.particle"
       ],
       "enable_attachables": true,

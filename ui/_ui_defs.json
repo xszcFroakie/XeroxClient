@@ -36,7 +36,6 @@
     ".XeroxClient/container_screen/stonecutter_screen.json",
     ".XeroxClient/container_screen/trade_screen.json",
 
-    ".XeroxClient/hud_screen/armor_hud.json",
     ".XeroxClient/hud_screen/chat_panel/chat_anims.json",
     ".XeroxClient/hud_screen/chat_panel/main_content.json",
     ".XeroxClient/hud_screen/coordinate.json",
@@ -47,6 +46,7 @@
     ".XeroxClient/hud_screen/scoreboard.json",
     ".XeroxClient/hud_screen/tab_list.json",
     ".XeroxClient/hud_screen/text_panel.json",
+    ".XeroxClient/hud_screen/xszc_modules.json",
 
     ".XeroxClient/mod_menu/anims.json",
     ".XeroxClient/mod_menu/common_controls.json",

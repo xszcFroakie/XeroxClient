@@ -1,6 +1,5 @@
 // File made by @XSzC.
 // Secondary distribution must follow the GPL-3.0-only Protocol!!
-
 {
   "format_version": "1.8.0",
   "animations": {
@@ -10,10 +9,11 @@
         "xszc_modules": {
           "scale": "1/0.9375",
           "position": [0, "q.is_swimming ? -20/0.9375", 0],
-          "rotation": [0.0, "(q.is_riding ? q.target_y_rotation)", 0.0]
+          "rotation": [0, "(q.is_riding ? q.target_y_rotation)", 0]
         }
       }
     },
+
     "animation.player.cape": {
       "loop": true,
       "bones": {
@@ -29,6 +29,49 @@
             0
           ],
           "scale": "q.armor_texture_slot(1) != 5 && !v.is_first_person && !v.map_face_icon"
+        }
+      }
+    },
+
+    "animation.xszc.modules.direction_hud": {
+      "loop": true,
+      "bones": {
+        "direction_hud": { "scale": "1/0.9375" },
+        "drcts": { "position": ["-v.yaw_fixed * 5 / 3", 0, 0] },
+        "drct_n": {
+          "position": ["v.yaw_fixed > 45 ? 300 : -330", 0, 0]
+        },
+        "drct_ne": {
+          "position": ["v.yaw_fixed > 90 ? 375 : -225", 0, 0]
+        },
+        "drct_e": {
+          "position": ["v.yaw_fixed > 135 ? 450 : -150", 0, 0]
+        },
+        "drct_se": {
+          "position": ["v.yaw_fixed > 180 ? 525 : -75", 0, 0]
+        },
+        "drct_s": {
+          "position": ["v.yaw_fixed > 225 ? 600 : 0", 0, 0]
+        },
+        "drct_sw": {
+          "position": ["v.yaw_fixed > 270 ? 675 : 75", 0, 0]
+        },
+        "drct_w": {
+          "position": ["v.yaw_fixed > 315 ? 750 : 150", 0, 0]
+        },
+        "drct_nw": {
+          "position": ["v.yaw_fixed > 0 ? 225 : 825", 0, 0]
+        },
+        "yaw_ones": {
+          "position": ["v.yaw_fixed > 10 ? (v.yaw_fixed > 100 ? 6 : 3)", 0, 0]
+        },
+        "yaw_tens": {
+          "position": ["v.yaw_fixed > 10 ? (v.yaw_fixed < 100 ? -3)", 0, 0],
+          "scale": "v.yaw_fixed > 10 ? 1"
+        },
+        "yaw_hundreds": {
+          "position": ["v.yaw_fixed > 100 ? -6", 0, 0],
+          "scale": "v.yaw_fixed > 100 ? 1"
         }
       }
     }

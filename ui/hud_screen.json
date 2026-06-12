@@ -41,6 +41,7 @@
           { "paperdoll@xc_mod_menu:movable_mods.paperdoll_mod": {} },
           { "coordinate_mod@xc_modern_hud:coordinate.coordinate": {} },
           { "armor_hud@xc_modern_hud:modules.armor_hud": {} },
+          { "direction_hud@xc_modern_hud:modules.direction_hud": {} },
           {
             "redo_vanilla_hotbar@xc_modern_hud:hotbar:vanilla.hotbar_content": {}
           },
