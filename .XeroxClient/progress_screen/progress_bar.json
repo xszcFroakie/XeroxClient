@@ -8,7 +8,7 @@
     "type": "label",
     "ignored": false,
     "size": ["default", "default"],
-    "font_type": "Bahnschrift-SemiBold",
+    "font_type": "$global_font_type",
     "backup_font_type": "$global_font_type_backup",
     "anchor_from": "top_middle",
     "anchor_to": "bottom_middle",

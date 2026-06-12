@@ -30,28 +30,7 @@
       "font_file": "font/HarmonyOS_Sans_Regular",
       "lowPerformanceCompatible": true,
       "font_scale_factor": 1
-    },
-    {
-      "font_format": "ttf",
-      "font_name": "Bahnschrift-Light",
-      "font_file": "font/Bahnschrift-Light",
-      "lowPerformanceCompatible": true,
-      "font_scale_factor": 1
-    },
-    {
-      "font_format": "ttf",
-      "font_name": "Bahnschrift-Bold",
-      "font_file": "font/Bahnschrift-Bold",
-      "lowPerformanceCompatible": true,
-      "font_scale_factor": 1
-    },
-    {
-      "font_format": "ttf",
-      "font_name": "Bahnschrift-SemiBold",
-      "font_file": "font/Bahnschrift-SemiBold",
-      "lowPerformanceCompatible": true,
-      "font_scale_factor": 1
-    },
+    }
     {
       "font_format": "otf",
       "font_name": "MinecraftSeven",
