@@ -683,6 +683,14 @@
           "collection_index": 8
         }
       }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "mod.durability_viewer",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
     ]
   },
 
@@ -737,6 +745,14 @@
           "collection_index": 8
         }
       }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "mod.item_counter.handhold",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
     ]
   },
 
@@ -770,12 +786,6 @@
       },
       {
         "item_counter_grid@xc_modern_hud:handhold_utils:handhold_base.counter_grid": {}
-      }
-    ],
-    "bindings": [
-      {
-        "binding_name": "#show_survival_ui",
-        "binding_name_override": "#visible"
       }
     ]
   }

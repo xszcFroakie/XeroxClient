@@ -53,6 +53,7 @@
     ".XeroxClient/mod_menu/hud.json",
     ".XeroxClient/mod_menu/main_content.json",
     ".XeroxClient/mod_menu/movable_mods.json",
+    ".XeroxClient/mod_menu/utils.json",
 
     ".XeroxClient/pause_screen/anims.json",
     ".XeroxClient/pause_screen/main_content.json",

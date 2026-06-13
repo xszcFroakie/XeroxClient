@@ -48,87 +48,135 @@
   },
 
   "scoreboard_sidebar": {
-    "type": "panel",
-    "size": ["100%cm + 4px", "100%c"],
+    "type": "image",
+    "texture": "textures/XeroxClient/rounded_corner/all2x",
+    "color": "black",
+    "size": ["100%c + 2px", "100%c + 2px"],
     "anchor_from": "right_middle",
     "anchor_to": "right_middle",
-    "controls": [
+    "offset": [-1, 0],
+    "bindings": [
       {
-        "displayed_objective": {
-          "type": "label",
-          "font_type": "$hud_font_type_overlay",
-          "backup_font_type": "$global_font_type_backup",
-          "size": ["default", 10],
-          "max_size": [170, 10],
-          "text": "#objective_sidebar_name",
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
-          "text_alignment": "center",
-          "locked_alpha": 1.0,
-          "layer": 2,
-          "color": "$objective_title_color",
-          "localize": false,
-          "shadow": true,
-          "bindings": [
-            {
-              "binding_name": "#objective_sidebar_name",
-              "binding_type": "global"
-            }
-          ]
-        }
+        "binding_type": "view",
+        "source_control_name": "mod.scoreboard.background_opacity",
+        "source_property_name": "(#slider_value / 100)",
+        "target_property_name": "#alpha"
       },
       {
-        "lists": {
+        "binding_name": "#scoreboard_sidebar_visible",
+        "binding_name_override": "#condition1"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "mod.scoreboard.on",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#condition2"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#condition1 and #condition2)",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "content": {
           "type": "panel",
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
-          "inherit_max_sibling_width": true,
-          "offset": [0, 10],
-          "size": ["100%c", "100%cm"],
+          "size": ["100%cm", "100%c"],
           "controls": [
             {
-              "players": {
-                "type": "stack_panel",
-                "anchor_from": "top_left",
-                "anchor_to": "top_left",
-                "size": ["100%cm", "100%c"],
-                "collection_name": "scoreboard_players",
-                "factory": {
-                  "name": "player_list_factory",
-                  "control_name": "xc_modern_hud:scoreboard.scoreboard_sidebar_player"
-                },
+              "displayed_objective": {
+                "type": "label",
+                "font_type": "$hud_font_type_overlay",
+                "backup_font_type": "$global_font_type_backup",
+                "size": ["default", 10],
+                "max_size": [170, 10],
+                "text": "#objective_sidebar_name",
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "text_alignment": "center",
+                "locked_alpha": 1.0,
+                "layer": 2,
+                "color": "$objective_title_color",
+                "localize": false,
+                "shadow": true,
                 "bindings": [
                   {
-                    "binding_name": "#scoreboard_sidebar_size",
-                    "binding_type": "global",
-                    "binding_name_override": "#collection_length"
+                    "binding_name": "#objective_sidebar_name",
+                    "binding_type": "global"
                   }
                 ]
               }
             },
             {
-              "horizontal_padding": {
+              "lists": {
                 "type": "panel",
-                "size": [10, "100%c"]
-              }
-            },
-            {
-              "scores": {
-                "type": "stack_panel",
-                "anchor_from": "top_right",
-                "anchor_to": "top_right",
-                "size": ["100%cm", "100%c"],
-                "use_child_anchors": true,
-                "collection_name": "scoreboard_scores",
-                "factory": {
-                  "name": "player_score_factory",
-                  "control_name": "xc_modern_hud:scoreboard.scoreboard_sidebar_score"
-                },
-                "bindings": [
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "inherit_max_sibling_width": true,
+                "offset": [0, 10],
+                "size": ["100%c", "100%cm"],
+                "controls": [
                   {
-                    "binding_name": "#scoreboard_sidebar_size",
-                    "binding_type": "global",
-                    "binding_name_override": "#collection_length"
+                    "players": {
+                      "type": "stack_panel",
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "size": ["100%cm", "100%c"],
+                      "collection_name": "scoreboard_players",
+                      "factory": {
+                        "name": "player_list_factory",
+                        "control_name": "xc_modern_hud:scoreboard.scoreboard_sidebar_player"
+                      },
+                      "bindings": [
+                        {
+                          "binding_name": "#scoreboard_sidebar_size",
+                          "binding_type": "global",
+                          "binding_name_override": "#collection_length"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "horizontal_padding": {
+                      "type": "panel",
+                      "size": [10, "100%c"],
+                      "bindings": [
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "mod.scoreboard.numbers",
+                          "source_property_name": "#toggle_state",
+                          "target_property_name": "#visible"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "scores": {
+                      "type": "stack_panel",
+                      "anchor_from": "top_right",
+                      "anchor_to": "top_right",
+                      "size": ["100%cm", "100%c"],
+                      "use_child_anchors": true,
+                      "collection_name": "scoreboard_scores",
+                      "factory": {
+                        "name": "player_score_factory",
+                        "control_name": "xc_modern_hud:scoreboard.scoreboard_sidebar_score"
+                      },
+                      "bindings": [
+                        {
+                          "binding_name": "#scoreboard_sidebar_size",
+                          "binding_type": "global",
+                          "binding_name_override": "#collection_length"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "mod.scoreboard.numbers",
+                          "source_property_name": "#toggle_state",
+                          "target_property_name": "#visible"
+                        }
+                      ]
+                    }
                   }
                 ]
               }

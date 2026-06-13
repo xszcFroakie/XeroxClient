@@ -3,19 +3,6 @@
 {
   "namespace": "xc_mod_menu:hud_page",
 
-  "main_content@xc_modern_scrolling_panel.scrolling_panel": {
-    "size": ["100% - 2px", "100%"],
-    "$scrolling_content": "xc_mod_menu:hud_page.hud_mod_options",
-    "bindings": [
-      {
-        "binding_type": "view",
-        "source_control_name": "hud_page",
-        "source_property_name": "#toggle_state",
-        "target_property_name": "#visible"
-      }
-    ]
-  },
-
   "hud_mod_options": {
     "type": "stack_panel",
     "size": ["100%", "100%c"],
@@ -87,15 +74,104 @@
         }
       },
       {
-        "chat_panel@xc_mod_menu:controls.option_toggle": {
+        "coordinate@xc_mod_menu:controls.option_radio_group_toggle": {
+          "$option_label": "xc.modMenu.options.hud.coordinate",
+          "$control_view_binding_name": "mod.coordinate",
+          "$radio_group_name": "mod.coordinate.options",
+          "$toggle_group_default_selected": "$hud.coordinate",
+          "$radio_buttons": [
+            {
+              "@xc_mod_menu:controls.radio_toggle": {
+                "$button_text": "xc.modMenu.options.horizontal",
+                "$toggle_group_forced_index": 0,
+                "$control_view_binding_name": "mod.coordinate.off",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "mod.coordinate.horizontal",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "@xc_mod_menu:controls.radio_toggle": {
+                "$button_text": "xc.modMenu.options.vertical",
+                "$toggle_group_forced_index": 1,
+                "$control_view_binding_name": "mod.coordinate.horizontal",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "mod.coordinate.vertical",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "@xc_mod_menu:controls.radio_toggle": {
+                "$button_text": "xc.modMenu.options.off",
+                "$toggle_group_forced_index": 2,
+                "$control_view_binding_name": "mod.coordinate.vertical",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "mod.coordinate.off",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "chat_panel@xc_mod_menu:controls.option_radio_group_toggle": {
           "$option_label": "xc.modMenu.options.hud.chatPanel",
           "$control_view_binding_name": "mod.chat_panel",
-          "$toggle_default_state": "$hud.chat_panel"
+          "$radio_group_name": "mod.chat_panel.options",
+          "$toggle_group_default_selected": "$hud.chat_panel",
+          "$radio_buttons": [
+            {
+              "@xc_mod_menu:controls.radio_toggle": {
+                "$button_text": "xc.modMenu.options.on",
+                "$toggle_group_forced_index": 0,
+                "$control_view_binding_name": "mod.chat_panel.off",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "mod.chat_panel.on",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "@xc_mod_menu:controls.radio_toggle": {
+                "$button_text": "xc.modMenu.options.off",
+                "$toggle_group_forced_index": 1,
+                "$control_view_binding_name": "mod.chat_panel.on",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "mod.chat_panel.off",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
         }
       },
       {
         "chat_panel_extra@xc_mod_menu:controls.option_extra_stack": {
-          "$source_control_name": "mod.chat_panel",
+          "$source_control_name": "mod.chat_panel.off",
+          "$source_property_name": "(not #toggle_state)",
           "$controls": [
             {
               "chat_panel_width@xc_mod_menu:controls.option_slider": {
@@ -160,7 +236,7 @@
               }
             },
             {
-              "@xc_mod_menu:controls.radio_toggle": {
+              "2@xc_mod_menu:controls.radio_toggle": {
                 "$button_text": "xc.modMenu.options.off",
                 "$toggle_group_forced_index": 2,
                 "$control_view_binding_name": "mod.paperdoll.activeOnly",
@@ -200,36 +276,21 @@
         }
       },
       {
-        "coordinate@xc_mod_menu:controls.option_radio_group_toggle": {
-          "$option_label": "xc.modMenu.options.hud.coordinate",
-          "$control_view_binding_name": "mod.coordinate",
-          "$radio_group_name": "mod.coordinate.options",
-          "$toggle_group_default_selected": "$hud.coordinate",
+        "scoreboard@xc_mod_menu:controls.option_radio_group_toggle": {
+          "$option_label": "xc.modMenu.options.hud.scoreboard",
+          "$control_view_binding_name": "mod.scoreboard",
+          "$radio_group_name": "mod.scoreboard.options",
+          "$toggle_group_default_selected": "$hud.scoreboard",
           "$radio_buttons": [
             {
               "@xc_mod_menu:controls.radio_toggle": {
-                "$button_text": "xc.modMenu.options.hud.coordinate.horizontal",
+                "$button_text": "xc.modMenu.options.on",
                 "$toggle_group_forced_index": 0,
-                "$control_view_binding_name": "mod.coordinate.off",
+                "$control_view_binding_name": "mod.scoreboard.off",
                 "bindings": [
                   {
                     "binding_type": "view",
-                    "source_control_name": "mod.coordinate.horizontal",
-                    "source_property_name": "#toggle_state",
-                    "target_property_name": "#visible"
-                  }
-                ]
-              }
-            },
-            {
-              "@xc_mod_menu:controls.radio_toggle": {
-                "$button_text": "xc.modMenu.options.hud.coordinate.vertical",
-                "$toggle_group_forced_index": 1,
-                "$control_view_binding_name": "mod.coordinate.horizontal",
-                "bindings": [
-                  {
-                    "binding_type": "view",
-                    "source_control_name": "mod.coordinate.vertical",
+                    "source_control_name": "mod.scoreboard.on",
                     "source_property_name": "#toggle_state",
                     "target_property_name": "#visible"
                   }
@@ -239,12 +300,12 @@
             {
               "@xc_mod_menu:controls.radio_toggle": {
                 "$button_text": "xc.modMenu.options.off",
-                "$toggle_group_forced_index": 2,
-                "$control_view_binding_name": "mod.coordinate.vertical",
+                "$toggle_group_forced_index": 1,
+                "$control_view_binding_name": "mod.scoreboard.on",
                 "bindings": [
                   {
                     "binding_type": "view",
-                    "source_control_name": "mod.coordinate.off",
+                    "source_control_name": "mod.scoreboard.off",
                     "source_property_name": "#toggle_state",
                     "target_property_name": "#visible"
                   }
@@ -253,6 +314,36 @@
             }
           ]
         }
+      },
+      {
+        "scoreboard_extra@xc_mod_menu:controls.option_extra_stack": {
+          "$source_control_name": "mod.scoreboard.off",
+          "$source_property_name": "(not #toggle_state)",
+          "$controls": [
+            {
+              "scoreboard_numbers@xc_mod_menu:controls.option_toggle": {
+                "$option_label": "xc.modMenu.options.hud.scoreboardNumbers",
+                "$control_view_binding_name": "mod.scoreboard.numbers",
+                "$toggle_default_state": "$hud.scoreboard.numbers"
+              }
+            },
+            {
+              "scoreboard_background_opacity@xc_mod_menu:controls.option_slider": {
+                "$option_label": "xc.modMenu.options.hud.scoreboardBackgroundOpacity",
+                "$control_view_binding_name": "mod.scoreboard.background_opacity",
+                "$slider_default_value": "$hud.scoreboard.background_opacity"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "hud_page",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
       }
     ]
   }

@@ -40,8 +40,8 @@
         "value": [
           { "paperdoll@xc_mod_menu:movable_mods.paperdoll_mod": {} },
           { "coordinate_mod@xc_modern_hud:coordinate.coordinate": {} },
-          { "armor_hud@xc_modern_hud:modules.armor_hud": {} },
-          { "direction_hud@xc_modern_hud:modules.direction_hud": {} },
+          { "armor_hud@xc_mod_menu:movable_mods.armor_hud_mod": {} },
+          { "direction_hud@xc_mod_menu:movable_mods.direction_hud_mod": {} },
           {
             "redo_vanilla_hotbar@xc_modern_hud:hotbar:vanilla.hotbar_content": {}
           },
@@ -75,7 +75,7 @@
                     "bindings": [
                       {
                         "binding_type": "view",
-                        "source_control_name": "mod.chat_panel",
+                        "source_control_name": "mod.chat_panel.on",
                         "source_property_name": "#toggle_state",
                         "target_property_name": "#visible"
                       },
@@ -110,18 +110,7 @@
         "array_name": "controls",
         "operation": "replace",
         "control_name": "sidebar",
-        "value": [
-          {
-            "sidebar@xc_modern_hud:scoreboard.scoreboard_sidebar": {
-              "bindings": [
-                {
-                  "binding_name": "#scoreboard_sidebar_visible",
-                  "binding_name_override": "#visible"
-                }
-              ]
-            }
-          }
-        ]
+        "value": [{ "sidebar@xc_modern_hud:scoreboard.scoreboard_sidebar": {} }]
       },
       {
         "array_name": "controls",

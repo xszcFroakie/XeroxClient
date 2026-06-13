@@ -61,48 +61,23 @@
     "$control_y_size": ["100%", "100% - 40px"],
     "$x_filling_source_control_name": "mod.paperdoll.x_offset",
     "$y_filling_source_control_name": "mod.paperdoll.y_offset",
-    "$control_name": "xc_mod_menu:movable_mods.paperdoll_element"
+    "$control_name": "xc_modern_hud:modules.paperdoll"
   },
 
-  "paperdoll_element": {
-    "type": "panel",
-    "size": [20, 40],
-    "controls": [
-      {
-        "hud_player_renderer": {
-          "layer": -2,
-          "type": "custom",
-          "renderer": "hud_player_renderer",
-          "size": [20, 20],
-          "anchor_to": "bottom_middle",
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_control_name": "mod.paperdoll.activeOnly",
-              "source_property_name": "#toggle_state",
-              "target_property_name": "#visible"
-            }
-          ]
-        }
-      },
-      {
-        "live_player_renderer": {
-          "layer": -2,
-          "type": "custom",
-          "renderer": "live_player_renderer",
-          "size": [20, 20],
-          "anchor_to": "bottom_middle",
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_control_name": "mod.paperdoll.always",
-              "source_property_name": "#toggle_state",
-              "target_property_name": "#visible"
-            }
-          ]
-        }
-      }
-    ]
+  "armor_hud_mod@xc_mod_menu:movable_mods.movable_mod_control": {
+    "$control_x_size": ["100% - 64px", "100%"],
+    "$control_y_size": ["100%", "100% - 16px"],
+    "$x_filling_source_control_name": "mod.armor_hud.x_offset",
+    "$y_filling_source_control_name": "mod.armor_hud.y_offset",
+    "$control_name": "xc_modern_hud:modules.armor_hud"
+  },
+
+  "direction_hud_mod@xc_mod_menu:movable_mods.movable_mod_control": {
+    "$control_x_size": ["100% - 340px", "100%"],
+    "$control_y_size": ["100%", "100% - 47.5px"],
+    "$x_filling_source_control_name": "mod.direction_hud.x_offset",
+    "$y_filling_source_control_name": "mod.direction_hud.y_offset",
+    "$control_name": "xc_modern_hud:modules.direction_hud"
   }
 }
 // ▒██   ██▒  ██████ ▒███████▒ ▄████▄

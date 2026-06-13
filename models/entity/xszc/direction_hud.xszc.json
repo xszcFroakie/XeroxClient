@@ -31,29 +31,7 @@
                 "north": { "uv": [0, 0], "uv_size": [0, 0] }
               }
             }
-          ],
-          "poly_mesh": {
-            "normalized_uvs": true,
-            "positions": [
-              [7.15165, 1032.66421, 1.65165],
-              [0.15165, 1025.66421, 1.65165],
-              [-6.80165, 1032.66421, -3.65165]
-            ],
-            "normals": [[0.33478, 0.33478, 0.88082]],
-            "uvs": [
-              [0.13415, 1],
-              [0.13415, 0.96667],
-              [0.14634, 0.96667]
-            ],
-            "polys": [
-              [
-                [0, 0, 0],
-                [1, 0, 1],
-                [2, 0, 2],
-                [0, 0, 0]
-              ]
-            ]
-          }
+          ]
         },
         {
           "name": "drcts",
@@ -683,9 +661,9 @@
         "identifier": "geometry.xszc.direction_yaw_ones",
         "texture_width": 10,
         "texture_height": 14,
-        "visible_bounds_width": 2,
-        "visible_bounds_height": 1.5,
-        "visible_bounds_offset": [0, 0.25, 0]
+        "visible_bounds_width": 10,
+        "visible_bounds_height": 14,
+        "visible_bounds_offset": [0, 1.5, 0]
       },
       "bones": [
         {
@@ -713,9 +691,9 @@
         "identifier": "geometry.xszc.direction_yaw_tens",
         "texture_width": 10,
         "texture_height": 14,
-        "visible_bounds_width": 2,
-        "visible_bounds_height": 1.5,
-        "visible_bounds_offset": [0, 0.25, 0]
+        "visible_bounds_width": 10,
+        "visible_bounds_height": 14,
+        "visible_bounds_offset": [0, 1.5, 0]
       },
       "bones": [
         {
@@ -743,9 +721,9 @@
         "identifier": "geometry.xszc.direction_yaw_hundreds",
         "texture_width": 10,
         "texture_height": 14,
-        "visible_bounds_width": 2,
-        "visible_bounds_height": 1.5,
-        "visible_bounds_offset": [0, 0.25, 0]
+        "visible_bounds_width": 10,
+        "visible_bounds_height": 14,
+        "visible_bounds_offset": [0, 1.5, 0]
       },
       "bones": [
         {

@@ -126,10 +126,18 @@
     ]
   },
 
+  "scrolling_panel_content@xc_mod_menu.cfg": {
+    "type": "stack_panel",
+    "size": ["100%", "100%c"],
+    "controls": [
+      { "hud@xc_mod_menu:hud_page.hud_mod_options": {} },
+      { "utils@xc_mod_menu:utils_page.utils_mod_options": {} }
+    ]
+  },
+
   "main_content": {
-    "type": "screen",
+    "type": "panel",
     "layer": 100,
-    "modal": true,
     "controls": [
       {
         "outline": {
@@ -169,6 +177,7 @@
                       "size": [320, 20],
                       "orientation": "horizontal",
                       "offset": [25, 5],
+                      "layer": 102,
                       "controls": [
                         {
                           "hud@xc_mod_menu:controls.page_tab": {
@@ -202,15 +211,13 @@
                     }
                   },
                   {
-                    "page_content_panel@xc_mod_menu.cfg": {
-                      "type": "panel",
+                    "page_content_panel@xc_modern_scrolling_panel.scrolling_panel": {
+                      "$scrolling_content": "xc_mod_menu.scrolling_panel_content",
                       "anchor_from": "bottom_middle",
                       "anchor_to": "bottom_middle",
                       "offset": [0, -5],
                       "size": ["100% - 10px", "100% - 35px"],
-                      "controls": [
-                        { "hud@xc_mod_menu:hud_page.main_content": {} }
-                      ]
+                      "layer": 102
                     }
                   }
                 ]

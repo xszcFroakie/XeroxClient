@@ -1,0 +1,176 @@
+// File made by @XSzC.
+// Secondary distribution must follow the GPL-3.0-only Protocol!!
+{
+  "namespace": "xc_mod_menu:utils_page",
+
+  "utils_mod_options": {
+    "type": "stack_panel",
+    "size": ["100%", "100%c"],
+    "controls": [
+      {
+        "option_stack_0@xc_mod_menu:controls.option_stack": {
+          "controls": [
+            {
+              "1@xc_mod_menu:controls.option_toggle": {
+                "size": ["fill", "100%c"],
+                "$option_label": "xc.modMenu.options.utils.handholdItemCounter",
+                "$control_view_binding_name": "mod.item_counter.handhold",
+                "$toggle_default_state": "$utils.item_counter.handhold"
+              }
+            },
+            {
+              "2@xc_mod_menu:controls.option_toggle": {
+                "size": ["fill", "100%c"],
+                "$option_label": "xc.modMenu.options.utils.dirabilityViewer",
+                "$control_view_binding_name": "mod.durability_viewer",
+                "$toggle_default_state": "$utils.durability_viewer"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "armor_hud@xc_mod_menu:controls.option_radio_group_toggle": {
+          "$option_label": "xc.modMenu.options.utils.armorhud",
+          "$control_view_binding_name": "mod.armor_hud",
+          "$radio_group_name": "mod.armor_hud.options",
+          "$toggle_group_default_selected": "$utils.armor_hud",
+          "$radio_buttons": [
+            {
+              "@xc_mod_menu:controls.radio_toggle": {
+                "$button_text": "xc.modMenu.options.on",
+                "$toggle_group_forced_index": 0,
+                "$control_view_binding_name": "mod.armor_hud.off",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "mod.armor_hud.on",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "@xc_mod_menu:controls.radio_toggle": {
+                "$button_text": "xc.modMenu.options.off",
+                "$toggle_group_forced_index": 1,
+                "$control_view_binding_name": "mod.armor_hud.on",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "mod.armor_hud.off",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "armor_hud_extra@xc_mod_menu:controls.option_extra_stack": {
+          "$source_control_name": "mod.armor_hud.off",
+          "$source_property_name": "(not #toggle_state)",
+          "$controls": [
+            {
+              "armor_hud_x_offset@xc_mod_menu:controls.option_slider": {
+                "$option_label": "xc.modMenu.options.utils.armorhudxOffset",
+                "$control_view_binding_name": "mod.armor_hud.x_offset",
+                "$slider_default_value": "$utils.armor_hud.x_offset"
+              }
+            },
+            {
+              "armor_hud_y_offset@xc_mod_menu:controls.option_slider": {
+                "$option_label": "xc.modMenu.options.utils.armorhudyOffset",
+                "$control_view_binding_name": "mod.armor_hud.y_offset",
+                "$slider_default_value": "$utils.armor_hud.y_offset"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "direction_hud@xc_mod_menu:controls.option_radio_group_toggle": {
+          "$option_label": "xc.modMenu.options.utils.directionhud",
+          "$control_view_binding_name": "mod.direction_hud",
+          "$radio_group_name": "mod.direction_hud.options",
+          "$toggle_group_default_selected": "$utils.direction_hud",
+          "$radio_buttons": [
+            {
+              "@xc_mod_menu:controls.radio_toggle": {
+                "$button_text": "xc.modMenu.options.on",
+                "$toggle_group_forced_index": 0,
+                "$control_view_binding_name": "mod.direction_hud.off",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "mod.direction_hud.on",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "@xc_mod_menu:controls.radio_toggle": {
+                "$button_text": "xc.modMenu.options.off",
+                "$toggle_group_forced_index": 1,
+                "$control_view_binding_name": "mod.direction_hud.on",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "mod.direction_hud.off",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "direction_hud_extra@xc_mod_menu:controls.option_extra_stack": {
+          "$source_control_name": "mod.direction_hud.off",
+          "$source_property_name": "(not #toggle_state)",
+          "$controls": [
+            {
+              "direction_hud_x_offset@xc_mod_menu:controls.option_slider": {
+                "$option_label": "xc.modMenu.options.utils.directionhudxOffset",
+                "$control_view_binding_name": "mod.direction_hud.x_offset",
+                "$slider_default_value": "$utils.direction_hud.x_offset"
+              }
+            },
+            {
+              "direction_hud_y_offset@xc_mod_menu:controls.option_slider": {
+                "$option_label": "xc.modMenu.options.utils.directionhudyOffset",
+                "$control_view_binding_name": "mod.direction_hud.y_offset",
+                "$slider_default_value": "$utils.direction_hud.y_offset"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "utils_page",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  }
+}
+// ▒██   ██▒  ██████ ▒███████▒ ▄████▄
+// ▒▒ █ █ ▒░▒██    ▒ ▒ ▒ ▒ ▄▀░▒██▀ ▀█
+// ░░  █   ░░ ▓██▄   ░ ▒ ▄▀▒░ ▒▓█    ▄
+//  ░ █ █ ▒   ▒   ██▒  ▄▀▒   ░▒▓▓▄ ▄██▒
+// ▒██▒ ▒██▒▒██████▒▒▒███████▒▒ ▓███▀ ░
+// ▒▒ ░ ░▓ ░▒ ▒▓▒ ▒ ░░▒▒ ▓░▒░▒░ ░▒ ▒  ░
+// ░░   ░▒ ░░ ░▒  ░ ░░░▒ ▒ ░ ▒  ░  ▒
+//  ░    ░  ░  ░  ░  ░ ░ ░ ░ ░░
+//  ░    ░        ░    ░ ░    ░ ░
+//                   ░        ░

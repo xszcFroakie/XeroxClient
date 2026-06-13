@@ -14,6 +14,7 @@
     "variables": [],
     "$screen_content": "xc_modern_pause.main_content",
     "$screen_bg_content": "common.empty_panel",
+    "render_game_behind": true,
     "force_render_below": true
   }
 }
