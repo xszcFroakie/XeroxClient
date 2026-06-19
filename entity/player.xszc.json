@@ -99,6 +99,9 @@
         "pre_animation": [
           // XSzC Modules
 
+          "v.rotation_to_camera_fixed = -math.atan2(-q.distance_from_camera * math.sin(q.rotation_to_camera(0)) - 1, q.distance_from_camera * math.cos(q.rotation_to_camera(0)));",
+          "v.is_aimed = math.abs(math.abs(q.rotation_to_camera(1) - q.camera_rotation(1)) - 180) < (20 / q.distance_from_camera) && math.abs(v.rotation_to_camera_fixed + q.camera_rotation(0)) < (60 / q.distance_from_camera);",
+
           "v.render_in_hud = q.is_in_ui && q.is_on_screen && q.is_alive;",
 
           "v.yaw_fixed = q.camera_rotation(1) < 0 ? 360 + q.camera_rotation(1) : q.camera_rotation(1);",
