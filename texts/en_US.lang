@@ -26,6 +26,7 @@ xc.modMenu.options.hud.title=Title Text
 xc.modMenu.options.hud.subtitle=Subtitle Text
 xc.modMenu.options.hud.itemname=Item Name Text
 xc.modMenu.options.hud.jukebox=Jukebox Text
+xc.modMenu.options.hud.bossBar=Boss Bar
 xc.modMenu.options.hud.chatPanel=Chat Panel
 xc.modMenu.options.hud.chatPanelWidth=Chat Panel Width
 xc.modMenu.options.hud.chatPanelHeight=Chat Panel Height

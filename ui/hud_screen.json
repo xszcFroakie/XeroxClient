@@ -32,6 +32,17 @@
     "ignored": true
   },
 
+  "root_panel/boss_health_panel": {
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "mod.bossbar",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
   "root_panel": {
     "modifications": [
       {

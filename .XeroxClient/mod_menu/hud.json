@@ -74,6 +74,20 @@
         }
       },
       {
+        "option_stack_3@xc_mod_menu:controls.option_stack": {
+          "controls": [
+            {
+              "1@xc_mod_menu:controls.option_toggle": {
+                "size": ["fill", "100%c"],
+                "$option_label": "xc.modMenu.options.hud.bossBar",
+                "$control_view_binding_name": "mod.bossbar",
+                "$toggle_default_state": "$hud.boss_bar"
+              }
+            }
+          ]
+        }
+      },
+      {
         "coordinate@xc_mod_menu:controls.option_radio_group_toggle": {
           "$option_label": "xc.modMenu.options.hud.coordinate",
           "$control_view_binding_name": "mod.coordinate",

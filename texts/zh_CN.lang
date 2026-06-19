@@ -28,6 +28,7 @@ xc.modMenu.options.hud.title=标题文本
 xc.modMenu.options.hud.subtitle=副标题文本
 xc.modMenu.options.hud.itemname=物品名称文本
 xc.modMenu.options.hud.jukebox=唱片机文本
+xc.modMenu.options.hud.bossBar=Boss条
 xc.modMenu.options.hud.chatPanel=聊天栏
 xc.modMenu.options.hud.chatPanelWidth=聊天栏宽度
 xc.modMenu.options.hud.chatPanelHeight=聊天栏高度
