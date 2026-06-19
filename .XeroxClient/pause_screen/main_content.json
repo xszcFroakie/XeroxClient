@@ -389,17 +389,6 @@
         }
       },
       {
-        "fake_button@common.button": {
-          // prevent focus on quit button when opening the pause screen
-          "$pressed_button_name": "button.fake",
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "size": [1, 1],
-          "sound_volume": 0.0,
-          "sound_pitch": 0.0
-        }
-      },
-      {
         "main_menu": {
           "type": "panel",
           "controls": [
